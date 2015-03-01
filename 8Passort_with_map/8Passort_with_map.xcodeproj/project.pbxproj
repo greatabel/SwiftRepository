@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5566CA61AA349EE003E7A99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5566CA51AA349EE003E7A99 /* MapKit.framework */; };
+		B5566CA81AA34A14003E7A99 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5566CA71AA34A14003E7A99 /* MapViewController.swift */; };
 		B5A8B7AB1A9DE03D00B2282D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A8B7AA1A9DE03D00B2282D /* AppDelegate.swift */; };
 		B5A8B7AD1A9DE03D00B2282D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A8B7AC1A9DE03D00B2282D /* ViewController.swift */; };
 		B5A8B7B01A9DE03D00B2282D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A8B7AE1A9DE03D00B2282D /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5566CA51AA349EE003E7A99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B5566CA71AA34A14003E7A99 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B5A8B7A51A9DE03D00B2282D /* 5Passort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5Passort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A8B7A91A9DE03D00B2282D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5A8B7AA1A9DE03D00B2282D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5566CA61AA349EE003E7A99 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,7 @@
 		B5A8B79C1A9DE03D00B2282D = {
 			isa = PBXGroup;
 			children = (
+				B5566CA51AA349EE003E7A99 /* MapKit.framework */,
 				B5A8B7A71A9DE03D00B2282D /* 5Passort */,
 				B5A8B7BD1A9DE03D00B2282D /* 5PassortTests */,
 				B5A8B7A61A9DE03D00B2282D /* Products */,
@@ -89,6 +95,7 @@
 				B5A8B7B11A9DE03D00B2282D /* Images.xcassets */,
 				B5A8B7B31A9DE03D00B2282D /* LaunchScreen.xib */,
 				B5A8B7A81A9DE03D00B2282D /* Supporting Files */,
+				B5566CA71AA34A14003E7A99 /* MapViewController.swift */,
 			);
 			path = 5Passort;
 			sourceTree = "<group>";
@@ -167,6 +174,11 @@
 				TargetAttributes = {
 					B5A8B7A41A9DE03D00B2282D = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B5A8B7B91A9DE03D00B2282D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -174,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B5A8B7A01A9DE03D00B2282D /* Build configuration list for PBXProject "7PassortMutipleDevices" */;
+			buildConfigurationList = B5A8B7A01A9DE03D00B2282D /* Build configuration list for PBXProject "8Passort_with_map" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,6 +234,7 @@
 				B5A8B7AD1A9DE03D00B2282D /* ViewController.swift in Sources */,
 				B5A8B7CF1A9F1A7100B2282D /* CountriesTableViewController.swift in Sources */,
 				B5A8B7AB1A9DE03D00B2282D /* AppDelegate.swift in Sources */,
+				B5566CA81AA34A14003E7A99 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5A8B7A01A9DE03D00B2282D /* Build configuration list for PBXProject "7PassortMutipleDevices" */ = {
+		B5A8B7A01A9DE03D00B2282D /* Build configuration list for PBXProject "8Passort_with_map" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5A8B7C21A9DE03D00B2282D /* Debug */,

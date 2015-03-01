@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
                BuildableName = "5Passort.app"
                BlueprintName = "5Passort"
-               ReferencedContainer = "container:7PassortMutipleDevices.xcodeproj">
+               ReferencedContainer = "container:8Passort_with_map.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "B5A8B7B91A9DE03D00B2282D"
                BuildableName = "5PassortTests.xctest"
                BlueprintName = "5PassortTests"
-               ReferencedContainer = "container:7PassortMutipleDevices.xcodeproj">
+               ReferencedContainer = "container:8Passort_with_map.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "B5A8B7B91A9DE03D00B2282D"
                BuildableName = "5PassortTests.xctest"
                BlueprintName = "5PassortTests"
-               ReferencedContainer = "container:7PassortMutipleDevices.xcodeproj">
+               ReferencedContainer = "container:8Passort_with_map.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
             BuildableName = "5Passort.app"
             BlueprintName = "5Passort"
-            ReferencedContainer = "container:7PassortMutipleDevices.xcodeproj">
+            ReferencedContainer = "container:8Passort_with_map.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
             BuildableName = "5Passort.app"
             BlueprintName = "5Passort"
-            ReferencedContainer = "container:7PassortMutipleDevices.xcodeproj">
+            ReferencedContainer = "container:8Passort_with_map.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +96,7 @@
             BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
             BuildableName = "5Passort.app"
             BlueprintName = "5Passort"
-            ReferencedContainer = "container:7PassortMutipleDevices.xcodeproj">
+            ReferencedContainer = "container:8Passort_with_map.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -122,11 +122,52 @@
                             <outlet property="delegate" destination="Qy3-jV-2M2" id="xVK-6m-HtF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Countries Visited Show" id="fch-8c-upY"/>
+                    <navigationItem key="navigationItem" title="Countries Visited Show" id="fch-8c-upY">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="w0O-Bi-uOQ">
+                            <connections>
+                                <segue destination="wSZ-KA-que" kind="show" id="gIr-wC-QGK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPS-TC-Qg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968.75" y="355.9859154929577"/>
+            <point key="canvasLocation" x="1953" y="355"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="yfP-QN-DyR">
+            <objects>
+                <viewController id="wSZ-KA-que" customClass="MapViewController" customModule="_Passort" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SMN-LO-byy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zlk-14-Sez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2bf-L9-ubX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qEQ-lb-Ca1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wSZ-KA-que" id="oVX-Ej-W5n"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qEQ-lb-Ca1" firstAttribute="top" secondItem="2bf-L9-ubX" secondAttribute="top" id="03J-Eg-bKo"/>
+                            <constraint firstAttribute="trailing" secondItem="qEQ-lb-Ca1" secondAttribute="trailing" id="7zs-nn-TYd"/>
+                            <constraint firstItem="qEQ-lb-Ca1" firstAttribute="leading" secondItem="2bf-L9-ubX" secondAttribute="leading" id="SyA-Z1-GvT"/>
+                            <constraint firstAttribute="bottom" secondItem="qEQ-lb-Ca1" secondAttribute="bottom" id="olY-Px-pSe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="qEQ-lb-Ca1" id="Jp0-ui-9gl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v76-ox-tXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632" y="281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxS-3p-eRp">
