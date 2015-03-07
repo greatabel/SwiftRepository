@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1F8E125A-162B-4D44-A4B1-2BCD049F3917</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloCocoa</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
+		<string>https://github.com/greatabel/puzzle_I_cracked.git</string>
+		<key>B9A0C847431EC0E03E729CC2658418377EAAEB44</key>
+		<string>https://github.com/greatabel/Objective-CLearn</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IOS Bestpractice/HelloCocoa/HelloCocoa.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
+		<string>../../../../..</string>
+		<key>B9A0C847431EC0E03E729CC2658418377EAAEB44</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/greatabel/Objective-CLearn</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B9A0C847431EC0E03E729CC2658418377EAAEB44</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3998DCE11B749996D579E2A3980196FD3BB45AD7</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B9A0C847431EC0E03E729CC2658418377EAAEB44</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Objective-CLearn</string>
+		</dict>
+	</array>
+</dict>
+</plist>
