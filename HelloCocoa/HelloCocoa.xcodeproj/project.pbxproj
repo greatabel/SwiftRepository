@@ -36,6 +36,8 @@
 		B5E7BD5A1AAAD9BD00BD767F /* HelloCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloCocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E7BD5F1AAAD9BD00BD767F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E7BD601AAAD9BD00BD767F /* HelloCocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloCocoaTests.swift; sourceTree = "<group>"; };
+		B5E7BD6A1AAAE2B500BD767F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		B5E7BD6B1AAB4A9B00BD767F /* functionswap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = functionswap.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,8 @@
 				B5E7BD511AAAD9BD00BD767F /* Images.xcassets */,
 				B5E7BD531AAAD9BD00BD767F /* LaunchScreen.xib */,
 				B5E7BD481AAAD9BD00BD767F /* Supporting Files */,
+				B5E7BD6A1AAAE2B500BD767F /* MyPlayground.playground */,
+				B5E7BD6B1AAB4A9B00BD767F /* functionswap.playground */,
 			);
 			path = HelloCocoa;
 			sourceTree = "<group>";
