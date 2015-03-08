@@ -26,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B526428E1AAC501D007802EE /* func_manytimes.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = func_manytimes.playground; sourceTree = "<group>"; };
+		B52642901AAC51DB007802EE /* MyClosures_Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyClosures_Playground.playground; sourceTree = "<group>"; };
 		B5E7BD451AAAD9BD00BD767F /* HelloCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E7BD491AAAD9BD00BD767F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E7BD4A1AAAD9BD00BD767F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 				B5E7BD481AAAD9BD00BD767F /* Supporting Files */,
 				B5E7BD6A1AAAE2B500BD767F /* MyPlayground.playground */,
 				B5E7BD6B1AAB4A9B00BD767F /* functionswap.playground */,
+				B526428E1AAC501D007802EE /* func_manytimes.playground */,
+				B52642901AAC51DB007802EE /* MyClosures_Playground.playground */,
 			);
 			path = HelloCocoa;
 			sourceTree = "<group>";
@@ -409,6 +413,7 @@
 				B5E7BD661AAAD9BD00BD767F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5E7BD671AAAD9BD00BD767F /* Build configuration list for PBXNativeTarget "HelloCocoaTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				B5E7BD691AAAD9BD00BD767F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

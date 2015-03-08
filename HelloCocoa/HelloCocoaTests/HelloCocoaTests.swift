@@ -36,7 +36,7 @@ class HelloCocoaTests: XCTestCase {
         }
     }
     
-    //我添加的
+    //我添加的 https://swiftcast.tv/articles/introduction-to-xctest
     func testViewDidLoad()
     {
         // we only have access to this if we import our project above
