@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+//我修改了class 和 viewDidLoad，didReceiveMemoryWarning为public，是为了XCTest
+public class ViewController: UIViewController {
 
     @IBOutlet weak var HelloButton: UIButton!
     
@@ -21,12 +21,12 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
+ public   override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+ public   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

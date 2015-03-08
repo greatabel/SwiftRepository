@@ -9,6 +9,9 @@
 import UIKit
 import XCTest
 
+import HelloCocoa
+
+
 class HelloCocoaTests: XCTestCase {
     
     override func setUp() {
@@ -32,5 +35,16 @@ class HelloCocoaTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    //我添加的
+    func testViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let v = ViewController()
+//
+//        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(v.view, "View Did Not load")
+    }
+    
     
 }
