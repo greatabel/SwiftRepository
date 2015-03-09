@@ -409,6 +409,7 @@
 				B5AAC11F1AADA03B001FAED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5AAC1201AADA03B001FAED3 /* Build configuration list for PBXNativeTarget "AbelOperationQueuesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				B5AAC1221AADA03B001FAED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
