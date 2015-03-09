@@ -15,6 +15,7 @@ class ShadowView : UIView {
         super.init(frame: CGRectZero)
     }
     
+    
     override func drawRect(rect: CGRect) {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let context = UIGraphicsGetCurrentContext()
