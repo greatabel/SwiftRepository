@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5A6D4891AB6B51300398CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4881AB6B51300398CBC /* AppDelegate.swift */; };
+		B5A6D48E1AB6B51300398CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A6D48C1AB6B51300398CBC /* Main.storyboard */; };
+		B5A6D4901AB6B51300398CBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A6D48F1AB6B51300398CBC /* Images.xcassets */; };
+		B5A6D4931AB6B51300398CBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A6D4911AB6B51300398CBC /* LaunchScreen.xib */; };
+		B5A6D49F1AB6B51300398CBC /* AbelPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D49E1AB6B51300398CBC /* AbelPlacesTests.swift */; };
+		B5A6D4B41AB6B7F300398CBC /* PlaceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4B31AB6B7F300398CBC /* PlaceFormatter.swift */; };
+		B5A6D4B61AB6B81500398CBC /* WeatherFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4B51AB6B81500398CBC /* WeatherFormatter.swift */; };
+		B5A6D4BC1AB6B8DB00398CBC /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4BB1AB6B8DB00398CBC /* Place.swift */; };
+		B5A6D4BE1AB6B8FC00398CBC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4BD1AB6B8FC00398CBC /* Weather.swift */; };
+		B5A6D4C11AB6B96400398CBC /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4C01AB6B96400398CBC /* JSONService.swift */; };
+		B5A6D4C31AB6B98200398CBC /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4C21AB6B98200398CBC /* URLFactory.swift */; };
+		B5A6D4C51AB6B9F600398CBC /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4C41AB6B9F600398CBC /* GCD.swift */; };
+		B5A6D4C71AB6BA0C00398CBC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4C61AB6BA0C00398CBC /* JSON.swift */; };
+		B5A6D4C91AB6BA2700398CBC /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4C81AB6BA2700398CBC /* Operators.swift */; };
+		B5A6D4CD1AB6C20D00398CBC /* Model Builders.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4CC1AB6C20D00398CBC /* Model Builders.m */; };
+		B5A6D4D91AB6C79B00398CBC /* UISearchBar+ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4D81AB6C79B00398CBC /* UISearchBar+ErrorMessage.swift */; };
+		B5A6D4E31AB6D1D400398CBC /* PlaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4E21AB6D1D400398CBC /* PlaceDataSource.swift */; };
+		B5A6D4E51AB6D1F500398CBC /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4E41AB6D1F500398CBC /* PlaceViewController.swift */; };
+		B5A6D4E71AB6D21E00398CBC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6D4E61AB6D21E00398CBC /* SearchViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5A6D4991AB6B51300398CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A6D47B1AB6B51300398CBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5A6D4821AB6B51300398CBC;
+			remoteInfo = AbelPlaces;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5A6D4831AB6B51300398CBC /* AbelPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbelPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A6D4871AB6B51300398CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A6D4881AB6B51300398CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5A6D48D1AB6B51300398CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5A6D48F1AB6B51300398CBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5A6D4921AB6B51300398CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B5A6D4981AB6B51300398CBC /* AbelPlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbelPlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A6D49D1AB6B51300398CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A6D49E1AB6B51300398CBC /* AbelPlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbelPlacesTests.swift; sourceTree = "<group>"; };
+		B5A6D4B31AB6B7F300398CBC /* PlaceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFormatter.swift; sourceTree = "<group>"; };
+		B5A6D4B51AB6B81500398CBC /* WeatherFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFormatter.swift; sourceTree = "<group>"; };
+		B5A6D4B71AB6B88800398CBC /* AbelPlaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AbelPlaces-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5A6D4BB1AB6B8DB00398CBC /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B5A6D4BD1AB6B8FC00398CBC /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		B5A6D4C01AB6B96400398CBC /* JSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
+		B5A6D4C21AB6B98200398CBC /* URLFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
+		B5A6D4C41AB6B9F600398CBC /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		B5A6D4C61AB6BA0C00398CBC /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		B5A6D4C81AB6BA2700398CBC /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		B5A6D4CB1AB6C20D00398CBC /* Model Builders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Model Builders.h"; sourceTree = "<group>"; };
+		B5A6D4CC1AB6C20D00398CBC /* Model Builders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Model Builders.m"; sourceTree = "<group>"; };
+		B5A6D4D81AB6C79B00398CBC /* UISearchBar+ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+ErrorMessage.swift"; sourceTree = "<group>"; };
+		B5A6D4E21AB6D1D400398CBC /* PlaceDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDataSource.swift; sourceTree = "<group>"; };
+		B5A6D4E41AB6D1F500398CBC /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		B5A6D4E61AB6D21E00398CBC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5A6D4801AB6B51300398CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A6D4951AB6B51300398CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5A6D47A1AB6B51300398CBC = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4851AB6B51300398CBC /* AbelPlaces */,
+				B5A6D49B1AB6B51300398CBC /* AbelPlacesTests */,
+				B5A6D4841AB6B51300398CBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5A6D4841AB6B51300398CBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4831AB6B51300398CBC /* AbelPlaces.app */,
+				B5A6D4981AB6B51300398CBC /* AbelPlacesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5A6D4851AB6B51300398CBC /* AbelPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4BF1AB6B94900398CBC /* Networking */,
+				B5A6D4B21AB6B78100398CBC /* Model */,
+				B5A6D4B11AB6B77200398CBC /* Formatting */,
+				B5A6D4A81AB6B51C00398CBC /* UI */,
+				B5A6D4881AB6B51300398CBC /* AppDelegate.swift */,
+				B5A6D48F1AB6B51300398CBC /* Images.xcassets */,
+				B5A6D4911AB6B51300398CBC /* LaunchScreen.xib */,
+				B5A6D4861AB6B51300398CBC /* Supporting Files */,
+				B5A6D4C41AB6B9F600398CBC /* GCD.swift */,
+				B5A6D4C61AB6BA0C00398CBC /* JSON.swift */,
+				B5A6D4C81AB6BA2700398CBC /* Operators.swift */,
+			);
+			path = AbelPlaces;
+			sourceTree = "<group>";
+		};
+		B5A6D4861AB6B51300398CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4871AB6B51300398CBC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5A6D49B1AB6B51300398CBC /* AbelPlacesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D49E1AB6B51300398CBC /* AbelPlacesTests.swift */,
+				B5A6D49C1AB6B51300398CBC /* Supporting Files */,
+			);
+			path = AbelPlacesTests;
+			sourceTree = "<group>";
+		};
+		B5A6D49C1AB6B51300398CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D49D1AB6B51300398CBC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5A6D4A81AB6B51C00398CBC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D48C1AB6B51300398CBC /* Main.storyboard */,
+				B5A6D4D81AB6C79B00398CBC /* UISearchBar+ErrorMessage.swift */,
+				B5A6D4E21AB6D1D400398CBC /* PlaceDataSource.swift */,
+				B5A6D4E41AB6D1F500398CBC /* PlaceViewController.swift */,
+				B5A6D4E61AB6D21E00398CBC /* SearchViewController.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B5A6D4B11AB6B77200398CBC /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4B31AB6B7F300398CBC /* PlaceFormatter.swift */,
+				B5A6D4B51AB6B81500398CBC /* WeatherFormatter.swift */,
+			);
+			name = Formatting;
+			sourceTree = "<group>";
+		};
+		B5A6D4B21AB6B78100398CBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4B71AB6B88800398CBC /* AbelPlaces-Bridging-Header.h */,
+				B5A6D4BB1AB6B8DB00398CBC /* Place.swift */,
+				B5A6D4BD1AB6B8FC00398CBC /* Weather.swift */,
+				B5A6D4CB1AB6C20D00398CBC /* Model Builders.h */,
+				B5A6D4CC1AB6C20D00398CBC /* Model Builders.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B5A6D4BF1AB6B94900398CBC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6D4C01AB6B96400398CBC /* JSONService.swift */,
+				B5A6D4C21AB6B98200398CBC /* URLFactory.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5A6D4821AB6B51300398CBC /* AbelPlaces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5A6D4A21AB6B51300398CBC /* Build configuration list for PBXNativeTarget "AbelPlaces" */;
+			buildPhases = (
+				B5A6D47F1AB6B51300398CBC /* Sources */,
+				B5A6D4801AB6B51300398CBC /* Frameworks */,
+				B5A6D4811AB6B51300398CBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AbelPlaces;
+			productName = AbelPlaces;
+			productReference = B5A6D4831AB6B51300398CBC /* AbelPlaces.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5A6D4971AB6B51300398CBC /* AbelPlacesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5A6D4A51AB6B51300398CBC /* Build configuration list for PBXNativeTarget "AbelPlacesTests" */;
+			buildPhases = (
+				B5A6D4941AB6B51300398CBC /* Sources */,
+				B5A6D4951AB6B51300398CBC /* Frameworks */,
+				B5A6D4961AB6B51300398CBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5A6D49A1AB6B51300398CBC /* PBXTargetDependency */,
+			);
+			name = AbelPlacesTests;
+			productName = AbelPlacesTests;
+			productReference = B5A6D4981AB6B51300398CBC /* AbelPlacesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5A6D47B1AB6B51300398CBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = abel;
+				TargetAttributes = {
+					B5A6D4821AB6B51300398CBC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					B5A6D4971AB6B51300398CBC = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = B5A6D4821AB6B51300398CBC;
+					};
+				};
+			};
+			buildConfigurationList = B5A6D47E1AB6B51300398CBC /* Build configuration list for PBXProject "AbelPlaces" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5A6D47A1AB6B51300398CBC;
+			productRefGroup = B5A6D4841AB6B51300398CBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5A6D4821AB6B51300398CBC /* AbelPlaces */,
+				B5A6D4971AB6B51300398CBC /* AbelPlacesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5A6D4811AB6B51300398CBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A6D48E1AB6B51300398CBC /* Main.storyboard in Resources */,
+				B5A6D4931AB6B51300398CBC /* LaunchScreen.xib in Resources */,
+				B5A6D4901AB6B51300398CBC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A6D4961AB6B51300398CBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5A6D47F1AB6B51300398CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A6D4E71AB6D21E00398CBC /* SearchViewController.swift in Sources */,
+				B5A6D4B61AB6B81500398CBC /* WeatherFormatter.swift in Sources */,
+				B5A6D4C71AB6BA0C00398CBC /* JSON.swift in Sources */,
+				B5A6D4C51AB6B9F600398CBC /* GCD.swift in Sources */,
+				B5A6D4E51AB6D1F500398CBC /* PlaceViewController.swift in Sources */,
+				B5A6D4C31AB6B98200398CBC /* URLFactory.swift in Sources */,
+				B5A6D4B41AB6B7F300398CBC /* PlaceFormatter.swift in Sources */,
+				B5A6D4BE1AB6B8FC00398CBC /* Weather.swift in Sources */,
+				B5A6D4891AB6B51300398CBC /* AppDelegate.swift in Sources */,
+				B5A6D4CD1AB6C20D00398CBC /* Model Builders.m in Sources */,
+				B5A6D4BC1AB6B8DB00398CBC /* Place.swift in Sources */,
+				B5A6D4E31AB6D1D400398CBC /* PlaceDataSource.swift in Sources */,
+				B5A6D4C91AB6BA2700398CBC /* Operators.swift in Sources */,
+				B5A6D4C11AB6B96400398CBC /* JSONService.swift in Sources */,
+				B5A6D4D91AB6C79B00398CBC /* UISearchBar+ErrorMessage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A6D4941AB6B51300398CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A6D49F1AB6B51300398CBC /* AbelPlacesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5A6D49A1AB6B51300398CBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5A6D4821AB6B51300398CBC /* AbelPlaces */;
+			targetProxy = B5A6D4991AB6B51300398CBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5A6D48C1AB6B51300398CBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5A6D48D1AB6B51300398CBC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5A6D4911AB6B51300398CBC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5A6D4921AB6B51300398CBC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5A6D4A01AB6B51300398CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5A6D4A11AB6B51300398CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5A6D4A31AB6B51300398CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = AbelPlaces/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AbelPlaces/AbelPlaces-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5A6D4A41AB6B51300398CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = AbelPlaces/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AbelPlaces/AbelPlaces-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B5A6D4A61AB6B51300398CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AbelPlacesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbelPlaces.app/AbelPlaces";
+			};
+			name = Debug;
+		};
+		B5A6D4A71AB6B51300398CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AbelPlacesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbelPlaces.app/AbelPlaces";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5A6D47E1AB6B51300398CBC /* Build configuration list for PBXProject "AbelPlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A6D4A01AB6B51300398CBC /* Debug */,
+				B5A6D4A11AB6B51300398CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5A6D4A21AB6B51300398CBC /* Build configuration list for PBXNativeTarget "AbelPlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A6D4A31AB6B51300398CBC /* Debug */,
+				B5A6D4A41AB6B51300398CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5A6D4A51AB6B51300398CBC /* Build configuration list for PBXNativeTarget "AbelPlacesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A6D4A61AB6B51300398CBC /* Debug */,
+				B5A6D4A71AB6B51300398CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5A6D47B1AB6B51300398CBC /* Project object */;
+}
