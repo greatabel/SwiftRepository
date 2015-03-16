@@ -16,6 +16,7 @@ class TopicsTableViewController: UITableViewController, XMLParserDelegate {
     
     
     override func viewDidLoad() {
+        //http://robinchao.github.io/blog/2014/12/23/lsls/
         super.viewDidLoad()
      
         let url = NSURL(string: "http://feeds.feedburner.com/appcoda")
