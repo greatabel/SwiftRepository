@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  SwiftPlaces
-//
-//  Created by Joshua Smith on 7/25/14.
-//  Copyright (c) 2014 iJoshSmith. All rights reserved.
-//
-
 import UIKit
 
 /** Shows a search bar and lists places found by postal code. */

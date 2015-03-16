@@ -1,11 +1,3 @@
-//
-//  PlaceDataSource.swift
-//  SwiftPlaces
-//
-//  Created by Joshua Smith on 7/27/14.
-//  Copyright (c) 2014 iJoshSmith. All rights reserved.
-//
-
 import UIKit
 
 /** Manages Place objects for the search controller's UITableView. */
