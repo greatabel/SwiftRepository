@@ -13,6 +13,8 @@
 		B5C3797D1AD50F3900E8369D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C3797C1AD50F3900E8369D /* Images.xcassets */; };
 		B5C379801AD50F3900E8369D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C3797E1AD50F3900E8369D /* LaunchScreen.xib */; };
 		B5C3798C1AD50F3900E8369D /* ihanhaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3798B1AD50F3900E8369D /* ihanhaiTests.swift */; };
+		B5C379981AD51F0F00E8369D /* peple.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C379971AD51F0F00E8369D /* peple.png */; };
+		B5C3799A1AD51FFB00E8369D /* fristpage.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C379991AD51FFB00E8369D /* fristpage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		B5C379851AD50F3900E8369D /* ihanhaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ihanhaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C3798A1AD50F3900E8369D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C3798B1AD50F3900E8369D /* ihanhaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ihanhaiTests.swift; sourceTree = "<group>"; };
+		B5C379971AD51F0F00E8369D /* peple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peple.png; path = ihanhai/peple.png; sourceTree = "<group>"; };
+		B5C379991AD51FFB00E8369D /* fristpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fristpage.png; path = ihanhai/fristpage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		B5C379671AD50F3900E8369D = {
 			isa = PBXGroup;
 			children = (
+				B5C379991AD51FFB00E8369D /* fristpage.png */,
+				B5C379971AD51F0F00E8369D /* peple.png */,
 				B5C379721AD50F3900E8369D /* ihanhai */,
 				B5C379881AD50F3900E8369D /* ihanhaiTests */,
 				B5C379711AD50F3900E8369D /* Products */,
@@ -192,8 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C3799A1AD51FFB00E8369D /* fristpage.png in Resources */,
 				B5C3797B1AD50F3900E8369D /* Main.storyboard in Resources */,
 				B5C379801AD50F3900E8369D /* LaunchScreen.xib in Resources */,
+				B5C379981AD51F0F00E8369D /* peple.png in Resources */,
 				B5C3797D1AD50F3900E8369D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

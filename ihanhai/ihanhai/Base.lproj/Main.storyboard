@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--首页-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ihanhai" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,13 +25,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Un8-QD-yIO"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="fristpage.png" id="Un8-QD-yIO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="359"/>
         </scene>
-        <!--Item-->
+        <!--我的-->
         <scene sceneID="Cfx-Da-H0b">
             <objects>
                 <viewController id="BEA-uJ-VNz" sceneMemberID="viewController">
@@ -52,13 +52,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Qd1-PV-zbA"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="peple.png" id="Qd1-PV-zbA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tS-EB-lwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="65" y="1212"/>
         </scene>
-        <!--Item-->
+        <!--项目-->
         <scene sceneID="Ysd-IK-uj5">
             <objects>
                 <viewController id="VJA-4F-Yts" sceneMemberID="viewController">
@@ -79,13 +79,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0TK-hG-6ER"/>
+                    <tabBarItem key="tabBarItem" title="项目" image="project" id="0TK-hG-6ER"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzV-bB-zm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="717" y="1266"/>
         </scene>
-        <!--Item-->
+        <!--资讯-->
         <scene sceneID="wht-20-gAJ">
             <objects>
                 <viewController id="GIQ-gn-6iu" sceneMemberID="viewController">
@@ -106,7 +106,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="aTY-BI-cPv"/>
+                    <tabBarItem key="tabBarItem" title="资讯" image="information" id="aTY-BI-cPv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvL-GN-zVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,4 +134,10 @@
             <point key="canvasLocation" x="440" y="359"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fristpage.png" width="30" height="30"/>
+        <image name="information" width="29" height="29"/>
+        <image name="peple.png" width="30" height="30"/>
+        <image name="project" width="29" height="29"/>
+    </resources>
 </document>
