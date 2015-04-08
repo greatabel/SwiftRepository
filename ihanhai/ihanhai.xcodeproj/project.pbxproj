@@ -15,6 +15,7 @@
 		B5C3798C1AD50F3900E8369D /* ihanhaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3798B1AD50F3900E8369D /* ihanhaiTests.swift */; };
 		B5C379981AD51F0F00E8369D /* peple.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C379971AD51F0F00E8369D /* peple.png */; };
 		B5C3799A1AD51FFB00E8369D /* fristpage.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C379991AD51FFB00E8369D /* fristpage.png */; };
+		B5C3799C1AD52A8900E8369D /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B5C3799B1AD52A8900E8369D /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		B5C3798B1AD50F3900E8369D /* ihanhaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ihanhaiTests.swift; sourceTree = "<group>"; };
 		B5C379971AD51F0F00E8369D /* peple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peple.png; path = ihanhai/peple.png; sourceTree = "<group>"; };
 		B5C379991AD51FFB00E8369D /* fristpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fristpage.png; path = ihanhai/fristpage.png; sourceTree = "<group>"; };
+		B5C3799B1AD52A8900E8369D /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ihanhai/index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		B5C379671AD50F3900E8369D = {
 			isa = PBXGroup;
 			children = (
+				B5C3799B1AD52A8900E8369D /* index.html */,
 				B5C379991AD51FFB00E8369D /* fristpage.png */,
 				B5C379971AD51F0F00E8369D /* peple.png */,
 				B5C379721AD50F3900E8369D /* ihanhai */,
@@ -201,6 +204,7 @@
 				B5C3799A1AD51FFB00E8369D /* fristpage.png in Resources */,
 				B5C3797B1AD50F3900E8369D /* Main.storyboard in Resources */,
 				B5C379801AD50F3900E8369D /* LaunchScreen.xib in Resources */,
+				B5C3799C1AD52A8900E8369D /* index.html in Resources */,
 				B5C379981AD51F0F00E8369D /* peple.png in Resources */,
 				B5C3797D1AD50F3900E8369D /* Images.xcassets in Resources */,
 			);
