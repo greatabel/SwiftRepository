@@ -11,17 +11,21 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
-		<string>https://github.com/greatabel/Introducing-iOS8-Swift.git</string>
+		<string>https://github.com/greatabel/SwiftRepository</string>
+		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
+		<string>https://github.com/greatabel/puzzle_I_cracked.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>4RaceCar/4RaceCar.xcodeproj</string>
+	<string>Introducing-iOS8-Swift/4RaceCar/4RaceCar.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
-		<string>../../..</string>
+		<string>../../../..</string>
+		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/greatabel/Introducing-iOS8-Swift.git</string>
+	<string>https://github.com/greatabel/SwiftRepository</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -32,9 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3998DCE11B749996D579E2A3980196FD3BB45AD7</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Introducing-iOS8-Swift</string>
+			<string>SwiftRepository</string>
 		</dict>
 	</array>
 </dict>

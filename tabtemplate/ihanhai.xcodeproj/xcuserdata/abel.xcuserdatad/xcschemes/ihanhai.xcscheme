@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
-               BuildableName = "5Passort.app"
-               BlueprintName = "5Passort"
-               ReferencedContainer = "container:6Passort.xcodeproj">
+               BlueprintIdentifier = "B5C3793F1AD5096800E8369D"
+               BuildableName = "ihanhai.app"
+               BlueprintName = "ihanhai"
+               ReferencedContainer = "container:ihanhai.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5A8B7B91A9DE03D00B2282D"
-               BuildableName = "5PassortTests.xctest"
-               BlueprintName = "5PassortTests"
-               ReferencedContainer = "container:6Passort.xcodeproj">
+               BlueprintIdentifier = "B5C379561AD5096800E8369D"
+               BuildableName = "ihanhaiTests.xctest"
+               BlueprintName = "ihanhaiTests"
+               ReferencedContainer = "container:ihanhai.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5A8B7B91A9DE03D00B2282D"
-               BuildableName = "5PassortTests.xctest"
-               BlueprintName = "5PassortTests"
-               ReferencedContainer = "container:6Passort.xcodeproj">
+               BlueprintIdentifier = "B5C379561AD5096800E8369D"
+               BuildableName = "ihanhaiTests.xctest"
+               BlueprintName = "ihanhaiTests"
+               ReferencedContainer = "container:ihanhai.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
-            BuildableName = "5Passort.app"
-            BlueprintName = "5Passort"
-            ReferencedContainer = "container:6Passort.xcodeproj">
+            BlueprintIdentifier = "B5C3793F1AD5096800E8369D"
+            BuildableName = "ihanhai.app"
+            BlueprintName = "ihanhai"
+            ReferencedContainer = "container:ihanhai.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
-            BuildableName = "5Passort.app"
-            BlueprintName = "5Passort"
-            ReferencedContainer = "container:6Passort.xcodeproj">
+            BlueprintIdentifier = "B5C3793F1AD5096800E8369D"
+            BuildableName = "ihanhai.app"
+            BlueprintName = "ihanhai"
+            ReferencedContainer = "container:ihanhai.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5A8B7A41A9DE03D00B2282D"
-            BuildableName = "5Passort.app"
-            BlueprintName = "5Passort"
-            ReferencedContainer = "container:6Passort.xcodeproj">
+            BlueprintIdentifier = "B5C3793F1AD5096800E8369D"
+            BuildableName = "ihanhai.app"
+            BlueprintName = "ihanhai"
+            ReferencedContainer = "container:ihanhai.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
