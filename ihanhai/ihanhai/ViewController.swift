@@ -21,7 +21,13 @@ class ViewController: UIViewController {
 //        let requestURL = NSURL(string:url)
         
 //        let request = NSURLRequest(URL: requestURL!)
-        let request = NSURLRequest(URL: try6!)
+//        let request = NSURLRequest(URL: try6!)
+//        webView.loadRequest(request)
+        
+        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "/www")
+        var requestURL = NSURL(string:path!);
+        var request = NSURLRequest(URL:requestURL!);
+        
         webView.loadRequest(request)
         
     }
