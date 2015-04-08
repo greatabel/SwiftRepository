@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
-//    let url = "http://apple.com"
-   var try6 = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("index", ofType:"html")!)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +23,7 @@ class ViewController: UIViewController {
 //        let request = NSURLRequest(URL: try6!)
 //        webView.loadRequest(request)
         
+        //load www folder into the index tab
         let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "/www")
         var requestURL = NSURL(string:path!);
         var request = NSURLRequest(URL:requestURL!);
