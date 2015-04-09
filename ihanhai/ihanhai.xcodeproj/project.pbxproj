@@ -170,9 +170,11 @@
 				TargetAttributes = {
 					B5C3796F1AD50F3900E8369D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = VTNCJ382TT;
 					};
 					B5C379841AD50F3900E8369D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = VTNCJ382TT;
 						TestTargetID = B5C3796F1AD50F3900E8369D;
 					};
 				};
@@ -368,6 +370,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -379,6 +383,7 @@
 				INFOPLIST_FILE = ihanhaiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ihanhai.app/ihanhai";
 			};
 			name = Debug;
@@ -387,6 +392,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -394,6 +401,7 @@
 				INFOPLIST_FILE = ihanhaiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ihanhai.app/ihanhai";
 			};
 			name = Release;
