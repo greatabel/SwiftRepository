@@ -24,11 +24,30 @@ class ViewController: UIViewController {
 //        webView.loadRequest(request)
         
         //load www folder into the index tab
+        
+        
+//        let contentSize:CGSize = webView.scrollView.contentSize
+//        let viewSize:CGSize = self.view.bounds.size
+//        
+//        let rw = viewSize.width / contentSize.width
+//        
+//        webView.scrollView.minimumZoomScale = rw
+//        webView.scrollView.maximumZoomScale = rw
+//        webView.scrollView.zoomScale = rw
+//        
+//        
+//        
+//        
+//        webView.scalesPageToFit = true
+//        webView.contentMode = UIViewContentMode.ScaleAspectFit
+        
         let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "/www")
         var requestURL = NSURL(string:path!);
         var request = NSURLRequest(URL:requestURL!);
         
+        
         webView.loadRequest(request)
+      
         
     }
 
