@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I9f-3h-ZeO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--首页-->
@@ -16,12 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-Vd-bhp">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-Vd-bhp">
                                 <rect key="frame" x="0.0" y="-5" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AVU-Vd-bhp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="3ME-5n-xwU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AVU-Vd-bhp" secondAttribute="bottom" id="6um-xL-Qpm"/>
+                            <constraint firstItem="AVU-Vd-bhp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="XCD-FI-yHN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AVU-Vd-bhp" secondAttribute="trailing" id="aqP-pC-EWf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" image="fristpage.png" id="Un8-QD-yIO"/>
                     <connections>
