@@ -13,6 +13,7 @@
 		B543CBF81AEE1E35007549F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B543CBF71AEE1E35007549F5 /* Images.xcassets */; };
 		B543CBFB1AEE1E35007549F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B543CBF91AEE1E35007549F5 /* LaunchScreen.xib */; };
 		B543CC071AEE1E35007549F5 /* _StoryboradTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543CC061AEE1E35007549F5 /* _StoryboradTests.swift */; };
+		B543CC111AEE2E60007549F5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543CC101AEE2E60007549F5 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B543CC001AEE1E35007549F5 /* 4StoryboradTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4StoryboradTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B543CC051AEE1E35007549F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B543CC061AEE1E35007549F5 /* _StoryboradTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _StoryboradTests.swift; sourceTree = "<group>"; };
+		B543CC101AEE2E60007549F5 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				B543CBF71AEE1E35007549F5 /* Images.xcassets */,
 				B543CBF91AEE1E35007549F5 /* LaunchScreen.xib */,
 				B543CBEE1AEE1E35007549F5 /* Supporting Files */,
+				B543CC101AEE2E60007549F5 /* MessageViewController.swift */,
 			);
 			path = 4Storyborad;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B543CBF31AEE1E35007549F5 /* ViewController.swift in Sources */,
+				B543CC111AEE2E60007549F5 /* MessageViewController.swift in Sources */,
 				B543CBF11AEE1E35007549F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
