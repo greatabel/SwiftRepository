@@ -11,7 +11,7 @@ import UIKit
 class MessageViewController: UIViewController {
     
     let messages = [
-        "Ouch, that hurts",
+        "Ouch, that hurts 1",
         "Please don't do that again from Messageview",
         "Why did you press that?",
     ]
