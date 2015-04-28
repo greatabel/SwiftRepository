@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C4A7DA31-123D-41D8-AC96-9CCA2B8F3DF8</string>
+	<string>954665EB-F4DA-41EA-8E1B-8530D28F3B0E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>4Storyborad</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>https://github.com/greatabel/SwiftRepository</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Swift-Essentials/4Storyborad/4Storyborad.xcodeproj</string>
+	<string>myLogin/myLogin.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/greatabel/SwiftRepository</string>
