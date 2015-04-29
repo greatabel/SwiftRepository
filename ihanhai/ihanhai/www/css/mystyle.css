@@ -1,0 +1,12 @@
+.testA{
+	color:blue;
+	background-color:yellow;
+}
+
+.testB{
+	color:red;
+	background-color:pink;
+}
+
+.container { width: 100% !important }
+.mysmallfont {font-size: 90%}
