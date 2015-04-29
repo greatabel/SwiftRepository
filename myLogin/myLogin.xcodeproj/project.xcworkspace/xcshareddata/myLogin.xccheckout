@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>954665EB-F4DA-41EA-8E1B-8530D28F3B0E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>myLogin</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>https://github.com/greatabel/SwiftRepository</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>myLogin/myLogin.xcodeproj/project.xcworkspace</string>
+	<string>myLogin/myLogin.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>

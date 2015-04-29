@@ -16,6 +16,8 @@
 		B5D9E5391AEF6AA80073BD63 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9E5381AEF6AA80073BD63 /* HomeVC.swift */; };
 		B5D9E53B1AEF70DB0073BD63 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9E53A1AEF70DB0073BD63 /* LoginVC.swift */; };
 		B5D9E53D1AEF749E0073BD63 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9E53C1AEF749E0073BD63 /* SignupVC.swift */; };
+		B5E1265C1AF06F01008D8BBC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1265B1AF06F01008D8BBC /* SwiftyJSON.swift */; };
+		B5E1265E1AF081C8008D8BBC /* MyWebOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1265D1AF081C8008D8BBC /* MyWebOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		B5D9E5381AEF6AA80073BD63 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B5D9E53A1AEF70DB0073BD63 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B5D9E53C1AEF749E0073BD63 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		B5D9E53E1AEF9CE70073BD63 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		B5E1265B1AF06F01008D8BBC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		B5E1265D1AF081C8008D8BBC /* MyWebOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 		B5D9E5151AEF63DF0073BD63 /* myLogin */ = {
 			isa = PBXGroup;
 			children = (
+				B5E1265B1AF06F01008D8BBC /* SwiftyJSON.swift */,
 				B5D9E5181AEF63DF0073BD63 /* AppDelegate.swift */,
 				B5D9E51A1AEF63DF0073BD63 /* ViewController.swift */,
 				B5D9E51C1AEF63DF0073BD63 /* Main.storyboard */,
@@ -92,6 +98,8 @@
 				B5D9E5381AEF6AA80073BD63 /* HomeVC.swift */,
 				B5D9E53A1AEF70DB0073BD63 /* LoginVC.swift */,
 				B5D9E53C1AEF749E0073BD63 /* SignupVC.swift */,
+				B5D9E53E1AEF9CE70073BD63 /* MyPlayground.playground */,
+				B5E1265D1AF081C8008D8BBC /* MyWebOperation.swift */,
 			);
 			path = myLogin;
 			sourceTree = "<group>";
@@ -224,6 +232,8 @@
 				B5D9E5391AEF6AA80073BD63 /* HomeVC.swift in Sources */,
 				B5D9E53D1AEF749E0073BD63 /* SignupVC.swift in Sources */,
 				B5D9E51B1AEF63DF0073BD63 /* ViewController.swift in Sources */,
+				B5E1265E1AF081C8008D8BBC /* MyWebOperation.swift in Sources */,
+				B5E1265C1AF06F01008D8BBC /* SwiftyJSON.swift in Sources */,
 				B5D9E53B1AEF70DB0073BD63 /* LoginVC.swift in Sources */,
 				B5D9E5191AEF63DF0073BD63 /* AppDelegate.swift in Sources */,
 			);
@@ -423,6 +433,7 @@
 				B5D9E5341AEF63DF0073BD63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D9E5351AEF63DF0073BD63 /* Build configuration list for PBXNativeTarget "myLoginTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +442,7 @@
 				B5D9E5371AEF63DF0073BD63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
