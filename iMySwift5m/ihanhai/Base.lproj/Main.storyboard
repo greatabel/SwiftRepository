@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I9f-3h-ZeO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ihanhai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-Vd-bhp">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AVU-Vd-bhp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-5" id="Ff2-Zc-bMY"/>
+                            <constraint firstAttribute="trailing" secondItem="AVU-Vd-bhp" secondAttribute="trailing" id="V4c-kf-GWT"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AVU-Vd-bhp" secondAttribute="bottom" constant="5" id="qlX-nv-NrH"/>
+                            <constraint firstItem="AVU-Vd-bhp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xBB-6w-Y6c"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="index" id="Un8-QD-yIO"/>
+                    <connections>
+                        <outlet property="webView" destination="AVU-Vd-bhp" id="bSr-2q-wnO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="359"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="Cfx-Da-H0b">
+            <objects>
+                <viewController id="BEA-uJ-VNz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ygd-xy-SAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="nyr-SP-dh3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LJA-ts-BPL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4原型设计中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-O1-FGS">
+                                <rect key="frame" x="282" y="193" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="my" id="Qd1-PV-zbA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tS-EB-lwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="1208"/>
+        </scene>
+        <!--项目-->
+        <scene sceneID="Ysd-IK-uj5">
+            <objects>
+                <viewController id="VJA-4F-Yts" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q1x-ir-sqL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qpj-0a-5on"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hUY-5w-UFO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3原型设计中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baS-op-SgD">
+                                <rect key="frame" x="273" y="214" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="项目" image="project" id="0TK-hG-6ER"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzV-bB-zm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="1265"/>
+        </scene>
+        <!--资讯-->
+        <scene sceneID="wht-20-gAJ">
+            <objects>
+                <viewController id="GIQ-gn-6iu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f4e-ZC-g8S"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQ7-pS-r9t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GnE-WM-vo4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2原型设计中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIF-8K-hev">
+                                <rect key="frame" x="295" y="216" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="资讯" image="information" id="aTY-BI-cPv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvL-GN-zVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="1109"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WQt-Sd-Oc6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I9f-3h-ZeO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fha-h5-vTA">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="HKd-4E-Mai"/>
+                        <segue destination="GIQ-gn-6iu" kind="relationship" relationship="viewControllers" id="SAF-RD-ffm"/>
+                        <segue destination="VJA-4F-Yts" kind="relationship" relationship="viewControllers" id="mMD-mW-xNV"/>
+                        <segue destination="BEA-uJ-VNz" kind="relationship" relationship="viewControllers" id="wHC-sL-cpN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kaf-2Q-cEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="index" width="30" height="30"/>
+        <image name="information" width="30" height="30"/>
+        <image name="my" width="30" height="30"/>
+        <image name="project" width="30" height="30"/>
+    </resources>
+</document>
