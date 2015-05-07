@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4B4F2DBF-A96A-4102-89C2-8DCC3CB0FA2D</string>
+	<string>0F96CB7A-2745-4E6D-B1DA-FE018092D5FE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>8Passort_with_map</string>
+	<string>IOS8SwiftActivityViewControllerTutorial</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>https://github.com/greatabel/SwiftRepository</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Introducing-iOS8-Swift/8Passort_with_map/8Passort_with_map.xcodeproj</string>
+	<string>swiftShare/IOS8SwiftActivityViewControllerTutorial.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/greatabel/SwiftRepository</string>

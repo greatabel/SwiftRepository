@@ -37,7 +37,8 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate ,UINavig
 
     @IBAction func shareTapped(sender: AnyObject) {
      
-        var social = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+//        var social = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        var social = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         social.addImage(myImageView.image)
         
         self.presentViewController(social, animated: true , completion: nil)
