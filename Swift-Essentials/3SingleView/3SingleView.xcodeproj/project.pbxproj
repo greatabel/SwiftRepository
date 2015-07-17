@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B532AA1F1B59065600FF4B08 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA1E1B59065600FF4B08 /* GitHubRepository.swift */; };
+		B532AA211B59067F00FF4B08 /* GithubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA201B59067F00FF4B08 /* GithubDetails.swift */; };
+		B532AA241B59087700FF4B08 /* GitHubRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA221B59073E00FF4B08 /* GitHubRepositoryTest.swift */; };
+		B532AA261B59089F00FF4B08 /* GithubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA201B59067F00FF4B08 /* GithubDetails.swift */; };
+		B532AA271B5908A600FF4B08 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA1E1B59065600FF4B08 /* GitHubRepository.swift */; };
+		B532AA291B590AE000FF4B08 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA281B590AE000FF4B08 /* Cards.swift */; };
+		B532AA2C1B590BBC00FF4B08 /* CardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA2A1B590B8F00FF4B08 /* CardsTest.swift */; };
+		B532AA2D1B590BE900FF4B08 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532AA281B590AE000FF4B08 /* Cards.swift */; };
 		B543CBC31AEE0C93007549F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543CBC21AEE0C93007549F5 /* AppDelegate.swift */; };
 		B543CBC51AEE0C93007549F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543CBC41AEE0C93007549F5 /* ViewController.swift */; };
 		B543CBCA1AEE0C93007549F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B543CBC91AEE0C93007549F5 /* Images.xcassets */; };
@@ -25,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B532AA1E1B59065600FF4B08 /* GitHubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		B532AA201B59067F00FF4B08 /* GithubDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubDetails.swift; sourceTree = "<group>"; };
+		B532AA221B59073E00FF4B08 /* GitHubRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryTest.swift; sourceTree = "<group>"; };
+		B532AA281B590AE000FF4B08 /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		B532AA2A1B590B8F00FF4B08 /* CardsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTest.swift; sourceTree = "<group>"; };
 		B543CBBD1AEE0C93007549F5 /* 3SingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3SingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B543CBC11AEE0C93007549F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B543CBC21AEE0C93007549F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +70,11 @@
 		B543CBB41AEE0C93007549F5 = {
 			isa = PBXGroup;
 			children = (
+				B532AA2A1B590B8F00FF4B08 /* CardsTest.swift */,
+				B532AA281B590AE000FF4B08 /* Cards.swift */,
+				B532AA221B59073E00FF4B08 /* GitHubRepositoryTest.swift */,
+				B532AA201B59067F00FF4B08 /* GithubDetails.swift */,
+				B532AA1E1B59065600FF4B08 /* GitHubRepository.swift */,
 				B543CBBF1AEE0C93007549F5 /* 3SingleView */,
 				B543CBD51AEE0C93007549F5 /* 3SingleViewTests */,
 				B543CBBE1AEE0C93007549F5 /* Products */,
@@ -208,8 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B532AA291B590AE000FF4B08 /* Cards.swift in Sources */,
+				B532AA1F1B59065600FF4B08 /* GitHubRepository.swift in Sources */,
 				B543CBC51AEE0C93007549F5 /* ViewController.swift in Sources */,
 				B543CBC31AEE0C93007549F5 /* AppDelegate.swift in Sources */,
+				B532AA211B59067F00FF4B08 /* GithubDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B532AA271B5908A600FF4B08 /* GitHubRepository.swift in Sources */,
+				B532AA2C1B590BBC00FF4B08 /* CardsTest.swift in Sources */,
+				B532AA241B59087700FF4B08 /* GitHubRepositoryTest.swift in Sources */,
+				B532AA2D1B590BE900FF4B08 /* Cards.swift in Sources */,
+				B532AA261B59089F00FF4B08 /* GithubDetails.swift in Sources */,
 				B543CBD91AEE0C93007549F5 /* _SingleViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +425,7 @@
 				B543CBDE1AEE0C93007549F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B543CBDF1AEE0C93007549F5 /* Build configuration list for PBXNativeTarget "3SingleViewTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +434,7 @@
 				B543CBE11AEE0C93007549F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
