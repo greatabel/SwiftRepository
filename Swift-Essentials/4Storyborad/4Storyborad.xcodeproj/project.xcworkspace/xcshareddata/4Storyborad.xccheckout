@@ -12,6 +12,8 @@
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>https://github.com/greatabel/SwiftRepository</string>
+		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
+		<string>https://github.com/greatabel/puzzle_I_cracked.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Swift-Essentials/4Storyborad/4Storyborad.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>../../../..</string>
+		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/greatabel/SwiftRepository</string>
@@ -28,6 +32,14 @@
 	<string>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3998DCE11B749996D579E2A3980196FD3BB45AD7</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
