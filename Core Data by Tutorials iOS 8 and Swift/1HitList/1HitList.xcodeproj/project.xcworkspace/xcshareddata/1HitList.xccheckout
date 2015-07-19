@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>11ED61F6-8C44-4D47-AF2F-1FCE7CE65837</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>1HitList</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/greatabel/puzzle_I_cracked.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Core Data by Tutorials iOS 8 and Swift/1HitList/1HitList.xcodeproj/project.xcworkspace</string>
+	<string>Core Data by Tutorials iOS 8 and Swift/1HitList/1HitList.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>

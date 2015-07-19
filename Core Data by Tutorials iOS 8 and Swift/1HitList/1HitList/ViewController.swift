@@ -26,18 +26,21 @@ class ViewController: UIViewController ,UITableViewDataSource{
 //            self.names.append(textField.text)
 //            self.tableView.reloadData()
 //        }
-        let saveAction = UIAlertAction(title: "Save",
-    style: .Default){
-    (action: UIAlertAction!) -> Void in
+        let saveAction = UIAlertAction(title: "Save", style: .Default)
+            {
+     (action: UIAlertAction!) -> Void in
     
-    let textField = alert.textFields![0] as! UITextField
-    self.saveName(textField.text)
-    self.tableView.reloadData()
-        }
+     let textField = alert.textFields![0] as! UITextField
+     self.saveName(textField.text)
+     self.tableView.reloadData()
+            }
         
-        let cancelAction = UIAlertAction(title: "Cancel",
-            style: .Default) { (action: UIAlertAction!) -> Void in
-        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default)
+            {
+                (action: UIAlertAction!) -> Void in
+            }
+        
+        
         alert.addTextFieldWithConfigurationHandler {
                 (textField: UITextField!) -> Void in
         }
