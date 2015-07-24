@@ -5,15 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>67B1118D-1A76-4FF1-8BC3-50B5D3571845</string>
+	<string>19259F7E-C87B-4EC1-97B4-2C31C10A8C8D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Bow Ties</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>https://github.com/greatabel/SwiftRepository</string>
-		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
-		<string>https://github.com/greatabel/puzzle_I_cracked.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Core Data by Tutorials iOS 8 and Swift/2Bow Ties/Bow Ties.xcodeproj</string>
@@ -21,8 +19,6 @@
 	<dict>
 		<key>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</key>
 		<string>../../../..</string>
-		<key>3998DCE11B749996D579E2A3980196FD3BB45AD7</key>
-		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/greatabel/SwiftRepository</string>
@@ -32,14 +28,6 @@
 	<string>1D993D6AEE6CBFA98159537F7438A96B3A4AA452</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3998DCE11B749996D579E2A3980196FD3BB45AD7</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
