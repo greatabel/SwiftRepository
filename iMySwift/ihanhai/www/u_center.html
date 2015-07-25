@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Bootstrap 实例 - 激活导航状态</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+       <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+
+/*li{ list-style:none;}*/
+        
+<!------U-center个人中心------>
+.U_center{ width:1000px;}
+.U_left{ width:233px; float:left;height:auto;border-top:1px solid #ccc;border-left:1px solid #ccc;border-bottom:1px solid #ccc;}
+.U_right{width:765px; float:left; border:1px solid #ccc; height:auto; margin-bottom:20px;}
+.u_img{ width:84px; height:84px; margin:30px auto 10px ;}
+.u_name{ text-align:center;}
+.u_name a{ color:#333;}
+.progress-mini{ height:6px;}
+.progress{ float:left;  width:108px;margin-top:6px;}
+.percent { float:left;color:#333; margin-left:5px;}
+.u_all{ float:left; width:80px;}
+.u_userz{ float:left; width:130px;}
+.u_user{margin-top:15px;}
+.u_user li{padding:4px; margin-top:5px;}
+.u_nav{ border-top:3px solid #29bab5; margin-top:20px;}
+.navon{ color:#29bab3 !important;}
+
+.u_message{ padding:30px 20px;font-size:16px;}
+.u_message p{ margin:0; padding-bottom:30px;; line-height:26px; font-size:15px; border-bottom:1px dashed #ccc;}
+
+.u_listleft{width:490px; float:left;}
+.u_listright{width:220px; float:left; font-size:14px; }
+.u_listright .u_img_rz {width:132px; float:left; }
+.u_listright .u_sf_rz {width:102px; float:left; margin-left:10px; line-height:46px;}
+.u_list_xx{ width:690px; margin-bottom:16px;}
+.u_list{ width:500px; margin-bottom:16px;}
+.u_nlist{ width:165px; float:left; text-align:right;}
+.u_mlist{ width:335px; float:left; text-align:left;}
+.u_nlist_xm{ width:360px; float:left;}
+
+    </style>
+
+    <script type="text/javascript">
+
+        function showpublish()
+        {
+
+            window.location.href = "u_projectlists.htm";
+        }
+
+
+    </script>
+</head>
+<body>
+    <div>
+<div class="u_img">
+                	<img src="images/u_icon.gif"/>
+                </div>
+
+     <ul class="u_user">
+                	<li>
+                        <div class="u_all">信誉度:</div>
+                        <div class="progress progress-mini">
+                           <div class="progress-bar progress-bar-success" style="width: 96%;"></div>
+                        </div>
+                        <div class="percent">96%</div>
+                        <div class="clear"></div>
+					</li>
+                	<li>
+                        <div class="u_all">用户认证:</div>
+                        <div class="u_userz">
+                           手机认证
+                        </div>
+                        <div class="clear"></div>
+					</li>
+                	<li>
+                        <div class="u_all">资料完整度:</div>
+                        <div class="progress progress-striped progress-mini active">
+                           <div class="progress-bar progress-bar-warning" style="width: 70%;"></div>
+                        </div>
+                        <div class="percent">70%</div>
+                        <div class="clear"></div>
+					</li>
+                </ul>
+
+ <br style="clear:both" />
+</div>
+<!--<!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+<!--<button type="button" class="btn btn-info">原始按钮</button>-->
+
+<!-- 表示一个成功的或积极的动作 -->
+<!--<button type="button" class="btn btn-info">成功按钮</button>-->
+
+<!-- 信息警告消息的上下文按钮 -->
+<!--<button type="button" class="btn btn-info">信息按钮</button>-->
+ 
+
+<ul class="list-group">
+   <li class="list-group-item"><span class="badge">3</span>我的收藏</li>
+
+   <a href="u_projectlists.html"><li class="list-group-item" ><span class="badge">21</span>我的项目</li></a>
+   <li class="list-group-item">
+      <span class="badge">新</span>
+      我的私信
+   </li>
+   <li class="list-group-item">我的足迹</li>
+   <li class="list-group-item">
+      <span class="badge">新</span>
+      我的群组
+   </li>
+</ul>
+
+
+
+<!--<ul class="nav nav-pills nav-stacked">
+   <li class="active"><a href="#">Home</a></li>
+   <li><a href="#">SVN</a></li>
+   <li><a href="#">iOS</a></li>
+   <li><a href="#">VB.Net</a></li>
+   <li><a href="#">Java</a></li>
+   <li><a href="#">PHP</a></li>
+</ul>-->
+
+
+ 
+
+</body>
+</html>
