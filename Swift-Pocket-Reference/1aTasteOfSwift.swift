@@ -27,6 +27,31 @@ println(strTest.leadingSpaces(20))
 var trailStr = strTest.trailingSpaces(20) + "@"
 println(trailStr)
 
+//数组
+var users = ["abel0","abel1","abel2","abel4"]
+var ages = [10,20,30,40]
+//字典
+var merged = [String: Int]()
+var totalAge = 0.0;
+
+//merge 2 arrays into dictionary
+for var i=0; i < ages.count; i++
+{
+    merged[users[i]] = ages[i]
+}
+
+for user in sorted(merged.keys)
+{
+    let age = merged[user]!
+
+    totalAge += Double(age)
+    let paddedUser = user.trailingSpaces(10)
+    let paddedAge = "\(age)".leadingSpaces(3)
+    println("\(paddedUser)\(paddedAge)")
+}
+println("\n(merged.count) users")
+println("average age:\(totalAge / Double(merged.count))")
+
 // http://stackoverflow.com/questions/28469248/how-to-print-multiple-instances-of-a-variable-in-swift
 func * (left: String, right: Int) -> String {
 
