@@ -17,3 +17,19 @@ person.age = 21
 let c = person.age
 let result = (errCode: 56, errMessage:"file not found") 
 var s = result.errMessage
+
+typealias locoDetail = (name:String, number: Int, configuration: String)
+var thomas: locoDetail = ("thomas",1,"0-1-2")
+println("\n \(thomas) #typealias#")
+
+// return a tuple
+func getAHighScore() -> (name: String, score: Int)
+{
+    let theName = "Abel"
+    let theScore = 150
+
+    return (theName,theScore)
+}
+println("getAHighScore()=\(getAHighScore())")
+
+
