@@ -36,9 +36,42 @@ func getRange(input: Int) -> (lower: Int, upper: Int)?
 }
 println(getRange(1))
 
-let limits = getRange(1)!
-if limits!=nil{
-    for i in limits.lower...limits.upper {
+let limits = getRange(1)
+if limits != nil 
+{
+    for i in limits!.lower...limits!.upper {
     println("i=\(i)")
     }
 }
+
+println("Local and External Parameter Names\n")
+func f(p1: Int) -> String 
+{
+return "\(p1) is here"
+}
+println(f(10) )
+
+func funcName(stringExternal s1: String, forStringExternal s2: String = "I am default value") -> Int {
+    println("\(s1) # \(s2)")
+    return 100
+}
+funcName(stringExternal:"test1", forStringExternal: "test2")
+funcName(stringExternal:"test3")
+
+println("可变参数长度")
+
+func sum(args: Int...) -> Int 
+{
+    var result = 0
+    for a in args
+    {
+        result += a
+    }
+    return result
+}
+println("sum(1,2,3,4,5)= \(sum(1,2,3,4,5))")
+
+
+
+
+
