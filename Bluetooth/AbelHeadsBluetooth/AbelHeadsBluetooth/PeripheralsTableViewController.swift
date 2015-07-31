@@ -53,13 +53,26 @@ class PeripheralsTableViewController: UITableViewController,CBCentralManagerDele
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
     }
     
+//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableViewAutomaticDimension
+        
         tableView.estimatedRowHeight = 134
+        
+        
+//要cell里面的label都设置  http://stackoverflow.com/questions/30299319/why-uitableviewautomaticdimension-not-working
+        tableView.rowHeight =   UITableViewAutomaticDimension
+        println("UITableViewAutomaticDimension= \(UITableViewAutomaticDimension) 不代表什么")
         
        self.refreshControl?.addTarget(self, action: Selector("startScanning"), forControlEvents: .ValueChanged)
         
