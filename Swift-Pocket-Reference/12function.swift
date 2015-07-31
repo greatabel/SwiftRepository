@@ -95,7 +95,43 @@ println(generalPurposeFunc(4))
 generalPurposeFunc = addTwo
 println(generalPurposeFunc(4))
 
+println("Function Types --->")
+// http://code.tutsplus.com/tutorials/swift-from-scratch-function-parameters-types-and-nesting--cms-23056
+func printMessageWithFunction(message: String, printFunction:(String) -> ()){
+    printFunction(message)
+    println("in printMessageWithFunction")
+}
 
+// -> () 代表void
+func printMessage(msg:String) -> ()
+{
+    println("### \(msg) ###")
+    
+}
+printMessageWithFunction("test",printMessage)
+
+println("It's also possible to return a function from a function .")
+
+func compute(addition: Bool) ->    (Int,Int) ->Int 
+{
+    func add(a: Int, b: Int) -> Int {
+        return a + b
+    }
+
+    func substract(a: Int, b: Int) -> Int {
+        return a - b
+    }
+
+    if addition {
+        return add
+    }else{
+        return substract
+    }
+}
+
+let computeFunction = compute(true)
+let result = computeFunction(1,99)
+println("result = \(result)")
 
 
 
