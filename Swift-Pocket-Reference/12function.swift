@@ -71,6 +71,30 @@ func sum(args: Int...) -> Int
 }
 println("sum(1,2,3,4,5)= \(sum(1,2,3,4,5))")
 
+func doesNothing(){
+    println("doesNothing!")
+}
+doesNothing()
+
+println("Function types")
+var generalPurposeFunc:(Int) -> Int
+
+func addOne(i: Int) -> Int 
+{
+    return i + 1
+}
+
+func addTwo(i: Int) -> Int
+{
+    return i + 2
+}
+generalPurposeFunc = addOne
+
+println(addOne(4))
+println(generalPurposeFunc(4))
+generalPurposeFunc = addTwo
+println(generalPurposeFunc(4))
+
 
 
 
