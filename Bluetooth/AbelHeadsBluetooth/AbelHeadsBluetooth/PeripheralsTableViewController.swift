@@ -31,6 +31,16 @@ struct Peripheral{
 
 class PeripheralsTableViewController: UITableViewController,CBCentralManagerDelegate {
     
+    var manager: CBCentralManager!
+    var isBluetoothEnabled = false
+    var visiblePeripheralUUIDs = NSMutableOrderedSet()
+    var visiblePeripherals = [String: Peripheral]()
+    var scanTimer: NSTimer?
+    var connectionAttemptTimer:NSTimer?
+    var connectedPeripheral: CBPeripheral?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +50,11 @@ class PeripheralsTableViewController: UITableViewController,CBCentralManagerDele
         tableView.estimatedRowHeight = 134
         
        self.refreshControl?.addTarget(self, action: Selector("startScanning"), forControlEvents: .ValueChanged)
+        
+    }
+    
+    func startScanning(){
+        println("Started scanning");
         
     }
     
