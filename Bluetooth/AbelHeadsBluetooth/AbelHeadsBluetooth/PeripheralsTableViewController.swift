@@ -31,5 +31,35 @@ struct Peripheral{
 
 class PeripheralsTableViewController: UITableViewController,CBCentralManagerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 134
+        
+       self.refreshControl?.addTarget(self, action: Selector("startScanning"), forControlEvents: .ValueChanged)
+        
+    }
+    
+    func centralManagerDidUpdateState(central: CBCentralManager!) {
+        
+    }
+    
+    func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
+        
+    }
+    
+    func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
+        
+    }
+    
+    func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!) {
+        
+    }
+    func centralManager(central: CBCentralManager!, didFailToConnectPeripheral peripheral: CBPeripheral!, error: NSError!) {
+        
+    }
 
 }
