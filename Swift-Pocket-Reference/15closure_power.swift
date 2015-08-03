@@ -30,6 +30,25 @@ let u_22 = sorted(names) { $1<$0 }
 let v_22 = sorted(names) { count($0)<count($1) }
 println("\(t_22) @ \(u_22) @ \(v_22)")
 
+println("--- Capturing Values by Reference ---")
+
+func makeTranslator(greeting: String, personNo: String) ->    (String) -> String
+{
+    var cnt = 0
+    return 
+    {
+        (name: String) -> String in 
+        cnt++
+        return (greeting + " " + name + ", " + personNo + " \(cnt)")
+    }
+}
+
+var germanWelcome = makeTranslator("Guten Tag", "Sie sind Nummer")
+var aussieWelcome = makeTranslator("G'day", "you'r number")
+println(germanWelcome("Johan"))
+println(aussieWelcome("Brue"))
+println(aussieWelcome("BrueA"))
+
 
 //  http://jimmydeveloper.blogspot.com/2014/12/closure.html
 func greeting(s0: String) -> (String)
