@@ -17,6 +17,11 @@ println("orgin:\(names) #after sorted:\(t_2)")
 let v = sorted(names, {s1, s2 in count(s1) < count(s2)})
 println("orgin:\(names) #after sorted(count):\(v)")
 
+println("--- Automatic Argument Names ---")
+let t = sorted(names, { $0<$1 } ) 
+let u = sorted(names, { $1<$0 } ) 
+let v = sorted(names,
+{ count($0)<count($1) } )
 
 
 
