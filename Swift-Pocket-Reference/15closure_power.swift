@@ -18,11 +18,17 @@ let v = sorted(names, {s1, s2 in count(s1) < count(s2)})
 println("orgin:\(names) #after sorted(count):\(v)")
 
 println("--- Automatic Argument Names ---")
-let t = sorted(names, { $0<$1 } ) 
-let u = sorted(names, { $1<$0 } ) 
-let v = sorted(names,
+let t_11 = sorted(names, { $0<$1 } ) 
+let u_11 = sorted(names, { $1<$0 } ) 
+let v_11 = sorted(names,
 { count($0)<count($1) } )
+println("\(t_11) # \(u_11) # \(v_11)")
 
+println("--- Automatic Argument Names ---")
+let t_22 = sorted(names) { $0<$1 } 
+let u_22 = sorted(names) { $1<$0 } 
+let v_22 = sorted(names) { count($0)<count($1) }
+println("\(t_22) @ \(u_22) @ \(v_22)")
 
 
 //  http://jimmydeveloper.blogspot.com/2014/12/closure.html
