@@ -1,3 +1,25 @@
+let names = ["John", "Zoe", "Laura", "albert", "Allen"]
+let s = sorted(names)
+println("orgin:\(names) #after sorted:\(s)")
+
+let t = sorted(names, {
+    (s1: String, s2: String) -> Bool  in
+        return s1 < s2 
+    })
+println("orgin:\(names) #after sorted:\(t)")
+
+let t_1 = sorted(names, {s1, s2 in return s1 > s2})
+println("orgin:\(names) #after sorted:\(t_1)")
+
+let t_2 = sorted(names, {s1, s2 in s1 < s2})
+println("orgin:\(names) #after sorted:\(t_2)")
+
+let v = sorted(names, {s1, s2 in count(s1) < count(s2)})
+println("orgin:\(names) #after sorted(count):\(v)")
+
+
+
+
 //  http://jimmydeveloper.blogspot.com/2014/12/closure.html
 func greeting(s0: String) -> (String)
 {
@@ -17,6 +39,8 @@ func useFuncAsParam(string: String, funcAsParam: (String) -> (String)) -> (Strin
 }
 var returnMsgB = useFuncAsParam("testb", greeting)
 println("Case 3:\(returnMsgB)")
+
+// －－－－－－－－－closure 例子：－－－－－－－－－－－－－－
 
 var returnMsgClosure = useFuncAsParam("testclosure", {
      (s0: String) -> (String) in 
