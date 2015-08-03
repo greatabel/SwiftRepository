@@ -24,3 +24,5 @@ println("reversedB= \(reversedB)")
 
 var reversedC = sorted(names, { $0 > $1 })
 println("reversedC= \(reversedC)")
+
+rut
