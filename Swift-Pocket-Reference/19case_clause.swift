@@ -47,10 +47,22 @@ default:
 
 
 println("Value binding with tuples and ranges")
-switch record {
-case (_, let yr, "Fri"):
-    println(" Sciences - customized for year \(yr) ")
-default:
-    println("here")
-    
+
+
+func testSwitch(record: (String, Int, String)) -> ()
+{
+    println("--- ### ---")
+    switch record {
+    case (_, let yr, "Fri"):
+        println(" Sciences - customized for year \(yr) ")
+    // the where qualifier
+    case (_, 3 ,let day) where day.hasPrefix("T"):
+        println("has T")
+    default:
+        println("here")
+        
+    }
+
 }
+testSwitch(("M",9,"Fri"))
+testSwitch(("M",3,"Thu"))
