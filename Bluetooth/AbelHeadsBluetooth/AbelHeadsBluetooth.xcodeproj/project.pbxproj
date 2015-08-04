@@ -168,6 +168,7 @@
 		20542C581B6B0DF300913A12 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "万畅";
 				TargetAttributes = {
@@ -427,6 +428,7 @@
 				20542C841B6B0DF300913A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20542C851B6B0DF300913A12 /* Build configuration list for PBXNativeTarget "AbelHeadsBluetoothTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +437,7 @@
 				20542C871B6B0DF300913A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
