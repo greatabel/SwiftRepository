@@ -23,6 +23,7 @@ let year = 9 // 7-10
 let gender: Character = "M" // "M" or "F"
 let weekday = "Fri" // "Mon" through "Fri"
 let record = (gender, year, weekday)
+print("record = \(record)")
 switch record {
 case ("M", 7...8, "Mon"): 
     println ("Sports: Cricket")
@@ -42,4 +43,14 @@ case (_, 7...10, "Fri"):
     println ("Humanities")
 default:
     println("nothing scheduled or invalid input")
+}
+
+
+println("Value binding with tuples and ranges")
+switch record {
+case (_, let yr, "Fri"):
+    println(" Sciences - customized for year \(yr) ")
+default:
+    println("here")
+    
 }
