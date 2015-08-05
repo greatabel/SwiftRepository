@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20EFA6001B71F622001F34C5 /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFA5FF1B71F622001F34C5 /* Bowtie.swift */; };
 		FEC9FF5C195B66BA00FC7178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC9FF5B195B66BA00FC7178 /* AppDelegate.swift */; };
 		FEC9FF5F195B66BA00FC7178 /* Bow_Ties.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEC9FF5D195B66BA00FC7178 /* Bow_Ties.xcdatamodeld */; };
 		FEC9FF61195B66BA00FC7178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC9FF60195B66BA00FC7178 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20EFA5FF1B71F622001F34C5 /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
 		FEC9FF56195B66BA00FC7178 /* Bow Ties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bow Ties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC9FF5A195B66BA00FC7178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEC9FF5B195B66BA00FC7178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		FEC9FF4D195B66BA00FC7178 = {
 			isa = PBXGroup;
 			children = (
+				20EFA5FF1B71F622001F34C5 /* Bowtie.swift */,
 				FEC9FF58195B66BA00FC7178 /* Bow Ties */,
 				FEC9FF6E195B66BA00FC7178 /* Bow TiesTests */,
 				FEC9FF57195B66BA00FC7178 /* Products */,
@@ -159,11 +162,13 @@
 		FEC9FF4E195B66BA00FC7178 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
 					FEC9FF55195B66BA00FC7178 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = VTNCJ382TT;
 					};
 					FEC9FF6A195B66BA00FC7178 = {
 						CreatedOnToolsVersion = 6.0;
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEC9FF61195B66BA00FC7178 /* ViewController.swift in Sources */,
+				20EFA6001B71F622001F34C5 /* Bowtie.swift in Sources */,
 				FEC9FF5C195B66BA00FC7178 /* AppDelegate.swift in Sources */,
 				FEC9FF5F195B66BA00FC7178 /* Bow_Ties.xcdatamodeld in Sources */,
 			);
@@ -333,9 +339,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Bow Ties/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -344,9 +354,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Bow Ties/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
