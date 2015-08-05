@@ -18,41 +18,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
-    let entity = NSEntityDescription.entityForName("Bowtie", inManagedObjectContext: managedObjectContext!)
-    let bowtie = Bowtie(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-    bowtie.name = "My bow tie"
-    bowtie.lastWorn = NSDate()
-    println("\(bowtie.lastWorn) #")
+//    let entity = NSEntityDescription.entityForName("Bowtie", inManagedObjectContext: managedObjectContext!)
+//    let bowtie = Bowtie(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+//    bowtie.name = "My bow tie"
+//    bowtie.lastWorn = NSDate()
+//    println("\(bowtie.lastWorn) #")
+//    
+//
+//    
+//    
+//    managedObjectContext!.save(nil)
+//    
+//    // ------
+//    // http://www.davidbreyer.com/programming/2014/06/10/getting-local-date-and-time-with-swift/
+//    let date = NSDate();
+//    let dateFormatter = NSDateFormatter()
+//    //To prevent displaying either date or time, set the desired style to NoStyle.
+//    dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle //Set time style
+//    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle //Set date style
+//    dateFormatter.timeZone = NSTimeZone()
+//    let localDate = dateFormatter.stringFromDate(date)
+//    
+//    println("UTC Time")
+//    println(date)
+//    println("Local Time")
+//    println(localDate)
+//    
+//    // ------
+//    
+//    // retrieve test 
+//    let request = NSFetchRequest(entityName: "Bowtie")
+//    let ties = managedObjectContext!.executeFetchRequest(request, error: nil) as! [Bowtie]
+//    
+//    let sample = ties[0]
+//    
+//    println("Name: \(sample.name), Worn: \(sample.lastWorn)")
     
-
-    
-    
-    managedObjectContext!.save(nil)
-    
-    // ------
-    
-    let date = NSDate();
-    let dateFormatter = NSDateFormatter()
-    //To prevent displaying either date or time, set the desired style to NoStyle.
-    dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle //Set time style
-    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle //Set date style
-    dateFormatter.timeZone = NSTimeZone()
-    let localDate = dateFormatter.stringFromDate(date)
-    
-    println("UTC Time")
-    println(date)
-    println("Local Time")
-    println(localDate)
-    
-    // ------
-    
-    // retrieve test 
-    let request = NSFetchRequest(entityName: "Bowtie")
-    let ties = managedObjectContext!.executeFetchRequest(request, error: nil) as! [Bowtie]
-    
-    let sample = ties[0]
-    
-    println("Name: \(sample.name), Worn: \(sample.lastWorn)")
+    let viewController = self.window!.rootViewController as! ViewController
+    viewController.managedContext = self.managedObjectContext
     
     return true
   }

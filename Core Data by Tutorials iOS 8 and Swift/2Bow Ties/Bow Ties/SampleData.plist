@@ -5,8 +5,8 @@
 	<dict>
 		<key>name</key>
 		<string>Red Bow Tie</string>
-    <key>searchKey</key>
-    <string>R</string>
+		<key>searchKey</key>
+		<string>R</string>
 		<key>rating</key>
 		<real>3.5</real>
 		<key>tintColor</key>
@@ -19,7 +19,7 @@
 			<integer>36</integer>
 		</dict>
 		<key>imageName</key>
-		<string>red.png</string>
+		<string>red.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-06-19T18:15:24Z</date>
 		<key>timesWorn</key>
@@ -30,8 +30,8 @@
 	<dict>
 		<key>name</key>
 		<string>Orange Bow Tie</string>
-    <key>searchKey</key>
-    <string>O</string>
+		<key>searchKey</key>
+		<string>O</string>
 		<key>rating</key>
 		<real>1.2</real>
 		<key>tintColor</key>
@@ -44,7 +44,7 @@
 			<integer>122</integer>
 		</dict>
 		<key>imageName</key>
-		<string>orange.png</string>
+		<string>orange.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-06-16T18:15:24Z</date>
 		<key>timesWorn</key>
@@ -55,8 +55,8 @@
 	<dict>
 		<key>name</key>
 		<string>Yellow Bow Tie</string>
-    <key>searchKey</key>
-    <string>Y</string>
+		<key>searchKey</key>
+		<string>Y</string>
 		<key>rating</key>
 		<real>4.7</real>
 		<key>tintColor</key>
@@ -69,7 +69,7 @@
 			<integer>93</integer>
 		</dict>
 		<key>imageName</key>
-		<string>yellow.png</string>
+		<string>yellow.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-05-16T18:15:24Z</date>
 		<key>timesWorn</key>
@@ -80,8 +80,8 @@
 	<dict>
 		<key>name</key>
 		<string>Green Bow Tie</string>
-    <key>searchKey</key>
-    <string>G</string>
+		<key>searchKey</key>
+		<string>G</string>
 		<key>rating</key>
 		<real>3.2</real>
 		<key>tintColor</key>
@@ -94,7 +94,7 @@
 			<integer>144</integer>
 		</dict>
 		<key>imageName</key>
-		<string>green.png</string>
+		<string>green.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-06-19T18:15:24Z</date>
 		<key>timesWorn</key>
@@ -105,8 +105,8 @@
 	<dict>
 		<key>name</key>
 		<string>Blue Bow Tie</string>
-    <key>searchKey</key>
-    <string>B</string>
+		<key>searchKey</key>
+		<string>B</string>
 		<key>rating</key>
 		<real>1.2</real>
 		<key>tintColor</key>
@@ -119,7 +119,7 @@
 			<integer>171</integer>
 		</dict>
 		<key>imageName</key>
-		<string>blue.png</string>
+		<string>blue.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-04-19T18:15:24Z</date>
 		<key>timesWorn</key>
@@ -130,8 +130,8 @@
 	<dict>
 		<key>name</key>
 		<string>Indigo Bow Tie</string>
-    <key>searchKey</key>
-    <string>I</string>
+		<key>searchKey</key>
+		<string>I</string>
 		<key>rating</key>
 		<real>2.2</real>
 		<key>tintColor</key>
@@ -144,7 +144,7 @@
 			<integer>255</integer>
 		</dict>
 		<key>imageName</key>
-		<string>indigo.png</string>
+		<string>indigo.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-05-19T18:15:24Z</date>
 		<key>timesWorn</key>
@@ -155,8 +155,8 @@
 	<dict>
 		<key>name</key>
 		<string>Violet Bow Tie</string>
-    <key>searchKey</key>
-    <string>V</string>
+		<key>searchKey</key>
+		<string>V</string>
 		<key>rating</key>
 		<real>4</real>
 		<key>tintColor</key>
@@ -169,7 +169,7 @@
 			<integer>255</integer>
 		</dict>
 		<key>imageName</key>
-		<string>violet.png</string>
+		<string>violet.jpg</string>
 		<key>lastWorn</key>
 		<date>2014-05-29T18:15:24Z</date>
 		<key>timesWorn</key>

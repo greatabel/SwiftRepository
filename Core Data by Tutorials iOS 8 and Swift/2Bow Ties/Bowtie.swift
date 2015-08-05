@@ -11,7 +11,7 @@ import CoreData
 
 class Bowtie: NSManagedObject {
 
-    @NSManaged var isFororite: NSNumber
+    @NSManaged var isFavorite: NSNumber
     @NSManaged var lastWorn: NSDate
     @NSManaged var name: String
     @NSManaged var photoData: NSData
