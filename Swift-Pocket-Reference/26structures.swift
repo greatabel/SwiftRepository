@@ -15,7 +15,9 @@ static func areaA(p1:Rect, _ p2: Rect) -> Double {
 return p1.width + p2.width
 }
 
-
+static func aTypeMethod(){
+    println("aTypeMethod !")
+}
 
 }
 
@@ -24,5 +26,12 @@ println(r.area())
 r.embiggenBy(10)
 println(r.area())
 println(Rect.areaA(r,r))
+
+println("Type Methods for Structures: \(Rect.aTypeMethod())")
+
+var q = Rect(x:2.0, y:2.0, width:2.0, height:5.0)
+println(q.area())
+q.embiggenBy(8)
+println(q.area())
 
 
