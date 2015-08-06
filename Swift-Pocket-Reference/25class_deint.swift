@@ -42,3 +42,4 @@ println("PlayerOne has left the game")
 // prints "PlayerOne has left the game"
 println("The bank now has \(Bank.coinsInBank) coins")
 // prints "The bank now has 10000 coins"
+
