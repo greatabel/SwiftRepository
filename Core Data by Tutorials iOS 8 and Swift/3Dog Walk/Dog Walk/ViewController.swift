@@ -87,6 +87,34 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     return cell
   }
+    
+    //可编辑
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete{
+            
+            //1
+            let walkToRemove =
+            currentDog.walks[indexPath.row] as! Walk
+            
+            //2
+            managedContext.deleteObject(walkToRemove)
+            
+            // 3
+            var error: NSError?
+            if !managedContext.save(&error){
+                println("Could not save:\(error)")
+            }
+            
+            // 4
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+        }
+        
+    }
   
   @IBAction func add(sender: AnyObject) {
     
