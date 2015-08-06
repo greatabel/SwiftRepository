@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE67C77E19AED2F500682323 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67C77D19AED2F500682323 /* FilterViewController.swift */; };
+		FE74E09919AA868F00F39627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74E09819AA868F00F39627 /* AppDelegate.swift */; };
+		FE74E09B19AA868F00F39627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74E09A19AA868F00F39627 /* ViewController.swift */; };
+		FE74E09E19AA868F00F39627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE74E09C19AA868F00F39627 /* Main.storyboard */; };
+		FE74E0A019AA868F00F39627 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE74E09F19AA868F00F39627 /* Images.xcassets */; };
+		FE74E0AC19AA868F00F39627 /* Bubble_Tea_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74E0AB19AA868F00F39627 /* Bubble_Tea_FinderTests.swift */; };
+		FE8E30D319AA9AFC004AD40B /* attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE8E30D219AA9AFC004AD40B /* attribution.txt */; };
+		FE8E30D619AAA6EA004AD40B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30D419AAA6EA004AD40B /* Model.xcdatamodeld */; };
+		FE8E30DD19AAC0C5004AD40B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30DC19AAC0C5004AD40B /* Category.swift */; };
+		FE8E30DF19AAC0C5004AD40B /* PriceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30DE19AAC0C5004AD40B /* PriceInfo.swift */; };
+		FE8E30E119AAC0C5004AD40B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30E019AAC0C5004AD40B /* Location.swift */; };
+		FE8E30E319AAC15A004AD40B /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30E219AAC15A004AD40B /* Venue.swift */; };
+		FE8E30E519AAC15A004AD40B /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30E419AAC15A004AD40B /* Stats.swift */; };
+		FE8E30E719AAC2D8004AD40B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E30E619AAC2D8004AD40B /* CoreDataStack.swift */; };
+		FE9C62C319AA94ED0083EFDE /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = FE9C62C219AA94ED0083EFDE /* seed.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE74E0A619AA868F00F39627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE74E08B19AA868F00F39627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE74E09219AA868F00F39627;
+			remoteInfo = "Bubble Tea Finder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE67C77D19AED2F500682323 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		FE74E09319AA868F00F39627 /* Bubble Tea Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubble Tea Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE74E09719AA868F00F39627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE74E09819AA868F00F39627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE74E09A19AA868F00F39627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE74E09D19AA868F00F39627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE74E09F19AA868F00F39627 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE74E0A519AA868F00F39627 /* Bubble Tea FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bubble Tea FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE74E0AA19AA868F00F39627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE74E0AB19AA868F00F39627 /* Bubble_Tea_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble_Tea_FinderTests.swift; sourceTree = "<group>"; };
+		FE8E30D219AA9AFC004AD40B /* attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribution.txt; sourceTree = "<group>"; };
+		FE8E30D519AAA6EA004AD40B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FE8E30D719AAC06C004AD40B /* Bubble Tea Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bubble Tea Finder-Bridging-Header.h"; sourceTree = "<group>"; };
+		FE8E30DC19AAC0C5004AD40B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FE8E30DE19AAC0C5004AD40B /* PriceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceInfo.swift; sourceTree = "<group>"; };
+		FE8E30E019AAC0C5004AD40B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FE8E30E219AAC15A004AD40B /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		FE8E30E419AAC15A004AD40B /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		FE8E30E619AAC2D8004AD40B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FE9C62C219AA94ED0083EFDE /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = seed.json; path = ../seed.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE74E09019AA868F00F39627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE74E0A219AA868F00F39627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE74E08A19AA868F00F39627 = {
+			isa = PBXGroup;
+			children = (
+				FE74E09519AA868F00F39627 /* Bubble Tea Finder */,
+				FE74E0A819AA868F00F39627 /* Bubble Tea FinderTests */,
+				FE74E09419AA868F00F39627 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE74E09419AA868F00F39627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE74E09319AA868F00F39627 /* Bubble Tea Finder.app */,
+				FE74E0A519AA868F00F39627 /* Bubble Tea FinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE74E09519AA868F00F39627 /* Bubble Tea Finder */ = {
+			isa = PBXGroup;
+			children = (
+				FE8E30E619AAC2D8004AD40B /* CoreDataStack.swift */,
+				FE74E09819AA868F00F39627 /* AppDelegate.swift */,
+				FE74E09A19AA868F00F39627 /* ViewController.swift */,
+				FE67C77D19AED2F500682323 /* FilterViewController.swift */,
+				FE74E09C19AA868F00F39627 /* Main.storyboard */,
+				FE8E30D419AAA6EA004AD40B /* Model.xcdatamodeld */,
+				FE74E09F19AA868F00F39627 /* Images.xcassets */,
+				FE8E30E419AAC15A004AD40B /* Stats.swift */,
+				FE8E30E219AAC15A004AD40B /* Venue.swift */,
+				FE8E30E019AAC0C5004AD40B /* Location.swift */,
+				FE8E30DE19AAC0C5004AD40B /* PriceInfo.swift */,
+				FE8E30DC19AAC0C5004AD40B /* Category.swift */,
+				FE9C62C219AA94ED0083EFDE /* seed.json */,
+				FE8E30D219AA9AFC004AD40B /* attribution.txt */,
+				FE74E09619AA868F00F39627 /* Supporting Files */,
+				FE8E30D719AAC06C004AD40B /* Bubble Tea Finder-Bridging-Header.h */,
+			);
+			path = "Bubble Tea Finder";
+			sourceTree = "<group>";
+		};
+		FE74E09619AA868F00F39627 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE74E09719AA868F00F39627 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE74E0A819AA868F00F39627 /* Bubble Tea FinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE74E0AB19AA868F00F39627 /* Bubble_Tea_FinderTests.swift */,
+				FE74E0A919AA868F00F39627 /* Supporting Files */,
+			);
+			path = "Bubble Tea FinderTests";
+			sourceTree = "<group>";
+		};
+		FE74E0A919AA868F00F39627 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE74E0AA19AA868F00F39627 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE74E09219AA868F00F39627 /* Bubble Tea Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE74E0AF19AA868F00F39627 /* Build configuration list for PBXNativeTarget "Bubble Tea Finder" */;
+			buildPhases = (
+				FE74E08F19AA868F00F39627 /* Sources */,
+				FE74E09019AA868F00F39627 /* Frameworks */,
+				FE74E09119AA868F00F39627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bubble Tea Finder";
+			productName = "Bubble Tea Finder";
+			productReference = FE74E09319AA868F00F39627 /* Bubble Tea Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE74E0A419AA868F00F39627 /* Bubble Tea FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE74E0B219AA868F00F39627 /* Build configuration list for PBXNativeTarget "Bubble Tea FinderTests" */;
+			buildPhases = (
+				FE74E0A119AA868F00F39627 /* Sources */,
+				FE74E0A219AA868F00F39627 /* Frameworks */,
+				FE74E0A319AA868F00F39627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE74E0A719AA868F00F39627 /* PBXTargetDependency */,
+			);
+			name = "Bubble Tea FinderTests";
+			productName = "Bubble Tea FinderTests";
+			productReference = FE74E0A519AA868F00F39627 /* Bubble Tea FinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE74E08B19AA868F00F39627 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pietro Rea";
+				TargetAttributes = {
+					FE74E09219AA868F00F39627 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					FE74E0A419AA868F00F39627 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = FE74E09219AA868F00F39627;
+					};
+				};
+			};
+			buildConfigurationList = FE74E08E19AA868F00F39627 /* Build configuration list for PBXProject "Bubble Tea Finder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE74E08A19AA868F00F39627;
+			productRefGroup = FE74E09419AA868F00F39627 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE74E09219AA868F00F39627 /* Bubble Tea Finder */,
+				FE74E0A419AA868F00F39627 /* Bubble Tea FinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE74E09119AA868F00F39627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE74E09E19AA868F00F39627 /* Main.storyboard in Resources */,
+				FE9C62C319AA94ED0083EFDE /* seed.json in Resources */,
+				FE8E30D319AA9AFC004AD40B /* attribution.txt in Resources */,
+				FE74E0A019AA868F00F39627 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE74E0A319AA868F00F39627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE74E08F19AA868F00F39627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE74E09B19AA868F00F39627 /* ViewController.swift in Sources */,
+				FE8E30E119AAC0C5004AD40B /* Location.swift in Sources */,
+				FE74E09919AA868F00F39627 /* AppDelegate.swift in Sources */,
+				FE8E30E319AAC15A004AD40B /* Venue.swift in Sources */,
+				FE67C77E19AED2F500682323 /* FilterViewController.swift in Sources */,
+				FE8E30D619AAA6EA004AD40B /* Model.xcdatamodeld in Sources */,
+				FE8E30E519AAC15A004AD40B /* Stats.swift in Sources */,
+				FE8E30DD19AAC0C5004AD40B /* Category.swift in Sources */,
+				FE8E30E719AAC2D8004AD40B /* CoreDataStack.swift in Sources */,
+				FE8E30DF19AAC0C5004AD40B /* PriceInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE74E0A119AA868F00F39627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE74E0AC19AA868F00F39627 /* Bubble_Tea_FinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE74E0A719AA868F00F39627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE74E09219AA868F00F39627 /* Bubble Tea Finder */;
+			targetProxy = FE74E0A619AA868F00F39627 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE74E09C19AA868F00F39627 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE74E09D19AA868F00F39627 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE74E0AD19AA868F00F39627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE74E0AE19AA868F00F39627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE74E0B019AA868F00F39627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Bubble Tea Finder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bubble Tea Finder/Bubble Tea Finder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE74E0B119AA868F00F39627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Bubble Tea Finder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bubble Tea Finder/Bubble Tea Finder-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		FE74E0B319AA868F00F39627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bubble Tea FinderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bubble Tea Finder.app/Bubble Tea Finder";
+			};
+			name = Debug;
+		};
+		FE74E0B419AA868F00F39627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bubble Tea FinderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bubble Tea Finder.app/Bubble Tea Finder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE74E08E19AA868F00F39627 /* Build configuration list for PBXProject "Bubble Tea Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE74E0AD19AA868F00F39627 /* Debug */,
+				FE74E0AE19AA868F00F39627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE74E0AF19AA868F00F39627 /* Build configuration list for PBXNativeTarget "Bubble Tea Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE74E0B019AA868F00F39627 /* Debug */,
+				FE74E0B119AA868F00F39627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE74E0B219AA868F00F39627 /* Build configuration list for PBXNativeTarget "Bubble Tea FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE74E0B319AA868F00F39627 /* Debug */,
+				FE74E0B419AA868F00F39627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE8E30D419AAA6EA004AD40B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE8E30D519AAA6EA004AD40B /* Model.xcdatamodel */,
+			);
+			currentVersion = FE8E30D519AAA6EA004AD40B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FE74E08B19AA868F00F39627 /* Project object */;
+}
