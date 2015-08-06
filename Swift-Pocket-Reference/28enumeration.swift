@@ -20,9 +20,16 @@ println(" Raw Member Values ")
 // }
 
 enum AtomicNumber: Int {
-    
+
 case Hydrogen = 1, Helium, Lithium, Beryllium 
 
 }
 println(AtomicNumber.Helium)
 println(AtomicNumber.Helium.rawValue)
+
+if let r = AtomicNumber(rawValue:3){
+    println(r)
+    println(r == AtomicNumber.Lithium)
+}else{
+
+}
