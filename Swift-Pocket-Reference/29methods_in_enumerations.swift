@@ -21,3 +21,16 @@ println(someAddress.getPrintable())
 
 someAddress = NetworkAddress.MAC("00:DE:AD:BE:EF:00") 
 println(someAddress.getPrintable())
+
+println("Type method for Enumerations: -->")
+
+enum AnEnumeration: Int{
+    
+    case One = 1 , Two, Three 
+    static func aTypeMethod(){
+        println("an aTypeMethod \(One) \(Two.rawValue)")
+    }
+
+}
+
+AnEnumeration.aTypeMethod()
