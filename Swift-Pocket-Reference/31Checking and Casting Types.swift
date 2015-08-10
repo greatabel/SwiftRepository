@@ -15,6 +15,32 @@ for i in 0..<a.count{
 
 }
 
+class A {
+
+}
+
+class B:A {
+    
+}
+
+class C {
+
+}
+
+var a1 = A()
+var b1 = B()
+var c1 = C()
+
+func typeCheck(t: AnyObject) -> Bool
+{
+    println("typeCheck result is: \(t is A)")
+    return (t is A)
+}
+typeCheck(a1)
+typeCheck(b1)
+typeCheck(c1)
+
+
 //  https://developer.apple.com/library/prerelease/mac/documentation/
 //  Swift/Conceptual/Swift_Programming_Language/TypeCasting.html#//apple_ref/doc/uid/TP40014097-CH22-XID_503
 class MediaItem {
