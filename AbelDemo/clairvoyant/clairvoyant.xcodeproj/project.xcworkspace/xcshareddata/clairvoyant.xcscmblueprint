@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "27C3269989BCE3FC574FB1A72FF742998D2167D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1D993D6AEE6CBFA98159537F7438A96B3A4AA452" : 0,
+    "27C3269989BCE3FC574FB1A72FF742998D2167D2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D80C2017-87A3-48DD-9A24-73D1E187D16A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1D993D6AEE6CBFA98159537F7438A96B3A4AA452" : "..",
+    "27C3269989BCE3FC574FB1A72FF742998D2167D2" : "clairvoyant"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "clairvoyant",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "clairvoyant.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/greatabel\/SwiftRepository",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D993D6AEE6CBFA98159537F7438A96B3A4AA452"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/greatabel\/clairvoyant",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "27C3269989BCE3FC574FB1A72FF742998D2167D2"
+    }
+  ]
+}
