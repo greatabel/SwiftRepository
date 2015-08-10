@@ -41,6 +41,7 @@ typeCheck(b1)
 typeCheck(c1)
 
 
+
 //  https://developer.apple.com/library/prerelease/mac/documentation/
 //  Swift/Conceptual/Swift_Programming_Language/TypeCasting.html#//apple_ref/doc/uid/TP40014097-CH22-XID_503
 class MediaItem {
