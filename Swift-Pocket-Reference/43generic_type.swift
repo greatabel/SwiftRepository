@@ -38,3 +38,27 @@ q1.dequeue()
 
 println(q1.entries.count)
 println(q1.entries)
+
+
+struct Stack<T> {
+    var items = [T]()
+    mutating func push(item: T) {
+        items.append(item)
+    }
+    mutating func pop() -> T {
+        return items.removeLast()
+    }
+}
+
+println("stack ----------")
+var stackOfStrings = Stack<String>()
+stackOfStrings.push("uno")
+stackOfStrings.push("dos")
+stackOfStrings.push("tres")
+stackOfStrings.push("cuatro")
+println(stackOfStrings.items.count)
+
+var stackOfInts = Stack<Int>()
+stackOfInts.push(10)
+stackOfInts.push(20)
+println(stackOfInts.items)
