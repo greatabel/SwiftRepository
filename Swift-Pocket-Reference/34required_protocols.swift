@@ -3,6 +3,9 @@ protocol SomeProtocol {
     var aWritableProperty: Double { get set}
     var aReadOnlyProperty: Int {get}
     static var aTypeProperty: String { get set }
+
+
+    func printable() -> String
 }
 
 class MyClass : SomeProtocol {
@@ -21,6 +24,10 @@ class MyClass : SomeProtocol {
             self.StoredTypeProperties.aTypeProperty = newValue
         }
     }
+
+    func printable() -> String {
+        return "YES"
+    }
 }
 
 
@@ -29,3 +36,4 @@ println("\(st.aWritableProperty) # \(st.aReadOnlyProperty) #\(MyClass.aTypePrope
 st.aWritableProperty = 2.2
 MyClass.aTypeProperty = "Test"
 println("\(st.aWritableProperty) # \(st.aReadOnlyProperty) #\(MyClass.aTypeProperty)")
+println(st.printable())
