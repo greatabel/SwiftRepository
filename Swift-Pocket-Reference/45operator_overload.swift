@@ -27,10 +27,22 @@ println("一元运算符重载 --->")
 
 postfix func ++(inout r: Rect) -> Rect
 {
-    let temp = r;
+    // let temp = r;
     r.x += 1.0
     r.y += 1.0
-    return temp
+    return r
 }
 c++
 println("\(c.x) | \(c.y) | \(c.width) | \(c.height)")
+c++
+println("\(c.x) | \(c.y) | \(c.width) | \(c.height)")
+
+println("自定义运算符")
+prefix operator √ {}
+
+import Foundation
+
+prefix func √ (operand: Double) -> Double {
+return sqrt(operand) }
+
+println(√36)
