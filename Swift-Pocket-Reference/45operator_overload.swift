@@ -22,3 +22,15 @@ var  a = Rect(x:5, y:5, width:51, height:5)
 var b = Rect(x:15, y:115, width:2,height:311)
 var c = a + b
 println("\(c.x) | \(c.y) | \(c.width) | \(c.height)")
+
+println("一元运算符重载 --->")
+
+postfix func ++(inout r: Rect) -> Rect
+{
+    let temp = r;
+    r.x += 1.0
+    r.y += 1.0
+    return temp
+}
+c++
+println("\(c.x) | \(c.y) | \(c.width) | \(c.height)")
