@@ -108,10 +108,10 @@
 				20FDFF7F1B7F36BC00A0DAB8 /* MemoryViewController.swift */,
 				20FDFF511B7F2D9400A0DAB8 /* ViewController.swift */,
 				20FDFF531B7F2D9400A0DAB8 /* Main.storyboard */,
+				20FDFF811B7F3CFE00A0DAB8 /* Deck.swift */,
 				20FDFF561B7F2D9400A0DAB8 /* Assets.xcassets */,
 				20FDFF581B7F2D9400A0DAB8 /* LaunchScreen.storyboard */,
 				20FDFF5B1B7F2D9400A0DAB8 /* Info.plist */,
-				20FDFF811B7F3CFE00A0DAB8 /* Deck.swift */,
 			);
 			path = 2Memory;
 			sourceTree = "<group>";
@@ -495,6 +495,7 @@
 				20FDFF761B7F2D9400A0DAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20FDFF771B7F2D9400A0DAB8 /* Build configuration list for PBXNativeTarget "2MemoryTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +504,7 @@
 				20FDFF791B7F2D9400A0DAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20FDFF7A1B7F2D9400A0DAB8 /* Build configuration list for PBXNativeTarget "2MemoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +513,7 @@
 				20FDFF7C1B7F2D9400A0DAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

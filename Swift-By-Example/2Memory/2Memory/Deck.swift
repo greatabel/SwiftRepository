@@ -48,3 +48,16 @@ enum Rank: Int,CustomStringConvertible{
     
 }
 
+struct Card: CustomStringConvertible, Equatable{
+    private let rank: Rank
+    private let suit: Suit
+    var description: String {
+        return "\(rank.description)_of_\(suit.description)"
+    }
+    
+}
+
+func ==(card1: Card, card2: Card) -> Bool{
+    return card1.rank == card2.rank && card1.suit == card2.suit
+}
+
