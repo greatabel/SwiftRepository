@@ -90,16 +90,62 @@ extension MemoryViewController: UICollectionViewDelegate {
         
         if card1 == card2 {
             numberOfPairs++
-//            checkIfFinished()
-//            removeCards()
+            checkIfFinished()
+            removeCards()
         } else {
             score++
-//            turnCardsFaceDown()
+            turnCardsFaceDown()
         }
     }
 }
 
-
+private extension MemoryViewController{
+    func checkIfFinished(){
+        if numberOfPairs == deck.count / 2{
+                showFinalPopUp()
+        }
+    }
+    
+    func showFinalPopUp() {
+        let alert = UIAlertController(title: "Great!",
+            message: "Abel says uou won with score: \(score)!",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            self.dismissViewControllerAnimated(true, completion: nil)
+            return
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func removeCards(){
+        execAfter(1.0) {
+            self.removeCardsAtPlaces(self.selectedIndexes)
+            self.selectedIndexes = Array<NSIndexPath>()
+        }
+    }
+    
+    func turnCardsFaceDown(){
+        execAfter(2.0) {
+            self.downturnCardsAtPlaces(self.selectedIndexes)
+            self.selectedIndexes = Array<NSIndexPath>()
+        }
+    }
+    
+    func removeCardsAtPlaces(places: Array<NSIndexPath>){
+        for index in selectedIndexes {
+            let cardCell = collectionView.cellForItemAtIndexPath(index) as! CardCell
+            cardCell.remove()
+        }
+    }
+    
+    func downturnCardsAtPlaces(places: Array<NSIndexPath>){
+        for index in selectedIndexes {
+            let cardCell = collectionView.cellForItemAtIndexPath(index)as! CardCell
+            cardCell.downturn()
+        }
+    }
+}
 
 private extension MemoryViewController{
     func sizeDifficulty(difficulty: Difficulty) -> (CGFloat, CGFloat){
