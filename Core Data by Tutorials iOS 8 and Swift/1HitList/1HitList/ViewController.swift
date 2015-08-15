@@ -121,6 +121,7 @@ class ViewController: UIViewController ,UITableViewDataSource{
     
     if let results = fetchedResults{
         people = results
+        println(" \(results.count) ##")
         
     }else{
         println("Could not fetch \(error), \(error!.userInfo)")
