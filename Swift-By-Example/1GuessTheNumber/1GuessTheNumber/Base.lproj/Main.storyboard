@@ -57,7 +57,7 @@
                                 <rect key="frame" x="285" y="277" width="30" height="30"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
-                                    <action selector="onOKPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eis-f2-voC"/>
+                                    <action selector="onOkPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWo-y4-m9Y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of guesses: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-Fs-6lk">
