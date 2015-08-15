@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         if let number = number {
             selectedNumber(number)
         } else {
-            var alert = UIAlertController(title: nil, message: "Enter a number", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: nil, message: "Enter a number", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
@@ -63,7 +63,7 @@ private extension ViewController{
     func selectedNumber(number: Int){
         switch compareNumber(number, otherNumber: secretNumber){
         case .Equals:
-            var alert = UIAlertController(title: nil, message: "You won in \(numGuesses) guesses!", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: nil, message: "You won in \(numGuesses) guesses!", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { cmd in
                 self.reset()
                 self.numberTxtField.text = ""
