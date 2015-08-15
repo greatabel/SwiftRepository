@@ -24,11 +24,12 @@ class ViewController: UIViewController {
     
     @IBAction func onOkPressed(sender: AnyObject) {
         print(numberTxtField.text)
+        
         let number = Int(numberTxtField.text!)
         print("number= \(number)")
-        
-        if let number = number {
-            selectedNumber(number)
+        // if let is a special structure in Swift that allows you to check if an Optional holds a value
+        if let tempnumber = number {
+            selectedNumber(tempnumber)
         } else {
             let alert = UIAlertController(title: nil, message: "Enter a number", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
