@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20E3E1D91B7F478900554E8B /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E3E1D81B7F478900554E8B /* CardCell.swift */; };
 		20FDFF501B7F2D9400A0DAB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDFF4F1B7F2D9400A0DAB8 /* AppDelegate.swift */; };
 		20FDFF521B7F2D9400A0DAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDFF511B7F2D9400A0DAB8 /* ViewController.swift */; };
 		20FDFF551B7F2D9400A0DAB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FDFF531B7F2D9400A0DAB8 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20E3E1D81B7F478900554E8B /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		20FDFF4C1B7F2D9400A0DAB8 /* 2Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FDFF4F1B7F2D9400A0DAB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20FDFF511B7F2D9400A0DAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				20FDFF511B7F2D9400A0DAB8 /* ViewController.swift */,
 				20FDFF531B7F2D9400A0DAB8 /* Main.storyboard */,
 				20FDFF811B7F3CFE00A0DAB8 /* Deck.swift */,
+				20E3E1D81B7F478900554E8B /* CardCell.swift */,
 				20FDFF561B7F2D9400A0DAB8 /* Assets.xcassets */,
 				20FDFF581B7F2D9400A0DAB8 /* LaunchScreen.storyboard */,
 				20FDFF5B1B7F2D9400A0DAB8 /* Info.plist */,
@@ -269,6 +272,7 @@
 				20FDFF821B7F3CFE00A0DAB8 /* Deck.swift in Sources */,
 				20FDFF7E1B7F337F00A0DAB8 /* UIColor+Flat.swift in Sources */,
 				20FDFF501B7F2D9400A0DAB8 /* AppDelegate.swift in Sources */,
+				20E3E1D91B7F478900554E8B /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
