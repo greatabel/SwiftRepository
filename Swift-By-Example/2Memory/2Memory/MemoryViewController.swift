@@ -22,9 +22,18 @@ class MemoryViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit{
+        print("deint")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        start()
+    }
+    
+    private func start(){
+        
     }
     
 }
