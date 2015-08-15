@@ -9,7 +9,7 @@
 import UIKit
 
 enum Difficulty{
-    case Easy, Mediu, Hard
+    case Easy, Medium, Hard
 }
 
 class ViewController: UIViewController {
@@ -56,5 +56,28 @@ private extension ViewController{
         view.addSubview(button)
         
     }
+}
+
+
+extension ViewController{
+    
+    func onEasyTapped(sender: UIButton){
+        newGameDifficulty(.Easy)
+    }
+    
+    func onMediumTapped(sender: UIButton){
+        newGameDifficulty(.Medium)
+    }
+    
+    func onHardTapped(sender: UIButton){
+        newGameDifficulty(.Hard)
+    }
+    
+    func newGameDifficulty(difficulty: Difficulty){
+        let gameviewController = MemoryViewController(difficulty: difficulty)
+        presentViewController(gameviewController, animated: true, completion: nil)
+    }
+    
+    
 }
 

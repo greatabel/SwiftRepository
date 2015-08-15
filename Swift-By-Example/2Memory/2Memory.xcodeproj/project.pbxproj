@@ -15,6 +15,7 @@
 		20FDFF651B7F2D9400A0DAB8 /* _MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDFF641B7F2D9400A0DAB8 /* _MemoryTests.swift */; };
 		20FDFF701B7F2D9400A0DAB8 /* _MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDFF6F1B7F2D9400A0DAB8 /* _MemoryUITests.swift */; };
 		20FDFF7E1B7F337F00A0DAB8 /* UIColor+Flat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDFF7D1B7F337F00A0DAB8 /* UIColor+Flat.swift */; };
+		20FDFF801B7F36BC00A0DAB8 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDFF7F1B7F36BC00A0DAB8 /* MemoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		20FDFF6F1B7F2D9400A0DAB8 /* _MemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _MemoryUITests.swift; sourceTree = "<group>"; };
 		20FDFF711B7F2D9400A0DAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20FDFF7D1B7F337F00A0DAB8 /* UIColor+Flat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Flat.swift"; sourceTree = "<group>"; };
+		20FDFF7F1B7F36BC00A0DAB8 /* MemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				20FDFF4F1B7F2D9400A0DAB8 /* AppDelegate.swift */,
 				20FDFF7D1B7F337F00A0DAB8 /* UIColor+Flat.swift */,
+				20FDFF7F1B7F36BC00A0DAB8 /* MemoryViewController.swift */,
 				20FDFF511B7F2D9400A0DAB8 /* ViewController.swift */,
 				20FDFF531B7F2D9400A0DAB8 /* Main.storyboard */,
 				20FDFF561B7F2D9400A0DAB8 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20FDFF521B7F2D9400A0DAB8 /* ViewController.swift in Sources */,
+				20FDFF801B7F36BC00A0DAB8 /* MemoryViewController.swift in Sources */,
 				20FDFF7E1B7F337F00A0DAB8 /* UIColor+Flat.swift in Sources */,
 				20FDFF501B7F2D9400A0DAB8 /* AppDelegate.swift in Sources */,
 			);
