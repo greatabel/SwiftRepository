@@ -20,8 +20,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess a Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-LQ-hyk">
                                 <rect key="frame" x="236" y="61" width="128" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="D00-hM-f9N"/>
-                                    <constraint firstAttribute="height" constant="21" id="HKY-p6-5hs"/>
+                                    <constraint firstAttribute="width" constant="128" id="Joi-l5-F6B"/>
+                                    <constraint firstAttribute="height" constant="21" id="qbl-eX-jbX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -30,7 +30,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="between" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdw-No-lbr">
                                 <rect key="frame" x="267" y="95" width="66" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="v2Z-54-mpu"/>
+                                    <constraint firstAttribute="height" constant="21" id="Etr-2l-cyO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -39,7 +39,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX and XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpQ-he-ueK">
                                 <rect key="frame" x="259" y="134" width="82" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7E9-iC-d4J"/>
+                                    <constraint firstAttribute="height" constant="21" id="sOm-T0-8xh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -48,7 +48,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ksb-04-6uQ">
                                 <rect key="frame" x="252" y="212" width="97" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="Va7-NF-4WO"/>
+                                    <constraint firstAttribute="width" constant="97" id="6HD-8N-jvQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -56,21 +56,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpQ-qf-KJ9">
                                 <rect key="frame" x="285" y="277" width="30" height="30"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="onOKPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eis-f2-voC"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last guess was too High" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzL-aI-7Qg">
-                                <rect key="frame" x="190" y="337" width="221" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of guesses: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-Fs-6lk">
+                                <rect key="frame" x="215" y="386" width="170" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="8ah-zI-bZx"/>
-                                    <constraint firstAttribute="width" constant="221" id="k2B-Mv-umK"/>
+                                    <constraint firstAttribute="height" constant="21" id="TRs-pn-tut"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of guesses: X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-Fs-6lk">
-                                <rect key="frame" x="215" y="386" width="170" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last guess was too High" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzL-aI-7Qg">
+                                <rect key="frame" x="190" y="333" width="221" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="9oc-uP-9Ki"/>
+                                    <constraint firstAttribute="height" constant="21" id="PQE-0P-AjI"/>
+                                    <constraint firstAttribute="width" constant="221" id="PTz-Ca-2Ao"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -79,22 +82,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4tX-Fs-6lk" firstAttribute="centerX" secondItem="yzL-aI-7Qg" secondAttribute="centerX" id="ACs-o3-i4h"/>
-                            <constraint firstItem="Ksb-04-6uQ" firstAttribute="top" secondItem="xpQ-he-ueK" secondAttribute="bottom" constant="57" id="JWO-Zs-ezJ"/>
-                            <constraint firstItem="Mwv-LQ-hyk" firstAttribute="centerX" secondItem="mdw-No-lbr" secondAttribute="centerX" id="Jlp-t7-BxQ"/>
-                            <constraint firstItem="4tX-Fs-6lk" firstAttribute="top" secondItem="yzL-aI-7Qg" secondAttribute="bottom" constant="28" id="MkQ-nF-XHD"/>
-                            <constraint firstItem="mdw-No-lbr" firstAttribute="top" secondItem="Mwv-LQ-hyk" secondAttribute="bottom" constant="13" id="P1n-kb-KlQ"/>
-                            <constraint firstItem="cpQ-qf-KJ9" firstAttribute="centerX" secondItem="Ksb-04-6uQ" secondAttribute="centerX" id="Rdt-Cj-n8e"/>
-                            <constraint firstItem="xpQ-he-ueK" firstAttribute="top" secondItem="mdw-No-lbr" secondAttribute="bottom" constant="18" id="aRI-3J-bWc"/>
-                            <constraint firstItem="xpQ-he-ueK" firstAttribute="centerX" secondItem="mdw-No-lbr" secondAttribute="centerX" id="dEr-Yx-ROQ"/>
-                            <constraint firstItem="cpQ-qf-KJ9" firstAttribute="top" secondItem="Ksb-04-6uQ" secondAttribute="bottom" constant="35" id="dgK-MD-QvZ"/>
-                            <constraint firstItem="yzL-aI-7Qg" firstAttribute="top" secondItem="cpQ-qf-KJ9" secondAttribute="bottom" constant="30" id="twQ-A0-864"/>
-                            <constraint firstItem="cpQ-qf-KJ9" firstAttribute="centerX" secondItem="yzL-aI-7Qg" secondAttribute="centerX" id="ujA-gz-ZwV"/>
-                            <constraint firstItem="xpQ-he-ueK" firstAttribute="centerX" secondItem="Ksb-04-6uQ" secondAttribute="centerX" id="vN3-kV-oPw"/>
-                            <constraint firstItem="Mwv-LQ-hyk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="wJW-QZ-0Py"/>
-                            <constraint firstItem="yzL-aI-7Qg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xIJ-cz-fkr"/>
+                            <constraint firstItem="Mwv-LQ-hyk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="4Ba-qC-1C3"/>
+                            <constraint firstItem="Ksb-04-6uQ" firstAttribute="centerX" secondItem="cpQ-qf-KJ9" secondAttribute="centerX" id="D9F-zE-T9h"/>
+                            <constraint firstItem="yzL-aI-7Qg" firstAttribute="centerX" secondItem="cpQ-qf-KJ9" secondAttribute="centerX" id="JPH-py-sBc"/>
+                            <constraint firstItem="mdw-No-lbr" firstAttribute="centerX" secondItem="xpQ-he-ueK" secondAttribute="centerX" id="MoV-49-iN9"/>
+                            <constraint firstItem="4tX-Fs-6lk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P1d-WZ-QCZ"/>
+                            <constraint firstItem="mdw-No-lbr" firstAttribute="top" secondItem="Mwv-LQ-hyk" secondAttribute="bottom" constant="13" id="aBc-2B-Zzx"/>
+                            <constraint firstItem="Mwv-LQ-hyk" firstAttribute="centerX" secondItem="mdw-No-lbr" secondAttribute="centerX" id="aQQ-52-Buy"/>
+                            <constraint firstItem="xpQ-he-ueK" firstAttribute="top" secondItem="mdw-No-lbr" secondAttribute="bottom" constant="18" id="bE9-KT-Obq"/>
+                            <constraint firstItem="4tX-Fs-6lk" firstAttribute="top" secondItem="yzL-aI-7Qg" secondAttribute="bottom" constant="32" id="eeO-Wf-u1n"/>
+                            <constraint firstItem="4tX-Fs-6lk" firstAttribute="centerX" secondItem="yzL-aI-7Qg" secondAttribute="centerX" id="hyQ-VM-mMK"/>
+                            <constraint firstItem="yzL-aI-7Qg" firstAttribute="top" secondItem="cpQ-qf-KJ9" secondAttribute="bottom" constant="26" id="iUe-Tz-HSw"/>
+                            <constraint firstItem="Ksb-04-6uQ" firstAttribute="centerX" secondItem="xpQ-he-ueK" secondAttribute="centerX" id="opl-aJ-oYI"/>
+                            <constraint firstItem="cpQ-qf-KJ9" firstAttribute="top" secondItem="Ksb-04-6uQ" secondAttribute="bottom" constant="35" id="q7i-HL-Bqa"/>
+                            <constraint firstItem="Ksb-04-6uQ" firstAttribute="top" secondItem="xpQ-he-ueK" secondAttribute="bottom" constant="57" id="z6d-41-QnF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLbl" destination="yzL-aI-7Qg" id="4rB-3K-xNf"/>
+                        <outlet property="numGuessesLbl" destination="4tX-Fs-6lk" id="c4a-wJ-mV3"/>
+                        <outlet property="numberTxtField" destination="Ksb-04-6uQ" id="uF2-jw-poX"/>
+                        <outlet property="rangeLbl" destination="xpQ-he-ueK" id="sBN-X4-5W0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
