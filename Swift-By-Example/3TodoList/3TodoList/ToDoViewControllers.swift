@@ -10,4 +10,38 @@ import UIKit
 
 class ToDoViewControllers: UIViewController {
 
+    private let tableView = UITableView()
+    private let addButton = UIButton()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setup()
+        layoutView()
+        style()
+        
+    }
+}
+
+private extension ToDoViewControllers{
+    func setup(){
+        
+    }
+    
+    
+    
+}
+
+private extension ToDoViewControllers{
+    func layoutView(){
+        
+    }
+    
+}
+
+private extension ToDoViewControllers{
+    func style(){
+        
+    }
+    
 }
