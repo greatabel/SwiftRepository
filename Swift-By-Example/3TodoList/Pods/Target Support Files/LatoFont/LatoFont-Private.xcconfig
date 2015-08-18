@@ -1,0 +1,6 @@
+#include "LatoFont.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/LatoFont" "${PODS_ROOT}/Headers/Public"
+OTHER_LDFLAGS = ${LATOFONT_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
