@@ -14,9 +14,12 @@ class CoreDataDatastore: StorageDatastore {
         if let managedObjectContext = managedObjectContext {
             let fetchRequest = NSFetchRequest(entityName:"Todo")
             
+           
             do{
-                let fetchedResults =
-                try    managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+                
+          let   fetchedResults  =
+                try   managedObjectContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]?
+                
                 if let results = fetchedResults {
                     return results.map{
                         Todo(description: $0.valueForKey("descriptionText") as! String,
@@ -26,29 +29,13 @@ class CoreDataDatastore: StorageDatastore {
                             doneDate: $0.valueForKey("doneDate") as! NSDate?)
                     }
                 }
+
                 
-            }  catch let unknownError {
-                
+            }catch let unknownError {
                 print("no user error \n \(unknownError)")
             }
             
-//            var error: NSError?
-//            let fetchedResults =
-//            managedObjectContext.executeFetchRequest(fetchRequest,
-//                error: &error) as! [NSManagedObject]?
-            
-            if let results = fetchedResults {
-                return results.map{
-                    Todo(description: $0.valueForKey("descriptionText") as! String,
-                        list: List(description: $0.valueForKey("list") as! String),
-                        dueDate: $0.valueForKey("dueDate") as! NSDate,
-                        done: $0.valueForKey("done") as! Bool,
-                        doneDate: $0.valueForKey("doneDate") as! NSDate?)
-                }
-            } else {
-                print("Could not fetch \(error), \(error!.userInfo)")
-            }
-        }
+         }
         
         return Array<Todo>()
     }
