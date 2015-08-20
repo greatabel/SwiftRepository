@@ -45,7 +45,7 @@ private extension TodoViewCell{
 // MARK: render
 extension TodoViewCell{
     private func checkmarkAttributedStringTodo(todo: Todo) -> NSAttributedString{
-        if (todo.done != nil) {
+        if (todo.done ) {
             return FAKFontAwesome.checkSquareOIconWithSize(20).attributedString()
         } else {
             return FAKFontAwesome.squareOIconWithSize(20).attributedString()
@@ -55,7 +55,7 @@ extension TodoViewCell{
     func render(todo: Todo){
         let dateFormatter:NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm dd-MM-YY"
-        let dueDate = dateFormatter.stringFromDate(todo.dueDate!)
+        let dueDate = dateFormatter.stringFromDate(todo.dueDate)
         
         subtitle.text = "\(dueDate) | \(todo.list)"
         title.text = todo.description

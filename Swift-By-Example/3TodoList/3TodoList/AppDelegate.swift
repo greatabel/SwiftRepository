@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import LatoFont
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let viewController = ToDoViewControllers()
+        
+        let viewController = ToDoViewController(todosDatastore: TodosDatastore(storageDatastore: FileSystemDataStore()))
+        
+        
         let navigatorViewController = UINavigationController(rootViewController: viewController)
         
         let mainWindow = UIWindow(frame: UIScreen.mainScreen().bounds)

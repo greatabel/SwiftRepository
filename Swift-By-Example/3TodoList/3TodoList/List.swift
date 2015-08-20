@@ -1,17 +1,24 @@
 //
 //  List.swift
-//  
+//  Todolist
 //
-//  Created by 万畅 on 15/8/19.
-//
+//  Created by Giordano Scalzo on 08/01/2015.
+//  Copyright (c) 2015 Effective Code Ltd. All rights reserved.
 //
 
 import Foundation
-import CoreData
 
-@objc(List)
-class List: NSManagedObject {
+struct List {
+    let description: String
+}
 
-// Insert code here to add functionality to your managed object subclass
+func listFromDictionary(dict: Dictionary<String, AnyObject>) -> List {
+    return List(description: dict["description"] as! String!)
+}
 
+func listToDictionary(list: List) -> NSDictionary {
+    let dict: NSDictionary = [
+        "description": list.description,
+    ]
+    return dict
 }
