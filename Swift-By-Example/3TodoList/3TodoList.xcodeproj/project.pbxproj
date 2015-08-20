@@ -14,6 +14,8 @@
 		204F92441B84DEE300F139AD /* StorageDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F92431B84DEE300F139AD /* StorageDatastore.swift */; };
 		204F92461B84DF7200F139AD /* FileSystemDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F92451B84DF7200F139AD /* FileSystemDataStore.swift */; };
 		204F92481B86148100F139AD /* CoreDataDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F92471B86148100F139AD /* CoreDataDatastore.swift */; };
+		204F924A1B86353C00F139AD /* EditTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F92491B86353C00F139AD /* EditTodoViewController.swift */; };
+		204F924C1B86357700F139AD /* UIColor+Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F924B1B86357700F139AD /* UIColor+Todolist.swift */; };
 		207F71A01B83236500ED6751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F719F1B83236500ED6751 /* AppDelegate.swift */; };
 		207F71A81B83236500ED6751 /* _TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 207F71A61B83236500ED6751 /* _TodoList.xcdatamodeld */; };
 		207F71AA1B83236500ED6751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207F71A91B83236500ED6751 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		204F92431B84DEE300F139AD /* StorageDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageDatastore.swift; sourceTree = "<group>"; };
 		204F92451B84DF7200F139AD /* FileSystemDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemDataStore.swift; sourceTree = "<group>"; };
 		204F92471B86148100F139AD /* CoreDataDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDatastore.swift; sourceTree = "<group>"; };
+		204F92491B86353C00F139AD /* EditTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoViewController.swift; sourceTree = "<group>"; };
+		204F924B1B86357700F139AD /* UIColor+Todolist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Todolist.swift"; sourceTree = "<group>"; };
 		207F719C1B83236500ED6751 /* 3TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207F719F1B83236500ED6751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207F71A71B83236500ED6751 /* _TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _TodoList.xcdatamodel; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				207F71AB1B83236500ED6751 /* LaunchScreen.storyboard */,
 				207F71AE1B83236500ED6751 /* Info.plist */,
 				207F71A61B83236500ED6751 /* _TodoList.xcdatamodeld */,
+				204F924B1B86357700F139AD /* UIColor+Todolist.swift */,
 			);
 			path = 3TodoList;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				207F71D11B8324D600ED6751 /* ToDoViewController.swift */,
 				20B4AB961B8396B500234E40 /* TodoViewCell.swift */,
+				204F92491B86353C00F139AD /* EditTodoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -377,9 +383,11 @@
 				204F92481B86148100F139AD /* CoreDataDatastore.swift in Sources */,
 				204F92461B84DF7200F139AD /* FileSystemDataStore.swift in Sources */,
 				207F71A01B83236500ED6751 /* AppDelegate.swift in Sources */,
+				204F924C1B86357700F139AD /* UIColor+Todolist.swift in Sources */,
 				204F92421B84DDD600F139AD /* TodosDatastore.swift in Sources */,
 				207F71D21B8324D600ED6751 /* ToDoViewController.swift in Sources */,
 				204F923F1B839A6F00F139AD /* Todo.swift in Sources */,
+				204F924A1B86353C00F139AD /* EditTodoViewController.swift in Sources */,
 				204F92441B84DEE300F139AD /* StorageDatastore.swift in Sources */,
 				20B4AB971B8396B500234E40 /* TodoViewCell.swift in Sources */,
 				207F71A81B83236500ED6751 /* _TodoList.xcdatamodeld in Sources */,

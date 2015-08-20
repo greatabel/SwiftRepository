@@ -106,3 +106,13 @@ extension ToDoViewController : UITableViewDataSource {
     }
 
 }
+
+extension ToDoViewController{
+    
+    func addTodoButtonPressed(sender: UIButton!){
+        let addTodoVC = EditTodoViewController(todosDatastore: todosDatastore, todoToEdit: nil)
+        addTodoVC.title = "New Todo"
+        navigationController!.pushViewController(addTodoVC, animated: true)
+    }
+    
+}
