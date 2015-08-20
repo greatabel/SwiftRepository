@@ -18,16 +18,14 @@ class CoreDataDatastore: StorageDatastore {
             do{
                 
           let   fetchedResults  =
-                try   managedObjectContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]?
+                try   managedObjectContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
                 
-                if let results = fetchedResults {
-                    return results.map{
-                        Todo(description: $0.valueForKey("descriptionText") as! String,
-                            list: List(description: $0.valueForKey("list") as! String),
-                            dueDate: $0.valueForKey("dueDate") as! NSDate,
-                            done: $0.valueForKey("done") as! Bool,
-                            doneDate: $0.valueForKey("doneDate") as! NSDate?)
-                    }
+                return fetchedResults.map{
+                    Todo(description: $0.valueForKey("descriptionText") as! String,
+                        list: List(description: $0.valueForKey("list") as! String),
+                        dueDate: $0.valueForKey("dueDate") as! NSDate,
+                        done: $0.valueForKey("done") as! Bool,
+                        doneDate: $0.valueForKey("doneDate") as! NSDate?)
                 }
 
                 
@@ -44,19 +42,23 @@ class CoreDataDatastore: StorageDatastore {
         if let managedObjectContext = managedObjectContext {
             let fetchRequest = NSFetchRequest(entityName:"List")
             
-            var error: NSError?
-            let fetchedResults =
-            managedObjectContext.executeFetchRequest(fetchRequest,
-                error: &error) as! [NSManagedObject]?
-            
-            if let results = fetchedResults {
-                return results.map{
+
+            do {
+                let fetchedResults =
+               try managedObjectContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+                
+                return fetchedResults.map{
                     List(description: $0.valueForKey("descriptionText") as! String)
                 }
-            } else {
-                print("Could not fetch \(error), \(error!.userInfo)")
+
+                
+
+                
+            }catch let unknownError {
+                print("no user error \n \(unknownError)")
             }
-        }
+            
+                   }
         
         return Array<List>()
     }
@@ -87,25 +89,34 @@ class CoreDataDatastore: StorageDatastore {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Todolistsqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType,
+        
+        do {
+            
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType,
             configuration: nil,
             URL: url,
-            options: nil,
-            error: &error) == nil {
-                coordinator = nil
-                // Report any error we got.
-                let dict = NSMutableDictionary()
-                dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-                dict[NSLocalizedFailureReasonErrorKey] = failureReason
-                dict[NSUnderlyingErrorKey] = error
-                error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
-                // Replace this with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate.
-                // You should not use this function in a shipping application,
-                // although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            options: nil)
+            
+        }catch let unknownError {
+            print("no user error \n \(unknownError)")
+            
+            coordinator = nil
+            // Report any error we got.
+            let dict = NSMutableDictionary()
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason
+            dict[NSUnderlyingErrorKey] = error
+//            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
+            // Replace this with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate.
+            // You should not use this function in a shipping application,
+            // although it may be useful during development.
+            NSLog("Unresolved error \(error), \(error!.userInfo)")
+            abort()
+
         }
+        
+        
         
         return coordinator
         }()
@@ -129,14 +140,18 @@ class CoreDataDatastore: StorageDatastore {
     private func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate.
-                // You should not use this function in a shipping application,
-                // although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            
+            do {
+                if moc.hasChanges{
+                   try  moc.save()
+                }
+                
+            
+            }catch let unknownError {
+                  abort()
             }
+            
+            
         }
     }
     
@@ -160,10 +175,13 @@ extension CoreDataDatastore {
             todoMO.setValue(todo.dueDate, forKey: "dueDate")
             todoMO.setValue(todo.list.description, forKey: "list")
             
-            var error: NSError?
-            if !managedObjectContext.save(&error) {
-                print("Could not save \(error), \(error?.userInfo)")
+            
+            do{
+                try managedObjectContext.save()
+            }catch let unknownError {
+               
             }
+            
         }
     }
     
@@ -174,17 +192,23 @@ extension CoreDataDatastore {
                 todo.description, todo.dueDate)
             fetchRequest.predicate = predicate
             
-            var error: NSError?
-            let fetchedResults =
-            managedObjectContext.executeFetchRequest(fetchRequest,
-                error: &error) as! [NSManagedObject]?
-            for mo in fetchedResults! {
-                managedObjectContext.deleteObject(mo)
+//            var error: NSError?
+            
+            do{
+                 let fetchedResults =
+               try managedObjectContext.executeFetchRequest(fetchRequest ) as! [NSManagedObject]
+                
+                for mo in fetchedResults {
+                    managedObjectContext.deleteObject(mo)
+                }
+                
+                try managedObjectContext.save()
+                
+            }catch let unknownError {
+                print("no user error \n \(unknownError)")
             }
             
-            if !managedObjectContext.save(&error) {
-                print("Could not save \(error), \(error?.userInfo)")
-            }
+            
             
         }
     }
@@ -201,9 +225,14 @@ extension CoreDataDatastore {
             listMO.setValue(list.description, forKey: "descriptionText")
             
             var error: NSError?
-            if !managedObjectContext.save(&error) {
-                print("Could not save \(error), \(error?.userInfo)")
+            
+            do{
+                try managedObjectContext.save()
+            }catch let unknownError {
+                
             }
+            
+            
         }
         
     }
