@@ -17,7 +17,16 @@ class ViewController: UIViewController {
         
         let title = sender.titleForState(.Normal)
         let plainText = "\(title!) button pressed!"
-         statusLabel.text = plainText
+//         statusLabel.text = plainText
+        let styledText = NSMutableAttributedString(string:plainText)
+        let attributes = [
+            NSFontAttributeName:
+            UIFont.boldSystemFontOfSize(statusLabel.font.pointSize)
+        ]
+        let nameRange = (plainText as NSString).rangeOfString(title!)
+        styledText.setAttributes(attributes,range:nameRange)
+        
+        statusLabel.attributedText = styledText
     }
     
     override func viewDidLoad() {
