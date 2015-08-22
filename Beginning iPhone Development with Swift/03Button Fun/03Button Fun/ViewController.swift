@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         print("\(sender.titleForState(.Normal))")
         
         let title = sender.titleForState(.Normal)
-        let plainText = "\(title) button pressed!"
+        let plainText = "\(title!) button pressed!"
          statusLabel.text = plainText
     }
     
