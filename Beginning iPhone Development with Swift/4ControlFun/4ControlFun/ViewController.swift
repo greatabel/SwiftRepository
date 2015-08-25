@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var rightSwitch: UISwitch!
     
+    @IBOutlet weak var doSomethingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,6 +49,24 @@ class ViewController: UIViewController {
         let setting = sender.on
         leftSwitch.setOn(setting, animated: true)
         rightSwitch.setOn(setting, animated: true)
+    }
+    
+    @IBAction func toggleControls(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            leftSwitch.hidden = false
+            rightSwitch.hidden = false
+            doSomethingButton.hidden = true
+            
+            
+        }else{
+            leftSwitch.hidden = true
+            rightSwitch.hidden = true
+            doSomethingButton.hidden = false
+        }
+    }
+    
+    @IBAction func buttonPressed(sender: UIButton) {
+        
     }
     
     
