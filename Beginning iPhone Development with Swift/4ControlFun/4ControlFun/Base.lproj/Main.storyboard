@@ -61,19 +61,25 @@
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="65Y-j5-WSl"/>
                                 </connections>
                             </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-uy-Y29">
+                                <rect key="frame" x="33" y="463" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TQD-V2-myh"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Se-xvY">
+                                <rect key="frame" x="516" y="463" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jHd-c1-IVH"/>
+                                </connections>
+                            </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eIi-yX-M6D">
-                                <rect key="frame" x="231" y="402" width="137" height="29"/>
+                                <rect key="frame" x="232" y="402" width="137" height="29"/>
                                 <segments>
                                     <segment title="switches"/>
                                     <segment title="Button"/>
                                 </segments>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-uy-Y29">
-                                <rect key="frame" x="33" y="463" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Se-xvY">
-                                <rect key="frame" x="516" y="463" width="51" height="31"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -110,8 +116,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="leftSwitch" destination="YaR-uy-Y29" id="Dg4-VI-gQv"/>
                         <outlet property="nameField" destination="712-SK-7e8" id="aYt-Z0-Ebx"/>
                         <outlet property="numberField" destination="sso-SH-8eb" id="EBK-Yb-SyY"/>
+                        <outlet property="rightSwitch" destination="ClR-Se-xvY" id="nqI-12-S2q"/>
                         <outlet property="sliderLabel" destination="hUH-JK-OqG" id="Mx0-50-sdH"/>
                     </connections>
                 </viewController>

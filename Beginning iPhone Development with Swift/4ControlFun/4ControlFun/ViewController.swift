@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sliderLabel: UILabel!
     
+    @IBOutlet weak var leftSwitch: UISwitch!
+    
+    @IBOutlet weak var rightSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,6 +42,13 @@ class ViewController: UIViewController {
         let progress = lroundf(sender.value)
         sliderLabel.text = "\(progress)"
     }
+    
+    @IBAction func switchChanged(sender: UISwitch) {
+        let setting = sender.on
+        leftSwitch.setOn(setting, animated: true)
+        rightSwitch.setOn(setting, animated: true)
+    }
+    
     
 
 }
