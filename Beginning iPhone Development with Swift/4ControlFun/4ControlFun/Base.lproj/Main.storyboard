@@ -61,17 +61,17 @@
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="65Y-j5-WSl"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eIi-yX-M6D">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eIi-yX-M6D">
                                 <rect key="frame" x="231" y="402" width="137" height="29"/>
                                 <segments>
                                     <segment title="switches"/>
                                     <segment title="Button"/>
                                 </segments>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-uy-Y29">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-uy-Y29">
                                 <rect key="frame" x="33" y="463" width="51" height="31"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Se-xvY">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Se-xvY">
                                 <rect key="frame" x="516" y="463" width="51" height="31"/>
                             </switch>
                         </subviews>
@@ -80,19 +80,24 @@
                             <constraint firstItem="hUH-JK-OqG" firstAttribute="leading" secondItem="vO9-RN-WKp" secondAttribute="leading" id="4YR-OL-Sum"/>
                             <constraint firstItem="sso-SH-8eb" firstAttribute="leading" secondItem="712-SK-7e8" secondAttribute="leading" id="6Fo-zg-ujj"/>
                             <constraint firstItem="hUH-JK-OqG" firstAttribute="top" secondItem="vO9-RN-WKp" secondAttribute="bottom" constant="47" id="6V1-Jl-rC8"/>
+                            <constraint firstItem="YaR-uy-Y29" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="443" id="9jc-ok-XBO"/>
                             <constraint firstItem="IFO-YO-NOY" firstAttribute="centerY" secondItem="712-SK-7e8" secondAttribute="centerY" id="FEc-xz-pMp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="712-SK-7e8" secondAttribute="trailing" constant="15" id="GWv-TR-n8o"/>
                             <constraint firstItem="712-SK-7e8" firstAttribute="trailing" secondItem="sso-SH-8eb" secondAttribute="trailing" id="HeD-70-KjM"/>
                             <constraint firstItem="sso-SH-8eb" firstAttribute="top" secondItem="712-SK-7e8" secondAttribute="bottom" constant="46" id="Mfr-LH-rS3"/>
                             <constraint firstItem="IFO-YO-NOY" firstAttribute="leading" secondItem="vO9-RN-WKp" secondAttribute="leading" id="NyG-GA-3PR"/>
                             <constraint firstItem="hUH-JK-OqG" firstAttribute="top" secondItem="r1V-5I-bZ8" secondAttribute="top" id="OUn-VE-ep0"/>
+                            <constraint firstItem="YaR-uy-Y29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="Q1p-Ny-t4M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ClR-Se-xvY" secondAttribute="trailing" constant="15" id="QcO-ow-xnL"/>
                             <constraint firstItem="r1V-5I-bZ8" firstAttribute="trailing" secondItem="sso-SH-8eb" secondAttribute="trailing" id="WRg-GS-Qlx"/>
                             <constraint firstItem="B91-wE-ass" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xr0-rH-nhO"/>
                             <constraint firstItem="712-SK-7e8" firstAttribute="leading" secondItem="IFO-YO-NOY" secondAttribute="trailing" constant="13" id="YlP-uB-FBt"/>
                             <constraint firstItem="IFO-YO-NOY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="ZfW-jl-kGU"/>
                             <constraint firstItem="sso-SH-8eb" firstAttribute="bottom" secondItem="vO9-RN-WKp" secondAttribute="bottom" id="azA-tM-vfA"/>
+                            <constraint firstItem="ClR-Se-xvY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="443" id="fzE-Kn-6Lc"/>
                             <constraint firstItem="r1V-5I-bZ8" firstAttribute="leading" secondItem="hUH-JK-OqG" secondAttribute="trailing" constant="47" id="gNi-lT-TQ6"/>
                             <constraint firstItem="B91-wE-ass" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="lqD-vs-c9s"/>
+                            <constraint firstItem="eIi-yX-M6D" firstAttribute="centerX" secondItem="B91-wE-ass" secondAttribute="centerX" id="mZI-ww-PYO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hUH-JK-OqG" secondAttribute="bottom" constant="248" id="qNv-KT-Dj7"/>
                             <constraint firstItem="IFO-YO-NOY" firstAttribute="trailing" secondItem="vO9-RN-WKp" secondAttribute="trailing" id="s8r-W7-Oub"/>
                             <constraint firstItem="712-SK-7e8" firstAttribute="top" secondItem="B91-wE-ass" secondAttribute="bottom" constant="65" id="sTX-yS-x2w"/>
