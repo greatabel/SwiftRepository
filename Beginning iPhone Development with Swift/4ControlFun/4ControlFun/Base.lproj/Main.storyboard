@@ -49,18 +49,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="r1V-5I-bZ8">
-                                <rect key="frame" x="111" y="331" width="456" height="31"/>
-                                <connections>
-                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="65Y-j5-WSl"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-JK-OqG">
                                 <rect key="frame" x="33" y="331" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="r1V-5I-bZ8">
+                                <rect key="frame" x="111" y="331" width="456" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="65Y-j5-WSl"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eIi-yX-M6D">
+                                <rect key="frame" x="231" y="402" width="137" height="29"/>
+                                <segments>
+                                    <segment title="switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-uy-Y29">
+                                <rect key="frame" x="33" y="463" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Se-xvY">
+                                <rect key="frame" x="516" y="463" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -83,6 +96,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hUH-JK-OqG" secondAttribute="bottom" constant="248" id="qNv-KT-Dj7"/>
                             <constraint firstItem="IFO-YO-NOY" firstAttribute="trailing" secondItem="vO9-RN-WKp" secondAttribute="trailing" id="s8r-W7-Oub"/>
                             <constraint firstItem="712-SK-7e8" firstAttribute="top" secondItem="B91-wE-ass" secondAttribute="bottom" constant="65" id="sTX-yS-x2w"/>
+                            <constraint firstItem="eIi-yX-M6D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="382" id="uXL-F7-hV9"/>
                             <constraint firstItem="IFO-YO-NOY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="162" id="yAa-HZ-zuc"/>
                             <constraint firstItem="vO9-RN-WKp" firstAttribute="top" secondItem="IFO-YO-NOY" secondAttribute="bottom" constant="60" id="yCW-8I-me6"/>
                         </constraints>
