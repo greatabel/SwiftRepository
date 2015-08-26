@@ -67,9 +67,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     //让 第一行无法选中
                     if indexPath.row == 0 {
                 return nil
-            }else{
+            }else if (indexPath.row % 2 == 0){
+                return NSIndexPath(forRow: indexPath.row + 1, inSection: indexPath.section)
+                }
+                else{
                 return indexPath
-                    }
+                }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -81,6 +84,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     controller.addAction(action)
                     presentViewController(controller, animated: true, completion: nil)
     }
+    
+    
+
 
 
 }
