@@ -37,16 +37,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier)
             if(cell == nil){
-                cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: simpleTableIdentifier)
+//                cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: simpleTableIdentifier)
+//        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: simpleTableIdentifier)
+          cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: simpleTableIdentifier)
                     }
             let image = UIImage(named: "star")
             cell!.imageView?.image = image
             let highlightedImage = UIImage(named: "star2")
             cell!.imageView?.highlightedImage = highlightedImage
             
+            if indexPath.row < 7 {
+                cell!.detailTextLabel?.text = "Mr Disney"
+            } else {
+                cell!.detailTextLabel?.text = "Mr Tolkien"
+            }
+            
             cell!.textLabel?.text = dwarves[indexPath.row]
             return cell!
             
+    }
+    
+    func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
+                return indexPath.row % 4 
     }
 
 
