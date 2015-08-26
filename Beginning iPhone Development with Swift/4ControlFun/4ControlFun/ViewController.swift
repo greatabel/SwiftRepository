@@ -88,6 +88,8 @@ class ViewController: UIViewController {
         if let ppc = controller.popoverPresentationController{
             ppc.sourceView = sender
             ppc.sourceRect = sender.bounds
+            
+            ppc.permittedArrowDirections = .Down
         }
         presentViewController(controller, animated: true, completion: nil)
     }
