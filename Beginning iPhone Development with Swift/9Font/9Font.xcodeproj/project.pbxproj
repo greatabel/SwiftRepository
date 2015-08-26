@@ -16,6 +16,7 @@
 		20A43A591B8E01D0000DEEE1 /* _FontUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A581B8E01D0000DEEE1 /* _FontUITests.swift */; };
 		20A43A671B8E0623000DEEE1 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A661B8E0623000DEEE1 /* FavoritesList.swift */; settings = {ASSET_TAGS = (); }; };
 		20A43A691B8E07EF000DEEE1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A681B8E07EF000DEEE1 /* RootViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		20A43A6B1B8E11CF000DEEE1 /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		20A43A5A1B8E01D0000DEEE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A43A661B8E0623000DEEE1 /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		20A43A681B8E07EF000DEEE1 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				20A43A441B8E01D0000DEEE1 /* Info.plist */,
 				20A43A661B8E0623000DEEE1 /* FavoritesList.swift */,
 				20A43A681B8E07EF000DEEE1 /* RootViewController.swift */,
+				20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */,
 			);
 			path = 9Font;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				20A43A3B1B8E01D0000DEEE1 /* ViewController.swift in Sources */,
 				20A43A391B8E01D0000DEEE1 /* AppDelegate.swift in Sources */,
+				20A43A6B1B8E11CF000DEEE1 /* FontListViewController.swift in Sources */,
 				20A43A691B8E07EF000DEEE1 /* RootViewController.swift in Sources */,
 				20A43A671B8E0623000DEEE1 /* FavoritesList.swift in Sources */,
 			);
