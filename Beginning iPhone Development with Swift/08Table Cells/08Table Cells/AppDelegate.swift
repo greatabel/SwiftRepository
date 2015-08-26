@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  08Sections
+//  08Table Cells
 //
 //  Created by 万畅 on 15/8/26.
 //  Copyright © 2015年 abelwan. All rights reserved.

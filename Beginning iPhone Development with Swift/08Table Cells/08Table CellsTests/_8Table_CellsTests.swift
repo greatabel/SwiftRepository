@@ -1,15 +1,15 @@
 //
-//  _8SectionsTests.swift
-//  08SectionsTests
+//  _8Table_CellsTests.swift
+//  08Table CellsTests
 //
 //  Created by 万畅 on 15/8/26.
 //  Copyright © 2015年 abelwan. All rights reserved.
 //
 
 import XCTest
-@testable import _8Sections
+@testable import _8Table_Cells
 
-class _8SectionsTests: XCTestCase {
+class _8Table_CellsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
