@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +54,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             
             cell!.textLabel?.text = dwarves[indexPath.row]
+            
+//            cell!.textLabel?.font = UIFont.boldSystemFontOfSize(50)
+//            
+//            tableView.rowHeight = 70
+            
             return cell!
             
     }
@@ -83,6 +89,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     let action = UIAlertAction(title: "Yes I did", style: .Default, handler: nil)
                     controller.addAction(action)
                     presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return indexPath.row == 0 ? 120: 70
     }
     
     
