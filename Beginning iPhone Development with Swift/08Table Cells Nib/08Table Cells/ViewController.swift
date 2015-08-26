@@ -25,8 +25,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
+//        
 
-        tablewView.registerClass(NameAndColorCell.self, forCellReuseIdentifier: cellTableIdentifier)
+        let nib = UINib(nibName: "NameAndColorCell", bundle: nil)
+        tablewView.registerNib(nib, forCellReuseIdentifier: cellTableIdentifier)
     
    }
     override func didReceiveMemoryWarning() {
@@ -44,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let rowData = computers[indexPath.row]
         cell.name = rowData["Name"]!
         cell.color = rowData["Color"]!
-        
+            tableView.rowHeight = 90
         return cell
     }
     
