@@ -15,6 +15,11 @@ class FontListViewController: UITableViewController {
     private var cellPointSize: CGFloat!
     private let cellIdentifier = "FontName"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let preferredTableViewFont = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        cellPointSize = preferredTableViewFont.pointSize
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,6 +31,7 @@ class FontListViewController: UITableViewController {
     
     func fontForDisplay(atIndexPath indexPath: NSIndexPath) -> UIFont {
         let fontName = fontNames[indexPath.row]
+        print("fontName in font:\(fontName)")
         return UIFont(name: fontName, size: cellPointSize)!
     }
     
@@ -35,7 +41,7 @@ class FontListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell =  tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         
         cell.textLabel?.font = fontForDisplay(atIndexPath: indexPath)
         cell.textLabel?.text = fontNames[indexPath.row]
