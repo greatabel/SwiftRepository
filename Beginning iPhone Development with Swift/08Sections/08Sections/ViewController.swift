@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     }
             let image = UIImage(named: "star")
             cell!.imageView?.image = image
-            let highlightedImage = UIImage(named: "started")
+            let highlightedImage = UIImage(named: "star2")
             cell!.imageView?.highlightedImage = highlightedImage
             
             cell!.textLabel?.text = dwarves[indexPath.row]
