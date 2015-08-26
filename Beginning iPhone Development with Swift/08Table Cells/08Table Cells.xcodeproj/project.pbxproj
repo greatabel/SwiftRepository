@@ -14,6 +14,7 @@
 		20A7B2E11B8DC6200050511C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A7B2DF1B8DC6200050511C /* LaunchScreen.storyboard */; };
 		20A7B2EC1B8DC6200050511C /* _8Table_CellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7B2EB1B8DC6200050511C /* _8Table_CellsTests.swift */; };
 		20A7B2F71B8DC6200050511C /* _8Table_CellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7B2F61B8DC6200050511C /* _8Table_CellsUITests.swift */; };
+		20A7B3051B8DC7940050511C /* NameAndColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7B3041B8DC7940050511C /* NameAndColorCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		20A7B2F21B8DC6200050511C /* 08Table CellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "08Table CellsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A7B2F61B8DC6200050511C /* _8Table_CellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8Table_CellsUITests.swift; sourceTree = "<group>"; };
 		20A7B2F81B8DC6200050511C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20A7B3041B8DC7940050511C /* NameAndColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameAndColorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				20A7B2D61B8DC6200050511C /* AppDelegate.swift */,
 				20A7B2D81B8DC6200050511C /* ViewController.swift */,
+				20A7B3041B8DC7940050511C /* NameAndColorCell.swift */,
 				20A7B2DA1B8DC6200050511C /* Main.storyboard */,
 				20A7B2DD1B8DC6200050511C /* Assets.xcassets */,
 				20A7B2DF1B8DC6200050511C /* LaunchScreen.storyboard */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A7B3051B8DC7940050511C /* NameAndColorCell.swift in Sources */,
 				20A7B2D91B8DC6200050511C /* ViewController.swift in Sources */,
 				20A7B2D71B8DC6200050511C /* AppDelegate.swift in Sources */,
 			);
