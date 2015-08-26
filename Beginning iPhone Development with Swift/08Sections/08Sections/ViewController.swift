@@ -58,7 +58,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
-                return indexPath.row % 4 
+                return indexPath.row % 4
+    }
+    
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+                    //让 第一行无法选中
+                    if indexPath.row == 0 {
+                return nil
+            }else{
+                return indexPath
+                    }
     }
 
 
