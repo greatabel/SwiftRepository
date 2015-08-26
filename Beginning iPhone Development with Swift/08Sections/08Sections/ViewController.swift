@@ -37,10 +37,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier)
             if(cell == nil){
-        cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: simpleTableIdentifier)
-            }
+                cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: simpleTableIdentifier)
+                    }
+            let image = UIImage(named: "star")
+            cell!.imageView?.image = image
+            let highlightedImage = UIImage(named: "started")
+            cell!.imageView?.highlightedImage = highlightedImage
+            
             cell!.textLabel?.text = dwarves[indexPath.row]
             return cell!
+            
     }
 
 
