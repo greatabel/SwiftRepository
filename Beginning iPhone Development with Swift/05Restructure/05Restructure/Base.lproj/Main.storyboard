@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umD-ds-zKm">
+                                <rect key="frame" x="42" y="28" width="517" height="317"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLE-gN-Wgm">
+                                <rect key="frame" x="70" y="434" width="76" height="30"/>
+                                <state key="normal" title="Action Two"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPa-hO-fcn">
+                                <rect key="frame" x="454" y="434" width="79" height="30"/>
+                                <state key="normal" title="Action Four"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glQ-a3-43f">
+                                <rect key="frame" x="449.5" y="363" width="88" height="30"/>
+                                <state key="normal" title="Action Three"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxc-Ev-9pV">
+                                <rect key="frame" x="70" y="363" width="76" height="30"/>
+                                <state key="normal" title="Action One"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DPa-hO-fcn" secondAttribute="bottom" constant="136" id="45V-v9-z2W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oLE-gN-Wgm" secondAttribute="bottom" constant="136" id="7c7-qT-0ZB"/>
+                            <constraint firstItem="DPa-hO-fcn" firstAttribute="top" secondItem="glQ-a3-43f" secondAttribute="bottom" constant="41" id="8Ga-oK-GLk"/>
+                            <constraint firstItem="oLE-gN-Wgm" firstAttribute="top" secondItem="dxc-Ev-9pV" secondAttribute="bottom" constant="41" id="8kh-ug-39g"/>
+                            <constraint firstItem="umD-ds-zKm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="CVo-Mn-VRB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="umD-ds-zKm" secondAttribute="trailing" constant="21" id="Rsq-Wo-cwZ"/>
+                            <constraint firstItem="DPa-hO-fcn" firstAttribute="centerX" secondItem="glQ-a3-43f" secondAttribute="centerX" id="Uiv-x2-4l1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPa-hO-fcn" secondAttribute="trailing" constant="47" id="ac6-js-sin"/>
+                            <constraint firstItem="oLE-gN-Wgm" firstAttribute="centerX" secondItem="dxc-Ev-9pV" secondAttribute="centerX" id="aiS-6z-Yew"/>
+                            <constraint firstItem="umD-ds-zKm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cI7-30-xAz"/>
+                            <constraint firstItem="oLE-gN-Wgm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="fFr-Q3-DPA"/>
+                            <constraint firstItem="dxc-Ev-9pV" firstAttribute="top" secondItem="umD-ds-zKm" secondAttribute="bottom" constant="18" id="tSe-Wg-H4f"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="354"/>
         </scene>
     </scenes>
 </document>
