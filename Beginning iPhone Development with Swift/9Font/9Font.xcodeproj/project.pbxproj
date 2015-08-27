@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2014D62F1B8F65E800AE4257 /* FontSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014D62E1B8F65E800AE4257 /* FontSizesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		20A43A391B8E01D0000DEEE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A381B8E01D0000DEEE1 /* AppDelegate.swift */; };
 		20A43A3B1B8E01D0000DEEE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A3A1B8E01D0000DEEE1 /* ViewController.swift */; };
 		20A43A3E1B8E01D0000DEEE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A43A3C1B8E01D0000DEEE1 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2014D62E1B8F65E800AE4257 /* FontSizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSizesViewController.swift; sourceTree = "<group>"; };
 		20A43A351B8E01D0000DEEE1 /* 9Font.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9Font.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A43A381B8E01D0000DEEE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A43A3A1B8E01D0000DEEE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				20A43A661B8E0623000DEEE1 /* FavoritesList.swift */,
 				20A43A681B8E07EF000DEEE1 /* RootViewController.swift */,
 				20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */,
+				2014D62E1B8F65E800AE4257 /* FontSizesViewController.swift */,
 			);
 			path = 9Font;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				20A43A391B8E01D0000DEEE1 /* AppDelegate.swift in Sources */,
 				20A43A6B1B8E11CF000DEEE1 /* FontListViewController.swift in Sources */,
 				20A43A691B8E07EF000DEEE1 /* RootViewController.swift in Sources */,
+				2014D62F1B8F65E800AE4257 /* FontSizesViewController.swift in Sources */,
 				20A43A671B8E0623000DEEE1 /* FavoritesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +499,7 @@
 				20A43A5F1B8E01D0000DEEE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20A43A601B8E01D0000DEEE1 /* Build configuration list for PBXNativeTarget "9FontTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +508,7 @@
 				20A43A621B8E01D0000DEEE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20A43A631B8E01D0000DEEE1 /* Build configuration list for PBXNativeTarget "9FontUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +517,7 @@
 				20A43A651B8E01D0000DEEE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
