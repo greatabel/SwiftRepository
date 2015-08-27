@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20C904501B78FF9400760C56 /* PeripheralsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9044F1B78FF9400760C56 /* PeripheralsTableViewController.swift */; };
+		20C904521B78FFF800760C56 /* PeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C904511B78FFF800760C56 /* PeripheralTableViewCell.swift */; };
+		20C904541B79002A00760C56 /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C904531B79002A00760C56 /* PeripheralViewController.swift */; };
+		20C904561B7901E100760C56 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C904551B7901E100760C56 /* CoreDataStack.swift */; };
+		20C904731B7CE7E700760C56 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9046F1B7CE7E700760C56 /* User+CoreDataProperties.swift */; };
+		20C904741B7CE7E700760C56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C904701B7CE7E700760C56 /* User.swift */; };
+		20C904751B7CE7E700760C56 /* Sight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C904711B7CE7E700760C56 /* Sight+CoreDataProperties.swift */; };
+		20C904761B7CE7E700760C56 /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C904721B7CE7E700760C56 /* Sight.swift */; };
+		20D01AEE1B8E1EF700E56BD0 /* userHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D01AED1B8E1EF700E56BD0 /* userHistoryViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		20D01AF01B8E26AC00E56BD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D01AEF1B8E26AC00E56BD0 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		20D01AF21B8E2BED00E56BD0 /* demoChart.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D01AF11B8E2BED00E56BD0 /* demoChart.png */; settings = {ASSET_TAGS = (); }; };
+		20D01AF81B8E2F3E00E56BD0 /* demoUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D01AF71B8E2F3E00E56BD0 /* demoUser.png */; settings = {ASSET_TAGS = (); }; };
+		20D01AFA1B8E331F00E56BD0 /* measureSightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D01AF91B8E331F00E56BD0 /* measureSightViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		64A311791B6FCB3E00C126EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A311781B6FCB3E00C126EF /* AppDelegate.swift */; };
 		64A3117B1B6FCB3E00C126EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A3117A1B6FCB3E00C126EF /* ViewController.swift */; };
 		64A3117E1B6FCB3E00C126EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A3117C1B6FCB3E00C126EF /* Main.storyboard */; };
@@ -34,6 +47,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20C9044F1B78FF9400760C56 /* PeripheralsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralsTableViewController.swift; sourceTree = "<group>"; };
+		20C904511B78FFF800760C56 /* PeripheralTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewCell.swift; sourceTree = "<group>"; };
+		20C904531B79002A00760C56 /* PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
+		20C904551B7901E100760C56 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		20C9046F1B7CE7E700760C56 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "clairvoyant/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20C904701B7CE7E700760C56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = clairvoyant/User.swift; sourceTree = "<group>"; };
+		20C904711B7CE7E700760C56 /* Sight+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Sight+CoreDataProperties.swift"; path = "clairvoyant/Sight+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20C904721B7CE7E700760C56 /* Sight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sight.swift; path = clairvoyant/Sight.swift; sourceTree = "<group>"; };
+		20D01AED1B8E1EF700E56BD0 /* userHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userHistoryViewController.swift; sourceTree = "<group>"; };
+		20D01AEF1B8E26AC00E56BD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20D01AF11B8E2BED00E56BD0 /* demoChart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = demoChart.png; path = clairvoyant/demoChart.png; sourceTree = "<group>"; };
+		20D01AF71B8E2F3E00E56BD0 /* demoUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = demoUser.png; path = clairvoyant/demoUser.png; sourceTree = "<group>"; };
+		20D01AF91B8E331F00E56BD0 /* measureSightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = measureSightViewController.swift; sourceTree = "<group>"; };
 		64A311751B6FCB3E00C126EF /* clairvoyant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clairvoyant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A311781B6FCB3E00C126EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A3117A1B6FCB3E00C126EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +104,12 @@
 		64A3116C1B6FCB3E00C126EF = {
 			isa = PBXGroup;
 			children = (
+				20D01AF71B8E2F3E00E56BD0 /* demoUser.png */,
+				20D01AF11B8E2BED00E56BD0 /* demoChart.png */,
+				20C9046F1B7CE7E700760C56 /* User+CoreDataProperties.swift */,
+				20C904701B7CE7E700760C56 /* User.swift */,
+				20C904711B7CE7E700760C56 /* Sight+CoreDataProperties.swift */,
+				20C904721B7CE7E700760C56 /* Sight.swift */,
 				64A311771B6FCB3E00C126EF /* clairvoyant */,
 				64A3118F1B6FCB3F00C126EF /* clairvoyantTests */,
 				64A3119A1B6FCB3F00C126EF /* clairvoyantUITests */,
@@ -100,11 +132,18 @@
 			children = (
 				64A311781B6FCB3E00C126EF /* AppDelegate.swift */,
 				64A3117A1B6FCB3E00C126EF /* ViewController.swift */,
+				20D01AED1B8E1EF700E56BD0 /* userHistoryViewController.swift */,
+				20D01AF91B8E331F00E56BD0 /* measureSightViewController.swift */,
 				64A3117C1B6FCB3E00C126EF /* Main.storyboard */,
-				64A311821B6FCB3E00C126EF /* Assets.xcassets */,
 				64A311841B6FCB3E00C126EF /* LaunchScreen.storyboard */,
 				64A311871B6FCB3E00C126EF /* Info.plist */,
 				64A3117F1B6FCB3E00C126EF /* clairvoyant.xcdatamodeld */,
+				20C9044F1B78FF9400760C56 /* PeripheralsTableViewController.swift */,
+				20C904511B78FFF800760C56 /* PeripheralTableViewCell.swift */,
+				20C904531B79002A00760C56 /* PeripheralViewController.swift */,
+				20C904551B7901E100760C56 /* CoreDataStack.swift */,
+				64A311821B6FCB3E00C126EF /* Assets.xcassets */,
+				20D01AEF1B8E26AC00E56BD0 /* Images.xcassets */,
 			);
 			path = clairvoyant;
 			sourceTree = "<group>";
@@ -195,6 +234,7 @@
 				TargetAttributes = {
 					64A311741B6FCB3E00C126EF = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 56AME9BLVU;
 					};
 					64A3118B1B6FCB3F00C126EF = {
 						CreatedOnToolsVersion = 7.0;
@@ -232,8 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A311861B6FCB3E00C126EF /* LaunchScreen.storyboard in Resources */,
+				20D01AF81B8E2F3E00E56BD0 /* demoUser.png in Resources */,
+				20D01AF01B8E26AC00E56BD0 /* Images.xcassets in Resources */,
 				64A311831B6FCB3E00C126EF /* Assets.xcassets in Resources */,
 				64A3117E1B6FCB3E00C126EF /* Main.storyboard in Resources */,
+				20D01AF21B8E2BED00E56BD0 /* demoChart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +301,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C904561B7901E100760C56 /* CoreDataStack.swift in Sources */,
 				64A3117B1B6FCB3E00C126EF /* ViewController.swift in Sources */,
+				20C904731B7CE7E700760C56 /* User+CoreDataProperties.swift in Sources */,
+				20D01AFA1B8E331F00E56BD0 /* measureSightViewController.swift in Sources */,
+				20C904501B78FF9400760C56 /* PeripheralsTableViewController.swift in Sources */,
+				20C904761B7CE7E700760C56 /* Sight.swift in Sources */,
 				64A311791B6FCB3E00C126EF /* AppDelegate.swift in Sources */,
+				20C904741B7CE7E700760C56 /* User.swift in Sources */,
+				20C904521B78FFF800760C56 /* PeripheralTableViewCell.swift in Sources */,
+				20C904541B79002A00760C56 /* PeripheralViewController.swift in Sources */,
 				64A311811B6FCB3E00C126EF /* clairvoyant.xcdatamodeld in Sources */,
+				20D01AEE1B8E1EF700E56BD0 /* userHistoryViewController.swift in Sources */,
+				20C904751B7CE7E700760C56 /* Sight+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,11 +454,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = justforios7lauch;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = clairvoyant/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luminagic.clairvoyant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -413,11 +469,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = justforios7lauch;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = clairvoyant/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luminagic.clairvoyant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
