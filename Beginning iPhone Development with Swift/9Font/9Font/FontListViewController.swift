@@ -35,6 +35,7 @@ class FontListViewController: UITableViewController {
         return UIFont(name: fontName, size: cellPointSize)!
     }
     
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return fontNames.count
@@ -48,6 +49,17 @@ class FontListViewController: UITableViewController {
         cell.detailTextLabel?.text = fontNames[indexPath.row]
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        let tableViewCell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(tableViewCell)!
+        let font = fontForDisplay(atIndexPath: indexPath)
+        let sizesVC =  segue.destinationViewController as! FontSizesViewController
+        sizesVC.title = font.fontName
+        sizesVC.font = font
     }
     
 }
