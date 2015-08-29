@@ -58,6 +58,16 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         return cell!
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let rowData = self.tableData[indexPath.row] as? NSDictionary,
+        name = rowData["trackName"] as? String,
+            formattedPrice = rowData["formattedPrice"] as? String{
+                let alert = UIAlertController(title: name, message: formattedPrice, preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
 //    func searchItunesFor(searchTerm: String) {
 //        // The iTunes API wants multiple terms separated by + symbols, so replace spaces with + signs
 //        let itunesSearchTerm = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
