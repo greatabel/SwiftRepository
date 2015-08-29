@@ -11,6 +11,8 @@ import UIKit
 
 class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol  {
     
+    let kCellIdentifier: String = "SearchResultCell"
+    
     let api = APIController()
     
     var tableData = []
@@ -32,7 +34,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier)
+//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
         
         if let rowData: NSDictionary = self.tableData[indexPath.row] as? NSDictionary,
             // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
@@ -45,13 +49,13 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             // Get the track name
             trackName = rowData["trackName"] as? String {
                 // Get the formatted price string for display in the subtitle
-                cell.detailTextLabel?.text = formattedPrice
+                cell!.detailTextLabel?.text = formattedPrice
                 // Update the imageView cell to use the downloaded image data
-                cell.imageView?.image = UIImage(data: imgData)
+                cell!.imageView?.image = UIImage(data: imgData)
                 // Update the textLabel text to use the trackName from the API
-                cell.textLabel?.text = trackName
+                cell!.textLabel?.text = trackName
         }
-        return cell
+        return cell!
     }
     
 //    func searchItunesFor(searchTerm: String) {
