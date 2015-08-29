@@ -11,6 +11,8 @@ import UIKit
 
 class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol  {
     
+    var imageCache = [String: UIImage]()
+    
     let kCellIdentifier: String = "SearchResultCell"
     
     let api = APIController()
@@ -45,18 +47,44 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             // Get the formatted price string for display in the subtitle
             formattedPrice = rowData["formattedPrice"] as? String,
             // Download an NSData representation of the image at the URL
-            imgData = NSData(contentsOfURL: imgURL),
+//            imgData = NSData(contentsOfURL: imgURL),
             // Get the track name
             trackName = rowData["trackName"] as? String {
                 // Get the formatted price string for display in the subtitle
                 cell!.detailTextLabel?.text = formattedPrice
                 // Update the imageView cell to use the downloaded image data
-                cell!.imageView?.image = UIImage(data: imgData)
+                
+//                cell!.imageView?.image = UIImage(data: imgData)
+                 cell!.imageView?.image = UIImage(named: "Blank52.png")
+                
+                if let img = imageCache[urlString]{
+                    print("Already here:\(urlString)")
+                    cell?.imageView?.image = img
+                }else{
+                    // image isn't cached
+                    let request: NSURLRequest = NSURLRequest(URL: imgURL)
+                    let mainQueue = NSOperationQueue.mainQueue()
+                    NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: {
+                        (response, data, error) -> Void in
+                        print("##")
+                            let image =  UIImage(data:data!)
+                            self.imageCache[urlString] = image
+                            dispatch_async(dispatch_get_main_queue(), {
+                                if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath){
+                                    cellToUpdate.imageView?.image = image
+                                }
+                            })
+                        
+                        
+                    })
+                }
+                
                 // Update the textLabel text to use the trackName from the API
                 cell!.textLabel?.text = trackName
         }
         return cell!
     }
+    
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let rowData = self.tableData[indexPath.row] as? NSDictionary,

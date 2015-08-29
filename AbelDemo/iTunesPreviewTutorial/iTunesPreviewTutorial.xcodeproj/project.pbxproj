@@ -14,6 +14,7 @@
 		0200616F1AE03E1E0062608B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0200616D1AE03E1E0062608B /* LaunchScreen.xib */; };
 		0200617B1AE03E1E0062608B /* iTunesPreviewTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0200617A1AE03E1E0062608B /* iTunesPreviewTutorialTests.swift */; };
 		20713F6C1B91F3A000C13457 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20713F6B1B91F3A000C13457 /* APIController.swift */; settings = {ASSET_TAGS = (); }; };
+		20713F6E1B92032700C13457 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = 20713F6D1B92032700C13457 /* Blank52.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		020061791AE03E1E0062608B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0200617A1AE03E1E0062608B /* iTunesPreviewTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesPreviewTutorialTests.swift; sourceTree = "<group>"; };
 		20713F6B1B91F3A000C13457 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		20713F6D1B92032700C13457 /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		020061611AE03E1E0062608B /* iTunesPreviewTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				20713F6D1B92032700C13457 /* Blank52.png */,
 				020061641AE03E1E0062608B /* AppDelegate.swift */,
 				20713F6B1B91F3A000C13457 /* APIController.swift */,
 				020061661AE03E1E0062608B /* SearchResultsViewController.swift */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0200616A1AE03E1E0062608B /* Main.storyboard in Resources */,
+				20713F6E1B92032700C13457 /* Blank52.png in Resources */,
 				0200616F1AE03E1E0062608B /* LaunchScreen.xib in Resources */,
 				0200616C1AE03E1E0062608B /* Images.xcassets in Resources */,
 			);
