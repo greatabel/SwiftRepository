@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController ,PNChartDelegate{
 
     override func viewDidLoad() {
@@ -24,22 +25,36 @@ class ViewController: UIViewController ,PNChartDelegate{
         // Line Chart Nr.1
         var data01Array: [CGFloat] = [60.1, 160.1, 126.4, 262.2, 186.2, 127.2, 176.2]
         var data01:PNLineChartData = PNLineChartData()
+        data01.color = UIColor.redColor()
+        data01.itemCount = UInt(data01Array.count)
+        data01.inflexionPointStyle = PNLineChartPointStyle.Circle
 
-
-        data01.getData() = {
-            index in
-            let yValue: CGFloat = initSignalExample[UInt(index)]
-            return PNLineChartDataItem(y: yValue)
-        }
+        data01.getData = ({(index: UInt) -> PNLineChartDataItem in
+//            var yValue:CGFloat = data01Array[index]
+            var yValue:CGFloat = CGFloat(data01Array[Int(index)])
+            var item = PNLineChartDataItem(y: yValue)
+            return item
+        })
 
         lineChart.chartData = [data01]
         lineChart.strokeChart()
 
-               lineChart.delegate = self
+        //        lineChart.delegate = self
+
         self.view.addSubview(lineChart)
 
-
     }
+
+    func userClickedOnLineKeyPoint(point: CGPoint, lineIndex: Int, pointIndex: Int)
+    {
+        print("Click Key on line \(point.x), \(point.y) line index is \(lineIndex) and point index is \(pointIndex)")
+    }
+
+    func userClickedOnLinePoint(point: CGPoint, lineIndex: Int)
+    {
+        print("Click Key on line \(point.x), \(point.y) line index is \(lineIndex)")
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

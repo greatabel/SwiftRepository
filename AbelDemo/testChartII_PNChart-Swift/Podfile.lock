@@ -1,0 +1,19 @@
+PODS:
+  - PNChartSwift (0.0.2)
+
+DEPENDENCIES:
+  - PNChartSwift (from `https://github.com/kevinzhow/PNChart-Swift.git`)
+
+EXTERNAL SOURCES:
+  PNChartSwift:
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+CHECKOUT OPTIONS:
+  PNChartSwift:
+    :commit: f1d1b0451686f47d691a6f04f9cd2619650fac44
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+SPEC CHECKSUMS:
+  PNChartSwift: bcdfbffd65920072463eff42d0dfb46189bf4495
+
+COCOAPODS: 0.38.2

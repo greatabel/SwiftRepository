@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A6E3596A5ED428F1D5B319A97459B8 /* PNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23130CC869ED3358021BCDA63232123F /* PNChartDelegate.swift */; };
+		09ADED97D06B23E4609604FB8BD4A41E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED1A18A55E53109BDE4C714D0800A0D /* Foundation.framework */; };
+		1EBB8A68685A1FA6556B082C30F7823A /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19DB8D431B6D06A76727F3F64DE299C5 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EEAA9C8B15B7D9AA3DF3707A3F5638C /* PNChartSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 914040F3E24577E37E2BD779B1D8B8F2 /* PNChartSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		725D23DECF7C3DB5EB472F7E2124FD2E /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF798AD80E1BE7D016D98400F3E1152 /* Pods-dummy.m */; };
+		82C7AB93FB51EBD10F5F980A4DA04A22 /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5038B272F699966A9A00780897831B9 /* PNBar.swift */; };
+		8A09BF34252ED33F6E41CEB2E9FC8CCB /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D89BB8165525360BCC32FA616387 /* PNValue.swift */; };
+		9554868E6B275F097462AC86E7488E8A /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053182D9DD0E46C863CDBF6A01556A39 /* PNLineChart.swift */; };
+		9D928CEE48433F8A5B6F47F82328CBEB /* PNChartSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDED771CAAE964104FEA6A8EBD65037B /* PNChartSwift-dummy.m */; };
+		B0D30B964237EC6B86ADFA026CC15DCA /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B5E38FD1F38086AF760E49430C073 /* PNLineChartData.swift */; };
+		BFD69D619B67C3BD1826BC3478F88293 /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4525226FA4D2E63E8CBDFCF1DCDBD8D /* PNChartLabel.swift */; };
+		D54AD5A6249EB096FD0A66004ABDBAC0 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365132C74D86E773F0DF442E25D512EC /* view.swift */; };
+		D5E89F7C955DA3565693EA81C8FBA5F7 /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05262499B4FBAEA5F9E9051C0EC64AA0 /* PNBarChart.swift */; };
+		DEFB7A84DA6315C52EBC3A49A53E4A3D /* PNChartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB56577BDF2FAFEB3CD01CD534F07B /* PNChartConfig.swift */; };
+		E486E4CE77EF08EA2F5569CE13BB679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED1A18A55E53109BDE4C714D0800A0D /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E39BFCAD4E417907C2D42E15778330BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F69DBC1AD88D5682E0E25E05A53989F;
+			remoteInfo = PNChartSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05262499B4FBAEA5F9E9051C0EC64AA0 /* PNBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNBarChart.swift; path = PNChartSwift/PNBarChart/PNBarChart.swift; sourceTree = "<group>"; };
+		053182D9DD0E46C863CDBF6A01556A39 /* PNLineChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNLineChart.swift; path = PNChartSwift/PNLineChart/PNLineChart.swift; sourceTree = "<group>"; };
+		19DB8D431B6D06A76727F3F64DE299C5 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		1CC19688787B1E07A40DCC1C972635F3 /* PNChartSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PNChartSwift-prefix.pch"; sourceTree = "<group>"; };
+		23130CC869ED3358021BCDA63232123F /* PNChartDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNChartDelegate.swift; path = PNChartSwift/PNChartDelegate.swift; sourceTree = "<group>"; };
+		29DB3253F6B48714849D7B567843A558 /* PNChartSwift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PNChartSwift-Private.xcconfig"; sourceTree = "<group>"; };
+		2CA51CB67BD6819C21BBA9017963D674 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ED1A18A55E53109BDE4C714D0800A0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		365132C74D86E773F0DF442E25D512EC /* view.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = view.swift; path = PNChartSwift/view.swift; sourceTree = "<group>"; };
+		4AC8D89BB8165525360BCC32FA616387 /* PNValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNValue.swift; path = PNChartSwift/PNValue.swift; sourceTree = "<group>"; };
+		529CC0AC5EB50F412330FDE3C838D3F0 /* PNChartSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PNChartSwift.modulemap; sourceTree = "<group>"; };
+		5ACB56577BDF2FAFEB3CD01CD534F07B /* PNChartConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNChartConfig.swift; path = PNChartSwift/PNChartConfig.swift; sourceTree = "<group>"; };
+		6E8B5E38FD1F38086AF760E49430C073 /* PNLineChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNLineChartData.swift; path = PNChartSwift/PNLineChart/PNLineChartData.swift; sourceTree = "<group>"; };
+		70D8E72FAF9ED91C5574632AC77510D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7DB01CF606E842C3EB704F39FE546430 /* PNChartSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PNChartSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		8970263EF629609C81A9DB97AF39FD6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		8AF798AD80E1BE7D016D98400F3E1152 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		914040F3E24577E37E2BD779B1D8B8F2 /* PNChartSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PNChartSwift-umbrella.h"; sourceTree = "<group>"; };
+		99607E0DD50D98B4250420A4FB3AD822 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C5038B272F699966A9A00780897831B9 /* PNBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNBar.swift; path = PNChartSwift/PNBarChart/PNBar.swift; sourceTree = "<group>"; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE11B717EC8BC358A27DC56B0F08A78F /* PNChartSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PNChartSwift.xcconfig; sourceTree = "<group>"; };
+		F4525226FA4D2E63E8CBDFCF1DCDBD8D /* PNChartLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PNChartLabel.swift; path = PNChartSwift/PNLineChart/PNChartLabel.swift; sourceTree = "<group>"; };
+		FDED771CAAE964104FEA6A8EBD65037B /* PNChartSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PNChartSwift-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		639F68165DA1C04AA019EAA8EBD66C52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09ADED97D06B23E4609604FB8BD4A41E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D7F8BF4E6E52332E23FA860E0C8CE24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E486E4CE77EF08EA2F5569CE13BB679C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F22D67AB9A5CE94B4B7ECADE42E2078 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				626E7493F3F14A8D4F7F4CAEA4EDF2C4 /* PNChartSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2ED1A18A55E53109BDE4C714D0800A0D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		62558C63975C4F28D1368432E298296F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99607E0DD50D98B4250420A4FB3AD822 /* Info.plist */,
+				529CC0AC5EB50F412330FDE3C838D3F0 /* PNChartSwift.modulemap */,
+				EE11B717EC8BC358A27DC56B0F08A78F /* PNChartSwift.xcconfig */,
+				29DB3253F6B48714849D7B567843A558 /* PNChartSwift-Private.xcconfig */,
+				FDED771CAAE964104FEA6A8EBD65037B /* PNChartSwift-dummy.m */,
+				1CC19688787B1E07A40DCC1C972635F3 /* PNChartSwift-prefix.pch */,
+				914040F3E24577E37E2BD779B1D8B8F2 /* PNChartSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PNChartSwift";
+			sourceTree = "<group>";
+		};
+		626E7493F3F14A8D4F7F4CAEA4EDF2C4 /* PNChartSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C5038B272F699966A9A00780897831B9 /* PNBar.swift */,
+				05262499B4FBAEA5F9E9051C0EC64AA0 /* PNBarChart.swift */,
+				5ACB56577BDF2FAFEB3CD01CD534F07B /* PNChartConfig.swift */,
+				23130CC869ED3358021BCDA63232123F /* PNChartDelegate.swift */,
+				F4525226FA4D2E63E8CBDFCF1DCDBD8D /* PNChartLabel.swift */,
+				053182D9DD0E46C863CDBF6A01556A39 /* PNLineChart.swift */,
+				6E8B5E38FD1F38086AF760E49430C073 /* PNLineChartData.swift */,
+				4AC8D89BB8165525360BCC32FA616387 /* PNValue.swift */,
+				365132C74D86E773F0DF442E25D512EC /* view.swift */,
+				62558C63975C4F28D1368432E298296F /* Support Files */,
+			);
+			path = PNChartSwift;
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				8AF798AD80E1BE7D016D98400F3E1152 /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				19DB8D431B6D06A76727F3F64DE299C5 /* Pods-umbrella.h */,
+				8970263EF629609C81A9DB97AF39FD6D /* Pods.debug.xcconfig */,
+				70D8E72FAF9ED91C5574632AC77510D8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4F22D67AB9A5CE94B4B7ECADE42E2078 /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DB01CF606E842C3EB704F39FE546430 /* PNChartSwift.framework */,
+				2CA51CB67BD6819C21BBA9017963D674 /* Pods.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		695B0B0F78A4C53B0E13C2A86AEF6E60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEAA9C8B15B7D9AA3DF3707A3F5638C /* PNChartSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771257B1DF63220A20AD2B477440D4EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBB8A68685A1FA6556B082C30F7823A /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F69DBC1AD88D5682E0E25E05A53989F /* PNChartSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53EFF06CA8DCB4CD7D3BDF7C462D0DF8 /* Build configuration list for PBXNativeTarget "PNChartSwift" */;
+			buildPhases = (
+				300016FDF54F370D8BC736F32E2AD6D2 /* Sources */,
+				639F68165DA1C04AA019EAA8EBD66C52 /* Frameworks */,
+				695B0B0F78A4C53B0E13C2A86AEF6E60 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PNChartSwift;
+			productName = PNChartSwift;
+			productReference = 7DB01CF606E842C3EB704F39FE546430 /* PNChartSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6EFB62798CFBD6981B5195D62FFBEF9F /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54A10DF633FB0896B4C23067D0796BCC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				8FCF86631BB071D53D6DD1CB4E0C29DF /* Sources */,
+				9D7F8BF4E6E52332E23FA860E0C8CE24 /* Frameworks */,
+				771257B1DF63220A20AD2B477440D4EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A7B299283C3A1DD7B799603C34D3DAA /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 2CA51CB67BD6819C21BBA9017963D674 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F69DBC1AD88D5682E0E25E05A53989F /* PNChartSwift */,
+				6EFB62798CFBD6981B5195D62FFBEF9F /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		300016FDF54F370D8BC736F32E2AD6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C7AB93FB51EBD10F5F980A4DA04A22 /* PNBar.swift in Sources */,
+				D5E89F7C955DA3565693EA81C8FBA5F7 /* PNBarChart.swift in Sources */,
+				DEFB7A84DA6315C52EBC3A49A53E4A3D /* PNChartConfig.swift in Sources */,
+				04A6E3596A5ED428F1D5B319A97459B8 /* PNChartDelegate.swift in Sources */,
+				BFD69D619B67C3BD1826BC3478F88293 /* PNChartLabel.swift in Sources */,
+				9D928CEE48433F8A5B6F47F82328CBEB /* PNChartSwift-dummy.m in Sources */,
+				9554868E6B275F097462AC86E7488E8A /* PNLineChart.swift in Sources */,
+				B0D30B964237EC6B86ADFA026CC15DCA /* PNLineChartData.swift in Sources */,
+				8A09BF34252ED33F6E41CEB2E9FC8CCB /* PNValue.swift in Sources */,
+				D54AD5A6249EB096FD0A66004ABDBAC0 /* view.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCF86631BB071D53D6DD1CB4E0C29DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725D23DECF7C3DB5EB472F7E2124FD2E /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A7B299283C3A1DD7B799603C34D3DAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PNChartSwift;
+			target = 5F69DBC1AD88D5682E0E25E05A53989F /* PNChartSwift */;
+			targetProxy = E39BFCAD4E417907C2D42E15778330BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6F3A61D004CED74F53D7F4DFD091F37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29DB3253F6B48714849D7B567843A558 /* PNChartSwift-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.0.2;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.0.2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PNChartSwift/PNChartSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PNChartSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PNChartSwift/PNChartSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PNChartSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B531579D2B4AD27DE67CC8AEA21EF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29DB3253F6B48714849D7B567843A558 /* PNChartSwift-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.0.2;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.0.2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PNChartSwift/PNChartSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PNChartSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PNChartSwift/PNChartSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PNChartSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C11D6B91427E5CDF0E071DD4313129DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8970263EF629609C81A9DB97AF39FD6D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2D1995E6B8FB24E60D1E8CE7E99CC47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70D8E72FAF9ED91C5574632AC77510D8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53EFF06CA8DCB4CD7D3BDF7C462D0DF8 /* Build configuration list for PBXNativeTarget "PNChartSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F3A61D004CED74F53D7F4DFD091F37C /* Debug */,
+				9B531579D2B4AD27DE67CC8AEA21EF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54A10DF633FB0896B4C23067D0796BCC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C11D6B91427E5CDF0E071DD4313129DA /* Debug */,
+				C2D1995E6B8FB24E60D1E8CE7E99CC47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
