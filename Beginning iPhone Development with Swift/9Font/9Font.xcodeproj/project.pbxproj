@@ -18,6 +18,7 @@
 		20A43A671B8E0623000DEEE1 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A661B8E0623000DEEE1 /* FavoritesList.swift */; settings = {ASSET_TAGS = (); }; };
 		20A43A691B8E07EF000DEEE1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A681B8E07EF000DEEE1 /* RootViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		20A43A6B1B8E11CF000DEEE1 /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		20B910571BB3D9F900CB1967 /* FontInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B910561BB3D9F900CB1967 /* FontInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		20A43A661B8E0623000DEEE1 /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		20A43A681B8E07EF000DEEE1 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
+		20B910561BB3D9F900CB1967 /* FontInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				20A43A681B8E07EF000DEEE1 /* RootViewController.swift */,
 				20A43A6A1B8E11CF000DEEE1 /* FontListViewController.swift */,
 				2014D62E1B8F65E800AE4257 /* FontSizesViewController.swift */,
+				20B910561BB3D9F900CB1967 /* FontInfoViewController.swift */,
 			);
 			path = 9Font;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				TargetAttributes = {
 					20A43A341B8E01D0000DEEE1 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 56AME9BLVU;
 					};
 					20A43A481B8E01D0000DEEE1 = {
 						CreatedOnToolsVersion = 7.0;
@@ -273,6 +277,7 @@
 				20A43A691B8E07EF000DEEE1 /* RootViewController.swift in Sources */,
 				2014D62F1B8F65E800AE4257 /* FontSizesViewController.swift in Sources */,
 				20A43A671B8E0623000DEEE1 /* FavoritesList.swift in Sources */,
+				20B910571BB3D9F900CB1967 /* FontInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = 9Font/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "abel.-Font";
@@ -425,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = 9Font/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "abel.-Font";
