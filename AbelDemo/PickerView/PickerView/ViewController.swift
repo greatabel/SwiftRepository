@@ -8,17 +8,26 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController ,UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var myLabel: UILabel!
 
     @IBOutlet weak var myPicker: UIPickerView!
 
+    enum PickerComponent:Int{
+        case size = 0
+        case topping = 1
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         myPicker.delegate = self
         myPicker.dataSource = self
+        myPicker.selectRow(2, inComponent: PickerComponent.size.rawValue, animated: false)
+        updateLabel()
     }
 
     let pickerData = [
@@ -48,8 +57,13 @@ class ViewController: UIViewController ,UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     func updateLabel(){
-        let size = pickerData[0][myPicker.selectedRowInComponent(0)]
-        let topping = pickerData[1][myPicker.selectedRowInComponent(1)]
+//        let size = pickerData[0][myPicker.selectedRowInComponent(0)]
+//        let topping = pickerData[1][myPicker.selectedRowInComponent(1)]
+//        myLabel.text = "Pizza: " + size + " " + topping
+        var sizeComponent = PickerComponent.size.rawValue
+        let toppingComponent = PickerComponent.topping.rawValue
+        let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
+        let topping = pickerData[toppingComponent][myPicker.selectedRowInComponent(toppingComponent)]
         myLabel.text = "Pizza: " + size + " " + topping
     }
 

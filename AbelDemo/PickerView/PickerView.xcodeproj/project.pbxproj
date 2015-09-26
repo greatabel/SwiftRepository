@@ -14,6 +14,7 @@
 		204E011D1BB695B900A522BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204E011B1BB695B900A522BA /* LaunchScreen.storyboard */; };
 		204E01281BB695B900A522BA /* PickerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E01271BB695B900A522BA /* PickerViewTests.swift */; };
 		204E01331BB695B900A522BA /* PickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E01321BB695B900A522BA /* PickerViewUITests.swift */; };
+		204E01411BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 204E01401BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		204E012E1BB695B900A522BA /* PickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		204E01321BB695B900A522BA /* PickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewUITests.swift; sourceTree = "<group>"; };
 		204E01341BB695B900A522BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		204E01401BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-sep-14-7-40-59-pm_small1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		204E01111BB695B900A522BA /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
+				204E01401BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg */,
 				204E01121BB695B900A522BA /* AppDelegate.swift */,
 				204E01141BB695B900A522BA /* ViewController.swift */,
 				204E01161BB695B900A522BA /* Main.storyboard */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				204E011D1BB695B900A522BA /* LaunchScreen.storyboard in Resources */,
+				204E01411BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg in Resources */,
 				204E011A1BB695B900A522BA /* Assets.xcassets in Resources */,
 				204E01181BB695B900A522BA /* Main.storyboard in Resources */,
 			);
