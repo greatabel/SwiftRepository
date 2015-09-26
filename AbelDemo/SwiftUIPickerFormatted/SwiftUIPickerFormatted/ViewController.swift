@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  SwiftUIPickerFormatted
-//
-//  Created by 万畅 on 15/9/26.
-//  Copyright © 2015年 abelwan. All rights reserved.
-//
+// http://makeapppie.com/tag/uipickerview-in-swift/
 
 import UIKit
 
@@ -43,9 +37,43 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blueColor()])
+        let myTitle = NSAttributedString(string: titleData,
+            attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!
+                ,NSForegroundColorAttributeName:UIColor.blueColor()])
         return myTitle
         
+    }
+
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 36.0
+    }
+
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int,
+        forComponent component: Int, reusingView view: UIView?) -> UIView {
+//        let pickerLabel = UILabel()
+//        let titleData = pickerData[row]
+//        let myTitle = NSAttributedString(string: titleData,
+//            attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!
+//                ,NSForegroundColorAttributeName:UIColor.blackColor()])
+//        pickerLabel.attributedText = myTitle
+//        return pickerLabel
+
+            //color  and center the label's background
+
+
+    var pickerLabel = view as! UILabel!
+    if view == nil {  //if no label there yet
+        pickerLabel = UILabel()
+        //color the label's background
+        let hue = CGFloat(row)/CGFloat(pickerData.count)
+        pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+    }
+            let titleData = pickerData[row]
+            let myTitle = NSAttributedString(string: titleData,
+                attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+            pickerLabel!.attributedText = myTitle
+            pickerLabel!.textAlignment = .Center
+            return pickerLabel
     }
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
