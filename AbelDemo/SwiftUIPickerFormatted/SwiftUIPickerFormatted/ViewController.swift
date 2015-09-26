@@ -41,6 +41,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return pickerData[row]
     }
 
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blueColor()])
+        return myTitle
+        
+    }
+
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         myLabel.text = pickerData[row]
     }
