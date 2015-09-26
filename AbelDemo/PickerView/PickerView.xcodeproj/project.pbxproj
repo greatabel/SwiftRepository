@@ -99,9 +99,9 @@
 		204E01111BB695B900A522BA /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
-				204E01401BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg */,
 				204E01121BB695B900A522BA /* AppDelegate.swift */,
 				204E01141BB695B900A522BA /* ViewController.swift */,
+				204E01401BB69C9700A522BA /* photo-sep-14-7-40-59-pm_small1.jpg */,
 				204E01161BB695B900A522BA /* Main.storyboard */,
 				204E01191BB695B900A522BA /* Assets.xcassets */,
 				204E011B1BB695B900A522BA /* LaunchScreen.storyboard */,
