@@ -4,7 +4,7 @@
 //
 //  Created by 万畅 on 15/9/26.
 //  Copyright © 2015年 abelwan. All rights reserved.
-//
+// http://makeapppie.com/2014/09/18/swift-swift-implementing-picker-views/
 
 import UIKit
 
