@@ -48,6 +48,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 36.0
     }
 
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return 200
+    }
+
     func pickerView(pickerView: UIPickerView, viewForRow row: Int,
         forComponent component: Int, reusingView view: UIView?) -> UIView {
 //        let pickerLabel = UILabel()
