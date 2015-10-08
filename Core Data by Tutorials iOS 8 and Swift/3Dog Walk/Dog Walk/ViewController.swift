@@ -31,27 +31,32 @@ class ViewController: UIViewController, UITableViewDataSource {
     dogFetch.predicate = NSPredicate(format:"name == %@", dogName)
     
     var error: NSError?
-    
-    let result = managedContext.executeFetchRequest(dogFetch, error: &error) as! [Dog]?
-    
-    if let dogs = result {
-        
-        if dogs.count == 0 {
-            
-            currentDog = Dog(entity: dogEntity!,
-                insertIntoManagedObjectContext: managedContext)
-            currentDog.name = dogName
-            
-            if !managedContext.save(&error) {
-                println("Could not save: \(error)")
+    do {
+        if let dogs = try managedContext.executeFetchRequest(dogFetch) as? [Dog] {
+
+            if dogs.count == 0 {
+
+                currentDog = Dog(entity: dogEntity!,
+                    insertIntoManagedObjectContext: managedContext)
+                currentDog.name = dogName
+
+                do {
+                    try managedContext!.save()
+                }catch{
+
+                }
+            } else {
+                currentDog = dogs[0]
             }
-        } else {
-            currentDog = dogs[0]
+
         }
-        
-    } else {
-        println("\(error)")
+
+    }catch{
+
     }
+
+    
+
     
     tableView.registerClass(UITableViewCell.self,
       forCellReuseIdentifier: "Cell")
@@ -104,9 +109,10 @@ class ViewController: UIViewController, UITableViewDataSource {
             managedContext.deleteObject(walkToRemove)
             
             // 3
-            var error: NSError?
-            if !managedContext.save(&error){
-                println("Could not save:\(error)")
+            do {
+                try managedContext!.save()
+            }catch{
+                
             }
             
             // 4
@@ -132,12 +138,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     walks.addObject(walk)
     
     currentDog.walks = walks.copy() as! NSOrderedSet
-    
-    // save the managed object context
-    var error: NSError?
-    if !managedContext!.save(&error){
-        println("\(error)")
+
+    do {
+        try managedContext!.save()
+    }catch{
+
     }
+
     
     
     

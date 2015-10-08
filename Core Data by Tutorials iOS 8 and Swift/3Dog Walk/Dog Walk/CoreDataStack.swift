@@ -33,7 +33,7 @@ class CoreDataStack {
         //4
         let documentsURL =
         CoreDataStack.applicationDocumentsDirectory()
-        println("documentURL = \(documentsURL)")
+        print("documentURL = \(documentsURL)")
         
         let storeURL =
         documentsURL.URLByAppendingPathComponent("Dog Walk")
@@ -42,22 +42,32 @@ class CoreDataStack {
         [NSMigratePersistentStoresAutomaticallyOption: true]
         
         var error: NSError? = nil
-        store = psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: options, error: &error)
-        
-        if store == nil {
-            println("Error adding persistent store:\(error)")
-            abort()
+        do {
+try store = psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: options)
+            if store == nil {
+                print("Error adding persistent store:\(error)")
+                abort()
+            }
+
+        }catch{
+store = nil 
         }
+        
+
         
         
     }
     
     func saveContext(){
         var error:NSError? = nil
-        if context.hasChanges && !context.save(&error){
-            println("Cound not save:\(error), \(error?.userInfo)")
-        }
-    }
+        if context.hasChanges {
+            do{
+                try context.save()
+            }catch{
+
+            }
+
+        }}
     
     class func applicationDocumentsDirectory() -> NSURL{
         
