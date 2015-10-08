@@ -133,7 +133,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     walk.date = NSDate()
     
     // Insert the new walk into the dog walk set
-    var walks = currentDog.walks.mutableCopy() as! NSMutableOrderedSet
+    let walks = currentDog.walks.mutableCopy() as! NSMutableOrderedSet
     
     walks.addObject(walk)
     
