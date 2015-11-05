@@ -96,11 +96,21 @@
                     <view key="view" contentMode="scaleToFill" id="5nb-Ll-7GH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-1X-E4z">
+                                <rect key="frame" x="33" y="64" width="534" height="387"/>
+                                <animations/>
+                            </stackView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="n2i-KR-SJw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LbT-ty-MHC"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LbT-ty-MHC">
+                            <connections>
+                                <action selector="cancel:" destination="YUa-gP-YUz" id="iV7-fe-sRU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xh8-nt-uMw"/>
                     </navigationItem>
                 </viewController>
