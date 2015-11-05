@@ -74,12 +74,58 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Meals" id="NDa-Wr-7dq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7aT-pc-xEj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7aT-pc-xEj">
+                            <connections>
+                                <segue destination="rZp-fm-Lu0" kind="presentation" id="j33-Ju-PfJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHe-PW-ibP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1155" y="-342"/>
+        </scene>
+        <!--New Meal-->
+        <scene sceneID="0kx-id-MQd">
+            <objects>
+                <viewController id="YUa-gP-YUz" customClass="MealViewController" customModule="FootTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f06-o9-nzw"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2r-L0-K4a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5nb-Ll-7GH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Meal" id="n2i-KR-SJw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LbT-ty-MHC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xh8-nt-uMw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOx-Bb-rXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="-565"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XpT-eB-sv9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rZp-fm-Lu0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ya4-7B-yrW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YUa-gP-YUz" kind="relationship" relationship="rootViewController" id="GiA-ys-VG7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3I5-In-4xL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021" y="-565"/>
         </scene>
     </scenes>
     <resources>
