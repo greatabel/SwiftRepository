@@ -10,6 +10,14 @@ import UIKit
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var nameTextField: UITextField!
+
+    @IBOutlet weak var photoImageView: UIImageView!
+
+    @IBOutlet weak var ratingControl: RatingControl!
+
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     @IBAction func cancel(sender: UIBarButtonItem) {
 
         let isPresentingInAddMealMode = presentingViewController is UINavigationController

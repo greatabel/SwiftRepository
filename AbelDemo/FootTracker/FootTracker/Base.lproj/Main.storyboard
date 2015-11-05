@@ -65,7 +65,7 @@
                                     <outlet property="nameLabel" destination="LRS-mz-vDr" id="mHC-U9-gJC"/>
                                     <outlet property="photoImageView" destination="zZR-LW-dFi" id="slz-U9-fYx"/>
                                     <outlet property="ratingControl" destination="Lrn-0u-loG" id="U5c-cp-QBq"/>
-                                    <segue destination="YUa-gP-YUz" kind="show" id="V2X-bn-t5q"/>
+                                    <segue destination="YUa-gP-YUz" kind="show" identifier="ShowDetail" id="V2X-bn-t5q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,13 +98,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-1X-E4z">
-                                <rect key="frame" x="33" y="64" width="534" height="387"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stq-3I-Att">
+                                <rect key="frame" x="214" y="87" width="173" height="30"/>
                                 <animations/>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="RxI-id-GPL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="O2X-95-IYr">
+                                <rect key="frame" x="144" y="135" width="312" height="180"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="Hj1-L0-MSQ"/>
+                                    <constraint firstAttribute="height" constant="180" id="y09-y5-w5g"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0s1-YX-b9h" customClass="RatingControl" customModule="FootTracker" customModuleProvider="target">
+                                <rect key="frame" x="180" y="335" width="240" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0s1-YX-b9h" firstAttribute="top" secondItem="O2X-95-IYr" secondAttribute="bottom" constant="20" id="2km-cn-ZzM"/>
+                            <constraint firstItem="stq-3I-Att" firstAttribute="centerX" secondItem="5nb-Ll-7GH" secondAttribute="centerX" id="Fu7-HY-NBE"/>
+                            <constraint firstItem="stq-3I-Att" firstAttribute="centerX" secondItem="O2X-95-IYr" secondAttribute="centerX" id="RQN-UO-T28"/>
+                            <constraint firstItem="stq-3I-Att" firstAttribute="top" secondItem="f06-o9-nzw" secondAttribute="bottom" constant="23" id="T7d-tC-X0a"/>
+                            <constraint firstItem="0s1-YX-b9h" firstAttribute="leading" secondItem="5nb-Ll-7GH" secondAttribute="leading" constant="180" id="UQB-hy-Xpm"/>
+                            <constraint firstItem="W2r-L0-K4a" firstAttribute="top" secondItem="0s1-YX-b9h" secondAttribute="bottom" constant="221" id="rhp-48-JfY"/>
+                            <constraint firstItem="0s1-YX-b9h" firstAttribute="centerX" secondItem="O2X-95-IYr" secondAttribute="centerX" id="ves-X0-GcX"/>
+                            <constraint firstItem="O2X-95-IYr" firstAttribute="top" secondItem="stq-3I-Att" secondAttribute="bottom" constant="18" id="w9Y-tz-Q6w"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="n2i-KR-SJw">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LbT-ty-MHC">
@@ -114,6 +142,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xh8-nt-uMw"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="stq-3I-Att" id="TR2-EI-Gf0"/>
+                        <outlet property="photoImageView" destination="O2X-95-IYr" id="sNR-RG-Ban"/>
+                        <outlet property="ratingControl" destination="0s1-YX-b9h" id="3IB-ol-cUr"/>
+                        <outlet property="saveButton" destination="xh8-nt-uMw" id="yoK-cZ-rpo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOx-Bb-rXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
