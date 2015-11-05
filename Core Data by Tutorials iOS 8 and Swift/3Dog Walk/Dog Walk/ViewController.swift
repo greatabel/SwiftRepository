@@ -134,6 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     // Insert the new walk into the dog walk set
     let walks = currentDog.walks.mutableCopy() as! NSMutableOrderedSet
+    print("walks=", walks)
     
     walks.addObject(walk)
     
