@@ -37,14 +37,14 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         
         myMapView.addAnnotations(locations)
         
-        var myRegion = MKCoordinateRegionMakeWithDistance(italy.coordinate, 5500000, 5500000)
+        let myRegion = MKCoordinateRegionMakeWithDistance(italy.coordinate, 5500000, 5500000)
         myMapView.setRegion(myRegion, animated: true)
         
         // Do any additional setup after loading the view.
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        var pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinIdentifier")
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView! {
+        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinIdentifier")
         pin.canShowCallout = true
         
         return pin
