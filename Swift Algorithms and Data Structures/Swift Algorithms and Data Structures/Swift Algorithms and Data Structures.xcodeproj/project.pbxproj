@@ -12,6 +12,7 @@
 		203AB7F51BFF5E4C00BC8CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F31BFF5E4C00BC8CFA /* Main.storyboard */; };
 		203AB7F71BFF5E4C00BC8CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F61BFF5E4C00BC8CFA /* Assets.xcassets */; };
 		203AB7FA1BFF5E4C00BC8CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F81BFF5E4C00BC8CFA /* LaunchScreen.storyboard */; };
+		203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		203AB7F61BFF5E4C00BC8CFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		203AB7F91BFF5E4C00BC8CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203AB7FB1BFF5E4C00BC8CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1big_O_notation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		203AB7E31BFF5E4C00BC8CFA = {
 			isa = PBXGroup;
 			children = (
+				203AB8011BFF5EF800BC8CFA /* Source */,
 				203AB7EE1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures */,
 				203AB7ED1BFF5E4C00BC8CFA /* Products */,
 			);
@@ -62,6 +65,14 @@
 				203AB7FB1BFF5E4C00BC8CFA /* Info.plist */,
 			);
 			path = "Swift Algorithms and Data Structures";
+			sourceTree = "<group>";
+		};
+		203AB8011BFF5EF800BC8CFA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203AB7F21BFF5E4C00BC8CFA /* ViewController.swift in Sources */,
+				203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */,
 				203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

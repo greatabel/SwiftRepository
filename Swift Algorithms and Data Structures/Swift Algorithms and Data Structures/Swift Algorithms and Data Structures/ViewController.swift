@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let big_o_notation = Big_O_Notation()
+        big_o_notation.linearSearch(4)
+
     }
 
     override func didReceiveMemoryWarning() {
