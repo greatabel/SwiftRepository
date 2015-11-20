@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         let big_o_notation = Big_O_Notation()
         big_o_notation.linearSearch(4)
         big_o_notation.binarySearch(4, imin: 2, imax: 10)
+        print(big_o_notation.binarySearch([1,2,10,20], target: 2))
 
     }
 
