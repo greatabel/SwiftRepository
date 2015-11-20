@@ -10,7 +10,7 @@ import Foundation
 
 public class Big_O_Notation {
 
-    let numberList : Array<Int> = [1,2,3,4,5]
+    let numberList : Array<Int> = [1,2,3,4,5,6,7,8,9,10]
 
     func linearSearch(key:Int) {
 
@@ -20,5 +20,22 @@ public class Big_O_Notation {
                 break
             }
         }
+    }
+
+    func binarySearch(key: Int, imin: Int, imax: Int) {
+
+        let midIndex : Double = round(Double((imin + imax) / 2 ))
+        let midNumber = numberList[Int(midIndex)]
+
+        if midNumber > key {
+            binarySearch(key, imin: imin, imax: Int(midIndex) - 1)
+        }
+        else if (midNumber < key ) {
+            binarySearch(key, imin: Int(midIndex) + 1, imax: imax)
+        }
+        else {
+            print("value \(key) found.")
+        }
+
     }
 }
