@@ -1,15 +1,18 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
-                        UITextFieldDelegate{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+, UITextFieldDelegate {
+
+   
+    @IBOutlet weak var tblShoppingList: UITableView!
 
     @IBOutlet weak var txtAddItem: UITextField!
 
-    @IBOutlet weak var tblShoppingList: UITableView!
 
     @IBOutlet weak var btnAction: UIButton!
 
     @IBOutlet weak var datePicker: UIDatePicker!
+
 
     var shoppingList: NSMutableArray!
 
@@ -23,8 +26,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         self.txtAddItem.delegate = self
 
+        datePicker.hidden = true
+        loadShoppingList()
+
+
     }
 
+    func loadShoppingList() {
+        let pathsArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentsDirectory = pathsArray[0] as String
+        let shoppingListPath =  NSURL(fileURLWithPath: documentsDirectory)
+            .URLByAppendingPathComponent("shopping_list")
+
+        if NSFileManager.defaultManager().fileExistsAtPath(String(shoppingListPath)){
+            shoppingList = NSMutableArray(contentsOfFile: String(shoppingListPath))
+            tblShoppingList.reloadData()
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
