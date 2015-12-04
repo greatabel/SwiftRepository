@@ -72,6 +72,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBAction func scheduleReminder(sender: AnyObject) {
         print("in sscheduleReminder")
+        scheduleLocalNotification()
+    }
+
+    func fixNotificationDate(dateToFix: NSDate) -> NSDate {
+        let dateComponets: NSDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.NSDayCalendarUnit, NSCalendarUnit.NSMonthCalendarUnit, NSCalendarUnit.NSYearCalendarUnit, NSCalendarUnit.NSHourCalendarUnit, NSCalendarUnit.NSMinuteCalendarUnit], fromDate: dateToFix)
+
+        dateComponets.second = 0
+
+        let fixedDate: NSDate! = NSCalendar.currentCalendar().dateFromComponents(dateComponets)
+
+        return fixedDate
+    }
+
+
+    func scheduleLocalNotification() {
+        let localNotification = UILocalNotification()
+        let date = NSDate().dateByAddingTimeInterval(1.0 * 60.0)
+        localNotification.fireDate = fixNotificationDate(date)
+        localNotification.alertBody = "Hey, rember?"
+        localNotification.alertAction = "View List"
+
+        localNotification.category = "shoppingListReminderCategory"
+
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
     }
 
 
