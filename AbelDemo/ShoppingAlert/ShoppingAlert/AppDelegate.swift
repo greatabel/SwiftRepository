@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ShoppingAlert
 //
-//  Created by 万畅 on 15/12/4.
+//  Created by http://www.appcoda.com/local-notifications-ios8/
 //  Copyright © 2015年 abelwan. All rights reserved.
 //
 
