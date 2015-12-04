@@ -19,9 +19,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("idCellItem")! as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("idCellItem")! as UITableViewCell
 
-        cell.textLabel?.text = shoppingList.objectAtIndex(indexPath.row) as! String
+        cell.textLabel?.text = shoppingList.objectAtIndex(indexPath.row) as? String
         return cell
     }
 
