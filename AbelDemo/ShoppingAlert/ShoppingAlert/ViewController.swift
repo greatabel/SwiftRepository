@@ -1,14 +1,29 @@
-//
-//  ViewController.swift
-//  ShoppingAlert
-//
-//  Created by 万畅 on 15/12/4.
-//  Copyright © 2015年 abelwan. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
+                        UITextFieldDelegate{
+
+    var shoppingList: NSMutableArray!
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var rows = 0
+
+        if let list = shoppingList{
+            rows = list.count
+        }
+
+        return rows
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("idCellItem")! as UITableViewCell
+
+        cell.textLabel?.text = shoppingList.objectAtIndex(indexPath.row) as! String
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
