@@ -29,6 +29,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         datePicker.hidden = true
         loadShoppingList()
 
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "handleModifyListNotification", name: "modifyListNotification", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "handleDeleteListNotification", name: "deleteListNotification", object: nil)
+
+    }
+
+    func setupNotificationSettings() {
+        let notificationSettings: UIUserNotificationSettings! = UIApplication.sharedApplication().currentUserNotificationSettings()
+
+        if (notificationSettings.types == UIUserNotificationType.None) {
+
+        }
 
     }
 
@@ -43,9 +56,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tblShoppingList.reloadData()
         }
     }
+
+    func saveShoppingList() {
+        let pathsArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentsDirectory = pathsArray[0] as String
+        //        let savePath = documentsDirectory.URLByAppendingPathComponent("shopping_list")
+        let savePath =  NSURL(fileURLWithPath: documentsDirectory).URLByAppendingPathComponent("shopping_list")
+        shoppingList.writeToFile(String(savePath), atomically: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func scheduleReminder(sender: AnyObject) {
+        print("in sscheduleReminder")
+    }
+
+
+    func handleModifyListNotification() {
+        txtAddItem.becomeFirstResponder()
+    }
+
+
+    func handleDeleteListNotification() {
+        shoppingList.removeAllObjects()
+        saveShoppingList()
+        tblShoppingList.reloadData()
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -68,6 +106,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = shoppingList.objectAtIndex(indexPath.row) as? String
         return cell
     }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if shoppingList == nil{
+            shoppingList = NSMutableArray()
+        }
+        shoppingList.addObject(textField.text!)
+
+        tblShoppingList.reloadData()
+
+        txtAddItem.text = ""
+        txtAddItem.resignFirstResponder()
+
+        saveShoppingList()
+
+        return true
+    }
+
 
 }
 
