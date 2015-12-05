@@ -74,6 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("in sscheduleReminder")
         scheduleLocalNotification()
     }
+    
 
     func fixNotificationDate(dateToFix: NSDate) -> NSDate {
         let dateComponets: NSDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.NSDayCalendarUnit, NSCalendarUnit.NSMonthCalendarUnit, NSCalendarUnit.NSYearCalendarUnit, NSCalendarUnit.NSHourCalendarUnit, NSCalendarUnit.NSMinuteCalendarUnit], fromDate: dateToFix)
