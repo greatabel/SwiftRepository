@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBAction func sendNotification(sender: UIButton) {
         print("press send")
 
-        var localNotification = UILocalNotification()
+        let localNotification = UILocalNotification()
         localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
         localNotification.alertBody = "Abel alertbody"
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("viewDidLoad")
+
     }
 
     override func didReceiveMemoryWarning() {

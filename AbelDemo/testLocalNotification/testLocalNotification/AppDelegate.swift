@@ -5,6 +5,8 @@
 //  https://github.com/ioscreator/ioscreator/blob/master/IOS8SwiftLocalNotificationTutorial/IOS8SwiftLocalNotificationTutorial/ViewController.swift
 
 // http://www.ioscreator.com/tutorials/local-notification-tutorial-ios8-swift
+
+// http://stackoverflow.com/questions/14038680/how-to-clear-push-notification-badge-count-in-ios
 //  Copyright © 2015年 abelwan. All rights reserved.
 //
 
@@ -40,6 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        // 消除小红点
+        print("in applicationWillEnterForeground")
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
