@@ -90,8 +90,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             // Specify the category related to the above actions.
             var shoppingListReminderCategory = UIMutableUserNotificationCategory()
             shoppingListReminderCategory.identifier = "shoppingListReminderCategory"
-            shoppingListReminderCategory.setActions(actionsArray as! [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
-            shoppingListReminderCategory.setActions(actionsArrayMinimal as! [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Minimal)
+            shoppingListReminderCategory.setActions(actionsArray as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
+            shoppingListReminderCategory.setActions(actionsArrayMinimal as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Minimal)
 
 
             let categoriesForSettings = NSSet(objects: shoppingListReminderCategory)
@@ -144,8 +144,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func scheduleLocalNotification() {
         let localNotification = UILocalNotification()
-        let date = NSDate().dateByAddingTimeInterval(1.0 * 60.0)
-        localNotification.fireDate = fixNotificationDate(date)
+//        let date = NSDate().dateByAddingTimeInterval(1.0 * 10.0)
+//        localNotification.fireDate = fixNotificationDate(date)
+        // https://www.hackingwithswift.com/read/21/2/scheduling-notifications-uilocalnotification
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
         localNotification.alertBody = "Hey, rember?"
         localNotification.alertAction = "View List"
 
