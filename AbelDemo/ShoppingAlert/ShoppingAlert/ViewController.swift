@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         datePicker.hidden = true
         loadShoppingList()
+        setupNotificationSettings()
 
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "handleModifyListNotification", name: "modifyListNotification", object: nil)
@@ -36,14 +37,72 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
 
+    @IBAction func scheduleReminder(sender: AnyObject) {
+        print("in sscheduleReminder")
+        if datePicker.hidden {
+            animateMyViews(tblShoppingList, viewToShow: datePicker)
+
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+        }
+        else{
+            animateMyViews(datePicker, viewToShow: tblShoppingList)
+
+            scheduleLocalNotification()
+        }
+
+        txtAddItem.enabled = !txtAddItem.enabled
+    }
+
+
     func setupNotificationSettings() {
         let notificationSettings: UIUserNotificationSettings! = UIApplication.sharedApplication().currentUserNotificationSettings()
 
-        if (notificationSettings.types == UIUserNotificationType.None) {
+        if (notificationSettings.types == UIUserNotificationType.None){
+            // Specify the notification types.
+            var notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Sound]
 
+
+            // Specify the notification actions.
+            var justInformAction = UIMutableUserNotificationAction()
+            justInformAction.identifier = "justInform"
+            justInformAction.title = "OK, got it"
+            justInformAction.activationMode = UIUserNotificationActivationMode.Background
+            justInformAction.destructive = false
+            justInformAction.authenticationRequired = false
+
+            var modifyListAction = UIMutableUserNotificationAction()
+            modifyListAction.identifier = "editList"
+            modifyListAction.title = "Edit list"
+            modifyListAction.activationMode = UIUserNotificationActivationMode.Foreground
+            modifyListAction.destructive = false
+            modifyListAction.authenticationRequired = true
+
+            var trashAction = UIMutableUserNotificationAction()
+            trashAction.identifier = "trashAction"
+            trashAction.title = "Delete list"
+            trashAction.activationMode = UIUserNotificationActivationMode.Background
+            trashAction.destructive = true
+            trashAction.authenticationRequired = true
+
+            let actionsArray = NSArray(objects: justInformAction, modifyListAction, trashAction)
+            let actionsArrayMinimal = NSArray(objects: trashAction, modifyListAction)
+
+            // Specify the category related to the above actions.
+            var shoppingListReminderCategory = UIMutableUserNotificationCategory()
+            shoppingListReminderCategory.identifier = "shoppingListReminderCategory"
+            shoppingListReminderCategory.setActions(actionsArray as! [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
+            shoppingListReminderCategory.setActions(actionsArrayMinimal as! [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Minimal)
+
+
+            let categoriesForSettings = NSSet(objects: shoppingListReminderCategory)
+
+
+            // Register the notification settings.
+            let newNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categoriesForSettings as! Set<UIUserNotificationCategory>)
+            UIApplication.sharedApplication().registerUserNotificationSettings(newNotificationSettings)
         }
-
     }
+
 
     func loadShoppingList() {
         let pathsArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
@@ -70,11 +129,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func scheduleReminder(sender: AnyObject) {
-        print("in sscheduleReminder")
-        scheduleLocalNotification()
-    }
-    
+
 
     func fixNotificationDate(dateToFix: NSDate) -> NSDate {
         let dateComponets: NSDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.NSDayCalendarUnit, NSCalendarUnit.NSMonthCalendarUnit, NSCalendarUnit.NSYearCalendarUnit, NSCalendarUnit.NSHourCalendarUnit, NSCalendarUnit.NSMinuteCalendarUnit], fromDate: dateToFix)
@@ -111,6 +166,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         saveShoppingList()
         tblShoppingList.reloadData()
     }
+
+
+    func animateMyViews(viewToHide: UIView, viewToShow: UIView) {
+        let animationDuration = 0.35
+
+        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+            viewToHide.transform = CGAffineTransformScale(viewToHide.transform, 0.001, 0.001)
+            }) { (completion) -> Void in
+
+                viewToHide.hidden = true
+                viewToShow.hidden = false
+
+                viewToShow.transform = CGAffineTransformScale(viewToShow.transform, 0.001, 0.001)
+
+                UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+                    viewToShow.transform = CGAffineTransformIdentity
+                })
+        }
+    }
+
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
