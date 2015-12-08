@@ -2,7 +2,9 @@
 //  AppDelegate.swift
 //  testLocalNotification
 //
-//  Created by 万畅 on 15/12/8.
+//  https://github.com/ioscreator/ioscreator/blob/master/IOS8SwiftLocalNotificationTutorial/IOS8SwiftLocalNotificationTutorial/ViewController.swift
+
+// http://www.ioscreator.com/tutorials/local-notification-tutorial-ios8-swift
 //  Copyright © 2015年 abelwan. All rights reserved.
 //
 
