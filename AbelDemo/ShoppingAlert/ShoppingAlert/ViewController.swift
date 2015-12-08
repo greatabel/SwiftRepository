@@ -90,7 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             // Specify the category related to the above actions.
             var shoppingListReminderCategory = UIMutableUserNotificationCategory()
             shoppingListReminderCategory.identifier = "shoppingListReminderCategory"
-            shoppingListReminderCategory.setActions(actionsArray as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
+//            shoppingListReminderCategory.setActions(actionsArray as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
             shoppingListReminderCategory.setActions(actionsArrayMinimal as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Minimal)
 
 
