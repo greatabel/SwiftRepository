@@ -19,6 +19,6 @@ class RaceCar: NSObject {
     var brand : String = "Ferrari"
     
     func honk(){
-        println("Honk! from abel")
+        print("Honk! from abel")
     }
 }

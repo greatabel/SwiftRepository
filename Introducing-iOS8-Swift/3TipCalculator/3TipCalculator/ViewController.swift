@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBAction func calculateTapped(sender: AnyObject) {
         //This code is run each time the Calculate Button is tapped.
         
-        var userInput = billTextField.text as NSString
+        var userInput = billTextField.text! as NSString
         var totalBill : Float = userInput.floatValue
         
         var index : Int = tipRateSegmentedControl.selectedSegmentIndex

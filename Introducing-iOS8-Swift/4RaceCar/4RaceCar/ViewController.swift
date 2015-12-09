@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func honkTapped(sender: AnyObject) {
     
         //ceate car 
-        var myCar = RaceCar()
+        let myCar = RaceCar()
         
         //Display car
         brandLabel.text = myCar.brand

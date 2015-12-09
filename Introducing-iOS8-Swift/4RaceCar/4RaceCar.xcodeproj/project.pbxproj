@@ -159,11 +159,14 @@
 		B5A8B76B1A9CC61800B2282D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = abel;
 				TargetAttributes = {
 					B5A8B7721A9CC61800B2282D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 56AME9BLVU;
 					};
 					B5A8B7871A9CC61900B2282D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -340,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = 4RaceCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = 4RaceCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +414,7 @@
 				B5A8B7941A9CC61900B2282D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5A8B7951A9CC61900B2282D /* Build configuration list for PBXNativeTarget "4RaceCarTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +423,7 @@
 				B5A8B7971A9CC61900B2282D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

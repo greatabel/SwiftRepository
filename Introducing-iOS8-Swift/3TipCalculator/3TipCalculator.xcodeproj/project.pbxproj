@@ -156,6 +156,7 @@
 		B5A8B73D1A9A2DBA00B2282D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = abel;
 				TargetAttributes = {
@@ -405,6 +406,7 @@
 				B5A8B7661A9A2DBA00B2282D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5A8B7671A9A2DBA00B2282D /* Build configuration list for PBXNativeTarget "3TipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +415,7 @@
 				B5A8B7691A9A2DBA00B2282D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
