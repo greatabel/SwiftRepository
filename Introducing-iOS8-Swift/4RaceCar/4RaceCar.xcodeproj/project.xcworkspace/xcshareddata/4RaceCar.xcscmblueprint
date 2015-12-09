@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1D993D6AEE6CBFA98159537F7438A96B3A4AA452",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1D993D6AEE6CBFA98159537F7438A96B3A4AA452" : 0,
+    "3998DCE11B749996D579E2A3980196FD3BB45AD7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0A7E4EA0-71F8-4E0A-BF60-123711693045",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1D993D6AEE6CBFA98159537F7438A96B3A4AA452" : "SwiftRepository",
+    "3998DCE11B749996D579E2A3980196FD3BB45AD7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "4RaceCar",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Introducing-iOS8-Swift\/4RaceCar\/4RaceCar.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/greatabel\/SwiftRepository",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D993D6AEE6CBFA98159537F7438A96B3A4AA452"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/greatabel\/puzzle_I_cracked.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3998DCE11B749996D579E2A3980196FD3BB45AD7"
+    }
+  ]
+}

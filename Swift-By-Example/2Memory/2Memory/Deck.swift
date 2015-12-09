@@ -75,7 +75,11 @@ struct Deck {
         var list = cards
         for i in 0..<(list.count - 1) {
             let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
-            swap(&list[i], &list[j])
+            // http://stackoverflow.com/questions/32689753/fatal-error-swapping-a-location-with-itself-is-not-supported-with-swift-2-0
+            if i != j {
+                 swap(&list[i], &list[j])
+            }
+
         }
         return Deck(cards: list)
     }
