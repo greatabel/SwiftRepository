@@ -45,30 +45,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Make a new background queue to run our background code on.
-        var backgroundQueue = NSOperationQueue()
+        let backgroundQueue = NSOperationQueue()
         
         backgroundQueue.addOperationWithBlock() {
             // Send a request to the server.
             
             // Prepare the URL
-            var notificationURL = NSURL(string: "http://www.oreilly.com/")
+            let notificationURL = NSURL(string: "http://www.oreilly.com/")
             
             // Prepare the URL request
-            var notificationURLRequest = NSURLRequest(URL: notificationURL!)
+            let notificationURLRequest = NSURLRequest(URL: notificationURL!)
             
             // Send the request, and log the reply
-            var loadedData =
-            NSURLConnection.sendSynchronousRequest(
+            let loadedData =
+            try? NSURLConnection.sendSynchronousRequest(
                 notificationURLRequest,
-                returningResponse: nil,
-                error: nil)
+                returningResponse: nil)
             
             if let theData = loadedData {
                 // Convert the data to a string
-                var loadedString = NSString(data: theData,
+                let loadedString = NSString(data: theData,
                     encoding: NSUTF8StringEncoding)
                 
-                println("Loaded: \(loadedString)")
+                print("Loaded: \(loadedString)")
                 
             }
             

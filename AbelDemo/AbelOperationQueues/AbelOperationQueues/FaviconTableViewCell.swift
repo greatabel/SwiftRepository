@@ -33,22 +33,26 @@ class FaviconTableViewCell: UITableViewCell {
             NSURLConnection.sendAsynchronousRequest(request,
                 queue: self.operationQueue!,
                 completionHandler: {
-                    (response: NSURLResponse!, data: NSData!, error: NSError!) in
+                    (response: NSURLResponse?, data: NSData?, error: NSError?) in
                     
                     // The 'data' variable now contains the loaded data;
                     // turn it into an image
-                    var image = UIImage(data: data)
-                    
-                    // Updates to the UI have to be done on the main queue.
-                    NSOperationQueue.mainQueue().addOperationWithBlock() {
-                        
-                        // Give the image view the loaded image
-                        self.imageView!.image = image
-                        
-                        // The image view has probably changed size because of
-                        // the new image, so we need to re-layout the cell.
-                        self.setNeedsLayout()
+                    if(data != nil) {
+
+                        var image = UIImage(data: data!)
+
+                        // Updates to the UI have to be done on the main queue.
+                        NSOperationQueue.mainQueue().addOperationWithBlock() {
+
+                            // Give the image view the loaded image
+                            self.imageView!.image = image
+
+                            // The image view has probably changed size because of
+                            // the new image, so we need to re-layout the cell.
+                            self.setNeedsLayout()
+                        }
                     }
+
                     
             })
             

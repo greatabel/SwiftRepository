@@ -13,8 +13,8 @@ class ViewController: UIViewController,UITableViewDelegate,
 {
     
     // BEGIN hosts_property
-    let hosts = ["google.com", "apple.com", "secretlab.com.au",
-        "oreilly.com", "yahoo.com", "twitter.com", "facebook.com","douban.com"]
+    let hosts = ["douban.com", "apple.com", "secretlab.com.au",
+        "oreilly.com", "yahoo.com", "qq.com", "taobao.com","sina.com"]
     // END hosts_property
     
     // BEGIN queue_property
@@ -36,11 +36,11 @@ class ViewController: UIViewController,UITableViewDelegate,
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell  {
             
-            var cell = tableView.dequeueReusableCellWithIdentifier("FaviconCell")
+            let cell = tableView.dequeueReusableCellWithIdentifier("FaviconCell")
                 as! FaviconTableViewCell
             
-            var host = hosts[indexPath.row]
-            var url = NSURL(string: "http://\(host)/favicon.ico")
+            let host = hosts[indexPath.row]
+            let url = NSURL(string: "https://\(host)/favicon.ico")
             
             cell.operationQueue = queue
             cell.url = url
