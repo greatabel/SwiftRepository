@@ -22,7 +22,7 @@ class ViewController: UIViewController,UITableViewDelegate,
     // END queue_property
     
     // BEGIN table_view_stuff
-    func numberOfSectionsInTableView(tableView: UITableView!) -> Int  {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int  {
         return 1
     }
     
