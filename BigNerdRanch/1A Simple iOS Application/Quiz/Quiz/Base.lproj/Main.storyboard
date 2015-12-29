@@ -17,32 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-NS-wBU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-NS-wBU">
                                 <rect key="frame" x="288" y="68" width="25" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="o9k-r2-Hjz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rto-fI-cXO">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rto-fI-cXO">
                                 <rect key="frame" x="251" y="114" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
                                 <connections>
                                     <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7nj-jK-h7t"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-GW-m6m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-GW-m6m">
                                 <rect key="frame" x="288" y="216" width="25" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="W8Z-bP-k9Q"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-ed-bbo">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-ed-bbo">
                                 <rect key="frame" x="254" y="262" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
                                 <connections>
@@ -52,14 +46,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rto-fI-cXO" firstAttribute="centerX" secondItem="PjJ-NS-wBU" secondAttribute="centerX" id="8Gv-Js-ZAJ"/>
-                            <constraint firstItem="4gl-GW-m6m" firstAttribute="leading" secondItem="PjJ-NS-wBU" secondAttribute="leading" id="Pch-Rm-hJy"/>
-                            <constraint firstItem="PjJ-NS-wBU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="T2R-Wc-w58"/>
-                            <constraint firstItem="XAC-ed-bbo" firstAttribute="top" secondItem="4gl-GW-m6m" secondAttribute="bottom" constant="25" id="jOP-Jo-1zm"/>
-                            <constraint firstItem="4gl-GW-m6m" firstAttribute="centerX" secondItem="XAC-ed-bbo" secondAttribute="centerX" id="k22-8b-2xq"/>
-                            <constraint firstItem="Rto-fI-cXO" firstAttribute="top" secondItem="PjJ-NS-wBU" secondAttribute="bottom" constant="25" id="nEp-Wa-wwd"/>
-                            <constraint firstItem="4gl-GW-m6m" firstAttribute="top" secondItem="Rto-fI-cXO" secondAttribute="bottom" constant="72" id="ogZ-XB-fRi"/>
-                            <constraint firstItem="PjJ-NS-wBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zyb-Mw-Opm"/>
+                            <constraint firstItem="4gl-GW-m6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dfU-9M-5TY"/>
+                            <constraint firstItem="XAC-ed-bbo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tO8-cH-jUE"/>
+                            <constraint firstItem="Rto-fI-cXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yda-7k-5U7"/>
+                            <constraint firstItem="PjJ-NS-wBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ygO-tj-Szt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -69,6 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="275" y="243"/>
         </scene>
     </scenes>
 </document>

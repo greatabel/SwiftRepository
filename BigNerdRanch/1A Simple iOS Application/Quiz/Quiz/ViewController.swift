@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     ]
 
     var currentQuestionIndex: Int = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,11 +31,24 @@ class ViewController: UIViewController {
 
 
     @IBAction func showNextQuestion(sender: AnyObject) {
+        currentQuestionIndex++
+        print("showNextQuestion currentQuestionIndex = ", currentQuestionIndex)
+        if currentQuestionIndex == questions.count {
+            currentQuestionIndex = 0
+        }
+        let question = questions[currentQuestionIndex]
+        questionLabel.text = question
+        answerLabel.text = "?"
+        
+
 
     }
 
     @IBAction func showAnswer(sender: AnyObject) {
+        print("showAnswer currentQuestionIndex = ", currentQuestionIndex)
 
+        let answer = answers[currentQuestionIndex]
+        answerLabel.text = answer
     }
     
 }
