@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     "Wright brothers"
     ]
 
-    var currentQuestionIndex: Int = 0
+    var currentQuestionIndex: Int = -1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
