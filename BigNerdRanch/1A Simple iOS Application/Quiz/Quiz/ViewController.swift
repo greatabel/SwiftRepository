@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Quiz
-//
-//  Created by 万畅 on 15/12/29.
-//  Copyright © 2015年 abelwan. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,6 +5,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
 
     @IBOutlet weak var answerLabel: UILabel!
+
+    let questions: [String] = [
+    "What's PI ?",
+    "What's capital of China?",
+    "Who invented plane?"
+    ]
+
+    let answers: [String] = [
+    "3.1415926",
+    "BeiJing",
+    "Wright brothers"
+    ]
+
+    var currentQuestionIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
