@@ -65,13 +65,13 @@
 				2088BE851C6F5D3A0029D4D0 /* AppDelegate.swift */,
 				2088BE871C6F5D3A0029D4D0 /* ViewController.swift */,
 				2088BE9B1C6F6CB40029D4D0 /* Meal.swift */,
+				2088BE991C6F62160029D4D0 /* MealTableViewCell.swift */,
 				2088BE971C6F5F080029D4D0 /* MealTableViewController.swift */,
+				2088BE9D1C6F6D6E0029D4D0 /* MealViewController.swift */,
 				2088BE891C6F5D3A0029D4D0 /* Main.storyboard */,
 				2088BE8C1C6F5D3A0029D4D0 /* Assets.xcassets */,
 				2088BE8E1C6F5D3A0029D4D0 /* LaunchScreen.storyboard */,
 				2088BE911C6F5D3A0029D4D0 /* Info.plist */,
-				2088BE991C6F62160029D4D0 /* MealTableViewCell.swift */,
-				2088BE9D1C6F6D6E0029D4D0 /* MealViewController.swift */,
 			);
 			path = MyFoodTracker;
 			sourceTree = "<group>";
@@ -302,6 +302,7 @@
 				2088BE961C6F5D3A0029D4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
