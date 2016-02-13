@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  FootTracker
+//  MyFoodTracker
 //
-//  Created by 万畅 on 15/11/5.
-//  Copyright © 2015年 abelwan. All rights reserved.
+//  Created by 万畅 on 16/2/13.
+//  Copyright © 2016年 abelwan. All rights reserved.
 //
 
 import UIKit

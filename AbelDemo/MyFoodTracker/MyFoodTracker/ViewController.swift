@@ -1,12 +1,10 @@
 //
 //  ViewController.swift
-//  FootTracker
+//  MyFoodTracker
 //
-//  Created by 万畅 on 15/11/5.
-//  Copyright © 2015年 abelwan. All rights reserved.
-// 1. https://www.ralfebert.de/tutorials/ios-swift-uitableviewcontroller/
-// 2. https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson9.html
-
+//  Created by 万畅 on 16/2/13.
+//  Copyright © 2016年 abelwan. All rights reserved.
+//
 
 import UIKit
 
