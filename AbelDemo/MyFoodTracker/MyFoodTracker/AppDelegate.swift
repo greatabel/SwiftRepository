@@ -1,10 +1,5 @@
-//
-//  AppDelegate.swift
-//  MyFoodTracker
-//
-//  Created by 万畅 on 16/2/13.
-//  Copyright © 2016年 abelwan. All rights reserved.
-//
+// https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson9.html
+
 
 import UIKit
 

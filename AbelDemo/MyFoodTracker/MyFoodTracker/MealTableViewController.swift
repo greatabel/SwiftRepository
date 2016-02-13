@@ -17,10 +17,10 @@ class MealTableViewController: UITableViewController {
         let meal1 = Meal(name: "Caprese Salad",birthday:"2000-12-01", photo: photo1)!
 
         let photo2 = UIImage(named: "meal2")!
-        let meal2 = Meal(name: "Chicken and Potatoes",birthday:"2000-12-01", photo: photo2)!
+        let meal2 = Meal(name: "Chicken and Potatoes",birthday:"2001-12-01", photo: photo2)!
 
         let photo3 = UIImage(named: "meal3")!
-        let meal3 = Meal(name: "Pasta with Meatballs",birthday:"2000-12-01", photo: photo3)!
+        let meal3 = Meal(name: "Pasta with Meatballs",birthday:"2002-12-01", photo: photo3)!
 
         meals += [meal1, meal2, meal3]
     }
@@ -44,7 +44,7 @@ class MealTableViewController: UITableViewController {
         let meal = meals[indexPath.row]
         cell.nameLabel.text = meal.name
         cell.photoImageView.image = meal.photo
-//        cell.rating = meal.birthday
+        cell.birthdayLabel.text = meal.birthday
 
         return cell
     }

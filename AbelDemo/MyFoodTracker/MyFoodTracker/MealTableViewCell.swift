@@ -8,6 +8,9 @@ class MealTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
 
     @IBOutlet weak var nameLabel: UILabel!
+
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
