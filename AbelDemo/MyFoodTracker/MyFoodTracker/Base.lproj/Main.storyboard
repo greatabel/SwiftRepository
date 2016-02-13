@@ -43,6 +43,10 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="RRJ-S6-C95" id="VPH-Ui-jHg"/>
+                                            <outlet property="photoImageView" destination="Bry-Np-4p0" id="uxV-ff-ict"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
