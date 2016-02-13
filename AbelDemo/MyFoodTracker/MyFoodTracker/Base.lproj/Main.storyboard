@@ -44,8 +44,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameLabel" destination="RRJ-S6-C95" id="VPH-Ui-jHg"/>
                                             <outlet property="photoImageView" destination="Bry-Np-4p0" id="uxV-ff-ict"/>
+                                            <segue destination="gg0-xi-L0D" kind="showDetail" id="bkB-1k-wPs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -54,12 +54,38 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="你的菜单" id="bMm-E3-Dov">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AhX-Rg-Odu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AhX-Rg-Odu">
+                            <connections>
+                                <segue destination="gnx-Ab-rs8" kind="presentation" id="pdw-EJ-uBM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1146" y="356"/>
+        </scene>
+        <!--新菜单-->
+        <scene sceneID="CjY-JJ-CJi">
+            <objects>
+                <viewController id="gg0-xi-L0D" customClass="MealViewController" customModule="MyFoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qTq-1O-YAJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YA1-C0-tqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GBs-tW-1tC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新菜单" id="Ehi-Wd-XpB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vp1-p1-M64"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8BF-Xn-oVQ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHB-26-O2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509" y="340"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sR7-vg-1iE">
@@ -79,8 +105,29 @@
             </objects>
             <point key="canvasLocation" x="453" y="356"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yWQ-wg-Bhh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gnx-Ab-rs8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uBG-WQ-6ne">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gg0-xi-L0D" kind="relationship" relationship="rootViewController" id="xkt-kG-PJZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onE-PZ-PCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="798"/>
+        </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xkt-kG-PJZ"/>
+    </inferredMetricsTieBreakers>
 </document>
