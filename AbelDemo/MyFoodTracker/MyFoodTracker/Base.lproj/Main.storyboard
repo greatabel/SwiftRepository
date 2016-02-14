@@ -43,7 +43,7 @@
                                     <outlet property="birthdayLabel" destination="dAS-Mh-HhW" id="xDk-J9-wMh"/>
                                     <outlet property="nameLabel" destination="SoL-M0-yx6" id="Rwa-jC-OX0"/>
                                     <outlet property="photoImageView" destination="I1f-3n-cUb" id="bJj-nN-igq"/>
-                                    <segue destination="gg0-xi-L0D" kind="show" id="paj-5d-ROf"/>
+                                    <segue destination="gg0-xi-L0D" kind="show" identifier="ShowDetail" id="paj-5d-ROf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="我的菜单" id="Ybf-3h-g7K">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c4a-fL-88e">
                             <connections>
-                                <segue destination="gnx-Ab-rs8" kind="presentation" id="yzt-lQ-Lvh"/>
+                                <segue destination="gnx-Ab-rs8" kind="presentation" identifier="AddItem" id="yzt-lQ-Lvh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,6 +123,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="birthdayTextField" destination="sRI-Pu-u4w" id="EdC-jE-yWn"/>
+                        <outlet property="nameTextField" destination="tHG-Em-F9J" id="UYX-Z8-eAi"/>
+                        <outlet property="photoImageView" destination="liP-59-R87" id="9vJ-HO-ndR"/>
                         <outlet property="saveButton" destination="8BF-Xn-oVQ" id="iE4-1f-c1v"/>
                     </connections>
                 </viewController>
@@ -147,7 +150,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onE-PZ-PCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="1091"/>
+            <point key="canvasLocation" x="1971" y="1115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Me5-IE-kEc">
@@ -172,6 +175,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="paj-5d-ROf"/>
+        <segue reference="xkt-kG-PJZ"/>
     </inferredMetricsTieBreakers>
 </document>
