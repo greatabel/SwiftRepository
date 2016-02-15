@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="我的菜单" id="Ybf-3h-g7K">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c4a-fL-88e">
                             <connections>
-                                <segue destination="gnx-Ab-rs8" kind="presentation" identifier="AddItem" id="yzt-lQ-Lvh"/>
+                                <segue destination="gnx-Ab-rs8" kind="presentation" id="yzt-lQ-Lvh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,8 +76,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="liP-59-R87">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="liP-59-R87">
                                 <rect key="frame" x="50" y="140" width="501" height="213"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hgh-xW-qoU" appends="YES" id="mYh-YR-NHN"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="年龄" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRI-Pu-u4w">
                                 <rect key="frame" x="20" y="400" width="560" height="30"/>
@@ -123,14 +127,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="birthdayTextField" destination="sRI-Pu-u4w" id="EdC-jE-yWn"/>
-                        <outlet property="nameTextField" destination="tHG-Em-F9J" id="UYX-Z8-eAi"/>
-                        <outlet property="photoImageView" destination="liP-59-R87" id="9vJ-HO-ndR"/>
+                        <outlet property="birthdayTextField" destination="sRI-Pu-u4w" id="fT9-H2-hvG"/>
+                        <outlet property="nameTextField" destination="tHG-Em-F9J" id="FAa-PM-vT3"/>
+                        <outlet property="photoImageView" destination="liP-59-R87" id="0rA-5S-V8d"/>
                         <outlet property="saveButton" destination="8BF-Xn-oVQ" id="iE4-1f-c1v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHB-26-O2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tbq-3j-LoP" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="hgh-xW-qoU">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="gg0-xi-L0D" id="XqX-VR-vPz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2899" y="329"/>
         </scene>
