@@ -1,6 +1,5 @@
 // https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson9.html
-//
-//To add a tap gesture recognizer to your image view
+// To add a tap gesture recognizer to your image view
 //https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html
 import UIKit
 
