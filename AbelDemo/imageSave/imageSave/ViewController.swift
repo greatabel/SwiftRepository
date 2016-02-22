@@ -9,6 +9,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        CoreDataStack.sharedInstance.loadData()
+        fullRes = CoreDataStack.sharedInstance.fullRes
     }
 
     override func didReceiveMemoryWarning() {
@@ -18,7 +20,13 @@ class ViewController: UIViewController {
 
 
     @IBAction func load(sender: AnyObject) {
-        myimage.image = UIImage(named: "testimage")
+
+
+        let myimage2 = UIImage(data: fullRes[0].imageData!)
+        myimage.image = myimage2
+
+
+//        myimage.image = UIImage(named: "testimage")
     }
 
     @IBAction func saveFunc(sender: AnyObject) {
@@ -27,8 +35,7 @@ class ViewController: UIViewController {
         print(image!.size)
         let imageData = UIImageJPEGRepresentation(image!, 1)
 
-        CoreDataStack.sharedInstance.loadData()
-        fullRes = CoreDataStack.sharedInstance.fullRes
+
         print("fullRes", fullRes)
         print("count=", fullRes.count)
         saveUser(imageData!)
