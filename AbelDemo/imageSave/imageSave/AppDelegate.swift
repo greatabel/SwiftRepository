@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  imageSave
-//
-//  Created by 万畅 on 16/2/22.
-//  Copyright © 2016年 abelwan. All rights reserved.
-//
+// https://github.com/romainmenke/SimpleCam
 
 import UIKit
 
