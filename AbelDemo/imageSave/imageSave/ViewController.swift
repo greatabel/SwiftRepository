@@ -21,5 +21,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func saveFunc(sender: AnyObject) {
+        print("in saveFunc")
+    }
 }
 

@@ -12,6 +12,7 @@
 		202638E51C7B4D6F00CF771B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202638E31C7B4D6F00CF771B /* Main.storyboard */; };
 		202638E71C7B4D6F00CF771B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202638E61C7B4D6F00CF771B /* Assets.xcassets */; };
 		202638EA1C7B4D6F00CF771B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202638E81C7B4D6F00CF771B /* LaunchScreen.storyboard */; };
+		202638F31C7B578000CF771B /* SimpleCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 202638F11C7B578000CF771B /* SimpleCam.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		202638E61C7B4D6F00CF771B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202638E91C7B4D6F00CF771B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		202638EB1C7B4D6F00CF771B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202638F21C7B578000CF771B /* SimpleCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleCam.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				202638E61C7B4D6F00CF771B /* Assets.xcassets */,
 				202638E81C7B4D6F00CF771B /* LaunchScreen.storyboard */,
 				202638EB1C7B4D6F00CF771B /* Info.plist */,
+				202638F11C7B578000CF771B /* SimpleCam.xcdatamodeld */,
 			);
 			path = imageSave;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202638F31C7B578000CF771B /* SimpleCam.xcdatamodeld in Sources */,
 				202638E21C7B4D6F00CF771B /* ViewController.swift in Sources */,
 				202638E01C7B4D6F00CF771B /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +292,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		202638F11C7B578000CF771B /* SimpleCam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				202638F21C7B578000CF771B /* SimpleCam.xcdatamodel */,
+			);
+			currentVersion = 202638F21C7B578000CF771B /* SimpleCam.xcdatamodel */;
+			path = SimpleCam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 202638D41C7B4D6E00CF771B /* Project object */;
 }
