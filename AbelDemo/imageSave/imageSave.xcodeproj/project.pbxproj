@@ -13,6 +13,9 @@
 		202638E71C7B4D6F00CF771B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202638E61C7B4D6F00CF771B /* Assets.xcassets */; };
 		202638EA1C7B4D6F00CF771B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202638E81C7B4D6F00CF771B /* LaunchScreen.storyboard */; };
 		202638F31C7B578000CF771B /* SimpleCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 202638F11C7B578000CF771B /* SimpleCam.xcdatamodeld */; };
+		202638F81C7B5CEC00CF771B /* FullRes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202638F61C7B5CEC00CF771B /* FullRes+CoreDataProperties.swift */; };
+		202638F91C7B5CEC00CF771B /* FullRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202638F71C7B5CEC00CF771B /* FullRes.swift */; };
+		202638FB1C7B5D6000CF771B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202638FA1C7B5D6000CF771B /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		202638E91C7B4D6F00CF771B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		202638EB1C7B4D6F00CF771B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202638F21C7B578000CF771B /* SimpleCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleCam.xcdatamodel; sourceTree = "<group>"; };
+		202638F61C7B5CEC00CF771B /* FullRes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FullRes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		202638F71C7B5CEC00CF771B /* FullRes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullRes.swift; sourceTree = "<group>"; };
+		202638FA1C7B5D6000CF771B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,8 @@
 		202638D31C7B4D6E00CF771B = {
 			isa = PBXGroup;
 			children = (
+				202638F61C7B5CEC00CF771B /* FullRes+CoreDataProperties.swift */,
+				202638F71C7B5CEC00CF771B /* FullRes.swift */,
 				202638DE1C7B4D6F00CF771B /* imageSave */,
 				202638DD1C7B4D6F00CF771B /* Products */,
 			);
@@ -63,6 +71,7 @@
 				202638E81C7B4D6F00CF771B /* LaunchScreen.storyboard */,
 				202638EB1C7B4D6F00CF771B /* Info.plist */,
 				202638F11C7B578000CF771B /* SimpleCam.xcdatamodeld */,
+				202638FA1C7B5D6000CF771B /* CoreDataStack.swift */,
 			);
 			path = imageSave;
 			sourceTree = "<group>";
@@ -139,7 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				202638F31C7B578000CF771B /* SimpleCam.xcdatamodeld in Sources */,
+				202638F91C7B5CEC00CF771B /* FullRes.swift in Sources */,
 				202638E21C7B4D6F00CF771B /* ViewController.swift in Sources */,
+				202638FB1C7B5D6000CF771B /* CoreDataStack.swift in Sources */,
+				202638F81C7B5CEC00CF771B /* FullRes+CoreDataProperties.swift in Sources */,
 				202638E01C7B4D6F00CF771B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
