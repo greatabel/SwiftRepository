@@ -23,6 +23,10 @@ class ViewController: UIViewController {
 
     @IBAction func saveFunc(sender: AnyObject) {
         print("in saveFunc")
+        let image = UIImage(named: "testimage")
+        print(image!.size)
+
     }
+    
 }
 
