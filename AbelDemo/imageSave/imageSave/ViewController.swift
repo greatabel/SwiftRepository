@@ -3,6 +3,8 @@ import CoreData
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myimage: UIImageView!
+
     var fullRes = [FullRes]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +17,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func load(sender: AnyObject) {
+        
+    }
+    
     @IBAction func saveFunc(sender: AnyObject) {
         print("in saveFunc")
         let image = UIImage(named: "testimage")

@@ -33,7 +33,13 @@
                                     <constraint firstAttribute="width" constant="47" id="RxN-BY-su1"/>
                                 </constraints>
                                 <state key="normal" title="load"/>
+                                <connections>
+                                    <action selector="load:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KM-q4-w87"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgQ-YN-J5L">
+                                <rect key="frame" x="180" y="177" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -43,6 +49,9 @@
                             <constraint firstItem="V2w-Td-Ofz" firstAttribute="baseline" secondItem="Jre-9d-jyh" secondAttribute="baseline" id="kh1-HB-Tsm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myimage" destination="YgQ-YN-J5L" id="LMI-XN-tXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
