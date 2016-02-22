@@ -37,12 +37,18 @@
                                     <action selector="load:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KM-q4-w87"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgQ-YN-J5L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="de" translatesAutoresizingMaskIntoConstraints="NO" id="YgQ-YN-J5L">
                                 <rect key="frame" x="180" y="177" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1zx-bh-YbL"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YgQ-YN-J5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4R0-9X-tBj"/>
+                            <constraint firstItem="YgQ-YN-J5L" firstAttribute="leading" secondItem="Jre-9d-jyh" secondAttribute="leading" id="4rb-ev-eI9"/>
+                            <constraint firstItem="YgQ-YN-J5L" firstAttribute="top" secondItem="V2w-Td-Ofz" secondAttribute="bottom" constant="68" id="bwQ-LU-EYe"/>
                             <constraint firstItem="Jre-9d-jyh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="fbj-z6-Q9d"/>
                             <constraint firstAttribute="trailing" secondItem="V2w-Td-Ofz" secondAttribute="trailing" constant="205" id="igU-h6-zyg"/>
                             <constraint firstItem="Jre-9d-jyh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="180" id="kFC-Xp-Gaj"/>
@@ -58,4 +64,7 @@
             <point key="canvasLocation" x="440" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="de" width="112" height="112"/>
+    </resources>
 </document>

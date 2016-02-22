@@ -18,9 +18,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func load(sender: AnyObject) {
-        
+        myimage.image = UIImage(named: "testimage")
     }
-    
+
     @IBAction func saveFunc(sender: AnyObject) {
         print("in saveFunc")
         let image = UIImage(named: "testimage")
