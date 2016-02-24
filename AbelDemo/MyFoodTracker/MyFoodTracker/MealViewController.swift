@@ -34,7 +34,6 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     }
 
     // MARK: UIImagePickerControllerDelegate
-
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
         dismissViewControllerAnimated(true, completion: nil)
@@ -50,8 +49,6 @@ class MealViewController: UIViewController, UITextFieldDelegate,
         // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
     }
-
-
 
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         print("in select")
@@ -70,10 +67,6 @@ class MealViewController: UIViewController, UITextFieldDelegate,
 
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
-
-   
-  
-
 
     @IBAction func cancel(sender: UIBarButtonItem) {
         let isPresentingInAddMealMode = presentingViewController is UINavigationController
