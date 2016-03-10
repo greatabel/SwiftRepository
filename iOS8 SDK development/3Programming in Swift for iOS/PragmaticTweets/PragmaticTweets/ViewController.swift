@@ -39,8 +39,9 @@ class ViewController: UIViewController {
             print("in here")
             let tweetVC = SLComposeViewController (forServiceType:
                 SLServiceTypeSinaWeibo)
-            tweetVC.setInitialText(
-                "I am testing things when learning in iOS 8 SDK Development. #pragsios8")
+            let message = NSLocalizedString("I just finished the first project", comment: "")
+
+            tweetVC.setInitialText(message)
             presentViewController(tweetVC, animated: true, completion: nil)
         } else {
             print ("Can't send tweet")
