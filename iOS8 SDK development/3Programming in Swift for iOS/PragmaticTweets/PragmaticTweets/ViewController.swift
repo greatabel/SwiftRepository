@@ -3,6 +3,8 @@ import Social
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var twitterWebView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -11,6 +13,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func handleShowMyTweetsTapped(sender: UIButton) {
+        let url = NSURL(string: "https://weibo.com/u/1398613362?refer_flag=1005055010_")
+        let urlRequest = NSURLRequest(URL: url!)
+        twitterWebView.loadRequest(urlRequest)
+        
     }
 
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
@@ -31,7 +40,7 @@ class ViewController: UIViewController {
             let tweetVC = SLComposeViewController (forServiceType:
                 SLServiceTypeSinaWeibo)
             tweetVC.setInitialText(
-                "I just finished the first project in iOS 8 SDK Development. #pragsios8")
+                "I am testing things when learning in iOS 8 SDK Development. #pragsios8")
             presentViewController(tweetVC, animated: true, completion: nil)
         } else {
             print ("Can't send tweet")
