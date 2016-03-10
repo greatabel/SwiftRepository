@@ -1,12 +1,5 @@
-//
-//  ViewController.swift
-//  PragmaticTweets
-//
-//  Created by 万畅 on 16/3/4.
-//  Copyright © 2016年 abelwan. All rights reserved.
-//
-
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
@@ -20,6 +13,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func handleTweetButtonTapped(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+            let tweetVC = SLComposeViewController (forServiceType:
+                SLServiceTypeTwitter)
+            tweetVC.setInitialText(
+                "I just finished the first project in iOS 8 SDK Development. #pragsios8")
+            presentViewController(tweetVC, animated: true, completion: nil)
+        } else {
+            print ("Can't send tweet") 
+        } 
+    }
 
 }
 
