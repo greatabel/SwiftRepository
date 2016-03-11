@@ -1,11 +1,3 @@
-//
-//  PragmaticTweetsTests.swift
-//  PragmaticTweetsTests
-//
-//  Created by Chris Adamson on 10/19/14.
-//  Copyright (c) 2014 Pragmatic Programmers, LLC. All rights reserved.
-//
-
 import UIKit
 import XCTest
 
