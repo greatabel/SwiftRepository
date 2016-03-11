@@ -1,6 +1,7 @@
 import UIKit
 import XCTest
-import PragmaticTweets
+//import PragmaticTweets
+
 
 class WebViewTests: XCTestCase {
 
@@ -25,5 +26,10 @@ class WebViewTests: XCTestCase {
       // Put the code you want to measure the time of here.
     }
   }
+
+  func testAutomaticWebLoad() {
+
+  }
+
 
 }
