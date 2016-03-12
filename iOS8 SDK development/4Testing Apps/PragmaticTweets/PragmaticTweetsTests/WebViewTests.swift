@@ -55,6 +55,9 @@ class WebViewTests: XCTestCase, UIWebViewDelegate {
       webView.stringByEvaluatingJavaScriptFromString(
         "document.documentElement.textContent") {
           if webViewContnts != "" {
+            let subStr =
+            webViewContnts[webViewContnts.startIndex.advancedBy(100)...webViewContnts.startIndex.advancedBy(200)]
+            print("##" ,subStr)
             loadedWebViewExpectation!.fulfill()
           }
     }
