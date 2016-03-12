@@ -9,17 +9,11 @@
 import UIKit
 import Social
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+  @IBOutlet public weak var twitterWebView: UIWebView!
+
+
   
   @IBAction func handleTweetButtonTapped(sender: UIButton) {
     if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){ 
@@ -32,7 +26,18 @@ class ViewController: UIViewController {
       print ("Can't send tweet") 
     } 
   }
-  
+
+  override public func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+    reloadTweets()
+  }
+
+  override public func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
   /* stub method imported into the book text. full version is above
   @IBAction func handleTweetButtonTapped(sender: UIButton) {
   }
@@ -43,7 +48,12 @@ class ViewController: UIViewController {
     println ("handleTweetButtonTapped")
   }
   */
-  
-  
+
+  func reloadTweets() {
+    let url = NSURL (string:"https://www.douban.com/people/greatabel/")
+    let urlRequest = NSURLRequest (URL: url!)
+    twitterWebView.loadRequest(urlRequest)
+  }
+
 }
 

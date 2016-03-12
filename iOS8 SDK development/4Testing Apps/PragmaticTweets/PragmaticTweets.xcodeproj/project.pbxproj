@@ -13,7 +13,7 @@
 		01203AB019F438A80013ABA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01203AAF19F438A80013ABA4 /* Images.xcassets */; };
 		01203AB319F438A80013ABA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01203AB119F438A80013ABA4 /* LaunchScreen.xib */; };
 		01203ABF19F438A80013ABA4 /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01203ABE19F438A80013ABA4 /* PragmaticTweetsTests.swift */; };
-		20E23D591C931DF700B378BA /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E23D581C931DF700B378BA /* WebViewTests.swift */; };
+		205473051C93272B00C033C4 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205473041C93272B00C033C4 /* WebViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		01203AB819F438A80013ABA4 /* PragmaticTweetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01203ABD19F438A80013ABA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01203ABE19F438A80013ABA4 /* PragmaticTweetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsTests.swift; sourceTree = "<group>"; };
-		20E23D581C931DF700B378BA /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
+		205473041C93272B00C033C4 /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				01203ABE19F438A80013ABA4 /* PragmaticTweetsTests.swift */,
-				20E23D581C931DF700B378BA /* WebViewTests.swift */,
+				205473041C93272B00C033C4 /* WebViewTests.swift */,
 				01203ABC19F438A80013ABA4 /* Supporting Files */,
 			);
 			path = PragmaticTweetsTests;
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01203ABF19F438A80013ABA4 /* PragmaticTweetsTests.swift in Sources */,
-				20E23D591C931DF700B378BA /* WebViewTests.swift in Sources */,
+				205473051C93272B00C033C4 /* WebViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
