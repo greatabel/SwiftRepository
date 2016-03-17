@@ -8,17 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UITableViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 5
+    }
+
+    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section + 1
+    }
+
+    override public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+
+    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        cell.textLabel!.text = "Row \(indexPath.row)"
+        return cell
+    }
+
+
 
 
 }
