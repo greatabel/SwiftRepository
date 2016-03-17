@@ -15,14 +15,14 @@ public class ViewController: UITableViewController {
             userName:"@pragprog",
             createdAt:"2014-08-20 16:44:30 EDT",
             userAvatarURL: defaultAvatarURL),
-        ParsedTweet(tweetText:"2)iOS 8 SDK Development now in print. " +
-            "Swift programming FTW!",
-            userName:"@pragprog",
+        ParsedTweet(tweetText:"2)Python Programming " +
+            "Python programming FTW!",
+            userName:"@abel",
             createdAt:"2014-08-20 16:44:30 EDT",
             userAvatarURL: defaultAvatarURL_I),
-        ParsedTweet(tweetText:"3)iOS 8 SDK Development now in print. " +
-            "Swift programming FTW!",
-            userName:"@pragprog",
+        ParsedTweet(tweetText:"3)Elixir in action " +
+            "Elixir programming FTW!",
+            userName:"@stone",
             createdAt:"2014-08-20 16:44:30 EDT",
             userAvatarURL: defaultAvatarURL)
     ]
@@ -30,6 +30,7 @@ public class ViewController: UITableViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        reloadTweets()
     }
 
     override public func didReceiveMemoryWarning() {
@@ -49,14 +50,19 @@ public class ViewController: UITableViewController {
     }
 
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+//        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        let cell = tableView.dequeueReusableCellWithIdentifier("MyIdentify")!
         let parsedTweet = parsedTweets[indexPath.row]
-        cell.textLabel?.text = parsedTweet.tweetText
+        cell.textLabel?.text = parsedTweet.userName
+        cell.detailTextLabel?.text = parsedTweet.tweetText
         
 //        cell.textLabel!.text = "Row haha \(indexPath.row)"
         return cell
     }
 
+    func reloadTweets() {
+        tableView.reloadData()
+    }
 
 
 
