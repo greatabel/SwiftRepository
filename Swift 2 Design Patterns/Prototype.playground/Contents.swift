@@ -4,6 +4,7 @@ import UIKit
 
 class AbstractCard {
     var name: String?
+    //  英 ['mɑ:nɑ:] 法力值
     var mana: Int?
     var attack: Int?
     var defense: Int?
@@ -30,4 +31,10 @@ let raidLeader = Card(name: "Raid Leader", mana: 3, attack: 2, defense: 2)
 let facelessManipulator = raidLeader.clone()
 
 
-print("\(facelessManipulator.name, facelessManipulator.mana, facelessManipulator.attack, facelessManipulator.defense)")
+print("\(facelessManipulator.name, facelessManipulator.mana, "\n",facelessManipulator.attack, facelessManipulator.defense)")
+
+raidLeader.name = "test change"
+raidLeader.mana = 10
+print("\(raidLeader.name, raidLeader.mana, "\n",raidLeader.attack, raidLeader.defense)")
+
+print("\(facelessManipulator.name, facelessManipulator.mana, "\n",facelessManipulator.attack, facelessManipulator.defense)")
