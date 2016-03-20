@@ -1,7 +1,3 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
-
 class AbstractCard {
     var name: String?
     //  英 ['mɑ:nɑ:] 法力值
