@@ -110,9 +110,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Payback" id="uxg-Dy-Vpb">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K3Q-sX-h8Q"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="FxS-xa-Qrb"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K3Q-sX-h8Q">
+                            <connections>
+                                <action selector="cancelPressed:" destination="luy-Wq-0Va" id="upr-rY-8y3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="FxS-xa-Qrb">
+                            <connections>
+                                <action selector="donePressed:" destination="luy-Wq-0Va" id="zd2-a4-9uo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountField" destination="Hkg-Xc-ROh" id="VJ3-Cx-Kkj"/>
+                        <outlet property="nameField" destination="aoQ-S4-jXd" id="J2J-D2-vJE"/>
+                        <outlet property="resultLabel" destination="MYO-TQ-agR" id="Lkr-j2-CLt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pn2-UY-1gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,3 +1,4 @@
+
 import Foundation
 
 class Payback: Equatable {
@@ -15,11 +16,12 @@ class Payback: Equatable {
         self.updatedAt = createdAt
         self.amount = amount
     }
+
 }
 
-func ==(l: Payback, r: Payback ) -> Bool {
+func ==(l: Payback, r: Payback) -> Bool {
     return l.firstName == r.firstName &&
-            l.lastName == r.lastName &&
-            l.createdAt == r.createdAt &&
-            l.amount == r.amount
+        l.lastName == r.lastName &&
+        l.createdAt == r.createdAt &&
+        l.amount == r.amount
 }

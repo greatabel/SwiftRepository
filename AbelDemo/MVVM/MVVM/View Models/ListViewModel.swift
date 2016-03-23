@@ -6,6 +6,7 @@ public class ListViewModel {
     public var items = [Item]()
 
     public func refresh() {
+
         items = context.paybacks.map { self.itemForPayback($0) }
         print(items)
     }
@@ -26,6 +27,10 @@ public class ListViewModel {
 
         return item
 
+    }
+
+    func removePayback(index: Int) {
+        context.removePayback(index)
     }
 
     public struct Item {

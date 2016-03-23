@@ -18,6 +18,7 @@
 		204D4A861CA27F8C0043B3DE /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204D4A851CA27F8C0043B3DE /* Context.swift */; };
 		204D4A881CA27FC50043B3DE /* Payback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204D4A871CA27FC50043B3DE /* Payback.swift */; };
 		204D4A8A1CA281B90043B3DE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204D4A891CA281B90043B3DE /* ListViewModel.swift */; };
+		204D4A8D1CA29B220043B3DE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204D4A8C1CA29B210043B3DE /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		204D4A851CA27F8C0043B3DE /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Models/Context.swift; sourceTree = "<group>"; };
 		204D4A871CA27FC50043B3DE /* Payback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Payback.swift; path = Models/Payback.swift; sourceTree = "<group>"; };
 		204D4A891CA281B90043B3DE /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewModel.swift; path = "View Models/ListViewModel.swift"; sourceTree = "<group>"; };
+		204D4A8C1CA29B210043B3DE /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = "View Models/DetailViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				204D4A891CA281B90043B3DE /* ListViewModel.swift */,
+				204D4A8C1CA29B210043B3DE /* DetailViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				204D4A861CA27F8C0043B3DE /* Context.swift in Sources */,
 				204D4A811CA276510043B3DE /* DetailViewController.swift in Sources */,
 				204D4A881CA27FC50043B3DE /* Payback.swift in Sources */,
+				204D4A8D1CA29B220043B3DE /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
