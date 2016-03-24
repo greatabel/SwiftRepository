@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  MVVM
-//
-//  Created by 万畅 on 16/3/23.
-//  Copyright © 2016年 abelwan. All rights reserved.
-//
+// https://github.com/carlosypunto/MVVMSwiftSample
 
 import UIKit
 
