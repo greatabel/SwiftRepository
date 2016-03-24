@@ -10,7 +10,15 @@ class DetailViewController: UIViewController, DetailViewModelDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+        navigationController?.title = viewModel.title
+        nameField.text = viewModel.name
+        amountField.text = viewModel.amount
+        nameField.becomeFirstResponder()
+
+        nameField.addTarget(self, action: #selector(DetailViewController.nameChanged),
+                            forControlEvents: UIControlEvents.EditingChanged)
+        amountField.addTarget(self, action: #selector(DetailViewController.ammountChanged),
+                              forControlEvents: UIControlEvents.EditingChanged)
 
     }
 
