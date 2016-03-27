@@ -1,5 +1,3 @@
-import UIKit
-
 class Employee {
     var firstName: String
     var lastName: String
@@ -16,11 +14,14 @@ class Employee {
     deinit {
         print("In deinit \(self.firstName) | \(self.lastName)")
     }
-
+    
 }
 
+func  invokeEmployeeFunc(firstName: String, lastName: String) -> String {
+   let ep = Employee(firstName: firstName, lastName: lastName)
+    return ep.firstName + "#" + ep.lastName
+}
 
-var ep1 = Employee(firstName: "Great", lastName: "Abel")
-var ep2 = Employee(firstName: "Bill", lastName: "Gate")
-ep1 = Employee()
-ep2 = Employee()
+var result = invokeEmployeeFunc("Great", lastName: "Abel")
+print(result)
+
