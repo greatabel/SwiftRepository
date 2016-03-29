@@ -6,9 +6,12 @@ class ThirdViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification:", name: mySpecialNotificationKey, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ThirdViewController.actOnSpecialNotification(_:)), name: mySpecialNotificationKey, object: nil)
 	}
-	
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
 	func actOnSpecialNotification(notification: NSNotification) {
         let dict = notification.object as! NSDictionary
         let receivednumber = dict["number"]
