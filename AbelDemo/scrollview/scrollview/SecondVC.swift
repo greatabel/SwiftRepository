@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class SecondVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,6 +12,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    deinit {
+        print("in deint")
+//        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
 }
-

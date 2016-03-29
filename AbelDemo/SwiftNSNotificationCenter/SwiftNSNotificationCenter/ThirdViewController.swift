@@ -9,6 +9,7 @@ class ThirdViewController: UIViewController {
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ThirdViewController.actOnSpecialNotification(_:)), name: mySpecialNotificationKey, object: nil)
 	}
     deinit {
+        print("in deint")
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 

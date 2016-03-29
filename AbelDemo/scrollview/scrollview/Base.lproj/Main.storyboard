@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1178" y="398"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondVC-->
         <scene sceneID="6AJ-Lf-bh9">
             <objects>
-                <viewController id="hLH-cW-c0p" sceneMemberID="viewController">
+                <viewController id="hLH-cW-c0p" customClass="SecondVC" customModule="scrollview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7c-1B-Qrq"/>
                         <viewControllerLayoutGuide type="bottom" id="a6h-Kc-ey6"/>
