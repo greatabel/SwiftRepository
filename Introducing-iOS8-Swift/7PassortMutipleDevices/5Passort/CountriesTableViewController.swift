@@ -46,7 +46,7 @@ class CountriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
-        var country = countries[indexPath.row]
+        let country = countries[indexPath.row]
         
         cell.textLabel!.text = country
         
