@@ -11,7 +11,8 @@ class SecondVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html
     deinit {
         print("in deint")
 //        NSNotificationCenter.defaultCenter().removeObserver(self)
