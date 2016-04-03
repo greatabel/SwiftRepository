@@ -23,7 +23,7 @@ class FaviconTableViewCell: UITableViewCell {
         didSet {
             
             // We've just been given a URL, so create a request
-            var request = NSURLRequest(URL: self.url!)
+            let request = NSURLRequest(URL: self.url!)
             
             // Display this text
             self.textLabel!.text = self.url?.host
@@ -39,7 +39,7 @@ class FaviconTableViewCell: UITableViewCell {
                     // turn it into an image
                     if(data != nil) {
 
-                        var image = UIImage(data: data!)
+                        let image = UIImage(data: data!)
 
                         // Updates to the UI have to be done on the main queue.
                         NSOperationQueue.mainQueue().addOperationWithBlock() {
