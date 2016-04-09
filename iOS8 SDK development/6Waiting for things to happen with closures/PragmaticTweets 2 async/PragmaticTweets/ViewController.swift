@@ -109,19 +109,57 @@ public class ViewController: UITableViewController {
         let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(
             ACAccountTypeIdentifierTwitter)
         accountStore.requestAccessToAccountsWithType(twitterAccountType,
-                                                     options: nil,
-                                                     completion: {
-                                                       (granted: Bool, error: NSError!)
-                                                        -> Void in
-                                                        if (!granted) {
-                                                            print ("account access not granted")
-                                                        } else {
-                                                            print("here")
-                                                        }
+                 options: nil,
+                 completion: {
+                   (granted: Bool, error: NSError!)
+                    -> Void in
+                    if (!granted) {
+                        print ("account access not granted")
+                    } else {
+                        print("here")
+                        let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+                        if twitterAccounts.count == 0 {
+                            print ("no twitter accounts configured")
+                            return
+                        } else {
+                            let twitterParams = [
+                                "count" : "10"
+                            ]
+                            print("here1")
+                            let twitterAPIURL = NSURL(string:
+                                "https://api.twitter.com/1.1/statuses/home_timeline.json")
+                            let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: twitterAPIURL, parameters: twitterParams)
+                            request.account = twitterAccounts.first as! ACAccount
+                            request.performRequestWithHandler({
+                                (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!)
+                                -> Void in
+                                self.handleTwitterData(data, urlResponse: urlResponse, error: error)
+                            })
+                        }
+
+                    }
         })
 
+    }
 
-
+    func handleTwitterData(data: NSData!,
+                            urlResponse: NSHTTPURLResponse!,
+                            error: NSError!) {
+        if let dataValue = data {
+            var parseError : NSError? = nil
+            let jsonObject : AnyObject?
+            do {
+                jsonObject = try NSJSONSerialization.JSONObjectWithData(dataValue,
+                                                                        options: NSJSONReadingOptions(rawValue: 0))
+                print("###", jsonObject)
+            } catch var error as NSError {
+                parseError = error
+                jsonObject = nil
+            }
+            print("JSON error: \(parseError)\nJSON response: \(jsonObject)")
+        } else {
+            print ("handleTwitterData received no data") 
+        }
     }
 
 
