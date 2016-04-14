@@ -16,23 +16,7 @@ let defaultAvatarURL_I = NSURL(string:
 )
 public class ViewController: UITableViewController {
 
-    var parsedTweets: Array<ParsedTweet> = [
-        ParsedTweet(tweetText:"1)iOS 8 SDK Development now in print. " +
-            "Swift programming FTW!",
-            userName:"@pragprog",
-            createdAt:"2014-08-20 16:44:30 EDT",
-            userAvatarURL: defaultAvatarURL),
-        ParsedTweet(tweetText:"2)Python Programming " +
-            "Python programming FTW!",
-            userName:"@abel",
-            createdAt:"2014-08-20 16:44:30 EDT",
-            userAvatarURL: defaultAvatarURL_I),
-        ParsedTweet(tweetText:"3)Elixir in action " +
-            "Elixir programming FTW!",
-            userName:"@stone",
-            createdAt:"2014-08-20 16:44:30 EDT",
-            userAvatarURL: defaultAvatarURL)
-    ]
+    var parsedTweets : [ParsedTweet] = []
 
     override public func viewDidLoad() {
 
@@ -42,19 +26,19 @@ public class ViewController: UITableViewController {
         let  inset:UIEdgeInsets  = UIEdgeInsetsMake(20, 0, 0, 0);
         self.tableView.contentInset = inset;
         reloadTweets()
-
+//        refreshControl!.endRefreshing()
         let refresher =  UIRefreshControl()
-        refresher.addTarget(self, action: "handleRefresh:",
+        refresher.addTarget(self, action: #selector(ViewController.handleRefresh(_:)),
             forControlEvents: UIControlEvents.ValueChanged)
         refreshControl = refresher
     }
 
     @IBAction func handleRefresh(sender: AnyObject?) {
-        let newParsedTweet :ParsedTweet =  ParsedTweet(tweetText: "New row",
-            userName: "@refresh",
-            createdAt: NSDate().description,
-            userAvatarURL: defaultAvatarURL_I)
-        parsedTweets.insert(newParsedTweet, atIndex: 0)
+//        let newParsedTweet :ParsedTweet =  ParsedTweet(tweetText: "New row",
+//            userName: "@refresh",
+//            createdAt: NSDate().description,
+//            userAvatarURL: defaultAvatarURL_I)
+//        parsedTweets.insert(newParsedTweet, atIndex: 0)
         reloadTweets()
         refreshControl!.endRefreshing()
 
@@ -157,9 +141,30 @@ public class ViewController: UITableViewController {
                 jsonObject = nil
             }
             print("JSON error: \(parseError)\nJSON response: \(jsonObject)")
+
+            if let jsonArray = jsonObject as? [[String:AnyObject]] {
+                self.parsedTweets.removeAll(keepCapacity: true)
+                for tweetDict in jsonArray {
+                    let parsedTweet = ParsedTweet()
+                    parsedTweet.tweetText = tweetDict["text"]  as? String
+                    parsedTweet.createdAt = tweetDict["created_at"]  as? String
+                    let userDict = tweetDict["user"] as! NSDictionary
+                    parsedTweet.userName = userDict["name"] as? String
+                    parsedTweet.userAvatarURL = NSURL (string:
+                        userDict ["profile_image_url"] as! String)
+                    self.parsedTweets.append(parsedTweet)
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                })
+
+            }
+
         } else {
             print ("handleTwitterData received no data") 
         }
+
+
     }
 
 
