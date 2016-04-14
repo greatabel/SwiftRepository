@@ -80,14 +80,33 @@ public class ViewController: UITableViewController {
         cell.tweetTextLabel.text = parsedTweet.tweetText
         cell.createdAtLabel.text = parsedTweet.createdAt
 
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), {
 
-            if let imageData = NSData(contentsOfURL: parsedTweet.userAvatarURL!) {
-                let avatarImage = UIImage(data: imageData)
-                dispatch_async(dispatch_get_main_queue(), {
-                    cell.avatarImageView.image = avatarImage
-                })
-            }
+//        dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), {
+//
+//            if let imageData = NSData(contentsOfURL: parsedTweet.userAvatarURL!) {
+//                let avatarImage = UIImage(data: imageData)
+//                dispatch_async(dispatch_get_main_queue(), {
+//                    cell.avatarImageView.image = avatarImage
+//                })
+//            }
+//        })
+
+        cell.avatarImageView.image = nil
+        dispatch_async(dispatch_get_global_queue(
+            QOS_CLASS_DEFAULT, 0),
+                       {
+                        if let imageData = NSData (contentsOfURL:
+                            parsedTweet.userAvatarURL!) {
+                            let avatarImage = UIImage(data: imageData)
+                            dispatch_async(dispatch_get_main_queue(),
+                                {
+                                    if cell.userNameLabel.text == parsedTweet.userName {
+                                        cell.avatarImageView.image = avatarImage
+                                    } else {
+                                        print ("oops, wrong cell, never mind")
+                                    }
+                            }) 
+                        }
         })
 
 //        if parsedTweet.userAvatarURL != nil {
