@@ -207,7 +207,7 @@ public class RootViewController: UITableViewController {
                 jsonObject = try NSJSONSerialization.JSONObjectWithData(dataValue,
                                                                         options: NSJSONReadingOptions(rawValue: 0))
 //                print("###", jsonObject)
-            } catch var error as NSError {
+            } catch let error as NSError {
                 parseError = error
                 jsonObject = nil
                 print(error,"##")

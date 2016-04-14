@@ -60,6 +60,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202825281CBFB0360074CA8A /* Root VC */ = {
+			isa = PBXGroup;
+			children = (
+				20EE410B1C9AA089004A0107 /* RootViewController.swift */,
+				20EE412B1C9AB7DD004A0107 /* ParsedTweetCell.swift */,
+			);
+			name = "Root VC";
+			sourceTree = "<group>";
+		};
+		202825291CBFB0500074CA8A /* Twitter Classes */ = {
+			isa = PBXGroup;
+			children = (
+				20EE41291C9AA8E4004A0107 /* ParsedTweet.swift */,
+			);
+			name = "Twitter Classes";
+			sourceTree = "<group>";
+		};
 		20EE40FD1C9AA088004A0107 = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +98,13 @@
 		20EE41081C9AA089004A0107 /* PragmaticTweets */ = {
 			isa = PBXGroup;
 			children = (
+				202825281CBFB0360074CA8A /* Root VC */,
+				202825291CBFB0500074CA8A /* Twitter Classes */,
 				20EE41091C9AA089004A0107 /* AppDelegate.swift */,
-				20EE410B1C9AA089004A0107 /* RootViewController.swift */,
 				20EE410D1C9AA089004A0107 /* Main.storyboard */,
 				20EE41101C9AA089004A0107 /* Assets.xcassets */,
 				20EE41121C9AA089004A0107 /* LaunchScreen.storyboard */,
 				20EE41151C9AA089004A0107 /* Info.plist */,
-				20EE41291C9AA8E4004A0107 /* ParsedTweet.swift */,
-				20EE412B1C9AB7DD004A0107 /* ParsedTweetCell.swift */,
 			);
 			path = PragmaticTweets;
 			sourceTree = "<group>";
