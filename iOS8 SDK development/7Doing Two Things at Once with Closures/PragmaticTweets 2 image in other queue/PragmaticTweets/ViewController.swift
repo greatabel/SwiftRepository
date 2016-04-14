@@ -79,11 +79,22 @@ public class ViewController: UITableViewController {
         cell.userNameLabel.text = parsedTweet.userName
         cell.tweetTextLabel.text = parsedTweet.tweetText
         cell.createdAtLabel.text = parsedTweet.createdAt
-        if parsedTweet.userAvatarURL != nil {
+
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), {
+
             if let imageData = NSData(contentsOfURL: parsedTweet.userAvatarURL!) {
-                cell.avatarImageView.image = UIImage(data: imageData)
+                let avatarImage = UIImage(data: imageData)
+                dispatch_async(dispatch_get_main_queue(), {
+                    cell.avatarImageView.image = avatarImage
+                })
             }
-        }
+        })
+
+//        if parsedTweet.userAvatarURL != nil {
+//            if let imageData = NSData(contentsOfURL: parsedTweet.userAvatarURL!) {
+//                cell.avatarImageView.image = UIImage(data: imageData)
+//            }
+//        }
         return cell
     }
 
@@ -127,6 +138,46 @@ public class ViewController: UITableViewController {
 
     }
 
+//    func reloadTweets() {
+//        //        tableView.reloadData()
+//        print(NSThread.isMainThread() ? "On main thread" : "Not on main thread")
+//        let accountStore = ACAccountStore()
+//        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(
+//            ACAccountTypeIdentifierSinaWeibo)
+//        accountStore.requestAccessToAccountsWithType(twitterAccountType,
+//     options: nil,
+//     completion: {
+//        (granted: Bool, error: NSError!)
+//        -> Void in
+//        if (!granted) {
+//            print ("account access not granted")
+//        } else {
+//            print("here")
+//            let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+//            if twitterAccounts.count == 0 {
+//                print ("no twitter accounts configured")
+//                return
+//            } else {
+//                let twitterParams = [
+//                    "count" : "20"
+//                ]
+//                print("here1")
+//                let twitterAPIURL = NSURL(string:
+//                    "http://api.t.sina.com.cn/statuses/user_timeline.json")
+//                let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: twitterAPIURL, parameters: twitterParams)
+//                request.account = twitterAccounts.first as! ACAccount
+//                request.performRequestWithHandler({
+//                    (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!)
+//                    -> Void in
+//                    self.handleTwitterData(data, urlResponse: urlResponse, error: error)
+//                })
+//            }
+//            
+//        }
+//        })
+//        
+//    }
+
     func handleTwitterData(data: NSData!,
                             urlResponse: NSHTTPURLResponse!,
                             error: NSError!) {
@@ -142,7 +193,7 @@ public class ViewController: UITableViewController {
                 jsonObject = nil
                 print(error,"##")
             }
-//            print("JSON error: \(parseError)\nJSON response: \(jsonObject)")
+            print("JSON error: \(parseError)\nJSON response: \(jsonObject)")
 
             if let jsonArray = jsonObject as? [[String:AnyObject]] {
                 print("jsonArray.count=", jsonArray.count)
@@ -153,6 +204,9 @@ public class ViewController: UITableViewController {
                     parsedTweet.createdAt = tweetDict["created_at"]  as? String
                     let userDict = tweetDict["user"] as! NSDictionary
                     parsedTweet.userName = userDict["name"] as? String
+
+
+
                     parsedTweet.userAvatarURL = NSURL (string:
                         userDict ["profile_image_url"] as! String)
 //                    parsedTweet.userAvatarURL = defaultAvatarURL
