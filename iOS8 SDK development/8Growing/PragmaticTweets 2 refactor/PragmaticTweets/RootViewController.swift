@@ -14,7 +14,7 @@ let defaultAvatarURL = NSURL(string:
 let defaultAvatarURL_I = NSURL(string:
     "https://img1.doubanio.com/icon/u91890136-3.jpg"
 )
-public class RootViewController: UITableViewController {
+public class RootViewController: UITableViewController, TwitterAPIRequestDelegate {
 
     var parsedTweets : [ParsedTweet] = []
 
@@ -120,41 +120,52 @@ public class RootViewController: UITableViewController {
     func reloadTweets() {
 //        tableView.reloadData()
         print(NSThread.isMainThread() ? "On main thread" : "Not on main thread")
-        let accountStore = ACAccountStore()
-        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(
-            ACAccountTypeIdentifierTwitter)
-        accountStore.requestAccessToAccountsWithType(twitterAccountType,
-                 options: nil,
-                 completion: {
-                   (granted: Bool, error: NSError!)
-                    -> Void in
-                    if (!granted) {
-                        print ("account access not granted")
-                    } else {
-                        print("here")
-                        let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
-                        if twitterAccounts.count == 0 {
-                            print ("no twitter accounts configured")
-                            return
-                        } else {
-                            let twitterParams = [
-                                "count" : "20"
-                            ]
-                            print("here1")
-                            let twitterAPIURL = NSURL(string:
-                                "https://api.twitter.com/1.1/statuses/home_timeline.json")
-                            let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: twitterAPIURL, parameters: twitterParams)
-                            request.account = twitterAccounts.first as! ACAccount
-                            request.performRequestWithHandler({
-                                (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!)
-                                -> Void in
-                                self.handleTwitterData(data, urlResponse: urlResponse, error: error)
-                            })
-                        }
+        let twitterParams : Dictionary = ["count":"100"]
+        let twitterAPIURL = NSURL(string:
+            "https://api.twitter.com/1.1/statuses/home_timeline.json")
+        let request = TwitterAPIRequest()
+        request.sendTwitterRequest(twitterAPIURL,
+                                   params: twitterParams,
+                                   delegate: self)
+    }
 
-                    }
-        })
-
+    func handleTwitterData (data: NSData!,
+                            urlResponse: NSHTTPURLResponse!,
+                            error: NSError!,
+                            fromRequest: TwitterAPIRequest!) {
+        if let dataValue = data {
+            var parseError : NSError? = nil
+            let jsonObject : AnyObject?
+            do {
+                jsonObject = try NSJSONSerialization.JSONObjectWithData(dataValue,
+                                                                        options: NSJSONReadingOptions(rawValue: 0))
+            } catch var error as NSError {
+                parseError = error
+                jsonObject = nil
+            }
+            if parseError != nil {
+                return
+            }
+            if let jsonArray = jsonObject as? [ [String:AnyObject] ] {
+                self.parsedTweets.removeAll(keepCapacity: true)
+                for tweetDict in jsonArray {
+                    let parsedTweet = ParsedTweet()
+                    parsedTweet.tweetText = tweetDict["text"]  as? String
+                    parsedTweet.createdAt = tweetDict["created_at"]  as? String
+                    let userDict = tweetDict["user"] as! NSDictionary
+                    parsedTweet.userName = userDict["name"] as? String
+                    parsedTweet.userAvatarURL = NSURL (string:
+                        userDict ["profile_image_url"] as! String)
+                    self.parsedTweets.append(parsedTweet)
+                }
+                dispatch_async(dispatch_get_main_queue(),
+                               { 
+                                self.tableView.reloadData()
+                })
+            }
+        } else {
+            print ("handleTwitterData received no data")
+        }
     }
 
 //    func reloadTweets() {
