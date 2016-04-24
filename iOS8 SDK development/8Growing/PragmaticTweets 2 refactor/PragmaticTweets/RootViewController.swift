@@ -161,17 +161,13 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
                 dispatch_async(dispatch_get_main_queue(),
                                { 
                                 self.tableView.reloadData()
+                                print(NSThread.isMainThread() ? "@On main thread" : "@Not on main thread")
                 })
             }
         } else {
             print ("handleTwitterData received no data")
         }
     }
-
-
-
-
-
 
 
 
