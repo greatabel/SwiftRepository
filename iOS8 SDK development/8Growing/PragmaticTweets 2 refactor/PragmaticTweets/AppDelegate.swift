@@ -1,7 +1,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TwitterAPIRequestDelegate {
 
     var window: UIWindow?
 
@@ -22,7 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        let request = TwitterAPIRequest ()
+        request.sendTwitterRequest(NSURL (
+            string: "https://api.twitter.com/1.1/users/suggestions.json"),
+                                   params: [ : ],
+                                   delegate: self)
+    }
+
+    func handleTwitterData(data: NSData!,
+                           urlResponse: NSHTTPURLResponse!,
+                           error: NSError!,
+                           fromRequest: TwitterAPIRequest!) {
+        let jsonObject : AnyObject? =
+            try? NSJSONSerialization.JSONObjectWithData(data,
+                                                        options: NSJSONReadingOptions(rawValue: 0))
+        print("suggestions JSON: \(jsonObject)")
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
