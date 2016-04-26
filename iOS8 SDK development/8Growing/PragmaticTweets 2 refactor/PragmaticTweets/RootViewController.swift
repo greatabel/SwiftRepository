@@ -139,7 +139,7 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
             do {
                 jsonObject = try NSJSONSerialization.JSONObjectWithData(dataValue,
                                                                         options: NSJSONReadingOptions(rawValue: 0))
-            } catch var error as NSError {
+            } catch let error as NSError {
                 parseError = error
                 jsonObject = nil
             }
