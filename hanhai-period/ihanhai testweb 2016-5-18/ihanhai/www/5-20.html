@@ -7,6 +7,10 @@
 body { margin: 0px; overflow: hidden; }
 canvas { border: 1px solid black; }
 </style>
+
+<!--  
+http://eloquentjavascript.net/16_canvas.html
+-->
 <!-- <script type="text/javascript" src="magictouch.js"></script> -->
 <script type="text/javascript">
 var canvas;
@@ -22,8 +26,8 @@ function update() {
   var nw = window.innerWidth;
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
-    w = nw;
-    h = nh;
+    w = nw ;
+    h = nh - 120;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -31,20 +35,59 @@ function update() {
   }
   ctx.clearRect(0, 0, w, h);
   var i, len = touches.length;
+  var temp = '';
+  ctx.beginPath();
+
+
+
+var cx = document.querySelector("canvas").getContext("2d");
+  cx.beginPath();
+
+
   for (i=0; i<len; i++) {
     var touch = touches[i];
     var px = touch.pageX;
     var py = touch.pageY;
-    ctx.beginPath();
-    ctx.arc(px, py, 20, 0, 2*Math.PI, true);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
-    ctx.fill();
-    ctx.lineWidth = 2.0;
-    ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
-    ctx.stroke();
-    console.log('drawn circle at ' + px +',' + py);
+
+   
+  
+    cx.moveTo(px, py);
+
+    if (i+1 < len) {
+      cx.lineTo(touches[i+1].pageX, touches[i+1].pageY);
+    }
+    
+    // ctx.arc(px, py, 20, 0, 2*Math.PI, true);
+    // ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+    // ctx.fill();
+    // ctx.lineWidth = 2.0;
+    // ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
+   
+    console.log('＃' + px +',' + py);
+    temp += (i+'h:' + px +',' + py);
+    // document.getElementById("content").innerHTML =  document.getElementById("content").innerHTML ＋ ',px=' +px +',py='+py;
   }
+    if (len > 0) {
+      // cx.moveTo(touches[0].pageX, touches[0].pageY);
+      cx.lineTo(touches[0].pageX, touches[0].pageY);
+    }
+    cx.stroke();
+
+
+  if (len > 2) {
+    x1 = touches[0].pageX * 2
+    y1 = touches[0].pageY * 2
+    x2 = touches[1].pageX * 2
+    y2 = touches[1].pageY * 2
+
+    var length = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+    temp += 'len:'+ length + 'radio:' + window.devicePixelRatio
+  }
+  document.getElementById("content").innerHTML = temp;
   updateStarted = false;
+
+
+
 }
 
 function ol() {
@@ -63,15 +106,15 @@ canvas.addEventListener('touchstart', function(event) {
 });
 };
 
+
 </script>
 </head>
 <body onload="ol()">
-<br/><br/>
-<a href="5-19.html">link text to 5-19</a>
-<a href="5-20.html">link text to 5-20</a>  
-<a href="5-25.html">link text to 5-25</a>  
-<canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px;"></canvas>
-<object id="tuio" type="application/x-tuio">Plugin FAILED to load</object>
 
+<canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px;"></canvas>
+
+<a href="5-19.html">link text to 5-19</a>
+
+<div id="content">content here</div>aaaaaaaa
 </body>
 </html>

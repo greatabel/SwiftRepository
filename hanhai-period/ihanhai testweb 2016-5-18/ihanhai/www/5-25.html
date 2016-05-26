@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Touch Tracker Marker</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+<style type="text/css">
+body { margin: 0px; overflow: hidden; }
+canvas { border: 1px solid black; }
+</style>
+
+<!--  
+http://eloquentjavascript.net/16_canvas.html
+-->
+<!-- <script type="text/javascript" src="magictouch.js"></script> -->
+<script type="text/javascript">
+var canvas;
+var ctx;
+var w = 0;
+var h = 0;
+var timer;
+var updateStarted = false;
+var touches = [];
+function update() {
+  if (updateStarted) return;
+  updateStarted = true;
+  var nw = window.innerWidth;
+  var nh = window.innerHeight;
+  if ((w != nw) || (h != nh)) {
+    w = nw ;
+    h = nh - 120;
+    canvas.style.width = w+'px';
+    canvas.style.height = h+'px';
+    canvas.width = w;
+    canvas.height = h;
+  }
+  ctx.clearRect(0, 0, w, h);
+  var i, len = touches.length;
+  var temp = '';
+  ctx.beginPath();
+
+
+
+var cx = document.querySelector("canvas").getContext("2d");
+  cx.beginPath();
+
+  var centerX = 0;
+  var centerY = 0;
+
+  for (i=0; i<len; i++) {
+    var touch = touches[i];
+    var px = touch.pageX;
+    var py = touch.pageY;
+
+   centerX += touch.pageX;
+   centerY += touch.pageY;
+  
+    cx.moveTo(px, py);
+
+    if (i+1 < len) {
+      cx.lineTo(touches[i+1].pageX, touches[i+1].pageY);
+
+    }
+
+    // ctx.beginPath();
+    // ctx.arc(centerX, centerY, 20, 0, 2*Math.PI, true);
+    // ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+    // ctx.fill();
+    // ctx.lineWidth = 2.0;
+    // ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
+    // ctx.stroke();
+    
+    // ctx.arc(px, py, 20, 0, 2*Math.PI, true);
+    // ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+    // ctx.fill();
+    // ctx.lineWidth = 2.0;
+    // ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
+   
+    console.log('＃' + px +',' + py);
+    temp += (i+'h:' + px +',' + py);
+    // document.getElementById("content").innerHTML =  document.getElementById("content").innerHTML ＋ ',px=' +px +',py='+py;
+  }
+
+    if (len > 0) {
+      // cx.moveTo(touches[0].pageX, touches[0].pageY);
+      cx.lineTo(touches[0].pageX, touches[0].pageY);
+      centerX = centerX/3;
+      centerY = centerY/3;
+    }
+    cx.stroke();
+
+    
+
+  if (len > 2) {
+    x1 = touches[0].pageX 
+    y1 = touches[0].pageY 
+    x2 = touches[1].pageX 
+    y2 = touches[1].pageY 
+    x3 = touches[2].pageX 
+    y3 = touches[2].pageY 
+
+    var a = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+    var b = Math.sqrt(((x3-x2) * (x3-x2)) + ((y3-y2) * (y3-y2)));
+    var c = Math.sqrt(((x1-x3) * (x1-x3)) + ((y1-y3) * (y1-y3)));
+
+    var r =   Math.sqrt(3) * (a + b + c) / 9;
+
+
+    // draw center 
+    ctx.fillRect(centerX, centerY, 1,1);
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, r, 0, 2*Math.PI, true);
+    ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+    ctx.fill();
+    ctx.lineWidth = 2.0;
+    ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
+    ctx.stroke();
+
+    temp += 'lena:'+ a +'r:' +r + 'radio:' + window.devicePixelRatio
+  }
+  document.getElementById("content").innerHTML = temp;
+  updateStarted = false;
+
+}
+
+function ol() {
+  canvas = document.getElementById('canvas');
+  ctx = canvas.getContext('2d');
+  timer = setInterval(update, 15);
+canvas.addEventListener('touchend', function() {
+  ctx.clearRect(0, 0, w, h);
+});
+canvas.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+  touches = event.touches;
+});
+canvas.addEventListener('touchstart', function(event) {
+  console.log('start');
+});
+};
+
+
+</script>
+</head>
+<body onload="ol()">
+
+<canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px;"></canvas>
+
+<a href="5-19.html">link text to 5-19</a>
+
+<div id="content">content here</div>aaaaaaaa
+</body>
+</html>
