@@ -86,6 +86,7 @@ var cx = document.querySelector("canvas").getContext("2d");
       centerX = centerX/3;
       centerY = centerY/3;
     }
+    cx.strokeStyle = "rgba(255,255,0,0.3)";
     cx.stroke();
 
     
@@ -117,6 +118,8 @@ var cx = document.querySelector("canvas").getContext("2d");
     ctx.stroke();
 
     temp += 'lena:'+ a +'r:' +r + 'radio:' + window.devicePixelRatio
+
+
   }
   document.getElementById("content").innerHTML = temp;
   updateStarted = false;
