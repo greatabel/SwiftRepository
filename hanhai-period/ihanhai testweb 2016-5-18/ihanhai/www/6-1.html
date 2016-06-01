@@ -43,8 +43,8 @@ var touches = [];
 
 
   function drawScreen() {
-      // y = y + dy;
-      // x = x + dx;
+      y = y + dy;
+      x = x + dx;
      //draw a background so we can wee the Canvas edges
         
           var theCanvas = document.getElementById('canvas');
@@ -203,7 +203,7 @@ function ol() {
 
 canvas.addEventListener('touchend', function() {
   ctx.clearRect(0, 0, w, h);
-  // drawScreen()
+  drawScreen()
 });
 canvas.addEventListener('touchmove', function(event) {
   event.preventDefault();
@@ -215,8 +215,8 @@ canvas.addEventListener('touchstart', function(event) {
 };
 
 function moveTop(){ 
-      y = y + 2;
-      x = x + 2;
+      y = y + 10;
+      x = x + 10;
  drawScreen();
 };
 
