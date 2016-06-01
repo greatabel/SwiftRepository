@@ -25,13 +25,15 @@ var touches = [];
   var centerY = 0;
 
    
-    var x=50;
-    var y=50;
+    // var x=50;
+    // var y=50;
+    var yA = 0;
+    var yB = 0;
 
     var dx=0;
     var dy=-1;
-     var theCanvas = document.getElementById('canvas');
-      var context = theCanvas.getContext('2d');
+     var theCanvas ;
+      var context ;
 
     var counter=0;
   var tileSheet=new Image();
@@ -47,13 +49,13 @@ var touches = [];
       // x = x + dx;
      //draw a background so we can wee the Canvas edges
         
-          var theCanvas = document.getElementById('canvas');
-      var context = theCanvas.getContext('2d');
+           theCanvas = document.getElementById('canvas');
+       context = theCanvas.getContext('2d');
        var tileSheet=new Image();
          tileSheet.src="ships.png";
       // context.drawImage(tileSheet, 0, 0,32,32,50,50,32,32);
-    context.drawImage(tileSheet, 32*counter, 0,32,32,x,y,32,32);
-    context.drawImage(tileSheet, 32*counter, 0,32,32,centerX+32,centerY+32,32,32);
+    context.drawImage(tileSheet, 32*counter, 0,32,32,centerX-64,yA-64,32,32);
+    context.drawImage(tileSheet, 32*counter, 0,32,32,centerX+32,yB+32,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX-64,centerY-64,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX+32,centerY+32,32,32);
          counter++;
@@ -84,6 +86,9 @@ function update() {
   }
   ctx.clearRect(0, 0, w, h);
   var i, len = touches.length;
+  if (len > 3) {
+    len = 3;
+  }
   var temp = '';
   ctx.beginPath();
 
@@ -166,8 +171,12 @@ var cx = document.querySelector("canvas").getContext("2d");
     ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
     ctx.stroke();
     
-     // y = centerY - 64;
+      // y = centerY ;
      counter=0
+     if ( yA < centerY) {
+      yA = centerY;
+      yB = centerY;
+     }
     drawScreen();
     
     // if ( r > 0 ) {
@@ -180,7 +189,7 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 
   }
-  document.getElementById("content").innerHTML = temp;
+  // document.getElementById("content").innerHTML = temp;
   updateStarted = false;
 
 }
@@ -191,7 +200,15 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 
     
-   
+   function moveTop(){ 
+      yA = yA + 2;
+      yB = yB - 2;
+      // x = x + 2;
+ drawScreen();
+};
+
+function moveDown(){
+}
 
 
 
@@ -201,24 +218,80 @@ function ol() {
   timer = setInterval(update, 200);
   // var timer1 = setInterval(drawScreen, 200);
 
-canvas.addEventListener('touchend', function() {
-  ctx.clearRect(0, 0, w, h);
-  // drawScreen()
-});
-canvas.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-  touches = event.touches;
-});
-canvas.addEventListener('touchstart', function(event) {
-  console.log('start');
-});
+// canvas.addEventListener('touchend', function() {
+//   // ctx.clearRect(0, 0, w, h);
+//   // drawScreen()
+// });
+// canvas.addEventListener('touchmove', function(event) {
+//   event.preventDefault();
+//   touches = event.touches;
+// });
+// canvas.addEventListener('touchstart', function(event) {
+//   console.log('start');
+// });
+
+
+
+
 };
 
-function moveTop(){ 
-      y = y + 2;
-      x = x + 2;
- drawScreen();
-};
+//------------------------
+var temp = 0;
+
+            document.addEventListener('touchstart', handleTouchStart, false);        
+            document.addEventListener('touchmove', handleTouchMove, false);
+
+            var xDown = null;                                                        
+            var yDown = null;                                                        
+
+            function handleTouchStart(evt) {                                         
+                xDown = evt.touches[3].clientX;                                      
+                yDown = evt.touches[3].clientY;                                      
+            };                                                
+
+            function handleTouchMove(evt) {
+              
+                evt.preventDefault();
+
+                touches = evt.touches;
+                // document.getElementById("content").innerHTML = 'len:'+touches.length + '|'+xDown +'|'+ yDown;
+                // alert('in handleTouchMove')
+                if ( ! xDown || ! yDown ) {
+                    return;
+                }
+
+                var xUp = evt.touches[3].clientX;                                    
+                var yUp = evt.touches[3].clientY;
+
+                var xDiff = xDown - xUp;
+                var yDiff = yDown - yUp;
+
+                if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+                    if ( xDiff > 0 ) {
+                        /* left swipe */ 
+                    } else {
+                        /* right swipe */
+                    }                       
+                } else {
+                    if ( yDiff > 0 ) {
+                        /* up swipe */ 
+                        temp += 5
+                        document.getElementById("content").innerHTML = "up" + temp;
+                        moveTop();
+
+                    } else { 
+                        /* down swipe */
+                        temp += 5
+                        document.getElementById("content").innerHTML = "down" + temp;
+                        moveDown();
+
+                    }                                                                 
+                }
+                /* reset values */
+                xDown = null;
+                yDown = null;                                             
+            };
+ 
 
 </script>
 </head>
