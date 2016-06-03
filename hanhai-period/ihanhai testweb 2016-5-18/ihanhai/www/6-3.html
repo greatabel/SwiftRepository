@@ -16,12 +16,13 @@ http://eloquentjavascript.net/16_canvas.html
 <script type="text/javascript">
 var canvas;
 var ctx;
+var tileSheet;
 var w = 0;
 var h = 0;
 var timer;
 var updateStarted = false;
 var touches = [];
-
+var previous_touches = [];
   var centerX = 0;
   var centerY = 0;
 
@@ -38,25 +39,24 @@ var touches = [];
 
     var counter=0;
   var tileSheet=new Image();
-  tileSheet.addEventListener('load', eventSheetLoaded , false);
+  // tileSheet.addEventListener('load', eventSheetLoaded , false);
   tileSheet.src="ships.png";
   
 
-  
+
 
 
   function drawScreen() {
       // y = y + dy;
       // x = x + dx;
      //draw a background so we can wee the Canvas edges
-        
-           theCanvas = document.getElementById('canvas');
-       context = theCanvas.getContext('2d');
-       var tileSheet=new Image();
-         tileSheet.src="ships.png";
+               
+       
+
+   
       // context.drawImage(tileSheet, 0, 0,32,32,50,50,32,32);
-    context.drawImage(tileSheet, 32*counter, 0,32,32,centerX-64,yA-64,32,32);
-    context.drawImage(tileSheet, 32*counter, 0,32,32,centerX+32,yB+32,32,32);
+    ctx.drawImage(tileSheet, 32*counter, 0,32,32,centerX-64,yA-64,32,32);
+    ctx.drawImage(tileSheet, 32*counter, 0,32,32,centerX+32,yB+32,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX-64,centerY-64,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX+32,centerY+32,32,32);
          counter++;
@@ -67,12 +67,12 @@ var touches = [];
 
   };
 
-    function eventSheetLoaded() {
-        drawScreen();
-    };
+    // function eventSheetLoaded() {
+    //     drawScreen();
+    // };
 
 
-function update() {
+function update(touches) {
   if (updateStarted) return;
   updateStarted = true;
   var nw = window.innerWidth;
@@ -174,11 +174,12 @@ var cx = document.querySelector("canvas").getContext("2d");
     
       // y = centerY ;
      counter=0
-     if ( yA < centerY || yA > centerY + r || yA < centerY - r) {
+     if (  yA > centerY + r || yA < centerY - r || yB > centerY + r || yB < centerY - r) {
       yA = centerY;
       yB = centerY;
      }
-    drawScreen();
+
+    // drawScreen();
     
     // if ( r > 0 ) {
     //   clearInterval(timer);
@@ -196,23 +197,25 @@ var cx = document.querySelector("canvas").getContext("2d");
 }
 
 
-
-
-
-
     
    function moveTop(){ 
       yA = yA + 2;
       yB = yB - 2;
       // x = x + 2;
- drawScreen();
+      update(previous_touches);
+      drawScreen();
+      window.setTimeout(drawScreen, 200);
+
 };
 
 function moveDown(){
           yA = yA - 2;
       yB = yB + 2;
       // x = x + 2;
+ update(previous_touches);
  drawScreen();
+
+  window.setTimeout(drawScreen, 200);
 }
 
 
@@ -220,7 +223,10 @@ function moveDown(){
 function ol() {
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
-  timer = setInterval(update, 200);
+       tileSheet=new Image();
+         tileSheet.src="ships.png";
+  update(touches);
+  // timer = setInterval(update, 200);
   // var timer1 = setInterval(drawScreen, 200);
 
 // canvas.addEventListener('touchend', function() {
@@ -250,8 +256,8 @@ var temp = 0;
             var yDown = null;                                                        
 
             function handleTouchStart(evt) {                                         
-                xDown = evt.touches[3].clientX;                                      
-                yDown = evt.touches[3].clientY;                                      
+                xDown = evt.touches[0].clientX;                                      
+                yDown = evt.touches[0].clientY;                                      
             };                                                
 
             function handleTouchMove(evt) {
@@ -259,14 +265,21 @@ var temp = 0;
                 evt.preventDefault();
 
                 touches = evt.touches;
+                if(touches.length == 3) {
+                  previous_touches = touches
+                  yA = centerY;
+                  yB = centerY;
+                  update(touches)
+                  drawScreen()
+                }
                 // document.getElementById("content").innerHTML = 'len:'+touches.length + '|'+xDown +'|'+ yDown;
                 // alert('in handleTouchMove')
                 if ( ! xDown || ! yDown ) {
                     return;
                 }
 
-                var xUp = evt.touches[3].clientX;                                    
-                var yUp = evt.touches[3].clientY;
+                var xUp = evt.touches[0].clientX;                                    
+                var yUp = evt.touches[0].clientY;
 
                 var xDiff = xDown - xUp;
                 var yDiff = yDown - yUp;
