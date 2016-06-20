@@ -202,8 +202,8 @@ var cx = document.querySelector("canvas").getContext("2d");
 
     
    function moveTop(){ 
-      yA = yA + 2;
-      yB = yB - 2;
+      yA = yA + 1;
+      yB = yB - 1;
       // x = x + 2;
       update(previous_touches);
       drawScreen();
@@ -212,8 +212,8 @@ var cx = document.querySelector("canvas").getContext("2d");
 };
 
 function moveDown(){
-          yA = yA - 2;
-      yB = yB + 2;
+          yA = yA - 1;
+      yB = yB + 1;
       // x = x + 2;
  update(previous_touches);
  drawScreen();
@@ -298,13 +298,13 @@ var temp = 0;
                 } else {
                     if ( yDiff > 0 ) {
                         /* up swipe */ 
-                        temp += 2
+                        temp += 1
                         document.getElementById("content").innerHTML = "move:" + temp;
                         moveTop();
 
                     } else { 
                         /* down swipe */
-                        temp -= 2
+                        temp -= 1
                         document.getElementById("content").innerHTML = "move:" + temp;
                         moveDown();
 
