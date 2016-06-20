@@ -6,7 +6,7 @@
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 body { margin: 0px; overflow: hidden; }
-canvas { border: 1px solid black; }
+/*canvas { border: 1px solid yellow; }*/
 </style>
 
 <!--  
@@ -38,10 +38,12 @@ var previous_touches = [];
       var context ;
 
     var counter=0;
-  var tileSheet=new Image();
+  var tileSheetA = new Image();
   // tileSheet.addEventListener('load', eventSheetLoaded , false);
-  tileSheet.src="ships.png";
-  
+  tileSheetA.src="left2.png";
+  var tileSheetB = new Image();
+  // tileSheet.addEventListener('load', eventSheetLoaded , false);
+  tileSheetB.src = "right2.png";
 
 
 
@@ -55,8 +57,9 @@ var previous_touches = [];
 
    
       // context.drawImage(tileSheet, 0, 0,32,32,50,50,32,32);
-    ctx.drawImage(tileSheet, 32*counter, 0,32,32,centerX-64,yA-64,32,32);
-    ctx.drawImage(tileSheet, 32*counter, 0,32,32,centerX+32,yB+32,32,32);
+    ctx.drawImage(tileSheetA, centerX-52,yA-100);
+    ctx.drawImage(tileSheetB, centerX+52,yB+100);
+    // ctx.drawImage(tileSheetB, 0, 0,50,100,centerX+60,yB+100,50,100);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX-64,centerY-64,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX+32,centerY+32,32,32);
          counter++;
@@ -223,8 +226,10 @@ function moveDown(){
 function ol() {
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
-       tileSheet=new Image();
-         tileSheet.src="ships.png";
+       tileSheetA =new Image();
+      tileSheetA.src="left2.png";
+      tileSheetB =new Image();
+       tileSheetB.src="right2.png";
   update(touches);
   // timer = setInterval(update, 200);
   // var timer1 = setInterval(drawScreen, 200);
@@ -315,7 +320,7 @@ var temp = 0;
 </head>
 <body onload="ol()">
 
-<canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px;"></canvas>
+<canvas id="canvas" width="300" height="500" style="top:0px; left:0px; width: 300px; height: 500px;"></canvas>
 
 移动幅度：
 <div id="content">content here</div>

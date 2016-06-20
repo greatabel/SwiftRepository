@@ -41,7 +41,8 @@ class ViewController: UIViewController {
 //        webView.scalesPageToFit = true
 //        webView.contentMode = UIViewContentMode.ScaleAspectFit
         
-        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "/www")
+        var path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "/www")
+//        path = "http://139.224.73.50/"
         let requestURL = NSURL(string:path!);
         let request = NSURLRequest(URL:requestURL!);
         
