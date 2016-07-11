@@ -154,7 +154,7 @@ var cx = document.querySelector("canvas").getContext("2d");
 
     ctx.beginPath();
     ctx.arc(centerX, centerY, r, 0, 2*Math.PI, true);
-    ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+    ctx.fillStyle = "rgba(255,255,255, 0.9)";
     ctx.fill();
     ctx.lineWidth = 2.0;
     ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
@@ -187,8 +187,13 @@ var cx = document.querySelector("canvas").getContext("2d");
 
     
    function moveTop(){ 
-      yA = yA + 1;
-      yB = yB - 1;
+      if (temp % 2 === 0) {
+         yA = yA + 1;
+      } else {
+        yB = yB - 1;
+      }
+     
+
       // x = x + 2;
       update(previous_touches);
       drawScreen();
@@ -197,8 +202,13 @@ var cx = document.querySelector("canvas").getContext("2d");
 };
 
 function moveDown(){
-          yA = yA - 1;
+  if (temp % 2 === 0) {
+      yA = yA - 1;
+  } else {
       yB = yB + 1;
+  }
+
+
       // x = x + 2;
  update(previous_touches);
  drawScreen();
