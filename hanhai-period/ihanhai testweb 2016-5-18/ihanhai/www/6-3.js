@@ -1,15 +1,20 @@
 
 var canvas;
 var ctx;
-var tileSheet;
+// var tileSheet;
 var w = 0;
 var h = 0;
 var timer;
 var updateStarted = false;
 var touches = [];
 var previous_touches = [];
-  var centerX = 0;
-  var centerY = 0;
+
+var threecount = 0;
+var previous_Y_bound = 0;
+// whether to decting 3 touches to refresh UI
+var isDetecting = true;
+var centerX = 0;
+var centerY = 0;
 
    
     // var x=50;
@@ -23,14 +28,15 @@ var previous_touches = [];
       var context ;
 
     var counter=0;
-  var tileSheetA = new Image();
+  // var tileSheet=new Image();
+  var tileSheetL = document.getElementById('left_img');
+  var tileSheetR = document.getElementById('right_img');
   // tileSheet.addEventListener('load', eventSheetLoaded , false);
-  tileSheetA.src="left2.png";
-  var tileSheetB = new Image();
-  // tileSheet.addEventListener('load', eventSheetLoaded , false);
-  tileSheetB.src = "right2.png";
+  // var imagepath = '{{ url_for('static', filename = '/images/ships.png') }}';
+  // document.getElementById("test").innerHTML = "test:" + imagepath;
+  // tileSheet.src= imagepath;
 
-
+   
 
 
   function drawScreen() {
@@ -42,9 +48,8 @@ var previous_touches = [];
 
    
       // context.drawImage(tileSheet, 0, 0,32,32,50,50,32,32);
-    ctx.drawImage(tileSheetA, centerX-32,yA-60);
-    ctx.drawImage(tileSheetB, centerX+2,yB);
-    // ctx.drawImage(tileSheetB, 0, 0,50,100,centerX+60,yB+100,50,100);
+    ctx.drawImage(tileSheetL, centerX-26, yA - 50);
+    ctx.drawImage(tileSheetR, centerX+3, yB);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX-64,centerY-64,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX+32,centerY+32,32,32);
          counter++;
@@ -60,6 +65,7 @@ var previous_touches = [];
     // };
 
 
+
 function update(touches) {
   if (updateStarted) return;
   updateStarted = true;
@@ -73,12 +79,14 @@ function update(touches) {
     canvas.width = w;
     canvas.height = h;
   }
+  
   ctx.clearRect(0, 0, w, h);
   var i, len = touches.length;
   if (len > 3) {
     len = 3;
   }
-  var temp = '';
+  // var temp = '';
+
   ctx.beginPath();
 
 
@@ -119,7 +127,7 @@ var cx = document.querySelector("canvas").getContext("2d");
     // ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
    
     console.log('＃' + px +',' + py);
-    temp += (i+'h:' + px +',' + py);
+    // temp += (i+'h:' + px +',' + py);
     // document.getElementById("content").innerHTML =  document.getElementById("content").innerHTML ＋ ',px=' +px +',py='+py;
   }
 
@@ -129,7 +137,7 @@ var cx = document.querySelector("canvas").getContext("2d");
       centerX = centerX/3;
       centerY = centerY/3;
     }
-    cx.strokeStyle = "rgba(255,0,255,0.3)";
+    cx.strokeStyle = "rgba(255, 0, 0, 1)";
     cx.stroke();
 
     
@@ -147,7 +155,7 @@ var cx = document.querySelector("canvas").getContext("2d");
     var c = Math.sqrt(((x1-x3) * (x1-x3)) + ((y1-y3) * (y1-y3)));
 
     var r =   Math.sqrt(3) * (a + b + c) / 9;
-
+    previous_Y_bound = centerY + r + 10;
 
     // draw center 
     ctx.fillRect(centerX, centerY, 2,2);
@@ -175,7 +183,7 @@ var cx = document.querySelector("canvas").getContext("2d");
 
   
 
-    temp += 'lena:'+ a +'r:' +r + 'radio:' + window.devicePixelRatio
+    // temp += 'lena:'+ a +'r:' +r + 'radio:' + window.devicePixelRatio
 
 
   }
@@ -192,8 +200,6 @@ var cx = document.querySelector("canvas").getContext("2d");
       } else {
         yB = yB - 1;
       }
-     
-
       // x = x + 2;
       update(previous_touches);
       drawScreen();
@@ -202,32 +208,27 @@ var cx = document.querySelector("canvas").getContext("2d");
 };
 
 function moveDown(){
-  if (temp % 2 === 0) {
-      yA = yA - 1;
-  } else {
-      yB = yB + 1;
-  }
+      if (temp % 2 === 0) {
+          yA = yA - 1;
+      } else {
+          yB = yB + 1;
+      }
+          // x = x + 2;
+     update(previous_touches);
+     drawScreen();
 
-
-      // x = x + 2;
- update(previous_touches);
- drawScreen();
-
-  window.setTimeout(drawScreen, 200);
+      window.setTimeout(drawScreen, 200);
 }
 
-function saveMeasure() {
-  alert('保存数据成功！')
-}
 
 
 function ol() {
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
-       tileSheetA =new Image();
-      tileSheetA.src="left2.png";
-      tileSheetB =new Image();
-       tileSheetB.src="right2.png";
+       // tileSheet=new Image();
+       //   tileSheet.src="ships.png";
+   tileSheetL = document.getElementById('left_img');
+   tileSheetR = document.getElementById('right_img');
   update(touches);
   // timer = setInterval(update, 200);
   // var timer1 = setInterval(drawScreen, 200);
@@ -244,27 +245,76 @@ function ol() {
 //   console.log('start');
 // });
 
-
-
-
 };
 
 //------------------------
 var temp = 0;
+function myfilter(evt) {
+  var filteredTouches = [];
 
+  for (var i = 0; i < evt.touches.length ; i++) {
+    if ( evt.touches[i].clientY >= previous_Y_bound) {
+        filteredTouches.push(evt.touches[i]);
+    }
+  }
+  return filteredTouches;
+}
+  
             document.addEventListener('touchstart', handleTouchStart, false);        
             document.addEventListener('touchmove', handleTouchMove, false);
 
             var xDown = null;                                                        
-            var yDown = null;    
+            var yDown = null;   
 
-            var clickTimer = null;
+            var clickTimer = null;            
+            var moveTimer = null; 
 
-            function handleTouchStart(evt) {                                         
-                xDown = evt.touches[0].clientX;                                      
-                yDown = evt.touches[0].clientY;
+            function draw_measure(evt) {
+                touches = evt.touches;
+                if(isDetecting && evt.touches.length == 3) {
+                   threecount += 1;
+                  document.getElementById("content").innerHTML = "threecount:"+threecount+"isDetecting:"+isDetecting;
 
-                if (clickTimer == null) {
+
+
+
+                if (moveTimer == null) {
+                      moveTimer = setTimeout(function () {
+                          moveTimer = null;
+                          // alert("single");
+                            isDetecting = false;
+                     previous_touches = evt.touches;
+                  // alert('a:'+JSON.stringify(previous_touches))
+                    update(previous_touches)
+                    yA = centerY;
+                    yB = centerY;
+                    drawScreen()
+                      }, 200)
+                  } else {
+                      clearTimeout(moveTimer);
+                      moveTimer = null;
+                      isDetecting = true;
+                      // alert("double"+ evt.touches.length);                  
+
+                  }  
+                
+                }
+            }
+
+            function handleTouchStart(evt) { 
+                       draw_measure(evt); 
+                var innerTouches = [];                                       
+                if (!isDetecting) {
+                innerTouches = myfilter(evt);
+                } 
+                else {
+                innerTouches = evt.touches;
+                }
+                xDown = innerTouches[0].clientX;                                      
+                yDown = innerTouches[0].clientY;
+        // only area bellow measure need double touch
+        if ( yDown >= previous_Y_bound) {
+              if (clickTimer == null) {
                     clickTimer = setTimeout(function () {
                         clickTimer = null;
                         // alert("single");
@@ -274,31 +324,29 @@ var temp = 0;
                     clearTimeout(clickTimer);
                     clickTimer = null;
                     // alert("double"+ evt.touches.length);
-                    if(evt.touches.length == 1 ) {
+                    if(innerTouches.length == 1 ) {
                       var e = document.getElementById('resultDiv');
                       e.style.display = 'block';
                     }
 
-                }                                  
+                }
+        }
+
+
+
+
             };                                                
 
             function handleTouchMove(evt) {
               
                 evt.preventDefault();
 
-                touches = evt.touches;
-                if(touches.length == 3) {
-                  previous_touches = touches
-                  yA = centerY;
-                  yB = centerY;
-                  update(touches)
-                  drawScreen()
-                }
+                draw_measure(evt);
+
                if(evt.touches.length == 1 ) {
                 var e = document.getElementById('resultDiv');
                 e.style.display = 'none';
               }
-
                 // document.getElementById("content").innerHTML = 'len:'+touches.length + '|'+xDown +'|'+ yDown;
                 // alert('in handleTouchMove')
                 if ( ! xDown || ! yDown ) {
@@ -310,7 +358,6 @@ var temp = 0;
 
                 var xDiff = xDown - xUp;
                 var yDiff = yDown - yUp;
-                document.getElementById("content").innerHTML = "xDiff:" + xDiff+" yDiff:"+yDiff;
 
                 if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
                     if ( xDiff > 0 ) {
@@ -322,13 +369,13 @@ var temp = 0;
                     if ( yDiff > 0 ) {
                         /* up swipe */ 
                         temp += 1
-                        document.getElementById("content").innerHTML = "move:" + temp;
+                        document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
                         moveTop();
 
                     } else { 
                         /* down swipe */
                         temp -= 1
-                        document.getElementById("content").innerHTML = "move:" + temp;
+                        document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
                         moveDown();
 
                     }                                                                 
@@ -337,5 +384,14 @@ var temp = 0;
                 xDown = null;
                 yDown = null;                                             
             };
- 
 
+function saveMeasure() {
+    isDetecting = true;
+
+     update(previous_touches);
+    yA = centerY;
+    yB = centerY;
+   drawScreen();
+    temp = 0;
+  alert('保存数据成功！')
+}

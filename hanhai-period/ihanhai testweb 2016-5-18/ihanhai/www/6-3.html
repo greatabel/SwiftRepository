@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
-body { margin: 0px; overflow: hidden; }
-/*canvas { border: 1px solid yellow; }*/
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/memeo_measure.css" rel="stylesheet">
 </style>
+
     <script src="6-3.js"></script>
 <!--  
 http://eloquentjavascript.net/16_canvas.html
@@ -19,8 +20,17 @@ http://eloquentjavascript.net/16_canvas.html
 
 <canvas id="canvas" width="300" height="500" style="top:0px; left:0px; width: 300px; height: 500px;"></canvas>
 
-移动幅度：<input type='button' id='resultDiv' value='保存视力数据' style="display: none;" onClick="saveMeasure()"/>
-<div id="content">content here</div>
+移动幅度：
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+<button id='resultDiv' type="button" class="btn btn-primary btn-md btn-block" style="display: none;" onClick="saveMeasure()" >保存视力数据</button>
+<div id="content" style="height:20px;width:100px;">content here</div>
+
+<img id="left_img"  src="images/left.png"   style="display: none;" />
+<img id="right_img" src="images/right.png" style="display: none;" />
+<br/>
+<br/>
+test
+<br/>
 
 
 
