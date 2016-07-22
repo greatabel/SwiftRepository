@@ -9,7 +9,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/memeo_measure.css" rel="stylesheet">
+    <link href="../static/css/meomo_measure.css" rel="stylesheet">
     <style type="text/css">
      .notActive{
     color: #3276b1;
@@ -75,21 +75,31 @@
   
 
 
-<canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; border: 1px solid #ff3366;"></canvas>
+<canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; "></canvas>
+<!-- <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; border: 1px solid #ff3366;"></canvas> -->
 
 <div id="showArea" style="display: none;"> 
+<!-- <div id="showArea" >  -->
 
-<div id="content"></div>
+<div id="content" style="display: none;"></div>
+
+
+<div class="btn custom">
+    <small>测量值:</small> <strong><span id="measureResult"></span></strong>
+</div>
 
 <div id="radioBtn" class="btn-group">
   <button class="btn btn-primary  notActive" id="radioL"    onClick="L()" ontouchstart="touchStart_L(event);" >左眼</button>
   <button class="btn btn-primary  notActive" id="radioR"  onClick="R()"   ontouchstart="touchStart_R(event);" >右眼</button>
 </div>
 
-<div class="options btn-group" style="margin-left: 125px;">
+<div class="options btn-group" style="margin-left: 20px;">
 <button id='saveButton' type="button" class="btn btn-success" onClick="saveMeasure()" ontouchstart="touchStart_saveButton(event);">保存</button>
 <button id='cancelButton' type="button" class="btn btn-info" onClick="cancelMeasure()" ontouchstart="touchStart_cancelButton(event);" style="margin-left: 5px;">取消</button>
 </div>
+
+<div id = "alert_placeholder"></div>
+
 
 </div>
 <!-- <img id="myimg" src="{{ url_for('static', filename = '/images/ships.png') }}" style="display: none;" /> -->
@@ -101,8 +111,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
   </body>
 </html>

@@ -1,5 +1,7 @@
+var api_url = "http://139.224.73.50"
+// api_url = "http://127.0.0.1:5000"
 
-$.getJSON('http://139.224.73.50/api/user/0/measures', function(data) {
+$.getJSON(api_url + '/api/user/0/measures', function(data) {
     children = ['梦遥','冬冬']
     //data is the JSON string
     var startcontent =  '<div class="row">' +
@@ -22,11 +24,12 @@ $.getJSON('http://139.224.73.50/api/user/0/measures', function(data) {
 
     var results = $.parseJSON(data);
     console.log(results.length);
+    var count = 0;
     for (var key in results) {
-        if(results[key]["patientid"] == 0 ) 
+        if(results[key]["patientid"] == 0  && count < 10) 
             mycontent +=                 '<tr>'+
                                 '<td class="col-md-3 text-center">'+results[key]["rawdata"] + '</td>' +
-                                '<td class="col-md-3 text-center">'+results[key]["whicheye"] + '</td>' +
+                                '<td class="col-md-3 text-center">'+(results[key]["whicheye"] == 0 ? "左":"右") + '</td>' +
                                 '<td class="col-md-3 text-center">'+ results[key]["createdate"] + '</td></tr>'
     }
 
@@ -35,11 +38,12 @@ $.getJSON('http://139.224.73.50/api/user/0/measures', function(data) {
     mycontent += startcontent.replace('{0}',children[1]);                
             '</div>'
         var results = $.parseJSON(data);
+        count = 0;
     for (var key in results) {
-        if(results[key]["patientid"] == 1 ) 
+        if(results[key]["patientid"] == 1 && count < 10) 
             mycontent +=                 '<tr>'+
                                 '<td class="col-md-3 text-center">'+results[key]["rawdata"] + '</td>' +
-                                '<td class="col-md-3 text-center">'+results[key]["whicheye"] + '</td>' +
+                                '<td class="col-md-3 text-center">'+(results[key]["whicheye"] == 0 ? "左":"右") + '</td>' +
                                 '<td class="col-md-3 text-center">'+ results[key]["createdate"] + '</td></tr>'
     }
     mycontent +=    endcontent.replace('{0}','右眼视力比较稳定') ;

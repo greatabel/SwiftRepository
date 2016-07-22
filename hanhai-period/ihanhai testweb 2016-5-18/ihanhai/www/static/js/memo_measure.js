@@ -1,3 +1,5 @@
+var api_url = "http://139.224.73.50"
+// api_url = "http://127.0.0.1:5000"
 
 var canvas;
 var ctx;
@@ -35,8 +37,9 @@ var centerY = 0;
   // var imagepath = '{{ url_for('static', filename = '/images/ships.png') }}';
   // document.getElementById("test").innerHTML = "test:" + imagepath;
   // tileSheet.src= imagepath;
+var whicheye = -1;
+var temp = 0;
 
-   
 
 
   function drawScreen() {
@@ -94,7 +97,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 150;
+    h = nh - 140;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -255,6 +258,13 @@ function ol() {
    tileSheetL = document.getElementById('left_img');
    tileSheetR = document.getElementById('right_img');
   update(touches);
+
+  if(whicheye < 0) {
+  $('#saveButton').prop('disabled', true);
+  }
+  // temp = Math.floor((Math.random() * 100) + 1);
+  //  document.getElementById("measureResult").innerHTML = temp;
+
   // timer = setInterval(update, 200);
   // var timer1 = setInterval(drawScreen, 200);
 
@@ -273,7 +283,7 @@ function ol() {
 };
 
 //------------------------
-var temp = 0;
+
 function myfilter(evt) {
   var filteredTouches = [];
 
@@ -404,13 +414,15 @@ function myfilter(evt) {
                     if ( yDiff > 0 ) {
                         /* up swipe */ 
                         temp += 1
-                        document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
+                        // document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
+                        document.getElementById("measureResult").innerHTML = temp;
                         moveTop();
 
                     } else { 
                         /* down swipe */
                         temp -= 1
-                        document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
+                        // document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
+                        document.getElementById("measureResult").innerHTML = temp;
                         moveDown();
 
                     }                                                                 
@@ -429,25 +441,34 @@ function getUrlVars() {
     return vars;
   }
 
+var bootstrap_alert = function() {}
+bootstrap_alert.warning = function(message) {
+        $('#alert_placeholder').html('<div class="alert alert-info" role="alert"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+        }
+
 function saveMeasure() {
     isDetecting = true;
 
-     update(previous_touches);
+    update(previous_touches);
     yA = centerY;
     yB = centerY;
    drawScreen();
-    temp = 0;
+   
+    
   var patientid= getUrlVars()["patientid"];
-  document.getElementById("content").innerHTML= patientid +"保存成功！"
-//   $.ajax({
-//   url: 'http://139.224.73.50/api/user/0/measures',
-//   type: 'POST',
-//   data: { patientid: patientid, rawdata:'100', whicheye:'1' }
-// });
+  // document.getElementById("content").innerHTML= patientid +"保存成功！"
 
-$.post( "http://127.0.0.1:5000/api/user/0/measures", { patientid: patientid, rawdata:'100', whicheye:'1' })
+
+
+$.post( api_url + "/api/user/0/measures", { patientid: patientid, rawdata:temp, whicheye: whicheye })
   .done(function( data ) {
-    alert( "Data Loaded: " + data );
+
+    if(data == 201) {
+      // document.getElementById("content").innerHTML= patientid +"保存成功！"
+  bootstrap_alert.warning('保存成功！');
+  whicheye = -1;
+   temp = 0;
+    }
   });
 
 }
@@ -455,7 +476,9 @@ $.post( "http://127.0.0.1:5000/api/user/0/measures", { patientid: patientid, raw
 function cancelMeasure() {
     // isDetecting = true;
 
-    document.getElementById("content").innerHTML= "取消成功！"
+    // document.getElementById("content").innerHTML= "取消成功！"
+      // document.getElementById("content").innerHTML= patientid +"保存成功！"
+     bootstrap_alert.warning('取消成功！');
   
 }
 
@@ -481,15 +504,18 @@ function setRadio(radioId, classvalue) {
     var radio = document.getElementById(radioId);
     radio.setAttribute("class", classvalue);
     radio.setAttribute("className", classvalue);
+    $('#saveButton').prop('disabled', false);
 }
 function L() {
     setRadio("radioL", "btn btn-primary");
     setRadio("radioR", "btn btn-primary notActive");
+    whicheye = 0;
 }
 
 function R(){
     setRadio("radioR", "btn btn-primary");
     setRadio("radioL", "btn btn-primary notActive");
+    whicheye = 1;
 
 }
 
