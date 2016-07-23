@@ -97,7 +97,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 140;
+    h = nh - 200;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -507,14 +507,14 @@ function setRadio(radioId, classvalue) {
     $('#saveButton').prop('disabled', false);
 }
 function L() {
-    setRadio("radioL", "btn btn-primary");
-    setRadio("radioR", "btn btn-primary notActive");
+    setRadio("radioL", "btn btn-primary btn-sm");
+    setRadio("radioR", "btn btn-primary btn-sm notActive");
     whicheye = 0;
 }
 
 function R(){
-    setRadio("radioR", "btn btn-primary");
-    setRadio("radioL", "btn btn-primary notActive");
+    setRadio("radioR", "btn btn-primary btn-sm");
+    setRadio("radioL", "btn btn-primary btn-sm notActive");
     whicheye = 1;
 
 }

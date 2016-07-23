@@ -15,6 +15,24 @@
     color: #3276b1;
     background-color: #fff;
 }
+
+div.row { 
+  border: 1px solid;
+  border-bottom: 0px;
+}
+
+div.col-xs-2 { 
+  border: 1px solid;
+  border-bottom: 0px;
+}
+div.col-xs-4 { 
+  border: 1px solid;
+  border-bottom: 0px;
+}
+.container div.row:last-child {
+  border-bottom: 1px solid;
+}
+
     </style>
 
     <script src="../static/js/memo_measure.js"></script>
@@ -78,30 +96,38 @@
 <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; "></canvas>
 <!-- <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; border: 1px solid #ff3366;"></canvas> -->
 
-<div id="showArea" style="display: none;"> 
-<!-- <div id="showArea" >  -->
+
+<!-- <div class="container" id="showArea" style="display: none;"> -->
+<div class="container" id="showArea">
 
 <div id="content" style="display: none;"></div>
 
+<div class="row">
 
-<div class="btn custom">
-    <small>测量值:</small> <strong><span id="measureResult"></span></strong>
+    <div class="alert alert-info col-xs-12 text-center" role="alert" >
+     <small>测量值:</small> <strong><span id="measureResult">320</span></strong>
+    </div>
 </div>
 
-<div id="radioBtn" class="btn-group">
-  <button class="btn btn-primary  notActive" id="radioL"    onClick="L()" ontouchstart="touchStart_L(event);" >左眼</button>
-  <button class="btn btn-primary  notActive" id="radioR"  onClick="R()"   ontouchstart="touchStart_R(event);" >右眼</button>
+<div class="row">
+  <div class="col-xs-4">
+    <button id='cancelButton' type="button" class="btn btn-info btn-lg pull-right" onClick="cancelMeasure()" ontouchstart="touchStart_cancelButton(event);" >取消</button>
+  </div>
+  <div class="col-xs-2 text-center" style="margin-top:10px;">
+    <button class="btn btn-primary btn-sm notActive center-block" id="radioL"    onClick="L()" ontouchstart="touchStart_L(event);" >左眼</button>
+  </div>
+  <div class="col-xs-2 text-center" style="margin-top:10px;">
+    <button class="btn btn-primary  btn-sm notActive center-block"  id="radioR"  onClick="R()"   ontouchstart="touchStart_R(event);"  >右眼</button>
+  </div>
+    <div class="col-xs-4" >
+    <button id='saveButton' type="button" class="btn btn-success btn-lg pull-left" onClick="saveMeasure()" ontouchstart="touchStart_saveButton(event);">保存</button>
+  </div>
 </div>
 
-<div class="options btn-group" style="margin-left: 20px;">
-<button id='saveButton' type="button" class="btn btn-success" onClick="saveMeasure()" ontouchstart="touchStart_saveButton(event);">保存</button>
-<button id='cancelButton' type="button" class="btn btn-info" onClick="cancelMeasure()" ontouchstart="touchStart_cancelButton(event);" style="margin-left: 5px;">取消</button>
-</div>
-
-<div id = "alert_placeholder"></div>
 
 
 </div>
+
 <!-- <img id="myimg" src="{{ url_for('static', filename = '/images/ships.png') }}" style="display: none;" /> -->
 <img id="left_img" src="../static/images/left.png"   style="display: none;" />
 <img id="right_img" src="../static/images/right.png" style="display: none;" />
