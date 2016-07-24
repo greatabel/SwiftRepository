@@ -415,14 +415,14 @@ function myfilter(evt) {
                         /* up swipe */ 
                         temp += 1
                         // document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
-                        document.getElementById("measureResult").innerHTML = temp;
+                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+temp +'</strong>';
                         moveTop();
 
                     } else { 
                         /* down swipe */
                         temp -= 1
                         // document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
-                        document.getElementById("measureResult").innerHTML = temp;
+                        document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+temp +'</strong>';
                         moveDown();
 
                     }                                                                 
@@ -441,10 +441,10 @@ function getUrlVars() {
     return vars;
   }
 
-var bootstrap_alert = function() {}
-bootstrap_alert.warning = function(message) {
-        $('#alert_placeholder').html('<div class="alert alert-info" role="alert"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
-        }
+// var bootstrap_alert = function() {}
+// bootstrap_alert.warning = function(message) {
+//         $('#alert_placeholder').html('<div class="alert alert-info" role="alert"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+//         }
 
 function saveMeasure() {
     isDetecting = true;
@@ -465,7 +465,8 @@ $.post( api_url + "/api/user/0/measures", { patientid: patientid, rawdata:temp, 
 
     if(data == 201) {
       // document.getElementById("content").innerHTML= patientid +"保存成功！"
-  bootstrap_alert.warning('保存成功！');
+  // bootstrap_alert.warning('保存成功！');
+    document.getElementById("measureResult").innerHTML = '保存成功！';
   whicheye = -1;
    temp = 0;
     }
@@ -478,7 +479,8 @@ function cancelMeasure() {
 
     // document.getElementById("content").innerHTML= "取消成功！"
       // document.getElementById("content").innerHTML= patientid +"保存成功！"
-     bootstrap_alert.warning('取消成功！');
+     // bootstrap_alert.warning('取消成功！');
+         document.getElementById("measureResult").innerHTML = '取消成功！';
   
 }
 

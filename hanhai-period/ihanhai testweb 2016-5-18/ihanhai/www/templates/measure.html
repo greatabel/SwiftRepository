@@ -16,7 +16,7 @@
     background-color: #fff;
 }
 
-div.row { 
+/*div.row { 
   border: 1px solid;
   border-bottom: 0px;
 }
@@ -31,8 +31,12 @@ div.col-xs-4 {
 }
 .container div.row:last-child {
   border-bottom: 1px solid;
-}
+}*/
 
+.centered
+{
+    text-align:center;
+}
     </style>
 
     <script src="../static/js/memo_measure.js"></script>
@@ -97,15 +101,15 @@ div.col-xs-4 {
 <!-- <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; border: 1px solid #ff3366;"></canvas> -->
 
 
-<!-- <div class="container" id="showArea" style="display: none;"> -->
-<div class="container" id="showArea">
+<div class="container" id="showArea" style="display: none;">
+<!-- <div class="container" id="showArea"> -->
 
 <div id="content" style="display: none;"></div>
 
 <div class="row">
 
     <div class="alert alert-info col-xs-12 text-center" role="alert" >
-     <small>测量值:</small> <strong><span id="measureResult">320</span></strong>
+     <span id="measureResult"><small>测量值:</small> <strong>320</strong> </span>
     </div>
 </div>
 
@@ -113,11 +117,11 @@ div.col-xs-4 {
   <div class="col-xs-4">
     <button id='cancelButton' type="button" class="btn btn-info btn-lg pull-right" onClick="cancelMeasure()" ontouchstart="touchStart_cancelButton(event);" >取消</button>
   </div>
-  <div class="col-xs-2 text-center" style="margin-top:10px;">
-    <button class="btn btn-primary btn-sm notActive center-block" id="radioL"    onClick="L()" ontouchstart="touchStart_L(event);" >左眼</button>
+  <div class="col-xs-2 centered" style="margin-top:10px;">
+    <button class="btn btn-primary btn-sm notActive pull-right" id="radioL"    onClick="L()" ontouchstart="touchStart_L(event);" >左眼</button>
   </div>
-  <div class="col-xs-2 text-center" style="margin-top:10px;">
-    <button class="btn btn-primary  btn-sm notActive center-block"  id="radioR"  onClick="R()"   ontouchstart="touchStart_R(event);"  >右眼</button>
+  <div class="col-xs-2 centered" style="margin-top:10px;">
+    <button class="btn btn-primary  btn-sm notActive pull-left"  id="radioR"  onClick="R()"   ontouchstart="touchStart_R(event);"  >右眼</button>
   </div>
     <div class="col-xs-4" >
     <button id='saveButton' type="button" class="btn btn-success btn-lg pull-left" onClick="saveMeasure()" ontouchstart="touchStart_saveButton(event);">保存</button>
