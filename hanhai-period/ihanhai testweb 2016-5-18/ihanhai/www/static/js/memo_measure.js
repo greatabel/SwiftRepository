@@ -39,7 +39,8 @@ var centerY = 0;
   // tileSheet.src= imagepath;
 var whicheye = -1;
 var temp = 0;
-
+var sightValue = 0;
+var myPPI = 0;
 
 
   function drawScreen() {
@@ -51,8 +52,8 @@ var temp = 0;
 
    
       // context.drawImage(tileSheet, 0, 0,32,32,50,50,32,32);
-    ctx.drawImage(tileSheetL, centerX-26, yA - 50);
-    ctx.drawImage(tileSheetR, centerX+3, yB);
+    ctx.drawImage(tileSheetL, centerX-27, yA - 25);
+    ctx.drawImage(tileSheetR, centerX+2, yB - 25);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX-64,centerY-64,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX+32,centerY+32,32,32);
          counter++;
@@ -69,7 +70,7 @@ var temp = 0;
 
 // fix : when 2 points on canvas then click savebutton , it will draw wrong picture
 function isAppropriateThreePoint(touches) {
-  var limit = 10;
+  var limit = 50;
   var flag = true;
   if (touches.length == 3) {
     x1 = touches[0].pageX 
@@ -97,7 +98,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 200;
+    h = nh - 125;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -180,6 +181,9 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 
     var r =   Math.sqrt(3) * (a + b + c) / 9;
+
+    
+    myPPI = r * window.devicePixelRatio * 25.4/ 19;
     previous_Y_bound = centerY + r + 10;
 
     // draw center 
@@ -295,7 +299,17 @@ function myfilter(evt) {
   return filteredTouches;
 }
 
-
+function circulateMeasure(p) {
+    var returnValue = p * 25400 / myPPI;
+    returnValue = 403 + 1.513 * returnValue;
+    var floatingPointPart = (returnValue/25) % 1;
+    var integerPart = Math.floor(returnValue/25);
+    if(floatingPointPart >= 0.5){
+      integerPart += 1;
+    }
+    returnValue = 25 * integerPart;
+    return returnValue;
+}
 
   
             document.addEventListener('touchstart', handleTouchStart, false);        
@@ -388,18 +402,24 @@ function myfilter(evt) {
 
                 draw_measure(evt);
 
-               if(evt.touches.length == 1 ) {
-                var e = document.getElementById('showArea');
-                e.style.display = 'none';
-              }
+                var innerTouches = [];                                       
+                if (!isDetecting) {
+                innerTouches = myfilter(evt);
+                } 
+                else {
+                innerTouches = evt.touches;
+                }
+
+
+
                 // document.getElementById("content").innerHTML = 'len:'+touches.length + '|'+xDown +'|'+ yDown;
                 // alert('in handleTouchMove')
                 if ( ! xDown || ! yDown ) {
                     return;
                 }
 
-                var xUp = evt.touches[0].clientX;                                    
-                var yUp = evt.touches[0].clientY;
+                var xUp = innerTouches[0].clientX;                                    
+                var yUp = innerTouches[0].clientY;
 
                 var xDiff = xDown - xUp;
                 var yDiff = yDown - yUp;
@@ -411,18 +431,44 @@ function myfilter(evt) {
                         /* right swipe */
                     }                       
                 } else {
+
+                     if(innerTouches.length == 1 && ( yUp >= previous_Y_bound) && (Math.abs( yDiff ) > 1) ) {
+                      var e = document.getElementById('showArea');
+                      e.style.display = 'none';
+                    }
+
+                    if (navigator.userAgent.indexOf('iPhone')) {
+                          switch(window.devicePixelRatio)
+                          {
+                            case 1:
+                              break;
+                            case 2:
+                              myPPI = 326;
+                              break;
+                            case 3:
+                              myPPI = 401;
+                              break;
+                          }
+                        }
+                        
+
                     if ( yDiff > 0 ) {
                         /* up swipe */ 
-                        temp += 1
-                        // document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
-                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+temp +'</strong>';
+                        temp += 1                    
+                        sightValue = circulateMeasure(temp);
+
+                        // document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>'+"#ppi:"+myPPI+":"+temp;
+                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>';
+
                         moveTop();
 
                     } else { 
                         /* down swipe */
                         temp -= 1
-                        // document.getElementById("content").innerHTML = "move:" + temp + 'radio:' + window.devicePixelRatio;
-                        document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+temp +'</strong>';
+                       sightValue = circulateMeasure(temp);
+
+                        // document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>'+"#ppi:"+myPPI+":"+temp;
+                        document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>';
                         moveDown();
 
                     }                                                                 
@@ -447,12 +493,7 @@ function getUrlVars() {
 //         }
 
 function saveMeasure() {
-    isDetecting = true;
 
-    update(previous_touches);
-    yA = centerY;
-    yB = centerY;
-   drawScreen();
    
     
   var patientid= getUrlVars()["patientid"];
@@ -460,18 +501,32 @@ function saveMeasure() {
 
 
 
-$.post( api_url + "/api/user/0/measures", { patientid: patientid, rawdata:temp, whicheye: whicheye })
+$.post( api_url + "/api/user/0/measures", { patientid: patientid, rawdata:sightValue, whicheye: whicheye })
   .done(function( data ) {
-
+    reset();
     if(data == 201) {
       // document.getElementById("content").innerHTML= patientid +"保存成功！"
   // bootstrap_alert.warning('保存成功！');
     document.getElementById("measureResult").innerHTML = '保存成功！';
-  whicheye = -1;
-   temp = 0;
+
     }
   });
 
+}
+function reset() {
+    isDetecting = true;
+
+    update(previous_touches);
+    yA = centerY;
+    yB = centerY;
+   drawScreen();
+     whicheye = -1;
+   temp = 0;
+   setRadio("radioR", "btn btn-primary btn-sm pull-left notActive");
+   setRadio("radioL", "btn btn-primary btn-sm pull-right notActive");
+     if(whicheye < 0) {
+  $('#saveButton').prop('disabled', true);
+  }
 }
 
 function cancelMeasure() {
@@ -480,6 +535,7 @@ function cancelMeasure() {
     // document.getElementById("content").innerHTML= "取消成功！"
       // document.getElementById("content").innerHTML= patientid +"保存成功！"
      // bootstrap_alert.warning('取消成功！');
+    reset();
          document.getElementById("measureResult").innerHTML = '取消成功！';
   
 }
@@ -509,14 +565,14 @@ function setRadio(radioId, classvalue) {
     $('#saveButton').prop('disabled', false);
 }
 function L() {
-    setRadio("radioL", "btn btn-primary btn-sm");
-    setRadio("radioR", "btn btn-primary btn-sm notActive");
+    setRadio("radioL", "btn btn-primary btn-sm pull-right");
+    setRadio("radioR", "btn btn-primary btn-sm pull-left notActive");
     whicheye = 0;
 }
 
 function R(){
-    setRadio("radioR", "btn btn-primary btn-sm");
-    setRadio("radioL", "btn btn-primary btn-sm notActive");
+    setRadio("radioR", "btn btn-primary btn-sm pull-left");
+    setRadio("radioL", "btn btn-primary btn-sm pull-right notActive");
     whicheye = 1;
 
 }
