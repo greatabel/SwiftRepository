@@ -434,7 +434,7 @@ function circulateMeasure(p) {
 
                      if(innerTouches.length == 1 && ( yUp >= previous_Y_bound) && (Math.abs( yDiff ) > 1) ) {
                       var e = document.getElementById('showArea');
-                      e.style.display = 'none';
+                      // e.style.display = 'none';
                     }
 
                     if (navigator.userAgent.indexOf('iPhone')) {
@@ -458,7 +458,7 @@ function circulateMeasure(p) {
                         sightValue = circulateMeasure(temp);
 
                         // document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>'+"#ppi:"+myPPI+":"+temp;
-                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>';
+                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' +window.devicePixelRatio;
 
                         moveTop();
 
