@@ -48,12 +48,29 @@ var myPPI = 0;
       // x = x + dx;
      //draw a background so we can wee the Canvas edges
                
-       
+       // tileSheetL = document.getElementById('left_img');
 
-   
+   var myElementL = document.querySelector("#div_left_img");
+   // myElement.style.backgroundColor = "#D93600";
+   myElementL.style.top = (yA - 25 ) +"px";
+   myElementL.style.left = (centerX - 25) + "px";
+   myElementL.style.display = 'block';
+   var myElementR = document.querySelector("#div_right_img");
+   // myElementR.style.backgroundColor = "#D93600";
+   myElementR.style.top = (yB - 25 ) +"px";
+   myElementR.style.left = (centerX +2) + "px";
+   myElementR.style.display = 'block';
+
+
+
+
+    // myElement.style.top = yA - 25;
+
       // context.drawImage(tileSheet, 0, 0,32,32,50,50,32,32);
-    ctx.drawImage(tileSheetL, centerX-27, yA - 25);
-    ctx.drawImage(tileSheetR, centerX+2, yB - 25);
+
+    // ctx.drawImage(tileSheetL, centerX-25, yA - 25);
+    // ctx.drawImage(tileSheetR, centerX+2, yB - 25);
+
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX-64,centerY-64,32,32);
     // // ctx.drawImage(tileSheet, 0, 0,32,32,centerX+32,centerY+32,32,32);
          counter++;
@@ -98,7 +115,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 125;
+    h = nh - 235;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -228,11 +245,12 @@ var cx = document.querySelector("canvas").getContext("2d");
 
     
    function moveTop(){ 
-      if (temp % 2 === 0) {
-         yA = yA + 1;
-      } else {
-        yB = yB - 1;
-      }
+      // if (temp % 2 === 0) {
+      //    yA = yA + 1;
+      // } else {
+      //   yB = yB - 1;
+      // }
+      $("left_img").addClass("retina3-border-scalee");
       // x = x + 2;
       update(previous_touches);
       drawScreen();
@@ -456,6 +474,7 @@ function circulateMeasure(p) {
                         /* up swipe */ 
                         temp += 1                    
                         sightValue = circulateMeasure(temp);
+
 
                         // document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>'+"#ppi:"+myPPI+":"+temp;
                         document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' +window.devicePixelRatio;

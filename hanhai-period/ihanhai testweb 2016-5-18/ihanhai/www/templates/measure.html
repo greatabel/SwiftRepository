@@ -53,6 +53,54 @@ div.col-xs-4 {
   top: 0;
   pointer-events: none;
 }
+
+.retina2-border-scale {
+  position: relative;
+}
+.retina2-border-scale:before {
+  content: '';
+  border: 1px solid black;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.retina3-border-scale {
+  /*position: relative;*/
+
+
+  border: 1px solid red;
+ 
+}
+
+#picture {
+    position: relative;
+}
+
+
+.blob, .blob1, .blob2 {
+    position: absolute;
+  /*  width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: green;
+    border: 2px solid #ccc;*/
+}
+
+.blob1 {
+    top: 130px;
+    left: 90px;
+}
+
+.blob2 {
+    top: 130px;
+    left: 340px;
+}
     </style>
 
     <script src="../static/js/memo_measure.js"></script>
@@ -112,17 +160,31 @@ div.col-xs-4 {
 
   
 
-
+<div id="picture">
 <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; "></canvas>
+
+
+<div  id="div_left_img" style="display: none;" class="blob">
+<img id="left_img" src="../static/images/left.png"    />
+</div>
+<div id="div_right_img" class="blob">
+<img id="right_img" src="../static/images/right.png"  />
+</div>
+
+</div>
 <!-- <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; border: 1px solid #ff3366;"></canvas> -->
-<div class="retina-border-scale">test</div>
+<!-- <div class="retina3-border-scale">  
+</div>
+
+<div class="retina-border-scale"> test 
+</div> -->
 
 <!-- <div class="container" id="showArea" style="display: none;"> -->
 <!-- <div class="container" id="showArea" style="border: 0.5px solid black;"> -->
 <div class="container " id="showArea" >
 <!-- <div class="container" id="showArea"> -->
 
-<div id="content" style="display: none;"></div>
+<div id="content" style="display: none;" ></div>
 
 <div class="row">
 
@@ -151,8 +213,11 @@ div.col-xs-4 {
 </div>
 
 <!-- <img id="myimg" src="{{ url_for('static', filename = '/images/ships.png') }}" style="display: none;" /> -->
-<img id="left_img" src="../static/images/left.png"   style="display: none;" />
-<img id="right_img" src="../static/images/right.png" style="display: none;" />
+<!-- <div  class="retina-border-scale">
+<img id="left_img" src="../static/images/left.png"    />
+
+<img id="right_img" src="../static/images/right.png"  />
+</div> -->
 
         
 
