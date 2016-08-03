@@ -26,11 +26,15 @@ $.getJSON(api_url + '/api/user/0/measures', function(data) {
     console.log(results.length);
     var count = 0;
     for (var key in results) {
-        if(results[key]["patientid"] == 0  && count < 10) 
+        if(results[key]["patientid"] == 0  && count < 10) {
+
+
+            count += 1
             mycontent +=                 '<tr>'+
                                 '<td class="col-md-3 text-center">'+results[key]["rawdata"] + '</td>' +
                                 '<td class="col-md-3 text-center">'+(results[key]["whicheye"] == 0 ? "左":"右") + '</td>' +
                                 '<td class="col-md-3 text-center">'+ results[key]["createdate"] + '</td></tr>'
+                                        }
     }
 
     mycontent +=    endcontent.replace('{0}','左眼视力比较稳定');
@@ -40,11 +44,13 @@ $.getJSON(api_url + '/api/user/0/measures', function(data) {
         var results = $.parseJSON(data);
         count = 0;
     for (var key in results) {
-        if(results[key]["patientid"] == 1 && count < 10) 
+        if(results[key]["patientid"] == 1 && count < 10) {
+            count += 1
             mycontent +=                 '<tr>'+
                                 '<td class="col-md-3 text-center">'+results[key]["rawdata"] + '</td>' +
                                 '<td class="col-md-3 text-center">'+(results[key]["whicheye"] == 0 ? "左":"右") + '</td>' +
                                 '<td class="col-md-3 text-center">'+ results[key]["createdate"] + '</td></tr>'
+                            }
     }
     mycontent +=    endcontent.replace('{0}','右眼视力比较稳定') ;
 

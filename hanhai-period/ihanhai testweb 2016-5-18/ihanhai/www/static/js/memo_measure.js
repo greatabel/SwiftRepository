@@ -58,12 +58,12 @@ var stepPx = 0;
 
 
    // myElement.style.backgroundColor = "#D93600";
-   myElementL.style.top = (yA - 25 ) +"px";
-   myElementL.style.left = (centerX - 25) + "px";
+   myElementL.style.top = (yA - 50 ) +"px";
+   myElementL.style.left = (centerX - 50) + "px";
    myElementL.style.display = 'block';
 
    // myElementR.style.backgroundColor = "#D93600";
-   myElementR.style.top = (yB - 25 ) +"px";
+   myElementR.style.top = (yB - 50 ) +"px";
    myElementR.style.left = (centerX +2) + "px";
    myElementR.style.display = 'block';
 
@@ -331,8 +331,10 @@ function myfilter(evt) {
 }
 
 function circulateMeasure(p) {
-    var returnValue = p * 25400 / myPPI;
-    returnValue = 403 + 1.513 * returnValue;
+    // var returnValue = p * 25400 / myPPI;
+    // returnValue = 403 + 1.513 * returnValue;
+    var returnValue = 225 + 25 * p;
+
     var floatingPointPart = (returnValue/25) % 1;
     var integerPart = Math.floor(returnValue/25);
     if(floatingPointPart >= 0.5){
@@ -495,8 +497,9 @@ function circulateMeasure(p) {
                         sightValue = circulateMeasure(temp);
 
 
-                        // document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>'+"#ppi:"+myPPI+":"+temp;
-                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' +window.devicePixelRatio;
+
+                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
+                        +window.devicePixelRatio+":"+temp;
 
                         moveTop();
 
@@ -505,8 +508,9 @@ function circulateMeasure(p) {
                         temp -= 1
                        sightValue = circulateMeasure(temp);
 
-                        // document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>'+"#ppi:"+myPPI+":"+temp;
-                        document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>';
+
+                        document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
+                        +window.devicePixelRatio+":"+temp;
                         moveDown();
 
                     }                                                                 
@@ -525,10 +529,7 @@ function getUrlVars() {
     return vars;
   }
 
-// var bootstrap_alert = function() {}
-// bootstrap_alert.warning = function(message) {
-//         $('#alert_placeholder').html('<div class="alert alert-info" role="alert"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
-//         }
+
 
 function saveMeasure() {
 
