@@ -31,8 +31,9 @@ var centerY = 0;
 
     var counter=0;
   // var tileSheet=new Image();
-  var tileSheetL = document.getElementById('left_img');
-  var tileSheetR = document.getElementById('right_img');
+  // var tileSheetL = document.getElementById('left_img');
+  // var tileSheetR = document.getElementById('right_img');
+
   // tileSheet.addEventListener('load', eventSheetLoaded , false);
   // var imagepath = '{{ url_for('static', filename = '/images/ships.png') }}';
   // document.getElementById("test").innerHTML = "test:" + imagepath;
@@ -42,6 +43,11 @@ var temp = 0;
 var sightValue = 0;
 var myPPI = 0;
 
+var myElementL = document.querySelector("#div_left_img");
+var myElementR = document.querySelector("#div_right_img");
+// for 1/3 pixel , 1/3 pixel
+var counterTurn = 0;
+var stepPx = 0;
 
   function drawScreen() {
       // y = y + dy;
@@ -50,12 +56,12 @@ var myPPI = 0;
                
        // tileSheetL = document.getElementById('left_img');
 
-   var myElementL = document.querySelector("#div_left_img");
+
    // myElement.style.backgroundColor = "#D93600";
    myElementL.style.top = (yA - 25 ) +"px";
    myElementL.style.left = (centerX - 25) + "px";
    myElementL.style.display = 'block';
-   var myElementR = document.querySelector("#div_right_img");
+
    // myElementR.style.backgroundColor = "#D93600";
    myElementR.style.top = (yB - 25 ) +"px";
    myElementR.style.left = (centerX +2) + "px";
@@ -115,7 +121,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 235;
+    h = nh - 125;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -245,12 +251,14 @@ var cx = document.querySelector("canvas").getContext("2d");
 
     
    function moveTop(){ 
-      // if (temp % 2 === 0) {
-      //    yA = yA + 1;
-      // } else {
-      //   yB = yB - 1;
-      // }
-      $("left_img").addClass("retina3-border-scalee");
+
+      if (temp % 2 === 0) {
+         yA = yA + stepPx;  
+      } else {
+         yB = yB - stepPx;
+      }
+
+
       // x = x + 2;
       update(previous_touches);
       drawScreen();
@@ -260,15 +268,15 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 function moveDown(){
       if (temp % 2 === 0) {
-          yA = yA - 1;
+          yA = yA - stepPx;
       } else {
-          yB = yB + 1;
+          yB = yB + stepPx;
       }
           // x = x + 2;
      update(previous_touches);
      drawScreen();
 
-      window.setTimeout(drawScreen, 200);
+    window.setTimeout(drawScreen, 200);
 }
 
 
@@ -277,8 +285,13 @@ function ol() {
   ctx = canvas.getContext('2d');
        // tileSheet=new Image();
        //   tileSheet.src="ships.png";
-   tileSheetL = document.getElementById('left_img');
-   tileSheetR = document.getElementById('right_img');
+   // tileSheetL = document.getElementById('left_img');
+   // tileSheetR = document.getElementById('right_img');
+
+    myElementL = document.querySelector("#div_left_img");
+    myElementR = document.querySelector("#div_right_img");
+    counterTurn = window.devicePixelRatio;
+
   update(touches);
 
   if(whicheye < 0) {
@@ -452,19 +465,25 @@ function circulateMeasure(p) {
 
                      if(innerTouches.length == 1 && ( yUp >= previous_Y_bound) && (Math.abs( yDiff ) > 1) ) {
                       var e = document.getElementById('showArea');
-                      // e.style.display = 'none';
+                      e.style.display = 'none';
                     }
 
                     if (navigator.userAgent.indexOf('iPhone')) {
                           switch(window.devicePixelRatio)
                           {
                             case 1:
+                              stepPx = 1;
                               break;
                             case 2:
                               myPPI = 326;
+                              stepPx = 0.5;
                               break;
                             case 3:
                               myPPI = 401;
+                              stepPx = 0.3333333;
+                              break;
+                            case 4:
+                              stepPx = 0.25;
                               break;
                           }
                         }
@@ -534,7 +553,7 @@ $.post( api_url + "/api/user/0/measures", { patientid: patientid, rawdata:sightV
 }
 function reset() {
     isDetecting = true;
-
+      myElementL.classList.remove("retina-border-scale");
     update(previous_touches);
     yA = centerY;
     yB = centerY;
@@ -545,6 +564,7 @@ function reset() {
    setRadio("radioL", "btn btn-primary btn-sm pull-right notActive");
      if(whicheye < 0) {
   $('#saveButton').prop('disabled', true);
+
   }
 }
 

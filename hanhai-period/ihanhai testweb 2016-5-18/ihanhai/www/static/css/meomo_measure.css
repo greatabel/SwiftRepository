@@ -103,3 +103,105 @@
    border: 1px solid #888;
    border-radius:3px;
 }
+
+     .notActive{
+    color: #3276b1;
+    background-color: #fff;
+}
+
+/*div.row { 
+  border: 1px solid;
+  border-bottom: 0px;
+}
+
+div.col-xs-2 { 
+  border: 1px solid;
+  border-bottom: 0px;
+}
+div.col-xs-4 { 
+  border: 1px solid;
+  border-bottom: 0px;
+}
+.container div.row:last-child {
+  border-bottom: 1px solid;
+}*/
+
+.centered
+{
+    text-align:center;
+}
+
+/*.retina1_3-border-scale {
+  position: relative;
+}
+.retina1_3-border-scale:before {
+  content: '';
+  border: 1px solid black;
+  transform: scale(0.333333);
+  transform-origin: 0 0;
+  width: 300%;
+  height: 300%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.retina2_3-border-scale {
+  position: relative;
+}
+.retina2_3-border-scale:before {
+  content: '';
+  border: 1px solid black;
+  transform: scale(0.66666);
+  transform-origin: 0 0;
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+
+.retina1_2-border-scale {
+  position: relative;
+}
+.retina1_2-border-scale:before {
+  content: '';
+  border: 1px solid black;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+*/
+
+
+#outerContainer {
+    position: relative;
+}
+
+
+.blob, .blob1, .blob2 {
+    position: absolute;
+  /*  width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: green;
+    border: 2px solid #ccc;*/
+}
+
+/*.blob1 {
+    top: 130px;
+    left: 90px;
+}
+
+.blob2 {
+    top: 130px;
+    left: 340px;
+}*/

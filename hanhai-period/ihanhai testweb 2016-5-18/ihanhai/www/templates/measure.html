@@ -11,96 +11,7 @@
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/meomo_measure.css" rel="stylesheet">
     <style type="text/css">
-     .notActive{
-    color: #3276b1;
-    background-color: #fff;
-}
 
-/*div.row { 
-  border: 1px solid;
-  border-bottom: 0px;
-}
-
-div.col-xs-2 { 
-  border: 1px solid;
-  border-bottom: 0px;
-}
-div.col-xs-4 { 
-  border: 1px solid;
-  border-bottom: 0px;
-}
-.container div.row:last-child {
-  border-bottom: 1px solid;
-}*/
-
-.centered
-{
-    text-align:center;
-}
-
-.retina-border-scale {
-  position: relative;
-}
-.retina-border-scale:before {
-  content: '';
-  border: 1px solid black;
-  transform: scale(0.333333);
-  transform-origin: 0 0;
-  width: 300%;
-  height: 300%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-}
-
-.retina2-border-scale {
-  position: relative;
-}
-.retina2-border-scale:before {
-  content: '';
-  border: 1px solid black;
-  transform: scale(0.5);
-  transform-origin: 0 0;
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-}
-
-.retina3-border-scale {
-  /*position: relative;*/
-
-
-  border: 1px solid red;
- 
-}
-
-#picture {
-    position: relative;
-}
-
-
-.blob, .blob1, .blob2 {
-    position: absolute;
-  /*  width: 30px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: green;
-    border: 2px solid #ccc;*/
-}
-
-.blob1 {
-    top: 130px;
-    left: 90px;
-}
-
-.blob2 {
-    top: 130px;
-    left: 340px;
-}
     </style>
 
     <script src="../static/js/memo_measure.js"></script>
@@ -160,14 +71,14 @@ div.col-xs-4 {
 
   
 
-<div id="picture">
+<div id="outerContainer">
 <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; "></canvas>
 
 
 <div  id="div_left_img" style="display: none;" class="blob">
 <img id="left_img" src="../static/images/left.png"    />
 </div>
-<div id="div_right_img" class="blob">
+<div id="div_right_img" style="display: none;" class="blob">
 <img id="right_img" src="../static/images/right.png"  />
 </div>
 
@@ -179,9 +90,9 @@ div.col-xs-4 {
 <div class="retina-border-scale"> test 
 </div> -->
 
-<!-- <div class="container" id="showArea" style="display: none;"> -->
+<div class="container" id="showArea" style="display: none;">
 <!-- <div class="container" id="showArea" style="border: 0.5px solid black;"> -->
-<div class="container " id="showArea" >
+<!-- <div class="container " id="showArea" > -->
 <!-- <div class="container" id="showArea"> -->
 
 <div id="content" style="display: none;" ></div>
