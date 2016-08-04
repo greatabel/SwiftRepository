@@ -23,7 +23,8 @@ var centerY = 0;
     // var y=50;
     var yA = 0;
     var yB = 0;
-
+    var floatingPointPartA = 0;
+    var floatingPointPartB = 0;
     var dx=0;
     var dy=-1;
      var theCanvas ;
@@ -58,6 +59,8 @@ var stepPx = 0;
 
 
    // myElement.style.backgroundColor = "#D93600";
+   // var border = document.querySelector("#1_3border");
+   // myElementL.prepend(border);
    myElementL.style.top = (yA - 50 ) +"px";
    myElementL.style.left = (centerX - 50) + "px";
    myElementL.style.display = 'block';
@@ -93,7 +96,7 @@ var stepPx = 0;
 
 // fix : when 2 points on canvas then click savebutton , it will draw wrong picture
 function isAppropriateThreePoint(touches) {
-  var limit = 50;
+  var limit = 10;
   var flag = true;
   if (touches.length == 3) {
     x1 = touches[0].pageX 
@@ -121,7 +124,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 125;
+    h = nh - 225;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -204,8 +207,6 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 
     var r =   Math.sqrt(3) * (a + b + c) / 9;
-
-    
     myPPI = r * window.devicePixelRatio * 25.4/ 19;
     previous_Y_bound = centerY + r + 10;
 
@@ -248,7 +249,16 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 }
 
+function changeImage(side, step) {
 
+         var imgDiv = document.getElementById(side+'_img');
+       
+         var imagepath = '../static/images/pig/'+(side+step)+'.png';
+         // alert(imagepath)
+        imgDiv.src= imagepath;
+       
+  
+}
     
    function moveTop(){ 
 
@@ -257,6 +267,48 @@ var cx = document.querySelector("canvas").getContext("2d");
       } else {
          yB = yB - stepPx;
       }
+      floatingPointPartA = yA % 1;
+      floatingPointPartB = yB % 1;
+      document.getElementById("content").innerHTML = floatingPointPartA +'#'+ yA;
+       if (navigator.userAgent.toLowerCase().indexOf('Android') == -1) {
+
+          // alert(floatingPointPartA+':# '+floatingPointPartB)
+         switch(window.devicePixelRatio){
+          case 2:
+            if(floatingPointPartA == 0.5)
+            {
+              changeImage('left','-1');
+            } else if(floatingPointPartA == 0){
+             changeImage('left','');
+            }
+            if(floatingPointPartB == 0.5)
+            {
+              changeImage('right','1');
+            }else if(floatingPointPartB == 0){
+             changeImage('right','');
+            }
+            break;
+          case 3:
+            if( (floatingPointPartA >= 0.3) && (floatingPointPartA <= 0.4 ))
+            {
+              changeImage('left','-1');
+              
+            } else if((floatingPointPartA >= 0.6) && (floatingPointPartA <= 0.9) ){
+              changeImage('left','-2');              
+            } else if (floatingPointPartA < 0.3) {
+              changeImage('left','');
+            }
+            
+           if( (floatingPointPartB >= 0.3) && (floatingPointPartB <= 0.6))
+            {
+              changeImage('right','1');
+            } else if( (floatingPointPartB >= 0.6) && (floatingPointPartB <= 0.9)){
+              changeImage('right','2');              
+            }
+            break;
+
+         }
+       }
 
 
       // x = x + 2;
@@ -272,6 +324,40 @@ function moveDown(){
       } else {
           yB = yB + stepPx;
       }
+       if (navigator.userAgent.toLowerCase().indexOf('Android') > -1) {
+
+        var floatingPointPartA = yA % 1;
+        var floatingPointPartB = yB % 1;
+       switch(window.devicePixelRatio){
+        case 2:
+          if(floatingPointPartA == 0.5)
+          {
+            changeImage('left','1');
+          }
+          if(floatingPointPartB == 0.5)
+          {
+            changeImage('right','-1');
+          }
+          break;
+        case 3:
+          if(floatingPointPartA >= 0.3 && floatingPointPartA <= 0.6)
+          {
+            changeImage('left','2');
+          } else if(floatingPointPartA >= 0.6 && floatingPointPartA <= 0.9){
+
+            changeImage('left','1');              
+          }
+          
+         if(floatingPointPartB >= 0.6 && floatingPointPartB <= 0.9)
+          {
+            changeImage('right','-2');
+          } else if(floatingPointPartB >= 0.3 && floatingPointPartB <= 0.6){
+            changeImage('right','-1');              
+          }
+          break;
+
+       }
+       }
           // x = x + 2;
      update(previous_touches);
      drawScreen();
@@ -333,7 +419,7 @@ function myfilter(evt) {
 function circulateMeasure(p) {
     // var returnValue = p * 25400 / myPPI;
     // returnValue = 403 + 1.513 * returnValue;
-    var returnValue = 225 + 25 * p;
+    var returnValue = 196 + 21.5 * p * 401 / myPPI;
 
     var floatingPointPart = (returnValue/25) % 1;
     var integerPart = Math.floor(returnValue/25);
@@ -362,7 +448,7 @@ function circulateMeasure(p) {
                    {
 
                    
-                  document.getElementById("content").innerHTML = "threecount:"+threecount+"isDetecting:"+isDetecting;
+                  // document.getElementById("content").innerHTML = "threecount:"+threecount+"isDetecting:"+isDetecting;
 
 
 
@@ -467,10 +553,11 @@ function circulateMeasure(p) {
 
                      if(innerTouches.length == 1 && ( yUp >= previous_Y_bound) && (Math.abs( yDiff ) > 1) ) {
                       var e = document.getElementById('showArea');
-                      e.style.display = 'none';
+                      // e.style.display = 'none';
                     }
+                    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                    if (iOS) {
 
-                    if (navigator.userAgent.indexOf('iPhone')) {
                           switch(window.devicePixelRatio)
                           {
                             case 1:
@@ -482,7 +569,7 @@ function circulateMeasure(p) {
                               break;
                             case 3:
                               myPPI = 401;
-                              stepPx = 0.3333333;
+                              stepPx = 0.3333334;
                               break;
                             case 4:
                               stepPx = 0.25;
@@ -497,21 +584,21 @@ function circulateMeasure(p) {
                         sightValue = circulateMeasure(temp);
 
 
-
-                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
-                        +window.devicePixelRatio+":"+temp;
-
                         moveTop();
+                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
+                        +window.devicePixelRatio+":"+temp + "#"+yA +"@"+yB;
+
+
 
                     } else { 
                         /* down swipe */
                         temp -= 1
                        sightValue = circulateMeasure(temp);
 
-
+                        moveDown();
                         document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
                         +window.devicePixelRatio+":"+temp;
-                        moveDown();
+
 
                     }                                                                 
                 }
@@ -576,8 +663,8 @@ function cancelMeasure() {
       // document.getElementById("content").innerHTML= patientid +"保存成功！"
      // bootstrap_alert.warning('取消成功！');
     reset();
-         document.getElementById("measureResult").innerHTML = '取消成功！';
-  
+    document.getElementById("measureResult").innerHTML = '取消成功！';
+
 }
 
 // for fix bug : when multi-touch on screen ,the button is not received select/touch event

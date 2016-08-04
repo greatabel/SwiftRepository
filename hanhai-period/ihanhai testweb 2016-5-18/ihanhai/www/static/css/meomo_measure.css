@@ -131,22 +131,23 @@ div.col-xs-4 {
     text-align:center;
 }
 
-/*.retina1_3-border-scale {
+.retina1_3-border-scale {
   position: relative;
 }
 .retina1_3-border-scale:before {
   content: '';
-  border: 1px solid black;
-  transform: scale(0.333333);
+  border: 2px solid black;
+  transform: scale(10);
   transform-origin: 0 0;
-  width: 300%;
-  height: 300%;
+  width: 10%;
+  height: 10%;
   position: absolute;
   left: 0;
   top: 0;
   pointer-events: none;
 }
 
+/*
 .retina2_3-border-scale {
   position: relative;
 }
