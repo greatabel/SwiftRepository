@@ -10,9 +10,154 @@
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/meomo_measure.css" rel="stylesheet">
-    <style type="text/css">
+<style>
+.left0{
+    position: absolute;
+    background: url(../static/images/pig/left.png);
+    background-position: 0px -200px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+.left-1{
+    position: absolute;
+    background: url(../static/images/pig/left.png);
+    background-position: 0px -101px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
 
-    </style>
+.left1{
+    position: absolute;
+    background: url(../static/images/pig/left.png);
+    background-position: 0px -300px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+
+.right0{
+    position: absolute;
+    background: url(../static/images/pig/right.png);
+    background-position: 0px -200px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right-1{
+    position: absolute;
+    background: url(../static/images/pig/right.png);
+    background-position: 0px -101px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right1{
+    position: absolute;
+    background: url(../static/images/pig/right.png);
+    background-position: 0px -300px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+
+.left3x0{
+    position: absolute;
+    background: url(../static/images/pig/left3x.png);
+    background-position: 0px -200px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.left3x-1{
+    position: absolute;
+    background: url(../static/images/pig/left3x.png);
+    background-position: 0px -100px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.left3x-2{
+    position: absolute;
+    background: url(../static/images/pig/left3x.png);
+    background-position: 0px -1px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.left3x1{
+    position: absolute;
+    background: url(../static/images/pig/left3x.png);
+    background-position: 0px -300px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.left3x2{
+    position: absolute;
+    background: url(../static/images/pig/left3x.png);
+    background-position: 0px -399px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right3x0{
+    position: absolute;
+    background: url(../static/images/pig/right3x.png);
+    background-position: 0px -200px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right3x-1{
+    position: absolute;
+    background: url(../static/images/pig/right3x.png);
+    background-position: 0px -100px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right3x-2{
+    position: absolute;
+    background: url(../static/images/pig/right3x.png);
+    background-position: 0px -1px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right3x1{
+    position: absolute;
+    background: url(../static/images/pig/right3x.png);
+    background-position: 0px -300px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+.right3x2{
+    position: absolute;
+    background: url(../static/images/pig/right3x.png);
+    background-position: 0px -399px;
+    background-size: 100%;
+    width: 50px;
+    height: 100px;
+}
+
+
+</style>
 
     <script src="../static/js/memo_measure.js"></script>
 
@@ -75,11 +220,12 @@
 <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px; "></canvas>
 
 
-<div  id="div_left_img" style="display: none;" class="blob">
-<img id="left_img" src="../static/images/pig/left.png"    />
+<div  id="div_left_img"  style="display: none;" class="left0">
+<!-- <div  id="div_left_img" style="display: none;"  class="left0"> -->
+<!-- <img id="left_img" src="../static/images/pig/left.png"    /> -->
 </div>
-<div id="div_right_img" style="display: none;" class="blob">
-<img id="right_img" src="../static/images/pig/right.png"  />
+<div id="div_right_img" style="display: none;" class="right0">
+<!-- <img id="right_img" src="../static/images/pig/right.png"  /> -->
 </div>
 
 </div>
@@ -96,7 +242,10 @@
 <!-- <div class="container" id="showArea"> -->
 
 <!-- <div id="content" style="display: none;" ></div> -->
-<!-- <div id="content"  ></div> -->
+<div id="content"  ></div>
+<div id="contentE"  ></div>
+<div id="content1"  ></div>
+
 <div class="row">
 
     <div class="alert alert-info col-xs-12 text-center" role="alert" >

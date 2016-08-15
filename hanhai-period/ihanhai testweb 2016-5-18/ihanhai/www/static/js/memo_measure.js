@@ -62,12 +62,12 @@ var stepPx = 0;
    // var border = document.querySelector("#1_3border");
    // myElementL.prepend(border);
    myElementL.style.top = (yA - 50 ) +"px";
-   myElementL.style.left = (centerX - 50) + "px";
+   myElementL.style.left = (centerX - 51) + "px";
    myElementL.style.display = 'block';
 
    // myElementR.style.backgroundColor = "#D93600";
    myElementR.style.top = (yB - 50 ) +"px";
-   myElementR.style.left = (centerX +2) + "px";
+   myElementR.style.left = (centerX + 1) + "px";
    myElementR.style.display = 'block';
 
 
@@ -124,7 +124,7 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 225;
+    h = nh - 125;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -132,6 +132,19 @@ function update(touches) {
   }
   
   ctx.clearRect(0, 0, w, h);
+
+  // draw introducting line ,height is at 250, begin from 5 ,to end-5
+  ctx.beginPath();
+  ctx.moveTo(5, 180);
+  ctx.lineTo(w-5, 180);
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = "rgba(0, 0, 255, 1)";
+  ctx.stroke();
+  ctx.lineWidth = 1;
+  ctx.arc(w/2, 180, 115, 0, 2*Math.PI, true);
+  ctx.fillStyle = "rgba(255,255,0,0.3)";
+  ctx.fill();
+
   var i, len = touches.length;
   if (len > 3) {
     len = 3;
@@ -142,8 +155,8 @@ function update(touches) {
 
 
 
-var cx = document.querySelector("canvas").getContext("2d");
-  cx.beginPath();
+// var cx = document.querySelector("canvas").getContext("2d");
+//   cx.beginPath();
  centerX = 0;
  centerY = 0;
 
@@ -156,10 +169,10 @@ var cx = document.querySelector("canvas").getContext("2d");
    centerX += touch.pageX;
    centerY += touch.pageY;
   
-    cx.moveTo(px, py);
+    ctx.moveTo(px, py);
 
     if (i+1 < len) {
-      cx.lineTo(touches[i+1].pageX, touches[i+1].pageY);
+      ctx.lineTo(touches[i+1].pageX, touches[i+1].pageY);
 
     }
 
@@ -183,13 +196,13 @@ var cx = document.querySelector("canvas").getContext("2d");
   }
 
     if (len > 0) {
-      // cx.moveTo(touches[0].pageX, touches[0].pageY);
-      cx.lineTo(touches[0].pageX, touches[0].pageY);
+      // ctx.moveTo(touches[0].pageX, touches[0].pageY);
+      ctx.lineTo(touches[0].pageX, touches[0].pageY);
       centerX = centerX/3;
       centerY = centerY/3;
     }
-    cx.strokeStyle = "rgba(255, 0, 0, 1)";
-    cx.stroke();
+    ctx.strokeStyle = "rgba(255, 0, 0, 1)";
+    ctx.stroke();
 
     
 
@@ -207,16 +220,21 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 
     var r =   Math.sqrt(3) * (a + b + c) / 9;
-    myPPI = r * window.devicePixelRatio * 25.4/ 19;
+
+    // 16 is 32/2 is device 32 mm
+    myPPI = r * window.devicePixelRatio * 25.4/ 16;
     previous_Y_bound = centerY + r + 10;
 
-    // draw center 
-    ctx.fillRect(centerX, centerY, 2,2);
+    // // draw center 
+    ctx.fillRect(centerX, centerY, 1,1);
 
     ctx.beginPath();
     ctx.arc(centerX, centerY, r, 0, 2*Math.PI, true);
-    ctx.fillStyle = "rgba(255,255,255, 0.9)";
+    ctx.fillStyle = "rgba(255,255,255, 0)";
     ctx.fill();
+
+    ctx.fillRect(centerX, centerY, 1,1);
+    
     ctx.lineWidth = 2.0;
     ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
     ctx.stroke();
@@ -226,6 +244,11 @@ var cx = document.querySelector("canvas").getContext("2d");
      if (  yA > centerY + r || yA < centerY - r || yB > centerY + r || yB < centerY - r) {
       yA = centerY;
       yB = centerY;
+    // if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+    //       yA = Math.floor(yA);
+    //       yB = Math.floor(yB);
+    //   }
+
      }
 
 
@@ -251,17 +274,26 @@ var cx = document.querySelector("canvas").getContext("2d");
 
 function changeImage(side, step) {
 
-         var imgDiv = document.getElementById(side+'_img');
+         
+      if(side == "left" || side == "left3x") {
+        myElementL.setAttribute("class", side+step);
+        myElementL.setAttribute("className", side+step);
+      } else if(side == "right" || side == "right3x"){
+
+        myElementR.setAttribute("class", side+step);
+        myElementR.setAttribute("className", side+step);
+      }
        
-         var imagepath = '../static/images/pig/'+(side+step)+'.png';
-         // alert(imagepath)
-        imgDiv.src= imagepath;
        
+        //  var imagepath = '../static/images/pig/'+(side+step)+'.png';
+        //  // alert(imagepath)
+        // imgDiv.src= imagepath;
+      
   
 }
     
    function moveTop(){ 
-
+      // document.getElementById("content").innerHTML = floatingPointPartA +'#ya:'+ yA+"#yb:"+yB;
       if (temp % 2 === 0) {
          yA = yA + stepPx;  
       } else {
@@ -269,52 +301,96 @@ function changeImage(side, step) {
       }
       floatingPointPartA = yA % 1;
       floatingPointPartB = yB % 1;
-      
-       if (navigator.userAgent.toLowerCase().indexOf('Android') > -1) {
-document.getElementById("content").innerHTML = floatingPointPartA +'#'+ yA;
+      var compensationA = false;
+      var compensationB = false;
+
+       if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+
           // alert(floatingPointPartA+':# '+floatingPointPartB)
-         switch(stepPx){
+         switch(window.devicePixelRatio){
           case 2:
-            if(floatingPointPartA == 0.5)
-            {
-              changeImage('left','-1');
-            } else if(floatingPointPartA == 0){
-             changeImage('left','');
-            }
-            if(floatingPointPartB == 0.5)
-            {
-              changeImage('right','1');
-            }else if(floatingPointPartB == 0){
-             changeImage('right','');
+            if (temp % 2 === 0) {
+                if(floatingPointPartA == 0.5)
+                {
+                  changeImage('left','-1');
+                  // yA = yA - 2*stepPx;
+                } else if(floatingPointPartA == 0){
+                 
+                // var element = document.getElementById('div_left_img');
+                // element.style.visibility = 'hidden';   
+                 changeImage('left','0');
+                  // yA = yA + 4*stepPx;
+                  // compensationA = true;
+                }
+            } else {
+                if(floatingPointPartB == 0.5)
+                {
+                  changeImage('right','1');
+                   // yB = yB + 2*stepPx;
+                }else if(floatingPointPartB == 0){
+
+                 changeImage('right','0');
+                  // yB = yB - 2*stepPx;
+
+                  // compensationB = true;
+
+                }
             }
             break;
           case 3:
-            if( (floatingPointPartA >= 0.3) && (floatingPointPartA <= 0.4 ))
-            {
-              changeImage('left','-1');
-              
-            } else if((floatingPointPartA >= 0.6) && (floatingPointPartA <= 0.9) ){
-              changeImage('left','-2');              
-            } else if (floatingPointPartA < 0.3) {
-              changeImage('left','');
-            }
+            if (temp % 2 === 0) {
+              if( (floatingPointPartA >= 0.3) && (floatingPointPartA <= 0.4 ))
+              {
+                changeImage('left3x','-1');
+                
+              } else if((floatingPointPartA >= 0.6) && (floatingPointPartA <= 0.9) ){
+                changeImage('left3x','-2');              
+              } else if (floatingPointPartA < 0.3) {
+                changeImage('left3x','0');
+              }
+            }else {
             
-           if( (floatingPointPartB >= 0.3) && (floatingPointPartB <= 0.6))
-            {
-              changeImage('right','1');
-            } else if( (floatingPointPartB >= 0.6) && (floatingPointPartB <= 0.9)){
-              changeImage('right','2');              
-            }
-            break;
+             if( (floatingPointPartB >= 0.6) && (floatingPointPartB <= 0.9))
+              {
+                changeImage('right3x','1');
+              } else if( (floatingPointPartB >= 0.3) && (floatingPointPartB <= 0.4)){
+                changeImage('right3x','2');              
+              }else if (floatingPointPartB > 0.9) {
+                changeImage('right3x','0');
+              }
+          }
+          break;
 
          }
-       }
+         
+       } 
 
 
       // x = x + 2;
       update(previous_touches);
       drawScreen();
-      window.setTimeout(drawScreen, 200);
+
+  //     if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+  //     if (compensationA) {
+  //       document.getElementById("content1").innerHTML = 'compensationA';
+  //        yA = yA - 6*stepPx;
+  //        compensationA = false;
+  //        // window.setTimeout(function() {
+  //        //    var element1 = document.getElementById('div_left_img');                
+  //        //    // element1.style.visibility = 'visible';     
+  //        // }, 250);
+  //     }
+  //     if(compensationB) {
+  //       document.getElementById("content1").innerHTML = 'compensationB';
+  //         yB = yB + 6*stepPx;
+  //         compensationB = false;
+  //     }
+
+  // }
+        // document.getElementById("contentE").innerHTML = floatingPointPartA +'#ya:'+ yA+"#yb:"+yB+"ppi:"+ myPPI;
+
+
+      // window.setTimeout(drawScreen, 200);
 
 };
 
@@ -324,87 +400,130 @@ function moveDown(){
       } else {
           yB = yB + stepPx;
       }
-       if (navigator.userAgent.toLowerCase().indexOf('Android') > -1) {
+       if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
 
         var floatingPointPartA = yA % 1;
         var floatingPointPartB = yB % 1;
        switch(window.devicePixelRatio){
         case 2:
-          if(floatingPointPartA == 0.5)
-          {
-            changeImage('left','1');
-          }
-          if(floatingPointPartB == 0.5)
-          {
-            changeImage('right','-1');
+            if (temp % 2 === 0) {
+                if(floatingPointPartA == 0.5)
+                {
+                  changeImage('left','1');
+                  // yA = yA - 2*stepPx;
+                } else if(floatingPointPartA == 0){
+                 
+                // var element = document.getElementById('div_left_img');
+                // element.style.visibility = 'hidden';   
+                 changeImage('left','0');
+                  // yA = yA + 4*stepPx;
+                  // compensationA = true;
+                }
+            } else {
+                if(floatingPointPartB == 0.5)
+                {
+                  changeImage('right','-1');
+                   // yB = yB + 2*stepPx;
+                }else if(floatingPointPartB == 0){
+
+                 changeImage('right','0');
+                  // yB = yB - 2*stepPx;
+
+                  // compensationB = true;
+
+                }
+            }
+          break;
+        
+          case 3:
+            if (temp % 2 === 0) {
+              if( (floatingPointPartA >= 0.6) && (floatingPointPartA <= 0.9 ))
+              {
+                changeImage('left3x','1');
+                
+              } else if((floatingPointPartA >= 0.3) && (floatingPointPartA <= 0.4) ){
+                changeImage('left3x','2');              
+              } else if (floatingPointPartA > 0.9) {
+                changeImage('left3x','0');
+              }
+            }else {
+            
+             if( (floatingPointPartB >= 0.3) && (floatingPointPartB <= 0.4))
+              {
+                changeImage('right3x','-1');
+              } else if( (floatingPointPartB >= 0.6) && (floatingPointPartB <= 0.9)){
+                changeImage('right3x','-2');              
+              }else if (floatingPointPartB < 0.3) {
+                changeImage('right3x','0');
+              }
           }
           break;
-        case 3:
-          if(floatingPointPartA >= 0.3 && floatingPointPartA <= 0.6)
-          {
-            changeImage('left','2');
-          } else if(floatingPointPartA >= 0.6 && floatingPointPartA <= 0.9){
 
-            changeImage('left','1');              
-          }
-          
-         if(floatingPointPartB >= 0.6 && floatingPointPartB <= 0.9)
-          {
-            changeImage('right','-2');
-          } else if(floatingPointPartB >= 0.3 && floatingPointPartB <= 0.6){
-            changeImage('right','-1');              
-          }
-          break;
-
-           }
-       }
+        }
+      }
           // x = x + 2;
      update(previous_touches);
      drawScreen();
+      // document.getElementById("contentE").innerHTML = "ppi:"+ myPPI;
 
-    window.setTimeout(drawScreen, 200);
+    // window.setTimeout(drawScreen, 200);
 }
 
 function get_ppi() {
-    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if (iOS) {
+    // var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    // if (iOS) {
 
-          switch(window.devicePixelRatio)
+    //       switch(window.devicePixelRatio)
+    //       {
+    //         case 1:
+    //           stepPx = 1;
+    //           break;
+    //         case 2:
+    //           // myPPI = 326;
+    //           stepPx = 0.5;
+    //           break;
+    //         case 3:
+    //           // myPPI = 461;
+    //           stepPx = 0.3333334;
+    //           break;
+    //         case 4:
+    //           stepPx = 0.25;
+    //           break;
+    //       }
+    // }
+    // if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+    //       switch(window.devicePixelRatio)
+    //       {
+    //         case 1:
+    //           stepPx = 1;
+    //           break;
+    //         case 2:
+    //           stepPx = 0.5;
+    //           break;
+    //         case 3:
+    //           stepPx = 0.3333334;
+    //           break;
+    //         case 4:
+    //           stepPx = 0.25;
+    //           break;
+    //       }
+
+    // }
+    switch(window.devicePixelRatio)
           {
             case 1:
               stepPx = 1;
               break;
             case 2:
-              myPPI = 326;
               stepPx = 0.5;
               break;
             case 3:
-              myPPI = 401;
               stepPx = 0.3333334;
               break;
             case 4:
               stepPx = 0.25;
               break;
           }
-    }
-    if (navigator.userAgent.toLowerCase().indexOf('Android') > -1) {
-          switch(window.devicePixelRatio)
-          {
-            case 1:
-              stepPx = 1;
-              break;
-            case 2:
-              stepPx = 0.5;
-              break;
-            case 3:
-              stepPx = 0.3333334;
-              break;
-            case 4:
-              stepPx = 0.25;
-              break;
-          }
-
-    }
 }
 
 function ol() {
@@ -462,7 +581,7 @@ function myfilter(evt) {
 function circulateMeasure(p) {
     // var returnValue = p * 25400 / myPPI;
     // returnValue = 403 + 1.513 * returnValue;
-    var returnValue = 196 + 21.5 * p * 401 / myPPI;
+    var returnValue = 165 + 25 * p * 461 / myPPI;
 
     var floatingPointPart = (returnValue/25) % 1;
     var integerPart = Math.floor(returnValue/25);
@@ -500,12 +619,21 @@ function circulateMeasure(p) {
                       moveTimer = setTimeout(function () {
                           moveTimer = null;
                           // alert("single");
-                            isDetecting = false;
+
                      previous_touches = evt.touches;
                   // alert('a:'+JSON.stringify(previous_touches))
                     update(previous_touches)
                     yA = centerY;
                     yB = centerY;
+                    if (navigator.userAgent.toLowerCase().indexOf('android') > -1 && isDetecting) {
+                        yA = Math.floor(yA);
+                        yB = Math.floor(yB);
+                        if(window.devicePixelRatio == 3) {
+                         changeImage('left3x','0');
+                         changeImage('right3x','0');
+                       }
+                    }
+                    isDetecting = false;
                     drawScreen()
                       }, 200)
                   } else {
@@ -594,36 +722,39 @@ function circulateMeasure(p) {
                     }                       
                 } else {
 
-                     if(innerTouches.length == 1 && ( yUp >= previous_Y_bound) && (Math.abs( yDiff ) > 1) ) {
-                      var e = document.getElementById('showArea');
-                      // e.style.display = 'none';
-                    }
-
-                        
-
-                    if ( yDiff > 0 ) {
-                        /* up swipe */ 
-                        temp += 1                    
-                        sightValue = circulateMeasure(temp);
+                  if(   yUp >= previous_Y_bound  ) {
+                      if(innerTouches.length == 1 && (Math.abs( yDiff ) > 1)) {
+                          var e = document.getElementById('showArea');
+                              // e.style.display = 'none';
+                      }
+                      if ( yDiff > 0 ) {
+                          /* up swipe */ 
+                          temp += 1                    
+                          sightValue = circulateMeasure(temp);
 
 
-                        moveTop();
-                        document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
-                        +window.devicePixelRatio+":"+temp + "#ppi:"+myPPI;
+                          moveTop();
+                          document.getElementById("measureResult").innerHTML =  '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
+                          +window.devicePixelRatio+":"+temp + "#yDiff:"+yDiff;
 
 
 
-                    } else { 
-                        /* down swipe */
-                        temp -= 1
-                       sightValue = circulateMeasure(temp);
+                      } else { 
+                          /* down swipe */
+                          temp -= 1
+                         sightValue = circulateMeasure(temp);
 
-                        moveDown();
-                        document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
-                        +window.devicePixelRatio+":"+temp+ "#ppi:"+myPPI;
+                          moveDown();
+                          document.getElementById("measureResult").innerHTML = '<small>测量值:</small> <strong>'+sightValue +'</strong>' 
+                          +window.devicePixelRatio+":"+temp+ "#yDiff:"+yDiff;
 
 
-                    }                                                                 
+                          }
+
+                  
+                    }                       
+
+                                                                 
                 }
                 /* reset values */
                 xDown = null;
@@ -668,6 +799,19 @@ function reset() {
     update(previous_touches);
     yA = centerY;
     yB = centerY;
+    if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
+      yA = Math.floor(yA);
+      yB = Math.floor(yB);
+      if(window.devicePixelRatio == 3) {
+          changeImage('left3x','0');
+          changeImage('right3x','0');
+      }              
+
+                    
+    } else {
+       changeImage('left','0');
+       changeImage('right','0');
+    }
    drawScreen();
      whicheye = -1;
    temp = 0;
@@ -675,6 +819,8 @@ function reset() {
    setRadio("radioL", "btn btn-primary btn-sm pull-right notActive");
      if(whicheye < 0) {
   $('#saveButton').prop('disabled', true);
+
+
 
   }
 }
