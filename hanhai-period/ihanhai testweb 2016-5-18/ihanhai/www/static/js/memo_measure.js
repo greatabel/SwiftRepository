@@ -207,6 +207,11 @@ function update(touches) {
     
 
   if (len > 2) {
+    // notice people outside measure-device is ready
+    ctx.arc(w/2, 180, 160, 0, 2*Math.PI, true);
+    ctx.fillStyle = "rgba(255, 0, 0, 1)";
+    ctx.fill();
+
     x1 = touches[0].pageX 
     y1 = touches[0].pageY 
     x2 = touches[1].pageX 
@@ -230,7 +235,7 @@ function update(touches) {
 
     ctx.beginPath();
     ctx.arc(centerX, centerY, r, 0, 2*Math.PI, true);
-    ctx.fillStyle = "rgba(255,255,255, 0)";
+    ctx.fillStyle = "rgba(0, 0, 0, 1)";
     ctx.fill();
 
     ctx.fillRect(centerX, centerY, 1,1);
