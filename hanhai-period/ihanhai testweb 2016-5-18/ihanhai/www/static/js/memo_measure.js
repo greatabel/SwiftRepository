@@ -125,7 +125,13 @@ function update(touches) {
   if ((w != nw) || (h != nh)) {
     w = nw ;
     // h = nh - 125;
-    h = nh - 150;
+    var bottomHeight = 150;
+     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+     if(iOS && window.devicePixelRatio == 3) {
+      // bottomHeight = 225;
+      bottomHeight = 275;
+     }
+    h = nh - bottomHeight;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;

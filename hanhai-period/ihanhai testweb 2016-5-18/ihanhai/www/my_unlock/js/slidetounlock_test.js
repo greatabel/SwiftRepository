@@ -1,4 +1,5 @@
 $(function() {
+ document.getElementById("content").innerHTML = navigator.userAgent.toLowerCase();
 
     $("#slider").draggable({
         axis: 'x',
@@ -50,3 +51,4 @@ $(function() {
     }, false);
 
 });
+
