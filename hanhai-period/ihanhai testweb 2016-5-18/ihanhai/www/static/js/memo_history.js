@@ -1,5 +1,5 @@
 var api_url = "http://139.224.73.50"
-// api_url = "http://127.0.0.1:5000"
+api_url = "http://127.0.0.1:5000"
 
 $.getJSON(api_url + '/api/user/0/measures', function(data) {
     children = ['梦遥','冬冬']
@@ -21,8 +21,9 @@ $.getJSON(api_url + '/api/user/0/measures', function(data) {
                     '</tbody>'+
                 '</table></div>';
     var mycontent = startcontent.replace('{0}',children[0]);
-
-    var results = $.parseJSON(data);
+    // console.log('data=',data.length,data[0],data[1])
+    // var results = $.parseJSON(data);
+    var results = data;
     console.log(results.length);
     var count = 0;
     for (var key in results) {
@@ -41,7 +42,7 @@ $.getJSON(api_url + '/api/user/0/measures', function(data) {
 
     mycontent += startcontent.replace('{0}',children[1]);                
             '</div>'
-        var results = $.parseJSON(data);
+        // var results = $.parseJSON(data);
         count = 0;
     for (var key in results) {
         if(results[key]["patientid"] == 1 && count < 10) {

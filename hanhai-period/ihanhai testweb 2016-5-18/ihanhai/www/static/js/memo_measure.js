@@ -124,7 +124,8 @@ function update(touches) {
   var nh = window.innerHeight;
   if ((w != nw) || (h != nh)) {
     w = nw ;
-    h = nh - 125;
+    // h = nh - 125;
+    h = nh - 150;
     canvas.style.width = w+'px';
     canvas.style.height = h+'px';
     canvas.width = w;
@@ -679,8 +680,12 @@ function circulateMeasure(p) {
                     clickTimer = null;
                     // alert("double"+ evt.touches.length);
                     if(innerTouches.length == 1 ) {
-                      var e = document.getElementById('showArea');
-                      e.style.display = 'block';
+                      // var show_up_downn = document.getElementById('show_up_down');
+                      // show_up_downn.style.display = 'none';
+                      // var show_double_click = document.getElementById('show_double_click');
+                      // show_double_click.style.display = 'none';
+                      // var e = document.getElementById('showArea');
+                      // e.style.display = 'block';
                     }
 
                 }
@@ -730,7 +735,12 @@ function circulateMeasure(p) {
                   if(   yUp >= previous_Y_bound  ) {
                       if(innerTouches.length == 1 && (Math.abs( yDiff ) > 1)) {
                           var e = document.getElementById('showArea');
-                              // e.style.display = 'none';
+                          e.style.display = 'none';
+                          var show_up_downn = document.getElementById('show_up_down');
+                          show_up_downn.style.display = 'none';
+                          var show_double_click = document.getElementById('show_double_click');
+                          show_double_click.style.display = 'block';
+
                       }
                       if ( yDiff > 0 ) {
                           /* up swipe */ 
@@ -828,6 +838,13 @@ function reset() {
 
 
   }
+
+  var show_double_click = document.getElementById('show_double_click');
+  show_double_click.style.display = 'none';
+  var e = document.getElementById('showArea');
+  e.style.display = 'none';
+  var show_up_downn = document.getElementById('show_up_down');
+  show_up_downn.style.display = 'block';
 }
 
 function cancelMeasure() {
