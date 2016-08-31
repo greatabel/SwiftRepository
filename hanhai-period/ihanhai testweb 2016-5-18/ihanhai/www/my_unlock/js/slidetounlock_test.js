@@ -26,13 +26,18 @@ $(function() {
     // The following credit: http://www.evanblack.com/blog/touch-slide-to-unlock/
     
     $('#slider')[0].addEventListener('touchmove', function(event) {
+
         event.preventDefault();
         var el = event.target;
         var touch = event.touches[0];
         curX = touch.pageX - this.offsetLeft - 73;
+        document.getElementById("content").innerHTML = curX
         console.log('curX=',curX);
-        if(curX <= 0) return;
-        if(curX > 550){
+        // if(curX <= 0) return;
+        if(curX <= -100){
+            $('#well').fadeOut();
+        }
+        if(curX > 100){
             $('#well').fadeOut();
         }
         el.style.webkitTransform = 'translateX(' + curX + 'px)'; 
