@@ -130,6 +130,13 @@ function update(touches) {
      if(iOS && window.devicePixelRatio == 3) {
       // bottomHeight = 225;
       bottomHeight = 275;
+      var show_up_downn = document.getElementById('show_up_down');
+    show_up_downn.style.height =  275 +'px';
+    // show_up_downn.style.width = 550 +'px';
+    var show_double_click = document.getElementById('show_double_click');
+    show_double_click.style.height =  275 +'px';
+    // show_double_click.style.width = 550 +'px';
+
      }
     h = nh - bottomHeight;
     canvas.style.width = w+'px';

@@ -8,16 +8,18 @@ body {
     
 }
 
-#page-wrap { width: 350px; margin: 0 auto; padding-top: 10px; }
+#page-wrap { width: 280px; margin: 0 auto; padding-top: 5px; }
 
 #well {
-    padding: 14px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
+    background-color: DeepSkyBlue;
+    /*
     
     background: -moz-linear-gradient(top, #010101, #181818);
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #010101),color-stop(1, #181818));
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #010101),color-stop(1, #181818));*/
     
     border: 2px solid #454545; 
     overflow: hidden; 
@@ -26,21 +28,23 @@ body {
 }
 
 h6 {
-  background: -moz-linear-gradient(left, #4d4d4d, 0.4, #4d4d4d, 0.5, white, 0.6, #4d4d4d, #4d4d4d); 
+  background-color: black;
+  /*background: -moz-linear-gradient(left, #4d4d4d, 0.4, #4d4d4d, 0.5, white, 0.6, #4d4d4d, #4d4d4d); */
+
 /*  background: -webkit-gradient(linear,left top,right top,
     color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); */
-    
+    /*
   background: -webkit-gradient(linear,left top,right top,
-    color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); 
+    color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); */
   -moz-background-clip: text;
   -webkit-background-clip: text;
   
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   
-  -webkit-animation: slidetounlock 3s infinite;
+  /*-webkit-animation: slidetounlock 3s infinite;*/
   
-  font-size: 25px;
+  font-size: 18px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   
@@ -65,15 +69,15 @@ h6 {
         background-position: 0px 0;
     }
 
-    40% {
-        background-position: -350px 0;
+    45% {
+        background-position: -280px 0;
     }
 
-    60% {
+    55% {
         background-position: 0px 0;
     }
 
     100%{
-        background-position: 350px 0;
+        background-position: 280px 0;
     }
 }
