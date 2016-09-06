@@ -1,0 +1,525 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Spinner</title>
+	<style type="text/css">
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	.red-text {
+		color: #ff3333;
+	}
+	.spinner-layer {
+		position: absolute;
+		border-top: 1px solid #c4c4c4;
+		user-select: none;
+		-webkit-user-select: none;
+		-webkit-transition-property: -webkit-transform;
+		-webkit-transition-duration: 300ms;
+		-webkit-transition-timing-function: ease-out;
+	}
+	.spinner-layer .spinner-title-bar {
+		height: 44px;
+		background-color: #f6f6f6;
+		border-bottom: 1px solid #c4c4c4;
+	}
+	.spinner-layer .spinner-title-bar .title {
+		position: absolute;
+		left: 60px;
+		right: 60px;
+		font-family: sans-serif;
+		height: 44px;
+		line-height: 44px;
+		vertical-align: middle;
+		font-size: 14px;
+		text-align: center;
+		color: #323232;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.spinner-layer .spinner-title-bar .title span {
+		font-size: inherit;
+		font-family: inherit;
+	}
+	.spinner-layer .spinner-title-bar .button {
+		display: inline-block;
+		height: 44px;
+		line-height: 44px;
+		vertical-align: middle;
+		font-size: 16px;
+		font-family: sans-serif;
+		width: 60px;
+		text-align: center;
+		color: #0c60fe;
+	}
+	.spinner-layer .spinner-title-bar .cancel-button {
+		float: left;
+	}
+
+	.spinner-layer .spinner-title-bar .ok-button {
+		float: right;
+	}
+	.spinner-box {
+		float: left;
+		overflow: hidden;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+	.spinner-slot-box {
+		float: left;
+		position: relative;
+		overflow: hidden;
+
+	}
+	.spinner-slot-box .cover {
+		background-color: #f0f0f0;
+		opacity: 0.7;
+		position: absolute;
+		width: 100%;
+	}
+	.spinner-slot-box .cover.up {
+		/*background: -webkit-linear-gradient(top, #e0e0e0, #fff); */
+		border-bottom: 1px solid #d0d0d0;
+	}
+	.spinner-slot-box .cover.down {
+		/*background: -webkit-linear-gradient(top, #fff, #e0e0e0);*/
+		border-top: 1px solid #d0d0d0;
+	}
+	.spinner-slot.ani {
+		-webkit-transition-property: -webkit-transform;
+		/*-webkit-transition-timing-function: ease-out;*/
+	}
+	.spinner-item {
+		height: 35px;
+		line-height: 35px;
+		vertical-align: middle;
+		font-family: Arial;
+		font-size: 18px;
+		padding: 0 10px 0 10px;
+		color: #323232;
+		text-align: right;
+		background-color: #fff;
+	}
+	</style>
+
+	<script type="text/javascript">
+
+	/**
+	 * 模拟 iOS 日期时间选择器的拨轮。但是没有 3D 卷曲效果
+	 * @param {DOMElement} spinnerLayerElement 具有 .spinner-layer 类的一个 DIV 元素
+	 * @param {Array} slots               拨轮中的数据，数组对象。其中每个元素为一个对象，包括 2 个属性：width 和 data。
+	 *                                    其中，width 为字符串表示的宽度百分比，例如：'30%'。不知道这样设定会不会出现浮点误差。
+	 *                                    如果出现了浮点误差，再来修改这里的代码。data 属性为一个数组，数组中的元素又是对象，
+	 *                                    包括 value 和 label 2 个属性，分别表示项目的值和在列表中显示的文本。
+	 *                                    假定是一个选择年和月的拨轮，这里传入的 slots 参数可能是：
+	 *                                    [
+	 *                                    {width: '50%', data: [{value: 0, label: '一月'}, {value: 1, label: '二月'}]}, 
+	 *                                    {width: '50%', data: [{value: 1, label: '1日'}, {value: 2, label: '2日'}]}
+	 *                                    ]
+	 *                                    
+	 * @param {function} cancelCallback      用户点击‘取消’按钮时候的回调函数。
+	 *                                       调用发生时，this 为 window， 
+	 *                                       传入 1 个参数：spinnerObj，表示哪个 MISpinner 对象发生的事件。可以留空
+	 * @param {function} okCallback          用户点击‘确定’按钮时候的回调函数。
+	 *                                       调用发生时，this 为 window， 
+	 *                                       传入 1 个参数：spinnerObj，表示哪个 MISpinner 对象发生的事件。可以留空
+	 * @param {function} valueChangeCallback 用户拨动拨轮导致当前选中的值发生变化的时候的回调函数。
+	 *                                       调用发生时，this 为 window，
+	 *                                       传入 1 个参数：spinnerObj，表示哪个 MISpinner 对象发生的事件；
+	 * @param {object} options             扩展属性。目前仅接受一个参数 selectedIndex，数组，表示初始化的时候设置为选中项的下标。
+	 *                                     请在传入之前，控制好下标的越界问题，确保要设置的下标是相对于 slots 里面的数据来说，是有效的范围。
+	 *                                     这里的代码中没有处理越界的情况。
+	 */
+	function MISpinner(spinnerLayerElement, slots, cancelCallback, okCallback, valueChangeCallback, options) {
+		this.cancelCallback = cancelCallback;
+		this.okCallback = okCallback;
+		this.valueChangeCallback = valueChangeCallback;
+
+		var opt = {
+			itemHeight: 35,
+			itemSize: 5
+		};
+		if (options && options.selectedIndexes) {
+			this.selectedIndexes = options.selectedIndexes;
+		} else {
+			this.selectedIndexes = [];
+			for (var i = 0; i < slots.length; i++) {
+				this.selectedIndexes.push(0);
+			}
+		}
+
+		this.option = opt;
+		this.layerElement = spinnerLayerElement;
+		this.layerElement.className += ' spinner-layer'; //TODO change to add class util function
+		// Set the layer's size
+		this.layerElement.style.width = window.innerWidth + 'px';
+		this.layerElement.style.height = opt.itemHeight * (opt.itemSize) + 46 + 'px';
+		this.layerElement.style.top = window.innerHeight + 'px';
+
+		// Create layer title
+		var titleBar = document.createElement('DIV');
+		titleBar.className = 'spinner-title-bar';
+		var cancelButton = document.createElement('DIV');
+		cancelButton.className = 'button cancel-button';
+		cancelButton.innerText = '取消';
+		//TODO Replece to Google FastButton
+		cancelButton.addEventListener('click', function(evt) {
+			self.hide();
+			if (self.cancelCallback && typeof self.cancelCallback === 'function') {
+				self.cancelCallback.call(window, self);
+			}
+		});
+		titleBar.appendChild(cancelButton);
+		
+		var title = document.createElement('DIV');
+		title.className = 'title';
+		title.innerText = 'Here is the title text';
+		titleBar.appendChild(title);
+
+		var self = this;
+
+		var okButton = document.createElement('DIV');
+		okButton.className = 'button ok-button';
+		okButton.innerText = '确定';
+		//TODO Replece to Google FastButton
+		okButton.addEventListener('click', function(evt) {
+			self.hide();
+			if (self.okCallback && typeof self.okCallback === 'function') {
+				self.okCallback.call(window, self);
+			}
+		});
+
+
+		titleBar.appendChild(okButton);
+
+		this.layerElement.appendChild(titleBar);
+		for (var i = 0; i < slots.length; i++) {
+			var slot = slots[i];
+			var slotBox = document.createElement('DIV');
+			slotBox.className = 'spinner-slot-box';
+			slotBox.style.width = slot.width;
+			slotBox.style.height = opt.itemHeight * opt.itemSize + 'px';
+			slotBox.setAttribute('data-item-count', slot.data.length);
+			// 当显示 5 个项目的时候，就是最多向下移动 2 个项目高
+			// 最多向上移动总项目数 - 3 个项目高
+			slotBox.setAttribute('data-max-translatey', Math.floor(opt.itemSize / 2) * opt.itemHeight);
+			slotBox.setAttribute('data-min-translatey', -(slot.data.length - Math.ceil(opt.itemSize / 2)) * opt.itemHeight);
+			var slotElement = document.createElement('DIV');
+			slotElement.className = 'spinner-slot';
+			slotElement.setAttribute('data-selected-index', this.selectedIndexes[i]);
+			slotElement.setAttribute('data-last-translatey', (Math.floor(opt.itemSize / 2) - this.selectedIndexes[i]) * opt.itemHeight);
+			slotElement.style.webkitTransform = 'translateY(' + slotElement.getAttribute('data-last-translatey') + 'px)';
+
+			slotBox.appendChild(slotElement);
+			for (var j = 0; j < slot.data.length; j++) {
+				var data = slot.data[j];
+				var item = document.createElement('DIV');
+				item.className = 'spinner-item';
+				item.setAttribute('data-value', data.value);
+				item.innerText = data.label;
+				slotElement.appendChild(item);
+			}
+
+			var cover = document.createElement('DIV');
+			cover.className = 'cover up';
+			cover.style.top = 0;
+			cover.style.height = Math.floor(opt.itemSize / 2) * opt.itemHeight + 'px';
+			slotBox.appendChild(cover);
+
+			cover = document.createElement('DIV');
+			cover.className = 'cover down';
+			cover.style.height = Math.ceil(opt.itemSize / 2) * opt.itemHeight + 'px';
+			cover.style.top = Math.ceil(opt.itemSize / 2) * opt.itemHeight + 'px';
+			slotBox.appendChild(cover);
+
+			slotBox.addEventListener('touchstart', function(evt){
+				self.onTouchStart(this, evt);
+			}, true);
+			slotBox.addEventListener('touchmove', function(evt){
+				evt.preventDefault();
+				evt.stopPropagation();
+				self.onTouchMove(this, evt);
+			}, true);
+			slotBox.addEventListener('touchend', function(evt){
+				evt.preventDefault();
+				evt.stopPropagation();
+				self.onTouchEnd(this, evt);
+			}, true);
+			
+			this.layerElement.appendChild(slotBox);
+		}
+		if (this.valueChangeCallback && typeof this.valueChangeCallback === 'function') {
+			var selectedIndexes = this.getSelectedIndexes();
+			this.valueChangeCallback.call(window, this);
+		}
+	}
+
+	/**
+	 * 显示拨轮浮层
+	 * @param  {Array} selectedIndexes 显示拨轮之前，设置选中项的下标。可选参数
+	 * @return {void}                 
+	 */
+	MISpinner.prototype.show = function(selectedIndexes) {
+		if (selectedIndexes) {
+			this.setSelectedIndexes(selectedIndexes);
+		}
+
+		this.layerElement.style.display = 'block';
+		var self = this;
+		setTimeout(function() {
+			self.layerElement.style.webkitTransform = 'translateY(-' 
+			+ self.layerElement.getBoundingClientRect().height
+			+ 'px)';	
+		}, 400);
+	};
+
+	/**
+	 * 隐藏拨轮浮层
+	 * @return {void} 
+	 */
+	MISpinner.prototype.hide = function() {
+		this.layerElement.style.webkitTransform = '';
+		var self = this;
+		setTimeout(function(){
+			self.layerElement.style.display = 'none';
+		}, 400);
+	};
+
+
+	// CAUTION: 以下 3 个事件处理函数本来不应该暴漏出来的，
+	// 请调用者不要直接调用这 3 个函数。
+
+	/**
+	 * 触摸开始。
+	 * 在触摸开始的时候，要将对应的滚动槽位的动画效果去掉，
+	 * 并且记录开始的时间、开始的位置。
+	 * @param  {[type]} element [description]
+	 * @param  {[type]} evt     [description]
+	 * @return {[type]}         [description]
+	 */
+	MISpinner.prototype.onTouchStart = function(element, evt) {
+		element.setAttribute('data-starty', evt.touches[0].clientY);
+		element.setAttribute('data-lasty', evt.touches[0].clientY);
+		element.setAttribute('data-start-time', new Date().getTime());
+		var slot = element.querySelector('.spinner-slot');
+		slot.style.webkitTransitionProperty = 'none';
+	};
+
+	/**
+	 * 触摸移动。
+	 * 触摸移动的时候，滚动槽位要跟随手指的移动而动
+	 * @param  {[type]} element [description]
+	 * @param  {[type]} evt     [description]
+	 * @return {[type]}         [description]
+	 */
+	MISpinner.prototype.onTouchMove = function(element, evt) {
+		element.setAttribute('data-lasty', evt.touches[0].clientY);
+		var slot = element.querySelector('.spinner-slot');
+		var lastTranslateY = +(slot.getAttribute('data-last-translatey')) || 0;
+		var startY = +(element.getAttribute('data-starty'));
+		var dy = evt.touches[0].clientY - startY;
+		var minTranslateY = +(element.getAttribute('data-min-translatey'));
+		var maxTranslateY = +(element.getAttribute('data-max-translatey'));
+
+		var newTranslateY = (lastTranslateY + dy);
+		// 如果计算之后的滚动位置超出了最大的滚动位置，那么将滚动位置的变化量减小到
+		// 超出部分的平方根的 2 倍，产生阻滞的效果
+		if (newTranslateY > maxTranslateY) {
+			newTranslateY = maxTranslateY + (Math.sqrt(newTranslateY - maxTranslateY) * 3);
+		}
+		if (newTranslateY < minTranslateY) {
+			newTranslateY = minTranslateY - (Math.sqrt(minTranslateY - newTranslateY) * 3);
+		}
+		slot.style.webkitTransform = 'translateY(' + (newTranslateY) + 'px)';
+		slot.setAttribute('data-current-translatey', newTranslateY);
+	};
+
+	
+	/**
+	 * 触摸结束
+	 * 触摸结束之后，要处理最后的效果
+	 * @param  {[type]} element [description]
+	 * @param  {[type]} evt     [description]
+	 * @return {[type]}         [description]
+	 */
+	MISpinner.prototype.onTouchEnd = function(element, evt) {
+		var startY = +(element.getAttribute('data-starty'));
+		var endY = +(element.getAttribute('data-lasty'));
+		var startTime = +(element.getAttribute('data-start-time'));
+		var endTime = new Date().getTime();
+		var itemHeight = this.option.itemHeight;
+		var movedY = endY - startY;
+		var v0 = Math.abs((endY - startY) / (endTime - startTime)); // 计算扫动屏幕产生的初始速度
+		var a = -9.8; // 假定一个加速度。单位可以认为是 像素/毫秒^2
+		var t = 200;  // 速度降低到 0 所需的时间 
+		var s = 0;    // 速度降低到 0 移动的距离
+		// 如果整个触摸动作完成所用的时间小于 200 ms，
+		// 那么我们就认为是一个扫动动作，要产生大幅度的滚动。
+		if (endTime - startTime < 200) {
+			// 计算初始速度 v0 在加速度 a 的作用下，降低到 0 所需的时间。
+			// 这里 v0 和 a 的方向是相反的，也就是说，a 实际上是一个减速度
+			// 但是时间不能是负数，所以做了一个绝对值。最后的 10 只是一个系数，为了模拟一个比较符合感受的时间
+			// 别问我怎么算出来的这个 10，我就是瞎蒙的。
+			t = Math.abs(v0 / a) * 10;
+			// 根据加速度公式计算速度降低到 0 的时候，位移距离。
+			// 加速度、速度和距离公式为：s = v0*t + 0.5 * a * t^2
+			// 公式中的最后一个 50 也是一个系数，为了模拟一个比较符合感受的距离
+			// 另外，移动的距离是都是正数，但是到底是向上移动还是向下移动是根据 endY 和 startY 的比对产生的
+			s = (endY > startY ? -1 : 1) * (v0 * t + 0.5 * a * t * t * 50);
+		}
+
+		var minTranslateY = +(element.getAttribute('data-min-translatey'));
+		var maxTranslateY = +(element.getAttribute('data-max-translatey'));
+
+		var slot = element.querySelector('.spinner-slot');
+		var lastTranslateY = +(slot.getAttribute('data-last-translatey')) || 0;
+		var currentTranslateY = +(slot.getAttribute('data-current-translatey')) || 0;
+		var targetTranslateY = lastTranslateY + movedY + s;
+		if (targetTranslateY > maxTranslateY) {
+			targetTranslateY = maxTranslateY;
+		} else if (targetTranslateY < minTranslateY) {
+			targetTranslateY = minTranslateY;
+		} else {
+			targetTranslateY = Math.round(targetTranslateY / itemHeight) * itemHeight;
+		}
+		// 计算总共需要用动画效果移动多少像素
+		// 然后按照 1 像素 1ms 的比例去计算。但是动画效果不低于 500ms，不高于 1000ms
+		t = Math.abs(targetTranslateY - currentTranslateY);
+		if (t < 500) t = 500;
+		if (t > 1000) t = 1000;
+		slot.style.webkitTransitionProperty = '-webkit-transform';
+		slot.style.webkitTransitionTimingFunction = 'ease-out';
+		slot.style.webkitTransitionDuration = t + 'ms';
+		slot.style.webkitTransform = 'translateY(' + targetTranslateY + 'px)';
+		slot.setAttribute('data-last-translatey', targetTranslateY);
+		slot.setAttribute('data-selected-index', Math.floor(this.option.itemSize / 2) - Math.round(targetTranslateY / itemHeight));
+		var self = this;
+		if (self.valueChangeCallback && typeof self.valueChangeCallback === 'function') {
+			setTimeout(function(){
+				self.valueChangeCallback.call(window, self);
+			}, t);	
+		}
+	};
+
+	/**
+	 * 获取当前选中的下标
+	 * @return {Array} 当前选中的下标数组。
+	 */
+	MISpinner.prototype.getSelectedIndexes = function() {
+		var selectedIndexes = [];
+		var slots = this.layerElement.querySelectorAll('.spinner-slot');
+		for (var i = 0; i < slots.length; i++) {
+			selectedIndexes.push(slots[i].getAttribute('data-selected-index'));
+		}
+		return selectedIndexes;
+	};
+
+	/**
+	 * 设置选中的下标
+	 * @param {Array} selectedIndexes 要将哪些下标设置为选中状态
+	 */
+	MISpinner.prototype.setSelectedIndexes = function(selectedIndexes) {
+		var slots = this.layerElement.querySelectorAll('.spinner-slot');
+		for (var i = 0; i < slots.length; i++) {
+			var slotElement = slots[i];
+			slotElement.setAttribute('data-selected-index', selectedIndexes[i]);
+			slotElement.setAttribute('data-last-translatey', 
+				(Math.floor(this.option.itemSize / 2) - selectedIndexes[i]) * this.option.itemHeight);
+			slotElement.style.webkitTransform = 'translateY(' + slotElement.getAttribute('data-last-translatey') + 'px)';
+		}
+		if (this.valueChangeCallback && typeof this.valueChangeCallback === 'function') {
+			this.valueChangeCallback.call(window, this);
+		}
+	};
+
+	/**
+	 * 获取当前选中的值
+	 * @return {Array} 当前选中的值
+	 */
+	MISpinner.prototype.getSelectedValues = function() {
+		var selectedValues = [];
+		var slots = this.layerElement.querySelectorAll('.spinner-slot');
+		for (var i = 0; i < slots.length; i++) {
+			var items = slots[i].querySelectorAll('.spinner-item');
+			selectedValues.push(items[slots[i].getAttribute('data-selected-index')].getAttribute('data-value'));
+		}
+		return selectedValues;
+	};
+
+	/**
+	 * 设置拨轮弹层的标题
+	 * @param {string} textOrHtml 要设置的标题
+	 */
+	MISpinner.prototype.setTitle = function(textOrHtml) {
+		this.layerElement.querySelector('.title').innerHTML = textOrHtml;
+	};
+
+	function pageOnLoad() {
+		initData();
+		// initEventListener();
+	}
+
+	var g_spinner = null;
+
+	function initData() {
+		var days = [];
+		for (var i = 0; i <= 30; i++) {
+			days.push({
+				label: i + ' 天',
+				value: i
+			});
+		}
+
+		var hours = [];
+		for (var i = 0; i <= 24; i++) {
+			hours.push({
+				label: i + ' 小时',
+				value: i
+			});
+		}		
+
+		var minutes = [];
+		for (var i = 0; i < 2; i++) {
+			minutes.push({
+				label: i * 30 + ' 分钟',
+				value: i * 30
+			});
+		}	
+		g_spinner = new MISpinner(document.getElementById('spinner-layer'), [{
+			width: '40%',
+			data: days
+		},{
+			width: '30%',
+			data: hours
+		},{
+			width: '30%',
+			data: minutes
+		}], null, function(spinnerObj) {
+			var selectedValues = spinnerObj.getSelectedValues();
+			document.getElementById('d1').innerText = selectedValues[0] + ' 天 ' 
+				+ selectedValues[1] + ' 小时 ' 
+				+ selectedValues[2] + ' 分'
+		}, function(spinnerObj, selectedIndexes) {
+			// console.log(selectedIndexes);
+			var selectedValues = spinnerObj.getSelectedValues();
+			spinnerObj.setTitle('活动进行 <span class="red-text">' 
+				+ selectedValues[0] + '</span> 天 <span class="red-text">' 
+				+ selectedValues[1] + '</span> 小时 <span class="red-text">' 
+				+ selectedValues[2] + '</span> 分后结束');
+		});
+	}
+
+	function callout() {
+		g_spinner.show();
+	}
+	</script>
+</head>
+<body onload="pageOnLoad();">
+	<div id="d1" onclick="callout();" style="font-size: 18px; padding: 10px; text-align: center; background-color: yellow;">Click to show spinner layer</div>
+	<div id="spinner-layer"></div>	
+</body>
+</html>
