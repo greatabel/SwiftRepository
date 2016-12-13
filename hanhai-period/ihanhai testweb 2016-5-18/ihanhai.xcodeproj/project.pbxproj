@@ -173,10 +173,12 @@
 					B5C3796F1AD50F3900E8369D = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 56AME9BLVU;
+						LastSwiftMigration = 0800;
 					};
 					B5C379841AD50F3900E8369D = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = VTNCJ382TT;
+						LastSwiftMigration = 0800;
 						TestTargetID = B5C3796F1AD50F3900E8369D;
 					};
 				};
@@ -359,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = abel.company.itest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -373,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = abel.company.itest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -394,6 +398,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ihanhai.app/ihanhai";
 			};
 			name = Debug;
@@ -412,6 +417,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ihanhai.app/ihanhai";
 			};
 			name = Release;

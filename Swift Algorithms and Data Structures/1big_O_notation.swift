@@ -8,11 +8,11 @@
 
 import Foundation
 
-public class Big_O_Notation {
+open class Big_O_Notation {
 
     let numberList : Array<Int> = [1,2,3,4,5,6,7,8,9,10]
 
-    func linearSearch(key:Int) {
+    func linearSearch(_ key:Int) {
 
         for number in numberList {
             if number == key {
@@ -22,7 +22,7 @@ public class Big_O_Notation {
         }
     }
 
-    func binarySearch(key: Int, imin: Int, imax: Int) {
+    func binarySearch(_ key: Int, imin: Int, imax: Int) {
 
         let midIndex : Double = round(Double((imin + imax) / 2 ))
         let midNumber = numberList[Int(midIndex)]
@@ -40,7 +40,7 @@ public class Big_O_Notation {
     }
     
     // https://www.weheartswift.com/binary-search-applications/
-    func binarySearch(array: [Int], target: Int) -> Bool {
+    func binarySearch(_ array: [Int], target: Int) -> Bool {
 
         var left = 0
         var right = array.count - 1

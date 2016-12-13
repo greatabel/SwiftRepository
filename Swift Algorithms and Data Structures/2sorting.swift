@@ -8,19 +8,20 @@
 
 import Foundation
 
-public class Sorting {
+open class Sorting {
 
     var numberList : Array<Int> = [8, 2, 10, 9, 11, 1, 7, 3, 4]
 
-    func insertionSort(var numberList: Array<Int>) -> Array<Int> {
-        var y, key : Int
+    func insertionSort(_ numberList: Array<Int>) -> Array<Int> {
+        var numberList = numberList
+        var  key : Int
         for x in 0..<numberList.count {
             key = numberList[x]
-
-            for (y = x ; y > -1; y--) {
+            for y in x ... -1 {
+//            for (y = x ; y > -1; y -= 1) {
                 if (key < numberList[y]) {
-                    numberList.removeAtIndex(y + 1)
-                    numberList.insert(key, atIndex: y)
+                    numberList.remove(at: y + 1)
+                    numberList.insert(key, at: y)
                 }
             }
 
