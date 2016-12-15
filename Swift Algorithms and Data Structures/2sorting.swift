@@ -17,7 +17,7 @@ open class Sorting {
         var  key : Int
         for x in 0..<numberList.count {
             key = numberList[x]
-            for y in x ... -1 {
+            for y in (0..<x).reversed() {
 //            for (y = x ; y > -1; y -= 1) {
                 if (key < numberList[y]) {
                     numberList.remove(at: y + 1)
