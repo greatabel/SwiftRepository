@@ -14,7 +14,18 @@
 		203AB7F71BFF5E4C00BC8CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F61BFF5E4C00BC8CFA /* Assets.xcassets */; };
 		203AB7FA1BFF5E4C00BC8CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F81BFF5E4C00BC8CFA /* LaunchScreen.storyboard */; };
 		203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */; };
+		206C65A91E03CA4F0030224E /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C65A81E03CA4F0030224E /* SortingTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		206C65AB1E03CA4F0030224E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 203AB7E41BFF5E4C00BC8CFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 203AB7EB1BFF5E4C00BC8CFA;
+			remoteInfo = "Swift Algorithms and Data Structures";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		20238A481BFF78DE006593D4 /* 2sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2sorting.swift; sourceTree = "<group>"; };
@@ -26,10 +37,20 @@
 		203AB7F91BFF5E4C00BC8CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203AB7FB1BFF5E4C00BC8CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1big_O_notation.swift; sourceTree = "<group>"; };
+		206C65A61E03CA4F0030224E /* SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		206C65A81E03CA4F0030224E /* SortingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTest.swift; sourceTree = "<group>"; };
+		206C65AA1E03CA4F0030224E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		203AB7E91BFF5E4C00BC8CFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206C65A31E03CA4F0030224E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +65,7 @@
 			children = (
 				203AB8011BFF5EF800BC8CFA /* Source */,
 				203AB7EE1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures */,
+				206C65A71E03CA4F0030224E /* SwiftTests */,
 				203AB7ED1BFF5E4C00BC8CFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				203AB7EC1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures.app */,
+				206C65A61E03CA4F0030224E /* SwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +101,15 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		206C65A71E03CA4F0030224E /* SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				206C65A81E03CA4F0030224E /* SortingTest.swift */,
+				206C65AA1E03CA4F0030224E /* Info.plist */,
+			);
+			path = SwiftTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,19 +130,43 @@
 			productReference = 203AB7EC1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures.app */;
 			productType = "com.apple.product-type.application";
 		};
+		206C65A51E03CA4F0030224E /* SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 206C65AD1E03CA4F0030224E /* Build configuration list for PBXNativeTarget "SwiftTests" */;
+			buildPhases = (
+				206C65A21E03CA4F0030224E /* Sources */,
+				206C65A31E03CA4F0030224E /* Frameworks */,
+				206C65A41E03CA4F0030224E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				206C65AC1E03CA4F0030224E /* PBXTargetDependency */,
+			);
+			name = SwiftTests;
+			productName = SwiftTests;
+			productReference = 206C65A61E03CA4F0030224E /* SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		203AB7E41BFF5E4C00BC8CFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = abelwan;
 				TargetAttributes = {
 					203AB7EB1BFF5E4C00BC8CFA = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 56AME9BLVU;
 						LastSwiftMigration = 0810;
+					};
+					206C65A51E03CA4F0030224E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 203AB7EB1BFF5E4C00BC8CFA;
 					};
 				};
 			};
@@ -128,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				203AB7EB1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures */,
+				206C65A51E03CA4F0030224E /* SwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +197,13 @@
 				203AB7FA1BFF5E4C00BC8CFA /* LaunchScreen.storyboard in Resources */,
 				203AB7F71BFF5E4C00BC8CFA /* Assets.xcassets in Resources */,
 				203AB7F51BFF5E4C00BC8CFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206C65A41E03CA4F0030224E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +221,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		206C65A21E03CA4F0030224E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206C65A91E03CA4F0030224E /* SortingTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		206C65AC1E03CA4F0030224E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 203AB7EB1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures */;
+			targetProxy = 206C65AB1E03CA4F0030224E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		203AB7F31BFF5E4C00BC8CFA /* Main.storyboard */ = {
@@ -271,9 +351,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56AME9BLVU;
 				INFOPLIST_FILE = "Swift Algorithms and Data Structures/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "abel.Swift-Algorithms-and-Data-Structures";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -284,12 +366,47 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56AME9BLVU;
 				INFOPLIST_FILE = "Swift Algorithms and Data Structures/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "abel.Swift-Algorithms-and-Data-Structures";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		206C65AE1E03CA4F0030224E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = SwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abel.SwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Algorithms and Data Structures.app/Swift Algorithms and Data Structures";
+			};
+			name = Debug;
+		};
+		206C65AF1E03CA4F0030224E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = SwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abel.SwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Algorithms and Data Structures.app/Swift Algorithms and Data Structures";
 			};
 			name = Release;
 		};
@@ -313,6 +430,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		206C65AD1E03CA4F0030224E /* Build configuration list for PBXNativeTarget "SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206C65AE1E03CA4F0030224E /* Debug */,
+				206C65AF1E03CA4F0030224E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
