@@ -11,9 +11,9 @@ class ViewController: UIViewController {
         print(big_o_notation.binarySearch([1,2,10,20], target: 2))
 
         // sorting
-        print("---sorting---")
-        let sorting = Sorting()
-        print(sorting.insertionSort([1,3,2,4]))
+//        print("---sorting---")
+//        let sorting = Sorting()
+//        print(sorting.insertionSort([1,3,2,4]))
 
     }
 
