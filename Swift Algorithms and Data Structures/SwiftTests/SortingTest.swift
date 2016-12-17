@@ -54,7 +54,7 @@ class SortingTest: XCTestCase {
     func testQuickSort() {
         let sorting = Sorting()
         print("testQuickSort-------")
-        var results = sorting.quickSort([1,4,3,2])
+        let results = sorting.quickSort([1,4,3,2])
         print(results)
         my_validate_whether_in_order(results)
     }
