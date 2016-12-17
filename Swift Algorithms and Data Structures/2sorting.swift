@@ -72,8 +72,9 @@ open class Sorting {
         return numberList
     }
 
-    func quickSort(_ hops:[Int]) -> [Int] {
+    func quickSort( hops:[Int]) -> [Int] {
         
+        //        var hops = hops
         var hops = hops
         if (hops.count <= 1){
             return hops
@@ -83,7 +84,8 @@ open class Sorting {
         var rightBucket:[Int] = []
 
 //        (hops.count - 1).times { i in
-        for i in (1..<hops.count) {
+        for i in (0..<hops.count) {
+            print("i=\(i)")
             if (hops[i] <= pivot) {
                 leftBucket.append(hops[i])
             } else {
@@ -91,9 +93,9 @@ open class Sorting {
             }
         }
         var mergedArray:[Int] = []
-        mergedArray += quickSort(leftBucket)
+        mergedArray += quickSort(hops: leftBucket)
         mergedArray += [pivot]
-        mergedArray += quickSort(rightBucket)
+        mergedArray += quickSort(hops: rightBucket)
         return mergedArray
 
     }
