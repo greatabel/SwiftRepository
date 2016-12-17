@@ -14,8 +14,21 @@ class SortingTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    
+
+    func my_validate_whether_in_order(_ resultList: Array<Int>) {
+
+//        for (x = 0; x < resultList.count; x++) {
+        for x in 0..<resultList.count {
+            if ((x > 0) && (resultList[x] < resultList[x - 1])) {
+            XCTFail("numberlist items not in sorted order..")
+            }
+            else {
+            print("item \(resultList[x]) is sorted..")
+            }
+        }
+    }
+
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
@@ -41,7 +54,9 @@ class SortingTest: XCTestCase {
     func testQuickSort() {
         let sorting = Sorting()
         print("testQuickSort-------")
-        print(sorting.quickSort([1,4,3,2]))
+        var results = sorting.quickSort([1,4,3,2])
+        print(results)
+        my_validate_whether_in_order(results)
     }
     
 }
