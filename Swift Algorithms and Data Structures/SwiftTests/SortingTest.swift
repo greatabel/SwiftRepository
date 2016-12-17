@@ -37,5 +37,10 @@ class SortingTest: XCTestCase {
         let sorting = Sorting()
         print(sorting.selectSort([1,4,3,2]))
     }
+
+    func testQuickSort() {
+        let sorting = Sorting()
+        print(sorting.quickSort([1,4,3,2]))
+    }
     
 }
