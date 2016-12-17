@@ -31,5 +31,10 @@ class SortingTest: XCTestCase {
         let sorting = Sorting()
         print(sorting.insertionSort([1,3,2,4]))
     }
+
+    func testBubbleSort() {
+        let sorting = Sorting()
+        print(sorting.bubbleSort([1,3,4,2]))
+    }
     
 }
