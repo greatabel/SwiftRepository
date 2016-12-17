@@ -41,7 +41,7 @@ class SortingTest: XCTestCase {
     func testQuickSort() {
         let sorting = Sorting()
         print("testQuickSort-------")
-        print(sorting.quickSort(hops: [1,4,3,2]))
+        print(sorting.quickSort([1,4,3,2]))
     }
     
 }
