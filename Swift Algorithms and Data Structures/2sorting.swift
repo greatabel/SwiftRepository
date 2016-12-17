@@ -47,5 +47,29 @@ open class Sorting {
         }
         return numberList
     }
+
+    func selectSort(_ numberList: Array<Int>) -> Array<Int> {
+        print("selectSort:\n")
+        var numberList = numberList
+        var y: Int
+        for x in 0..<numberList.count {
+            var minimum = x
+
+//            for y=x+1; y < numberList.count; y += 1 {
+            for y in (x+1..<numberList.count) {
+                print("comparing \(numberList[minimum])")
+                if numberList[minimum] > numberList[y] {
+                    minimum = y
+                }
+
+            }
+            // swap the minimum value with the current array iteration
+            print("minimum = \(minimum)")
+            let z = numberList[x]
+            numberList[x] = numberList[minimum]
+            numberList[minimum] = z
+        }
+        return numberList
+    }
     
 }

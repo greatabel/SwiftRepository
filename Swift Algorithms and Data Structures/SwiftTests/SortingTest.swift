@@ -15,10 +15,6 @@ class SortingTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -35,6 +31,11 @@ class SortingTest: XCTestCase {
     func testBubbleSort() {
         let sorting = Sorting()
         print(sorting.bubbleSort([1,3,4,2]))
+    }
+
+    func testSelectSort(){
+        let sorting = Sorting()
+        print(sorting.selectSort([1,4,3,2]))
     }
     
 }
