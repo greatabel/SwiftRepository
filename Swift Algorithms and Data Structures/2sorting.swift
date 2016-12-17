@@ -49,9 +49,9 @@ open class Sorting {
     }
 
     func selectSort(_ numberList: Array<Int>) -> Array<Int> {
-        print("selectSort:\n")
+        print("selectSort:--------\n")
         var numberList = numberList
-        var y: Int
+
         for x in 0..<numberList.count {
             var minimum = x
 
@@ -70,6 +70,32 @@ open class Sorting {
             numberList[minimum] = z
         }
         return numberList
+    }
+
+    func quickSort(_ hops:[Int]) -> [Int] {
+        
+        var hops = hops
+        if (hops.count <= 1){
+            return hops
+        }
+        let pivot = hops.remove(at: 0)
+        var leftBucket:[Int] = []
+        var rightBucket:[Int] = []
+
+//        (hops.count - 1).times { i in
+        for i in (1..<hops.count) {
+            if (hops[i] <= pivot) {
+                leftBucket.append(hops[i])
+            } else {
+                rightBucket.append(hops[i])
+            }
+        }
+        var mergedArray:[Int] = []
+        mergedArray += quickSort(leftBucket)
+        mergedArray += [pivot]
+        mergedArray += quickSort(rightBucket)
+        return mergedArray
+
     }
     
 }
