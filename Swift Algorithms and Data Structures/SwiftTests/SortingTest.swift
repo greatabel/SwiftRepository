@@ -58,5 +58,16 @@ class SortingTest: XCTestCase {
         print(results)
         my_validate_whether_in_order(results)
     }
+
+
+    func testMergeSort() {
+        let sorting = Sorting()
+        print("testMergeSort-------")
+        let results = sorting.mergeSort([1,3,4,2])
+        print("-----\(results)")
+        my_validate_whether_in_order(results)
+    }
+
+
     
 }

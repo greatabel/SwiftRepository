@@ -99,5 +99,42 @@ open class Sorting {
         return mergedArray
 
     }
+
+    func mergeSort(_ input:[Int]) -> [Int] {
+        if( input.count <= 1) {
+            return input
+        }
+        // find the mind point 
+        let mid = Int(floor(Double(input.count / 2)))
+        let left = Array(input[0..<mid])
+        let right = Array(input[mid..<input.count])
+//        print(mid, left,right)
+        let leftSide = mergeSort(left)
+        let rightSide = mergeSort(right)
+        return sortForMergeSort(left: leftSide, right: rightSide)
+
+    }
+
+    func sortForMergeSort(left:[Int], right:[Int]) -> [Int] {
+        print("in sortForMergeSort \(left) \(right)")
+        var sortedArray: [Int] = []
+        var leftCount = 0
+        var rightCount = 0
+        for i in (0..<(left.count + right.count)) {
+            print("Before i=\(i) \(sortedArray) \(left) \(right)")
+            if (leftCount < left.count && (rightCount >= right.count || left[leftCount] <= right[rightCount])) {
+
+                sortedArray.append(left[leftCount])
+                leftCount += 1
+            } else if (rightCount < right.count && (leftCount >= left.count || right[rightCount] < left[leftCount])) {
+
+                sortedArray.append(right[rightCount])
+                rightCount += 1
+            }
+            print("After i=\(i) \(sortedArray) \(left) \(right)")
+        }
+        return sortedArray
+    }
+
     
 }
