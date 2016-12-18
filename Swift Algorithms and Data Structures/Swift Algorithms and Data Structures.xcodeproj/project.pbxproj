@@ -15,6 +15,8 @@
 		203AB7FA1BFF5E4C00BC8CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F81BFF5E4C00BC8CFA /* LaunchScreen.storyboard */; };
 		203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */; };
 		206C65A91E03CA4F0030224E /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C65A81E03CA4F0030224E /* SortingTest.swift */; };
+		20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53C1E06E84B006F940D /* 3LinkedList.swift */; };
+		20C7E53F1E06E8FC006F940D /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53E1E06E8FC006F940D /* LinkedListTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		206C65A61E03CA4F0030224E /* SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		206C65A81E03CA4F0030224E /* SortingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTest.swift; sourceTree = "<group>"; };
 		206C65AA1E03CA4F0030224E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C7E53C1E06E84B006F940D /* 3LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3LinkedList.swift; sourceTree = "<group>"; };
+		20C7E53E1E06E8FC006F940D /* LinkedListTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */,
 				20238A481BFF78DE006593D4 /* 2sorting.swift */,
+				20C7E53C1E06E84B006F940D /* 3LinkedList.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 		206C65A71E03CA4F0030224E /* SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				20C7E53E1E06E8FC006F940D /* LinkedListTest.swift */,
 				206C65A81E03CA4F0030224E /* SortingTest.swift */,
 				206C65AA1E03CA4F0030224E /* Info.plist */,
 			);
@@ -215,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203AB7F21BFF5E4C00BC8CFA /* ViewController.swift in Sources */,
+				20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */,
 				20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */,
 				203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */,
 				203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */,
@@ -225,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C7E53F1E06E8FC006F940D /* LinkedListTest.swift in Sources */,
 				206C65A91E03CA4F0030224E /* SortingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +446,7 @@
 				206C65AF1E03CA4F0030224E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
