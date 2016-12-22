@@ -4,10 +4,13 @@ import XCTest
 @testable import Swift_Algorithms_and_Data_Structures
 
 class LinkedListTest: XCTestCase {
-    
+
+    var numberList: Array<Int>!
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        numberList = [ 8, 2, 30, 4]
     }
     
     override func tearDown() {
@@ -23,6 +26,11 @@ class LinkedListTest: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+
+    func testPrintAllKeys() {
+//        let linkedlist = LinkedList()
+//        print(linkedlist.printAllKeys())
     }
 
 
