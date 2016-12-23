@@ -42,5 +42,23 @@ open class LinkedList<T: Equatable> {
 
     }
 
+    func isEmpty() -> Bool {
+        return self.count == 0 || head.key == nil
+    }
+
+    var count: Int {
+        if head.key == nil {
+            return 0
+        } else{
+            var current: LLNode = head
+            var x: Int = 1
+            while current.next != nil {
+                current = current.next!
+                x += 1
+            }
+            return x
+        }
+    }
+
 
 }
