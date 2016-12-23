@@ -61,5 +61,8 @@ open class LinkedList<T: Equatable> {
         }
     }
 
+    func removeLinkAtIndex(index: Int) {
+        
+    }
 
 }
