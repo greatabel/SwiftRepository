@@ -29,8 +29,14 @@ class LinkedListTest: XCTestCase {
     }
 
     func testPrintAllKeys() {
-//        let linkedlist = LinkedList()
-//        print(linkedlist.printAllKeys())
+        let linkedlist: LinkedList<Int> = LinkedList<Int>()
+
+        for number in  numberList {
+            linkedlist.addLink(number)
+        }
+        linkedlist.printAllKeys()
+
+
     }
 
 
