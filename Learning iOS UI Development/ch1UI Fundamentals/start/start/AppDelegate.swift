@@ -7,7 +7,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // instantiate a window with the same size of the screen
+        window = UIWindow(frame: UIScreen.main.bounds)
+        // instantiate a view controller with Main storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "viewController2")
+        as! ViewController
+
+        //Setup and present the window
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+
         return true
     }
 
