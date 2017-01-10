@@ -65,4 +65,20 @@ open class LinkedList<T: Equatable> {
         
     }
 
+    func linkAtIndex(index: Int) ->LLNode<T>! {
+        if ((index < 0) || (index > (self.count - 1)) || (head.key == nil)) {
+            return nil
+        }
+        else {
+            var current: LLNode<T>! = head
+            var x: Int = 0
+            while(index != x) {
+            current = current.next
+            x += 1
+            }
+            return current
+        }
+
+    }
+
 }
