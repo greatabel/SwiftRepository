@@ -73,9 +73,20 @@ open class LinkedList<T: Equatable> {
         if(index == 0){
             current = current?.next
             head = current!
-            return 
+            return
         }
 
+        while(current != nil){
+            if(listIndex == index) {
+                trailer!.next = current?.next
+                current = nil
+                break
+            }
+            //update the assignments
+            trailer = current
+            current = current?.next
+            listIndex += 1
+        }
     }
 
     func linkAtIndex(index: Int) ->LLNode<T>! {
