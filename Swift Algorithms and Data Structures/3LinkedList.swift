@@ -62,7 +62,15 @@ open class LinkedList<T: Equatable> {
     }
 
     func removeLinkAtIndex(index: Int) {
+        if((index < 0) || (index > (self.count - 1)) || (head.key == nil)) {
+            print("link index does not exist")
+            return
+        }
+        var current: LLNode<T>? = head
+        var trailer:LLNode<T>?
+        var listIndex: Int = 0
         
+
     }
 
     func linkAtIndex(index: Int) ->LLNode<T>! {
