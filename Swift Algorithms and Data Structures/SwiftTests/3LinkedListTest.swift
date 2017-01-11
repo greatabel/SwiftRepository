@@ -36,6 +36,10 @@ class LinkedListTest: XCTestCase {
         }
         linkedlist.printAllKeys()
         print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 2).key)")
+        print("-------test remove --")
+        linkedlist.removeLinkAtIndex(index: 1)
+        linkedlist.printAllKeys()
+
 
 
     }
