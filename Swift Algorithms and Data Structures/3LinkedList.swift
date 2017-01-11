@@ -69,7 +69,12 @@ open class LinkedList<T: Equatable> {
         var current: LLNode<T>? = head
         var trailer:LLNode<T>?
         var listIndex: Int = 0
-        
+
+        if(index == 0){
+            current = current?.next
+            head = current!
+            return 
+        }
 
     }
 
