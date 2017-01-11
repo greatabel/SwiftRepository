@@ -35,6 +35,7 @@ class LinkedListTest: XCTestCase {
             linkedlist.addLink(number)
         }
         linkedlist.printAllKeys()
+        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 2).key)")
 
 
     }
