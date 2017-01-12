@@ -105,4 +105,8 @@ open class LinkedList<T: Equatable> {
 
     }
 
+    func reverseLinkList() {
+        
+    }
+
 }
