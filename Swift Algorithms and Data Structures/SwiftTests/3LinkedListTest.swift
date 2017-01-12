@@ -40,8 +40,9 @@ class LinkedListTest: XCTestCase {
         linkedlist.removeLinkAtIndex(index: 1)
         linkedlist.printAllKeys()
         print("----reverse-----")
-        linkedList.reverseLinkedList()
-        linkedList.printAllKeys()
+        linkedlist.reverseLinkedList()
+        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 1).key)")
+//        linkedlist.printAllKeys()
 
     }
 
