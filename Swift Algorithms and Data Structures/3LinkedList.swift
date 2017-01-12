@@ -106,7 +106,25 @@ open class LinkedList<T: Equatable> {
     }
 
     func reverseLinkList() {
-        
+
+        if self.count <= 1 {
+            return
+        }
+
+        var current: LLNode<T>? = head
+        var next: LLNode<T>? = nil
+
+        while(current != nil) {
+            next = current!.next
+            current!.next = current!.previous
+            current!.previous = next
+
+            if next == nil {
+                head = current!
+            }
+            current = next
+        }
     }
+    
 
 }
