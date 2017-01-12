@@ -39,7 +39,14 @@ class LinkedListTest: XCTestCase {
         print("-------test remove --")
         linkedlist.removeLinkAtIndex(index: 1)
         linkedlist.printAllKeys()
+        print("----reverse-----")
+        linkedList.reverseLinkedList()
+        linkedList.printAllKeys()
 
+    }
+
+    func testReverseLinkedList() {
+        
     }
 
 
