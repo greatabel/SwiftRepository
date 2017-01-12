@@ -119,16 +119,20 @@ open class LinkedList<T: Equatable> {
             next = current!.next
             current!.next = current!.previous
             current!.previous = next
-            print("in reverseLinkedList current.key=\(current?.key)")
+
             if next == nil {
                 head = current!
             }
             
             //move to next node
             current = next
+            print("in reverseLinkedList current.key=\(current?.key)",
+                " \(current?.previous) \(current?.next) current= \(current)")
             
         }//end while
-        
+        print("here")
+        return
+
         
     }//end function
     

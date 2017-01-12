@@ -41,13 +41,18 @@ class LinkedListTest: XCTestCase {
         linkedlist.printAllKeys()
         print("----reverse-----")
         linkedlist.reverseLinkedList()
-        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 1).key)")
-//        linkedlist.printAllKeys()
+
 
     }
 
     func testReverseLinkedList() {
-        
+        let linkedlist: LinkedList<Int> = LinkedList<Int>()
+
+        for number in  numberList {
+            linkedlist.addLink(number)
+        }
+        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 1).key)")
+        linkedlist.printAllKeys()
     }
 
 
