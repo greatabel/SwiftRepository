@@ -35,12 +35,12 @@ class LinkedListTest: XCTestCase {
             linkedlist.addLink(number)
         }
         linkedlist.printAllKeys()
-        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 2).key)")
+        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 0).key)")
         print("-------test remove --")
         linkedlist.removeLinkAtIndex(index: 1)
         linkedlist.printAllKeys()
-        print("----reverse-----")
-        linkedlist.reverseLinkedList()
+
+
 
 
     }
@@ -51,7 +51,10 @@ class LinkedListTest: XCTestCase {
         for number in  numberList {
             linkedlist.addLink(number)
         }
-        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 1).key)")
+        print("----reverse-----")
+        linkedlist.reverseLinkedList()
+
+        print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 0).key)")
         linkedlist.printAllKeys()
     }
 
