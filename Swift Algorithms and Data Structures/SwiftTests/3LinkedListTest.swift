@@ -71,7 +71,20 @@ class LinkedListTest: XCTestCase {
     func testMap() {
         let linkedlist: LinkedList<Int> = self.buildLinkedList()
         let afterMap_List = linkedlist.map(formula: method_map)
+        print("map-->")
         afterMap_List?.printAllKeys()
+    }
+
+    func method_filter(number: LLNode<Int>) -> Bool {
+        return number.key >= 10
+    }
+
+    func testFilter() {
+        let linkedlist: LinkedList<Int> = self.buildLinkedList()
+        let afterFilter_List = linkedlist.filter(formula: method_filter)
+        print("--after filter--")
+        afterFilter_List?.printAllKeys()
+
     }
 
     
