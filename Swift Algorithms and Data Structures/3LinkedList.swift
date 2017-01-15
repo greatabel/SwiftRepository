@@ -202,6 +202,24 @@ open class LinkedList<T: Equatable> {
         return results
     }
 
+    func filter(formula: (LLNode<T>) -> Bool) -> LinkedList<T>! {
+
+        if head.key == nil {
+            return nil
+        }
+
+        var current: LLNode! = head
+        let results: LinkedList<T>! = LinkedList<T>()
+
+        while current != nil {
+            if formula(current) == true {
+                results.addLink(current.key)
+            }
+            current = current.next
+        }
+        return results
+    }
+
 
     
 
