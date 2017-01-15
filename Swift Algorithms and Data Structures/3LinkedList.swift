@@ -173,15 +173,35 @@ open class LinkedList<T: Equatable> {
             
             //move to next node
             current = next
-            print("in reverseLinkedList current.key=\(current?.key)",
-                " \(current?.previous) \(current?.next) current= \(current)")
-            
+//            print("in reverseLinkedList current.key=\(current?.key)",
+//                " \(current?.previous) \(current?.next) current= \(current)")
+
         }//end while
-        print("here")
         return
 
         
     }//end function
+
+    func map(formula: (LLNode<T>) -> T) -> LinkedList<T>! {
+
+        if head.key == nil {
+            return nil
+        }
+
+        var current: LLNode! = head
+        let results: LinkedList<T>! = LinkedList<T>()
+        var newKey: T!
+
+        while current != nil {
+            newKey = formula(current)
+
+            if newKey != nil {
+                results.addLink(newKey)
+            }
+            current = current.next
+        }
+        return results
+    }
     
 
 }
