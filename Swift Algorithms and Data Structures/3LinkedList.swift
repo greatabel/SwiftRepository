@@ -89,6 +89,53 @@ open class LinkedList<T: Equatable> {
         }
     }
 
+    func addLinkAtIndex(key: T, index: Int) {
+
+
+        //check for nil conditions
+        if ((index < 0) || (index > (self.count - 1))) {
+            print("link index does not exist..")
+        }
+        //establish the head node
+        if (head.key == nil) {
+            head.key = key
+            return
+        }
+        //establish the trailer, current and new items
+        var current: LLNode<T>? = head
+        var trailer: LLNode<T>?
+        var listIndex: Int = 0
+        //iterate through the list to find the insertion point
+        while (current != nil) {
+
+            if (index == listIndex) {
+                let childToUse: LLNode = LLNode<T>()
+                //create the new node
+                childToUse.key = key
+                //connect the node infront of the current node
+                childToUse.next = current
+                childToUse.previous = trailer
+                //use optional binding when using the trailer
+                if let linktrailer = trailer {
+                    linktrailer.next = childToUse
+                    childToUse.previous = linktrailer
+                }
+                //point new node to the current / previous
+                current!.previous = childToUse
+                //replace the head node if required
+                if (index == 0) {
+                    head = childToUse
+                }
+                break
+            } //end if
+            //iterate through to the next item
+            trailer = current
+            current = current?.next
+            listIndex += 1
+        } //end while
+    }
+
+
     func linkAtIndex(index: Int) ->LLNode<T>! {
         if ((index < 0) || (index > (self.count - 1)) || (head.key == nil)) {
             return nil
