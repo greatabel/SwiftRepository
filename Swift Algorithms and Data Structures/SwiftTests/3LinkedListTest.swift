@@ -65,6 +65,15 @@ class LinkedListTest: XCTestCase {
         linkedlist.printAllKeys()
     }
 
+    func method_map(number: LLNode<Int>) -> Int {
+        return number.key + 1
+    }
+    func testMap() {
+        let linkedlist: LinkedList<Int> = self.buildLinkedList()
+        let afterMap_List = linkedlist.map(formula: method_map)
+        afterMap_List?.printAllKeys()
+    }
+
     
 
 
