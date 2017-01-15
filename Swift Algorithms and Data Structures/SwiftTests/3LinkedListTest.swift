@@ -42,12 +42,7 @@ class LinkedListTest: XCTestCase {
     }
 
     func testPrintAllKeys() {
-        let linkedlist: LinkedList<Int> = LinkedList<Int>()
-
-        for number in  numberList {
-            linkedlist.addLink(number)
-        }
-        linkedlist.printAllKeys()
+        let linkedlist: LinkedList<Int> = self.buildLinkedList()
         print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 0).key)")
         print("-------test remove --")
         linkedlist.removeLinkAtIndex(index: 1)
