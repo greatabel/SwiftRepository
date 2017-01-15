@@ -18,7 +18,20 @@ class LinkedListTest: XCTestCase {
         super.tearDown()
     }
 
+    func buildLinkedList() -> LinkedList<Int>! {
+        let linkedList: LinkedList<Int> = LinkedList<Int>()
 
+        for number in numberList {
+            linkedList.addLink(number)
+        }
+        linkedList.printAllKeys()
+
+        if(linkedList.count != numberList.count) {
+            XCTFail("Link list count doesn't math")
+            return nil
+        }
+        return linkedList
+    }
 
 
     func testPerformanceExample() {
@@ -46,11 +59,7 @@ class LinkedListTest: XCTestCase {
     }
 
     func testReverseLinkedList() {
-        let linkedlist: LinkedList<Int> = LinkedList<Int>()
-
-        for number in  numberList {
-            linkedlist.addLink(number)
-        }
+        let linkedlist: LinkedList<Int> = self.buildLinkedList()
         print("----reverse-----")
         linkedlist.reverseLinkedList()
 
