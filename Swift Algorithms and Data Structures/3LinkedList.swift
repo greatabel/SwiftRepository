@@ -178,7 +178,6 @@ open class LinkedList<T: Equatable> {
 
         }//end while
         return
-
         
     }//end function
 
@@ -202,6 +201,8 @@ open class LinkedList<T: Equatable> {
         }
         return results
     }
+
+
     
 
 }
