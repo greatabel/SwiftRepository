@@ -10,7 +10,7 @@ class LinkedListTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        numberList = [ 8, 2, 30, 4]
+        numberList = [ 1, 20, 300, 4000]
     }
     
     override func tearDown() {
@@ -41,16 +41,19 @@ class LinkedListTest: XCTestCase {
         }
     }
 
-    func testPrintAllKeys() {
+    func testRemoveLinkAtIndex() {
         let linkedlist: LinkedList<Int> = self.buildLinkedList()
         print("linkAtIndex test: --> \(linkedlist.linkAtIndex(index: 0).key)")
         print("-------test remove --")
         linkedlist.removeLinkAtIndex(index: 1)
         linkedlist.printAllKeys()
+    }
 
-
-
-
+    func testAddLinkAtIndex() {
+        let linkedlist: LinkedList<Int> = self.buildLinkedList()
+        linkedlist.addLinkAtIndex(key:10, index:1)
+        print("---after add ---")
+        linkedlist.printAllKeys()
     }
 
     func testReverseLinkedList() {
