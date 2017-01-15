@@ -87,6 +87,19 @@ class LinkedListTest: XCTestCase {
 
     }
 
+    func testGeneric() {
+        let studentList: LinkedList<Student> = LinkedList<Student>()
+
+        let studentA = Student()
+        studentA.name = "abel"
+        let studentB = Student()
+        studentB.name = "abel1"
+        studentList.addLink(studentA)
+        studentList.addLink(studentB)
+        studentList.printAllKeys()
+        print("####:\(studentList.count)")
+    }
+
     
 
 
