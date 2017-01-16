@@ -15,6 +15,7 @@
 		203AB7FA1BFF5E4C00BC8CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203AB7F81BFF5E4C00BC8CFA /* LaunchScreen.storyboard */; };
 		203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */; };
 		2044DF8F1E2BE60000CCEA06 /* 4StudentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044DF8E1E2BE60000CCEA06 /* 4StudentNode.swift */; };
+		2044DF911E2CF5DF00CCEA06 /* 5AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044DF901E2CF5DF00CCEA06 /* 5AVLTree.swift */; };
 		206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C65A81E03CA4F0030224E /* 2SortingTest.swift */; };
 		20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53C1E06E84B006F940D /* 3LinkedList.swift */; };
 		20C7E53F1E06E8FC006F940D /* 3LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53E1E06E8FC006F940D /* 3LinkedListTest.swift */; };
@@ -42,6 +43,7 @@
 		203AB7FB1BFF5E4C00BC8CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203AB8021BFF5F3100BC8CFA /* 1big_O_notation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1big_O_notation.swift; sourceTree = "<group>"; };
 		2044DF8E1E2BE60000CCEA06 /* 4StudentNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4StudentNode.swift; sourceTree = "<group>"; };
+		2044DF901E2CF5DF00CCEA06 /* 5AVLTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5AVLTree.swift; sourceTree = "<group>"; };
 		206C65A61E03CA4F0030224E /* SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		206C65A81E03CA4F0030224E /* 2SortingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2SortingTest.swift; sourceTree = "<group>"; };
 		206C65AA1E03CA4F0030224E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				20C7E5411E08218A006F940D /* 3LLNode.swift */,
 				2044DF8E1E2BE60000CCEA06 /* 4StudentNode.swift */,
+				2044DF901E2CF5DF00CCEA06 /* 5AVLTree.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203AB7F21BFF5E4C00BC8CFA /* ViewController.swift in Sources */,
+				2044DF911E2CF5DF00CCEA06 /* 5AVLTree.swift in Sources */,
 				20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */,
 				2044DF8F1E2BE60000CCEA06 /* 4StudentNode.swift in Sources */,
 				20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */,
