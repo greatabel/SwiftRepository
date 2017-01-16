@@ -27,8 +27,40 @@ public class AVLTree<T: Comparable> {
         }
 
         if(key < self.key!) {
+            if(self.left != nil) {
+                left?.addNode(key: key)
+            }
+            else{
+                let leftChild: AVLTree = AVLTree()
+                leftChild.key = key
+                leftChild.height = 0
+                self.left = leftChild
+            }
 
         }
+    }
+
+    func getNodeheight(aNode: AVLTree!) -> Int {
+        if(aNode == nil) {
+            return -1
+        }
+        else {
+            return aNode.height
+        }
+    }
+
+    // caclulate the height of a Node
+    func setNodeHeight() -> Bool {
+
+        if(self.key == nil) {
+            print("no key provided..")
+            return false
+        }
+        var nodeHeight: Int = 0
+
+        nodeHeight = max(getNodeheight(aNode: self.left), getNodeheight(aNode: self.right)) + 1
+        self.height = nodeHeight
+        return true
     }
 
 
