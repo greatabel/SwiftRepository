@@ -36,11 +36,114 @@ public class AVLTree<T: Comparable> {
                 leftChild.height = 0
                 self.left = leftChild
             }
+            self.setNodeHeight()
+            print("traversing left side. node \(self.key!) with height: \(self.height)...")
+            self.isValidAVLTree()
 
+        }
+
+        if (key > self.key!) {
+
+            if (self.right != nil) {
+                right?.addNode(key: key)
+            }
+            else {
+                //create a new right node
+                let rightChild : AVLTree = AVLTree()
+                rightChild.key = key
+                rightChild.height = 0
+                self.right = rightChild
+            }
+            //recalculate node height for hierarchy
+            self.setNodeHeight()
+            print("traversing right side. node \(self.key!) with height: \(self.height)...")
+            //check AVL property
+            self.isValidAVLTree()
+        } //end if
+    }
+
+    func isTreeBalanced() -> Bool {
+        if (self.key == nil) {
+            print("no key provided..")
+            return false
+        }
+        if (abs(getNodeHeight(aNode: self.left) - getNodeHeight(aNode: self.right)) <= 1) {
+            return true
+        }
+        else {
+            return false
         }
     }
 
-    func getNodeheight(aNode: AVLTree!) -> Int {
+    func isValidAVLTree() -> Bool! {
+
+        if(self.key == nil) {
+            print("no key provided")
+            return false
+        }
+        if (self.isTreeBalanced() == true) {
+            print("node \(self.key!) already balanced..")
+            return true
+        }
+        else {
+
+            let childToUse : AVLTree = AVLTree()
+            childToUse.height = 0
+            childToUse.key = self.key
+            if (getNodeHeight(aNode: self.left) - getNodeHeight(aNode: self.right) > 1) {
+
+                print("\n starting right rotation on \(self.key!)..")
+
+
+                //reset the root node
+                self.key = self.left?.key
+                self.height = getNodeHeight(aNode: self.left)
+
+
+                //assign the new right node
+                self.right = childToUse
+
+
+                //adjust the left node
+                self.left = self.left?.left
+                self.left?.height = 0
+
+                print("root is: \(self.key!) | left is : \(self.left!.key!) | right is : \(self.right!.key!)..")
+
+                return true
+
+            }
+
+
+            if (getNodeHeight(aNode: self.right) - getNodeHeight(aNode: self.left) > 1) {
+
+                print("\n starting left rotation on \(self.key!)..")
+
+                //reset the root node
+                self.key = self.right?.key
+                self.height = getNodeHeight(aNode: self.right)
+
+
+                //assign the new left node
+                self.left = childToUse
+
+
+                //adjust the right node
+                self.right = self.right?.right
+                self.right?.height = 0
+
+                print("root is: \(self.key!) | left is : \(self.left!.key!) | right is : \(self.right!.key!)..")
+
+                return true
+                
+            }
+            return nil
+
+        }
+
+    }
+
+    func getNodeHeight(aNode: AVLTree!) -> Int {
         if(aNode == nil) {
             return -1
         }
@@ -58,7 +161,7 @@ public class AVLTree<T: Comparable> {
         }
         var nodeHeight: Int = 0
 
-        nodeHeight = max(getNodeheight(aNode: self.left), getNodeheight(aNode: self.right)) + 1
+        nodeHeight = max(getNodeHeight(aNode: self.left), getNodeHeight(aNode: self.right)) + 1
         self.height = nodeHeight
         return true
     }
