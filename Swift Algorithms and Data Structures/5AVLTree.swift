@@ -36,9 +36,9 @@ public class AVLTree<T: Comparable> {
                 leftChild.height = 0
                 self.left = leftChild
             }
-            self.setNodeHeight()
+            print(self.setNodeHeight())
             print("traversing left side. node \(self.key!) with height: \(self.height)...")
-            self.isValidAVLTree()
+            print(self.isValidAVLTree())
 
         }
 
@@ -55,10 +55,10 @@ public class AVLTree<T: Comparable> {
                 self.right = rightChild
             }
             //recalculate node height for hierarchy
-            self.setNodeHeight()
+            print(self.setNodeHeight())
             print("traversing right side. node \(self.key!) with height: \(self.height)...")
             //check AVL property
-            self.isValidAVLTree()
+            print(self.isValidAVLTree())
         } //end if
     }
 

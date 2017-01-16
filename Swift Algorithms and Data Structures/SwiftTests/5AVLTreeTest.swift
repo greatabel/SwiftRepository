@@ -1,3 +1,4 @@
+import UIKit
 import XCTest
 
 
@@ -20,4 +21,10 @@ class AVLTreeTest: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
+    func buildAVLTree(numberList: Array<Int>) {
+        let avlTest: AVLTree<Int> = AVLTree<Int>()
+        XCTAssertNotNil(avlTest, "avl instance not created..")
+    }
+
 }
