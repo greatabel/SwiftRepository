@@ -1,7 +1,7 @@
 import Foundation
 
 
-public class AVLTree<T> {
+public class AVLTree<T: Comparable> {
 
     var key: T?
     var left: AVLTree?
@@ -17,7 +17,19 @@ public class AVLTree<T> {
         let right = self.right?.count ?? 0
         return left + 1 + right
     }
-    
+
+    func addNode(key: T){
+
+        if(self.key == nil) {
+            self.key = key
+            self.height = 0
+            return
+        }
+
+        if(key < self.key!) {
+
+        }
+    }
 
 
 }
