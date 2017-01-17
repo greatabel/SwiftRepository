@@ -41,8 +41,8 @@ class AVLTreeTest: XCTestCase {
             avlTest.addNode(key: number)
         }
 
-        //traverse the completed tree
-//        avlTest.traverse()
+//        traverse the completed tree
+        avlTest.traverse()
 
         //tree balance check
         XCTAssertTrue(avlTest.isTreeBalanced(), "tree is unbalanced..")
