@@ -59,4 +59,45 @@ class AVLTreeTest: XCTestCase {
 
     }
 
+    func traverseFormula(node: AVLTree<Int>) -> Int {
+
+        let results = node.key! + node.height
+        if node.height > 0 && node.key! == results {
+            XCTFail("closure update failed..")
+        }
+        return results
+    }
+
+    func testAVLTraverseFunction() {
+
+        let avlTest = self.buildClosureTree()
+        print("avlTest.traverse(formula: traverseFormula)---------->")
+        //invoke formula function
+        avlTest.traverse(formula: traverseFormula)
+
+    }
+
+    func buildClosureTree() -> AVLTree<Int> {
+
+
+        //test for new instance
+        let avlTest: AVLTree<Int> = AVLTree<Int>()
+        XCTAssertNotNil(avlTest, "avl instance not created..")
+
+
+        //provide a balanced list
+        let numberList : Array<Int> = [8, 5, 10, 3, 12, 9, 6, 16]
+
+
+        //build the tree list
+        for number in numberList {
+            print("adding \(number) to avl tree...")
+            avlTest.addNode(key: number)
+        }
+        //tree balance check
+        XCTAssertTrue(avlTest.isTreeBalanced(), "tree is unbalanced..")
+        return avlTest
+
+    }
+
 }
