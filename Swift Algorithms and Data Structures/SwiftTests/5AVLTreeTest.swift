@@ -49,4 +49,14 @@ class AVLTreeTest: XCTestCase {
 
     }
 
+    //essay documentation - single right rotation - O(n)
+    func testAVLEssayExample() {
+
+        let numberList : Array<Int> = [29, 26, 23]
+
+        //build and balance model
+        self.buildAVLTree(numberList: numberList)
+
+    }
+
 }
