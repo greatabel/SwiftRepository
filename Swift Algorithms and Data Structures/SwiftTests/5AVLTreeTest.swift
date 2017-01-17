@@ -44,7 +44,6 @@ class AVLTreeTest: XCTestCase {
         //traverse the completed tree
 //        avlTest.traverse()
 
-
         //tree balance check
         XCTAssertTrue(avlTest.isTreeBalanced(), "tree is unbalanced..")
 

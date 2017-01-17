@@ -166,5 +166,20 @@ public class AVLTree<T: Comparable> {
         return true
     }
 
+    func traverse() {
+
+        if self.key == nil {
+            print("no key provided...")
+            return
+        }
+        if self.left != nil {
+            left?.traverse()
+        }
+        print("The value is: \(self.key!) - height: \(self.height)..")
+        if self.right != nil {
+            right?.traverse()
+        }
+    }
+
 
 }
