@@ -181,5 +181,31 @@ public class AVLTree<T: Comparable> {
         }
     }
 
+    //use dfs with trailing closure to update all values
+    func traverse(formula: (AVLTree<T>) -> T) {
+
+
+        //check for a nil condition
+        if  self.key == nil {
+            print("no key provided..")
+            return
+        }
+        //process the left side
+        if self.left != nil {
+            left?.traverse(formula: formula)
+        }
+        //invoke formula - apply results
+        let newKey: T = formula(self)
+        self.key! = newKey
+        print("...the updated value is: \(self.key!) - height: \(self.height)..")
+
+        //process the right side
+        if self.right != nil {
+            right?.traverse(formula: formula)
+        }
+
+
+    }
+
 
 }
