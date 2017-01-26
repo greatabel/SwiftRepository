@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201EDA251E3A6C5000A969EC /* 6TrieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA241E3A6C5000A969EC /* 6TrieTest.swift */; };
 		20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20238A481BFF78DE006593D4 /* 2sorting.swift */; };
 		203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB7EF1BFF5E4C00BC8CFA /* AppDelegate.swift */; };
 		203AB7F21BFF5E4C00BC8CFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB7F11BFF5E4C00BC8CFA /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		201EDA241E3A6C5000A969EC /* 6TrieTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6TrieTest.swift; sourceTree = "<group>"; };
 		20238A481BFF78DE006593D4 /* 2sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2sorting.swift; sourceTree = "<group>"; };
 		203AB7EC1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Algorithms and Data Structures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		203AB7EF1BFF5E4C00BC8CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				20C7E53E1E06E8FC006F940D /* 3LinkedListTest.swift */,
 				206C65AA1E03CA4F0030224E /* Info.plist */,
 				2044DF921E2D32BD00CCEA06 /* 5AVLTreeTest.swift */,
+				201EDA241E3A6C5000A969EC /* 6TrieTest.swift */,
 			);
 			path = SwiftTests;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201EDA251E3A6C5000A969EC /* 6TrieTest.swift in Sources */,
 				20C7E53F1E06E8FC006F940D /* 3LinkedListTest.swift in Sources */,
 				2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */,
 				206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */,

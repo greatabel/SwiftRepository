@@ -11,7 +11,11 @@ public class Trie {
 
         var current: TrieNode = root
         while(keyword.characters.count != current.level) {
-            
+            var childToUse: TrieNode!
+            var index = keyword.index(keyword.startIndex, offsetBy: current.level + 1)
+            let searchKey: String = keyword.substring(to: index)
+            print("current has \(current.children.count) children..")
+
         }
 
     }
