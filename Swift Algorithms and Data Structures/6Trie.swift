@@ -46,4 +46,44 @@ public class Trie {
         }
     }
 
+
+
+    func findWord(keyword: String) -> Array<String>! {
+        if (keyword.characters.count == 0) {
+            return nil
+        }
+
+        var current: TrieNode = root
+        var wordList: Array<String> = Array<String>()
+
+        while ( keyword.characters.count != current.level ) {
+            var childToUse: TrieNode!
+            let index = keyword.index(keyword.startIndex, offsetBy: current.level + 1)
+            let searchKey: String = keyword.substring(to: index)
+            print("looking for prefix: \(searchKey)..")
+
+            for child in current.children {
+                if(child.key == searchKey) {
+                    childToUse = child
+                    current = childToUse
+                    break
+                }
+            }
+            if childToUse == nil {
+                return nil
+            }
+        }
+
+        if((current.key == keyword) && (current.isFinal)){
+            wordList.append(current.key)
+        }
+        for child in current.children {
+            if (child.isFinal == true) {
+                wordList.append(child.key)
+            }
+        }
+
+        return wordList
+    }
+
 }
