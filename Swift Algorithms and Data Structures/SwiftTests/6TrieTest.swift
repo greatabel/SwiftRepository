@@ -34,8 +34,18 @@ class TrieTest: XCTestCase {
         }
     }
 
-    func testCount() {
+    func testFindWithWord() {
 
+        let wordList: Array<String>! = testTrie.findWord(keyword: "Ba")
+        for word in wordList {
+            print("\(word) found in trie..")
+        }
+
+    }
+
+    func testCount() {
+         XCTAssert(testTrie.findWord(keyword: "Ba").count == 2, "Expected tree's size to be " +
+            "5 , got \(testTrie.findWord(keyword: "Ba").count) instead.")
     }
 
 }
