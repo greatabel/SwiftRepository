@@ -12,12 +12,34 @@ public class Trie {
         var current: TrieNode = root
         while(keyword.characters.count != current.level) {
             var childToUse: TrieNode!
-            var index = keyword.index(keyword.startIndex, offsetBy: current.level + 1)
+            let index = keyword.index(keyword.startIndex, offsetBy: current.level + 1)
             let searchKey: String = keyword.substring(to: index)
             print("current has \(current.children.count) children..")
 
-        }
+            for child in current.children {
 
+                if(child.key == searchKey) {
+                    childToUse = child
+                    
+                }
+            }
+            if( childToUse == nil) {
+                // create a new node
+                childToUse = TrieNode()
+                childToUse.key = searchKey
+                childToUse.level = current.level + 1
+                current.children.append(childToUse)
+            }
+            current = childToUse
+
+
+        } // end of while
+
+        if(keyword.characters.count == current.level) {
+            current.isFinal = true
+            print("end of word reached!")
+            return
+        }
     }
 
 }
