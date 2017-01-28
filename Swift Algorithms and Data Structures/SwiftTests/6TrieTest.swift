@@ -34,9 +34,18 @@ class TrieTest: XCTestCase {
         }
     }
 
-    func testFindWithWord() {
+    func testFindWithPrefix() {
 
         let wordList: Array<String>! = testTrie.findWord(keyword: "Ba")
+        for word in wordList {
+            print("\(word) found in trie..")
+        }
+
+    }
+
+    func testFindWithWord() {
+
+        let wordList: Array<String>! = testTrie.findWord(keyword: "Ball")
         for word in wordList {
             print("\(word) found in trie..")
         }
