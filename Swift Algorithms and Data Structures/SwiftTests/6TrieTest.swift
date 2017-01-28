@@ -9,8 +9,7 @@ class TrieTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        XCTAssertNil(testTrie, "Trie instance not correctly initialized..")
+
 
         //add words to data structure
         testTrie.addWord(keyword: "Ball")
@@ -18,6 +17,9 @@ class TrieTest: XCTestCase {
         testTrie.addWord(keyword: "Ballard")
         testTrie.addWord(keyword: "Bat")
         testTrie.addWord(keyword: "Bar")
+
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        XCTAssertNotNil(testTrie, "Trie instance not correctly intialized..")
     }
 
     override func tearDown() {
