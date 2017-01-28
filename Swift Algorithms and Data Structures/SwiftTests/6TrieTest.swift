@@ -48,4 +48,20 @@ class TrieTest: XCTestCase {
             "5 , got \(testTrie.findWord(keyword: "Ba").count) instead.")
     }
 
+    //testing false search results
+    func testFindNoExist() {
+        let keyword: String = "Barstool"
+        let wordList: Array<String>! = testTrie.findWord(keyword: keyword)
+
+        if (wordList == nil) {
+            print("keyword \(keyword) not found in trie..")
+        }
+
+        else {
+            for word in wordList {
+                print("\(word) found in trie..")
+            }
+        }
+    } //end function
+
 }
