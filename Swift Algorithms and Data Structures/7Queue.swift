@@ -6,7 +6,12 @@ public class Queue<T> {
 
     var count: Int {
 
-
+        if(top.key == nil ) {
+            return 0
+        }
+        else {
+            return 1
+        }
 
         return 0
     }
