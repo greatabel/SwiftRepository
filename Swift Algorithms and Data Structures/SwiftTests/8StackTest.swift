@@ -25,6 +25,7 @@ class StackTest: XCTestCase {
 
     func test_Stack() {
         let newStack: Stack<Int>! = Stack<Int>()
+        print("newStack.count= \(newStack.count)")
 
     }
 
