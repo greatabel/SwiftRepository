@@ -11,6 +11,8 @@
 		201EDA271E3CDC3000A969EC /* 7QNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA261E3CDC3000A969EC /* 7QNode.swift */; };
 		201EDA291E3CDC7A00A969EC /* 7Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA281E3CDC7A00A969EC /* 7Queue.swift */; };
 		201EDA2B1E3F679F00A969EC /* 7QueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA2A1E3F679F00A969EC /* 7QueueTest.swift */; };
+		201EDA2F1E3F8F0B00A969EC /* 8Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA2E1E3F8F0B00A969EC /* 8Stack.swift */; };
+		201EDA301E3F8F0B00A969EC /* 8Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA2E1E3F8F0B00A969EC /* 8Stack.swift */; };
 		20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20238A481BFF78DE006593D4 /* 2sorting.swift */; };
 		203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB7EF1BFF5E4C00BC8CFA /* AppDelegate.swift */; };
 		203AB7F21BFF5E4C00BC8CFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB7F11BFF5E4C00BC8CFA /* ViewController.swift */; };
@@ -44,6 +46,7 @@
 		201EDA261E3CDC3000A969EC /* 7QNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 7QNode.swift; sourceTree = "<group>"; };
 		201EDA281E3CDC7A00A969EC /* 7Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 7Queue.swift; sourceTree = "<group>"; };
 		201EDA2A1E3F679F00A969EC /* 7QueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 7QueueTest.swift; sourceTree = "<group>"; };
+		201EDA2E1E3F8F0B00A969EC /* 8Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8Stack.swift; sourceTree = "<group>"; };
 		20238A481BFF78DE006593D4 /* 2sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2sorting.swift; sourceTree = "<group>"; };
 		203AB7EC1BFF5E4C00BC8CFA /* Swift Algorithms and Data Structures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Algorithms and Data Structures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		203AB7EF1BFF5E4C00BC8CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 				20C7E53C1E06E84B006F940D /* 3LinkedList.swift */,
 				20B235771E37A9990027B084 /* 6Trie.swift */,
 				201EDA281E3CDC7A00A969EC /* 7Queue.swift */,
+				201EDA2E1E3F8F0B00A969EC /* 8Stack.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -264,6 +268,7 @@
 				20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */,
 				2044DF8F1E2BE60000CCEA06 /* 4StudentNode.swift in Sources */,
 				20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */,
+				201EDA2F1E3F8F0B00A969EC /* 8Stack.swift in Sources */,
 				20B235761E37A8F00027B084 /* 6TrieNode.swift in Sources */,
 				203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */,
 				203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */,
@@ -280,6 +285,7 @@
 				201EDA271E3CDC3000A969EC /* 7QNode.swift in Sources */,
 				201EDA2B1E3F679F00A969EC /* 7QueueTest.swift in Sources */,
 				2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */,
+				201EDA301E3F8F0B00A969EC /* 8Stack.swift in Sources */,
 				206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */,
 				201EDA291E3CDC7A00A969EC /* 7Queue.swift in Sources */,
 			);
