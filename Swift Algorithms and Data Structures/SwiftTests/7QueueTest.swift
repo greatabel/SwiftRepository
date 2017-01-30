@@ -23,6 +23,10 @@ class QueueTest: XCTestCase {
         }
     }
 
+    func testDeQueue() {
+        let q: Queue<Int>! = buildQueue()
+    }
+
     func buildQueue() -> Queue<Int>! {
 
         let newQ: Queue<Int>! = Queue<Int>()
@@ -30,7 +34,11 @@ class QueueTest: XCTestCase {
         XCTAssert(newQ.count == 0, "new queue instance count is 0")
 
         for s in numberList {
-
+            newQ.enQueue(key: s)
+            print("count is: \(newQ.count)")
+        }
+        if newQ.count != numberList.count {
+            XCTFail("queue build failed")
         }
         return newQ
     }
