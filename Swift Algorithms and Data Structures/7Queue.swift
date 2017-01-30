@@ -31,4 +31,44 @@ public class Queue<T> {
             return true
         }
     }
+
+    func peek() -> T? {
+        return top.key!
+    }
+
+    func enQueue(key: T) {
+
+        if(top == nil ) {
+            top = QNode<T>()
+        }
+
+        if(top.key == nil) {
+            top.key = key
+            return
+        }
+
+        let childToUse: QNode<T> = QNode<T>()
+        var current: QNode = top
+
+        while(current.next != nil) {
+            current = current.next!
+        }
+        childToUse.key = key
+        current.next = childToUse
+    }
+
+    func deQueue() -> T? {
+        let topitem: T? = self.top?.key
+        if( topitem == nil ) {
+            return nil
+        }
+
+        let queueitem: T? = top.key!
+        if let nextitem = top.next {
+            top = nextitem
+        } else {
+            top = QNode<T>()
+        }
+        return queueitem
+    }
 }
