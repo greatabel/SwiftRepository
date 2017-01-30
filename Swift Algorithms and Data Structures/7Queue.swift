@@ -10,10 +10,16 @@ public class Queue<T> {
             return 0
         }
         else {
-            return 1
-        }
+            var current: QNode<T> = top
+            var x: Int = 1
 
-        return 0
+            while(current.next != nil ) {
+                current = current.next!
+                x += 1
+            }
+            return x
+        }
+        
     }
 
     func isEmpty() -> Bool {
