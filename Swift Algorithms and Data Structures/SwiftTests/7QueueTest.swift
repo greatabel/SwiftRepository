@@ -25,6 +25,13 @@ class QueueTest: XCTestCase {
 
     func testDeQueue() {
         let q: Queue<Int>! = buildQueue()
+
+        XCTAssertNotNil(q, "queue instance not present..")
+
+        for _ in numberList {
+            print("queue count: \(q.count)")
+            print("here-> \(q.deQueue())")
+        }
     }
 
     func buildQueue() -> Queue<Int>! {
