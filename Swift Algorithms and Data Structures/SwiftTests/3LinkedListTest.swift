@@ -65,25 +65,47 @@ class LinkedListTest: XCTestCase {
         linkedlist.printAllKeys()
     }
 
-    func method_map(number: LLNode<Int>) -> Int {
+    func method_map(_ number: LLNode<Int>) -> Int {
         return number.key + 1
     }
     func testMap() {
         let linkedlist: LinkedList<Int> = self.buildLinkedList()
-        let afterMap_List = linkedlist.map(formula: method_map)
+//        let afterMap_List = linkedlist.map(method_map)
+        let afterMap_List = linkedlist.map { node in
+
+            var value: Int!
+
+            //evaluate based on switch
+            switch node.key {
+            case 0..<5:
+                value = node.key * 2
+            case 5...10:
+                value = node.key * 3
+            default:
+                value = node.key
+            }
+
+            return value
+
+
+        } //end closure
         print("map-->")
         afterMap_List?.printAllKeys()
     }
 
-    func method_filter(number: LLNode<Int>) -> Bool {
+    func method_filter(_ number: LLNode<Int>) -> Bool {
         return number.key >= 10
     }
 
     func testFilter() {
         let linkedlist: LinkedList<Int> = self.buildLinkedList()
-        let afterFilter_List = linkedlist.filter(formula: method_filter)
+//        let afterFilter_List = linkedlist.filter(method_filter)
+        guard let afterFilter_List = linkedlist.filter({ node in
+            return node.key > 5
+        }) else { return }
+
         print("--after filter--")
-        afterFilter_List?.printAllKeys()
+        afterFilter_List.printAllKeys()
 
     }
 

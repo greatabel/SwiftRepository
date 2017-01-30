@@ -4,7 +4,6 @@ open class LinkedList<T: Equatable> {
 
     private var head: LLNode<T> = LLNode<T>()
 
-
     func printAllKeys() {
         var current: LLNode! = head
         print("--")
@@ -181,7 +180,7 @@ open class LinkedList<T: Equatable> {
         
     }//end function
 
-    func map(formula: (LLNode<T>) -> T) -> LinkedList<T>! {
+    func map(_ formula: (LLNode<T>) -> T) -> LinkedList<T>! {
 
         if head.key == nil {
             return nil
@@ -202,7 +201,7 @@ open class LinkedList<T: Equatable> {
         return results
     }
 
-    func filter(formula: (LLNode<T>) -> Bool) -> LinkedList<T>! {
+    func filter(_ formula: (LLNode<T>) -> Bool) -> LinkedList<T>! {
 
         if head.key == nil {
             return nil
