@@ -26,6 +26,8 @@
 		2044DF911E2CF5DF00CCEA06 /* 5AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044DF901E2CF5DF00CCEA06 /* 5AVLTree.swift */; };
 		2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044DF921E2D32BD00CCEA06 /* 5AVLTreeTest.swift */; };
 		206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C65A81E03CA4F0030224E /* 2SortingTest.swift */; };
+		20763FD41E40A087006364D5 /* 9Vertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD31E40A087006364D5 /* 9Vertext.swift */; };
+		20763FD51E40A087006364D5 /* 9Vertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD31E40A087006364D5 /* 9Vertext.swift */; };
 		20B235761E37A8F00027B084 /* 6TrieNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B235751E37A8F00027B084 /* 6TrieNode.swift */; };
 		20B235781E37A9990027B084 /* 6Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B235771E37A9990027B084 /* 6Trie.swift */; };
 		20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53C1E06E84B006F940D /* 3LinkedList.swift */; };
@@ -65,6 +67,7 @@
 		206C65A61E03CA4F0030224E /* SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		206C65A81E03CA4F0030224E /* 2SortingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2SortingTest.swift; sourceTree = "<group>"; };
 		206C65AA1E03CA4F0030224E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20763FD31E40A087006364D5 /* 9Vertext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9Vertext.swift; sourceTree = "<group>"; };
 		20B235751E37A8F00027B084 /* 6TrieNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6TrieNode.swift; sourceTree = "<group>"; };
 		20B235771E37A9990027B084 /* 6Trie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6Trie.swift; sourceTree = "<group>"; };
 		20C7E53C1E06E84B006F940D /* 3LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3LinkedList.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 				2044DF901E2CF5DF00CCEA06 /* 5AVLTree.swift */,
 				20B235751E37A8F00027B084 /* 6TrieNode.swift */,
 				201EDA261E3CDC3000A969EC /* 7QNode.swift */,
+				20763FD31E40A087006364D5 /* 9Vertext.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -274,6 +278,7 @@
 				20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */,
 				201EDA401E3F9E8E00A969EC /* 8Stack.swift in Sources */,
 				20B235761E37A8F00027B084 /* 6TrieNode.swift in Sources */,
+				20763FD41E40A087006364D5 /* 9Vertext.swift in Sources */,
 				203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */,
 				203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */,
 				20C7E5421E08218A006F940D /* 3LLNode.swift in Sources */,
@@ -289,6 +294,7 @@
 				201EDA271E3CDC3000A969EC /* 7QNode.swift in Sources */,
 				201EDA2B1E3F679F00A969EC /* 7QueueTest.swift in Sources */,
 				2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */,
+				20763FD51E40A087006364D5 /* 9Vertext.swift in Sources */,
 				201EDA411E3F9E8E00A969EC /* 8Stack.swift in Sources */,
 				206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */,
 				201EDA3B1E3F9B3800A969EC /* 8StackTest.swift in Sources */,
