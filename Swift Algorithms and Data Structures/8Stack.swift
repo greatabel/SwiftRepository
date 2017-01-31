@@ -40,7 +40,19 @@ class Stack<T> {
     }
 
     func push(key: T) {
-        
+        if (top == nil ) {
+            top = LLNode<T>()
+        }
+        if (top.key == nil) {
+            top.key = key
+            return
+        }
+        else {
+            let childToUse: LLNode<T> = LLNode<T>()
+            childToUse.key = key
+            childToUse.next = top
+            top = childToUse
+        }
     }
 
     func pop() -> T? {
