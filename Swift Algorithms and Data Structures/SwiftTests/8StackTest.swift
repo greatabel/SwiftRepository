@@ -24,9 +24,36 @@ class StackTest: XCTestCase {
     }
 
     func test_Stack() {
-        let newStack: Stack<Int>! = Stack<Int>()
-        print("newStack.count= \(newStack.count)")
+        var myStack: Stack<Int>! = Stack<Int>()
+        myStack = self.buildStack()
+        print("newStack.count= \(myStack.count)")
+        if myStack.count == 0 {
+            XCTFail("no stack items avaiable..")
+        }
+        for _ in numberList {
+            print("stack count: \(myStack.count)")
+            print("pop -> \(myStack.pop())")
+        }
 
+        XCTAssertTrue(myStack.isEmpty(), "stack structured not emptied..")
+
+    }
+
+    func buildStack() -> Stack<Int>! {
+        let newStack: Stack<Int>! = Stack<Int>()
+        //test stack instance
+        XCTAssertTrue(newStack.count == 0, "new stack instance not created..")
+        //build stack
+        for s in numberList {
+            print("item: \(s) added..")
+            newStack.push(key: s)
+        }
+        print("stack count is: \(newStack.count)")
+        if newStack.count != numberList.count {
+            XCTFail("stack build failed..")
+            return nil
+        }
+        return newStack
     }
 
 }
