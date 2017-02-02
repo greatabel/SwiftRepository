@@ -133,10 +133,54 @@ public class SwiftGraph {
             }
 
         }
+        return shortestPath
+    }
+
+    ///an optimized version of Dijkstra's shortest path algorthim
+    func processDijkstraWithHeap(source: Vertex, destination: Vertex) -> Path! {
+        let frontier: PathHeap = PathHeap()
+        let finalPaths: PathHeap = PathHeap()
+        //use source edges to create the frontier
+        for e in source.neighbors {
+            let newPath: Path = Path()
+            newPath.destination = e.neighbor
+            newPath.previous = nil
+            newPath.total = e.weight
+            //add the new path to the frontier
+            frontier.enQueue(key: newPath)
+        }
+        //construct the best path
+        var bestPath: Path = Path()
+        while frontier.count != 0 {
+            //use the greedy approach to obtain the best path
+            bestPath = Path()
+            bestPath = frontier.peek()
+            //enumerate the bestPath edges
+            for e in bestPath.destination.neighbors {
+                let newPath: Path = Path()
+                newPath.destination = e.neighbor
+                newPath.previous = bestPath
+                newPath.total = bestPath.total + e.weight
+                //add the new path to the frontier
+                frontier.enQueue(key: newPath)
+            }
+            //preserve the bestPaths that match destination
+            if (bestPath.destination.key == destination.key) {
+                finalPaths.enQueue(key: bestPath)
+            }
+            //remove the bestPath from the frontier
+            frontier.deQueue()
+        } //end while
+
+
+
+        //obtain the shortest path from the heap
+        var shortestPath: Path! = Path()
+        shortestPath = finalPaths.peek()
 
 
         return shortestPath
-        
+
     }
 
 

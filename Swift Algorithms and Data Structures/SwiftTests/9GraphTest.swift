@@ -87,5 +87,19 @@ class SwiftGraphTest: XCTestCase {
             current = current.previous
         }
     }
+
+    //find the shortest path using heapsort operations - O(1)
+    func testDijkstraWithHeaps() {
+
+        let sourceVertex = vertexA
+        let destinationVertex = vertexE
+
+        let shortestPath: Path! = testGraph.processDijkstraWithHeap(source: sourceVertex!,
+                                                                    destination: destinationVertex!)
+        XCTAssertNotNil(shortestPath, "shortest path not found..")
+        printPath(shortestPath: shortestPath)
+
+
+    }
     
 }
