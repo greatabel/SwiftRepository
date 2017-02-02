@@ -8,13 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		201EDA251E3A6C5000A969EC /* 6TrieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA241E3A6C5000A969EC /* 6TrieTest.swift */; };
-		201EDA271E3CDC3000A969EC /* 7QNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA261E3CDC3000A969EC /* 7QNode.swift */; };
-		201EDA291E3CDC7A00A969EC /* 7Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA281E3CDC7A00A969EC /* 7Queue.swift */; };
 		201EDA2B1E3F679F00A969EC /* 7QueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA2A1E3F679F00A969EC /* 7QueueTest.swift */; };
 		201EDA3B1E3F9B3800A969EC /* 8StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA3A1E3F9B3800A969EC /* 8StackTest.swift */; };
 		201EDA401E3F9E8E00A969EC /* 8Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA3F1E3F9E8E00A969EC /* 8Stack.swift */; };
-		201EDA411E3F9E8E00A969EC /* 8Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA3F1E3F9E8E00A969EC /* 8Stack.swift */; };
-		201EDA421E3F9FDE00A969EC /* 3LLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E5411E08218A006F940D /* 3LLNode.swift */; };
 		20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20238A481BFF78DE006593D4 /* 2sorting.swift */; };
 		203AB7F01BFF5E4C00BC8CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB7EF1BFF5E4C00BC8CFA /* AppDelegate.swift */; };
 		203AB7F21BFF5E4C00BC8CFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AB7F11BFF5E4C00BC8CFA /* ViewController.swift */; };
@@ -27,16 +23,13 @@
 		2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044DF921E2D32BD00CCEA06 /* 5AVLTreeTest.swift */; };
 		206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C65A81E03CA4F0030224E /* 2SortingTest.swift */; };
 		20763FD41E40A087006364D5 /* 9Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD31E40A087006364D5 /* 9Vertex.swift */; };
-		20763FD51E40A087006364D5 /* 9Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD31E40A087006364D5 /* 9Vertex.swift */; };
 		20763FD71E40A0C1006364D5 /* 9Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD61E40A0C1006364D5 /* 9Edge.swift */; };
-		20763FD81E40A0C1006364D5 /* 9Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD61E40A0C1006364D5 /* 9Edge.swift */; };
 		20763FDA1E40DDE2006364D5 /* 9Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD91E40DDE2006364D5 /* 9Graph.swift */; };
-		20763FDB1E40DDE2006364D5 /* 9Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FD91E40DDE2006364D5 /* 9Graph.swift */; };
 		20763FE11E433CA1006364D5 /* 9GraphTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FDF1E433CA1006364D5 /* 9GraphTest.swift */; };
 		20763FE31E4342A3006364D5 /* 9Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FE21E4342A3006364D5 /* 9Path.swift */; };
-		20763FE41E4342A3006364D5 /* 9Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FE21E4342A3006364D5 /* 9Path.swift */; };
 		20763FE61E436B2C006364D5 /* 10PathHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FE51E436B2C006364D5 /* 10PathHeap.swift */; };
-		20763FE71E436B2C006364D5 /* 10PathHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FE51E436B2C006364D5 /* 10PathHeap.swift */; };
+		20763FED1E437473006364D5 /* 7Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA281E3CDC7A00A969EC /* 7Queue.swift */; };
+		20763FEE1E437492006364D5 /* 7QNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EDA261E3CDC3000A969EC /* 7QNode.swift */; };
 		20B235761E37A8F00027B084 /* 6TrieNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B235751E37A8F00027B084 /* 6TrieNode.swift */; };
 		20B235781E37A9990027B084 /* 6Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B235771E37A9990027B084 /* 6Trie.swift */; };
 		20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53C1E06E84B006F940D /* 3LinkedList.swift */; };
@@ -294,11 +287,13 @@
 				2044DF911E2CF5DF00CCEA06 /* 5AVLTree.swift in Sources */,
 				20B235781E37A9990027B084 /* 6Trie.swift in Sources */,
 				20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */,
+				20763FED1E437473006364D5 /* 7Queue.swift in Sources */,
 				2044DF8F1E2BE60000CCEA06 /* 4StudentNode.swift in Sources */,
 				20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */,
 				20763FE61E436B2C006364D5 /* 10PathHeap.swift in Sources */,
 				20763FE31E4342A3006364D5 /* 9Path.swift in Sources */,
 				201EDA401E3F9E8E00A969EC /* 8Stack.swift in Sources */,
+				20763FEE1E437492006364D5 /* 7QNode.swift in Sources */,
 				20B235761E37A8F00027B084 /* 6TrieNode.swift in Sources */,
 				20763FD41E40A087006364D5 /* 9Vertex.swift in Sources */,
 				203AB8031BFF5F3100BC8CFA /* 1big_O_notation.swift in Sources */,
@@ -312,22 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20763FD81E40A0C1006364D5 /* 9Edge.swift in Sources */,
 				201EDA251E3A6C5000A969EC /* 6TrieTest.swift in Sources */,
 				20763FE11E433CA1006364D5 /* 9GraphTest.swift in Sources */,
 				20C7E53F1E06E8FC006F940D /* 3LinkedListTest.swift in Sources */,
-				201EDA271E3CDC3000A969EC /* 7QNode.swift in Sources */,
 				201EDA2B1E3F679F00A969EC /* 7QueueTest.swift in Sources */,
 				2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */,
-				20763FE71E436B2C006364D5 /* 10PathHeap.swift in Sources */,
-				20763FE41E4342A3006364D5 /* 9Path.swift in Sources */,
-				20763FD51E40A087006364D5 /* 9Vertex.swift in Sources */,
-				201EDA411E3F9E8E00A969EC /* 8Stack.swift in Sources */,
 				206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */,
-				20763FDB1E40DDE2006364D5 /* 9Graph.swift in Sources */,
 				201EDA3B1E3F9B3800A969EC /* 8StackTest.swift in Sources */,
-				201EDA291E3CDC7A00A969EC /* 7Queue.swift in Sources */,
-				201EDA421E3F9FDE00A969EC /* 3LLNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

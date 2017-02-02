@@ -101,5 +101,38 @@ class SwiftGraphTest: XCTestCase {
 
 
     }
+
+    //breadth-first search
+    func testBFSTraverse() {
+        testGraph.traverse(startingv: vertexA)
+    }
+
+    func traverseFormula( node: inout Vertex) -> () {
+
+        /*
+         notes: the inout parameter is passed by reference.
+         As a result, no return type is required.
+         */
+
+        node.visited = true
+        print("traversed vertex: \(node.key!)..")
+    }
+
+    //breadth-first search with function
+    func testBFSTraverseFunction() {
+        testGraph.traverse(startingv: vertexA, formula: traverseFormula)
+    }
+
+    //breadth-first search with closure expression
+    func testBFSTraverseExpression() {
+        /*
+         notes: the inout parameter is passed by reference.
+         As a result, no return type is required. Also note the trailing closure syntax.
+         */
+        testGraph.traverse(startingv: vertexA) { ( node: inout Vertex) -> () in
+            node.visited = true
+            print("traversed vertex: \(node.key!)..")
+        }
+    }
     
 }

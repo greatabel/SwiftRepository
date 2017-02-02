@@ -183,6 +183,55 @@ public class SwiftGraph {
 
     }
 
+    func traverse(startingv: Vertex, formula: ( _ node: inout Vertex) -> ()) {
+        //establish a new queue
+        let graphQueue: Queue<Vertex> = Queue<Vertex>()
+        //queue a starting vertex
+        graphQueue.enQueue(key: startingv)
+        while !graphQueue.isEmpty() {
+            //traverse the next queued vertex
+            var vitem: Vertex = graphQueue.deQueue() as Vertex!
+            //add unvisited vertices to the queue
+            for e in vitem.neighbors {
+                if e.neighbor.visited == false {
+                    print("adding vertex: \(e.neighbor.key!) to queue..")
+                    graphQueue.enQueue(key: e.neighbor)
+                }
+            }
+            /*
+             notes: this demonstrates how to invoke a closure with an inout parameter.
+             By passing by reference no return value is required.
+             */
+            //invoke formula
+            formula(&vitem)
+        } //end while
+        print("graph traversal complete..")
+    }
+
+    //breadth first search
+    func traverse(startingv: Vertex) {
+        //establish a new queue
+        let graphQueue: Queue<Vertex> = Queue<Vertex>()
+        //queue a starting vertex
+        graphQueue.enQueue(key: startingv)
+        while !graphQueue.isEmpty() {
+            //traverse the next queued vertex
+            let vitem = graphQueue.deQueue() as Vertex!
+            //add unvisited vertices to the queue
+            for e in (vitem?.neighbors)! {
+                if e.neighbor.visited == false {
+                    print("adding vertex: \(e.neighbor.key!) to queue..")
+                    graphQueue.enQueue(key: e.neighbor)
+                }
+            }
+            vitem?.visited = true
+            print("traversed vertex: \(vitem?.key!)..")
+        } //end while
+        print("graph traversal complete..")
+    } //end function
+    
+
+
 
 
 }
