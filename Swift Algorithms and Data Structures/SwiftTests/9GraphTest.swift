@@ -59,5 +59,33 @@ class SwiftGraphTest: XCTestCase {
         neighborTest(source: vertexB, neighbor: vertexC)
         neighborTest(source: vertexD, neighbor: vertexE)
     }
+
+    func testDijkstra() {
+
+        let sourceVertex = vertexA
+        let destinationVertex = vertexE
+
+        let shortestPath: Path! = testGraph.processDijkstra(source: sourceVertex!, destination: destinationVertex!)
+        XCTAssertNotNil(shortestPath, "shortest path not found..")
+
+        printPath(shortestPath: shortestPath)
+
+
+    }
+
+    //reverse a path data structure
+    func printPath(shortestPath: Path!) {
+
+        var reversedPath: Path! = Path()
+        var current: Path! = Path()
+        //reverse the sequence of paths
+        reversedPath = testGraph.reversePath(head: shortestPath, source: vertexA)
+        current = reversedPath
+        //iterate and print each path sequence
+        while (current != nil) {
+            print("The path is : \(current.destination.key!) with a total of : \(current.total)..")
+            current = current.previous
+        }
+    }
     
 }

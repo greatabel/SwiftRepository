@@ -39,6 +39,106 @@ public class SwiftGraph {
         }
     }
 
+    func reversePath( head: Path!, source: Vertex) -> Path! {
+        var head = head
+        if head == nil {
+            return nil
+        }
+        var current: Path! = head
+        var prev: Path!
+        var next: Path!
+        while(current != nil) {
+            next = current.previous
+            current.previous = prev
+            prev = current
+            current = next
+        }
+        //append the source path to the sequence
+        let sourcePath: Path = Path()
+        sourcePath.destination = source
+        sourcePath.previous = prev
+        sourcePath.total = nil
+
+        head = sourcePath
+        return head
+
+    }
+
+    //process Dijkstra's shortest path algorthim
+    func processDijkstra(source: Vertex, destination: Vertex) -> Path? {
+
+
+        var frontier: Array<Path> = Array<Path>()
+        var finalPaths: Array<Path> = Array<Path>()
+
+
+        //use source edges to create the frontier
+        for e in source.neighbors {
+
+            let newPath: Path = Path()
+            newPath.destination = e.neighbor
+            newPath.previous = nil
+            newPath.total = e.weight
+            //add the new path to the frontier
+            frontier.append(newPath)
+        }
+        //construct the best path
+        var bestPath: Path = Path()
+        while frontier.count != 0 {
+
+            //support path changes using the greedy approach
+            bestPath = Path()
+            var pathIndex: Int = 0
+            for x in 0..<frontier.count {
+
+                let itemPath: Path = frontier[x]
+
+                if  (bestPath.total == nil) || (itemPath.total < bestPath.total) {
+                    bestPath = itemPath
+                    pathIndex = x
+                }
+
+            }
+            //enumerate the bestPath edges
+            for e in bestPath.destination.neighbors {
+
+                let newPath: Path = Path()
+
+                newPath.destination = e.neighbor
+                newPath.previous = bestPath
+                newPath.total = bestPath.total + e.weight
+                //add the new path to the frontier
+                frontier.append(newPath)
+            }
+            //preserve the bestPath
+            finalPaths.append(bestPath)
+            //remove the bestPath from the frontier
+            frontier.remove(at: pathIndex)
+        } //end while
+
+
+
+        //establish the shortest path as an optional
+        var shortestPath: Path! = Path()
+
+
+        for itemPath in finalPaths {
+
+            if (itemPath.destination.key == destination.key) {
+
+                if  (shortestPath.total == nil) || (itemPath.total < shortestPath.total) {
+                    shortestPath = itemPath
+                }
+
+            }
+
+        }
+
+
+        return shortestPath
+        
+    }
+
 
 
 }
