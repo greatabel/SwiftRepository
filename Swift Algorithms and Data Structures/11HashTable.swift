@@ -37,6 +37,32 @@ public class HashTable {
 
     }
 
+    func findWord(firstname: String, lastname: String) -> Bool! {
+        var hashindex: Int!
+        var fullname: String!
+        fullname = firstname + lastname
+        hashindex = self.createHash(fullname)
+
+        if buckets[hashindex] == nil {
+            print("name not found in hash table..")
+            return false
+        }
+        else {
+            var current: HashNode! = buckets[hashindex]
+            while(current != nil){
+                let hashName: String! = current.firstname + current.lastname
+                if (hashName == fullname) {
+                    print("\(current.firstname) \(current.lastname) found in hash table..")
+                    return true
+                }
+                print("searching for word through chained list..")
+                current = current.next
+            }
+
+        }
+        return false
+    }
+
     func createHash(_ fullname: String) -> Int! {
         var remainder: Int = 0
         var divisor: Int = 0
