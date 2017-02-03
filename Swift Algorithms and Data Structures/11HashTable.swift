@@ -8,7 +8,7 @@ public class HashTable {
         self.buckets = Array<HashNode!>(repeating:nil, count: capacity)
     }
 
-    func addWord(firstname: String, lastname: String) {
+    func addWord(_ firstname: String, _ lastname: String) {
         var hashindex: Int!
         var fullname: String!
 
@@ -37,7 +37,7 @@ public class HashTable {
 
     }
 
-    func findWord(firstname: String, lastname: String) -> Bool! {
+    func findWord(_ firstname: String,_ lastname: String) -> Bool! {
         var hashindex: Int!
         var fullname: String!
         fullname = firstname + lastname
