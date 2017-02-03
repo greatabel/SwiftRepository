@@ -53,11 +53,11 @@ class SwiftGraphTest: XCTestCase {
     }
 
     func testVertexNeighbors() {
-        neighborTest(source: vertexA, neighbor: vertexD)
-        neighborTest(source: vertexA, neighbor: vertexB)
-        neighborTest(source: vertexB, neighbor: vertexD)
-        neighborTest(source: vertexB, neighbor: vertexC)
-        neighborTest(source: vertexD, neighbor: vertexE)
+        print(neighborTest(source: vertexA, neighbor: vertexD))
+        print(neighborTest(source: vertexA, neighbor: vertexB))
+        print(neighborTest(source: vertexB, neighbor: vertexD))
+        print(neighborTest(source: vertexB, neighbor: vertexC))
+        print(neighborTest(source: vertexD, neighbor: vertexE))
     }
 
     func testDijkstra() {
