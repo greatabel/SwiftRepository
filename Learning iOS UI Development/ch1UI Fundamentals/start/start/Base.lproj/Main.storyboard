@@ -38,6 +38,10 @@
                                 <rect key="frame" x="303" y="28" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWb-Wt-RQm"/>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2T-iE-xmq"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rf7-t8-sem" userLabel="viewContainer">
                                 <rect key="frame" x="0.0" y="100" width="375" height="376"/>
