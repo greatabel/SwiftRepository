@@ -33,6 +33,8 @@
 		20763FFB1E437895006364D5 /* 11HashNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FFA1E437895006364D5 /* 11HashNode.swift */; };
 		20763FFE1E4378D7006364D5 /* 11HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20763FFD1E4378D7006364D5 /* 11HashTable.swift */; };
 		207640021E448788006364D5 /* 11HashTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207640001E448788006364D5 /* 11HashTest.swift */; };
+		208216271E448AB800FFE62B /* 12Bloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208216261E448AB800FFE62B /* 12Bloom.swift */; };
+		208216291E448B9900FFE62B /* 12BloomTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208216281E448B9900FFE62B /* 12BloomTest.swift */; };
 		20B235761E37A8F00027B084 /* 6TrieNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B235751E37A8F00027B084 /* 6TrieNode.swift */; };
 		20B235781E37A9990027B084 /* 6Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B235771E37A9990027B084 /* 6Trie.swift */; };
 		20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E53C1E06E84B006F940D /* 3LinkedList.swift */; };
@@ -81,6 +83,8 @@
 		20763FFA1E437895006364D5 /* 11HashNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 11HashNode.swift; sourceTree = "<group>"; };
 		20763FFD1E4378D7006364D5 /* 11HashTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 11HashTable.swift; sourceTree = "<group>"; };
 		207640001E448788006364D5 /* 11HashTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 11HashTest.swift; sourceTree = "<group>"; };
+		208216261E448AB800FFE62B /* 12Bloom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 12Bloom.swift; sourceTree = "<group>"; };
+		208216281E448B9900FFE62B /* 12BloomTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 12BloomTest.swift; sourceTree = "<group>"; };
 		20B235751E37A8F00027B084 /* 6TrieNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6TrieNode.swift; sourceTree = "<group>"; };
 		20B235771E37A9990027B084 /* 6Trie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6Trie.swift; sourceTree = "<group>"; };
 		20C7E53C1E06E84B006F940D /* 3LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3LinkedList.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				201EDA3A1E3F9B3800A969EC /* 8StackTest.swift */,
 				20763FDF1E433CA1006364D5 /* 9GraphTest.swift */,
 				207640001E448788006364D5 /* 11HashTest.swift */,
+				208216281E448B9900FFE62B /* 12BloomTest.swift */,
 			);
 			path = SwiftTests;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				20763FE21E4342A3006364D5 /* 9Path.swift */,
 				20763FE51E436B2C006364D5 /* 10PathHeap.swift */,
 				20763FFD1E4378D7006364D5 /* 11HashTable.swift */,
+				208216261E448AB800FFE62B /* 12Bloom.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				20B235781E37A9990027B084 /* 6Trie.swift in Sources */,
 				20C7E53D1E06E84B006F940D /* 3LinkedList.swift in Sources */,
 				20763FED1E437473006364D5 /* 7Queue.swift in Sources */,
+				208216271E448AB800FFE62B /* 12Bloom.swift in Sources */,
 				20763FFE1E4378D7006364D5 /* 11HashTable.swift in Sources */,
 				2044DF8F1E2BE60000CCEA06 /* 4StudentNode.swift in Sources */,
 				20238A491BFF78DE006593D4 /* 2sorting.swift in Sources */,
@@ -322,6 +329,7 @@
 				207640021E448788006364D5 /* 11HashTest.swift in Sources */,
 				20763FE11E433CA1006364D5 /* 9GraphTest.swift in Sources */,
 				20C7E53F1E06E8FC006F940D /* 3LinkedListTest.swift in Sources */,
+				208216291E448B9900FFE62B /* 12BloomTest.swift in Sources */,
 				201EDA2B1E3F679F00A969EC /* 7QueueTest.swift in Sources */,
 				2044DF931E2D32BD00CCEA06 /* 5AVLTreeTest.swift in Sources */,
 				206C65A91E03CA4F0030224E /* 2SortingTest.swift in Sources */,

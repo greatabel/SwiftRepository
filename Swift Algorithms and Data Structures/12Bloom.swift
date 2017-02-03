@@ -1,0 +1,177 @@
+import Foundation
+
+class Bloom<T> {
+
+    private var bloomset: Array<Bool?>
+    private var empty: Bool
+
+
+    /*
+     note: unlike other collections, the capacity of 100 does not limit the
+     data structure to hold a limited number of items.
+     */
+
+    private var capacity: Int = 100
+
+
+
+    init() {
+        self.bloomset = Array<Bool!>(repeating: nil, count: capacity)
+        self.empty = true
+    }
+
+
+
+    //initialize with items
+    init(items: Array<T>) {
+
+        self.bloomset = Array<Bool!>(repeating: nil, count: capacity)
+        self.empty = true
+
+        for s in items {
+            let result = self.addElement(item: s)
+            print(result)
+        }
+
+    }
+
+
+    var isEmpty: Bool {
+        return empty
+    }
+
+
+
+    /*
+     note: As shown, the concept of "adding" item elements to a bloom filter doesn't
+     take place. The structure's goal is to test for membership.
+     */
+
+
+    func addElement(item: T) -> Bool {
+
+
+        var position: (first: Int, second: Int, third: Int)
+
+
+        //establish position "spread"
+        position.first = hash(item)
+        position.second = hash(position.first)
+        position.third = hash(position.second)
+
+
+        print("\(item) positions are: \(position)")
+
+
+
+        /*
+         note: All positions are checked for existing membership. As a result, it is valid for
+         their to be 2 or less overlaping positions.
+         */
+
+
+        //gaurd against collision
+        if (bloomset[position.first] != nil) && (bloomset[position.second] != nil) && (bloomset[position.third] != nil) {
+            print("word collision occurred..")
+            return false
+        }
+
+        else {
+
+
+            bloomset[position.first] = true
+            bloomset[position.second] = true
+            bloomset[position.third] = true
+
+            print("element: \(item) added to set..")
+            print("----------")
+
+
+            self.empty = false
+            return true
+
+        }
+
+
+
+    }
+
+
+
+    //check for membership
+    func contains(_ element: T) -> Bool {
+
+
+        var position: (first: Int, second: Int, third: Int)
+
+
+        //establish "spread"
+        position.first = hash(element)
+        position.second = hash(position.first)
+        position.third = hash(position.second)
+
+
+        print("position \(element) is \(position)..")
+
+
+        //check positions
+        if bloomset[position.first] == nil {
+            return false
+        }
+
+        else if bloomset[position.second] == nil {
+            return false
+        }
+
+        else if bloomset[position.third] == nil {
+            return false
+        }
+
+
+            //all passed
+        else {
+            return true
+        }
+
+
+    } //end function
+
+
+
+
+
+    //hash algorithm - determines spread
+    private func hash<T>(_ element: T) -> Int {
+
+        var remainder: Int = 0
+        var divisor: Int = 0
+
+
+        /*
+         note: modular math is used to calculate a hash value. The position count is used
+         as the dividend to ensure all possible outcomes are between 0 and the collection size.
+         This is an example of a simple but effective hash algorithm.
+         */
+
+
+        for key in String(describing: element).unicodeScalars {
+            //print("the ascii value of \(key) is \(key.value)..")
+            divisor += Int(key.value)
+        }
+
+
+        //assignment and divisibility check
+        remainder = divisor % bloomset.count
+
+        if remainder != 0 {
+            remainder -= 1
+        }
+        
+        
+        return remainder
+        
+    }
+    
+    
+    
+}
