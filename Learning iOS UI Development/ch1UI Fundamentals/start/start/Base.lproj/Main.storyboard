@@ -39,8 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
-                                    <action selector="clear" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWb-Wt-RQm"/>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2T-iE-xmq"/>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wkw-tV-H90"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rf7-t8-sem" userLabel="viewContainer">
@@ -51,9 +50,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="viewContainer" destination="Rf7-t8-sem" id="fmo-MM-opH"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

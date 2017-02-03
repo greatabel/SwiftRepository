@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet  var viewContainer: UIView!
+    @IBOutlet weak var viewContainer: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,10 +14,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func clear() {
+    @IBAction func clear(_ sender: Any) {
         print("clear")
     }
-
 
 }
 
