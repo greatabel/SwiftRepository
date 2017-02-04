@@ -17,6 +17,10 @@ class ViewController: UIViewController {
 
     func tap(_ gesture: UITapGestureRecognizer) {
         print("in tap")
+        if gesture.state == .ended {
+            let touchLocation = gesture.location(in: viewContainer)
+            createView(touchLocation)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +66,20 @@ class ViewController: UIViewController {
         // Base case depending on width
         if viewSize.width > 40 {
             addInnerView(childView)
+        }
+    }
+
+    func createView(_ location:CGPoint){
+
+        let viewSize = CGSize(width: 50, height: 50)
+        let viewFrame = CGRect(origin: location, size: viewSize)
+        let childView = UIView(frame: viewFrame)
+        childView.backgroundColor = UIColor.red
+        viewContainer.addSubview(childView)
+
+        if isCenterAligned {
+            childView.center = location
+            childView.backgroundColor = UIColor.blue
         }
     }
 
