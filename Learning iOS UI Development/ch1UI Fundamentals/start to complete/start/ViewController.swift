@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         parentView.addSubview(childView)
 
         // Draw borders
-        childView.layer.borderColor = UIColor.red.cgColor
+        childView.layer.borderColor = UIColor.blue.cgColor
         childView.layer.borderWidth = 1
 
         // Base case depending on width
