@@ -25,6 +25,9 @@
                                 <rect key="frame" x="6" y="28" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Deep"/>
+                                <connections>
+                                    <action selector="deepHierarchy" destination="BYZ-38-t0r" eventType="touchUpInside" id="BAK-Zu-wBY"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4PE-Fw-rT2">
                                 <rect key="frame" x="70" y="28" width="209" height="29"/>
@@ -39,7 +42,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wkw-tV-H90"/>
+                                    <action selector="clear" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ogi-71-V28"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rf7-t8-sem" userLabel="viewContainer">

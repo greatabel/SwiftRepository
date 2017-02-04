@@ -14,9 +14,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func clear(_ sender: Any) {
+    @IBAction func clear() {
         print("clear")
     }
 
+
+    @IBAction func deepHierarchy() {
+        print("deepHierarchy")
+    }
 }
 
