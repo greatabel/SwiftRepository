@@ -26,6 +26,9 @@ class ViewController: UIViewController {
 
     @IBAction func clear() {
         print("clear")
+        for subview in viewContainer.subviews {
+            subview.removeFromSuperview()
+        }
     }
 
     @IBAction func updateAlignmentPref(_ sender: UISegmentedControl) {
