@@ -36,6 +36,9 @@
                                     <segment title="TopLeft Aligned"/>
                                     <segment title="Center Aligned"/>
                                 </segments>
+                                <connections>
+                                    <action selector="updateAlignmentPref:" destination="BYZ-38-t0r" eventType="valueChanged" id="pnV-ZW-G0X"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgY-uo-T7h">
                                 <rect key="frame" x="303" y="28" width="56" height="30"/>
