@@ -2,8 +2,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var viewContainer: UIView!
 
+
+    @IBOutlet var viewContainer: UIView!
     var isCenterAligned = false
 
     override func viewDidLoad() {
@@ -35,6 +36,31 @@ class ViewController: UIViewController {
 
     @IBAction func deepHierarchy() {
         print("deepHierarchy")
+        clear()
+        addInnerView(viewContainer)
     }
+
+    // Add a UIView child to the received view and call itself on
+    // the child view just added
+    func addInnerView(_ parentView:UIView){
+
+        // Create and attach the new view
+        var viewSize = parentView.bounds.size
+        viewSize.width -= 20
+        viewSize.height -= 20
+        let viewFrame = CGRect(origin: CGPoint(x: 10, y: 10), size:viewSize)
+        let childView = UIView(frame: viewFrame)
+        parentView.addSubview(childView)
+
+        // Draw borders
+        childView.layer.borderColor = UIColor.red.cgColor
+        childView.layer.borderWidth = 1
+
+        // Base case depending on width
+        if viewSize.width > 40 {
+            addInnerView(childView)
+        }
+    }
+
 }
 

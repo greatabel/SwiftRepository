@@ -72,6 +72,9 @@
                             <constraint firstItem="4PE-Fw-rT2" firstAttribute="leading" secondItem="sjx-t6-d4v" secondAttribute="trailing" constant="21" id="sxr-f3-dF4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewContainer" destination="Rf7-t8-sem" id="z3j-sa-8q0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
