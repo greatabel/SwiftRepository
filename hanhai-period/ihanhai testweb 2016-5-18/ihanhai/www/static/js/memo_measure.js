@@ -50,6 +50,20 @@ var myElementR = document.querySelector("#div_right_img");
 var counterTurn = 0;
 var stepPx = 0;
 
+  function my_sound(filename) {
+    document.getElementById("content").innerHTML = filename;
+      // document.getElementById("showDiv1").innerHTML= filename;
+    var snd = new Audio(filename); // buffers automatically when created
+    snd.play();
+  }
+
+function play_single_sound() {
+    document.getElementById('audiotag1').play();
+  }
+
+function play_single_sound2() {
+    document.getElementById('audiotag2').play();
+  }
   function drawScreen() {
       // y = y + dy;
       // x = x + dx;
@@ -93,6 +107,7 @@ var stepPx = 0;
     // function eventSheetLoaded() {
     //     drawScreen();
     // };
+
 
 // fix : when 2 points on canvas then click savebutton , it will draw wrong picture
 function isAppropriateThreePoint(touches) {
@@ -546,6 +561,8 @@ function get_ppi() {
 }
 
 function ol() {
+  my_sound("left.m4a");
+  play_single_sound2();
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
        // tileSheet=new Image();
@@ -712,7 +729,8 @@ function circulateMeasure(p) {
             function handleTouchMove(evt) {
               
                 evt.preventDefault();
-
+                // my_sound("wheel.m4a");
+                play_single_sound();
                 draw_measure(evt);
 
                 var innerTouches = [];                                       
@@ -742,6 +760,7 @@ function circulateMeasure(p) {
                         /* left swipe */ 
                     } else {
                         /* right swipe */
+                        my_sound("left.m4a");
                     }                       
                 } else {
 

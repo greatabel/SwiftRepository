@@ -107,7 +107,11 @@
 	</style>
 
 	<script type="text/javascript">
-
+	function my_sound(filename) {
+			document.getElementById("showDiv1").innerHTML= filename;
+		var snd = new Audio(filename); // buffers automatically when created
+		snd.play();
+	}
 	/**
 	 * 模拟 iOS 日期时间选择器的拨轮。但是没有 3D 卷曲效果
 	 * @param {DOMElement} spinnerLayerElement 具有 .spinner-layer 类的一个 DIV 元素
@@ -317,11 +321,22 @@
 	 * @return {[type]}         [description]
 	 */
 	MISpinner.prototype.onTouchMove = function(element, evt) {
+
 		element.setAttribute('data-lasty', evt.touches[0].clientY);
 		var slot = element.querySelector('.spinner-slot');
 		var lastTranslateY = +(slot.getAttribute('data-last-translatey')) || 0;
 		var startY = +(element.getAttribute('data-starty'));
 		var dy = evt.touches[0].clientY - startY;
+
+	document.getElementById("showDiv").innerHTML= dy;
+		if( dy > 50){
+					document.getElementById("showDiv").innerHTML= "test"+ dy; 
+					my_sound("wheel.m4a");
+					var snd = new Audio(wheel.m4a); // buffers automatically when created
+					snd.play();
+		}
+
+
 		var minTranslateY = +(element.getAttribute('data-min-translatey'));
 		var maxTranslateY = +(element.getAttribute('data-max-translatey'));
 
@@ -513,13 +528,22 @@
 		});
 	}
 
+
 	function callout() {
 		g_spinner.show();
+		my_sound("left.m4a");
+
 	}
+
+
 	</script>
 </head>
 <body onload="pageOnLoad();">
 	<div id="d1" onclick="callout();" style="font-size: 18px; padding: 10px; text-align: center; background-color: yellow;">Click to show spinner layer</div>
+	<div id="showDiv"></div>
+	<div id="showDiv1"></div>
+	 <audio id="audio" src="wheel.m4a" controls>
+    </audio>
 	<div id="spinner-layer"></div>	
 </body>
 </html>

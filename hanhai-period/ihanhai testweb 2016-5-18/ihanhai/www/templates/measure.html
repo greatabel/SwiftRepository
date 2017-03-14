@@ -160,6 +160,14 @@
 </style>
 
     <script src="../static/js/memo_measure.js"></script>
+    <script>
+  function my_sound(filename) {
+      // document.getElementById("showDiv1").innerHTML= filename;
+    var snd = new Audio(filename); // buffers automatically when created
+    snd.play();
+  }
+  my_sound('../left.m4a');
+    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -169,7 +177,8 @@
 
   </head>
   <body onload="ol()">
-
+<audio id="audiotag1" src="../left.m4a" preload="auto"></audio>
+<audio id="audiotag2" src="../wheel.m4a" preload="auto"></audio>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -235,14 +244,14 @@
 
 <div class="retina-border-scale"> test 
 </div> -->
-
+<div id="content"  >content</div>
 <!-- <div class="container" id="showArea" style="display: none;"> -->
 <!-- <div class="container" id="showArea" style="border: 0.5px solid black;"> -->
 <div class="container " id="showArea" style="height:120px;display: none;">
 <!-- <div class="container" id="showArea"> -->
 
 <!-- <div id="content" style="display: none;" ></div> -->
-<div id="content"  ></div>
+<div id="content"  >content</div>
 <div id="contentE"  ></div>
 <div id="content1"  ></div>
 
