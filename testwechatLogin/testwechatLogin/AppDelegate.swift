@@ -6,7 +6,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
 
     var window: UIWindow?
 
-
+    // http://lecason.com/2016/01/09/iOS-Wechat-Login-Pure-Demo/
+    // https://github.com/976500133/WeChatLoginAndShares
+    // http://www.jianshu.com/p/3c9e25e493c6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         WXApi.registerApp("")
