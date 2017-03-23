@@ -421,7 +421,7 @@ function changeImage(side, step) {
   //     }
 
   // }
-        // document.getElementById("contentE").innerHTML = floatingPointPartA +'#ya:'+ yA+"#yb:"+yB+"ppi:"+ myPPI;
+        document.getElementById("content").innerHTML = "\nppi:"+ myPPI + " "+ floatingPointPartA +'#ya:'+ yA+"#yb:"+yB;
 
 
       // window.setTimeout(drawScreen, 200);
