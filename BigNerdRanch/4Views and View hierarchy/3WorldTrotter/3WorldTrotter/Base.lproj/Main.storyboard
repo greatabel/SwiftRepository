@@ -51,6 +51,9 @@
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="3al-Hd-npi"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.80654169219771232" green="0.91283605238970589" blue="0.88221826491013067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,6 +72,9 @@
                             <constraint firstItem="1E9-m7-Sja" firstAttribute="top" secondItem="9om-9k-vQw" secondAttribute="bottom" constant="28" id="zmu-6B-MRP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="MjR-Lo-uze" id="Pij-i0-1qz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
