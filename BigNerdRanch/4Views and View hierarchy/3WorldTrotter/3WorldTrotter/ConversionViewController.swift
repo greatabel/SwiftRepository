@@ -1,7 +1,35 @@
 import UIKit
 
 @available(iOS 10.0, *)
-class ConversationViewController: UIViewController {
+class ConversationViewController: UIViewController, UITextFieldDelegate {
+
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        print("Current text: \(String(describing: textField.text))")
+        print("Replacement text: \(string)")
+//        return true
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+
+        if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
+            return false
+        } else {
+            return true
+        }
+    }
+
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn
+//        range: NSRange, replacementString string: String) -> Bool {
+//        let textFieldText: NSString = (textField.text ?? "") as NSString
+//        _ = textFieldText.replacingCharacters(in: range, with: string)
+//        print("Current text: \(String(describing: textField.text))")
+//        print("Replacement text: \(string)")
+//
+//        return true
+//    }
+
+
 
     @IBOutlet var celsiusLabel: UILabel!
 
@@ -54,6 +82,7 @@ class ConversationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCelsiusLabel()
+        print("#####")
     }
 
 }
