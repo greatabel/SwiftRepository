@@ -8,7 +8,7 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
                    replacementString string: String) -> Bool {
         print("Current text: \(String(describing: textField.text))")
         print("Replacement text: \(string)")
-//        return true
+
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeparator = string.range(of: ".")
 
@@ -82,7 +82,6 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCelsiusLabel()
-        print("#####")
     }
 
 }
