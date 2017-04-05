@@ -12,6 +12,7 @@
 		203FD9DE1C3577B600C37EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9DC1C3577B600C37EDD /* Main.storyboard */; };
 		203FD9E01C3577B600C37EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9DF1C3577B600C37EDD /* Assets.xcassets */; };
 		203FD9E31C3577B600C37EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */; };
+		209061991E94EB2A0022E955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209061981E94EB2A0022E955 /* MapViewController.swift */; };
 		20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A209061E8F61140084AE6E /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		203FD9DF1C3577B600C37EDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		203FD9E21C3577B600C37EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203FD9E41C3577B600C37EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209061981E94EB2A0022E955 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		20A209061E8F61140084AE6E /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				203FD9DF1C3577B600C37EDD /* Assets.xcassets */,
 				203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */,
 				203FD9E41C3577B600C37EDD /* Info.plist */,
+				209061981E94EB2A0022E955 /* MapViewController.swift */,
 			);
 			name = 5WorldTrotter;
 			path = 3WorldTrotter;
@@ -144,6 +147,7 @@
 				203FD9DB1C3577B600C37EDD /* ViewController.swift in Sources */,
 				20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */,
 				203FD9D91C3577B600C37EDD /* AppDelegate.swift in Sources */,
+				209061991E94EB2A0022E955 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
