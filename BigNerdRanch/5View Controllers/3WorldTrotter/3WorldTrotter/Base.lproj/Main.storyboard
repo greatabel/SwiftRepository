@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47V-GL-B0s">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Conversation View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConversationViewController" customModule="_WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,6 +77,7 @@
                             <outletCollection property="gestureRecognizers" destination="DCA-kW-Pi6" appends="YES" id="RGU-FT-ySl"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="zc7-ZU-CXG"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="MjR-Lo-uze" id="Pij-i0-1qz"/>
                         <outlet property="textField" destination="8xL-DZ-dsl" id="ehM-x2-q5Q"/>
@@ -89,7 +90,39 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1727" y="738"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="82o-AX-OX3">
+            <objects>
+                <viewController id="TVX-U9-LEY" customClass="MapViewController" customModule="_WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="JKN-55-Dxk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <tabBarItem key="tabBarItem" title="Item" id="xdR-Fq-Dc9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sk0-hb-IGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727.2" y="40.929535232383813"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QFm-Fi-kgQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="47V-GL-B0s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="RvD-Aj-JPr">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="T1X-fR-qlV"/>
+                        <segue destination="TVX-U9-LEY" kind="relationship" relationship="viewControllers" id="JB7-dJ-cuw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOi-Sy-S7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="41"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@
 		203FD9E01C3577B600C37EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9DF1C3577B600C37EDD /* Assets.xcassets */; };
 		203FD9E31C3577B600C37EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */; };
 		209061991E94EB2A0022E955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209061981E94EB2A0022E955 /* MapViewController.swift */; };
+		2090619C1E94EC8D0022E955 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2090619B1E94EC8D0022E955 /* MapKit.framework */; };
 		20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A209061E8F61140084AE6E /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		203FD9E21C3577B600C37EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203FD9E41C3577B600C37EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209061981E94EB2A0022E955 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2090619B1E94EC8D0022E955 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		20A209061E8F61140084AE6E /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2090619C1E94EC8D0022E955 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				203FD9D71C3577B600C37EDD /* 5WorldTrotter */,
 				203FD9D61C3577B600C37EDD /* Products */,
+				2090619A1E94EC8D0022E955 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +73,14 @@
 			);
 			name = 5WorldTrotter;
 			path = 3WorldTrotter;
+			sourceTree = "<group>";
+		};
+		2090619A1E94EC8D0022E955 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2090619B1E94EC8D0022E955 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
