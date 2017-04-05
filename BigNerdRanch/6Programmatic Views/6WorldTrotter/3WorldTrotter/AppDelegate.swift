@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  3WorldTrotter
-//
-//  Created by 万畅 on 15/12/31.
-//  Copyright © 2015年 abelwan. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

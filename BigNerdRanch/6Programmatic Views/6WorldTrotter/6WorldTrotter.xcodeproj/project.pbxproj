@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		203FD9D51C3577B600C37EDD /* 5WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		203FD9D51C3577B600C37EDD /* 6WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		203FD9D81C3577B600C37EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		203FD9DA1C3577B600C37EDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		203FD9DD1C3577B600C37EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		203FD9CC1C3577B600C37EDD = {
 			isa = PBXGroup;
 			children = (
-				203FD9D71C3577B600C37EDD /* 5WorldTrotter */,
+				203FD9D71C3577B600C37EDD /* 6WorldTrotter */,
 				203FD9D61C3577B600C37EDD /* Products */,
 				2090619A1E94EC8D0022E955 /* Frameworks */,
 			);
@@ -54,12 +54,12 @@
 		203FD9D61C3577B600C37EDD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				203FD9D51C3577B600C37EDD /* 5WorldTrotter.app */,
+				203FD9D51C3577B600C37EDD /* 6WorldTrotter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		203FD9D71C3577B600C37EDD /* 5WorldTrotter */ = {
+		203FD9D71C3577B600C37EDD /* 6WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
 				203FD9D81C3577B600C37EDD /* AppDelegate.swift */,
@@ -71,7 +71,7 @@
 				203FD9E41C3577B600C37EDD /* Info.plist */,
 				209061981E94EB2A0022E955 /* MapViewController.swift */,
 			);
-			name = 5WorldTrotter;
+			name = 6WorldTrotter;
 			path = 3WorldTrotter;
 			sourceTree = "<group>";
 		};
@@ -86,9 +86,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		203FD9D41C3577B600C37EDD /* 5WorldTrotter */ = {
+		203FD9D41C3577B600C37EDD /* 6WorldTrotter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 203FD9E71C3577B700C37EDD /* Build configuration list for PBXNativeTarget "5WorldTrotter" */;
+			buildConfigurationList = 203FD9E71C3577B700C37EDD /* Build configuration list for PBXNativeTarget "6WorldTrotter" */;
 			buildPhases = (
 				203FD9D11C3577B600C37EDD /* Sources */,
 				203FD9D21C3577B600C37EDD /* Frameworks */,
@@ -98,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = 5WorldTrotter;
+			name = 6WorldTrotter;
 			productName = 3WorldTrotter;
-			productReference = 203FD9D51C3577B600C37EDD /* 5WorldTrotter.app */;
+			productReference = 203FD9D51C3577B600C37EDD /* 6WorldTrotter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -120,7 +120,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 203FD9D01C3577B600C37EDD /* Build configuration list for PBXProject "5WorldTrotter" */;
+			buildConfigurationList = 203FD9D01C3577B600C37EDD /* Build configuration list for PBXProject "6WorldTrotter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -133,7 +133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				203FD9D41C3577B600C37EDD /* 5WorldTrotter */,
+				203FD9D41C3577B600C37EDD /* 6WorldTrotter */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		203FD9D01C3577B600C37EDD /* Build configuration list for PBXProject "5WorldTrotter" */ = {
+		203FD9D01C3577B600C37EDD /* Build configuration list for PBXProject "6WorldTrotter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				203FD9E51C3577B600C37EDD /* Debug */,
@@ -313,7 +313,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		203FD9E71C3577B700C37EDD /* Build configuration list for PBXNativeTarget "5WorldTrotter" */ = {
+		203FD9E71C3577B700C37EDD /* Build configuration list for PBXNativeTarget "6WorldTrotter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				203FD9E81C3577B700C37EDD /* Debug */,
