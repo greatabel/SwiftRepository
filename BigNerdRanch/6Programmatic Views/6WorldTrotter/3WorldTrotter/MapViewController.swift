@@ -20,8 +20,14 @@ class MapViewController: UIViewController {
         view.addSubview(segmentedControl)
 
         if #available(iOS 9.0, *) {
+//            let topConstraint =
+//                segmentedControl.topAnchor.constraint(equalTo: view.topAnchor)
+
             let topConstraint =
-                segmentedControl.topAnchor.constraint(equalTo: view.topAnchor)
+                segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor,
+                                                      constant: 8)
+//            let topConstraint =
+//                segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor)
             topConstraint.isActive = true
         } else {
             // Fallback on earlier versions
