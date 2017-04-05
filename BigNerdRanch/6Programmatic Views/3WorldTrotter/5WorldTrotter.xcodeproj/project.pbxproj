@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		203FD9D91C3577B600C37EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203FD9D81C3577B600C37EDD /* AppDelegate.swift */; };
+		203FD9DB1C3577B600C37EDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203FD9DA1C3577B600C37EDD /* ViewController.swift */; };
+		203FD9DE1C3577B600C37EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9DC1C3577B600C37EDD /* Main.storyboard */; };
+		203FD9E01C3577B600C37EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9DF1C3577B600C37EDD /* Assets.xcassets */; };
+		203FD9E31C3577B600C37EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */; };
+		209061991E94EB2A0022E955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209061981E94EB2A0022E955 /* MapViewController.swift */; };
+		2090619C1E94EC8D0022E955 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2090619B1E94EC8D0022E955 /* MapKit.framework */; };
+		20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A209061E8F61140084AE6E /* ConversionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		203FD9D51C3577B600C37EDD /* 5WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		203FD9D81C3577B600C37EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		203FD9DA1C3577B600C37EDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		203FD9DD1C3577B600C37EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		203FD9DF1C3577B600C37EDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		203FD9E21C3577B600C37EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		203FD9E41C3577B600C37EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209061981E94EB2A0022E955 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2090619B1E94EC8D0022E955 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		20A209061E8F61140084AE6E /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		203FD9D21C3577B600C37EDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2090619C1E94EC8D0022E955 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		203FD9CC1C3577B600C37EDD = {
+			isa = PBXGroup;
+			children = (
+				203FD9D71C3577B600C37EDD /* 5WorldTrotter */,
+				203FD9D61C3577B600C37EDD /* Products */,
+				2090619A1E94EC8D0022E955 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		203FD9D61C3577B600C37EDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				203FD9D51C3577B600C37EDD /* 5WorldTrotter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		203FD9D71C3577B600C37EDD /* 5WorldTrotter */ = {
+			isa = PBXGroup;
+			children = (
+				203FD9D81C3577B600C37EDD /* AppDelegate.swift */,
+				203FD9DA1C3577B600C37EDD /* ViewController.swift */,
+				20A209061E8F61140084AE6E /* ConversionViewController.swift */,
+				203FD9DC1C3577B600C37EDD /* Main.storyboard */,
+				203FD9DF1C3577B600C37EDD /* Assets.xcassets */,
+				203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */,
+				203FD9E41C3577B600C37EDD /* Info.plist */,
+				209061981E94EB2A0022E955 /* MapViewController.swift */,
+			);
+			name = 5WorldTrotter;
+			path = 3WorldTrotter;
+			sourceTree = "<group>";
+		};
+		2090619A1E94EC8D0022E955 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2090619B1E94EC8D0022E955 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		203FD9D41C3577B600C37EDD /* 5WorldTrotter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203FD9E71C3577B700C37EDD /* Build configuration list for PBXNativeTarget "5WorldTrotter" */;
+			buildPhases = (
+				203FD9D11C3577B600C37EDD /* Sources */,
+				203FD9D21C3577B600C37EDD /* Frameworks */,
+				203FD9D31C3577B600C37EDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5WorldTrotter;
+			productName = 3WorldTrotter;
+			productReference = 203FD9D51C3577B600C37EDD /* 5WorldTrotter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		203FD9CD1C3577B600C37EDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = abelwan;
+				TargetAttributes = {
+					203FD9D41C3577B600C37EDD = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 56AME9BLVU;
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = 203FD9D01C3577B600C37EDD /* Build configuration list for PBXProject "5WorldTrotter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 203FD9CC1C3577B600C37EDD;
+			productRefGroup = 203FD9D61C3577B600C37EDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				203FD9D41C3577B600C37EDD /* 5WorldTrotter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		203FD9D31C3577B600C37EDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203FD9E31C3577B600C37EDD /* LaunchScreen.storyboard in Resources */,
+				203FD9E01C3577B600C37EDD /* Assets.xcassets in Resources */,
+				203FD9DE1C3577B600C37EDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		203FD9D11C3577B600C37EDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203FD9DB1C3577B600C37EDD /* ViewController.swift in Sources */,
+				20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */,
+				203FD9D91C3577B600C37EDD /* AppDelegate.swift in Sources */,
+				209061991E94EB2A0022E955 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		203FD9DC1C3577B600C37EDD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203FD9DD1C3577B600C37EDD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203FD9E21C3577B600C37EDD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		203FD9E51C3577B600C37EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		203FD9E61C3577B600C37EDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		203FD9E81C3577B700C37EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56AME9BLVU;
+				INFOPLIST_FILE = 3WorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "abel.-WorldTrotter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		203FD9E91C3577B700C37EDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56AME9BLVU;
+				INFOPLIST_FILE = 3WorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "abel.-WorldTrotter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		203FD9D01C3577B600C37EDD /* Build configuration list for PBXProject "5WorldTrotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203FD9E51C3577B600C37EDD /* Debug */,
+				203FD9E61C3577B600C37EDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		203FD9E71C3577B700C37EDD /* Build configuration list for PBXNativeTarget "5WorldTrotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203FD9E81C3577B700C37EDD /* Debug */,
+				203FD9E91C3577B700C37EDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 203FD9CD1C3577B600C37EDD /* Project object */;
+}
