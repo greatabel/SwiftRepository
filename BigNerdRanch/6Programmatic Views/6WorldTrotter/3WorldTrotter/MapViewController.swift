@@ -46,6 +46,7 @@ class MapViewController: UIViewController {
             leadingConstraint.isActive = true
             trailingConstraint.isActive = true
 
+
         } else {
             // Fallback on earlier versions
         }
