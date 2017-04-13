@@ -144,6 +144,6 @@
     <resources>
         <image name="ConvertIcon" width="48" height="32"/>
         <image name="MapIcon" width="48" height="32"/>
-        <image name="WebIcon" width="24" height="16"/>
+        <image name="WebIcon" width="49" height="33"/>
     </resources>
 </document>
