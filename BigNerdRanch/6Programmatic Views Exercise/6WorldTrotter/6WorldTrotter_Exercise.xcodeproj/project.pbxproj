@@ -14,6 +14,7 @@
 		203FD9E31C3577B600C37EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */; };
 		209061991E94EB2A0022E955 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209061981E94EB2A0022E955 /* MapViewController.swift */; };
 		2090619C1E94EC8D0022E955 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2090619B1E94EC8D0022E955 /* MapKit.framework */; };
+		2095726E1E9F7E770075A8E0 /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095726D1E9F7E770075A8E0 /* WebContentViewController.swift */; };
 		20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A209061E8F61140084AE6E /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		203FD9E41C3577B600C37EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209061981E94EB2A0022E955 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2090619B1E94EC8D0022E955 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2095726D1E9F7E770075A8E0 /* WebContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
 		20A209061E8F61140084AE6E /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				203FD9E11C3577B600C37EDD /* LaunchScreen.storyboard */,
 				203FD9E41C3577B600C37EDD /* Info.plist */,
 				209061981E94EB2A0022E955 /* MapViewController.swift */,
+				2095726D1E9F7E770075A8E0 /* WebContentViewController.swift */,
 			);
 			name = 6WorldTrotter;
 			path = 3WorldTrotter;
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203FD9DB1C3577B600C37EDD /* ViewController.swift in Sources */,
+				2095726E1E9F7E770075A8E0 /* WebContentViewController.swift in Sources */,
 				20A209071E8F61140084AE6E /* ConversionViewController.swift in Sources */,
 				203FD9D91C3577B600C37EDD /* AppDelegate.swift in Sources */,
 				209061991E94EB2A0022E955 /* MapViewController.swift in Sources */,

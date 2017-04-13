@@ -94,7 +94,7 @@
         <!--web浏览-->
         <scene sceneID="afM-Mz-405">
             <objects>
-                <viewController id="l1b-iN-Hgg" sceneMemberID="viewController">
+                <viewController id="l1b-iN-Hgg" customClass="WebContentViewController" customModule="_WorldTrotter_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eaw-Tf-j9g"/>
                         <viewControllerLayoutGuide type="bottom" id="5a7-5j-to5"/>
