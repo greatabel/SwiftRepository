@@ -6,6 +6,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     var mapView: MKMapView!
 
+    // https://makeapppie.com/tag/mkannotationview/ 可以添加范围 没做
+    // http://rshankar.com/how-to-add-mapview-annotation-and-draw-polyline-in-swift/ 添加轨迹
+
     // 为添加小红旗地标
     var annotations = [MKPointAnnotation]()
 
