@@ -74,7 +74,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // http://www.techotopia.com/index.php/Working_with_Maps_on_iOS_8_with_Swift,_MapKit_and_the_MKMapView_Class
         mapView.showsUserLocation = true
+        mapView.delegate = self
+
         print("MapViewController loaded its view")
+    }
+    func mapView(_ mapView: MKMapView, didUpdate
+        userLocation: MKUserLocation) {
+            mapView.centerCoordinate = userLocation.location!.coordinate
+        // http://stackoverflow.com/questions/11622579/how-to-pinch-out-in-ios-simulator-when-map-view-is-only-a-portion-of-the-screen
+            print("here:\(userLocation.location!.coordinate)")
     }
 
 }
