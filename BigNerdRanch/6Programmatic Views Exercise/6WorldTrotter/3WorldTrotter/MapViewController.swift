@@ -99,7 +99,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             ["name" : "Wu han, Luminagic",
              "latitude" : 30.511128249323583,
              "longitude" : 114.39239169633259,
-             "mediaURL" : "http://www.apple.com"],
+             "mediaURL" : "http://www.douban.com"],
             ["name" : "Wu han, Other place",
              "latitude" : 30.512118249123583,
              "longitude" : 114.39832769633259,
@@ -127,6 +127,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // http://stackoverflow.com/questions/41864720/swift-mapview-not-adding-annotation-to-map
+        if annotation is MKUserLocation { return nil }   // let the OS show user locations itself
+
+        let reuseIdentifier = "pin"
+        var pin = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? MKPinAnnotationView
+        if pin == nil {
+            pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            pin!.pinTintColor = .red
+            pin!.canShowCallout = true
+            pin!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        } else {
+            pin!.annotation = annotation
+        }
+        return pin
+    }
+
+    func mapView(_ mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == annotationView.rightCalloutAccessoryView {
+            let app = UIApplication.shared
+            app.openURL(NSURL(string: (annotationView.annotation!.subtitle!)!)! as URL)
+        }
     }
 
 }
