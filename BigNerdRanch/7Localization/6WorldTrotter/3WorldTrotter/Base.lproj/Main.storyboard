@@ -12,7 +12,7 @@
         <!--测量-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ConversationViewController" customModule="_WorldTrotter_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversationViewController" customModule="_Localization" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -63,12 +63,14 @@
                             <constraint firstItem="MjR-Lo-uze" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MmQ-oa-DxK"/>
                             <constraint firstItem="8xL-DZ-dsl" firstAttribute="centerX" secondItem="1E9-m7-Sja" secondAttribute="centerX" id="NcF-UL-ZJw"/>
                             <constraint firstItem="8xL-DZ-dsl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="Ndb-IP-XEG"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="9om-9k-vQw" secondAttribute="trailing" id="Xfa-Hg-VEx"/>
                             <constraint firstItem="UJA-fy-rRL" firstAttribute="top" secondItem="MjR-Lo-uze" secondAttribute="bottom" constant="85" id="jHE-xU-GBB"/>
                             <constraint firstItem="8xL-DZ-dsl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="kNY-Fn-b8f"/>
                             <constraint firstItem="8xL-DZ-dsl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q0K-dA-ogn"/>
                             <constraint firstItem="9om-9k-vQw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qPp-av-Jdx"/>
                             <constraint firstItem="9om-9k-vQw" firstAttribute="centerX" secondItem="1E9-m7-Sja" secondAttribute="centerX" id="qth-UM-RAk"/>
                             <constraint firstItem="MjR-Lo-uze" firstAttribute="top" secondItem="1E9-m7-Sja" secondAttribute="bottom" constant="25" id="vSv-jL-RR0"/>
+                            <constraint firstItem="9om-9k-vQw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wyo-Fo-cyp"/>
                             <constraint firstItem="MjR-Lo-uze" firstAttribute="centerX" secondItem="UJA-fy-rRL" secondAttribute="centerX" id="yNw-O3-azZ"/>
                             <constraint firstItem="1E9-m7-Sja" firstAttribute="top" secondItem="9om-9k-vQw" secondAttribute="bottom" constant="28" id="zmu-6B-MRP"/>
                         </constraints>
@@ -94,7 +96,7 @@
         <!--web浏览-->
         <scene sceneID="afM-Mz-405">
             <objects>
-                <viewController id="l1b-iN-Hgg" customClass="WebContentViewController" customModule="_WorldTrotter_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l1b-iN-Hgg" customClass="WebContentViewController" customModule="_Localization" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eaw-Tf-j9g"/>
                         <viewControllerLayoutGuide type="bottom" id="5a7-5j-to5"/>
@@ -113,7 +115,7 @@
         <!--地图-->
         <scene sceneID="82o-AX-OX3">
             <objects>
-                <viewController id="TVX-U9-LEY" customClass="MapViewController" customModule="_WorldTrotter_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TVX-U9-LEY" customClass="MapViewController" customModule="_Localization" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="地图" image="MapIcon" id="xdR-Fq-Dc9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sk0-hb-IGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
