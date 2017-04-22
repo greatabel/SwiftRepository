@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="3WorldTrotter/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3.2" build-num="8E2002"/>
+    </header>
+    <body/>
+  </file>
+  <file original="3WorldTrotter/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3.2" build-num="8E2002"/>
+    </header>
+    <body>
+      <trans-unit id="1E9-m7-Sja.text">
+        <source>is really</source>
+        <target>真的</target>
+        <note>Class = "UILabel"; text = "is really"; ObjectID = "1E9-m7-Sja";</note>
+      </trans-unit>
+      <trans-unit id="4k4-9E-IAD.title">
+        <source>web浏览</source>
+        <target>网络浏览</target>
+        <note>Class = "UITabBarItem"; title = "web"; ObjectID = "4k4-9E-IAD";</note>
+      </trans-unit>
+      <trans-unit id="8xL-DZ-dsl.placeholder">
+        <source>Value...</source>
+        <target>数值...</target>
+        <note>Class = "UITextField"; placeholder = "Value..."; ObjectID = "8xL-DZ-dsl";</note>
+      </trans-unit>
+      <trans-unit id="9om-9k-vQw.text">
+        <source>degrees Fahrenheit</source>
+        <target>华氏温度</target>
+        <note>Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "9om-9k-vQw";</note>
+      </trans-unit>
+      <trans-unit id="MjR-Lo-uze.text">
+        <source>100</source>
+        <target>100</target>
+        <note>Class = "UILabel"; text = "100"; ObjectID = "MjR-Lo-uze";</note>
+      </trans-unit>
+      <trans-unit id="UJA-fy-rRL.text">
+        <source>degrees Celsius</source>
+        <target>摄氏度</target>
+        <note>Class = "UILabel"; text = "degrees Celsius"; ObjectID = "UJA-fy-rRL";</note>
+      </trans-unit>
+      <trans-unit id="xdR-Fq-Dc9.title">
+        <source>地图</source>
+        <target>地图</target>
+        <note>Class = "UITabBarItem"; title = "地图"; ObjectID = "xdR-Fq-Dc9";</note>
+      </trans-unit>
+      <trans-unit id="zTj-Wu-tqX.title">
+        <source>Image</source>
+        <note>Class = "UITabBarItem"; title = "Image"; ObjectID = "zTj-Wu-tqX";</note>
+      </trans-unit>
+      <trans-unit id="zc7-ZU-CXG.title">
+        <source>测量</source>
+        <target>测量</target>
+        <note>Class = "UITabBarItem"; title = "convert"; ObjectID = "zc7-ZU-CXG";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="3WorldTrotter/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3.2" build-num="8E2002"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>7WorldTrotter_Exercise</source>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="3WorldTrotter/en.lproj/Localizable.strings" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3.2" build-num="8E2002"/>
+    </header>
+    <body>
+      <trans-unit id="Hybird">
+        <source>Hybird</source>
+        <target>混合</target>
+        <note>Hybird map view</note>
+      </trans-unit>
+      <trans-unit id="Satellite">
+        <source>Satellite</source>
+        <target>卫星</target>
+        <note>Satellite map view</note>
+      </trans-unit>
+      <trans-unit id="Standard">
+        <source>Standard</source>
+        <target>标准</target>
+        <note>Standard map view</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
