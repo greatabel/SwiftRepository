@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "1E9-m7-Sja"; */
+"1E9-m7-Sja.text" = "is really";
+
+/* Class = "UITabBarItem"; title = "web浏览"; ObjectID = "4k4-9E-IAD"; */
+"4k4-9E-IAD.title" = "web浏览";
+
+/* Class = "UITextField"; placeholder = "Value..."; ObjectID = "8xL-DZ-dsl"; */
+"8xL-DZ-dsl.placeholder" = "Value...";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "9om-9k-vQw"; */
+"9om-9k-vQw.text" = "degrees Fahrenheit";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "MjR-Lo-uze"; */
+"MjR-Lo-uze.text" = "100";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "UJA-fy-rRL"; */
+"UJA-fy-rRL.text" = "degrees Celsius";
+
+/* Class = "UITabBarItem"; title = "地图"; ObjectID = "xdR-Fq-Dc9"; */
+"xdR-Fq-Dc9.title" = "地图";
+
+/* Class = "UITabBarItem"; title = "测量"; ObjectID = "zc7-ZU-CXG"; */
+"zc7-ZU-CXG.title" = "测量";
