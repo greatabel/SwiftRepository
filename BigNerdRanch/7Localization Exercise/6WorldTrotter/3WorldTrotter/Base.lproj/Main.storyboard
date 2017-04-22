@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--测量-->
+        <!--convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ConversationViewController" customModule="_Localization" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversationViewController" customModule="_Localization_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -84,7 +84,7 @@
                             <outletCollection property="gestureRecognizers" destination="DCA-kW-Pi6" appends="YES" id="RGU-FT-ySl"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="测量" image="ConvertIcon" id="zc7-ZU-CXG"/>
+                    <tabBarItem key="tabBarItem" title="convert" image="ConvertIcon" id="zc7-ZU-CXG"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="MjR-Lo-uze" id="Pij-i0-1qz"/>
                         <outlet property="textField" destination="8xL-DZ-dsl" id="ehM-x2-q5Q"/>
@@ -97,12 +97,31 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1199" y="906"/>
+            <point key="canvasLocation" x="567" y="932"/>
         </scene>
-        <!--web浏览-->
+        <!--Image-->
+        <scene sceneID="5EQ-nB-UKD">
+            <objects>
+                <viewController id="ct0-Jc-mHF" customClass="ImageViewController" customModule="_Localization_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mbs-3W-SAx"/>
+                        <viewControllerLayoutGuide type="bottom" id="XDf-53-7xw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D90-3h-Vmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image" image="ConvertIcon" id="zTj-Wu-tqX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTq-m0-hcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240.8" y="864.01799100449784"/>
+        </scene>
+        <!--web-->
         <scene sceneID="afM-Mz-405">
             <objects>
-                <viewController id="l1b-iN-Hgg" customClass="WebContentViewController" customModule="_Localization" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l1b-iN-Hgg" customClass="WebContentViewController" customModule="_Localization_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eaw-Tf-j9g"/>
                         <viewControllerLayoutGuide type="bottom" id="5a7-5j-to5"/>
@@ -112,16 +131,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="web浏览" image="WebIcon" id="4k4-9E-IAD"/>
+                    <tabBarItem key="tabBarItem" title="web" image="WebIcon" selectedImage="ConvertIcon" id="4k4-9E-IAD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuE-cP-hIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876" y="588"/>
+            <point key="canvasLocation" x="1873" y="339"/>
         </scene>
         <!--地图-->
         <scene sceneID="82o-AX-OX3">
             <objects>
-                <viewController id="TVX-U9-LEY" customClass="MapViewController" customModule="_Localization" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TVX-U9-LEY" customClass="MapViewController" customModule="_Localization_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="地图" image="MapIcon" id="xdR-Fq-Dc9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sk0-hb-IGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,6 +161,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="T1X-fR-qlV"/>
                         <segue destination="TVX-U9-LEY" kind="relationship" relationship="viewControllers" id="JB7-dJ-cuw"/>
                         <segue destination="l1b-iN-Hgg" kind="relationship" relationship="viewControllers" id="nFf-Bc-6AY"/>
+                        <segue destination="ct0-Jc-mHF" kind="relationship" relationship="viewControllers" id="rmu-2J-6oO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOi-Sy-S7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
