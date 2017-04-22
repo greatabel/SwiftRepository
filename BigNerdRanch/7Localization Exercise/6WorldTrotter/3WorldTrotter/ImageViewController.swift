@@ -5,6 +5,8 @@ import MapKit
 class ImageViewController: UIViewController {
 
     // 课后习题7.19
+    // https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let path = Bundle.main.url(forResource:"index", withExtension: "jpg")
