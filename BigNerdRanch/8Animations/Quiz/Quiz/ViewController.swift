@@ -10,6 +10,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answerLabel: UILabel!
 
+    @IBOutlet var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
+
+    @IBOutlet var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
+
     let questions: [String] = [
     "What's PI ?",
     "What's capital of China?",
@@ -66,7 +70,7 @@ class ViewController: UIViewController {
 //        }
 //        // animate the alpha
 //        UIView.animate(withDuration: 1.5, animations: animationClosure)
-        UIView.animate(withDuration: 1,
+        UIView.animate(withDuration: 0.5,
                        delay: 0,
                        options: [],
                        animations: {
