@@ -66,10 +66,18 @@ class ViewController: UIViewController {
 //        }
 //        // animate the alpha
 //        UIView.animate(withDuration: 1.5, animations: animationClosure)
-        UIView.animate(withDuration: 1.5, animations: {
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       options: [],
+                       animations: {
 //            self.questionLabel.alpha = 1
             self.currentQuestionLabel.alpha = 0
             self.nextQuestionLabel.alpha = 1
+        },
+                       completion:{
+                        _ in
+                        swap(&self.currentQuestionLabel,
+                             &self.nextQuestionLabel)
         })
     }
 
