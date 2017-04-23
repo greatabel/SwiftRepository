@@ -71,6 +71,9 @@ class ViewController: UIViewController {
     }
 
     func animateLabelTransitions() {
+        // force any outstanding layout changes to occur
+        view.layoutIfNeeded()
+
 //        let animationClosure = {
 //            () -> Void in
 //            self.questionLabel.alpha = 1
