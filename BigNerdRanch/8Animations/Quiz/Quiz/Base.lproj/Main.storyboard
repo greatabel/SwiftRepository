@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-NS-wBU">
+                                <rect key="frame" x="288" y="68" width="25" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UFg-Si-8Sk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rto-fI-cXO">
+                                <rect key="frame" x="251" y="114" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7nj-jK-h7t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-GW-m6m">
+                                <rect key="frame" x="288" y="216" width="25" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8XJ-on-QMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-ed-bbo">
+                                <rect key="frame" x="254" y="262" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pmx-2j-dSZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XAC-ed-bbo" firstAttribute="top" secondItem="4gl-GW-m6m" secondAttribute="bottom" constant="25" id="Dwt-tS-JRR"/>
+                            <constraint firstItem="4gl-GW-m6m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="216" id="Epd-xY-aCJ"/>
+                            <constraint firstItem="4gl-GW-m6m" firstAttribute="top" secondItem="Rto-fI-cXO" secondAttribute="bottom" constant="72" id="Nuh-oX-iyh"/>
+                            <constraint firstItem="Rto-fI-cXO" firstAttribute="top" secondItem="PjJ-NS-wBU" secondAttribute="bottom" constant="25" id="UFW-6X-U5Z"/>
+                            <constraint firstItem="4gl-GW-m6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dfU-9M-5TY"/>
+                            <constraint firstItem="XAC-ed-bbo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tO8-cH-jUE"/>
+                            <constraint firstItem="Rto-fI-cXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yda-7k-5U7"/>
+                            <constraint firstItem="PjJ-NS-wBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ygO-tj-Szt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="4gl-GW-m6m" id="WBb-t7-bmV"/>
+                        <outlet property="questionLabel" destination="PjJ-NS-wBU" id="4fp-np-S5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="243"/>
+        </scene>
+    </scenes>
+</document>
