@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20A2F3B91C32CAA100C10BF7 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20A2F3B91C32CAA100C10BF7 /* Quiz_anmiation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz_anmiation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A2F3BC1C32CAA100C10BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A2F3BE1C32CAA100C10BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20A2F3C11C32CAA100C10BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		20A2F3BA1C32CAA100C10BF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20A2F3B91C32CAA100C10BF7 /* Quiz.app */,
+				20A2F3B91C32CAA100C10BF7 /* Quiz_anmiation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20A2F3B81C32CAA100C10BF7 /* Quiz */ = {
+		20A2F3B81C32CAA100C10BF7 /* Quiz_anmiation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20A2F3CB1C32CAA100C10BF7 /* Build configuration list for PBXNativeTarget "Quiz" */;
+			buildConfigurationList = 20A2F3CB1C32CAA100C10BF7 /* Build configuration list for PBXNativeTarget "Quiz_anmiation" */;
 			buildPhases = (
 				20A2F3B51C32CAA100C10BF7 /* Sources */,
 				20A2F3B61C32CAA100C10BF7 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = Quiz;
+			name = Quiz_anmiation;
 			productName = Quiz;
-			productReference = 20A2F3B91C32CAA100C10BF7 /* Quiz.app */;
+			productReference = 20A2F3B91C32CAA100C10BF7 /* Quiz_anmiation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20A2F3B41C32CAA100C10BF7 /* Build configuration list for PBXProject "Quiz" */;
+			buildConfigurationList = 20A2F3B41C32CAA100C10BF7 /* Build configuration list for PBXProject "Quiz_anmiation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20A2F3B81C32CAA100C10BF7 /* Quiz */,
+				20A2F3B81C32CAA100C10BF7 /* Quiz_anmiation */,
 			);
 		};
 /* End PBXProject section */
@@ -283,7 +283,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20A2F3B41C32CAA100C10BF7 /* Build configuration list for PBXProject "Quiz" */ = {
+		20A2F3B41C32CAA100C10BF7 /* Build configuration list for PBXProject "Quiz_anmiation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20A2F3C91C32CAA100C10BF7 /* Debug */,
@@ -292,7 +292,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20A2F3CB1C32CAA100C10BF7 /* Build configuration list for PBXNativeTarget "Quiz" */ = {
+		20A2F3CB1C32CAA100C10BF7 /* Build configuration list for PBXNativeTarget "Quiz_anmiation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20A2F3CC1C32CAA100C10BF7 /* Debug */,
