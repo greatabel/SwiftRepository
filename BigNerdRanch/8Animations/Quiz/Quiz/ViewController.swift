@@ -54,12 +54,15 @@ class ViewController: UIViewController {
     }
 
     func animateLabelTransitions() {
-        let animationClosure = {
-            () -> Void in
+//        let animationClosure = {
+//            () -> Void in
+//            self.questionLabel.alpha = 1
+//        }
+//        // animate the alpha
+//        UIView.animate(withDuration: 2.5, animations: animationClosure)
+        UIView.animate(withDuration: 0.5, animations: {
             self.questionLabel.alpha = 1
-        }
-        // animate the alpha
-        UIView.animate(withDuration: 2.5, animations: animationClosure)
+        })
     }
 
     override func viewWillAppear(_ animated: Bool){
