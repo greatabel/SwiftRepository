@@ -77,7 +77,9 @@
                     <connections>
                         <outlet property="answerLabel" destination="4gl-GW-m6m" id="WBb-t7-bmV"/>
                         <outlet property="currentQuestionLabel" destination="PjJ-NS-wBU" id="1Nt-FO-CXL"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="ygO-tj-Szt" id="qa8-kR-tfm"/>
                         <outlet property="nextQuestionLabel" destination="Qel-2c-mNe" id="imP-zn-hUZ"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="Wbx-we-NLm" id="6J3-Am-gM2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
