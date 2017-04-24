@@ -88,7 +88,7 @@ class ViewController: UIViewController {
 
         UIView.animate(withDuration: 0.5,
                        delay: 0,
-                       options: [],
+                       options: [.curveLinear],
                        animations: {
 //            self.questionLabel.alpha = 1
             self.currentQuestionLabel.alpha = 0
