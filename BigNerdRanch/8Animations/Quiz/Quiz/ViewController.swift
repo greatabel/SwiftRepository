@@ -107,6 +107,7 @@ class ViewController: UIViewController {
 //                        self.updateOffScreenLabel()
 //        })
         // bronze challenge 弹簧效果
+        // https://www.renfei.org/blog/ios-8-spring-animation.html
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.2,
