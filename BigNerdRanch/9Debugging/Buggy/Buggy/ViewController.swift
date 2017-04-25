@@ -39,7 +39,8 @@ class ViewController: UIViewController {
             array.remove(at: j)
         }
         print("array= \(array)")
-        print(array[3])
+        // 故意留的bug ->: print(array[3])
+//        print(array[3])
     }
 
 
