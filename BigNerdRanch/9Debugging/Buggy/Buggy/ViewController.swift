@@ -14,15 +14,33 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton){
 //        print("buttonTapped")
+
+        // literal expressions
         print("Method: \(#function) in file: \(#file) line: \(#line) called.")
 //        print("sender:\(sender)")
 //        print("Is control on? \(sender.isOn)")
+        badMethod()
 
     }
 
 //    @IBAction func swtichToggled(_ sender: UISwitch){
 //        print("swtichToggled")
 //    }
+
+    func badMethod() {
+        let array = NSMutableArray()
+        for i in 0..<5 {
+            array.insert(i, at: i)
+        }
+        // select Log Message. In the Text field, enter Pass number %H (%H is the breakpoint hit count,
+        print("# array= \(array)")
+        // Go one step too far emptying the array (notice the range change):
+        for j in 0...5 {
+            array.remove(at: j)
+        }
+        print("array= \(array)")
+        print(array[3])
+    }
 
 
 }
