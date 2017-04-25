@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Buggy
-//
-//  Created by 万畅 on 2017/4/25.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -21,8 +13,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped(_ sender: UIButton){
-        print("buttonTapped")
+//        print("buttonTapped")
+        print("Method: \(#function) in file: \(#file) line: \(#line) called.")
+//        print("sender:\(sender)")
+//        print("Is control on? \(sender.isOn)")
+
     }
+
+//    @IBAction func swtichToggled(_ sender: UISwitch){
+//        print("swtichToggled")
+//    }
 
 
 }

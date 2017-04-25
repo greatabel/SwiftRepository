@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Buggy
-//
-//  Created by 万畅 on 2017/4/25.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
