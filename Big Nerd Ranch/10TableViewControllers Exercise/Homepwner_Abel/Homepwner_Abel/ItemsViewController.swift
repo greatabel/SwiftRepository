@@ -58,6 +58,13 @@ class ItemsViewController: UITableViewController {
         }
     }
 
+    // http://stackoverflow.com/questions/39614268/how-do-you-change-the-colour-of-a-section-title-in-a-tableview
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view:UIView, forSection: Int) {
+        if let headerTitle = view as? UITableViewHeaderFooterView {
+            headerTitle.textLabel?.textColor = UIColor.blue
+        }
+    }
+
 
 
     

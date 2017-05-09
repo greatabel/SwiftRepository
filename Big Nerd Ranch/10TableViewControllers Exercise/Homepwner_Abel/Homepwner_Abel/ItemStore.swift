@@ -5,7 +5,7 @@ class ItemStore {
     var allItems: [Item] = []
 
     init() {
-        for _ in 0..<5 {
+        for _ in 0..<11 {
             createItem()
         }
     }
