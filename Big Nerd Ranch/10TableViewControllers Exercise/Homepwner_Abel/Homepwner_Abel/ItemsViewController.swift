@@ -23,6 +23,18 @@ class ItemsViewController: UITableViewController {
         sectionData.append(b)
 //        print(sectionData[0],sectionData[1])
 
+        // challenge 2:
+        // 不太好的解决问题2的方案：
+//        sectionData[1].append(Item(name: "No More", serialNumber: "123", valueInDollars: 0))
+//        self.tableView.beginUpdates()
+//        let indexPath:IndexPath = IndexPath(row:(sectionData[1].count - 1), section:0)
+//
+//        self.tableView.insertRows(at: [indexPath], with: .left)
+//
+//        self.tableView.endUpdates()
+//
+//        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
