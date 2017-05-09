@@ -420,7 +420,7 @@
 				DEVELOPMENT_TEAM = 56AME9BLVU;
 				INFOPLIST_FILE = Homepwner_Abel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.Homepwner-Abel";
+				PRODUCT_BUNDLE_IDENTIFIER = "AbelCorp1.Homepwner-Abel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -433,7 +433,7 @@
 				DEVELOPMENT_TEAM = 56AME9BLVU;
 				INFOPLIST_FILE = Homepwner_Abel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.Homepwner-Abel";
+				PRODUCT_BUNDLE_IDENTIFIER = "AbelCorp1.Homepwner-Abel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -516,6 +516,7 @@
 				20B471B71EAF456100FDF8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B471B81EAF456100FDF8AA /* Build configuration list for PBXNativeTarget "Homepwner_AbelTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				20B471BA1EAF456100FDF8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B471BB1EAF456100FDF8AA /* Build configuration list for PBXNativeTarget "Homepwner_AbelUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +534,7 @@
 				20B471BD1EAF456100FDF8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
