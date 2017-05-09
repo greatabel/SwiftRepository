@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Homepwner_Abel
-//
-//  Created by 万畅 on 2017/4/25.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +8,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let itemStore = ItemStore()
+
+        let itemController = window!.rootViewController as! ItemsViewController
+        itemController.itemStore = itemStore
         return true
     }
 
