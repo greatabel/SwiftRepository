@@ -35,7 +35,7 @@ class ItemsViewController: UITableViewController {
 //
 //        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
 
-        sectionData[1].append(Item(name: "No More", serialNumber: "", valueInDollars: -1))
+        sectionData[1].append(Item(name: "No More items!", serialNumber: "", valueInDollars: -1))
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
