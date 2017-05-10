@@ -47,14 +47,33 @@ class ItemsViewController: UITableViewController {
         // https://grokswift.com/transparent-table-view/
         let backgroundImage = UIImage(named: "GrokSwiftLogo500.png")
         let imageView = UIImageView(image: backgroundImage)
-        self.tableView.backgroundView = imageView
 
+//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+//        let blurView = UIVisualEffectView(effect: blurEffect)
+//        blurView.frame = imageView.bounds
+//        imageView.addSubview(blurView)
+
+        tableView.backgroundView = imageView
+
+        // center and scale background image
+        imageView.contentMode = .scaleAspectFit
+
+        // Set the background color to match better
+        tableView.backgroundColor = UIColor.cyan
 
         // no lines where there aren't cells 行内没有内容时候不显示行线
         let CGRectZero = CGRect(x: 0, y: 0, width: 0, height: 0)
         tableView.tableFooterView = UIView(frame: CGRectZero)
 
     }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+      // challenge 3: 让tableview透明
+//        cell.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+    }
+
+
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return itemStore.allItems.count
