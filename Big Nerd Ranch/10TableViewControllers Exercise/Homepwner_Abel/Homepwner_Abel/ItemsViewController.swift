@@ -59,6 +59,8 @@ class ItemsViewController: UITableViewController {
             cell.detailTextLabel?.text = ""
         }
         else {
+        // challenge 3
+        cell.textLabel?.font = UIFont(name:"System", size:20)
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "&\(item.valueInDollars)"
         }
