@@ -35,6 +35,7 @@ class ItemsViewController: UITableViewController {
 //
 //        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
 
+        sectionData[1].append(Item(name: "No More", serialNumber: "", valueInDollars: -1))
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,11 +46,21 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
+        // challenge 2
+
+
 //        let item = itemStore.allItems[indexPath.row]
          let item = sectionData[indexPath.section][indexPath.row]
-
+        print("\(item.name) ### \((indexPath as NSIndexPath).row)")
+        print("count= \(sectionData[0].count) \(sectionData[1].count)")
+        if( (indexPath as NSIndexPath).row == sectionData[1].count-1) {
+            cell.textLabel?.text = item.name
+            cell.detailTextLabel?.text = ""
+        }
+        else {
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "&\(item.valueInDollars)"
+        }
         
         return cell
     }
