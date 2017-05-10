@@ -46,7 +46,8 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
-        // challenge 2
+        // challenge 2: method 2
+        // http://stackoverflow.com/questions/40057420/set-last-tableview-cell-as-constant-cell-among-variable-cells-in-swift
 
 
 //        let item = itemStore.allItems[indexPath.row]
@@ -86,6 +87,19 @@ class ItemsViewController: UITableViewController {
         if let headerTitle = view as? UITableViewHeaderFooterView {
             headerTitle.textLabel?.textColor = UIColor.blue
         }
+    }
+
+    // challenge 3
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height:CGFloat = CGFloat()
+        if( (indexPath as NSIndexPath).row == sectionData[1].count-1) {
+            height = 44
+        }
+        else {
+            height = 60
+
+        }
+        return height
     }
 
 
