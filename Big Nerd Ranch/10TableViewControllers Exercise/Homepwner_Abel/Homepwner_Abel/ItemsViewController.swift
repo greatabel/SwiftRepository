@@ -37,9 +37,23 @@ class ItemsViewController: UITableViewController {
 
         sectionData[1].append(Item(name: "No More items!", serialNumber: "", valueInDollars: -1))
 
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+
+        super.viewWillAppear(animated)
+        // challenge 3
+        // https://grokswift.com/transparent-table-view/
         let backgroundImage = UIImage(named: "GrokSwiftLogo500.png")
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
+
+
+        // no lines where there aren't cells 行内没有内容时候不显示行线
+        let CGRectZero = CGRect(x: 0, y: 0, width: 0, height: 0)
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
