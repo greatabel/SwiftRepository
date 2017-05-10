@@ -10,6 +10,7 @@
 		20B21DB11EC1C3480005DC5D /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21DB01EC1C3480005DC5D /* ItemsViewController.swift */; };
 		20B21DB31EC1C44C0005DC5D /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21DB21EC1C44C0005DC5D /* item.swift */; };
 		20B21DB51EC1C65E0005DC5D /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21DB41EC1C65E0005DC5D /* ItemStore.swift */; };
+		20B21DB71EC2BCB80005DC5D /* GrokSwiftLogo500.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B21DB61EC2BCB80005DC5D /* GrokSwiftLogo500.png */; };
 		20B471911EAF456100FDF8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B471901EAF456100FDF8AA /* AppDelegate.swift */; };
 		20B471961EAF456100FDF8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B471941EAF456100FDF8AA /* Main.storyboard */; };
 		20B471981EAF456100FDF8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B471971EAF456100FDF8AA /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		20B21DB01EC1C3480005DC5D /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		20B21DB21EC1C44C0005DC5D /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		20B21DB41EC1C65E0005DC5D /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		20B21DB61EC2BCB80005DC5D /* GrokSwiftLogo500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrokSwiftLogo500.png; sourceTree = "<group>"; };
 		20B4718D1EAF456100FDF8AA /* Homepwner_Exercise_Abel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner_Exercise_Abel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B471901EAF456100FDF8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20B471951EAF456100FDF8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		20B4718F1EAF456100FDF8AA /* Homepwner_Abel */ = {
 			isa = PBXGroup;
 			children = (
+				20B21DB61EC2BCB80005DC5D /* GrokSwiftLogo500.png */,
 				20B471901EAF456100FDF8AA /* AppDelegate.swift */,
 				20B471941EAF456100FDF8AA /* Main.storyboard */,
 				20B471971EAF456100FDF8AA /* Assets.xcassets */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B4719B1EAF456100FDF8AA /* LaunchScreen.storyboard in Resources */,
+				20B21DB71EC2BCB80005DC5D /* GrokSwiftLogo500.png in Resources */,
 				20B471981EAF456100FDF8AA /* Assets.xcassets in Resources */,
 				20B471961EAF456100FDF8AA /* Main.storyboard in Resources */,
 			);
