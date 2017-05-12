@@ -6,11 +6,11 @@ class ItemsViewController: UITableViewController {
     var sectionData:[[Item]] = []
 
     @IBAction func addNewItem(_ sender: UIButton){
-
+        print("add")
     }
 
     @IBAction func toggleEditingMode(_ sender: UIButton){
-        
+        print("edit")
     }
 
 
