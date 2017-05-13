@@ -16,10 +16,19 @@ class ItemsViewController: UITableViewController {
         // Create a new item and add it to the store
 //        let newItem = itemStore.createItem()
         let newItem = Item(random: true)
-        sectionData[0].append(newItem)
+        var indexPath: IndexPath!
+        if newItem.valueInDollars > 50 {
+            sectionData[0].append(newItem)
+            indexPath = IndexPath(row: sectionData[0].count - 1, section: 0)
+        } else {
+            sectionData[1].append(newItem)
+            //因为section 1的最后一个是：no more item
+            indexPath = IndexPath(row: sectionData[1].count - 2, section: 1)
+        }
+
         // Figure out where that item is in the array
 //        if let index = itemStore.allItems.index(of: newItem) {
-            let indexPath = IndexPath(row: sectionData[0].count - 1, section: 0)
+//            let indexPath = IndexPath(row: sectionData[0].count - 1, section: 0)
             // Insert this new row into the table
             tableView.beginUpdates()
             tableView.insertRows(at: [indexPath], with: .automatic)
