@@ -239,10 +239,16 @@ class ItemsViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Remove"
+    }
+
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         print("move: \(sourceIndexPath) -> \(destinationIndexPath)")
         moveItem(from: sourceIndexPath, to: destinationIndexPath)
     }
+
+
 
 
     
