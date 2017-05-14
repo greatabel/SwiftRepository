@@ -17,6 +17,17 @@ class ItemsViewController: UITableViewController {
         }
     }
 
+    func moveItem(from fromIndex: IndexPath, to toIndex: IndexPath){
+        if fromIndex == toIndex {
+            return
+        }
+        let movedItem = sectionData[fromIndex[0]][fromIndex[1]]
+
+        sectionData[fromIndex[0]].remove(at: fromIndex[1])
+
+        sectionData[toIndex[0]].insert(movedItem, at: toIndex[1])
+    }
+
     @IBAction func addNewItem(_ sender: UIButton){
         print("add")
 
@@ -208,6 +219,11 @@ class ItemsViewController: UITableViewController {
             // also rm the row from table view
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        print("move: \(sourceIndexPath) -> \(destinationIndexPath)")
+        moveItem(from: sourceIndexPath, to: destinationIndexPath)
     }
 
 
