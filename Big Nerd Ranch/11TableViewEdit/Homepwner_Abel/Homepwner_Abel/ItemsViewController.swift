@@ -213,6 +213,12 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
 
+            let title = "删除 \(sectionData[indexPath[0]][indexPath[1]].name)?"
+            let message = "你确定要删除这个项目吗？"
+            let  ac = UIAlertController(title: title, message: message,
+                                        preferredStyle: .actionSheet)
+
+            present(ac, animated: true, completion: nil)
 //            let item = itemStore.allItems[indexPath.row]
             print("delete: \(indexPath)")
             removeItem(indexPath)
