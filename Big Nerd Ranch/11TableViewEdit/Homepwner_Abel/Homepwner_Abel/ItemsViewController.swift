@@ -248,6 +248,19 @@ class ItemsViewController: UITableViewController {
         moveItem(from: sourceIndexPath, to: destinationIndexPath)
     }
 
+    // ch11 : challenge 2
+    override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        if(sourceIndexPath == [1, sectionData[1].count-1 ]){
+            print("here:no more!")
+            return sourceIndexPath
+        }
+        else {
+            return proposedDestinationIndexPath
+        }
+    }
+
+
+
 
 
 
