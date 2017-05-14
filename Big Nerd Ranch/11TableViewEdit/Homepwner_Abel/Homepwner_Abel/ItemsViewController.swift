@@ -5,6 +5,18 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     var sectionData:[[Item]] = []
 
+    func removeItem(_ mypath: IndexPath){
+        if mypath[0] == 0 {
+//            if let index = sectionData[0].index(of: newitem){
+                sectionData[0].remove(at: mypath[1])
+//            }
+        } else {
+//            if let index = sectionData[1].index(of: newitem){
+                sectionData[1].remove(at: mypath[1])
+//            }
+        }
+    }
+
     @IBAction func addNewItem(_ sender: UIButton){
         print("add")
 
@@ -187,6 +199,16 @@ class ItemsViewController: UITableViewController {
         return height
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+
+//            let item = itemStore.allItems[indexPath.row]
+            print("delete: \(indexPath)")
+            removeItem(indexPath)
+            // also rm the row from table view
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 
 
     
