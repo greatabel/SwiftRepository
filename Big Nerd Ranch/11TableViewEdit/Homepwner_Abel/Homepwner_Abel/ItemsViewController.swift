@@ -211,7 +211,8 @@ class ItemsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        // ch11 challenge 3
+        if editingStyle == .delete && (indexPath != [1, sectionData[1].count-1 ]) {
 
             let title = "删除 \(sectionData[indexPath[0]][indexPath[1]].name)?"
             let message = "你确定要删除这个项目吗？"
@@ -240,7 +241,12 @@ class ItemsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        // ch11 challenge 3
+        if (indexPath == [1, sectionData[1].count-1 ]) {
+            return nil
+        } else {
         return "Remove"
+        }
     }
 
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -250,7 +256,8 @@ class ItemsViewController: UITableViewController {
 
     // ch11 : challenge 2
     override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
-        if(sourceIndexPath == [1, sectionData[1].count-1 ]){
+        if(sourceIndexPath == [1, sectionData[1].count-1 ] ||
+            proposedDestinationIndexPath == [1, sectionData[1].count-1 ]){
             print("here:no more!")
             return sourceIndexPath
         }
