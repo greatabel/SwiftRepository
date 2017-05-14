@@ -218,12 +218,24 @@ class ItemsViewController: UITableViewController {
             let  ac = UIAlertController(title: title, message: message,
                                         preferredStyle: .actionSheet)
 
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            ac.addAction(cancelAction)
+
+            let deleteAction = UIAlertAction(title: "删除", style: .destructive,
+                                             handler: {
+                                                (action) -> Void in
+                                            print("delete: \(indexPath)")
+                                            self.removeItem(indexPath)
+                                            // also rm the row from table view
+                                            tableView.deleteRows(at: [indexPath], with: .automatic)
+            })
+            ac.addAction(deleteAction)
             present(ac, animated: true, completion: nil)
 //            let item = itemStore.allItems[indexPath.row]
-            print("delete: \(indexPath)")
-            removeItem(indexPath)
-            // also rm the row from table view
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            print("delete: \(indexPath)")
+//            removeItem(indexPath)
+//            // also rm the row from table view
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
 
