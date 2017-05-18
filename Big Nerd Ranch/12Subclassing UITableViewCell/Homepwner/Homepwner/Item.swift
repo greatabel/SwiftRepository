@@ -1,7 +1,3 @@
-//
-//  Copyright © 2015 Big Nerd Ranch
-//
-
 import Foundation
 
 class Item: NSObject {

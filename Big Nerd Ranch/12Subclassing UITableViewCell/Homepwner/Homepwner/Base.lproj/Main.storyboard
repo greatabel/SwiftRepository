@@ -79,10 +79,16 @@
                                         <constraint firstItem="KUv-QT-nRr" firstAttribute="leading" secondItem="f9M-rx-b9D" secondAttribute="leadingMargin" constant="21" id="Dfd-Hg-Lmd"/>
                                         <constraint firstItem="oVr-OE-e8y" firstAttribute="centerY" secondItem="f9M-rx-b9D" secondAttribute="centerY" id="OWj-to-cBv"/>
                                         <constraint firstItem="Msq-Jz-uRp" firstAttribute="leading" secondItem="KUv-QT-nRr" secondAttribute="leading" id="TiZ-W4-Dow"/>
+                                        <constraint firstItem="Msq-Jz-uRp" firstAttribute="top" secondItem="KUv-QT-nRr" secondAttribute="bottom" constant="8" id="g92-E4-fXN"/>
                                         <constraint firstAttribute="bottom" secondItem="Msq-Jz-uRp" secondAttribute="bottom" constant="6.5" id="hgi-p2-MMc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="oVr-OE-e8y" secondAttribute="trailing" constant="21" id="kh0-5f-0V3"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="KUv-QT-nRr" id="51S-o9-cga"/>
+                                    <outlet property="serialNuberLabel" destination="Msq-Jz-uRp" id="mZA-Vj-3g0"/>
+                                    <outlet property="valueLabel" destination="oVr-OE-e8y" id="5c9-tN-aRs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
