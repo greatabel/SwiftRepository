@@ -130,4 +130,10 @@ class ItemsViewController: UITableViewController {
             }
             return cell
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.reloadData()
+    }
 }
