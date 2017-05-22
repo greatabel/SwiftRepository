@@ -10,6 +10,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var dateLabel: UILabel!
 
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
+
     var item: Item!
 
     let numberFormatter: NumberFormatter = {
