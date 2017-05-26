@@ -14,6 +14,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.nameField.delegate = self
+
+    }
 
 
     var item: Item! {
