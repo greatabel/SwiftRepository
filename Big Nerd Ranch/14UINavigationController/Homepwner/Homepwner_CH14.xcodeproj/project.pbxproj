@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203DDD951ED8857E00E577C6 /* UserInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203DDD941ED8857E00E577C6 /* UserInputs.swift */; };
 		20A188BA1ECD7FA700294EB4 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A188B91ECD7FA700294EB4 /* ItemCell.swift */; };
 		20F5AC7D1ECECBAE00CD6762 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */; };
 		6B64C0F31B84C7C300288BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64C0F21B84C7C300288BE3 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		203DDD941ED8857E00E577C6 /* UserInputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputs.swift; sourceTree = "<group>"; };
 		20A188B91ECD7FA700294EB4 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6B64C0EF1B84C7C300288BE3 /* Homepwner_CH14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner_CH14.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 				6B64C1241B84CB3F00288BE3 /* ItemStore.swift */,
 				20A188B91ECD7FA700294EB4 /* ItemCell.swift */,
 				20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */,
+				203DDD941ED8857E00E577C6 /* UserInputs.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -206,15 +209,20 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 32DD42UWD5;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					6B64C1021B84C7C300288BE3 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 32DD42UWD5;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = 6B64C0EE1B84C7C300288BE3;
 					};
 					6B64C10D1B84C7C300288BE3 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 32DD42UWD5;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 6B64C0EE1B84C7C300288BE3;
 					};
 				};
@@ -274,6 +282,7 @@
 				6B64C1211B84C8EB00288BE3 /* ItemsViewController.swift in Sources */,
 				6B64C1231B84C9C900288BE3 /* Item.swift in Sources */,
 				6B64C1251B84CB3F00288BE3 /* ItemStore.swift in Sources */,
+				203DDD951ED8857E00E577C6 /* UserInputs.swift in Sources */,
 				20F5AC7D1ECECBAE00CD6762 /* DetailViewController.swift in Sources */,
 				6B64C0F31B84C7C300288BE3 /* AppDelegate.swift in Sources */,
 				20A188BA1ECD7FA700294EB4 /* ItemCell.swift in Sources */,
@@ -420,12 +429,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AbelCorp.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -434,12 +445,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AbelCorp.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -449,10 +462,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = HomepwnerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.HomepwnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homepwner_CH14.app/Homepwner_CH14";
 			};
@@ -462,10 +477,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = HomepwnerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.HomepwnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homepwner_CH14.app/Homepwner_CH14";
@@ -475,10 +492,13 @@
 		6B64C11E1B84C7C300288BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = HomepwnerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.HomepwnerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Homepwner;
 				USES_XCTRUNNER = YES;
@@ -488,10 +508,13 @@
 		6B64C11F1B84C7C300288BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = HomepwnerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.HomepwnerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Homepwner;
