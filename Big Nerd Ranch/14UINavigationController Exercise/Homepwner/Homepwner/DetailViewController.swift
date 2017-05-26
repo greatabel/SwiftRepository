@@ -2,7 +2,8 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var nameField: UITextField!
+//    @IBOutlet var nameField: UITextField!
+    @IBOutlet var nameField: UserInputs!
 
     @IBOutlet var serialNumberField: UITextField!
 
