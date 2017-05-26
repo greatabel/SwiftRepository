@@ -3,8 +3,9 @@ import UIKit
 class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
-    
-    @IBAction func addNewItem(_ sender: UIButton) {
+
+//        @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create a new Item and add it to the store
         let newItem = itemStore.createItem()
         
