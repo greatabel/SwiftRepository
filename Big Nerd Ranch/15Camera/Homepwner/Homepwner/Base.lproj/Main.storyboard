@@ -170,7 +170,11 @@
                                     <constraint firstAttribute="height" constant="44" id="82a-17-3fx"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="4rd-OH-Rcz"/>
+                                    <barButtonItem systemItem="camera" id="4rd-OH-Rcz">
+                                        <connections>
+                                            <action selector="takePicture:" destination="kfh-Wd-MeZ" id="KUG-KC-a1p"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

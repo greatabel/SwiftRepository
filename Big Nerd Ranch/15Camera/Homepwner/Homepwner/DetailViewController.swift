@@ -1,6 +1,7 @@
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate ,
+    UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet var nameField: UITextField!
 
@@ -14,6 +15,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+
+        let imagePicker = UIImagePickerController()
+
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        imagePicker.delegate = self
+
+        present(imagePicker, animated: true, completion: nil)
     }
 
 
