@@ -28,7 +28,8 @@ class UserInputs: UITextField, UITextFieldDelegate {
     func clearBorder(){
         // https://stackoverflow.com/questions/11319377/cannot-remove-border-of-uitextfield-dynamically
         self.borderStyle = UITextBorderStyle.roundedRect
-        self.borderStyle = UITextBorderStyle.none
+//        self.borderStyle = UITextBorderStyle.none
+
         self.backgroundColor = UIColor.clear
         self.layer.borderWidth = 0.0
 
@@ -36,7 +37,7 @@ class UserInputs: UITextField, UITextFieldDelegate {
     }
 
      override func becomeFirstResponder() -> Bool {
-
+        print("style \(self.borderStyle)")
         let returnValue = super.becomeFirstResponder()
         if returnValue {
             print("in becomeFirstResponder")
