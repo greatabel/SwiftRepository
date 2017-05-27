@@ -215,6 +215,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="517546272.99298501">
                                     <!--2017-05-27 02:51:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateValueChangedWithSender:" destination="KJO-FB-E3E" eventType="valueChanged" id="ajO-se-xTH"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
