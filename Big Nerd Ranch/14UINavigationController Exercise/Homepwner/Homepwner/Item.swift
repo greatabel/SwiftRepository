@@ -19,7 +19,7 @@ class Item: NSObject {
     
     convenience init(random: Bool = false) {
         if random {
-            let adjectives = ["Fluffy", "Rusty", "Shiny"]
+            let adjectives = ["Turing", "Gauss", "Hilbert", "Abel", "Weyl"]
             let nouns = ["Bear", "Spork", "Mac"]
             
             var idx = arc4random_uniform(UInt32(adjectives.count))
