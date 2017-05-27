@@ -55,6 +55,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         valueField.text =
             numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        print("viewWillAppear-> \(item.dateCreated)")
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,13 +83,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
             let datePickerViewController =
                 segue.destination as! DatePickerViewController
-            datePickerViewController.originalDate = item.dateCreated
-
+            datePickerViewController.item = item
 
         default:
             preconditionFailure("Unexpected segue identifier")
         }
     }
+
+
 
 
 }
