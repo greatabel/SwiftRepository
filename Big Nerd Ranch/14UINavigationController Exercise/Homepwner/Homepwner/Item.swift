@@ -11,7 +11,10 @@ class Item: NSObject {
         self.name = name
         self.serialNumber = serialNumber
         self.valueInDollars = valueInDollars
-        self.dateCreated = Date()
+//        self.dateCreated = Date()
+        let number = Int(arc4random_uniform(30))
+        let randomday = Calendar.current.date(byAdding: .day, value: -number, to: Date())
+        self.dateCreated = randomday!
     }
     
     convenience init(random: Bool = false) {

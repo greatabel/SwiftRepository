@@ -75,5 +75,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "changeDate"?:
+
+            let datePickerViewController =
+                segue.destination as! DatePickerViewController
+            datePickerViewController.originalDate = item.dateCreated
+
+
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+
 
 }

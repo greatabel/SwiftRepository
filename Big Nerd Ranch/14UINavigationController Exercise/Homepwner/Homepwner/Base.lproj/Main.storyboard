@@ -159,7 +159,7 @@
                                         <rect key="frame" x="0.0" y="557" width="308" height="30"/>
                                         <state key="normal" title="change date"/>
                                         <connections>
-                                            <segue destination="KJO-FB-E3E" kind="show" id="BGS-6D-dBV"/>
+                                            <segue destination="KJO-FB-E3E" kind="show" identifier="changeDate" id="BGS-6D-dBV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -208,8 +208,20 @@
                     <view key="view" contentMode="scaleToFill" id="Rxu-30-xTc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AiW-Eb-OZ7">
+                                <rect key="frame" x="0.0" y="168" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="517546272.99298501">
+                                    <!--2017-05-27 02:51:12 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="AiW-Eb-OZ7" id="kgh-aP-wuz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f78-eY-gsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
