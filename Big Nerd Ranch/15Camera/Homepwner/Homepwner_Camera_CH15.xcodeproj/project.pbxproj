@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202E78661ED9C6410087ECF7 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202E78651ED9C6410087ECF7 /* ImageStore.swift */; };
 		20A188BA1ECD7FA700294EB4 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A188B91ECD7FA700294EB4 /* ItemCell.swift */; };
 		20F5AC7D1ECECBAE00CD6762 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */; };
 		6B64C0F31B84C7C300288BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64C0F21B84C7C300288BE3 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		202E78651ED9C6410087ECF7 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		20A188B91ECD7FA700294EB4 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6B64C0EF1B84C7C300288BE3 /* Homepwner_Camera_CH15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner_Camera_CH15.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 				6B64C1241B84CB3F00288BE3 /* ItemStore.swift */,
 				20A188B91ECD7FA700294EB4 /* ItemCell.swift */,
 				20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */,
+				202E78651ED9C6410087ECF7 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				6B64C1251B84CB3F00288BE3 /* ItemStore.swift in Sources */,
 				20F5AC7D1ECECBAE00CD6762 /* DetailViewController.swift in Sources */,
 				6B64C0F31B84C7C300288BE3 /* AppDelegate.swift in Sources */,
+				202E78661ED9C6410087ECF7 /* ImageStore.swift in Sources */,
 				20A188BA1ECD7FA700294EB4 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
