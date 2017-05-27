@@ -13,13 +13,13 @@
         <!--Homepwner-->
         <scene sceneID="7yf-VX-Uec">
             <objects>
-                <tableViewController id="66W-v5-HZ5" customClass="ItemsViewController" customModule="Homepwner_CH14" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="66W-v5-HZ5" customClass="ItemsViewController" customModule="Homepwner_Camera_CH15" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IqO-gP-0b7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="Cq0-lc-WMe" customClass="ItemCell" customModule="Homepwner_CH14" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="Cq0-lc-WMe" customClass="ItemCell" customModule="Homepwner_Camera_CH15" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cq0-lc-WMe" id="f9M-rx-b9D">
@@ -83,7 +83,7 @@
         <!--Detail View Controller-->
         <scene sceneID="XWM-nC-zjO">
             <objects>
-                <viewController id="kfh-Wd-MeZ" customClass="DetailViewController" customModule="Homepwner_CH14" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kfh-Wd-MeZ" customClass="DetailViewController" customModule="Homepwner_Camera_CH15" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v5c-3R-U2Q"/>
                         <viewControllerLayoutGuide type="bottom" id="6ku-mx-uIV"/>
@@ -150,11 +150,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEM-Ob-Vwz">
-                                        <rect key="frame" x="0.0" y="114" width="308" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="308" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Q4u-hH-q7V">
+                                        <rect key="frame" x="0.0" y="142.5" width="308" height="444.5"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vPc-0q-K4s" firstAttribute="leading" secondItem="fFh-3E-sCS" secondAttribute="leading" id="2eE-qV-w6q"/>
@@ -176,6 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="rEM-Ob-Vwz" id="50l-uY-GSq"/>
+                        <outlet property="imageView" destination="Q4u-hH-q7V" id="0c7-wD-3UO"/>
                         <outlet property="nameField" destination="24g-BG-ZOU" id="tfb-b1-QE5"/>
                         <outlet property="serialNumberField" destination="35Q-A3-13l" id="r4N-pk-c0G"/>
                         <outlet property="valueField" destination="80i-e7-BlK" id="JsP-SY-r0p"/>
