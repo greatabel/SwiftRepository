@@ -150,11 +150,18 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEM-Ob-Vwz">
-                                        <rect key="frame" x="0.0" y="114" width="308" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="308" height="435"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKU-TN-yPg">
+                                        <rect key="frame" x="0.0" y="557" width="308" height="30"/>
+                                        <state key="normal" title="change date"/>
+                                        <connections>
+                                            <segue destination="KJO-FB-E3E" kind="show" id="BGS-6D-dBV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vPc-0q-K4s" firstAttribute="leading" secondItem="fFh-3E-sCS" secondAttribute="leading" id="2eE-qV-w6q"/>
@@ -189,6 +196,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2016.8" y="360.2698650674663"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="p7Y-cd-wOF">
+            <objects>
+                <viewController id="KJO-FB-E3E" customClass="DatePickerViewController" customModule="Homepwner_CH14" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lt9-JE-uV5"/>
+                        <viewControllerLayoutGuide type="bottom" id="pYU-4Q-eeZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rxu-30-xTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f78-eY-gsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2756" y="361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MPc-Fi-5lr">
