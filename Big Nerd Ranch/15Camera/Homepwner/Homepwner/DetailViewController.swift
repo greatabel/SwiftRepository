@@ -34,6 +34,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+
+        imageStore.setImage(image, forKey: item.itemKey)
         imageView.image = image
         dismiss(animated: true, completion: nil)
     }
@@ -75,6 +77,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
         valueField.text =
             numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+
+        let key = item.itemKey
+        let imageToDisplay = imageStore.image(forKey: key)
+        imageView.image = imageToDisplay
     }
 
     override func viewWillDisappear(_ animated: Bool) {
