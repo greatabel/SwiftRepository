@@ -16,11 +16,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    @IBAction func clearPicture(_ sender: UIBarButtonItem) {
+        imageStore.deleteImage(forKey: item.itemKey)
+        imageView.image = nil
+    }
 
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
 
         let imagePicker = UIImagePickerController()
         // 允许编辑
+        // https://stackoverflow.com/questions/26502931/how-to-get-the-edited-image-from-uiimagepickercontroller-in-swift
         imagePicker.allowsEditing = true
 
         if UIImagePickerController.isSourceTypeAvailable(.camera) {

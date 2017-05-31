@@ -13,13 +13,13 @@
         <!--Homepwner-->
         <scene sceneID="7yf-VX-Uec">
             <objects>
-                <tableViewController id="66W-v5-HZ5" customClass="ItemsViewController" customModule="Homepwner_Camera_CH15" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="66W-v5-HZ5" customClass="ItemsViewController" customModule="Homepwner_Camera_CH15Ex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IqO-gP-0b7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="Cq0-lc-WMe" customClass="ItemCell" customModule="Homepwner_Camera_CH15" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="Cq0-lc-WMe" customClass="ItemCell" customModule="Homepwner_Camera_CH15Ex" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cq0-lc-WMe" id="f9M-rx-b9D">
@@ -83,7 +83,7 @@
         <!--Detail View Controller-->
         <scene sceneID="XWM-nC-zjO">
             <objects>
-                <viewController id="kfh-Wd-MeZ" customClass="DetailViewController" customModule="Homepwner_Camera_CH15" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kfh-Wd-MeZ" customClass="DetailViewController" customModule="Homepwner_Camera_CH15Ex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v5c-3R-U2Q"/>
                         <viewControllerLayoutGuide type="bottom" id="6ku-mx-uIV"/>
@@ -173,6 +173,12 @@
                                     <barButtonItem systemItem="camera" id="4rd-OH-Rcz">
                                         <connections>
                                             <action selector="takePicture:" destination="kfh-Wd-MeZ" id="KUG-KC-a1p"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="T2X-b5-dEN"/>
+                                    <barButtonItem systemItem="trash" id="HQK-od-h3R">
+                                        <connections>
+                                            <action selector="clearPicture:" destination="kfh-Wd-MeZ" id="ZNq-rd-krh"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
