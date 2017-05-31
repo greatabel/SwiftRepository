@@ -25,8 +25,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
 
         let imagePicker = UIImagePickerController()
         // 允许编辑
-        // https://stackoverflow.com/questions/26502931/how-to-get-the-edited-image-from-uiimagepickercontroller-in-swift
-        imagePicker.allowsEditing = true
+         imagePicker.allowsEditing = true
 
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
@@ -35,19 +34,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
         }
         imagePicker.delegate = self
 
+        var cameraOverlay: UIView!
+//        cameraOverlay = Bundle.mainBundle.loadNibNamed("CameraOverlay", owner: self, options: nil)
+        cameraOverlay = Bundle.main.loadNibNamed("CameraOverlay", owner: self, options: nil)?[0] as! UIView
+        cameraOverlay.frame = imagePicker.cameraOverlayView!.frame
+        //必须要这一行，防止use photo 和 retake 按钮被遮罩啦
+        cameraOverlay.frame.size.height -= 50
+        imagePicker.cameraOverlayView = cameraOverlay
+//        cameraOverlay = nil
 
-        //customView stuff
-        let customViewController = CustomOverlayViewController(
-            nibName:"CustomOverlayViewController",
-            bundle: nil
-        )
-        let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
-        customView.frame = imagePicker.view.frame
 
-
-        present(imagePicker, animated: true, completion: {
-            imagePicker.cameraOverlayView = customView
-        })
+        
+        present(imagePicker, animated: true, completion: nil)
     }
 
     func imagePickerController(_ picker: UIImagePickerController,
