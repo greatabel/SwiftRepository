@@ -20,6 +20,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
 
         let imagePicker = UIImagePickerController()
+        // 允许编辑
+        imagePicker.allowsEditing = true
 
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
@@ -33,7 +35,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
 
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+//        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
 
         imageStore.setImage(image, forKey: item.itemKey)
         imageView.image = image
