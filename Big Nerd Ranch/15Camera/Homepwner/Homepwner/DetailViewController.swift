@@ -43,6 +43,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
             navigationItem.title = item.name
         }
     }
+    var imageStore: ImageStore!
+
+
 
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
