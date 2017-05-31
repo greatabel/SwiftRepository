@@ -35,7 +35,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate ,
         }
         imagePicker.delegate = self
 
-        present(imagePicker, animated: true, completion: nil)
+
+        //customView stuff
+        let customViewController = CustomOverlayViewController(
+            nibName:"CustomOverlayViewController",
+            bundle: nil
+        )
+        let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
+        customView.frame = imagePicker.view.frame
+
+
+        present(imagePicker, animated: true, completion: {
+            imagePicker.cameraOverlayView = customView
+        })
     }
 
     func imagePickerController(_ picker: UIImagePickerController,
