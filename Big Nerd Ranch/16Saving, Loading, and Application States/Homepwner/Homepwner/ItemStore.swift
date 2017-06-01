@@ -3,6 +3,14 @@ import Foundation
 class ItemStore {
     
     var allItems: [Item] = []
+
+    //ch16:保存数据的地方
+    let itemArchiveURL: URL = {
+        let documentsDirectoris =
+            FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let  documentDirectory = documentsDirectoris.first!
+        return documentDirectory.appendingPathComponent("items.archive")
+    }()
     
     func moveItem(from fromIndex: Int, to toIndex: Int) {
         if fromIndex == toIndex {
