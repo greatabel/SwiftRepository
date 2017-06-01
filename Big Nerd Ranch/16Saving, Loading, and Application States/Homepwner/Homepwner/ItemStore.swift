@@ -11,6 +11,11 @@ class ItemStore {
         let  documentDirectory = documentsDirectoris.first!
         return documentDirectory.appendingPathComponent("items.archive")
     }()
+
+    func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path)
+    }
     
     func moveItem(from fromIndex: Int, to toIndex: Int) {
         if fromIndex == toIndex {
