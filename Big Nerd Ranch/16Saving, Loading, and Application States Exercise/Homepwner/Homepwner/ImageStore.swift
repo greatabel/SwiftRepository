@@ -10,7 +10,7 @@ class ImageStore {
         //create full url
         let url = imageURL(forKey: key)
         // turn image into jpeg data
-        if let data = UIImageJPEGRepresentation(image, 0.5){
+        if let data = UIImagePNGRepresentation(image){
             let _ = try?data.write(to: url, options: [.atomic])
         }
     }
