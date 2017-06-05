@@ -4,7 +4,7 @@ import CoreMotion
 /*
  http://nshipster.com/cmdevicemotion/
 https://stackoverflow.com/questions/24728022/obtain-absolute-rotation-using-cmdevicemotion
-
+https://www.forestgiant.com/articles/ios-core-motion/
  */
 
 class ViewController: UIViewController {
@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
 
 //    let interval = 0.01
-    let interval = 3.0
+    let interval = 1.0
     let imageFilename = "bg.jpg"
     let imageWidth = CGFloat(800)
     let imageHeight = CGFloat(1200)
@@ -25,6 +25,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.myLabel.layer.borderColor = UIColor.red.cgColor
+        self.myLabel.layer.borderWidth = 3.0
 
         guard manager.isDeviceMotionAvailable else { return }
 
@@ -44,10 +47,13 @@ class ViewController: UIViewController {
 //                    let y = CGFloat(-attitude.pitch * 2 / M_PI)
 //                    let x = CGFloat(-attitude.roll * 2 / M_PI)
 //                    let str = y.description + ", " + x.description
-                    self.myLabel.text = attitude.pitch.description
+                    var pitch = self.degrees(radians: attitude.pitch)
+                    var roll = self.degrees(radians: attitude.roll)
+                    var yaw = self.degrees(radians: attitude.yaw)
+                    self.myLabel.text = yaw.description + ", " + pitch.description
                 }
 
-                self.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
+//                self.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
             }
         })
     }
@@ -64,6 +70,10 @@ class ViewController: UIViewController {
             self.view.addSubview(iv)
             self.imageView = iv
         }
+    }
+
+    func degrees(radians:Double) -> Double {
+        return 180 / M_PI * radians
     }
 
 
