@@ -42,6 +42,7 @@ class ViewController: UIViewController {
             let gravity = data.gravity
             let rotation = atan2(gravity.x, gravity.y) - .pi
 
+
             OperationQueue.main.addOperation {
                 if let attitude = self.manager.deviceMotion?.attitude {
 //                    let y = CGFloat(-attitude.pitch * 2 / M_PI)
@@ -50,7 +51,10 @@ class ViewController: UIViewController {
                     var pitch = self.degrees(radians: attitude.pitch)
                     var roll = self.degrees(radians: attitude.roll)
                     var yaw = self.degrees(radians: attitude.yaw)
-                    self.myLabel.text = yaw.description + ", " + pitch.description
+                    let myrotation = attitude.yaw
+                    self.myLabel.text = yaw.description + ", " + roll.description
+                    self.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(myrotation))
+
                 }
 
 //                self.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
