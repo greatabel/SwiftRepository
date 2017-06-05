@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  measureAngle
-//
-//  Created by 万畅 on 2017/6/5.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
