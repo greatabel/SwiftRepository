@@ -11,7 +11,7 @@ class ContentCell: UICollectionViewCell {
             label.text = newText
             var newLabelFrame = label.frame
             var newContentFrame = contentView.frame
-            let textSize = sizeForContentString(s: newText,
+            let textSize = ContentCell.sizeForContentString(s: newText,
                                                 forMaxWidth: maxWidth)
             newLabelFrame.size = textSize
             newContentFrame.size = textSize
@@ -21,12 +21,12 @@ class ContentCell: UICollectionViewCell {
     }
 
     
-    var maxWidth: CGFont!
+    var maxWidth: CGFloat!
 
     class func sizeForContentString(s: String,
-                                    forMaxWidth maxWidth: CGFont) -> CGSize {
+                                    forMaxWidth maxWidth: CGFloat) -> CGSize {
 //        return CGSize.zero
-        let maxSize = CGSize(width: maxWidth as! Double, height: 1000.0)
+        let maxSize = CGSize(width: maxWidth, height: 1000.0)
         let opts = NSStringDrawingOptions.usesLineFragmentOrigin
 
         let style = NSMutableParagraphStyle()
