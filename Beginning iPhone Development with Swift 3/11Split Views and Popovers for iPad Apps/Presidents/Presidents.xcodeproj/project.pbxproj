@@ -15,6 +15,7 @@
 		203C0CBB1EE7B0D000BB06A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203C0CB91EE7B0D000BB06A0 /* LaunchScreen.storyboard */; };
 		203C0CC61EE7B0D000BB06A0 /* PresidentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C0CC51EE7B0D000BB06A0 /* PresidentsTests.swift */; };
 		203C0CD11EE7B0D000BB06A0 /* PresidentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C0CD01EE7B0D000BB06A0 /* PresidentsUITests.swift */; };
+		206D08891EE849AD0050141E /* PresidentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 206D08881EE849AD0050141E /* PresidentList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		203C0CCC1EE7B0D000BB06A0 /* PresidentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresidentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		203C0CD01EE7B0D000BB06A0 /* PresidentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentsUITests.swift; sourceTree = "<group>"; };
 		203C0CD21EE7B0D000BB06A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206D08881EE849AD0050141E /* PresidentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PresidentList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		203C0CAD1EE7B0D000BB06A0 /* Presidents */ = {
 			isa = PBXGroup;
 			children = (
+				206D08881EE849AD0050141E /* PresidentList.plist */,
 				203C0CAE1EE7B0D000BB06A0 /* AppDelegate.swift */,
 				203C0CB01EE7B0D000BB06A0 /* MasterViewController.swift */,
 				203C0CB21EE7B0D000BB06A0 /* DetailViewController.swift */,
@@ -241,6 +244,7 @@
 				203C0CBB1EE7B0D000BB06A0 /* LaunchScreen.storyboard in Resources */,
 				203C0CB81EE7B0D000BB06A0 /* Assets.xcassets in Resources */,
 				203C0CB61EE7B0D000BB06A0 /* Main.storyboard in Resources */,
+				206D08891EE849AD0050141E /* PresidentList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +524,7 @@
 				203C0CD71EE7B0D000BB06A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203C0CD81EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "PresidentsTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				203C0CDA1EE7B0D000BB06A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203C0CDB1EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "PresidentsUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				203C0CDD1EE7B0D000BB06A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
