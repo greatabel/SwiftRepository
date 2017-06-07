@@ -4,12 +4,23 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    @IBOutlet weak var webView: UIWebView!
+
 
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                let dict = detail 
+                let urlString = dict["url"]!
+                label.text = urlString
+
+                let url = NSURL(string: urlString)!
+                let request = URLRequest(url: url as URL)
+                webView.loadRequest(request)
+
+                let name = dict["name"]!
+                title = name
             }
         }
     }

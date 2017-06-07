@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		203C0CAB1EE7B0D000BB06A0 /* Presidents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presidents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		203C0CAB1EE7B0D000BB06A0 /* ch11_Presidents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ch11_Presidents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		203C0CAE1EE7B0D000BB06A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		203C0CB01EE7B0D000BB06A0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		203C0CB21EE7B0D000BB06A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +44,10 @@
 		203C0CB71EE7B0D000BB06A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		203C0CBA1EE7B0D000BB06A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203C0CBC1EE7B0D000BB06A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		203C0CC11EE7B0D000BB06A0 /* PresidentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresidentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		203C0CC11EE7B0D000BB06A0 /* ch11_PresidentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch11_PresidentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		203C0CC51EE7B0D000BB06A0 /* PresidentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentsTests.swift; sourceTree = "<group>"; };
 		203C0CC71EE7B0D000BB06A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		203C0CCC1EE7B0D000BB06A0 /* PresidentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresidentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		203C0CCC1EE7B0D000BB06A0 /* ch11_PresidentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch11_PresidentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		203C0CD01EE7B0D000BB06A0 /* PresidentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentsUITests.swift; sourceTree = "<group>"; };
 		203C0CD21EE7B0D000BB06A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206D08881EE849AD0050141E /* PresidentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PresidentList.plist; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		203C0CAC1EE7B0D000BB06A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				203C0CAB1EE7B0D000BB06A0 /* Presidents.app */,
-				203C0CC11EE7B0D000BB06A0 /* PresidentsTests.xctest */,
-				203C0CCC1EE7B0D000BB06A0 /* PresidentsUITests.xctest */,
+				203C0CAB1EE7B0D000BB06A0 /* ch11_Presidents.app */,
+				203C0CC11EE7B0D000BB06A0 /* ch11_PresidentsTests.xctest */,
+				203C0CCC1EE7B0D000BB06A0 /* ch11_PresidentsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		203C0CAA1EE7B0D000BB06A0 /* Presidents */ = {
+		203C0CAA1EE7B0D000BB06A0 /* ch11_Presidents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 203C0CD51EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "Presidents" */;
+			buildConfigurationList = 203C0CD51EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "ch11_Presidents" */;
 			buildPhases = (
 				203C0CA71EE7B0D000BB06A0 /* Sources */,
 				203C0CA81EE7B0D000BB06A0 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = Presidents;
+			name = ch11_Presidents;
 			productName = Presidents;
-			productReference = 203C0CAB1EE7B0D000BB06A0 /* Presidents.app */;
+			productReference = 203C0CAB1EE7B0D000BB06A0 /* ch11_Presidents.app */;
 			productType = "com.apple.product-type.application";
 		};
-		203C0CC01EE7B0D000BB06A0 /* PresidentsTests */ = {
+		203C0CC01EE7B0D000BB06A0 /* ch11_PresidentsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 203C0CD81EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "PresidentsTests" */;
+			buildConfigurationList = 203C0CD81EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "ch11_PresidentsTests" */;
 			buildPhases = (
 				203C0CBD1EE7B0D000BB06A0 /* Sources */,
 				203C0CBE1EE7B0D000BB06A0 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				203C0CC31EE7B0D000BB06A0 /* PBXTargetDependency */,
 			);
-			name = PresidentsTests;
+			name = ch11_PresidentsTests;
 			productName = PresidentsTests;
-			productReference = 203C0CC11EE7B0D000BB06A0 /* PresidentsTests.xctest */;
+			productReference = 203C0CC11EE7B0D000BB06A0 /* ch11_PresidentsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		203C0CCB1EE7B0D000BB06A0 /* PresidentsUITests */ = {
+		203C0CCB1EE7B0D000BB06A0 /* ch11_PresidentsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 203C0CDB1EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "PresidentsUITests" */;
+			buildConfigurationList = 203C0CDB1EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "ch11_PresidentsUITests" */;
 			buildPhases = (
 				203C0CC81EE7B0D000BB06A0 /* Sources */,
 				203C0CC91EE7B0D000BB06A0 /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				203C0CCE1EE7B0D000BB06A0 /* PBXTargetDependency */,
 			);
-			name = PresidentsUITests;
+			name = ch11_PresidentsUITests;
 			productName = PresidentsUITests;
-			productReference = 203C0CCC1EE7B0D000BB06A0 /* PresidentsUITests.xctest */;
+			productReference = 203C0CCC1EE7B0D000BB06A0 /* ch11_PresidentsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 203C0CA61EE7B0CF00BB06A0 /* Build configuration list for PBXProject "Presidents" */;
+			buildConfigurationList = 203C0CA61EE7B0CF00BB06A0 /* Build configuration list for PBXProject "ch11_Presidents" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,9 +229,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				203C0CAA1EE7B0D000BB06A0 /* Presidents */,
-				203C0CC01EE7B0D000BB06A0 /* PresidentsTests */,
-				203C0CCB1EE7B0D000BB06A0 /* PresidentsUITests */,
+				203C0CAA1EE7B0D000BB06A0 /* ch11_Presidents */,
+				203C0CC01EE7B0D000BB06A0 /* ch11_PresidentsTests */,
+				203C0CCB1EE7B0D000BB06A0 /* ch11_PresidentsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,12 +296,12 @@
 /* Begin PBXTargetDependency section */
 		203C0CC31EE7B0D000BB06A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 203C0CAA1EE7B0D000BB06A0 /* Presidents */;
+			target = 203C0CAA1EE7B0D000BB06A0 /* ch11_Presidents */;
 			targetProxy = 203C0CC21EE7B0D000BB06A0 /* PBXContainerItemProxy */;
 		};
 		203C0CCE1EE7B0D000BB06A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 203C0CAA1EE7B0D000BB06A0 /* Presidents */;
+			target = 203C0CAA1EE7B0D000BB06A0 /* ch11_Presidents */;
 			targetProxy = 203C0CCD1EE7B0D000BB06A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = luminagic.PresidentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Presidents.app/Presidents";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ch11_Presidents.app/ch11_Presidents";
 			};
 			name = Debug;
 		};
@@ -473,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = luminagic.PresidentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Presidents.app/Presidents";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ch11_Presidents.app/ch11_Presidents";
 			};
 			name = Release;
 		};
@@ -508,7 +508,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		203C0CA61EE7B0CF00BB06A0 /* Build configuration list for PBXProject "Presidents" */ = {
+		203C0CA61EE7B0CF00BB06A0 /* Build configuration list for PBXProject "ch11_Presidents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				203C0CD31EE7B0D000BB06A0 /* Debug */,
@@ -517,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		203C0CD51EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "Presidents" */ = {
+		203C0CD51EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "ch11_Presidents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				203C0CD61EE7B0D000BB06A0 /* Debug */,
@@ -526,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		203C0CD81EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "PresidentsTests" */ = {
+		203C0CD81EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "ch11_PresidentsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				203C0CD91EE7B0D000BB06A0 /* Debug */,
@@ -535,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		203C0CDB1EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "PresidentsUITests" */ = {
+		203C0CDB1EE7B0D000BB06A0 /* Build configuration list for PBXNativeTarget "ch11_PresidentsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				203C0CDC1EE7B0D000BB06A0 /* Debug */,

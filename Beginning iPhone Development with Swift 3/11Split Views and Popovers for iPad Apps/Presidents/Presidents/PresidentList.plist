@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>presidents</key>
@@ -8,13 +8,13 @@
 			<key>name</key>
 			<string>George Washington</string>
 			<key>url</key>
-			<string>https://en.wikipedia.org/wiki/George_Washington</string>
+			<string>https://movie.douban.com/subject/5049551/</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>John Adams</string>
 			<key>url</key>
-			<string>https://en.wikipedia.org/wiki/John_Adams</string>
+			<string>https://movie.douban.com/subject/2131678/</string>
 		</dict>
 		<dict>
 			<key>name</key>
