@@ -1,6 +1,12 @@
 import UIKit
 
-class LanguageListControllerTableViewController: UITableViewController {
+class LanguageListController: UITableViewController {
+
+    weak var detailViewController: DetailViewController? = nil
+    private let languageNames: [String] = ["English", "French", "German", "Spanish"]
+    private let languageCodes: [String] = ["en", "fr", "de", "es"]
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,6 +16,9 @@ class LanguageListControllerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        clearsSelectionOnViewWillAppear = false
+        preferredContentSize = CGSize(width: 320, height: (languageCodes.count * 44))
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,23 +30,27 @@ class LanguageListControllerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return languageCodes.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel!.text = languageNames[indexPath.row]
         return cell
     }
-    */
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        detailViewController?.languageString = languageCodes[indexPath.row]
+        dismiss(animated: true, completion: nil)
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

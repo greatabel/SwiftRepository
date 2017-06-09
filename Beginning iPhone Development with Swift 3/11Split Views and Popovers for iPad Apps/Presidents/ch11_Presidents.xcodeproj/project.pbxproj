@@ -16,7 +16,7 @@
 		203C0CC61EE7B0D000BB06A0 /* PresidentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C0CC51EE7B0D000BB06A0 /* PresidentsTests.swift */; };
 		203C0CD11EE7B0D000BB06A0 /* PresidentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C0CD01EE7B0D000BB06A0 /* PresidentsUITests.swift */; };
 		206D08891EE849AD0050141E /* PresidentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 206D08881EE849AD0050141E /* PresidentList.plist */; };
-		20CEDBA31EEA388E0043DC52 /* LanguageListControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CEDBA21EEA388E0043DC52 /* LanguageListControllerTableViewController.swift */; };
+		20CEDBA31EEA388E0043DC52 /* LanguageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CEDBA21EEA388E0043DC52 /* LanguageListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		203C0CD01EE7B0D000BB06A0 /* PresidentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentsUITests.swift; sourceTree = "<group>"; };
 		203C0CD21EE7B0D000BB06A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206D08881EE849AD0050141E /* PresidentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PresidentList.plist; sourceTree = "<group>"; };
-		20CEDBA21EEA388E0043DC52 /* LanguageListControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListControllerTableViewController.swift; sourceTree = "<group>"; };
+		20CEDBA21EEA388E0043DC52 /* LanguageListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				203C0CB71EE7B0D000BB06A0 /* Assets.xcassets */,
 				203C0CB91EE7B0D000BB06A0 /* LaunchScreen.storyboard */,
 				203C0CBC1EE7B0D000BB06A0 /* Info.plist */,
-				20CEDBA21EEA388E0043DC52 /* LanguageListControllerTableViewController.swift */,
+				20CEDBA21EEA388E0043DC52 /* LanguageListController.swift */,
 			);
 			path = Presidents;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203C0CB31EE7B0D000BB06A0 /* DetailViewController.swift in Sources */,
-				20CEDBA31EEA388E0043DC52 /* LanguageListControllerTableViewController.swift in Sources */,
+				20CEDBA31EEA388E0043DC52 /* LanguageListController.swift in Sources */,
 				203C0CB11EE7B0D000BB06A0 /* MasterViewController.swift in Sources */,
 				203C0CAF1EE7B0D000BB06A0 /* AppDelegate.swift in Sources */,
 			);
