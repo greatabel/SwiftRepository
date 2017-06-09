@@ -3,8 +3,8 @@ import UIKit
 class LanguageListController: UITableViewController {
 
     weak var detailViewController: DetailViewController? = nil
-    private let languageNames: [String] = ["English", "French", "German", "Spanish"]
-    private let languageCodes: [String] = ["en", "fr", "de", "es"]
+    private let languageNames: [String] = ["English", "French", "German", "Spanish", "Chinese"]
+    private let languageCodes: [String] = ["en", "fr", "de", "es", "zh"]
 
 
 
