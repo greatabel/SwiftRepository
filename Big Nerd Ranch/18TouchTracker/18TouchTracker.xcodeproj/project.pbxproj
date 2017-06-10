@@ -15,6 +15,7 @@
 		20625E911EEC3F1D002C5D4C /* _8TouchTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20625E901EEC3F1D002C5D4C /* _8TouchTrackerTests.swift */; };
 		20625E9C1EEC3F1D002C5D4C /* _8TouchTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20625E9B1EEC3F1D002C5D4C /* _8TouchTrackerUITests.swift */; };
 		20625EAA1EEC3FAF002C5D4C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20625EA91EEC3FAF002C5D4C /* Line.swift */; };
+		20625EAC1EEC4081002C5D4C /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20625EAB1EEC4081002C5D4C /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		20625E9B1EEC3F1D002C5D4C /* _8TouchTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8TouchTrackerUITests.swift; sourceTree = "<group>"; };
 		20625E9D1EEC3F1D002C5D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20625EA91EEC3FAF002C5D4C /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		20625EAB1EEC4081002C5D4C /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				20625E841EEC3F1D002C5D4C /* LaunchScreen.storyboard */,
 				20625E871EEC3F1D002C5D4C /* Info.plist */,
 				20625EA91EEC3FAF002C5D4C /* Line.swift */,
+				20625EAB1EEC4081002C5D4C /* DrawView.swift */,
 			);
 			path = 18TouchTracker;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				20625EAA1EEC3FAF002C5D4C /* Line.swift in Sources */,
 				20625E7E1EEC3F1D002C5D4C /* ViewController.swift in Sources */,
+				20625EAC1EEC4081002C5D4C /* DrawView.swift in Sources */,
 				20625E7C1EEC3F1D002C5D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
