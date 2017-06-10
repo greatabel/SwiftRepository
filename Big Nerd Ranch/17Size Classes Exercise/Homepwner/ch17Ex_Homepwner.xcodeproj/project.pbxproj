@@ -42,16 +42,16 @@
 		202E78651ED9C6410087ECF7 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		20A188B91ECD7FA700294EB4 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		20F5AC7C1ECECBAE00CD6762 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		6B64C0EF1B84C7C300288BE3 /* ch17_Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ch17_Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B64C0EF1B84C7C300288BE3 /* ch17Ex_Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ch17Ex_Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B64C0F21B84C7C300288BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B64C0F71B84C7C300288BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B64C0F91B84C7C300288BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B64C0FC1B84C7C300288BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B64C0FE1B84C7C300288BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B64C1031B84C7C300288BE3 /* ch17_HomepwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch17_HomepwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B64C1031B84C7C300288BE3 /* ch17Ex_HomepwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch17Ex_HomepwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B64C1071B84C7C300288BE3 /* HomepwnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepwnerTests.swift; sourceTree = "<group>"; };
 		6B64C1091B84C7C300288BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B64C10E1B84C7C300288BE3 /* ch17_HomepwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch17_HomepwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B64C10E1B84C7C300288BE3 /* ch17Ex_HomepwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch17Ex_HomepwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B64C1121B84C7C300288BE3 /* HomepwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepwnerUITests.swift; sourceTree = "<group>"; };
 		6B64C1141B84C7C300288BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B64C1201B84C8EB00288BE3 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +97,9 @@
 		6B64C0F01B84C7C300288BE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B64C0EF1B84C7C300288BE3 /* ch17_Homepwner.app */,
-				6B64C1031B84C7C300288BE3 /* ch17_HomepwnerTests.xctest */,
-				6B64C10E1B84C7C300288BE3 /* ch17_HomepwnerUITests.xctest */,
+				6B64C0EF1B84C7C300288BE3 /* ch17Ex_Homepwner.app */,
+				6B64C1031B84C7C300288BE3 /* ch17Ex_HomepwnerTests.xctest */,
+				6B64C10E1B84C7C300288BE3 /* ch17Ex_HomepwnerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B64C0EE1B84C7C300288BE3 /* ch17_Homepwner */ = {
+		6B64C0EE1B84C7C300288BE3 /* ch17Ex_Homepwner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B64C1171B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17_Homepwner" */;
+			buildConfigurationList = 6B64C1171B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17Ex_Homepwner" */;
 			buildPhases = (
 				6B64C0EB1B84C7C300288BE3 /* Sources */,
 				6B64C0EC1B84C7C300288BE3 /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = ch17_Homepwner;
+			name = ch17Ex_Homepwner;
 			productName = Homepwner;
-			productReference = 6B64C0EF1B84C7C300288BE3 /* ch17_Homepwner.app */;
+			productReference = 6B64C0EF1B84C7C300288BE3 /* ch17Ex_Homepwner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6B64C1021B84C7C300288BE3 /* ch17_HomepwnerTests */ = {
+		6B64C1021B84C7C300288BE3 /* ch17Ex_HomepwnerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B64C11A1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17_HomepwnerTests" */;
+			buildConfigurationList = 6B64C11A1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17Ex_HomepwnerTests" */;
 			buildPhases = (
 				6B64C0FF1B84C7C300288BE3 /* Sources */,
 				6B64C1001B84C7C300288BE3 /* Frameworks */,
@@ -173,14 +173,14 @@
 			dependencies = (
 				6B64C1051B84C7C300288BE3 /* PBXTargetDependency */,
 			);
-			name = ch17_HomepwnerTests;
+			name = ch17Ex_HomepwnerTests;
 			productName = HomepwnerTests;
-			productReference = 6B64C1031B84C7C300288BE3 /* ch17_HomepwnerTests.xctest */;
+			productReference = 6B64C1031B84C7C300288BE3 /* ch17Ex_HomepwnerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6B64C10D1B84C7C300288BE3 /* ch17_HomepwnerUITests */ = {
+		6B64C10D1B84C7C300288BE3 /* ch17Ex_HomepwnerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B64C11D1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17_HomepwnerUITests" */;
+			buildConfigurationList = 6B64C11D1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17Ex_HomepwnerUITests" */;
 			buildPhases = (
 				6B64C10A1B84C7C300288BE3 /* Sources */,
 				6B64C10B1B84C7C300288BE3 /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				6B64C1101B84C7C300288BE3 /* PBXTargetDependency */,
 			);
-			name = ch17_HomepwnerUITests;
+			name = ch17Ex_HomepwnerUITests;
 			productName = HomepwnerUITests;
-			productReference = 6B64C10E1B84C7C300288BE3 /* ch17_HomepwnerUITests.xctest */;
+			productReference = 6B64C10E1B84C7C300288BE3 /* ch17Ex_HomepwnerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6B64C0EA1B84C7C300288BE3 /* Build configuration list for PBXProject "ch17_Homepwner" */;
+			buildConfigurationList = 6B64C0EA1B84C7C300288BE3 /* Build configuration list for PBXProject "ch17Ex_Homepwner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -240,9 +240,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B64C0EE1B84C7C300288BE3 /* ch17_Homepwner */,
-				6B64C1021B84C7C300288BE3 /* ch17_HomepwnerTests */,
-				6B64C10D1B84C7C300288BE3 /* ch17_HomepwnerUITests */,
+				6B64C0EE1B84C7C300288BE3 /* ch17Ex_Homepwner */,
+				6B64C1021B84C7C300288BE3 /* ch17Ex_HomepwnerTests */,
+				6B64C10D1B84C7C300288BE3 /* ch17Ex_HomepwnerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		6B64C1051B84C7C300288BE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6B64C0EE1B84C7C300288BE3 /* ch17_Homepwner */;
+			target = 6B64C0EE1B84C7C300288BE3 /* ch17Ex_Homepwner */;
 			targetProxy = 6B64C1041B84C7C300288BE3 /* PBXContainerItemProxy */;
 		};
 		6B64C1101B84C7C300288BE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6B64C0EE1B84C7C300288BE3 /* ch17_Homepwner */;
+			target = 6B64C0EE1B84C7C300288BE3 /* ch17Ex_Homepwner */;
 			targetProxy = 6B64C10F1B84C7C300288BE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,7 +469,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ch17_Homepwner.app/ch17_Homepwner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ch17Ex_Homepwner.app/ch17Ex_Homepwner";
 			};
 			name = Debug;
 		};
@@ -485,7 +485,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ch17_Homepwner.app/ch17_Homepwner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ch17Ex_Homepwner.app/ch17Ex_Homepwner";
 			};
 			name = Release;
 		};
@@ -525,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6B64C0EA1B84C7C300288BE3 /* Build configuration list for PBXProject "ch17_Homepwner" */ = {
+		6B64C0EA1B84C7C300288BE3 /* Build configuration list for PBXProject "ch17Ex_Homepwner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B64C1151B84C7C300288BE3 /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B64C1171B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17_Homepwner" */ = {
+		6B64C1171B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17Ex_Homepwner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B64C1181B84C7C300288BE3 /* Debug */,
@@ -543,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B64C11A1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17_HomepwnerTests" */ = {
+		6B64C11A1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17Ex_HomepwnerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B64C11B1B84C7C300288BE3 /* Debug */,
@@ -552,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B64C11D1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17_HomepwnerUITests" */ = {
+		6B64C11D1B84C7C300288BE3 /* Build configuration list for PBXNativeTarget "ch17Ex_HomepwnerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B64C11E1B84C7C300288BE3 /* Debug */,
