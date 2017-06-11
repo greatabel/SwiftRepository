@@ -5,11 +5,32 @@ class DrawView: UIView {
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
 
+    @IBInspectable var finishedLineColor: UIColor = UIColor.black {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
+    @IBInspectable var currentLineColor: UIColor = UIColor.red {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
+    @IBInspectable var linethickness: CGFloat = 10 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
+
+
     // stroke=描边
     func stroke(_ line: Line) {
         //Bezier=贝塞尔曲线
         let path = UIBezierPath()
-        path.lineWidth = 10
+//        path.lineWidth = 10
+        path.lineWidth = linethickness
         path.lineCapStyle = .round
 
         path.move(to: line.begin)
@@ -19,7 +40,8 @@ class DrawView: UIView {
 
     override func draw(_ rect: CGRect) {
 
-        UIColor.black.setStroke()
+//        UIColor.black.setStroke()
+        finishedLineColor.setStroke()
         for line in finishedLines{
             stroke(line)
         }
@@ -27,8 +49,10 @@ class DrawView: UIView {
 //            UIColor.red.setStroke()
 //            stroke(line)
 //        }
+//            UIColor.red.setStroke()
+        currentLineColor.setStroke()
         for(_, line) in currentLines {
-            UIColor.red.setStroke()
+
             stroke(line)
         }
     }
