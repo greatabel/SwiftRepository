@@ -64,7 +64,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
                 finishedLines[index].end.x += translation.x
                 finishedLines[index].end.y += translation.y
 
-//                gestureRecognizer.setTranslation(CGPoint.zero, in: self)
+                gestureRecognizer.setTranslation(CGPoint.zero, in: self)
                 setNeedsDisplay()
 
             }
