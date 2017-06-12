@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 class DrawView: UIView {
 //    var currentLine: Line?
@@ -28,14 +29,40 @@ class DrawView: UIView {
     // stroke=描边
     func stroke(_ line: Line) {
         //Bezier=贝塞尔曲线
-        let path = UIBezierPath()
-//        path.lineWidth = 10
-        path.lineWidth = linethickness
-        path.lineCapStyle = .round
+//        let path = UIBezierPath()
+////        path.lineWidth = 10
+//        path.lineWidth = linethickness
+//        path.lineCapStyle = .round
+//
+//        path.move(to: line.begin)
+//        path.addLine(to: line.end)
+//        path.stroke()
+        // https://stackoverflow.com/questions/29616992/how-do-i-draw-a-circle-in-ios-swift
+        var x = (line.begin.x + line.end.x )/2
+        var y = (line.begin.y + line.end.y )/2
+        var r = sqrt( pow((line.end.x - line.begin.x), 2) +
+            pow((line.end.y - line.begin.y),2) )
 
-        path.move(to: line.begin)
-        path.addLine(to: line.end)
-        path.stroke()
+//        let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
+        let desiredLineWidth:CGFloat = 1    // your desired value
+
+        let circlePath = UIBezierPath(
+            arcCenter: CGPoint(x:x,y:y),
+            radius: r,
+            startAngle: CGFloat(0),
+            endAngle:CGFloat(M_PI * 2),
+            clockwise: true)
+
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = desiredLineWidth
+
+        layer.addSublayer(shapeLayer)
+
+
     }
 
     override func draw(_ rect: CGRect) {
