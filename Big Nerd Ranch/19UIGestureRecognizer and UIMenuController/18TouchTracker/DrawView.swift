@@ -5,6 +5,8 @@ class DrawView: UIView {
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
 
+    var selectedLineIndex: Int?
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -35,6 +37,9 @@ class DrawView: UIView {
 
     func tap(_ gestureRecognizer: UITapGestureRecognizer){
         print("Recognized a tap")
+        let point = gestureRecognizer.location(in: self)
+        selectedLineIndex = indexOfLine(at: point)
+        setNeedsDisplay()
     }
 
     @IBInspectable var finishedLineColor: UIColor = UIColor.black {
@@ -70,6 +75,25 @@ class DrawView: UIView {
         path.stroke()
     }
 
+    func indexOfLine(at point: CGPoint) -> Int? {
+        // Find a line close to point
+        for (index, line) in finishedLines.enumerated() {
+            let begin = line.begin
+            let end = line.end
+
+            // Check a few points on the line
+            for t in stride(from: CGFloat(0), to: 1.0, by: 0.05) {
+                let x = begin.x + ((end.x - begin.x) * t)
+                let y = begin.y + ((end.y - begin.y) * t)
+                // If the tapped point is within 20 points, let's return this line
+                if hypot(x - point.x, y - point.y) < 20.0 {
+                    return index
+                }
+            }
+        }
+        return nil
+    }
+
     override func draw(_ rect: CGRect) {
 
 //        UIColor.black.setStroke()
@@ -86,6 +110,12 @@ class DrawView: UIView {
         for(_, line) in currentLines {
 
             stroke(line)
+        }
+
+        if let index = selectedLineIndex {
+            UIColor.green.setStroke()
+            let selectedLine = finishedLines[index]
+            stroke(selectedLine)
         }
     }
 
