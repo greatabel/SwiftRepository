@@ -39,7 +39,33 @@ class DrawView: UIView {
         print("Recognized a tap")
         let point = gestureRecognizer.location(in: self)
         selectedLineIndex = indexOfLine(at: point)
+
+        let menu = UIMenuController.shared
+
+        if selectedLineIndex != nil {
+
+            // Make DrawView the target of menu item action messages
+            becomeFirstResponder()
+            // Create a new "Delete" UIMenuItem
+            let deleteItem = UIMenuItem(title: "Delete",
+                                        action: #selector(DrawView.deleteLine(_:)))
+            menu.menuItems = [deleteItem]
+
+            // Tell the menu where it should come from and show it
+            let targetRect = CGRect(x: point.x, y: point.y, width: 2, height: 2)
+            menu.setTargetRect(targetRect, in: self)
+            menu.setMenuVisible(true, animated: true)
+
+        } else {
+            // Hide the menu if no line is selected
+            menu.setMenuVisible(false, animated: true)
+        }
+
         setNeedsDisplay()
+    }
+
+    func deleteLine(_ sender: UIMenuController){
+
     }
 
     @IBInspectable var finishedLineColor: UIColor = UIColor.black {
@@ -94,6 +120,10 @@ class DrawView: UIView {
         return nil
     }
 
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
     override func draw(_ rect: CGRect) {
 
 //        UIColor.black.setStroke()
