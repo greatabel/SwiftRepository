@@ -15,6 +15,13 @@ class DrawView: UIView {
         doubleTapRecognizer.delaysTouchesBegan = true
         addGestureRecognizer(doubleTapRecognizer)
 
+
+        let tapRecognizer = UITapGestureRecognizer(target: self,
+                                                   action: #selector(DrawView.tap(_:)))
+        tapRecognizer.delaysTouchesBegan = true
+        addGestureRecognizer(tapRecognizer)
+
+
     }
 
     func doubleTap(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -23,6 +30,10 @@ class DrawView: UIView {
         currentLines.removeAll()
         finishedLines.removeAll()
         setNeedsDisplay()
+    }
+
+    func tap(_ gestureRecognizer: UITapGestureRecognizer){
+        print("Recognized a tap")
     }
 
     @IBInspectable var finishedLineColor: UIColor = UIColor.black {
