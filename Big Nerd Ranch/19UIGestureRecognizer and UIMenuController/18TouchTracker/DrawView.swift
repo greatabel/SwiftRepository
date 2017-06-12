@@ -29,7 +29,7 @@ class DrawView: UIView {
 
     func doubleTap(_ gestureRecognizer: UITapGestureRecognizer) {
         print("Recognizer a double tap")
-
+        selectedLineIndex = nil
         currentLines.removeAll()
         finishedLines.removeAll()
         setNeedsDisplay()
