@@ -14,6 +14,8 @@ class DrawView: UIView {
         }
     }
 
+    var moveRecognizer: UIPanGestureRecognizer!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -31,7 +33,32 @@ class DrawView: UIView {
         tapRecognizer.require(toFail: doubleTapRecognizer)
         addGestureRecognizer(tapRecognizer)
 
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self,
+                                               action: #selector(DrawView.longPress(_:)))
+        addGestureRecognizer(longPressRecognizer)
 
+        moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DrawView.moveLine(_:)))
+        addGestureRecognizer(moveRecognizer)
+
+    }
+
+    func moveLine(_ gestureRecognizer: UIGestureRecognizer) {
+        print(#function)
+    }
+
+    func longPress(_ gestureRecognizer: UIGestureRecognizer) {
+        print(#function)
+        if gestureRecognizer.state == .began {
+            let point = gestureRecognizer.location(in: self)
+            selectedLineIndex = indexOfLine(at: point)
+
+            if selectedLineIndex != nil {
+                currentLines.removeAll()
+            }
+        } else if gestureRecognizer.state == .ended {
+            selectedLineIndex = nil
+        }
+        setNeedsDisplay()
     }
 
     func doubleTap(_ gestureRecognizer: UITapGestureRecognizer) {
