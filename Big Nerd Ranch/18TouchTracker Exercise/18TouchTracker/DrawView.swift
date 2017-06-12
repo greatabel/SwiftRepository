@@ -91,11 +91,21 @@ class DrawView: UIView {
 //        let location = touch.location(in: self)
 //        currentLine = Line(begin: location, end: location)
         print(#function)
-        for touch in touches {
-            let location = touch.location(in: self)
+        if touches.count == 2 {
+            var index = 0
+            var startlocation: CGPoint? = nil
+            var endlocation: CGPoint? = nil
+            for touch in touches {
+                if index == 0 {
 
-            let newLine = Line(begin: location, end: location)
-            let key = NSValue(nonretainedObject: touch)
+                    startlocation = touch.location(in: self)
+                } else {
+                    endlocation = touch.location(in: self)
+                }
+                index += 1
+            }
+            let newLine = Line(begin: startlocation!, end: endlocation!)
+            let key = NSValue(nonretainedObject: touches)
             currentLines[key] = newLine
         }
         setNeedsDisplay()
@@ -106,9 +116,27 @@ class DrawView: UIView {
 //        let location = touch.location(in: self)
 //        currentLine?.end = location
         print(#function)
-        for touch in touches {
-            let key = NSValue(nonretainedObject: touch)
-            currentLines[key]?.end = touch.location(in: self)
+        if touches.count == 2 {
+//            for touch in touches {
+////                let key = NSValue(nonretainedObject: touch)
+////                currentLines[key]?.end = touch.location(in: self)
+//            }
+            var index = 0
+            var startlocation: CGPoint? = nil
+            var endlocation: CGPoint? = nil
+            for touch in touches {
+                if index == 0 {
+
+                    startlocation = touch.location(in: self)
+                } else {
+                    endlocation = touch.location(in: self)
+                }
+                index += 1
+            }
+            let key = NSValue(nonretainedObject: touches)
+            let newLine = Line(begin: startlocation!, end: endlocation!)
+//            currentLines[key]?.end = touch.location(in: self)
+            currentLines[key] = newLine
         }
         setNeedsDisplay()
     }
@@ -122,14 +150,41 @@ class DrawView: UIView {
 //        }
 //        currentLine = nil
         print(#function)
-        for touch in touches {
-            let key = NSValue(nonretainedObject: touch)
+//        for touch in touches {
+//            let key = NSValue(nonretainedObject: touch)
+//            if var line = currentLines[key] {
+//                line.end = touch.location(in: self)
+//                finishedLines.append(line)
+//                currentLines.removeValue(forKey: key)
+//            }
+//        }
+        if touches.count == 2 {
+            //            for touch in touches {
+            ////                let key = NSValue(nonretainedObject: touch)
+            ////                currentLines[key]?.end = touch.location(in: self)
+            //            }
+            var index = 0
+            var startlocation: CGPoint? = nil
+            var endlocation: CGPoint? = nil
+            for touch in touches {
+                if index == 0 {
+
+                    startlocation = touch.location(in: self)
+                } else {
+                    endlocation = touch.location(in: self)
+                }
+                index += 1
+            }
+            let key = NSValue(nonretainedObject: touches)
+            let newLine = Line(begin: startlocation!, end: endlocation!)
+            currentLines[key] = newLine
             if var line = currentLines[key] {
-                line.end = touch.location(in: self)
+//                line.end = touch.location(in: self)
                 finishedLines.append(line)
                 currentLines.removeValue(forKey: key)
             }
         }
+
         setNeedsDisplay()
     }
 
