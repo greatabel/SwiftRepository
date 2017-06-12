@@ -1,6 +1,6 @@
 import UIKit
 
-class DrawView: UIView {
+class DrawView: UIView, UIGestureRecognizerDelegate {
 //    var currentLine: Line?
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
@@ -37,13 +37,40 @@ class DrawView: UIView {
                                                action: #selector(DrawView.longPress(_:)))
         addGestureRecognizer(longPressRecognizer)
 
-        moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DrawView.moveLine(_:)))
+
+        moveRecognizer = UIPanGestureRecognizer(target: self,
+                                                action: #selector(DrawView.moveLine(_:)))
+        moveRecognizer.delegate = self
+        moveRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(moveRecognizer)
 
     }
 
-    func moveLine(_ gestureRecognizer: UIGestureRecognizer) {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+
+    func moveLine(_ gestureRecognizer: UIPanGestureRecognizer) {
         print(#function)
+
+        if let index = selectedLineIndex {
+            if gestureRecognizer.state == .changed {
+                let translation = gestureRecognizer.translation(in: self)
+
+                // Add the translation to the current beginning and end points of the line
+                // Make sure there are no copy and paste typos!
+                finishedLines[index].begin.x += translation.x
+                finishedLines[index].begin.y += translation.y
+                finishedLines[index].end.x += translation.x
+                finishedLines[index].end.y += translation.y
+
+//                gestureRecognizer.setTranslation(CGPoint.zero, in: self)
+                setNeedsDisplay()
+
+            }
+        } else {
+            return
+        }
     }
 
     func longPress(_ gestureRecognizer: UIGestureRecognizer) {
