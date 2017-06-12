@@ -5,7 +5,14 @@ class DrawView: UIView {
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
 
-    var selectedLineIndex: Int?
+    var selectedLineIndex: Int? {
+        didSet {
+            if selectedLineIndex == nil {
+                let menu = UIMenuController.shared
+                menu.setMenuVisible(false, animated: true)
+            }
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -65,6 +72,12 @@ class DrawView: UIView {
     }
 
     func deleteLine(_ sender: UIMenuController){
+        print(#function)
+        if let index = selectedLineIndex {
+            finishedLines.remove(at: index)
+            selectedLineIndex = nil
+            setNeedsDisplay()
+        }
 
     }
 
@@ -123,7 +136,7 @@ class DrawView: UIView {
     override var canBecomeFirstResponder: Bool {
         return true
     }
-    
+
     override func draw(_ rect: CGRect) {
 
 //        UIColor.black.setStroke()
