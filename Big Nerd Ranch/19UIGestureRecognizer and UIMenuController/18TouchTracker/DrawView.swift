@@ -19,6 +19,7 @@ class DrawView: UIView {
         let tapRecognizer = UITapGestureRecognizer(target: self,
                                                    action: #selector(DrawView.tap(_:)))
         tapRecognizer.delaysTouchesBegan = true
+        tapRecognizer.require(toFail: doubleTapRecognizer)
         addGestureRecognizer(tapRecognizer)
 
 
