@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 class DrawView: UIView, UIGestureRecognizerDelegate {
 //    var currentLine: Line?
@@ -52,6 +53,12 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
 
     func moveLine(_ gestureRecognizer: UIPanGestureRecognizer) {
         print(#function)
+        let v = gestureRecognizer.velocity(in: self)
+        let velocity_value = sqrt(v.x * v.x + v.y * v.y)/200
+
+        let addpart = 20 * velocity_value / (velocity_value + linethickness)
+        linethickness = (linethickness < velocity_value ? addpart + linethickness: linethickness)
+        print("v=", linethickness)
 
         if let index = selectedLineIndex {
             if gestureRecognizer.state == .changed {
@@ -166,7 +173,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         //Bezier=贝塞尔曲线
         let path = UIBezierPath()
 //        path.lineWidth = 10
-        path.lineWidth = linethickness
+        path.lineWidth = line.linethickness
         path.lineCapStyle = .round
 
         path.move(to: line.begin)
@@ -236,7 +243,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         for touch in touches {
             let location = touch.location(in: self)
 
-            let newLine = Line(begin: location, end: location)
+            let newLine = Line(begin: location, end: location, linethickness: linethickness)
             let key = NSValue(nonretainedObject: touch)
             currentLines[key] = newLine
         }
@@ -268,7 +275,12 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
             let key = NSValue(nonretainedObject: touch)
             if var line = currentLines[key] {
                 line.end = touch.location(in: self)
+                // Gold Challenge
+                line.linethickness = linethickness
+
                 finishedLines.append(line)
+                linethickness = 5
+
                 currentLines.removeValue(forKey: key)
             }
         }
