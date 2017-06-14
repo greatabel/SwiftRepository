@@ -15,6 +15,24 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         }
     }
 
+    @IBInspectable var finishedLineColor: UIColor = UIColor.black {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
+    @IBInspectable var currentLineColor: UIColor = UIColor.red {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
+    @IBInspectable var linethickness: CGFloat = 10 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
     var moveRecognizer: UIPanGestureRecognizer!
 
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +62,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         moveRecognizer.delegate = self
         moveRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(moveRecognizer)
-        
+
         // Platinum Challenge: Colors
         let three_fingerRecognizer = UISwipeGestureRecognizer(target: self,
                                                    action: #selector(DrawView.threefinger(_:)))
@@ -56,6 +74,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     }
     func threefinger(_ gestureRecognizer: UISwipeGestureRecognizer) {
         print(#function)
+        finishedLineColor = UIColor.purple
 
     }
 
@@ -160,23 +179,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
 
     }
 
-    @IBInspectable var finishedLineColor: UIColor = UIColor.black {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
 
-    @IBInspectable var currentLineColor: UIColor = UIColor.red {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-
-    @IBInspectable var linethickness: CGFloat = 10 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
 
 
 
@@ -187,7 +190,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
 //        path.lineWidth = 10
         path.lineWidth = line.linethickness
         path.lineCapStyle = .round
-
+        line.linecolor.setStroke()
         path.move(to: line.begin)
         path.addLine(to: line.end)
         path.stroke()
@@ -255,7 +258,8 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         for touch in touches {
             let location = touch.location(in: self)
 
-            let newLine = Line(begin: location, end: location, linethickness: linethickness)
+            let newLine = Line(begin: location, end: location, linethickness: linethickness,
+                               linecolor: finishedLineColor)
             let key = NSValue(nonretainedObject: touch)
             currentLines[key] = newLine
         }
@@ -289,7 +293,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
                 line.end = touch.location(in: self)
                 // Gold Challenge
                 line.linethickness = linethickness
-
+                line.linecolor = finishedLineColor
                 finishedLines.append(line)
                 linethickness = 5
 
