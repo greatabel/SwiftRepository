@@ -74,8 +74,46 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     }
     func threefinger(_ gestureRecognizer: UISwipeGestureRecognizer) {
         print(#function)
-        finishedLineColor = UIColor.purple
+//        finishedLineColor = UIColor.purple
+        // http://www.appcoda.com/presentation-controllers-tutorial/
+        let alertController = UIAlertController(title: "color choose", message: "color",
+                                                preferredStyle: UIAlertControllerStyle.alert)
+        let redAction = UIAlertAction(title: "Red", style: UIAlertActionStyle.destructive, handler: {(alert :UIAlertAction!) in
+            print("Red")
+             self.finishedLineColor = UIColor.red
+        })
+        alertController.addAction(redAction)
+        let blueAction = UIAlertAction(title: "Blue", style: UIAlertActionStyle.destructive, handler: {(alert :UIAlertAction!) in
+            print("Blue")
+            self.finishedLineColor = UIColor.blue
 
+        })
+        alertController.addAction(blueAction)
+        let purpleAction = UIAlertAction(title: "Purple", style: UIAlertActionStyle.destructive, handler: {(alert :UIAlertAction!) in
+            print("Purple")
+            self.finishedLineColor = UIColor.purple
+
+        })
+        alertController.addAction(purpleAction)
+//        presentViewController(alertController, animated: true, completion: nil)
+        let currentController = self.getCurrentViewController()
+        currentController?.present(alertController, animated: true, completion: nil)
+
+//        self.present(alertController, animated: true, completion: nil)
+
+    }
+
+    func getCurrentViewController() -> UIViewController? {
+        // https://stackoverflow.com/questions/34649173/how-can-i-call-presentviewcontroller-in-uiview-class
+        if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+            var currentController: UIViewController! = rootController
+            while( currentController.presentedViewController != nil ) {
+                currentController = currentController.presentedViewController
+            }
+            return currentController
+        }
+        return nil
+        
     }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -85,9 +123,9 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     func moveLine(_ gestureRecognizer: UIPanGestureRecognizer) {
         print(#function)
         let v = gestureRecognizer.velocity(in: self)
-        let velocity_value = sqrt(v.x * v.x + v.y * v.y)/200
+        let velocity_value = sqrt(v.x * v.x + v.y * v.y)/300
 
-        let addpart = 20 * velocity_value / (velocity_value + linethickness)
+        let addpart = 10 * velocity_value / (velocity_value + linethickness)
         linethickness = (linethickness < velocity_value ? addpart + linethickness: linethickness)
         print("v=", linethickness)
 
