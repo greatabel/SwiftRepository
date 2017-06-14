@@ -55,6 +55,10 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
 
         if let index = selectedLineIndex {
             if gestureRecognizer.state == .changed {
+                //fix bug
+                let menu = UIMenuController.shared
+                menu.setMenuVisible(false, animated: true)
+
                 let translation = gestureRecognizer.translation(in: self)
 
                 // Add the translation to the current beginning and end points of the line
@@ -65,6 +69,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
                 finishedLines[index].end.y += translation.y
 
                 gestureRecognizer.setTranslation(CGPoint.zero, in: self)
+
                 setNeedsDisplay()
 
             }
@@ -116,6 +121,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
             let targetRect = CGRect(x: point.x, y: point.y, width: 2, height: 2)
             menu.setTargetRect(targetRect, in: self)
             menu.setMenuVisible(true, animated: true)
+
 
         } else {
             // Hide the menu if no line is selected
@@ -203,6 +209,10 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
 //            stroke(line)
 //        }
 //            UIColor.red.setStroke()
+        if selectedLineIndex != nil {
+            // fix bug
+            currentLines.removeAll()
+        }
         currentLineColor.setStroke()
         for(_, line) in currentLines {
 
