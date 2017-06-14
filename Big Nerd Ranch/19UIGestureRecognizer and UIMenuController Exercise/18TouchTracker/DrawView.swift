@@ -44,6 +44,18 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         moveRecognizer.delegate = self
         moveRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(moveRecognizer)
+        
+        // Platinum Challenge: Colors
+        let three_fingerRecognizer = UISwipeGestureRecognizer(target: self,
+                                                   action: #selector(DrawView.threefinger(_:)))
+        three_fingerRecognizer.direction = UISwipeGestureRecognizerDirection.up
+        three_fingerRecognizer.numberOfTouchesRequired = 3
+        addGestureRecognizer(three_fingerRecognizer)
+
+
+    }
+    func threefinger(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        print(#function)
 
     }
 
