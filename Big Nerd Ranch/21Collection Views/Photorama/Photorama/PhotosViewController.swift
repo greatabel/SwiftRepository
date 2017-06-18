@@ -33,7 +33,8 @@ class PhotosViewController: UIViewController {
             (imageResult) -> Void in
             switch imageResult {
             case let .success(image):
-                self.imageView.image = image
+//                self.imageView.image = image
+                print("success")
             case let .failure(error):
                 print("Error downloading image: \(error)")
             }
