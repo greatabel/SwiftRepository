@@ -40,16 +40,16 @@
 		20C48BAA1EF2C99000DD1200 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		20C48BAC1EF2CCD200DD1200 /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		20C48BAE1EF2D02400DD1200 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		20C539691EF2C0240067061F /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C539691EF2C0240067061F /* Photorama_ch20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama_ch20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C5396C1EF2C0240067061F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C539711EF2C0240067061F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20C539731EF2C0240067061F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C539761EF2C0240067061F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20C539781EF2C0240067061F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20C5397D1EF2C0250067061F /* PhotoramaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoramaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C5397D1EF2C0250067061F /* Photorama_ch20Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Photorama_ch20Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C539811EF2C0250067061F /* PhotoramaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaTests.swift; sourceTree = "<group>"; };
 		20C539831EF2C0250067061F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20C539881EF2C0250067061F /* PhotoramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C539881EF2C0250067061F /* Photorama_ch20UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Photorama_ch20UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C5398C1EF2C0250067061F /* PhotoramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaUITests.swift; sourceTree = "<group>"; };
 		20C5398E1EF2C0250067061F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C5399A1EF2C09F0067061F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		20C5396A1EF2C0240067061F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20C539691EF2C0240067061F /* Photorama.app */,
-				20C5397D1EF2C0250067061F /* PhotoramaTests.xctest */,
-				20C539881EF2C0250067061F /* PhotoramaUITests.xctest */,
+				20C539691EF2C0240067061F /* Photorama_ch20.app */,
+				20C5397D1EF2C0250067061F /* Photorama_ch20Tests.xctest */,
+				20C539881EF2C0250067061F /* Photorama_ch20UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20C539681EF2C0240067061F /* Photorama */ = {
+		20C539681EF2C0240067061F /* Photorama_ch20 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20C539911EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama" */;
+			buildConfigurationList = 20C539911EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama_ch20" */;
 			buildPhases = (
 				20C539651EF2C0240067061F /* Sources */,
 				20C539661EF2C0240067061F /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = Photorama;
+			name = Photorama_ch20;
 			productName = Photorama;
-			productReference = 20C539691EF2C0240067061F /* Photorama.app */;
+			productReference = 20C539691EF2C0240067061F /* Photorama_ch20.app */;
 			productType = "com.apple.product-type.application";
 		};
-		20C5397C1EF2C0250067061F /* PhotoramaTests */ = {
+		20C5397C1EF2C0250067061F /* Photorama_ch20Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20C539941EF2C0250067061F /* Build configuration list for PBXNativeTarget "PhotoramaTests" */;
+			buildConfigurationList = 20C539941EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama_ch20Tests" */;
 			buildPhases = (
 				20C539791EF2C0250067061F /* Sources */,
 				20C5397A1EF2C0250067061F /* Frameworks */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				20C5397F1EF2C0250067061F /* PBXTargetDependency */,
 			);
-			name = PhotoramaTests;
+			name = Photorama_ch20Tests;
 			productName = PhotoramaTests;
-			productReference = 20C5397D1EF2C0250067061F /* PhotoramaTests.xctest */;
+			productReference = 20C5397D1EF2C0250067061F /* Photorama_ch20Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		20C539871EF2C0250067061F /* PhotoramaUITests */ = {
+		20C539871EF2C0250067061F /* Photorama_ch20UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20C539971EF2C0250067061F /* Build configuration list for PBXNativeTarget "PhotoramaUITests" */;
+			buildConfigurationList = 20C539971EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama_ch20UITests" */;
 			buildPhases = (
 				20C539841EF2C0250067061F /* Sources */,
 				20C539851EF2C0250067061F /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				20C5398A1EF2C0250067061F /* PBXTargetDependency */,
 			);
-			name = PhotoramaUITests;
+			name = Photorama_ch20UITests;
 			productName = PhotoramaUITests;
-			productReference = 20C539881EF2C0250067061F /* PhotoramaUITests.xctest */;
+			productReference = 20C539881EF2C0250067061F /* Photorama_ch20UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20C539641EF2C0240067061F /* Build configuration list for PBXProject "Photorama" */;
+			buildConfigurationList = 20C539641EF2C0240067061F /* Build configuration list for PBXProject "Photorama_ch20" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,9 +232,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20C539681EF2C0240067061F /* Photorama */,
-				20C5397C1EF2C0250067061F /* PhotoramaTests */,
-				20C539871EF2C0250067061F /* PhotoramaUITests */,
+				20C539681EF2C0240067061F /* Photorama_ch20 */,
+				20C5397C1EF2C0250067061F /* Photorama_ch20Tests */,
+				20C539871EF2C0250067061F /* Photorama_ch20UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,12 +300,12 @@
 /* Begin PBXTargetDependency section */
 		20C5397F1EF2C0250067061F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 20C539681EF2C0240067061F /* Photorama */;
+			target = 20C539681EF2C0240067061F /* Photorama_ch20 */;
 			targetProxy = 20C5397E1EF2C0250067061F /* PBXContainerItemProxy */;
 		};
 		20C5398A1EF2C0250067061F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 20C539681EF2C0240067061F /* Photorama */;
+			target = 20C539681EF2C0240067061F /* Photorama_ch20 */;
 			targetProxy = 20C539891EF2C0250067061F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -462,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = luminagic.PhotoramaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photorama.app/Photorama";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photorama_ch20.app/Photorama_ch20";
 			};
 			name = Debug;
 		};
@@ -477,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = luminagic.PhotoramaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photorama.app/Photorama";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photorama_ch20.app/Photorama_ch20";
 			};
 			name = Release;
 		};
@@ -512,7 +512,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20C539641EF2C0240067061F /* Build configuration list for PBXProject "Photorama" */ = {
+		20C539641EF2C0240067061F /* Build configuration list for PBXProject "Photorama_ch20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20C5398F1EF2C0250067061F /* Debug */,
@@ -521,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20C539911EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama" */ = {
+		20C539911EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama_ch20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20C539921EF2C0250067061F /* Debug */,
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20C539941EF2C0250067061F /* Build configuration list for PBXNativeTarget "PhotoramaTests" */ = {
+		20C539941EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama_ch20Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20C539951EF2C0250067061F /* Debug */,
@@ -539,7 +539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20C539971EF2C0250067061F /* Build configuration list for PBXNativeTarget "PhotoramaUITests" */ = {
+		20C539971EF2C0250067061F /* Build configuration list for PBXNativeTarget "Photorama_ch20UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20C539981EF2C0250067061F /* Debug */,
