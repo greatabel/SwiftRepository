@@ -14,10 +14,10 @@ class PhotosViewController: UIViewController {
         store.fetchInterestingPhotos {
             (photoResult) -> Void in
             switch photoResult {
-            case let .sucess(photos):
-                print("sucess")
-            case let .failure(error):
-                print("failure")
+            case let .success(photos):
+                print("Successfully found \(photos.count) photos.")
+            case let .failture(error):
+                print("Error fetching interesting photos: \(error)")
             }
         }
         
