@@ -29,17 +29,19 @@ class PhotoStore {
         return FlickrAPI.photos(fromJSON: jsonData)
     }
 
-    private func processImageRequest(data: Data?, error: Error?) -> ImageResult {
+    func processImageRequest(data: Data?, error: Error?) -> ImageResult {
+
         guard
             let imageData = data,
             let image = UIImage(data: imageData) else {
+
                 // Couldn't create an image
                 if data == nil {
                     return .failure(error!)
                 } else {
                     return .failure(PhotoError.imageCreationError)
                 }
-            }
+        }
 
         return .success(image)
     }
@@ -65,8 +67,15 @@ class PhotoStore {
 //            } else {
 //                print("Unexpected error with the request")
 //            }
+            let httpResponse = response as! HTTPURLResponse
+            
+            print("response ->", httpResponse.statusCode, httpResponse.allHeaderFields)
+
             let result = self.processPhotosRequest(data: data, error: error)
-            completion(result)
+            OperationQueue.main.addOperation {
+                completion(result)
+            }
+
         }
         
         task.resume()
@@ -80,7 +89,9 @@ class PhotoStore {
             (data, response, error) -> Void in
 
             let result = self.processImageRequest(data: data, error: error)
-            completion(result)
+            OperationQueue.main.addOperation {
+                completion(result)
+            }
         }
         task.resume()
     }
