@@ -21,7 +21,7 @@ class PhotosViewController: UIViewController {
                     self.updateImageView(for: firstPhoto)
                 }
 
-            case let .failture(error):
+            case let .failure(error):
                 print("Error fetching interesting photos: \(error)")
             }
         }

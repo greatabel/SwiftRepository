@@ -10,9 +10,9 @@ enum PhotoError: Error {
     case imageCreationError
 }
 
-enum PhotoResult {
+enum PhotosResult {
     case success([Photo])
-    case failture(Error)
+    case failure(Error)
 }
 
 class PhotoStore {
@@ -22,9 +22,9 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
 
-    private func processPhotosRequest(data: Data?, error: Error?) -> PhotoResult {
+    private func processPhotosRequest(data: Data?, error: Error?) -> PhotosResult {
         guard let jsonData = data else {
-            return .failture(error!)
+            return .failure(error!)
         }
         return FlickrAPI.photos(fromJSON: jsonData)
     }
@@ -46,7 +46,7 @@ class PhotoStore {
         return .success(image)
     }
 
-    func fetchInterestingPhotos(completion: @escaping (PhotoResult) -> Void) {
+    func fetchInterestingPhotos(completion: @escaping (PhotosResult) -> Void) {
         let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) {
@@ -67,9 +67,12 @@ class PhotoStore {
 //            } else {
 //                print("Unexpected error with the request")
 //            }
-            let httpResponse = response as! HTTPURLResponse
-            
-            print("response ->", httpResponse.statusCode, httpResponse.allHeaderFields)
+
+
+
+            // excercise a:
+//            let httpResponse = response as! HTTPURLResponse
+//            print("response ->", httpResponse.statusCode, httpResponse.allHeaderFields)
 
             let result = self.processPhotosRequest(data: data, error: error)
             OperationQueue.main.addOperation {
@@ -83,6 +86,7 @@ class PhotoStore {
 
     func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
         let photoURL = photo.remoteURL
+        print("photoURL->", photoURL)
         let request = URLRequest(url: photoURL)
 
         let task = session.dataTask(with: request) {
