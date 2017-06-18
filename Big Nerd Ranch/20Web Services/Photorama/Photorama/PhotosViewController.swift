@@ -11,7 +11,15 @@ class PhotosViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         print(#function)
-        store.fetchInterestingPhotos()
+        store.fetchInterestingPhotos {
+            (photoResult) -> Void in
+            switch photoResult {
+            case let .sucess(photos):
+                print("sucess")
+            case let .failure(error):
+                print("failure")
+            }
+        }
         
     }
 
