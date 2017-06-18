@@ -31,14 +31,31 @@
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="I4y-Jo-kP4">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="PhotoCollectionViewCell" id="I4y-Jo-kP4" customClass="PhotoCollectionViewCell" customModule="Photorama_ch21" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWd-w1-rMI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tzo-rC-s4U">
+                                                    <rect key="frame" x="35" y="35" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tzo-rC-s4U" firstAttribute="centerX" secondItem="I4y-Jo-kP4" secondAttribute="centerX" id="Nk0-xh-o8b"/>
+                                            <constraint firstItem="tzo-rC-s4U" firstAttribute="centerY" secondItem="I4y-Jo-kP4" secondAttribute="centerY" id="XUV-xv-Yo6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="XWd-w1-rMI" id="tgs-Lq-Yt6"/>
+                                            <outlet property="spinner" destination="tzo-rC-s4U" id="N14-Rq-q3P"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
