@@ -1,6 +1,6 @@
 import UIKit
 
-class PhotosViewController: UIViewController {
+class PhotosViewController: UIViewController, UICollectionViewDelegate {
 
 //    @IBOutlet var imageView: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
@@ -15,6 +15,8 @@ class PhotosViewController: UIViewController {
         // Do any additional setup after loading the view.
         print(#function)
         collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
+
         store.fetchInterestingPhotos {
             (photoResult) -> Void in
             switch photoResult {
@@ -33,6 +35,25 @@ class PhotosViewController: UIViewController {
             self.collectionView.reloadSections(IndexSet(integer: 0))
         }
         
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+
+        //download image data
+         store.fetchImage(for: photo) { (result) -> Void in
+            guard let photoIndex = self.photoDataSource.photos.index(of: photo),
+                case let .success(image) = result else {
+                    return
+            }
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as?
+                PhotoCollectionViewCell {
+                cell.update(with: image)
+            }
+        }
     }
 
 //    func updateImageView(for photo: Photo) {
