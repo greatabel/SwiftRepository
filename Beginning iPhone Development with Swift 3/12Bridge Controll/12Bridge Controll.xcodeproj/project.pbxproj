@@ -15,6 +15,7 @@
 		2095AC551F0CEA6200DDE001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2095AC531F0CEA6200DDE001 /* LaunchScreen.storyboard */; };
 		2095AC601F0CEA6200DDE001 /* _2Bridge_ControllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095AC5F1F0CEA6200DDE001 /* _2Bridge_ControllTests.swift */; };
 		2095AC6B1F0CEA6200DDE001 /* _2Bridge_ControllUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095AC6A1F0CEA6200DDE001 /* _2Bridge_ControllUITests.swift */; };
+		2095AC791F0CEC7200DDE001 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2095AC781F0CEC7200DDE001 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2095AC661F0CEA6200DDE001 /* 12Bridge ControllUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "12Bridge ControllUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2095AC6A1F0CEA6200DDE001 /* _2Bridge_ControllUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2Bridge_ControllUITests.swift; sourceTree = "<group>"; };
 		2095AC6C1F0CEA6200DDE001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2095AC781F0CEC7200DDE001 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2095AC511F0CEA6200DDE001 /* Assets.xcassets */,
 				2095AC531F0CEA6200DDE001 /* LaunchScreen.storyboard */,
 				2095AC561F0CEA6200DDE001 /* Info.plist */,
+				2095AC781F0CEC7200DDE001 /* Settings.bundle */,
 			);
 			path = "12Bridge Controll";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2095AC791F0CEC7200DDE001 /* Settings.bundle in Resources */,
 				2095AC551F0CEA6200DDE001 /* LaunchScreen.storyboard in Resources */,
 				2095AC521F0CEA6200DDE001 /* Assets.xcassets in Resources */,
 				2095AC501F0CEA6200DDE001 /* Main.storyboard in Resources */,
@@ -424,7 +428,7 @@
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = "12Bridge Controll/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-2Bridge-Controll";
+				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.i12Bridge-Controll";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -437,7 +441,7 @@
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = "12Bridge Controll/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-2Bridge-Controll";
+				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.i12Bridge-Controll";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
