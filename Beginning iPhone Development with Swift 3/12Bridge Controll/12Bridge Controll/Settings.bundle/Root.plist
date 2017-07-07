@@ -76,6 +76,28 @@
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Warp Factor</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+			<key>Key</key>
+			<string>warpFactor</string>
+			<key>DefaultValue</key>
+			<integer>5</integer>
+			<key>MinimumValue</key>
+			<integer>1</integer>
+			<key>MaximumValue</key>
+			<integer>10</integer>
+			<key>MinimumValueImage</key>
+			<string>turtle</string>
+			<key>MaximumValueImage</key>
+			<string>rabbit</string>
+		</dict>
 	</array>
 </dict>
 </plist>
