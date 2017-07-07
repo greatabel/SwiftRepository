@@ -31,9 +31,18 @@ class SecondViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(engineSwitch.isOn, forKey: warpDriveKey)
     }
+
     @IBAction func onWarpSliderDragged(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         defaults.set(warpFactorSlider.value, forKey: warpFactorKey)
+    }
+
+    @IBAction func onSettingsButtonTapped(_ sender: AnyObject) {
+        let application = UIApplication.shared
+        let url = URL(string: UIApplicationOpenSettingsURLString)! as URL
+        if application.canOpenURL(url) {
+            application.open(url, options:["":""] , completionHandler: nil)
+        }
     }
 
 

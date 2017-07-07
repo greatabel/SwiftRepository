@@ -209,6 +209,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-3W-NGw">
                                 <rect key="frame" x="104" y="571" width="179" height="30"/>
                                 <state key="normal" title="Open Application Settings"/>
+                                <connections>
+                                    <action selector="onSettingsButtonTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="OK0-va-ItF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warp Engines:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-gW-zaD">
                                 <rect key="frame" x="25" y="45" width="110" height="21"/>
