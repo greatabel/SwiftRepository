@@ -206,26 +206,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-3W-NGw">
+                                <rect key="frame" x="104" y="571" width="179" height="30"/>
+                                <state key="normal" title="Open Application Settings"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warp Engines:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-gW-zaD">
+                                <rect key="frame" x="25" y="45" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warp Factor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvc-Ao-BKe">
+                                <rect key="frame" x="25" y="86" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwi-Ud-DT7">
+                                <rect key="frame" x="315" y="40" width="51" height="31"/>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" minimumValueImage="turtle" maximumValueImage="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-Mk-mFs">
+                                <rect key="frame" x="21" y="114" width="343" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="nvc-Ao-BKe" firstAttribute="top" secondItem="UEi-gW-zaD" secondAttribute="bottom" constant="20" id="5NF-Ty-SWL"/>
+                            <constraint firstItem="UEi-gW-zaD" firstAttribute="leading" secondItem="nvc-Ao-BKe" secondAttribute="leading" id="5vX-0R-rC0"/>
+                            <constraint firstItem="TKx-Mk-mFs" firstAttribute="top" secondItem="nvc-Ao-BKe" secondAttribute="bottom" constant="7" id="BKL-XC-6aa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TKx-Mk-mFs" secondAttribute="trailing" constant="-3" id="E7U-uV-MIy"/>
+                            <constraint firstItem="zfd-3W-NGw" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="88" id="F1t-lG-yC0"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zfd-3W-NGw" secondAttribute="bottom" constant="17" id="KNq-2F-i20"/>
+                            <constraint firstItem="UEi-gW-zaD" firstAttribute="centerY" secondItem="Wwi-Ud-DT7" secondAttribute="centerY" id="OUL-Jh-TH3"/>
+                            <constraint firstItem="TKx-Mk-mFs" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="7" id="Xlt-Ne-GEg"/>
+                            <constraint firstItem="Wwi-Ud-DT7" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="20" id="fC5-89-yaE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wwi-Ud-DT7" secondAttribute="trailing" constant="-5" id="o8x-fK-cse"/>
+                            <constraint firstItem="UEi-gW-zaD" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="9" id="vhq-Uw-q8H"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="doubleicon" id="cPa-gy-q4n"/>
@@ -256,6 +272,8 @@
     </scenes>
     <resources>
         <image name="doubleicon" width="25" height="24"/>
+        <image name="rabbit" width="21" height="21"/>
         <image name="singleicon" width="25" height="24"/>
+        <image name="turtle" width="21" height="21"/>
     </resources>
 </document>
