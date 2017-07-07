@@ -224,12 +224,18 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwi-Ud-DT7">
                                 <rect key="frame" x="315" y="40" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onEngineSwitchTapped:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ASz-ac-quG"/>
+                                </connections>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" minimumValueImage="turtle" maximumValueImage="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-Mk-mFs">
                                 <rect key="frame" x="21" y="114" width="343" height="31"/>
+                                <connections>
+                                    <action selector="onWarpSliderDragged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="UbY-Pi-GYj"/>
+                                </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nvc-Ao-BKe" firstAttribute="top" secondItem="UEi-gW-zaD" secondAttribute="bottom" constant="20" id="5NF-Ty-SWL"/>
                             <constraint firstItem="UEi-gW-zaD" firstAttribute="leading" secondItem="nvc-Ao-BKe" secondAttribute="leading" id="5vX-0R-rC0"/>
@@ -245,6 +251,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="doubleicon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="engineSwitch" destination="Wwi-Ud-DT7" id="WYu-8S-fnG"/>
+                        <outlet property="warpFactorSlider" destination="TKx-Mk-mFs" id="inQ-P2-Nwi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
