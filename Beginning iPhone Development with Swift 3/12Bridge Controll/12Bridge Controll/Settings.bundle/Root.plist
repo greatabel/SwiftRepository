@@ -66,6 +66,16 @@
 			<key>DefaultValue</key>
 			<string>English</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Warp Drive</string>
+			<key>Key</key>
+			<string>warp</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
 	</array>
 </dict>
 </plist>
