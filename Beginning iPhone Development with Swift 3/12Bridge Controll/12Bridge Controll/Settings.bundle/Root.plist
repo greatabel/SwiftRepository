@@ -38,6 +38,34 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>Ensign</string>
+				<string>Lieutenant</string>
+				<string>Lieutenant Commander</string>
+				<string>Commander</string>
+				<string>Captain</string>
+				<string>Commodore</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>Ensign</string>
+				<string>Lieutenant</string>
+				<string>Lieutenant Commander</string>
+				<string>Commander</string>
+				<string>Captain</string>
+				<string>Commodore</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Rank</string>
+			<key>Key</key>
+			<string>rank</string>
+			<key>DefaultValue</key>
+			<string>English</string>
+		</dict>
 	</array>
 </dict>
 </plist>
