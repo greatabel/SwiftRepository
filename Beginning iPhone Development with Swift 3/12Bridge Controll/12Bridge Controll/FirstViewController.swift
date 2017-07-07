@@ -42,6 +42,16 @@ class FirstViewController: UIViewController {
         refreshFields()
     }
 
+    func applicationWillEnterForeground(notification:NSNotification) {
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
+        refreshFields()
+    }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
 }
 

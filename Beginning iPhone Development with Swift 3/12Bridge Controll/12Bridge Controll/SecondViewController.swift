@@ -30,11 +30,13 @@ class SecondViewController: UIViewController {
     @IBAction func onEngineSwitchTapped(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         defaults.set(engineSwitch.isOn, forKey: warpDriveKey)
+        defaults.synchronize()
     }
 
     @IBAction func onWarpSliderDragged(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         defaults.set(warpFactorSlider.value, forKey: warpFactorKey)
+        defaults.synchronize()
     }
 
     @IBAction func onSettingsButtonTapped(_ sender: AnyObject) {
@@ -43,6 +45,20 @@ class SecondViewController: UIViewController {
         if application.canOpenURL(url) {
             application.open(url, options:["":""] , completionHandler: nil)
         }
+    }
+
+    func applicationWillEnterForeground(notification:NSNotification) {
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
+        refreshFields()
+
+        let app = UIApplication.shared
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillEnterForeground(notification:)), name: Notification.Name.UIApplicationWillEnterForeground, object: app)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
 
 
