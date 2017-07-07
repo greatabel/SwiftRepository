@@ -16,6 +16,7 @@
 		2095AC601F0CEA6200DDE001 /* _2Bridge_ControllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095AC5F1F0CEA6200DDE001 /* _2Bridge_ControllTests.swift */; };
 		2095AC6B1F0CEA6200DDE001 /* _2Bridge_ControllUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095AC6A1F0CEA6200DDE001 /* _2Bridge_ControllUITests.swift */; };
 		2095AC791F0CEC7200DDE001 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2095AC781F0CEC7200DDE001 /* Settings.bundle */; };
+		20B6499D1F0F5D6400411DD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6499C1F0F5D6400411DD5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2095AC6A1F0CEA6200DDE001 /* _2Bridge_ControllUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2Bridge_ControllUITests.swift; sourceTree = "<group>"; };
 		2095AC6C1F0CEA6200DDE001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2095AC781F0CEC7200DDE001 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		20B6499C1F0F5D6400411DD5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2095AC531F0CEA6200DDE001 /* LaunchScreen.storyboard */,
 				2095AC561F0CEA6200DDE001 /* Info.plist */,
 				2095AC781F0CEC7200DDE001 /* Settings.bundle */,
+				20B6499C1F0F5D6400411DD5 /* Constants.swift */,
 			);
 			path = "12Bridge Controll";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				2095AC4D1F0CEA6200DDE001 /* SecondViewController.swift in Sources */,
 				2095AC491F0CEA6200DDE001 /* AppDelegate.swift in Sources */,
 				2095AC4B1F0CEA6200DDE001 /* FirstViewController.swift in Sources */,
+				20B6499D1F0F5D6400411DD5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +528,7 @@
 				2095AC711F0CEA6200DDE001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2095AC721F0CEA6200DDE001 /* Build configuration list for PBXNativeTarget "12Bridge ControllTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				2095AC741F0CEA6200DDE001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2095AC751F0CEA6200DDE001 /* Build configuration list for PBXNativeTarget "12Bridge ControllUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				2095AC771F0CEA6200DDE001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
