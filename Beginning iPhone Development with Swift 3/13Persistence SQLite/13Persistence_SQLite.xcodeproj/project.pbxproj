@@ -15,6 +15,7 @@
 		2046F6831F13CE53001B5543 /* _3PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046F6821F13CE53001B5543 /* _3PersistenceTests.swift */; };
 		2046F68E1F13CE53001B5543 /* _3PersistenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046F68D1F13CE53001B5543 /* _3PersistenceUITests.swift */; };
 		2046F69C1F14AFF1001B5543 /* FourLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046F69B1F14AFF1001B5543 /* FourLines.swift */; };
+		2046F69F1F14B5E2001B5543 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2046F69E1F14B5E2001B5543 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2046F68D1F13CE53001B5543 /* _3PersistenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _3PersistenceUITests.swift; sourceTree = "<group>"; };
 		2046F68F1F13CE53001B5543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2046F69B1F14AFF1001B5543 /* FourLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourLines.swift; sourceTree = "<group>"; };
+		2046F69E1F14B5E2001B5543 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2046F69F1F14B5E2001B5543 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				2046F6811F13CE53001B5543 /* 13PersistenceTests */,
 				2046F68C1F13CE53001B5543 /* 13PersistenceUITests */,
 				2046F66B1F13CE53001B5543 /* Products */,
+				2046F69D1F14B5E2001B5543 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				2046F68F1F13CE53001B5543 /* Info.plist */,
 			);
 			path = 13PersistenceUITests;
+			sourceTree = "<group>";
+		};
+		2046F69D1F14B5E2001B5543 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2046F69E1F14B5E2001B5543 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
