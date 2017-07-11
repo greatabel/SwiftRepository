@@ -2,6 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    fileprivate static let rootKey = "rootKey"
+
     @IBOutlet var lineFields: [UITextField]!
     
     override func viewDidLoad() {
@@ -14,16 +16,42 @@ class ViewController: UIViewController {
                     lineFields[i].text = array[i]
                 }
             }
+
+            let data = NSMutableData(contentsOf: fileURL as URL)
+            let unarchiver = NSKeyedUnarchiver(forReadingWith: data! as Data)
+            let fourLines = unarchiver.decodeObject(forKey: ViewController.rootKey) as! FourLines
+            unarchiver.finishDecoding()
+
+            if let newLines = fourLines.lines {
+                for i in 0..<newLines.count {
+                    lineFields[i].text = newLines[i]
+                }
+            }
+
+
         }
+
         let app = UIApplication.shared
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(notification:)), name: Notification.Name.UIApplicationWillResignActive, object: app)
+        NotificationCenter.default.addObserver(self,
+                       selector: #selector(self.applicationWillResignActive(notification:)),
+                       name: Notification.Name.UIApplicationWillResignActive, object: app)
+
+
+
 
     }
 
     func applicationWillResignActive(notification:NSNotification) {
-       let fileURL = self.dataFileURL()
-        let array = (self.lineFields as NSArray).value(forKey: "text") as! NSArray
-        array.write(to: fileURL as URL, atomically: true)
+        let fileURL = self.dataFileURL()
+        let fourLines = FourLines()
+        let array = (self.lineFields as NSArray).value(forKey: "text")
+            as! [String]
+        fourLines.lines = array
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWith: data)
+        archiver.encode(fourLines, forKey: ViewController.rootKey)
+        archiver.finishEncoding()
+        data.write(to: fileURL as URL, atomically: true)
     }
 
 
@@ -37,7 +65,7 @@ class ViewController: UIViewController {
             .documentDirectory, in: .userDomainMask)
         var url:NSURL?
         url = URL(fileURLWithPath: "") as NSURL?      // create a blank path
-        url = urls.first?.appendingPathComponent("plist") as NSURL?
+        url = urls.first?.appendingPathComponent("data.archive") as NSURL?
         return url!
     }
 

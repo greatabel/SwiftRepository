@@ -1,5 +1,6 @@
 import Foundation
 
+
 class FourLines: NSObject, NSCoding, NSCopying {
 
     private static let linesKey = "linesKey"
