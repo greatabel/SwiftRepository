@@ -9,6 +9,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var database: OpaquePointer? = nil
+        var result = sqlite3_open(dataFilePath(), &database)
+        if result != SQLITE_OK {
+            sqlite3_close(database)
+            print("Failed to open database")
+            return
+        }
+        let createSQL = "CREATE TABLE IF NOT EXISTS FIELDS " +
+        "(ROW INTEGER PRIMARY KEY, FIELD_DATA TEXT);"
+        var errMsg:UnsafeMutablePointer<Int8>? = nil
+        result = sqlite3_exec(database, createSQL, nil, nil, &errMsg)
+        if (result != SQLITE_OK) {
+            sqlite3_close(database)
+            print("Failed to create table")
+            return
+        }
+
         let fileURL = self.dataFileURL()
         if (FileManager.default.fileExists(atPath: fileURL.path!)) {
             if let array = NSArray(contentsOf: fileURL as URL) as? [String] {
@@ -39,6 +56,15 @@ class ViewController: UIViewController {
 
 
 
+    }
+
+    func dataFilePath() -> String {
+        let urls = FileManager.default.urls(for:
+            .documentDirectory, in: .userDomainMask)
+        var url:String?
+
+        url = urls.first?.appendingPathComponent("data.plist").path
+        return url!
     }
 
     func applicationWillResignActive(notification:NSNotification) {
