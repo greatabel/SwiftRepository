@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="pC8-f1-gxj">
             <objects>
-                <viewController id="LX5-vD-y0o" customClass="ViewController" customModule="Core_Data_Persistence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LX5-vD-y0o" customClass="ViewController" customModule="_3Persistence_CoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i0D-9u-e6t"/>
                         <viewControllerLayoutGuide type="bottom" id="ICI-Pq-BgG"/>
@@ -108,6 +108,10 @@
                         <outletCollection property="lineFields" destination="25T-u9-MmY" collectionClass="NSMutableArray" id="vmL-Tr-ApU"/>
                         <outletCollection property="lineFields" destination="fpd-uO-XT7" collectionClass="NSMutableArray" id="IFo-p6-Tfr"/>
                         <outletCollection property="lineFields" destination="6SF-sq-2zh" collectionClass="NSMutableArray" id="cbc-of-ODU"/>
+                        <outletCollection property="lineFields" destination="iWV-qh-m0E" collectionClass="NSMutableArray" id="Ssd-lQ-KQA"/>
+                        <outletCollection property="lineFields" destination="25T-u9-MmY" collectionClass="NSMutableArray" id="Bx8-gM-aMj"/>
+                        <outletCollection property="lineFields" destination="fpd-uO-XT7" collectionClass="NSMutableArray" id="sl6-av-IeC"/>
+                        <outletCollection property="lineFields" destination="6SF-sq-2zh" collectionClass="NSMutableArray" id="Cmh-aF-gTz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icq-ot-kw5" sceneMemberID="firstResponder"/>
