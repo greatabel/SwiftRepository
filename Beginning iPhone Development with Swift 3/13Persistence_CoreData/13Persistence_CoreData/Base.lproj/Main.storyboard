@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LX5-vD-y0o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="pC8-f1-gxj">
+            <objects>
+                <viewController id="LX5-vD-y0o" customClass="ViewController" customModule="Core_Data_Persistence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i0D-9u-e6t"/>
+                        <viewControllerLayoutGuide type="bottom" id="ICI-Pq-BgG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XgE-A7-Gbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruv-Jz-hJS">
+                                <rect key="frame" x="9" y="34.5" width="49" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="or6-7e-avW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWV-qh-m0E">
+                                <rect key="frame" x="69" y="31" width="290" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVk-rb-I86">
+                                <rect key="frame" x="9" y="72.5" width="51" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="quE-m9-5qt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25T-u9-MmY">
+                                <rect key="frame" x="69" y="69" width="290" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-k9-Cei">
+                                <rect key="frame" x="9" y="110.5" width="52" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="1zt-Od-bXk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opo-gn-JAc">
+                                <rect key="frame" x="9" y="148.5" width="52" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="iqP-jK-TcU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6SF-sq-2zh">
+                                <rect key="frame" x="69" y="145" width="290" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-uO-XT7">
+                                <rect key="frame" x="69" y="107" width="293" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ruv-Jz-hJS" firstAttribute="leading" secondItem="XgE-A7-Gbc" secondAttribute="leadingMargin" constant="-7" id="0Ke-HL-YIL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="25T-u9-MmY" secondAttribute="trailing" id="59I-rv-mks"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fpd-uO-XT7" secondAttribute="trailing" constant="-3" id="BAC-y7-GBz"/>
+                            <constraint firstItem="25T-u9-MmY" firstAttribute="top" secondItem="i0D-9u-e6t" secondAttribute="bottom" constant="49" id="GvH-T4-DfN"/>
+                            <constraint firstItem="SVk-rb-I86" firstAttribute="baseline" secondItem="25T-u9-MmY" secondAttribute="baseline" id="Htj-fg-WTT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6SF-sq-2zh" secondAttribute="trailing" id="Isk-Kb-DTR"/>
+                            <constraint firstItem="IfS-k9-Cei" firstAttribute="leading" secondItem="XgE-A7-Gbc" secondAttribute="leadingMargin" constant="-7" id="Jp9-cn-2OY"/>
+                            <constraint firstItem="fpd-uO-XT7" firstAttribute="top" secondItem="i0D-9u-e6t" secondAttribute="bottom" constant="87" id="KPu-rz-7FZ"/>
+                            <constraint firstItem="IfS-k9-Cei" firstAttribute="baseline" secondItem="fpd-uO-XT7" secondAttribute="baseline" id="Koj-DB-nR1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iWV-qh-m0E" secondAttribute="trailing" id="PaL-wj-kLn"/>
+                            <constraint firstItem="opo-gn-JAc" firstAttribute="baseline" secondItem="6SF-sq-2zh" secondAttribute="baseline" id="V1b-4z-Yp8"/>
+                            <constraint firstItem="opo-gn-JAc" firstAttribute="leading" secondItem="XgE-A7-Gbc" secondAttribute="leadingMargin" constant="-7" id="Y8L-Ya-5Wc"/>
+                            <constraint firstItem="iWV-qh-m0E" firstAttribute="leading" secondItem="ruv-Jz-hJS" secondAttribute="trailing" constant="11" id="aZ7-BD-SEC"/>
+                            <constraint firstItem="fpd-uO-XT7" firstAttribute="leading" secondItem="IfS-k9-Cei" secondAttribute="trailing" constant="8" id="kdo-KR-CKU"/>
+                            <constraint firstItem="iWV-qh-m0E" firstAttribute="top" secondItem="i0D-9u-e6t" secondAttribute="bottom" constant="11" id="mBp-c6-NEC"/>
+                            <constraint firstItem="25T-u9-MmY" firstAttribute="leading" secondItem="SVk-rb-I86" secondAttribute="trailing" constant="9" id="n7P-SK-4gE"/>
+                            <constraint firstItem="6SF-sq-2zh" firstAttribute="leading" secondItem="opo-gn-JAc" secondAttribute="trailing" constant="8" id="qns-re-Zoi"/>
+                            <constraint firstItem="ruv-Jz-hJS" firstAttribute="baseline" secondItem="iWV-qh-m0E" secondAttribute="baseline" id="rf0-cC-NNQ"/>
+                            <constraint firstItem="6SF-sq-2zh" firstAttribute="top" secondItem="i0D-9u-e6t" secondAttribute="bottom" constant="125" id="tUt-C3-OI4"/>
+                            <constraint firstItem="SVk-rb-I86" firstAttribute="leading" secondItem="XgE-A7-Gbc" secondAttribute="leadingMargin" constant="-7" id="w53-yu-SzQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="lineFields" destination="iWV-qh-m0E" collectionClass="NSMutableArray" id="bYq-4k-u8A"/>
+                        <outletCollection property="lineFields" destination="25T-u9-MmY" collectionClass="NSMutableArray" id="vmL-Tr-ApU"/>
+                        <outletCollection property="lineFields" destination="fpd-uO-XT7" collectionClass="NSMutableArray" id="IFo-p6-Tfr"/>
+                        <outletCollection property="lineFields" destination="6SF-sq-2zh" collectionClass="NSMutableArray" id="cbc-of-ODU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icq-ot-kw5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="269"/>
+        </scene>
+    </scenes>
+</document>
