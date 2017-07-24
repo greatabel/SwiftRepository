@@ -30,4 +30,18 @@ class TinyPixDocument: UIDocument {
         setState(state: !state, atRow: row, column: column)
     }
 
+    override func contents(forType typeName: String) throws -> Any {
+        print("Saving documents to URL: \(fileURL)")
+        let bitmapData = NSData(bytes: bitmap, length: bitmap.count)
+        return bitmapData
+    }
+
+    override func load(fromContents contents: Any, ofType typeName: String?) throws {
+        print("Loading document from URL \(fileURL)")
+        if let bitmapData = contents as? NSData {
+            bitmapData.getBytes(UnsafeMutablePointer<UInt8>(mutating: bitmap), length: bitmap.count)
+        }
+    }
+
+
 }
