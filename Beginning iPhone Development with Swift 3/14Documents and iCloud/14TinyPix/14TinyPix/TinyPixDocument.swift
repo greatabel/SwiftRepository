@@ -9,4 +9,25 @@ class TinyPixDocument: UIDocument {
         super.init(fileURL: fileURL as URL)
     }
 
+    func stateAt(row: Int, column: Int) -> Bool {
+        let rowByte = bitmap[row]
+        let result = UInt8(1 << column) & rowByte
+        return result != 0
+    }
+
+    func setState(state: Bool, atRow row: Int, column: Int) {
+        var rowByte = bitmap[row]
+        if state {
+            rowByte |= UInt8(1 << column)
+        } else {
+            rowByte &= ~UInt8(1 << column)
+        }
+        bitmap[row] = rowByte
+    }
+
+    func toggleStateAt(row: Int, column: Int) {
+        let state = stateAt(row: row, column: column)
+        setState(state: !state, atRow: row, column: column)
+    }
+
 }
