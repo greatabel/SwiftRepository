@@ -2,6 +2,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    
+
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
 
@@ -25,7 +27,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: Event? {
+    var detailItem: AnyObject? {
         didSet {
             // Update the view.
             configureView()

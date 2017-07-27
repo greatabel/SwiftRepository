@@ -17,6 +17,7 @@
 		203495881F259DF500B6B065 /* _4TinyPixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203495871F259DF500B6B065 /* _4TinyPixTests.swift */; };
 		203495931F259DF500B6B065 /* _4TinyPixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203495921F259DF500B6B065 /* _4TinyPixUITests.swift */; };
 		203495A11F259F9F00B6B065 /* TinyPixDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203495A01F259F9F00B6B065 /* TinyPixDocument.swift */; };
+		203495A31F29D9F100B6B065 /* TinyPixUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203495A21F29D9F100B6B065 /* TinyPixUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		203495921F259DF500B6B065 /* _4TinyPixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4TinyPixUITests.swift; sourceTree = "<group>"; };
 		203495941F259DF500B6B065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203495A01F259F9F00B6B065 /* TinyPixDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyPixDocument.swift; sourceTree = "<group>"; };
+		203495A21F29D9F100B6B065 /* TinyPixUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyPixUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				2034957E1F259DF500B6B065 /* Info.plist */,
 				2034956F1F259DF500B6B065 /* _4TinyPix.xcdatamodeld */,
 				203495A01F259F9F00B6B065 /* TinyPixDocument.swift */,
+				203495A21F29D9F100B6B065 /* TinyPixUtils.swift */,
 			);
 			path = 14TinyPix;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				203495711F259DF500B6B065 /* _4TinyPix.xcdatamodeld in Sources */,
 				203495A11F259F9F00B6B065 /* TinyPixDocument.swift in Sources */,
 				2034956E1F259DF500B6B065 /* AppDelegate.swift in Sources */,
+				203495A31F29D9F100B6B065 /* TinyPixUtils.swift in Sources */,
 				203495731F259DF500B6B065 /* MasterViewController.swift in Sources */,
 				203495751F259DF500B6B065 /* DetailViewController.swift in Sources */,
 			);
