@@ -23,16 +23,27 @@ class TinyPixView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        commonInit()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commonInit()
     }
 
     private func commonInit() {
+        calculateGridForSize(bounds.size)
+    }
+
+    private func calculateGridForSize(_ size: CGSize){
+        let space = min(size.width, size.height)
+        gap = space / 57
+        let cellSide = gap * 6
+        blockSize = CGSize(width: cellSide, height: cellSide)
+        gridRect = CGRect(x: (size.width - space)/2, y: (size.height - space)/2,
+                          width: space, height: space)
 
     }
-    
+
 
 }
