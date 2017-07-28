@@ -1,5 +1,10 @@
 import UIKit
 
+struct GridIndex {
+    var row: Int
+    var column: Int
+}
+
 class TinyPixView: UIView {
 
     /*
@@ -9,5 +14,12 @@ class TinyPixView: UIView {
         // Drawing code
     }
     */
+    var document: TinyPixDocument!
+    var lastSize: CGSize = CGSize.zero
+    var gridRect: CGRect!
+    var blockSize: CGSize!
+    var gap: CGFloat = 0
+    var selectedBlockIndex: GridIndex = GridIndex(row: NSNotFound, column: NSNotFound)
+    
 
 }
