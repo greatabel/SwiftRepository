@@ -76,6 +76,45 @@ class TinyPixView: UIView {
         path.stroke()
     }
 
+    private func touchedGridIndexFromTouches(_ touches: Set<UITouch>) -> GridIndex {
+        var result = GridIndex(row: -1, column: -1)
+        let touch = touches.first!
+        var location = touch.location(in: self)
+        if gridRect.contains(location) {
+            location.x -= gridRect.origin.x
+            location.y -= gridRect.origin.y
+            result.column = Int(8 - (location.x * 8.0 / gridRect.size.width))
+            result.row = Int(location.y * 8.0 / gridRect.size.height)
+        }
+        return result
+    }
+
+    private func toggleSelectedBlock() {
+        if selectedBlockIndex.row != -1
+            && selectedBlockIndex.column != -1 {
+            document.toggleStateAt(row: selectedBlockIndex.row,
+                                   column: selectedBlockIndex.column)
+            (document.undoManager?.prepare(withInvocationTarget: document) as AnyObject)
+                .toggleStateAt(row: selectedBlockIndex.row,
+                               column: selectedBlockIndex.column)
+            setNeedsDisplay()
+        }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        selectedBlockIndex = touchedGridIndexFromTouches(touches)
+        toggleSelectedBlock()
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touched = touchedGridIndexFromTouches(touches)
+        if touched.row != selectedBlockIndex.row
+            && touched.column != selectedBlockIndex.column {
+            selectedBlockIndex = touched
+            toggleSelectedBlock()
+        }
+    }
+
 
 
 }
