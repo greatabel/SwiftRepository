@@ -45,5 +45,37 @@ class TinyPixView: UIView {
 
     }
 
+    override func draw(_ rect: CGRect) {
+        if document != nil {
+            let size = bounds.size
+            if !size.equalTo(lastSize) {
+                lastSize = size
+                calculateGridForSize(size)
+            }
+            for row in 0 ..< 8 {
+                for column in 0 ..< 8 {
+                    drawBlockAt(row: row, column: column)
+                }
+            }
+        }
+    }
+
+    private func drawBlockAt(row: Int, column: Int) {
+        let startX = gridRect.origin.x + gap
+            + (blockSize.width + gap) * (7 - CGFloat(column)) + 1
+        let startY = gridRect.origin.y + gap
+            + (blockSize.height + gap) * CGFloat(row) + 1
+        let blockFrame = CGRect(x: startX, y: startY,
+                                width: blockSize.width, height: blockSize.height)
+        let color = document.stateAt(row: row, column: column)
+            ? UIColor.black : UIColor.white
+        color.setFill()
+        tintColor.setStroke()
+        let path = UIBezierPath(rect:blockFrame)
+        path.fill()
+        path.stroke()
+    }
+
+
 
 }
