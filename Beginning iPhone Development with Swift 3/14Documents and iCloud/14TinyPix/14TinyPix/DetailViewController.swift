@@ -2,17 +2,21 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet var pixView: TinyPixView!
+
 
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.timestamp!.description
-            }
+//        if let detail = detailItem {
+////            if let label = detailDescriptionLabel {
+////                label.text = detail.timestamp!.description
+////            }
+//        }
+        if detailItem != nil && isViewLoaded {
+            pixView.document = detailItem as! TinyPixDocument
+            pixView.setNeedsDisplay()
         }
     }
 
