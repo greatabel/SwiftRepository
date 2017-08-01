@@ -123,7 +123,7 @@
                                 <segment title="Blue"/>
                             </segments>
                             <connections>
-                                <action selector="chooseColorWithSender:" destination="7bK-jq-Zjz" eventType="valueChanged" id="YNj-w2-HBm"/>
+                                <action selector="chooseColor:" destination="7bK-jq-Zjz" eventType="valueChanged" id="6Tz-9G-9Mf"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
@@ -134,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="-639"/>
+            <point key="canvasLocation" x="782" y="-639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -154,6 +154,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kgv-qx-Z1o"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>
