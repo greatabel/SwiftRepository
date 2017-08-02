@@ -57,6 +57,7 @@
 		203495A01F259F9F00B6B065 /* TinyPixDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyPixDocument.swift; sourceTree = "<group>"; };
 		203495A21F29D9F100B6B065 /* TinyPixUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyPixUtils.swift; sourceTree = "<group>"; };
 		203D96451F2B09B2001952FD /* TinyPixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyPixView.swift; sourceTree = "<group>"; };
+		209297801F320AAC00F6D4A5 /* 14TinyPix_icloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 14TinyPix_icloud.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		203495611F259DF500B6B065 = {
 			isa = PBXGroup;
 			children = (
+				209297801F320AAC00F6D4A5 /* 14TinyPix_icloud.entitlements */,
 				2034956C1F259DF500B6B065 /* 14TinyPix */,
 				203495861F259DF500B6B065 /* 14TinyPixTests */,
 				203495911F259DF500B6B065 /* 14TinyPixUITests */,
@@ -210,6 +212,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 32DD42UWD5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					203495821F259DF500B6B065 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -437,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 14TinyPix_icloud.entitlements;
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = 14TinyPix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -450,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 14TinyPix_icloud.entitlements;
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = 14TinyPix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
