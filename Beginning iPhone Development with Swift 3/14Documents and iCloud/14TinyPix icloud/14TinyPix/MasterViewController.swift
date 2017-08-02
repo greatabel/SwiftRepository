@@ -5,6 +5,8 @@ class MasterViewController: UITableViewController {
     private var documentFileURLs: [URL] = []
     private var chosenDocument: TinyPixDocument?
 
+    private var query: NSMetadataQuery!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,27 +30,68 @@ class MasterViewController: UITableViewController {
         return  urls.first!.appendingPathComponent(fileName)
     }
 
+//    private func reloadFiles() {
+//        let fm = FileManager.default
+//        let documentsURL = fm.urls(for:
+//            .documentDirectory, in: .userDomainMask).first!
+//        do {
+//            let fileURLs = try fm.contentsOfDirectory(at: documentsURL,
+//                                                      includingPropertiesForKeys: nil, options: [])
+//            let sortedFileURLs = fileURLs.sorted() { file1URL, file2URL in
+//                let attr1 = try! fm.attributesOfItem(atPath: file1URL.path)
+//                let attr2 = try! fm.attributesOfItem(atPath: file2URL.path)
+//                let file1Date = attr1[FileAttributeKey.creationDate] as! Date
+//                let file2Date = attr2[FileAttributeKey.creationDate] as! Date
+//                let result = file1Date.compare(file2Date)
+//                return result == ComparisonResult.orderedAscending
+//            }
+//
+//            documentFileURLs = sortedFileURLs
+//            tableView.reloadData()
+//        } catch {
+//            print("Error listing files in directory \(documentsURL.path): \(error)")
+//        }
+//    }
     private func reloadFiles() {
-        let fm = FileManager.default
-        let documentsURL = fm.urls(for:
-            .documentDirectory, in: .userDomainMask).first!
-        do {
-            let fileURLs = try fm.contentsOfDirectory(at: documentsURL,
-                                                      includingPropertiesForKeys: nil, options: [])
-            let sortedFileURLs = fileURLs.sorted() { file1URL, file2URL in
-                let attr1 = try! fm.attributesOfItem(atPath: file1URL.path)
-                let attr2 = try! fm.attributesOfItem(atPath: file2URL.path)
-                let file1Date = attr1[FileAttributeKey.creationDate] as! Date
-                let file2Date = attr2[FileAttributeKey.creationDate] as! Date
-                let result = file1Date.compare(file2Date)
-                return result == ComparisonResult.orderedAscending
-            }
-
-            documentFileURLs = sortedFileURLs
-            tableView.reloadData()
-        } catch {
-            print("Error listing files in directory \(documentsURL.path): \(error)")
+        let fileManager = FileManager.default
+        // Passing nil is OK here, matches the first entitlement
+//        let cloudURL = fileManager.urlForUbiquityContainerIdentifier(nil)
+        let cloudURL = fileManager.url(forUbiquityContainerIdentifier: nil)
+        print("Got cloudURL \(String(describing: cloudURL))")
+        if (cloudURL != nil) {
+            query = NSMetadataQuery()
+            query.predicate = NSPredicate(format: "%K like '*.tinypix'",
+                                        NSMetadataItemFSNameKey)
+            query.searchScopes = [NSMetadataQueryUbiquitousDocumentsScope]
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(MasterViewController.updateUbiquitousDocuments(_:)), name: NSNotification.Name.NSMetadataQueryDidFinishGathering,
+                                                   object: nil)
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(MasterViewController.updateUbiquitousDocuments(_:)), name: NSNotification.Name.NSMetadataQueryDidUpdate,
+                                                   object: nil)
+            query.start()
         }
+
+    }
+
+    func updateUbiquitousDocuments(_ notification: Notification) {
+        documentFileURLs = []
+        print("updateUbiquitousDocuments, results = \(query.results)")
+        let results = query.results.sorted() { obj1, obj2 in
+            let item1 = obj1 as! NSMetadataItem
+            let item2 = obj2 as! NSMetadataItem
+            let item1Date =
+                item1.value(forAttribute: NSMetadataItemFSCreationDateKey) as! Date
+            let item2Date =
+                item2.value(forAttribute: NSMetadataItemFSCreationDateKey) as! Date
+            let result = item1Date.compare(item2Date)
+            return result == ComparisonResult.orderedAscending
+        }
+        for item in results as! [NSMetadataItem] {
+            let url = item.value(forAttribute: NSMetadataItemURLKey) as! URL
+            documentFileURLs.append(url)
+        }
+        tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
