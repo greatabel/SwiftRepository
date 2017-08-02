@@ -21,13 +21,34 @@ class MasterViewController: UITableViewController {
         colorControl.selectedSegmentIndex = selectedColorIndex
 
         reloadFiles()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(MasterViewController.onSettingsChanged(_:)),
+                                               name: UserDefaults.didChangeNotification ,
+                                               object: nil)
     }
 
+    func onSettingsChanged(_ notification: Notification) {
+        let prefs = UserDefaults.standard
+        let selectedColorIndex = prefs.integer(forKey: "selectedColorIndex")
+        setTintColorForIndex(selectedColorIndex)
+        colorControl.selectedSegmentIndex = selectedColorIndex
+    }
+
+//    private func urlForFileName(_ fileName: String) -> URL {
+//        //        let urls = FileManager.default.urls(for: .documentDirectory, in: userDomainMask)(
+//        let urls = FileManager.default.urls(for:
+//            .documentDirectory, in: .userDomainMask)
+//        return  urls.first!.appendingPathComponent(fileName)
+//    }
+
     private func urlForFileName(_ fileName: String) -> URL {
-        //        let urls = FileManager.default.urls(for: .documentDirectory, in: userDomainMask)(
-        let urls = FileManager.default.urls(for:
-            .documentDirectory, in: .userDomainMask)
-        return  urls.first!.appendingPathComponent(fileName)
+        // Be sure to insert "Documents" into the path
+        let fm = FileManager.default
+        let baseURL = fm.url(forUbiquityContainerIdentifier: nil)
+        let pathURL = try! baseURL?.appendingPathComponent("Documents")
+        let destinationURL = try! pathURL?.appendingPathComponent(fileName)
+        return destinationURL!
     }
 
 //    private func reloadFiles() {
@@ -73,6 +94,8 @@ class MasterViewController: UITableViewController {
         }
 
     }
+
+
 
     func updateUbiquitousDocuments(_ notification: Notification) {
         documentFileURLs = []

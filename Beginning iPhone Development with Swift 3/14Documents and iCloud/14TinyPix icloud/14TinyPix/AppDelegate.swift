@@ -5,15 +5,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
-
     private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
+
+        // Register for notification of iCloud key-value changes
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(AppDelegate.iCloudKeysChanged(_:)),
+                                               name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+                                               object: nil)
+
+        // Start iCloud key-value updates
+        NSUbiquitousKeyValueStore.default().synchronize()
+        updateUserDefaultsFromICloud()
+
         return true
     }
+
+    func iCloudKeysChanged(_ notification: Notification) {
+        updateUserDefaultsFromICloud()
+    }
+
+    private func updateUserDefaultsFromICloud() {
+        let values = NSUbiquitousKeyValueStore.default().dictionaryRepresentation
+        if values["selectedColorIndex"] != nil {
+            let selectedColorIndex =
+                Int(NSUbiquitousKeyValueStore.default().longLong(
+                    forKey: "selectedColorIndex"))
+            let prefs = UserDefaults.standard
+            prefs.set(selectedColorIndex, forKey: "selectedColorIndex")
+            prefs.synchronize()
+        }
+    }
+
+
+
+//    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        // Override point for customization after application launch.
+//        let splitViewController = self.window!.rootViewController as! UISplitViewController
+//        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+//        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+//        splitViewController.delegate = self
+//        return true
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
