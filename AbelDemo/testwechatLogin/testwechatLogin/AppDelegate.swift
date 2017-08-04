@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
     // http://www.jianshu.com/p/3c9e25e493c6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        WXApi.registerApp("")
+        WXApi.registerApp("wxca1bf553772a24cc")
 
         return true
     }

@@ -27,17 +27,24 @@ class ViewController: UIViewController {
 
     @IBAction func doWork(_ sender: AnyObject) {
         let startTime = NSDate()
-
         self.resultsTextView.text = ""
-        let fetchedData = self.fetchSomethingFromServer()
-        let processedData = self.processData(fetchedData)
-        let firstResult = self.calculateFirstResult(processedData)
-        let secondResult = self.calculateSecondResult(processedData)
-        let resultsSummary =
-        "First: [\(firstResult)]\nSecond: [\(secondResult)]"
-        self.resultsTextView.text = resultsSummary
-        let endTime = NSDate()
-        print("Completed in \(endTime.timeIntervalSince(startTime as Date)) seconds")
+
+        let queue = DispatchQueue.global(qos: .default)
+        queue.async {
+            let fetchedData = self.fetchSomethingFromServer()
+            let processedData = self.processData(fetchedData)
+            let firstResult = self.calculateFirstResult(processedData)
+            let secondResult = self.calculateSecondResult(processedData)
+            let resultsSummary =
+            "First: [\(firstResult)]\nSecond: [\(secondResult)]"
+//            self.resultsTextView.text = resultsSummary
+            DispatchQueue.main.async {
+                self.resultsTextView.text = resultsSummary
+            }
+            let endTime = NSDate()
+            print("Completed in \(endTime.timeIntervalSince(startTime as Date)) seconds")
+        }
+
     }
 
     override func viewDidLoad() {
