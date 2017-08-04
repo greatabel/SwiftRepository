@@ -5,6 +5,8 @@ class ViewController: UIViewController {
     @IBOutlet var startButton: UIButton!
     @IBOutlet var resultsTextView: UITextView!
 
+    @IBOutlet var spinner : UIActivityIndicatorView!
+
     func fetchSomethingFromServer() -> String {
         Thread.sleep(forTimeInterval: 1)
         return "Hi there"
@@ -27,7 +29,9 @@ class ViewController: UIViewController {
 
     @IBAction func doWork(_ sender: AnyObject) {
         let startTime = NSDate()
-        self.resultsTextView.text = ""
+        resultsTextView.text = ""
+        startButton.isEnabled = false
+        spinner.startAnimating()
 
         let queue = DispatchQueue.global(qos: .default)
         queue.async {
@@ -40,6 +44,8 @@ class ViewController: UIViewController {
 //            self.resultsTextView.text = resultsSummary
             DispatchQueue.main.async {
                 self.resultsTextView.text = resultsSummary
+                self.startButton.isEnabled = true
+                self.spinner.stopAnimating()
             }
             let endTime = NSDate()
             print("Completed in \(endTime.timeIntervalSince(startTime as Date)) seconds")

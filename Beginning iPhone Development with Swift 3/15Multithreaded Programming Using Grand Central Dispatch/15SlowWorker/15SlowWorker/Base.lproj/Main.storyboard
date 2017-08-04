@@ -35,19 +35,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BLq-hU-BaN">
+                                <rect key="frame" x="177" y="73" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yXH-AB-wbj" firstAttribute="top" secondItem="FH4-ey-mbo" secondAttribute="bottom" constant="37" id="DZL-Ad-S5O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yXH-AB-wbj" secondAttribute="trailing" constant="-16" id="FYN-ke-7gG"/>
+                            <constraint firstItem="BLq-hU-BaN" firstAttribute="top" secondItem="FH4-ey-mbo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ner-dB-5jW"/>
                             <constraint firstItem="FH4-ey-mbo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RaN-tJ-0kS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yXH-AB-wbj" secondAttribute="bottom" constant="370" id="k3D-jE-eNF"/>
                             <constraint firstItem="yXH-AB-wbj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="kxW-5o-xxt"/>
+                            <constraint firstItem="BLq-hU-BaN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xRq-R4-glH"/>
+                            <constraint firstItem="FH4-ey-mbo" firstAttribute="centerX" secondItem="BLq-hU-BaN" secondAttribute="centerX" id="xwy-mM-wZC"/>
                             <constraint firstItem="FH4-ey-mbo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="yTe-nj-PKK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="resultsTextView" destination="yXH-AB-wbj" id="m9D-dG-IaW"/>
+                        <outlet property="spinner" destination="BLq-hU-BaN" id="0vS-uU-QLh"/>
                         <outlet property="startButton" destination="FH4-ey-mbo" id="ZIe-2V-gWh"/>
                     </connections>
                 </viewController>
