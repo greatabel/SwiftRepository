@@ -3,6 +3,7 @@ import UIKit
 class ViewController: UIViewController {
 
     private var label: UILabel!
+    private var animate = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +17,25 @@ class ViewController: UIViewController {
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
         view.addSubview(label)
-        rotateLabelDown();
+//        rotateLabelDown()
+
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(ViewController.applicationWillResignActive),
+                           name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        center.addObserver(self, selector: #selector(ViewController.applicationDidBecomeActive),
+                           name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+
+    }
+
+    func applicationWillResignActive() {
+        print("VC: \(#function)")
+        animate = false
+    }
+
+    func applicationDidBecomeActive() {
+        print("VC: \(#function)")
+        animate = true
+        rotateLabelDown()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +57,9 @@ class ViewController: UIViewController {
             self.label.transform = CGAffineTransform(rotationAngle: 0)
         },
                        completion: {(Bool) -> Void in
-                        self.rotateLabelDown()
+                        if self.animate {
+                            self.rotateLabelDown()
+                        }
         } )
     }
 
