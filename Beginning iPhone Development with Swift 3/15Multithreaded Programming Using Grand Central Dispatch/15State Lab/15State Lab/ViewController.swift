@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         smiley = UIImage(contentsOfFile: smileyPath)
         smileyView.image = smiley
         view.addSubview(smileyView)
-        
+
         view.addSubview(label)
 //        rotateLabelDown()
 
@@ -39,6 +39,9 @@ class ViewController: UIViewController {
                            name: Notification.Name.UIApplicationWillResignActive, object: nil)
         center.addObserver(self, selector: #selector(ViewController.applicationDidBecomeActive),
                            name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+
+        center.addObserver(self, selector: #selector(ViewController.applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        center.addObserver(self, selector: #selector(ViewController.applicationWillEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
 
     }
 
@@ -51,6 +54,20 @@ class ViewController: UIViewController {
         print("VC: \(#function)")
         animate = true
         rotateLabelDown()
+    }
+
+    func applicationDidEnterBackground() {
+        print("VC: \(#function)")
+        self.smiley = nil;
+        self.smileyView.image = nil;
+    }
+
+    func applicationWillEnterForeground() {
+        print("VC: \(#function)")
+        let smileyPath =
+            Bundle.main.path(forResource:"smiley", ofType:"png")!
+        smiley = UIImage(contentsOfFile: smileyPath)
+        smileyView.image = smiley
     }
 
     override func didReceiveMemoryWarning() {
