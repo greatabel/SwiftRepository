@@ -38,6 +38,10 @@ class ViewController: UIViewController {
                                         width: bounds.size.width - 40, height: 30)
         segmentedControl.addTarget(self, action: #selector(ViewController.selectionChanged(_:)),
                                    for: UIControlEvents.valueChanged)
+
+        index = UserDefaults.standard.integer(forKey: "index")
+        segmentedControl.selectedSegmentIndex = index
+
         view.addSubview(segmentedControl)
 
         view.addSubview(smileyView)
@@ -73,8 +77,11 @@ class ViewController: UIViewController {
 
     func applicationDidEnterBackground() {
         print("VC: \(#function)")
-        self.smiley = nil;
-        self.smileyView.image = nil;
+        self.smiley = nil
+        self.smileyView.image = nil
+
+        UserDefaults.standard.set(self.index,
+                                  forKey:"index")
     }
 
     func applicationWillEnterForeground() {
