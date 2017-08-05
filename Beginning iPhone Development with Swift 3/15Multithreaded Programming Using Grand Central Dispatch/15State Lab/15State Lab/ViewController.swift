@@ -82,6 +82,29 @@ class ViewController: UIViewController {
 
         UserDefaults.standard.set(self.index,
                                   forKey:"index")
+
+        let app = UIApplication.shared
+        var taskId = UIBackgroundTaskInvalid
+        let id = app.beginBackgroundTask() {
+            print("Background task ran out of time and was terminated.")
+            app.endBackgroundTask(taskId)
+        }
+        taskId = id
+        if taskId == UIBackgroundTaskInvalid {
+            print("Failed to start background task!")
+            return
+        }
+        DispatchQueue.global(qos: .default).async {
+            print("Starting background task with " +
+                "\(app.backgroundTimeRemaining) seconds remaining")
+            self.smiley = nil;
+            self.smileyView.image = nil;
+            // simulate a lengthy (25 seconds) procedure
+            Thread.sleep(forTimeInterval: 25)
+            print("Finishing background task with " +
+                "\(app.backgroundTimeRemaining) seconds remaining")
+            app.endBackgroundTask(taskId)
+        }
     }
 
     func applicationWillEnterForeground() {
