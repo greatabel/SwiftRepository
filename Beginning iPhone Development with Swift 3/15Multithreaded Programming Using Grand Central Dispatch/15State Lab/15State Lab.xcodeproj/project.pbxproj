@@ -14,6 +14,7 @@
 		20F28CE21F356564001B1FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F28CE01F356564001B1FB1 /* LaunchScreen.storyboard */; };
 		20F28CED1F356564001B1FB1 /* _5State_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F28CEC1F356564001B1FB1 /* _5State_LabTests.swift */; };
 		20F28CF81F356564001B1FB1 /* _5State_LabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F28CF71F356564001B1FB1 /* _5State_LabUITests.swift */; };
+		20F28D061F360C07001B1FB1 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F28D051F360C07001B1FB1 /* smiley.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		20F28CF31F356564001B1FB1 /* 15State LabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "15State LabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F28CF71F356564001B1FB1 /* _5State_LabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _5State_LabUITests.swift; sourceTree = "<group>"; };
 		20F28CF91F356564001B1FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F28D051F360C07001B1FB1 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		20F28CD61F356564001B1FB1 /* 15State Lab */ = {
 			isa = PBXGroup;
 			children = (
+				20F28D051F360C07001B1FB1 /* smiley.png */,
 				20F28CD71F356564001B1FB1 /* AppDelegate.swift */,
 				20F28CD91F356564001B1FB1 /* ViewController.swift */,
 				20F28CDB1F356564001B1FB1 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F28D061F360C07001B1FB1 /* smiley.png in Resources */,
 				20F28CE21F356564001B1FB1 /* LaunchScreen.storyboard in Resources */,
 				20F28CDF1F356564001B1FB1 /* Assets.xcassets in Resources */,
 				20F28CDD1F356564001B1FB1 /* Main.storyboard in Resources */,

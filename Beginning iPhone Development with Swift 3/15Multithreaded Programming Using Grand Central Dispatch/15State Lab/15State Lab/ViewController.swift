@@ -3,6 +3,9 @@ import UIKit
 class ViewController: UIViewController {
 
     private var label: UILabel!
+    private var smiley: UIImage!
+    private var smileyView: UIImageView!
+
     private var animate = false
 
     override func viewDidLoad() {
@@ -16,6 +19,18 @@ class ViewController: UIViewController {
         label.text = "嘿嘿!"
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
+
+        // smiley.png is 84 x 84
+        let smileyFrame = CGRect(x: bounds.midX - 42,
+                                 y: bounds.midY/2 - 42, width: 84, height: 84)
+        smileyView = UIImageView(frame:smileyFrame)
+        smileyView.contentMode = UIViewContentMode.center
+        let smileyPath =
+            Bundle.main.path(forResource: "smiley", ofType: "png")!
+        smiley = UIImage(contentsOfFile: smileyPath)
+        smileyView.image = smiley
+        view.addSubview(smileyView)
+        
         view.addSubview(label)
 //        rotateLabelDown()
 
