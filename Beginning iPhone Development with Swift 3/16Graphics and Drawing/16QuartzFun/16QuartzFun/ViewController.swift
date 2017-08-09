@@ -39,6 +39,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changeShape(_ sender: UISegmentedControl) {
+        let shapeSelection = Shape(rawValue: UInt(sender.selectedSegmentIndex))
+        if let shape = shapeSelection {
+            let funView = view as! QuartzFunView
+            funView.shape = shape
+            colorControl.isHidden = shape == Shape.image
+        }
     }
 }
 

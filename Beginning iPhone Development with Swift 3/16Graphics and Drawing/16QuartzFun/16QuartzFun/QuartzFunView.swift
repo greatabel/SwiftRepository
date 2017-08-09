@@ -66,6 +66,22 @@ class QuartzFunView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        context!.setLineWidth(2.0)
+        context!.setStrokeColor(currentColor.cgColor)
+
+        switch shape {
+        case .line:
+            context?.move(to:CGPoint(x: firstTouchLocation.x, y: firstTouchLocation.y))
+            context?.addLine(to: CGPoint(x: lastTouchLocation.x, y: lastTouchLocation.y))
+            context?.strokePath()
+        case .rect:
+            break
+        case .ellipse:
+            break
+        case .image:
+            break
+        }
 
     }
 
