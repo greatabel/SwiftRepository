@@ -52,7 +52,7 @@
                             <constraint firstItem="5m6-Xn-vOi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BwQ-G8-VML"/>
                             <constraint firstItem="JWL-8y-dm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LVQ-Ls-UHN"/>
                             <constraint firstItem="5m6-Xn-vOi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Rih-G3-bzV"/>
-                            <constraint firstItem="JWL-8y-dm6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="599" id="mEf-M6-vD7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JWL-8y-dm6" secondAttribute="bottom" constant="20" id="bwr-NS-rLT"/>
                         </constraints>
                     </view>
                     <connections>
