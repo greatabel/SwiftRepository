@@ -34,11 +34,25 @@
                                     <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="V4Y-Aq-251"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JWL-8y-dm6">
+                                <rect key="frame" x="36" y="619" width="303" height="29"/>
+                                <segments>
+                                    <segment title="Line"/>
+                                    <segment title="Rectangle"/>
+                                    <segment title="Ellipse"/>
+                                    <segment title="Image"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeShape:" destination="BYZ-38-t0r" eventType="valueChanged" id="9S3-wa-Jw7"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5m6-Xn-vOi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BwQ-G8-VML"/>
+                            <constraint firstItem="JWL-8y-dm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LVQ-Ls-UHN"/>
                             <constraint firstItem="5m6-Xn-vOi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Rih-G3-bzV"/>
+                            <constraint firstItem="JWL-8y-dm6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="599" id="mEf-M6-vD7"/>
                         </constraints>
                     </view>
                     <connections>
