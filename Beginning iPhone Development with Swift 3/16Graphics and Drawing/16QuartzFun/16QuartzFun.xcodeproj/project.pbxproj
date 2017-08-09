@@ -196,7 +196,7 @@
 				TargetAttributes = {
 					2066043A1F39BB1A00168086 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 56AME9BLVU;
+						DevelopmentTeam = 32DD42UWD5;
 						ProvisioningStyle = Automatic;
 					};
 					2066044E1F39BB1A00168086 = {
@@ -421,7 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56AME9BLVU;
+				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = 16QuartzFun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-6QuartzFun";
@@ -434,7 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56AME9BLVU;
+				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = 16QuartzFun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-6QuartzFun";
@@ -520,6 +520,7 @@
 				206604651F39BB1A00168086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		206604661F39BB1A00168086 /* Build configuration list for PBXNativeTarget "16QuartzFunTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				206604681F39BB1A00168086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		206604691F39BB1A00168086 /* Build configuration list for PBXNativeTarget "16QuartzFunUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				2066046B1F39BB1A00168086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
