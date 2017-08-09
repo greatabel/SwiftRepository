@@ -40,14 +40,32 @@ class QuartzFunView: UIView {
     private var redrawRect = CGRect.zero
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        if let touch = touches.first {
+            if useRandomColor {
+                currentColor = UIColor.randomColor()
+            }
+            firstTouchLocation = touch.location(in: self)
+            lastTouchLocation = firstTouchLocation
+            redrawRect = CGRect.zero
+            setNeedsDisplay()
+        }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        if let touch = touches.first {
+            lastTouchLocation = touch.location(in: self)
+            setNeedsDisplay()
+        }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            lastTouchLocation = touch.location(in: self)
+            setNeedsDisplay()
+        }
+    }
+
+    override func draw(_ rect: CGRect) {
 
     }
 
