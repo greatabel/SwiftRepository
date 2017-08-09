@@ -9,6 +9,15 @@ extension UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha:1.0)
     }
 }
+
+enum  Shape: UInt {
+    case line = 0, rect, ellipse, image
+}
+
+enum DrawingColor: UInt {
+    case red = 0, blue, yellow, green, random
+}
+
 class QuartzFunView: UIView {
 
     /*
@@ -18,5 +27,11 @@ class QuartzFunView: UIView {
         // Drawing code
     }
     */
+
+    // Application-settable properties
+    var shape = Shape.line
+    var currentColor = UIColor.red
+    var useRandomColor = false
+
 
 }
