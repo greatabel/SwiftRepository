@@ -70,14 +70,23 @@ class QuartzFunView: UIView {
         context!.setLineWidth(2.0)
         context!.setStrokeColor(currentColor.cgColor)
 
+        let currentRect = CGRect(x: firstTouchLocation.x,
+                                 y: firstTouchLocation.y,
+                                 width: lastTouchLocation.x - firstTouchLocation.x,
+                                 height: lastTouchLocation.y - firstTouchLocation.y)
+
         switch shape {
         case .line:
             context?.move(to:CGPoint(x: firstTouchLocation.x, y: firstTouchLocation.y))
             context?.addLine(to: CGPoint(x: lastTouchLocation.x, y: lastTouchLocation.y))
             context?.strokePath()
         case .rect:
+            context?.addRect(currentRect)
+            context?.strokePath()
             break
         case .ellipse:
+            context?.addEllipse(in: currentRect)
+            context?.drawPath(using: .fillStroke)
             break
         case .image:
             break
