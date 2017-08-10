@@ -89,6 +89,11 @@ class QuartzFunView: UIView {
             context?.drawPath(using: .fillStroke)
             break
         case .image:
+            let horizontalOffset = image!.size.width / 2
+            let verticalOffset = image!.size.height / 2
+            let drawPoint = CGPoint(x: lastTouchLocation.x - horizontalOffset,
+                                    y: lastTouchLocation.y - verticalOffset)
+            image!.draw(at: drawPoint)
             break
         }
 
