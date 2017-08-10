@@ -75,6 +75,7 @@ class QuartzFunView: UIView {
                                  width: lastTouchLocation.x - firstTouchLocation.x,
                                  height: lastTouchLocation.y - firstTouchLocation.y)
 
+
         switch shape {
         case .line:
             context?.move(to:CGPoint(x: firstTouchLocation.x, y: firstTouchLocation.y))
@@ -82,6 +83,10 @@ class QuartzFunView: UIView {
             context?.strokePath()
         case .rect:
             context?.addRect(currentRect)
+            // 设置下方形背景颜色
+            context?.setFillColor(UIColor.blue.cgColor)
+            context?.drawPath(using: .fillStroke)
+            
             context?.strokePath()
             break
         case .ellipse:
