@@ -22,7 +22,7 @@
 		20C5398D1EF2C0250067061F /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5398C1EF2C0250067061F /* PhotoramaUITests.swift */; };
 		20C5399B1EF2C09F0067061F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5399A1EF2C09F0067061F /* PhotosViewController.swift */; };
 		20F6D4021F4151EB009FE7C9 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6D4001F4151EB009FE7C9 /* Photo+CoreDataClass.swift */; };
-		20F6D4031F4151EB009FE7C9 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6D4011F4151EB009FE7C9 /* Photo+CoreDataProperties.swift */; };
+		20F6D4051F419189009FE7C9 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6D4041F419189009FE7C9 /* Photo+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		20C5398E1EF2C0250067061F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C5399A1EF2C09F0067061F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		20F6D4001F4151EB009FE7C9 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		20F6D4011F4151EB009FE7C9 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20F6D4041F419189009FE7C9 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 		20C539601EF2C0240067061F = {
 			isa = PBXGroup;
 			children = (
+				20F6D4041F419189009FE7C9 /* Photo+CoreDataProperties.swift */,
 				20F6D4001F4151EB009FE7C9 /* Photo+CoreDataClass.swift */,
-				20F6D4011F4151EB009FE7C9 /* Photo+CoreDataProperties.swift */,
 				2095AC391F0CD72200DDE001 /* Photorama.xcdatamodeld */,
 				20C5396B1EF2C0240067061F /* Photorama */,
 				20C539801EF2C0250067061F /* PhotoramaTests */,
@@ -297,7 +297,7 @@
 				20A1D2FC1EF6C82600470E8D /* PhotoDataSource.swift in Sources */,
 				2095AC3B1F0CD72200DDE001 /* Photorama.xcdatamodeld in Sources */,
 				20A1D2FE1EF6CB5D00470E8D /* PhotoCollectionViewCell.swift in Sources */,
-				20F6D4031F4151EB009FE7C9 /* Photo+CoreDataProperties.swift in Sources */,
+				20F6D4051F419189009FE7C9 /* Photo+CoreDataProperties.swift in Sources */,
 				20C5396D1EF2C0240067061F /* AppDelegate.swift in Sources */,
 				2095AC381F0CC95800DDE001 /* PhotoInfoViewController.swift in Sources */,
 			);
