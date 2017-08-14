@@ -87,7 +87,18 @@ class PhotoStore {
 //            let httpResponse = response as! HTTPURLResponse
 //            print("response ->", httpResponse.statusCode, httpResponse.allHeaderFields)
 
-            let result = self.processPhotosRequest(data: data, error: error)
+
+//            let result = self.processPhotosRequest(data: data, error: error)
+            var result = self.processPhotosRequest(data: data, error: error)
+
+            if case .success = result {
+                do {
+                    try self.persistentContainer.viewContext.save()
+                } catch let error {
+                    result = .failure(error)
+                }
+            }
+
             OperationQueue.main.addOperation {
                 completion(result)
             }
