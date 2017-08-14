@@ -1,4 +1,4 @@
-import Foundation
+import CoreData
 import UIKit
 
 enum ImageResult {
@@ -19,6 +19,17 @@ class PhotoStore {
 
     let imageStore = ImageStore()
 
+    let persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Photorama")
+        container.loadPersistentStores {
+            (description, error) in
+            if let error = error {
+                print("Error setting up core data (\(error).")
+            }
+        }
+        return container
+    }()
+
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
         return URLSession(configuration: config)
@@ -28,7 +39,7 @@ class PhotoStore {
         guard let jsonData = data else {
             return .failure(error!)
         }
-        return FlickrAPI.photos(fromJSON: jsonData)
+        return FlickrAPI.photos(fromJSON: jsonData, into: persistentContainer.viewContext)
     }
 
     func processImageRequest(data: Data?, error: Error?) -> ImageResult {
@@ -88,8 +99,12 @@ class PhotoStore {
 
     func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
 
-        let photoKey = photo.photoID
-        print("photoKey = \(photoKey)")
+//        let photoKey = photo.photoID
+//        print("photoKey = \(photoKey)")
+        guard let photoKey = photo.photoID else {
+            preconditionFailure("Photo expected to have a photoID.")
+        }
+
         if let image = imageStore.image(forKey: photoKey){
             OperationQueue.main.addOperation {
                 completion(.success(image))
@@ -97,9 +112,12 @@ class PhotoStore {
             return
         }
 
-        let photoURL = photo.remoteURL
+        guard let photoURL = photo.remoteURL else {
+            preconditionFailure("Photo expected to have a remote URL.")
+        }
+//        let photoURL = photo.remoteURL
         print("photoURL->", photoURL)
-        let request = URLRequest(url: photoURL)
+        let request = URLRequest(url: photoURL as! URL)
 
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
