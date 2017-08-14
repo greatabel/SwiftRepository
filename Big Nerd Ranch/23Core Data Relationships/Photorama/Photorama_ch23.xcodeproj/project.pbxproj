@@ -23,6 +23,7 @@
 		20C5399B1EF2C09F0067061F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5399A1EF2C09F0067061F /* PhotosViewController.swift */; };
 		20F6D4021F4151EB009FE7C9 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6D4001F4151EB009FE7C9 /* Photo+CoreDataClass.swift */; };
 		20F6D4051F419189009FE7C9 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6D4041F419189009FE7C9 /* Photo+CoreDataProperties.swift */; };
+		20F6D4071F41935C009FE7C9 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6D4061F41935C009FE7C9 /* TagsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		20C5399A1EF2C09F0067061F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		20F6D4001F4151EB009FE7C9 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		20F6D4041F419189009FE7C9 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20F6D4061F41935C009FE7C9 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				20A1D2FB1EF6C82600470E8D /* PhotoDataSource.swift */,
 				20A1D2FD1EF6CB5D00470E8D /* PhotoCollectionViewCell.swift */,
 				2095AC371F0CC95800DDE001 /* PhotoInfoViewController.swift */,
+				20F6D4061F41935C009FE7C9 /* TagsViewController.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				20C5399B1EF2C09F0067061F /* PhotosViewController.swift in Sources */,
 				20C48BAD1EF2CCD200DD1200 /* PhotoStore.swift in Sources */,
 				20A1D3001EFA549700470E8D /* ImageStore.swift in Sources */,
+				20F6D4071F41935C009FE7C9 /* TagsViewController.swift in Sources */,
 				20A1D2FC1EF6C82600470E8D /* PhotoDataSource.swift in Sources */,
 				2095AC3B1F0CD72200DDE001 /* Photorama.xcdatamodeld in Sources */,
 				20A1D2FE1EF6CB5D00470E8D /* PhotoCollectionViewCell.swift in Sources */,
