@@ -21,6 +21,9 @@ class PhotoInfoViewController: UIViewController {
             case let .failure(error):
                 print("Error fetching image for photo: \(error)")
             }
-        } }
+        }
+    }
+
+
     
 }
