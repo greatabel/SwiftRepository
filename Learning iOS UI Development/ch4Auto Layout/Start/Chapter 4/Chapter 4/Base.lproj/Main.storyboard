@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjP-Lw-CPq">
-                                <rect key="frame" x="112" y="210" width="150" height="150"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjP-Lw-CPq">
+                                <rect key="frame" x="112" y="258.5" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.30196078430000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="UKm-bI-RJg"/>
@@ -31,6 +31,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93609845638275146" green="0.93607044219970703" blue="0.93608629703521729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bjP-Lw-CPq" firstAttribute="centerX" secondItem="eqr-EK-6Z4" secondAttribute="centerX" id="Lea-oz-fL9"/>
+                            <constraint firstItem="bjP-Lw-CPq" firstAttribute="centerY" secondItem="eqr-EK-6Z4" secondAttribute="centerY" id="PIk-2T-fgZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FI-ta-BVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
