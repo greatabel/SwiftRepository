@@ -22,20 +22,20 @@ class VFLViewController: UIViewController {
         super.viewDidLoad()
 
         redView.translatesAutoresizingMaskIntoConstraints = false
-        redView.backgroundColor = UIColor(red: 0.95, green: 0.2, blue: 0.0, alpha: 1.0)
+        redView.backgroundColor = UIColor.red
         
         greenView.translatesAutoresizingMaskIntoConstraints = false
-        greenView.backgroundColor = UIColor(red: 0.5, green: 0.80, blue: 0.5, alpha: 1.0)
+        greenView.backgroundColor = UIColor.green
         
         view.addSubview(redView)
         view.addSubview(greenView)
         
         setupRedView()  // This function sets the red view constraints
         setupGreenView()// This function sets the green view constraints
-        
+
         // This function sets the green view usin a relation to the redView.
         // to try it comment the setupGreenView and use setupGreenView_Relation instead.
-        //setupGreenView_Relation()
+//        setupGreenView_Relation()
     }
 
     override func didReceiveMemoryWarning() {
