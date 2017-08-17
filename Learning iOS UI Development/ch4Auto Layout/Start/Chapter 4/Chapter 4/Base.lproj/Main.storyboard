@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0P-Hh-hlp">
-                                <rect key="frame" x="129" y="318" width="117" height="30"/>
+                                <rect key="frame" x="129" y="318.5" width="117" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="XML-VV-WD6"/>
@@ -87,25 +87,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udr-bZ-v5g" userLabel="Footer">
-                                <rect key="frame" x="16" y="520" width="528" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udr-bZ-v5g" userLabel="Footer">
+                                <rect key="frame" x="16" y="520" width="343" height="80"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.30196078430000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Kad-a9-eMT"/>
+                                    <constraint firstAttribute="height" constant="80" id="wpb-96-g8s"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93609845638275146" green="0.93607044219970703" blue="0.93608629703521729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="udr-bZ-v5g" firstAttribute="leading" secondItem="MIe-DC-E8f" secondAttribute="leadingMargin" constant="20" id="8x0-gy-E6I"/>
-                            <constraint firstItem="T2K-XE-dcj" firstAttribute="top" secondItem="udr-bZ-v5g" secondAttribute="bottom" constant="67" id="Rm7-LG-cZp"/>
-                            <constraint firstAttribute="trailing" secondItem="udr-bZ-v5g" secondAttribute="trailing" constant="-189" id="nWB-2c-KEf"/>
+                            <constraint firstItem="T2K-XE-dcj" firstAttribute="top" secondItem="udr-bZ-v5g" secondAttribute="bottom" constant="67" id="IJ1-Ug-QPU"/>
+                            <constraint firstItem="udr-bZ-v5g" firstAttribute="trailing" secondItem="MIe-DC-E8f" secondAttribute="trailingMargin" id="kjZ-Rp-Ijh"/>
+                            <constraint firstItem="udr-bZ-v5g" firstAttribute="leading" secondItem="MIe-DC-E8f" secondAttribute="leadingMargin" id="oQA-lr-6M6"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgT-Ix-hgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1694" y="260"/>
+            <point key="canvasLocation" x="-1694.5" y="259.5"/>
         </scene>
         <!--Example D-->
         <scene sceneID="U7Z-1W-Cvs">
