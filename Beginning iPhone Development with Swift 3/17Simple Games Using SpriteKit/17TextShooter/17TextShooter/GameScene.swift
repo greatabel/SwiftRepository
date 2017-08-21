@@ -62,8 +62,14 @@ class GameScene: SKScene {
 
         for touch in touches {
             let location = touch.location(in: self)
+            if location.y < frame.height * 0.2 {
+                let target = CGPoint(x: location.x, y: playerNode.position.y)
+                playerNode.moveToward(target)
+            }
         }
     }
+
+  
 
     
 
