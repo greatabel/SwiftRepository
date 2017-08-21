@@ -7,6 +7,8 @@ class GameScene: SKScene {
     private var playerLives: Int
     private var finished = false
 
+    private let playerNode: PlayerNode = PlayerNode()
+
     class func scene(size:CGSize, levelNumber:Int) -> GameScene {
         return GameScene(size: size, levelNumber: levelNumber)
     }
@@ -39,6 +41,9 @@ class GameScene: SKScene {
         level.horizontalAlignmentMode = .left
         level.position = CGPoint(x: 0, y: frame.height)
         addChild(level)
+
+        playerNode.position = CGPoint(x: frame.midX, y: frame.height * 0.1)
+        addChild(playerNode)
 
     }
 
