@@ -1,11 +1,3 @@
-//
-//  GameScene.swift
-//  17TextShooter
-//
-//  Created by 万畅 on 2017/8/10.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import SpriteKit
 import GameplayKit
 
