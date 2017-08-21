@@ -8,6 +8,7 @@ class GameScene: SKScene {
     private var finished = false
 
     private let playerNode: PlayerNode = PlayerNode()
+    private let enemies = SKNode()
 
     class func scene(size:CGSize, levelNumber:Int) -> GameScene {
         return GameScene(size: size, levelNumber: levelNumber)
@@ -44,7 +45,8 @@ class GameScene: SKScene {
 
         playerNode.position = CGPoint(x: frame.midX, y: frame.height * 0.1)
         addChild(playerNode)
-
+        addChild(enemies)
+        spawnEnemies()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -69,8 +71,22 @@ class GameScene: SKScene {
         }
     }
 
-  
+    private func spawnEnemies() {
+        let count = Int(log(Float(levelNumber))) + levelNumber
+//        print("--spawnEnemies count: \(count)")
+        for _ in 0..<count {
+            let enemy = EnemyNode()
+            let size = frame.size;
+            let x = arc4random_uniform(UInt32(size.width * 0.8))
+                + UInt32(size.width * 0.1)
+            let y = arc4random_uniform(UInt32(size.height * 0.5))
+                + UInt32(size.height * 0.5)
+            enemy.position = CGPoint(x: CGFloat(x), y: CGFloat(y))
+            enemies.addChild(enemy)
+        }
+    }
 
-    
+
+
 
 }
