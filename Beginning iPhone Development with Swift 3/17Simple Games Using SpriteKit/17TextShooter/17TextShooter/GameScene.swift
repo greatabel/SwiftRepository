@@ -1,10 +1,17 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private var levelNumber: Int
-    private var playerLives: Int
+
+    private var playerLives: Int {
+        didSet {
+            let lives = childNode(withName: "LivesLabel") as! SKLabelNode
+            lives.text = "Lives: \(playerLives)"
+        }
+    }
+    
     private var finished = false
 
     private let playerNode: PlayerNode = PlayerNode()
@@ -49,6 +56,9 @@ class GameScene: SKScene {
         addChild(enemies)
         spawnEnemies()
         addChild(playerBullets)
+
+        physicsWorld.gravity = CGVector(dx: 0, dy: -1)
+        physicsWorld.contactDelegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -148,6 +158,40 @@ class GameScene: SKScene {
         }
     }
 
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.categoryBitMask == contact.bodyB.categoryBitMask {
+            // Both bodies are in the same category
+            let nodeA = contact.bodyA.node!
+            let nodeB = contact.bodyB.node!
+
+            // What do we do with these nodes?
+            nodeA.friendlyBumpFrom(nodeB)
+            nodeB.friendlyBumpFrom(nodeA)
+        } else {
+            var attacker: SKNode
+            var attackee: SKNode
+
+            if contact.bodyA.categoryBitMask
+                > contact.bodyB.categoryBitMask {
+                // Body A is attacking Body B
+                attacker = contact.bodyA.node!
+                attackee = contact.bodyB.node!
+            } else {
+                // Body B is attacking Body A
+                attacker = contact.bodyB.node!
+                attackee = contact.bodyA.node!
+            }
+
+            if attackee is PlayerNode {
+                playerLives -= 1
+            }
+
+            // What do we do with the attacker and the attackee?
+            attackee.receiveAttacker(attacker, contact: contact)
+            playerBullets.removeChildren(in: [attacker])
+            enemies.removeChildren(in: [attacker])
+        }
+    }
 
 
 
