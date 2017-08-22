@@ -78,7 +78,12 @@ class GameScene: SKScene {
     }
 
     override func update(_ currentTime: TimeInterval) {
+        if finished {
+            return
+        }
         updateBullets()
+        updateEnemies()
+        checkForNextLevel()
     }
 
     private func updateBullets() {
@@ -94,6 +99,25 @@ class GameScene: SKScene {
             bullet.applyRecurringForce()
         }
         playerBullets.removeChildren(in: bulletsToRemove)
+    }
+
+    private func updateEnemies() {
+        var enemiesToRemove: [EnemyNode] = []
+        for node in enemies.children as! [EnemyNode] {
+            if !frame.contains(node.position) {
+                enemiesToRemove.append(node)
+            }
+        }
+        enemies.removeChildren(in: enemiesToRemove)
+    }
+
+    private func checkForNextLevel() {
+        if enemies.children.isEmpty {
+            goToNextLevel()
+        }
+    }
+
+    private func goToNextLevel() {
     }
 
     private func spawnEnemies() {
