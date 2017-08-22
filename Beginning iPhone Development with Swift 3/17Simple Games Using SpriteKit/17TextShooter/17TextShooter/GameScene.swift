@@ -118,6 +118,19 @@ class GameScene: SKScene {
     }
 
     private func goToNextLevel() {
+        finished = true
+        let label = SKLabelNode(fontNamed: "Courier")
+        label.text = "Level Complete!"
+        label.fontColor = SKColor.blue
+        label.fontSize = 32
+        label.position = CGPoint(x: frame.size.width * 0.5,
+                                 y: frame.size.height * 0.5)
+        addChild(label)
+        let nextLevel = GameScene(size: frame.size, levelNumber: levelNumber + 1)
+        nextLevel.playerLives = playerLives
+        view!.presentScene(nextLevel, transition:
+        SKTransition.flipHorizontal(withDuration: 1.0))
+
     }
 
     private func spawnEnemies() {
