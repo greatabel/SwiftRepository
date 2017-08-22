@@ -6,6 +6,7 @@ class PlayerNode: SKNode {
         super.init()
         name = "Player \(self)"
         initNodeGraph()
+        initPhysicsBody()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -38,6 +39,16 @@ class PlayerNode: SKNode {
             SKAction.scaleX(to: 1.0, duration: halfWobbleTime)])
         let wobbleCount = Int(duration/wobbleTime)
         run(SKAction.repeat(wobbling, count: wobbleCount), withKey: "wobbling")
+    }
+
+    private func initPhysicsBody() {
+        let body = SKPhysicsBody(rectangleOf: CGSize(width: 20, height: 20))
+        body.affectedByGravity = false
+        body.categoryBitMask = PlayerCategory
+        body.contactTestBitMask = EnemyCategory
+        body.collisionBitMask = 0
+        body.fieldBitMask = 0
+        physicsBody = body
     }
 
 }

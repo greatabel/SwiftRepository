@@ -6,6 +6,7 @@ class EnemyNode: SKNode {
         super.init()
         name = "Enemy \(self)"
         initNodeGraph()
+        initPhysicsBody()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -33,4 +34,17 @@ class EnemyNode: SKNode {
         bottomRow.position = CGPoint(x: 0, y: -15)
         addChild(bottomRow)
     }
+
+    private func initPhysicsBody() {
+        let body = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 40))
+        body.affectedByGravity = false
+        body.categoryBitMask = EnemyCategory
+        body.contactTestBitMask = PlayerCategory | EnemyCategory
+        body.mass = 0.2
+        body.angularDamping = 0
+        body.linearDamping = 0
+        body.fieldBitMask = 0
+        physicsBody = body
+    }
+
 }
