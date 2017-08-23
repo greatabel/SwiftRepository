@@ -16,4 +16,13 @@ class GameOverScene: SKScene {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+
+    override func didMove(to view: SKView) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(3 * Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
+            let transition = SKTransition.flipVertical(withDuration: 1)
+            let start = StartScene(size: self.frame.size)
+            view.presentScene(start, transition: transition)
+        })
+    }
+
 }
