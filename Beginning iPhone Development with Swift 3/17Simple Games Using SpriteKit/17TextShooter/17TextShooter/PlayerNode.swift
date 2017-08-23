@@ -51,4 +51,14 @@ class PlayerNode: SKNode {
         physicsBody = body
     }
 
+    override func receiveAttacker(_ attacker: SKNode, contact: SKPhysicsContact) {
+        let path = Bundle.main.path (forResource: "EnemyExplosion",
+                                     ofType: "sks")
+        let explosion = NSKeyedUnarchiver.unarchiveObject(withFile: path!)
+            as! SKEmitterNode
+        explosion.numParticlesToEmit = 50
+        explosion.position = contact.contactPoint
+        scene!.addChild(explosion)
+    }
+
 }

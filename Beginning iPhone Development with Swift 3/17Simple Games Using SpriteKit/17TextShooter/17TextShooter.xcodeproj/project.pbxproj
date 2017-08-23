@@ -24,6 +24,9 @@
 		2087D8C81F3C61F400908A05 /* _7TextShooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087D8C71F3C61F400908A05 /* _7TextShooterTests.swift */; };
 		2087D8D31F3C61F400908A05 /* _7TextShooterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087D8D21F3C61F400908A05 /* _7TextShooterUITests.swift */; };
 		20E400421F4C139800249E98 /* SKNode+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E400411F4C139800249E98 /* SKNode+Extra.swift */; };
+		20E400441F4D311600249E98 /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 20E400431F4D311600249E98 /* MissileExplosion.sks */; };
+		20E400461F4D318C00249E98 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E400451F4D318C00249E98 /* spark.png */; };
+		20E400481F4D343C00249E98 /* EnemyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 20E400471F4D343C00249E98 /* EnemyExplosion.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		2087D8D21F3C61F400908A05 /* _7TextShooterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _7TextShooterUITests.swift; sourceTree = "<group>"; };
 		2087D8D41F3C61F400908A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20E400411F4C139800249E98 /* SKNode+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extra.swift"; sourceTree = "<group>"; };
+		20E400431F4D311600249E98 /* MissileExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MissileExplosion.sks; sourceTree = "<group>"; };
+		20E400451F4D318C00249E98 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		20E400471F4D343C00249E98 /* EnemyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EnemyExplosion.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		2087D8AB1F3C61F400908A05 /* 17TextShooter */ = {
 			isa = PBXGroup;
 			children = (
+				20E400451F4D318C00249E98 /* spark.png */,
 				200715F01F4ACC9100B84FEB /* shoot.wav */,
 				2087D8AC1F3C61F400908A05 /* AppDelegate.swift */,
 				2087D8AE1F3C61F400908A05 /* GameScene.sks */,
@@ -133,6 +140,8 @@
 				200715EC1F4ACB5800B84FEB /* PhysicsCategories.swift */,
 				200715EE1F4ACBA500B84FEB /* BulletNode.swift */,
 				20E400411F4C139800249E98 /* SKNode+Extra.swift */,
+				20E400431F4D311600249E98 /* MissileExplosion.sks */,
+				20E400471F4D343C00249E98 /* EnemyExplosion.sks */,
 			);
 			path = 17TextShooter;
 			sourceTree = "<group>";
@@ -266,9 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2087D8B81F3C61F400908A05 /* Main.storyboard in Resources */,
+				20E400481F4D343C00249E98 /* EnemyExplosion.sks in Resources */,
 				2087D8AF1F3C61F400908A05 /* GameScene.sks in Resources */,
 				2087D8BA1F3C61F400908A05 /* Assets.xcassets in Resources */,
 				2087D8BD1F3C61F400908A05 /* LaunchScreen.storyboard in Resources */,
+				20E400441F4D311600249E98 /* MissileExplosion.sks in Resources */,
+				20E400461F4D318C00249E98 /* spark.png in Resources */,
 				200715F11F4ACC9100B84FEB /* shoot.wav in Resources */,
 				2087D8B11F3C61F400908A05 /* Actions.sks in Resources */,
 			);

@@ -58,6 +58,14 @@ class EnemyNode: SKNode {
         let myContact =
             scene!.convert(contact.contactPoint, to: self)
         physicsBody!.applyForce(force, at: myContact)
+
+        let path = Bundle.main.path(forResource: "MissileExplosion",
+                                    ofType: "sks")
+        let explosion = NSKeyedUnarchiver.unarchiveObject(withFile: path!)
+            as! SKEmitterNode
+        explosion.numParticlesToEmit = 20
+        explosion.position = contact.contactPoint
+        scene!.addChild(explosion)
     }
 
 }
