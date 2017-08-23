@@ -23,6 +23,7 @@
 		2087D8BD1F3C61F400908A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2087D8BB1F3C61F400908A05 /* LaunchScreen.storyboard */; };
 		2087D8C81F3C61F400908A05 /* _7TextShooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087D8C71F3C61F400908A05 /* _7TextShooterTests.swift */; };
 		2087D8D31F3C61F400908A05 /* _7TextShooterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087D8D21F3C61F400908A05 /* _7TextShooterUITests.swift */; };
+		20D38B1A1F4D35AD0046438B /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D38B191F4D35AD0046438B /* GameOverScene.swift */; };
 		20E400421F4C139800249E98 /* SKNode+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E400411F4C139800249E98 /* SKNode+Extra.swift */; };
 		20E400441F4D311600249E98 /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 20E400431F4D311600249E98 /* MissileExplosion.sks */; };
 		20E400461F4D318C00249E98 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E400451F4D318C00249E98 /* spark.png */; };
@@ -69,6 +70,7 @@
 		2087D8CE1F3C61F400908A05 /* 17TextShooterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 17TextShooterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2087D8D21F3C61F400908A05 /* _7TextShooterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _7TextShooterUITests.swift; sourceTree = "<group>"; };
 		2087D8D41F3C61F400908A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D38B191F4D35AD0046438B /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		20E400411F4C139800249E98 /* SKNode+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extra.swift"; sourceTree = "<group>"; };
 		20E400431F4D311600249E98 /* MissileExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MissileExplosion.sks; sourceTree = "<group>"; };
 		20E400451F4D318C00249E98 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				20E400411F4C139800249E98 /* SKNode+Extra.swift */,
 				20E400431F4D311600249E98 /* MissileExplosion.sks */,
 				20E400471F4D343C00249E98 /* EnemyExplosion.sks */,
+				20D38B191F4D35AD0046438B /* GameOverScene.swift */,
 			);
 			path = 17TextShooter;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D38B1A1F4D35AD0046438B /* GameOverScene.swift in Sources */,
 				2087D8B31F3C61F400908A05 /* GameScene.swift in Sources */,
 				200715EF1F4ACBA500B84FEB /* BulletNode.swift in Sources */,
 				2087D8B51F3C61F400908A05 /* GameViewController.swift in Sources */,
