@@ -46,6 +46,8 @@ class BulletNode: SKNode {
         bullet.thrust = vectorMultiply(scaledMovement, thrustMagnitude)
         bullet.run(SKAction.playSoundFileNamed("shoot.wav",
                                                waitForCompletion: false))
+
+        
         return bullet
     }
 

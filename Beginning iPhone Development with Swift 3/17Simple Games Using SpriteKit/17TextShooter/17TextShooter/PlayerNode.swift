@@ -59,6 +59,8 @@ class PlayerNode: SKNode {
         explosion.numParticlesToEmit = 50
         explosion.position = contact.contactPoint
         scene!.addChild(explosion)
+
+        run(SKAction.playSoundFileNamed("playerHit.wav", waitForCompletion: false))
     }
 
 }
