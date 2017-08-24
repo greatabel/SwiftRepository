@@ -208,6 +208,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let transition = SKTransition.doorsOpenVertical(withDuration: 1)
         let gameOver = GameOverScene(size: frame.size)
         view!.presentScene(gameOver, transition: transition)
+        run(SKAction.playSoundFileNamed("gameOver.wav", waitForCompletion: false))
     }
 
     private func checkForGameOver() -> Bool {

@@ -28,5 +28,6 @@ class StartScene: SKScene {
         let transition = SKTransition.doorway(withDuration: 1.0)
         let game = GameScene(size:frame.size)
         view!.presentScene(game, transition: transition)
+        run(SKAction.playSoundFileNamed("gameStart.wav", waitForCompletion: false))
     }
 }
