@@ -18,6 +18,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private let enemies = SKNode()
     private let playerBullets = SKNode()
 
+    private let forceFields = SKNode()
+
     class func scene(size:CGSize, levelNumber:Int) -> GameScene {
         return GameScene(size: size, levelNumber: levelNumber)
     }
@@ -56,6 +58,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(enemies)
         spawnEnemies()
         addChild(playerBullets)
+
+        createForceFields()
 
         physicsWorld.gravity = CGVector(dx: 0, dy: -1)
         physicsWorld.contactDelegate = self
@@ -218,6 +222,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return false
     }
 
+    private func createForceFields() {
+        let fieldCount = 3
+        let size = frame.size
+        let sectionWidth = Int(size.width)/fieldCount
+        for i in 0..<fieldCount {
+            let x = CGFloat(UInt32(i * sectionWidth) +
+                arc4random_uniform(UInt32(sectionWidth)))
+            let y = CGFloat(arc4random_uniform(UInt32(size.height * 0.25))
+                + UInt32(size.height * 0.25))
 
+            let gravityField = SKFieldNode.radialGravityField()
+            gravityField.position = CGPoint(x: x, y: y)
+            gravityField.categoryBitMask = GravityFieldCategory
+            gravityField.strength = 4
+            gravityField.falloff = 2
+            gravityField.region = SKRegion(size: CGSize(width: size.width * 0.3,
+                                                        height: size.height * 0.1))
+            forceFields.addChild(gravityField)
+
+            let fieldLocationNode = SKLabelNode(fontNamed: "Courier")
+            fieldLocationNode.fontSize = 16
+            fieldLocationNode.fontColor = SKColor.red
+            fieldLocationNode.name = "GravityField"
+            fieldLocationNode.text = "*"
+            fieldLocationNode.position = CGPoint(x: x, y: y)
+            forceFields.addChild(fieldLocationNode)
+        }
+    }
 
 }
