@@ -22,9 +22,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeG-ag-8uV">
-                                <rect key="frame" x="124" y="43" width="126" height="21"/>
+                                <rect key="frame" x="55" y="43" width="264" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="126" id="4e8-cV-XUK"/>
+                                    <constraint firstAttribute="width" constant="264" id="4e8-cV-XUK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

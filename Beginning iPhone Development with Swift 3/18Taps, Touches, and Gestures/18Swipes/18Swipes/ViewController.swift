@@ -6,6 +6,8 @@ class ViewController: UIViewController {
     
     private var gestureStartPoint: CGPoint!
 
+    private static let minimumGestureLength = Float(25.0)
+    private static let maximumVariance = Float(5)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +17,35 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            gestureStartPoint = touch.location(in: self.view)
+        }
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first, let gestureStartPoint = self.gestureStartPoint {
+            let currentPosition = touch.location(in: self.view)
+
+            let deltaX = fabsf(Float(gestureStartPoint.x - currentPosition.x))
+            let deltaY = fabsf(Float(gestureStartPoint.y - currentPosition.y))
+
+            if deltaX >= ViewController.minimumGestureLength
+                && deltaY <= ViewController.maximumVariance {
+                label.text = "水平 swipe detected"
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(2 * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
+                    self.label.text = ""
+                })
+            } else if deltaY >= ViewController.minimumGestureLength
+                && deltaX <= ViewController.maximumVariance {
+                label.text = "垂直 swipe detected"
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(2 * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
+                    self.label.text = ""
+                })
+            }
+        }
     }
 
 
