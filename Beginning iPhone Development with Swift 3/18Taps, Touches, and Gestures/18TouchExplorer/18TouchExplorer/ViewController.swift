@@ -38,5 +38,19 @@ class ViewController: UIViewController {
         updateLabelsFromTouches(touches.first, allTouches: event?.allTouches)
     }
 
+
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        messageLabel.text = "Touches Cancelled"
+        updateLabelsFromTouches(touches.first, allTouches: event?.allTouches)
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        messageLabel.text = "Touches Ended"
+        updateLabelsFromTouches(touches.first, allTouches: event?.allTouches)
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        messageLabel.text = "Drag Detected"
+        updateLabelsFromTouches(touches.first, allTouches: event?.allTouches)
+    }
+
 }
 
