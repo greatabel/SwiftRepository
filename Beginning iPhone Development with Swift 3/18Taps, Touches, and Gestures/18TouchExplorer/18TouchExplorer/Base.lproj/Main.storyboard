@@ -1,25 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qNA-uJ-CFN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="1Hm-ih-zb6">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qNA-uJ-CFN" customClass="ViewController" customModule="_8TouchExplorer" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="IQ0-1G-yKh"/>
+                        <viewControllerLayoutGuide type="bottom" id="fzL-me-nQA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Od7-9K-hFc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPb-14-pCx">
+                                <rect key="frame" x="16" y="28" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95X-zz-rb6">
+                                <rect key="frame" x="16" y="57" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-DY-ez1">
+                                <rect key="frame" x="16" y="86" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyn-XK-vds">
+                                <rect key="frame" x="16" y="115" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="95X-zz-rb6" firstAttribute="top" secondItem="IQ0-1G-yKh" secondAttribute="bottom" constant="37" id="2qq-xy-Rec"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="TPb-14-pCx" secondAttribute="leading" id="5fp-g8-diu"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Dyn-XK-vds" secondAttribute="leading" id="JRN-Kh-xsE"/>
+                            <constraint firstItem="TPb-14-pCx" firstAttribute="top" secondItem="IQ0-1G-yKh" secondAttribute="bottom" constant="8" id="RK9-8L-S4d"/>
+                            <constraint firstItem="d4X-DY-ez1" firstAttribute="top" secondItem="IQ0-1G-yKh" secondAttribute="bottom" constant="66" id="azJ-0l-hTz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="95X-zz-rb6" secondAttribute="leading" id="k2X-aQ-sB9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="d4X-DY-ez1" secondAttribute="leading" id="nPJ-qu-kzg"/>
+                            <constraint firstItem="Dyn-XK-vds" firstAttribute="top" secondItem="IQ0-1G-yKh" secondAttribute="bottom" constant="95" id="p43-d4-dZy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forceLabel" destination="Dyn-XK-vds" id="jDe-Iq-cxS"/>
+                        <outlet property="messageLabel" destination="TPb-14-pCx" id="xFz-G3-G33"/>
+                        <outlet property="tapsLabel" destination="95X-zz-rb6" id="sLH-FL-Qr1"/>
+                        <outlet property="touchesLabel" destination="d4X-DY-ez1" id="DzP-cZ-rlB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMz-Pm-X0V" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
