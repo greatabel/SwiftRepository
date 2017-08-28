@@ -32,6 +32,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {
+        print("Authorization status changed to \(status.rawValue)")
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+
+        default:
+            locationManager.stopUpdatingLocation()
+            mapView.showsUserLocation = false
+        }
+    }
+
 
 }
 
