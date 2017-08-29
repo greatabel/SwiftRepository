@@ -14,6 +14,7 @@
 		206F9A461F55536100D29E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206F9A441F55536100D29E4E /* LaunchScreen.storyboard */; };
 		206F9A511F55536100D29E4E /* _0ShakeAndBreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F9A501F55536100D29E4E /* _0ShakeAndBreakTests.swift */; };
 		206F9A5C1F55536100D29E4E /* _0ShakeAndBreakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F9A5B1F55536100D29E4E /* _0ShakeAndBreakUITests.swift */; };
+		206F9A6A1F5554A100D29E4E /* glass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 206F9A691F5554A100D29E4E /* glass.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		206F9A571F55536100D29E4E /* 20ShakeAndBreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 20ShakeAndBreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		206F9A5B1F55536100D29E4E /* _0ShakeAndBreakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0ShakeAndBreakUITests.swift; sourceTree = "<group>"; };
 		206F9A5D1F55536100D29E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206F9A691F5554A100D29E4E /* glass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glass.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		206F9A3A1F55536100D29E4E /* 20ShakeAndBreak */ = {
 			isa = PBXGroup;
 			children = (
+				206F9A691F5554A100D29E4E /* glass.wav */,
 				206F9A3B1F55536100D29E4E /* AppDelegate.swift */,
 				206F9A3D1F55536100D29E4E /* ViewController.swift */,
 				206F9A3F1F55536100D29E4E /* Main.storyboard */,
@@ -238,6 +241,7 @@
 				206F9A461F55536100D29E4E /* LaunchScreen.storyboard in Resources */,
 				206F9A431F55536100D29E4E /* Assets.xcassets in Resources */,
 				206F9A411F55536100D29E4E /* Main.storyboard in Resources */,
+				206F9A6A1F5554A100D29E4E /* glass.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
