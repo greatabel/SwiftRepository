@@ -10,4 +10,7 @@ class BallView: UIView {
     }
     */
 
+    func update() -> Void {
+        
+    }
 }
