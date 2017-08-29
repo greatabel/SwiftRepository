@@ -9,3 +9,6 @@ https://book.douban.com/subject/26934116/
 
 # iOS Programming : The Big Nerd Ranch Guide
 https://book.douban.com/subject/26932891/
+
+# Beginning iPhone Development with Swift 3
+https://book.douban.com/subject/26919791/
