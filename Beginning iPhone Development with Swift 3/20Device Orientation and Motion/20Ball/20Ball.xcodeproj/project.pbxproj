@@ -14,6 +14,7 @@
 		206F9A821F5556AD00D29E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206F9A801F5556AD00D29E4E /* LaunchScreen.storyboard */; };
 		206F9A8D1F5556AD00D29E4E /* _0BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F9A8C1F5556AD00D29E4E /* _0BallTests.swift */; };
 		206F9A981F5556AD00D29E4E /* _0BallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F9A971F5556AD00D29E4E /* _0BallUITests.swift */; };
+		206F9AA61F55572100D29E4E /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F9AA51F55572100D29E4E /* BallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		206F9A931F5556AD00D29E4E /* 20BallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 20BallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		206F9A971F5556AD00D29E4E /* _0BallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0BallUITests.swift; sourceTree = "<group>"; };
 		206F9A991F5556AD00D29E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206F9AA51F55572100D29E4E /* BallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				206F9A7E1F5556AD00D29E4E /* Assets.xcassets */,
 				206F9A801F5556AD00D29E4E /* LaunchScreen.storyboard */,
 				206F9A831F5556AD00D29E4E /* Info.plist */,
+				206F9AA51F55572100D29E4E /* BallView.swift */,
 			);
 			path = 20Ball;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206F9AA61F55572100D29E4E /* BallView.swift in Sources */,
 				206F9A7A1F5556AD00D29E4E /* ViewController.swift in Sources */,
 				206F9A781F5556AD00D29E4E /* AppDelegate.swift in Sources */,
 			);
