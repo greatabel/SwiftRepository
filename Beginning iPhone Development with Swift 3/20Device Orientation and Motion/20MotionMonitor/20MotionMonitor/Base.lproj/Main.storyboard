@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="IgB-Hv-6Fa">
             <objects>
-                <viewController id="qqo-dB-QLO" customClass="ViewController" customModule="MotionMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qqo-dB-QLO" customClass="ViewController" customModule="_0MotionMonitor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bTj-wA-hu1"/>
                         <viewControllerLayoutGuide type="bottom" id="yp9-HQ-2CH"/>
