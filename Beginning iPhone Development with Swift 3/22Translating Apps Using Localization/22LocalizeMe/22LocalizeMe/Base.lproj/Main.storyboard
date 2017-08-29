@@ -141,6 +141,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="flag_usa" width="16" height="16"/>
+        <image name="flag_usa" width="250" height="131"/>
     </resources>
 </document>
