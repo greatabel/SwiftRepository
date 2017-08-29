@@ -4,8 +4,9 @@ import AVFoundation
 import MobileCoreServices
 
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate,
-        UINavigationControllerDelegate {
+            UINavigationControllerDelegate {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var takePictureButton: UIButton!
@@ -18,26 +19,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
 
-
-    private func imagePickerController(_ picker: UIImagePickerController,
-                                       didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        lastChosenMediaType = info[UIImagePickerControllerMediaType] as? String
-        if let mediaType = lastChosenMediaType {
-            if mediaType == (kUTTypeImage as NSString) as String {
-                image = info[UIImagePickerControllerEditedImage] as? UIImage
-            } else if mediaType == (kUTTypeMovie as NSString) as String {
-                movieURL = info[UIImagePickerControllerMediaURL] as? URL
-            }
+        if !UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.camera) {
+            takePictureButton.isHidden = true
         }
-        picker.dismiss(animated: true, completion: nil)
     }
 
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion:nil)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateDisplay()
     }
-
 
     @IBAction func shootPictureOrVideo(_ sender: UIButton) {
         pickMediaFromSource(UIImagePickerControllerSourceType.camera)
@@ -45,6 +37,49 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
 
     @IBAction func selectExistingPictureOrVideo(_ sender: UIButton) {
         pickMediaFromSource(UIImagePickerControllerSourceType.photoLibrary)
+    }
+
+    func updateDisplay() {
+        if let mediaType = lastChosenMediaType {
+            if mediaType == (kUTTypeImage as NSString) as String {
+                imageView.image = image!
+
+                
+                imageView.isHidden = false
+                if avPlayerViewController != nil {
+                    avPlayerViewController!.view.isHidden = true
+                }
+            } else if mediaType == (kUTTypeMovie as NSString) as String {
+                if avPlayerViewController == nil {
+                    avPlayerViewController = AVPlayerViewController()
+                    let avPlayerView = avPlayerViewController!.view
+                    avPlayerView?.frame = imageView.frame
+                    avPlayerView?.clipsToBounds = true
+                    view.addSubview(avPlayerView!)
+                    setAVPlayerViewLayoutConstraints()
+                }
+
+                if let url = movieURL {
+                    imageView.isHidden = true
+                    avPlayerViewController.player = AVPlayer(url: url)
+                    avPlayerViewController!.view.isHidden = false
+                    avPlayerViewController!.player!.play()
+                }
+            }
+        }
+    }
+
+    func setAVPlayerViewLayoutConstraints() {
+        let avPlayerView = avPlayerViewController!.view
+        avPlayerView?.translatesAutoresizingMaskIntoConstraints = false
+        let views = ["avPlayerView": avPlayerView!,
+                     "takePictureButton": takePictureButton!]
+        view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[avPlayerView]|", options: .alignAllLeft,
+            metrics:nil, views:views))
+        view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|[avPlayerView]-0-[takePictureButton]",
+            options: .alignAllLeft, metrics:nil, views:views))
     }
 
     func pickMediaFromSource(_ sourceType:UIImagePickerControllerSourceType) {
@@ -67,6 +102,65 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         }
+    }
+
+     private func imagePickerController(_ picker: UIImagePickerController,
+                                       didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print("-----imagePickerController")
+        lastChosenMediaType = info[UIImagePickerControllerMediaType] as? String
+        if let mediaType = lastChosenMediaType {
+            if mediaType == (kUTTypeImage as NSString) as String {
+//                image = info[UIImagePickerControllerEditedImage] as? UIImage
+            } else if mediaType == (kUTTypeMovie as NSString) as String {
+                movieURL = info[UIImagePickerControllerMediaURL] as? URL
+            }
+        }
+
+        /// chcek if you can return edited image that user choose it if user already edit it(crop it), return it as image
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+
+            /// if user update it and already got it , just return it to 'self.imgView.image'
+            image = editedImage
+            print("-------editedImage")
+
+            /// else if you could't find the edited image that means user select original image same is it without editing .
+        } else if let orginalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+
+            /// if user update it and already got it , just return it to 'self.imgView.image'.
+            image = orginalImage
+            print("-------orginalImage")
+        } 
+        else{
+            print ("error")
+        }
+
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion:nil)
+    }
+
+    /// what app will do when user choose & complete the selection image :
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+
+        /// chcek if you can return edited image that user choose it if user already edit it(crop it), return it as image
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+
+            /// if user update it and already got it , just return it to 'self.imgView.image'
+            self.imageView.image = editedImage
+
+            /// else if you could't find the edited image that means user select original image same is it without editing .
+        } else if let orginalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+
+            /// if user update it and already got it , just return it to 'self.imgView.image'.
+            self.imageView.image = orginalImage
+        }
+        else { print ("error") }
+
+        /// if the request successfully done just dismiss
+        picker.dismiss(animated: true, completion: nil)
+        
     }
 
 }
