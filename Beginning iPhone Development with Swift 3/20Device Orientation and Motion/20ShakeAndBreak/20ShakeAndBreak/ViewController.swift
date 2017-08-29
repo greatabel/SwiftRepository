@@ -14,11 +14,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        if let url = Bundle(for: type(of: self)).url(forResource:"glass", withExtension:"wav") {
+            do {
+                crashPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeWAVE)
+            } catch let error as NSError {
+                print("Audio error! \(error.localizedDescription)")
+            }
+        }
+
+        fixed = UIImage(named: "Home")
+        broken = UIImage(named: "HomeBroken")
+        imageView.image = fixed
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if !brokenScreenShowing && motion == .motionShake {
+            imageView.image = broken
+            crashPlayer?.play()
+            brokenScreenShowing = true;
+        }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        imageView.image = fixed
+        brokenScreenShowing = false
     }
 
 
