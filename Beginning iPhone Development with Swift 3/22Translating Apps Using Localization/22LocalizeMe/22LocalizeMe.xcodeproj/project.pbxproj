@@ -57,6 +57,12 @@
 		20DB3BAC1F55CE8B00FB2631 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20DB3BB11F55CE8C00FB2631 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20DB3BB61F55CE8C00FB2631 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20DB3BB81F55D31300FB2631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20DB3BB91F55D31300FB2631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		20DB3BBA1F55D31400FB2631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		20DB3BBB1F55D31400FB2631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20DB3BBC1F55D31400FB2631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20DB3BBD1F55D31400FB2631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,7 @@
 			children = (
 				2036AB811F55B4E100810568 /* Base */,
 				20DB3BA21F55BA4500FB2631 /* fr */,
+				20DB3BB91F55D31300FB2631 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -331,6 +338,7 @@
 			children = (
 				2036AB861F55B4E100810568 /* Base */,
 				20DB3BA31F55BA4500FB2631 /* fr */,
+				20DB3BBA1F55D31400FB2631 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -339,6 +347,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				20DB3BA71F55CE8B00FB2631 /* fr */,
+				20DB3BB81F55D31300FB2631 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				20DB3BAC1F55CE8B00FB2631 /* fr */,
+				20DB3BBB1F55D31400FB2631 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -355,6 +365,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				20DB3BB11F55CE8C00FB2631 /* fr */,
+				20DB3BBC1F55D31400FB2631 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -363,6 +374,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				20DB3BB61F55CE8C00FB2631 /* fr */,
+				20DB3BBD1F55D31400FB2631 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
