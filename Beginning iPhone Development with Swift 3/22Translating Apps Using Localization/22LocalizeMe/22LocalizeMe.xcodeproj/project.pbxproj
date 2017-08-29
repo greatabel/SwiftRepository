@@ -47,6 +47,8 @@
 		2036AB981F55B4E100810568 /* 22LocalizeMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 22LocalizeMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2036AB9C1F55B4E100810568 /* _2LocalizeMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2LocalizeMeUITests.swift; sourceTree = "<group>"; };
 		2036AB9E1F55B4E100810568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DB3BA21F55BA4500FB2631 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		20DB3BA31F55BA4500FB2631 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2036AB811F55B4E100810568 /* Base */,
+				20DB3BA21F55BA4500FB2631 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2036AB861F55B4E100810568 /* Base */,
+				20DB3BA31F55BA4500FB2631 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -373,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -516,6 +522,7 @@
 				2036ABA31F55B4E100810568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2036ABA41F55B4E100810568 /* Build configuration list for PBXNativeTarget "22LocalizeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +531,7 @@
 				2036ABA61F55B4E100810568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2036ABA71F55B4E100810568 /* Build configuration list for PBXNativeTarget "22LocalizeMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +540,7 @@
 				2036ABA91F55B4E100810568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
