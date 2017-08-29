@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="lup-wr-6aM">
             <objects>
-                <viewController id="iCn-bh-0X8" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iCn-bh-0X8" customClass="ViewController" customModule="_1Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bBf-SE-TOc"/>
                         <viewControllerLayoutGuide type="bottom" id="ktf-Kf-egg"/>
