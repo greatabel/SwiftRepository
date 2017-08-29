@@ -95,10 +95,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
             if previousPoint == nil {
                 totalMovementDistance = 0
-//                let start = Place(title:"Start Point",
-//                                  subtitle:"This is where we started",
-//                                  coordinate:newLocation.coordinate)
-//                mapView.addAnnotation(start)
+                let start = Place(title:"Start Point",
+                                  subtitle:"This is where we started",
+                                  coordinate:newLocation.coordinate)
+                mapView.addAnnotation(start)
                 let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate,
                                                                 100, 100)
                 mapView.setRegion(region, animated: true)
