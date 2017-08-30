@@ -1,11 +1,3 @@
-//
-//  PodcastEpisode.swift
-//  PragmaticPodcasts
-//
-//  Created by Chris Adamson on 9/18/16.
-//  Copyright © 2016 Pragmatic Programmers, LLC. All rights reserved.
-//
-
 import Foundation
 
 struct PodcastEpisode {

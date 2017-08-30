@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  PragmaticPodcasts
-//
-//  Created by Chris Adamson on 7/25/16.
-//  Copyright © 2016 Pragmatic Programmers, LLC. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 

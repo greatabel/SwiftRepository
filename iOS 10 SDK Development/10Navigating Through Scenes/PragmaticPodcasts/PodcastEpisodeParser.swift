@@ -1,11 +1,3 @@
-//
-//  PodcastEpisodeParser.swift
-//  PragmaticPodcasts
-//
-//  Created by Chris Adamson on 9/24/16.
-//  Copyright © 2016 Pragmatic Programmers, LLC. All rights reserved.
-//
-
 import Foundation
 
 class PodcastEpisodeParser : NSObject, XMLParserDelegate {

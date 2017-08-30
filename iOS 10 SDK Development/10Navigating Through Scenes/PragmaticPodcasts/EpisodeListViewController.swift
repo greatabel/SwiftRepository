@@ -1,11 +1,3 @@
-//
-//  EpisodeListViewController.swift
-//  PragmaticPodcasts
-//
-//  Created by Chris Adamson on 10/4/16.
-//  Copyright © 2016 Pragmatic Programmers, LLC. All rights reserved.
-//
-
 import UIKit
 
 class EpisodeListViewController: UIViewController,
