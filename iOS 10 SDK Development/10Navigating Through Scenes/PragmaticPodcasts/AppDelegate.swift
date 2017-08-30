@@ -27,7 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func applicationDidBecomeActive(_ application: UIApplication) {
     if let url = URL(string: "http://cocoaconf.libsyn.com/rss"),
-      let episodeListVC = application.keyWindow?.rootViewController
+      let topNav = application.keyWindow?.rootViewController as? UINavigationController,
+      let episodeListVC = topNav.viewControllers.first
         as? EpisodeListViewController {
       let parser = PodcastFeedParser(contentsOf: url)
       parser.onParserFinished = { [weak episodeListVC] in
