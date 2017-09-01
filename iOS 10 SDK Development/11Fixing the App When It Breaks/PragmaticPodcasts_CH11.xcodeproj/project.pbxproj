@@ -41,17 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01054EA61D46FB3300848CC5 /* PragmaticPodcasts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticPodcasts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01054EA61D46FB3300848CC5 /* PragmaticPodcasts_CH11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticPodcasts_CH11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01054EA91D46FB3300848CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01054EAB1D46FB3300848CC5 /* PlayerViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		01054EAE1D46FB3300848CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01054EB01D46FB3300848CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01054EB31D46FB3300848CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01054EB51D46FB3300848CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01054EBA1D46FB3300848CC5 /* PragmaticPodcastsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticPodcastsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01054EBA1D46FB3300848CC5 /* PragmaticPodcasts_CH11Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticPodcasts_CH11Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01054EBE1D46FB3300848CC5 /* PragmaticPodcastsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticPodcastsTests.swift; sourceTree = "<group>"; };
 		01054EC01D46FB3300848CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01054EC51D46FB3300848CC5 /* PragmaticPodcastsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticPodcastsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01054EC51D46FB3300848CC5 /* PragmaticPodcasts_CH11UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticPodcasts_CH11UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01054EC91D46FB3300848CC5 /* PragmaticPodcastsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticPodcastsUITests.swift; sourceTree = "<group>"; };
 		01054ECB1D46FB3300848CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		017275B31D973DFC000F97C3 /* PodcastEpisodeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastEpisodeParser.swift; sourceTree = "<group>"; };
@@ -103,9 +103,9 @@
 		01054EA71D46FB3300848CC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01054EA61D46FB3300848CC5 /* PragmaticPodcasts.app */,
-				01054EBA1D46FB3300848CC5 /* PragmaticPodcastsTests.xctest */,
-				01054EC51D46FB3300848CC5 /* PragmaticPodcastsUITests.xctest */,
+				01054EA61D46FB3300848CC5 /* PragmaticPodcasts_CH11.app */,
+				01054EBA1D46FB3300848CC5 /* PragmaticPodcasts_CH11Tests.xctest */,
+				01054EC51D46FB3300848CC5 /* PragmaticPodcasts_CH11UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01054EA51D46FB3300848CC5 /* PragmaticPodcasts */ = {
+		01054EA51D46FB3300848CC5 /* PragmaticPodcasts_CH11 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01054ECE1D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts" */;
+			buildConfigurationList = 01054ECE1D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts_CH11" */;
 			buildPhases = (
 				01054EA21D46FB3300848CC5 /* Sources */,
 				01054EA31D46FB3300848CC5 /* Frameworks */,
@@ -163,14 +163,14 @@
 			);
 			dependencies = (
 			);
-			name = PragmaticPodcasts;
+			name = PragmaticPodcasts_CH11;
 			productName = PragmaticPodcasts;
-			productReference = 01054EA61D46FB3300848CC5 /* PragmaticPodcasts.app */;
+			productReference = 01054EA61D46FB3300848CC5 /* PragmaticPodcasts_CH11.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01054EB91D46FB3300848CC5 /* PragmaticPodcastsTests */ = {
+		01054EB91D46FB3300848CC5 /* PragmaticPodcasts_CH11Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01054ED11D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcastsTests" */;
+			buildConfigurationList = 01054ED11D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts_CH11Tests" */;
 			buildPhases = (
 				01054EB61D46FB3300848CC5 /* Sources */,
 				01054EB71D46FB3300848CC5 /* Frameworks */,
@@ -181,14 +181,14 @@
 			dependencies = (
 				01054EBC1D46FB3300848CC5 /* PBXTargetDependency */,
 			);
-			name = PragmaticPodcastsTests;
+			name = PragmaticPodcasts_CH11Tests;
 			productName = PragmaticPodcastsTests;
-			productReference = 01054EBA1D46FB3300848CC5 /* PragmaticPodcastsTests.xctest */;
+			productReference = 01054EBA1D46FB3300848CC5 /* PragmaticPodcasts_CH11Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		01054EC41D46FB3300848CC5 /* PragmaticPodcastsUITests */ = {
+		01054EC41D46FB3300848CC5 /* PragmaticPodcasts_CH11UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01054ED41D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcastsUITests" */;
+			buildConfigurationList = 01054ED41D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts_CH11UITests" */;
 			buildPhases = (
 				01054EC11D46FB3300848CC5 /* Sources */,
 				01054EC21D46FB3300848CC5 /* Frameworks */,
@@ -199,9 +199,9 @@
 			dependencies = (
 				01054EC71D46FB3300848CC5 /* PBXTargetDependency */,
 			);
-			name = PragmaticPodcastsUITests;
+			name = PragmaticPodcasts_CH11UITests;
 			productName = PragmaticPodcastsUITests;
-			productReference = 01054EC51D46FB3300848CC5 /* PragmaticPodcastsUITests.xctest */;
+			productReference = 01054EC51D46FB3300848CC5 /* PragmaticPodcasts_CH11UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +236,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 01054EA11D46FB3300848CC5 /* Build configuration list for PBXProject "PragmaticPodcasts" */;
+			buildConfigurationList = 01054EA11D46FB3300848CC5 /* Build configuration list for PBXProject "PragmaticPodcasts_CH11" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -249,9 +249,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01054EA51D46FB3300848CC5 /* PragmaticPodcasts */,
-				01054EB91D46FB3300848CC5 /* PragmaticPodcastsTests */,
-				01054EC41D46FB3300848CC5 /* PragmaticPodcastsUITests */,
+				01054EA51D46FB3300848CC5 /* PragmaticPodcasts_CH11 */,
+				01054EB91D46FB3300848CC5 /* PragmaticPodcasts_CH11Tests */,
+				01054EC41D46FB3300848CC5 /* PragmaticPodcasts_CH11UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,12 +321,12 @@
 /* Begin PBXTargetDependency section */
 		01054EBC1D46FB3300848CC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01054EA51D46FB3300848CC5 /* PragmaticPodcasts */;
+			target = 01054EA51D46FB3300848CC5 /* PragmaticPodcasts_CH11 */;
 			targetProxy = 01054EBB1D46FB3300848CC5 /* PBXContainerItemProxy */;
 		};
 		01054EC71D46FB3300848CC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01054EA51D46FB3300848CC5 /* PragmaticPodcasts */;
+			target = 01054EA51D46FB3300848CC5 /* PragmaticPodcasts_CH11 */;
 			targetProxy = 01054EC61D46FB3300848CC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pragprog.yourhandle.PragmaticPodcastsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticPodcasts.app/PragmaticPodcasts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticPodcasts_CH11.app/PragmaticPodcasts_CH11";
 			};
 			name = Debug;
 		};
@@ -492,7 +492,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pragprog.yourhandle.PragmaticPodcastsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticPodcasts.app/PragmaticPodcasts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticPodcasts_CH11.app/PragmaticPodcasts_CH11";
 			};
 			name = Release;
 		};
@@ -523,7 +523,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01054EA11D46FB3300848CC5 /* Build configuration list for PBXProject "PragmaticPodcasts" */ = {
+		01054EA11D46FB3300848CC5 /* Build configuration list for PBXProject "PragmaticPodcasts_CH11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01054ECC1D46FB3300848CC5 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01054ECE1D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts" */ = {
+		01054ECE1D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts_CH11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01054ECF1D46FB3300848CC5 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01054ED11D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcastsTests" */ = {
+		01054ED11D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts_CH11Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01054ED21D46FB3300848CC5 /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01054ED41D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcastsUITests" */ = {
+		01054ED41D46FB3300848CC5 /* Build configuration list for PBXNativeTarget "PragmaticPodcasts_CH11UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01054ED51D46FB3300848CC5 /* Debug */,
