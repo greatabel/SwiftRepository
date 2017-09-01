@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class PlayerViewController: UIViewController {
   
   var player : AVPlayer?
   @IBOutlet var titleLabel: UILabel!
