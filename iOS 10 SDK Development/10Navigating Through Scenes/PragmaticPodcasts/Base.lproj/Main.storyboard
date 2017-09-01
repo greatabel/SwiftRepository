@@ -10,6 +10,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Add Podcast View Controller-->
+        <scene sceneID="kaj-LV-TLG">
+            <objects>
+                <viewController id="u7F-3J-kwr" customClass="AddPodcastViewController" customModule="PragmaticPodcasts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lZN-HT-0vS"/>
+                        <viewControllerLayoutGuide type="bottom" id="CMe-fC-hoU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wg4-U4-RqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0j-be-Ybf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-586" y="-533"/>
+        </scene>
         <!--Podcasts-->
         <scene sceneID="f09-Qr-7yt">
             <objects>
@@ -86,7 +104,13 @@
                             <constraint firstItem="6dX-mf-xkQ" firstAttribute="leading" secondItem="ne7-Vv-rmy" secondAttribute="leading" id="iS5-bY-0Le"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Podcasts" id="J0w-ia-dex"/>
+                    <navigationItem key="navigationItem" title="Podcasts" id="J0w-ia-dex">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bWv-xN-wKw">
+                            <connections>
+                                <segue destination="u7F-3J-kwr" kind="presentation" id="Gi6-CE-SBP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="6dX-mf-xkQ" id="9xc-lD-fHE"/>
                     </connections>
