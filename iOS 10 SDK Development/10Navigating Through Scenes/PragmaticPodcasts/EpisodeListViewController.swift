@@ -12,7 +12,16 @@ UITableViewDataSource, UITableViewDelegate {
       }
     }
   }
-  
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showPlayer",
+      let playerVC = segue.destination as? PlayerViewController,
+      let indexPath = table.indexPathForSelectedRow {
+      let episode = feeds[indexPath.section].episodes[indexPath.row]
+      playerVC.episode = episode
+    }
+  }
+
   //MARK: - UITableViewDataSource
 
   func numberOfSections(in tableView: UITableView) -> Int {

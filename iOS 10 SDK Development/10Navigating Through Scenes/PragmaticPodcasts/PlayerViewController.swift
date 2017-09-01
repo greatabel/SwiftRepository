@@ -9,6 +9,27 @@ class PlayerViewController: UIViewController {
   @IBOutlet var timeLabel: UILabel!
   @IBOutlet var logoView: UIImageView!
   private var playerPeriodicObserver : Any?
+
+  var episode : PodcastEpisode? {
+    didSet {
+      loadViewIfNeeded()
+      titleLabel.text = episode?.title
+      if let url = episode?.enclosureURL {
+        set (url: url)
+      }
+      if let imageURL = episode?.iTunesImageURL {
+        let session = URLSession(configuration: .default)
+        let dataTask = session.dataTask(with: imageURL) { dataMb, _, _ in
+          if let data = dataMb {
+            DispatchQueue.main.async {
+              self.logoView.image = UIImage(data: data)
+            }
+          }
+        }
+        dataTask.resume()
+      }
+    }
+  }
   
   deinit {
     player?.removeObserver(self, forKeyPath: "rate")

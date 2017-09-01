@@ -68,7 +68,7 @@
                                             <outlet property="artworkImageView" destination="5HO-gi-fLj" id="YLN-kI-Z53"/>
                                             <outlet property="durationLabel" destination="eaw-9Z-w6D" id="Uo4-JG-SvT"/>
                                             <outlet property="titleLabel" destination="XKj-50-x6Z" id="bV1-Gb-dCO"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="Go9-N3-aQa"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showPlayer" id="Go9-N3-aQa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
