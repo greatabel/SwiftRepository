@@ -2,6 +2,8 @@ import UIKit
 
 class AddPodcastViewController: UIViewController {
 
+    @IBOutlet var urlField: UITextField!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -22,6 +22,10 @@ UITableViewDataSource, UITableViewDelegate {
     }
   }
 
+  @IBAction func unwindToEpisodeList(_ segue: UIStoryboardSegue) {
+
+  }
+
   //MARK: - UITableViewDataSource
 
   func numberOfSections(in tableView: UITableView) -> Int {

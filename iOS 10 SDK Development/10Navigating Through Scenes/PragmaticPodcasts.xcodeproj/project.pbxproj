@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				01054EA91D46FB3300848CC5 /* AppDelegate.swift */,
+				204752661F594857003BD6B3 /* AddPodcastViewController.swift */,
 				01054EAB1D46FB3300848CC5 /* PlayerViewController.swift */,
 				01ADB0BE1D8E0849001E2B5E /* PodcastFeedParser.swift */,
 				017275B31D973DFC000F97C3 /* PodcastEpisodeParser.swift */,
@@ -125,7 +126,6 @@
 				01054EB01D46FB3300848CC5 /* Assets.xcassets */,
 				01054EB21D46FB3300848CC5 /* LaunchScreen.storyboard */,
 				01054EB51D46FB3300848CC5 /* Info.plist */,
-				204752661F594857003BD6B3 /* AddPodcastViewController.swift */,
 			);
 			path = PragmaticPodcasts;
 			sourceTree = "<group>";
