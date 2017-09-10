@@ -14,6 +14,7 @@
 		2003A15C1F65F6F10038C3A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003A15A1F65F6F10038C3A2 /* LaunchScreen.storyboard */; };
 		2003A1671F65F6F10038C3A2 /* _TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A1661F65F6F10038C3A2 /* _TodoListTests.swift */; };
 		2003A1721F65F6F10038C3A2 /* _TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A1711F65F6F10038C3A2 /* _TodoListUITests.swift */; };
+		2003A1801F65F8510038C3A2 /* TodoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A17F1F65F8510038C3A2 /* TodoTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2003A16D1F65F6F10038C3A2 /* 4TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2003A1711F65F6F10038C3A2 /* _TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _TodoListUITests.swift; sourceTree = "<group>"; };
 		2003A1731F65F6F10038C3A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2003A17F1F65F8510038C3A2 /* TodoTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2003A1511F65F6F10038C3A2 /* AppDelegate.swift */,
 				2003A1531F65F6F10038C3A2 /* ViewController.swift */,
+				2003A17F1F65F8510038C3A2 /* TodoTableTableViewController.swift */,
 				2003A1551F65F6F10038C3A2 /* Main.storyboard */,
 				2003A1581F65F6F10038C3A2 /* Assets.xcassets */,
 				2003A15A1F65F6F10038C3A2 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2003A1801F65F8510038C3A2 /* TodoTableTableViewController.swift in Sources */,
 				2003A1541F65F6F10038C3A2 /* ViewController.swift in Sources */,
 				2003A1521F65F6F10038C3A2 /* AppDelegate.swift in Sources */,
 			);
