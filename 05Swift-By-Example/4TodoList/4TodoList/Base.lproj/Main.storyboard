@@ -32,7 +32,11 @@
                             <outlet property="delegate" destination="ylg-CD-me3" id="euk-9R-zaT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PVv-eH-7hh"/>
+                    <navigationItem key="navigationItem" id="PVv-eH-7hh">
+                        <barButtonItem key="rightBarButtonItem" image="cross" id="9R1-Bv-xFi">
+                            <color key="tintColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="deviceRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gys-ej-6nP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,4 +61,7 @@
             <point key="canvasLocation" x="396" y="17.541229385307346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cross" width="22" height="22"/>
+    </resources>
 </document>
