@@ -5,7 +5,7 @@ struct Todo: Equatable {
     let list: List
     let dueDate: NSDate
     let done: Bool
-    let doneDate: NSDate
+    let doneDate: NSDate?
 }
 
 func ==(todo1: Todo, todo2: Todo) -> Bool {
