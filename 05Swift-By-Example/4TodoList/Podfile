@@ -1,0 +1,6 @@
+use_frameworks!
+
+target '4TodoList' do
+    pod 'LatoFont', :git => "https://github.com/gscalzo/LatoFont.git"
+    pod 'MGSwipeTableCell', '~> 1.5.1'
+end
