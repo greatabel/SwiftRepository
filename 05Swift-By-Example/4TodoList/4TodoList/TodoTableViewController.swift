@@ -3,7 +3,7 @@ import MGSwipeTableCell
 
 
 
-class TodoTableTableViewController: UITableViewController {
+class TodoTableViewController: UITableViewController {
 
     public var todosDatastore: TodosDatastore?
     private var todos: [Todo]?
@@ -27,6 +27,12 @@ class TodoTableTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         refresh()
     }
+
+    @IBAction func addTodoBarButtonPressed(sender: AnyObject){
+        print("addTodoButtonPressed")
+        performSegue(withIdentifier: "addTodo", sender: self)
+    }
+    
 
     public func refresh() {
         if let todosDatastore = todosDatastore {
@@ -156,7 +162,7 @@ class TodoTableTableViewController: UITableViewController {
 }
 
 // MARK: Actions
-extension TodoTableTableViewController {
+extension TodoTableViewController {
     func addTodoButtonPressed(sender: UIButton!){
         print("addTodoButtonPressed")
     }

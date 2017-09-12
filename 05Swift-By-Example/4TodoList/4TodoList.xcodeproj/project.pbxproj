@@ -15,9 +15,10 @@
 		2003A15C1F65F6F10038C3A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003A15A1F65F6F10038C3A2 /* LaunchScreen.storyboard */; };
 		2003A1671F65F6F10038C3A2 /* _TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A1661F65F6F10038C3A2 /* _TodoListTests.swift */; };
 		2003A1721F65F6F10038C3A2 /* _TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A1711F65F6F10038C3A2 /* _TodoListUITests.swift */; };
-		2003A1801F65F8510038C3A2 /* TodoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A17F1F65F8510038C3A2 /* TodoTableTableViewController.swift */; };
+		2003A1801F65F8510038C3A2 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A17F1F65F8510038C3A2 /* TodoTableViewController.swift */; };
 		20352CF91F6626AE00DFA762 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20352CF81F6626AE00DFA762 /* Entities.swift */; };
 		20352CFB1F66276400DFA762 /* TodosDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20352CFA1F66276400DFA762 /* TodosDatastore.swift */; };
+		20AB4C301F6833B9001083AF /* EditTodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB4C2F1F6833B9001083AF /* EditTodoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,10 @@
 		2003A16D1F65F6F10038C3A2 /* 4TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2003A1711F65F6F10038C3A2 /* _TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _TodoListUITests.swift; sourceTree = "<group>"; };
 		2003A1731F65F6F10038C3A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2003A17F1F65F8510038C3A2 /* TodoTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableTableViewController.swift; sourceTree = "<group>"; };
+		2003A17F1F65F8510038C3A2 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		20352CF81F6626AE00DFA762 /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		20352CFA1F66276400DFA762 /* TodosDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosDatastore.swift; sourceTree = "<group>"; };
+		20AB4C2F1F6833B9001083AF /* EditTodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoTableViewController.swift; sourceTree = "<group>"; };
 		24DB0DE8C10ECC159CA3420C /* Pods_4TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F133D69A83208AFC50ECED /* Pods-4TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4TodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4TodoList/Pods-4TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +114,8 @@
 			children = (
 				2003A1511F65F6F10038C3A2 /* AppDelegate.swift */,
 				2003A1531F65F6F10038C3A2 /* ViewController.swift */,
-				2003A17F1F65F8510038C3A2 /* TodoTableTableViewController.swift */,
+				2003A17F1F65F8510038C3A2 /* TodoTableViewController.swift */,
+				20AB4C2F1F6833B9001083AF /* EditTodoTableViewController.swift */,
 				2003A1551F65F6F10038C3A2 /* Main.storyboard */,
 				2003A1581F65F6F10038C3A2 /* Assets.xcassets */,
 				2003A15A1F65F6F10038C3A2 /* LaunchScreen.storyboard */,
@@ -355,10 +358,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20352CFB1F66276400DFA762 /* TodosDatastore.swift in Sources */,
-				2003A1801F65F8510038C3A2 /* TodoTableTableViewController.swift in Sources */,
+				2003A1801F65F8510038C3A2 /* TodoTableViewController.swift in Sources */,
 				2003A1541F65F6F10038C3A2 /* ViewController.swift in Sources */,
 				20352CF91F6626AE00DFA762 /* Entities.swift in Sources */,
 				2003A1521F65F6F10038C3A2 /* AppDelegate.swift in Sources */,
+				20AB4C301F6833B9001083AF /* EditTodoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

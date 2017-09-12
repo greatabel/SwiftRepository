@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let navigationController = window?.rootViewController
             as? UINavigationController,
             let todoTableViewController = navigationController.viewControllers.first as?
-            TodoTableTableViewController {
+            TodoTableViewController {
             todoTableViewController.configure(todosDatastore: TodosDatastore())
         }
         return true
