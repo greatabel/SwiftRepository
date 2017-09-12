@@ -2,6 +2,9 @@ import UIKit
 
 class TodoTableTableViewController: UITableViewController {
 
+    private var todosDatastore: TodosDatastore?
+    private var todos: [Todo]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -13,9 +16,22 @@ class TodoTableTableViewController: UITableViewController {
         title = "Todos"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refresh()
+    }
+
+    private func refresh() {
+        if let todosDatastore = todosDatastore {
+            todos = todosDatastore.todos().sorted {
+                $0.dueDate.compare($1.dueDate) == ComparisonResult.orderedAscending
+            }
+            tableView.reloadData()
+        }
+    }
+
+    func configure(todosDatastore: TodosDatastore) {
+        self.todosDatastore = todosDatastore
     }
 
     // MARK: - Table view data source
@@ -27,7 +43,7 @@ class TodoTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return todos?.count ?? 0
     }
 
 
@@ -35,10 +51,21 @@ class TodoTableTableViewController: UITableViewController {
                         -> UITableViewCell {
                             
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
-
-        cell.textLabel?.text = "Todo number \(indexPath.row)"
-
+        if let todo = todos?[indexPath.row] {
+            renderCell(cell: cell, todo: todo)
+        }
+//        cell.textLabel?.text = "Todo number \(indexPath.row)"
         return cell
+    }
+
+    private func renderCell(cell:UITableViewCell, todo: Todo){
+        let dateFormatter:DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd-MM-YY"
+        let dueDate = dateFormatter.string(from: todo.dueDate)
+        cell.detailTextLabel?.text = "\(dueDate) | \(todo.list.description)"
+        cell.textLabel?.text = todo.description
+
+        cell.accessoryType = todo.done ? .checkmark : .none
     }
 
 

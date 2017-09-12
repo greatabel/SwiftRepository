@@ -14,18 +14,18 @@ class TodosDatastore {
         savedTodos = [
             Todo(description: "Remember the Milk",
             list: List(description: "Family") ,
-            dueDate: NSDate(),
+            dueDate: Date(),
             done: false,
             doneDate: nil),
             Todo(description: "Buy Spider Man Comics",
             list: List(description: "Personal") ,
-            dueDate: NSDate(),
+            dueDate: Date(),
             done: true,
-            doneDate: NSDate()
+            doneDate: Date()
             ),
             Todo(description: "Release build",
             list: List(description: "Work") ,
-            dueDate: NSDate(),
+            dueDate: Date(),
             done: false,
             doneDate: nil)
         ]

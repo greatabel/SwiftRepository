@@ -3,9 +3,9 @@ import Foundation
 struct Todo: Equatable {
     let description: String
     let list: List
-    let dueDate: NSDate
+    let dueDate: Date
     let done: Bool
-    let doneDate: NSDate?
+    let doneDate: Date?
 }
 
 func ==(todo1: Todo, todo2: Todo) -> Bool {
