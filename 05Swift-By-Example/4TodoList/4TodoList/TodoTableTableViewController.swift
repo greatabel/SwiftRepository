@@ -1,8 +1,11 @@
 import UIKit
+import MGSwipeTableCell
+
+
 
 class TodoTableTableViewController: UITableViewController {
 
-    private var todosDatastore: TodosDatastore?
+    public var todosDatastore: TodosDatastore?
     private var todos: [Todo]?
 
     override func viewDidLoad() {
@@ -16,12 +19,16 @@ class TodoTableTableViewController: UITableViewController {
         title = "Todos"
     }
 
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refresh()
     }
 
-    private func refresh() {
+    public func refresh() {
         if let todosDatastore = todosDatastore {
             todos = todosDatastore.todos().sorted {
                 $0.dueDate.compare($1.dueDate) == ComparisonResult.orderedAscending
@@ -51,8 +58,10 @@ class TodoTableTableViewController: UITableViewController {
                         -> UITableViewCell {
                             
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
+                            as! MGSwipeTableCell
         if let todo = todos?[indexPath.row] {
             renderCell(cell: cell, todo: todo)
+            setupButtonsForCell(cell: cell, todo: todo)
         }
 //        cell.textLabel?.text = "Todo number \(indexPath.row)"
         return cell
@@ -66,6 +75,36 @@ class TodoTableTableViewController: UITableViewController {
         cell.textLabel?.text = todo.description
 
         cell.accessoryType = todo.done ? .checkmark : .none
+    }
+
+    private func setupButtonsForCell(cell: MGSwipeTableCell, todo: Todo) {
+        cell.rightButtons = [
+            MGSwipeButton(title: "Edit",
+                          backgroundColor: UIColor.blue,
+                          padding: 30) {
+                            [weak self] sender in
+                            self?.editButtonPressed(todo: todo)
+                            return true
+            },
+            MGSwipeButton(title: "Delete",
+                          backgroundColor: UIColor.red,
+                          padding: 30) {
+                            [weak self] sender in
+                            self?.deleteButtonPressed(todo: todo)
+                            return true
+            }
+        ]
+
+        cell.rightExpansion.buttonIndex = 0
+        cell.leftButtons = [
+            MGSwipeButton(title: "Done",
+                          backgroundColor: UIColor.green,
+                          padding: 30) {
+                            [weak self] sender in
+                            self?.doneButtonPressed(todo: todo)
+                            return true
+            } ]
+        cell.leftExpansion.buttonIndex = 0
     }
 
 
@@ -114,4 +153,25 @@ class TodoTableTableViewController: UITableViewController {
     }
     */
 
+}
+
+// MARK: Actions
+extension TodoTableTableViewController {
+    func addTodoButtonPressed(sender: UIButton!){
+        print("addTodoButtonPressed")
+    }
+
+    func editButtonPressed(todo: Todo){
+        print("editButtonPressed")
+    }
+
+    func deleteButtonPressed(todo: Todo){
+        todosDatastore?.deleteTodo(todo: todo)
+        refresh()
+    }
+
+    func doneButtonPressed(todo: Todo){
+        todosDatastore?.doneTodo(todo: todo)
+        refresh()
+    }
 }

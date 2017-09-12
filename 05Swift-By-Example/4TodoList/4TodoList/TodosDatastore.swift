@@ -40,3 +40,17 @@ class TodosDatastore {
         return savedLists
     }
 }
+
+
+// MARK: Actions
+extension TodosDatastore {
+    func addTodo(todo: Todo) {
+        print("addTodo")
+    }
+    func deleteTodo(todo: Todo?) {
+        print("deleteTodo")
+    }
+    func doneTodo(todo: Todo) {
+        print("doneTodo")
+    }
+}

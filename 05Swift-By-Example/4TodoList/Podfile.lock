@@ -1,10 +1,10 @@
 PODS:
   - LatoFont (1.0.1)
-  - MGSwipeTableCell (1.5.5)
+  - MGSwipeTableCell (1.6.1)
 
 DEPENDENCIES:
   - LatoFont (from `https://github.com/gscalzo/LatoFont.git`)
-  - MGSwipeTableCell (~> 1.5.1)
+  - MGSwipeTableCell (~> 1.6.1)
 
 EXTERNAL SOURCES:
   LatoFont:
@@ -17,8 +17,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   LatoFont: 0bfeace154ee2da6080123d0e80560f6e22b187d
-  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+  MGSwipeTableCell: 19a1d65dcc1ceaea42eb44bb2adae32101904514
 
-PODFILE CHECKSUM: 67497348dbb97f1dc00f35c507d3d1b0de865cc8
+PODFILE CHECKSUM: f70523042342008316962ca997dc481f917d54cf
 
 COCOAPODS: 1.3.1
