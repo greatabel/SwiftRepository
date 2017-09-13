@@ -54,3 +54,15 @@ extension TodosDatastore {
         print("doneTodo")
     }
 }
+
+extension TodosDatastore {
+    func defaultList() -> List {
+        return List(description: "Personal")
+    }
+
+    func defaultDueDate() -> Date {
+        let now = Date()
+        let secondsInADay = TimeInterval(24 * 60 * 60)
+        return now.addingTimeInterval(secondsInADay)
+    }
+}

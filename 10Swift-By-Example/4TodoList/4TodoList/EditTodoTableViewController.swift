@@ -9,8 +9,8 @@ class EditTodoTableViewController: UITableViewController {
 
     var todoToEdit: Todo?
     var todosDatastore: TodosDatastore?
-    private var list: List?
-    private var dueDate: Date?
+    var list: List?
+    var dueDate: Date?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,33 @@ class EditTodoTableViewController: UITableViewController {
 
 private extension EditTodoTableViewController {
     func setup() {
+        if let todo = todoToEdit {
+            descriptionTextField.text = todo.description
+            list = todo.list
+            dueDate = todo.dueDate
+        } else if  let todosDatastore = todosDatastore {
+            list = todosDatastore.defaultList()
+            dueDate = todosDatastore.defaultDueDate()
+        }
+        datePickerSetup()
+    }
 
+    func datePickerSetup() {
+        dueDatePicker.datePickerMode = .dateAndTime
+        dueDatePicker.minimumDate = Date()
+        dueDatePicker.date = dueDate!
+        dueDatePicker.addTarget(self, action: Selector(("dueDateChanged:")),
+                                for: .valueChanged)
     }
 }
 
 extension EditTodoTableViewController {
+    
+    func dueDateChanged(sender: UIButton!) {
+        dueDate = dueDatePicker.date
+        refresh()
+    }
+
     func refresh(){
 
     }

@@ -7,6 +7,7 @@ class TodoTableViewController: UITableViewController {
 
     public var todosDatastore: TodosDatastore?
     private var todos: [Todo]?
+    public var selectedTodo: Todo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -179,5 +180,28 @@ extension TodoTableViewController {
     func doneButtonPressed(todo: Todo){
         todosDatastore?.doneTodo(todo: todo)
         refresh()
+    }
+}
+
+extension TodoTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+            let destinationViewController = segue.destination as? EditTodoTableViewController
+            else {
+                return
+        }
+
+        destinationViewController.todosDatastore = todosDatastore
+        destinationViewController.todoToEdit = selectedTodo
+        selectedTodo = nil
+
+        switch identifier {
+        case "addTodo":
+            destinationViewController.title = "New Todo"
+        case "editTodo":
+            destinationViewController.title = "Edit Todo"
+        default:
+            break
+        }
     }
 }
