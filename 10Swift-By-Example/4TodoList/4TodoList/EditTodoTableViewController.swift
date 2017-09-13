@@ -43,19 +43,27 @@ private extension EditTodoTableViewController {
         dueDatePicker.datePickerMode = .dateAndTime
         dueDatePicker.minimumDate = Date()
         dueDatePicker.date = dueDate!
-        dueDatePicker.addTarget(self, action: Selector(("dueDateChanged:")),
+        dueDatePicker.addTarget(self,  action: #selector(dueDateChanged(_:)) ,
                                 for: .valueChanged)
     }
 }
 
 extension EditTodoTableViewController {
     
-    func dueDateChanged(sender: UIButton!) {
+     func dueDateChanged(_ sender: UIDatePicker) {
+        print("###\(self)")
         dueDate = dueDatePicker.date
         refresh()
     }
 
     func refresh(){
         listLabel.text = "List: \(list!.description)"
+
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd-MM-YY"
+        if let dueDate = dueDate {
+            let formatterDueDate = dateFormatter.string(from: dueDate)
+            dueDateLabel.text = "Due date: \(formatterDueDate)"
+        }
     }
 }
