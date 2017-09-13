@@ -56,6 +56,6 @@ extension EditTodoTableViewController {
     }
 
     func refresh(){
-
+        listLabel.text = "List: \(list!.description)"
     }
 }
