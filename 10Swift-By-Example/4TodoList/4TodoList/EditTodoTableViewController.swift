@@ -60,10 +60,43 @@ extension EditTodoTableViewController {
         listLabel.text = "List: \(list!.description)"
 
         let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm dd-MM-YY"
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
         if let dueDate = dueDate {
             let formatterDueDate = dateFormatter.string(from: dueDate)
             dueDateLabel.text = "Due date: \(formatterDueDate)"
+        }
+    }
+
+    func doneSelected() {
+
+    }
+    func showAddList() {
+
+    }
+
+}
+
+enum EditTableViewRow: Int {
+    case Description
+    case List
+    case DueDate
+    case Done
+    case DatePicker
+}
+
+extension EditTodoTableViewController {
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("***\(self)")
+        switch EditTableViewRow(rawValue: indexPath.row)! {
+        case .List:
+            showAddList()
+        case .DueDate:
+            descriptionTextField.resignFirstResponder()
+        case .Done:
+            doneSelected()
+        default:
+            break
         }
     }
 }
