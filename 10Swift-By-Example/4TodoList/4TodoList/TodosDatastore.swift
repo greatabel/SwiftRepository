@@ -1,8 +1,8 @@
 import Foundation
 
 class TodosDatastore {
-    private var savedLists = [List]()
-    private var savedTodos = [Todo]()
+    public var savedLists = [List]()
+    public var savedTodos = [Todo]()
 
     init() {
         savedLists = [
@@ -45,7 +45,8 @@ class TodosDatastore {
 // MARK: Actions
 extension TodosDatastore {
     func addTodo(todo: Todo) {
-        print("addTodo")
+        print("addTodo in TodosDatastore")
+        savedTodos = savedTodos + [todo]
     }
     func deleteTodo(todo: Todo?) {
         print("deleteTodo")
