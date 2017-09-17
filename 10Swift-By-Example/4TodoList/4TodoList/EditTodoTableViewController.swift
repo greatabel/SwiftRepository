@@ -69,9 +69,14 @@ extension EditTodoTableViewController {
 
     func doneSelected() {
         if let descriptionText = descriptionTextField.text,
-            let _ = list,
-            let _ = dueDate, !descriptionText.isEmpty {
-            
+            let list = list,
+            let dueDate = dueDate, !descriptionText.isEmpty {
+                let newTodo = Todo(description: descriptionText,
+                                   list: list,
+                                   dueDate: dueDate,
+                                   done: false,
+                                   doneDate: nil)
+                todosDatastore?.addTodo(todo: newTodo)
         }
     }
     func showAddList() {
