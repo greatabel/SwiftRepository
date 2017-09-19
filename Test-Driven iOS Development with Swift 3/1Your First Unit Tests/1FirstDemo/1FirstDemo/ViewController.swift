@@ -27,5 +27,9 @@ class ViewController: UIViewController {
         return numberOfVowels
     }
 
+    func makeHeadLine(from string: String) -> String {
+        return "This Is A Test Headline"
+    }
+
 }
 

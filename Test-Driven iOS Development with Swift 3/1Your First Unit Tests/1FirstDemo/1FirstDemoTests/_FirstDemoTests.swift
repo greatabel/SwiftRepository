@@ -22,7 +22,14 @@ class _FirstDemoTests: XCTestCase {
 //        XCTAssertEqual(numberOfVowels, 4,
 //                       "should find 4 vowels in Dominik",
 //                       file: "_FirstDemoTests.swift", line: 24)
-        
+
     }
-    
+
+    func test_MakeHeadline_ReturnsStringWithEachWordStartCapital() {
+        let viewController = ViewController()
+        let string = "this is A test headline"
+        let headline = viewController.makeHeadLine(from: string)
+        XCTAssertEqual(headline, "This Is A Test Headline")
+    }
+
 }
