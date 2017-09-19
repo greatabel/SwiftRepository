@@ -19,6 +19,10 @@ class _FirstDemoTests: XCTestCase {
         let numberOfVowels = viewController.numberOfVowels(in: string)
         XCTAssertEqual(numberOfVowels, 3,
                        "should find 3 vowels in Dominik")
+//        XCTAssertEqual(numberOfVowels, 4,
+//                       "should find 4 vowels in Dominik",
+//                       file: "_FirstDemoTests.swift", line: 24)
+        
     }
     
 }
