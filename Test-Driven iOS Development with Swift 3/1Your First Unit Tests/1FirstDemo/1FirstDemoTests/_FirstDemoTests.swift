@@ -32,4 +32,11 @@ class _FirstDemoTests: XCTestCase {
         XCTAssertEqual(headline, "This Is A Test Headline")
     }
 
+    func test_MakeHeadline_ReturnsStringWithEachWordStartCapital2() {
+        let viewController = ViewController()
+        let string = "Here is another Example"
+        let headline = viewController.makeHeadLine(from: string)
+        XCTAssertEqual(headline, "Here Is Another Example")
+    }
+
 }

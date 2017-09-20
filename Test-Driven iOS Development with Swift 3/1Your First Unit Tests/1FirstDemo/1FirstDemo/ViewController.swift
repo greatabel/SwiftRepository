@@ -28,7 +28,20 @@ class ViewController: UIViewController {
     }
 
     func makeHeadLine(from string: String) -> String {
-        return "This Is A Test Headline"
+        let words = string.components(separatedBy: " ")
+        print("words:\(words)")
+        var headline = ""
+        for var word in words {
+            let firstCharacter = word.remove(at: word.startIndex)
+            print("firstCharacter-> \(firstCharacter) word-> \(word)")
+            headline += "\(String(firstCharacter).uppercased())\(word) "
+        }
+        print("0 headline->\(headline)")
+        headline.remove(at: headline.index(before: headline.endIndex))
+        print("1 headline->\(headline)")
+        return headline
+
+//        return "This Is A Test Headline"
     }
 
 }
