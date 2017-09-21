@@ -27,21 +27,30 @@ class ViewController: UIViewController {
         return numberOfVowels
     }
 
+//    func makeHeadLine(from string: String) -> String {
+//        let words = string.components(separatedBy: " ")
+//        print("words:\(words)")
+//        var headline = ""
+//        for var word in words {
+//            let firstCharacter = word.remove(at: word.startIndex)
+//            print("firstCharacter-> \(firstCharacter) word-> \(word)")
+//            headline += "\(String(firstCharacter).uppercased())\(word) "
+//        }
+//        print("0 headline->\(headline)")
+//        headline.remove(at: headline.index(before: headline.endIndex))
+//        print("1 headline->\(headline)")
+//        return headline
+//
+////        return "This Is A Test Headline"
+//    }
     func makeHeadLine(from string: String) -> String {
         let words = string.components(separatedBy: " ")
-        print("words:\(words)")
-        var headline = ""
-        for var word in words {
-            let firstCharacter = word.remove(at: word.startIndex)
-            print("firstCharacter-> \(firstCharacter) word-> \(word)")
-            headline += "\(String(firstCharacter).uppercased())\(word) "
+        let headlineWords = words.map { (word) -> String in
+            var mutableWord = word
+            let first = mutableWord.remove(at: mutableWord.startIndex)
+            return String(first).uppercased() + mutableWord
         }
-        print("0 headline->\(headline)")
-        headline.remove(at: headline.index(before: headline.endIndex))
-        print("1 headline->\(headline)")
-        return headline
-
-//        return "This Is A Test Headline"
+        return headlineWords.joined(separator: " ")
     }
 
 }
