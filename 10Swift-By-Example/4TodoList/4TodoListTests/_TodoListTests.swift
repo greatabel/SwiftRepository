@@ -1,11 +1,3 @@
-//
-//  _TodoListTests.swift
-//  4TodoListTests
-//
-//  Created by 万畅 on 2017/9/11.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import XCTest
 @testable import _TodoList
 
