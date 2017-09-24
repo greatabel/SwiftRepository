@@ -15,6 +15,7 @@
 		2017C16C1F755E6F00A8E1B7 /* _ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C16B1F755E6F00A8E1B7 /* _ToDoTests.swift */; };
 		2017C1771F755E6F00A8E1B7 /* _ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C1761F755E6F00A8E1B7 /* _ToDoUITests.swift */; };
 		2086F7301F77F013002730E0 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086F72F1F77F013002730E0 /* ToDoItemTests.swift */; };
+		2086F7331F77F0D0002730E0 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086F7321F77F0D0002730E0 /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2017C1761F755E6F00A8E1B7 /* _ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _ToDoUITests.swift; sourceTree = "<group>"; };
 		2017C1781F755E6F00A8E1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2086F72F1F77F013002730E0 /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
+		2086F7321F77F0D0002730E0 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		2017C1551F755E6F00A8E1B7 /* 2ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				2086F7311F77F0A7002730E0 /* Model */,
 				2017C1561F755E6F00A8E1B7 /* AppDelegate.swift */,
 				2017C1581F755E6F00A8E1B7 /* ViewController.swift */,
 				2017C15A1F755E6F00A8E1B7 /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				2017C1781F755E6F00A8E1B7 /* Info.plist */,
 			);
 			path = 2ToDoUITests;
+			sourceTree = "<group>";
+		};
+		2086F7311F77F0A7002730E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2086F7321F77F0D0002730E0 /* ToDoItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				2017C1591F755E6F00A8E1B7 /* ViewController.swift in Sources */,
 				2017C1571F755E6F00A8E1B7 /* AppDelegate.swift in Sources */,
+				2086F7331F77F0D0002730E0 /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
