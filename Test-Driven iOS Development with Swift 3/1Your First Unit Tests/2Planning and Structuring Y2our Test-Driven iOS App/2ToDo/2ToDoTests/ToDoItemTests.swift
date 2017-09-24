@@ -1,7 +1,6 @@
 import XCTest
-@testable import _ToDo
 
-class _ToDoTests: XCTestCase {
+class ToDoItemTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -14,5 +13,9 @@ class _ToDoTests: XCTestCase {
     }
     
 
+    func test_Init_TakesTitle() {
+//        ToDoItem(title: "Foo")
+        XCTAssertNotNil("item", "item should not be nil")
+    }
     
 }
