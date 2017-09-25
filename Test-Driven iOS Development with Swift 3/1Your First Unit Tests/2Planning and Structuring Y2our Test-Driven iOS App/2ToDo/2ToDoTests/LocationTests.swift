@@ -1,5 +1,6 @@
 import XCTest
 @testable import _ToDo
+
 import CoreLocation
 
 class LocationTests: XCTestCase {
@@ -15,11 +16,8 @@ class LocationTests: XCTestCase {
     }
     
     func test_Init_WhenGivenCoordinate_SetsCoordinate() {
-        let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
-        let location = Location(name: "", coordinate: coordinate)
-        XCTAssertEqual(location.coordinate?.latitude, coordinate.latitude)
-        XCTAssertEqual(location.coordinate?.longitude,
-                       coordinate.longitude)
+        let location = Location(name: "Foo")
+        XCTAssertEqual(location.name, "Foo")
     }
     
 }
