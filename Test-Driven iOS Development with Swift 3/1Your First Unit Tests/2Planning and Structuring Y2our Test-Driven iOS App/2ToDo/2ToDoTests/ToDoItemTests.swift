@@ -15,7 +15,7 @@ class ToDoItemTests: XCTestCase {
     
 
     func test_Init_TakesTitle() {
-        let item = ToDoItem(title: "Foo")
+        let item = ToDoItem(title: "Foo", itemDescription: "Bar")
         XCTAssertNotNil(item, "item should not be nil")
     }
     
