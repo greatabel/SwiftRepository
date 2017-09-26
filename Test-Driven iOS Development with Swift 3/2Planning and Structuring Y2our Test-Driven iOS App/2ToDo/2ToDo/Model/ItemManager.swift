@@ -2,7 +2,7 @@ import Foundation
 
 class ItemManager {
     var toDoCount = 0
-    let doneCount = 0
+    var doneCount = 0
 
     private var todoItems: [ToDoItem] = []
 
@@ -16,7 +16,8 @@ class ItemManager {
     }
 
     func checkItem(at index: Int){
-
+        toDoCount -= 1
+        doneCount += 1
     }
     
 }
