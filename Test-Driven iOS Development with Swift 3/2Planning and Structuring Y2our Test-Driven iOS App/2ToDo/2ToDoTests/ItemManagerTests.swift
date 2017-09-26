@@ -27,6 +27,7 @@ class ItemManagerTests: XCTestCase {
 
     func test_AddItem_IncreasesToDoCountToOne() {
         sut.add(ToDoItem(title: ""))
+        XCTAssertEqual(sut.toDoCount, 1)
     }
     
 }
