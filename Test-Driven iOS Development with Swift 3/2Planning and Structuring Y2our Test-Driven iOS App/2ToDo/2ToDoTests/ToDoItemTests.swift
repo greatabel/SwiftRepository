@@ -36,5 +36,7 @@ class ToDoItemTests: XCTestCase {
         XCTAssertEqual(item.location?.name, location.name,
                        "should set location")
     }
+
+
     
 }
