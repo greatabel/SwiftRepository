@@ -14,4 +14,9 @@ class ItemManager {
     func item(at index: Int) -> ToDoItem {
         return todoItems[index]
     }
+
+    func checkItem(at index: Int){
+
+    }
+    
 }
