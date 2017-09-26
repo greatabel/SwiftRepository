@@ -34,5 +34,6 @@ class ItemManagerTests: XCTestCase {
         let item = ToDoItem(title: "Foo")
         sut.add(item)
         let returnItem = sut.item(at:0)
+        XCTAssertEqual(returnItem.title, item.title)
     }
 }
