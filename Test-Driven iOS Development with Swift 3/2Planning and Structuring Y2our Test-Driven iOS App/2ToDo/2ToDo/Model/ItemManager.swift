@@ -7,4 +7,8 @@ class ItemManager {
     func add(_ item: ToDoItem) {
         toDoCount += 1
     }
+
+    func item(at index: Int) -> ToDoItem {
+        return ToDoItem(title: "")
+    }
 }
