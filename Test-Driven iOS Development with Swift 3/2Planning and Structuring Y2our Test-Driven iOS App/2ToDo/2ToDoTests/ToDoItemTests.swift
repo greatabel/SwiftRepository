@@ -55,6 +55,16 @@ class ToDoItemTests: XCTestCase {
         XCTAssertNotEqual(first, second)
     }
 
+    func test_Locations_WhenLongitudeDiffers_AreNotEqual() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 0.0,longitude: 1.0)
+
+
+        let first = Location(name: "Foo", coordinate: firstCoordinate)
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 0.0,
+                                                      longitude: 0.0)
+        let second = Location(name: "Foo", coordinate: secondCoordinate)
+        XCTAssertNotEqual(first, second)
+    }
 
     
 }

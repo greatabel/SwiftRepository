@@ -15,6 +15,9 @@ struct Location: Equatable {
         if lhs.coordinate?.latitude != rhs.coordinate?.latitude {
             return false
         }
+        if lhs.coordinate?.longitude != rhs.coordinate?.longitude {
+            return false
+        }
         return true
     }
 }
