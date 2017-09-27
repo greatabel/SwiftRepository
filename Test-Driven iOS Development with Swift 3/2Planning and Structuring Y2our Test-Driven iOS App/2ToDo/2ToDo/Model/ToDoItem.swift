@@ -18,6 +18,9 @@ struct ToDoItem: Equatable {
         if lbs.location != rhs.location {
             return false
         }
+        if lbs.timestamp != rhs.timestamp {
+            return false
+        }
         return true
     }
 }
