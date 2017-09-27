@@ -37,6 +37,12 @@ class ToDoItemTests: XCTestCase {
                        "should set location")
     }
 
+    func text_EqualItems_AreEqual() {
+        let first = ToDoItem(title: "Foo")
+        let second = ToDoItem(title: "Foo")
+        XCTAssertEqual(first, second)
+    }
+
 
     
 }
