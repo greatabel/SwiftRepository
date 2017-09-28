@@ -32,5 +32,8 @@ class ItemManager {
 //        doneCount += 1
 
     }
+
+    func removeAll() {
+    }
     
 }
