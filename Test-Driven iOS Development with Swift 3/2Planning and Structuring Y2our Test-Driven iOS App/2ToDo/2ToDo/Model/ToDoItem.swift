@@ -21,6 +21,9 @@ struct ToDoItem: Equatable {
         if lbs.timestamp != rhs.timestamp {
             return false
         }
+        if lbs.title != rhs.title {
+            return false
+        }
         return true
     }
 }
