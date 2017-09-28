@@ -13,7 +13,9 @@ class ItemManager {
 
     func add(_ item: ToDoItem) {
 //        toDoCount += 1
-        todoItems.append(item)
+        if !todoItems.contains(item) {
+            todoItems.append(item)
+        }
     }
 
     func item(at index: Int) -> ToDoItem {
@@ -34,7 +36,7 @@ class ItemManager {
     }
 
     func removeAll() {
-        toDoItems.removeAll()
+        todoItems.removeAll()
         doneItems.removeAll()
     }
     
