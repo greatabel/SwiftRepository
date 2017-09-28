@@ -68,6 +68,8 @@ class ItemManagerTests: XCTestCase {
         XCTAssertEqual(sut.toDoCount, 1)
         XCTAssertEqual(sut.doneCount, 1)
         sut.removeAll()
+        XCTAssertEqual(sut.toDoCount, 0)
+        XCTAssertEqual(sut.doneCount, 0)
     }
 
 }
