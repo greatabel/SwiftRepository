@@ -13,7 +13,7 @@ class ItemListViewController: UIViewController {
 
 
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var dataProvider: ItemListDataProvider!
+    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class ItemListViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        tableView = UITableView()
         tableView.dataSource = dataProvider
+        tableView.delegate = dataProvider
     }
 
     override func didReceiveMemoryWarning() {
