@@ -18,10 +18,17 @@ class ItemListViewControllerTest: XCTestCase {
 
  
 
+//    func test_TableView_AfterViewDidLoad_IsNotNil() {
+//        _ = sut.view
+//        XCTAssertNotNil(sut.tableView)
+//    }
     func test_TableView_AfterViewDidLoad_IsNotNil() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(
+            withIdentifier: "ItemListViewController")
+        let sut = viewController as! ItemListViewController
         _ = sut.view
         XCTAssertNotNil(sut.tableView)
     }
-
     
 }
