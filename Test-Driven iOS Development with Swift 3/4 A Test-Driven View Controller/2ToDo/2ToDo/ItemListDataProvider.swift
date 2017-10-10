@@ -11,7 +11,7 @@ class ItemListDataProvider: NSObject, UITableViewDataSource {
         case 0:
             numberOfRows = itemManager?.toDoCount ?? 0
         case 1:
-            numberOfRows = 0
+            numberOfRows = itemManager?.doneCount ?? 0
         default:
             numberOfRows = 0
         }
