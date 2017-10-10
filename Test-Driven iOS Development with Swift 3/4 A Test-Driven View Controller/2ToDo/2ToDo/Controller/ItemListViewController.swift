@@ -1,11 +1,3 @@
-//
-//  ItemListViewController.swift
-//  2ToDo
-//
-//  Created by 万畅 on 2017/9/29.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import UIKit
 
 class ItemListViewController: UIViewController {
