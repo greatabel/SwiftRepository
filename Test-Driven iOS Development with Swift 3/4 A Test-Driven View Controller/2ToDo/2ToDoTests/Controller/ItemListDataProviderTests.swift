@@ -1,6 +1,19 @@
 import XCTest
 @testable import _ToDo
 
+extension ItemListViewControllerTest {
+
+    class MockTableView: UITableView {
+        var cellGotDequeued = false
+
+        override func dequeueReusableCell(withIdentifier identifier: String
+            ,for indexPath: IndexPath) -> UITableViewCell {
+            cellGotDequeued = true
+            return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        }
+    }
+}
+
 class ItemListDataProviderTests: XCTestCase {
 
     var sut: ItemListDataProvider!
@@ -55,5 +68,6 @@ class ItemListDataProviderTests: XCTestCase {
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssertTrue(cell is ItemCell)
     }
+
     
 }
