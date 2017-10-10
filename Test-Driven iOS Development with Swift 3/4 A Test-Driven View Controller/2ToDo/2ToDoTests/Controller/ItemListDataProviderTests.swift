@@ -12,6 +12,14 @@ extension ItemListDataProviderTests {
             return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         }
     }
+
+    class MockItemCell: ItemCell {
+        var configCellGotCalled = false
+
+        func configCell(with item: ToDoItem) {
+            configCellGotCalled = true
+        }
+    }
 }
 
 class ItemListDataProviderTests: XCTestCase {
@@ -86,6 +94,19 @@ class ItemListDataProviderTests: XCTestCase {
 
         _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssertTrue(mockTableView.cellGotDequeued)
+    }
+
+    func test_CellForRow_CallsConfigCell() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = sut
+        mockTableView.register(MockItemCell.self, forCellReuseIdentifier: "ItemCell")
+        let item = ToDoItem(title: "Foo")
+        sut.itemManager?.add(item)
+        mockTableView.reloadData()
+
+        let cell = mockTableView.cellForRow(at: IndexPath(row:0, section: 0)) as! MockItemCell
+        XCTAssertTrue(cell.configCellGotCalled)
+
     }
 
     
