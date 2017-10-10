@@ -16,7 +16,7 @@ extension ItemListDataProviderTests {
     class MockItemCell: ItemCell {
         var configCellGotCalled = false
 
-        func configCell(with item: ToDoItem) {
+        override func configCell(with item: ToDoItem) {
             configCellGotCalled = true
         }
     }
