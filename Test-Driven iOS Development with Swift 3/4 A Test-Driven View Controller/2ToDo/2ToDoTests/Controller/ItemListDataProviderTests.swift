@@ -18,13 +18,20 @@ class ItemListDataProviderTests: XCTestCase {
 
     var sut: ItemListDataProvider!
     var tableView: UITableView!
+    var controller: ItemListViewController!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         sut = ItemListDataProvider()
         sut.itemManager = ItemManager()
-        tableView = UITableView()
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        controller = storyboard.instantiateViewController(withIdentifier: "ItemListViewController") as! ItemListViewController
+
+        _ = controller.view
+
+        tableView = controller.tableView
         tableView.dataSource = sut
 
     }
