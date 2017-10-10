@@ -1,7 +1,7 @@
 import XCTest
 @testable import _ToDo
 
-extension ItemListViewControllerTest {
+extension ItemListDataProviderTests {
 
     class MockTableView: UITableView {
         var cellGotDequeued = false
@@ -67,6 +67,18 @@ class ItemListDataProviderTests: XCTestCase {
 
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssertTrue(cell is ItemCell)
+    }
+
+    func test_CellForRow_DequeuesCellFromTableView() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = sut
+        mockTableView.register(ItemCell.self,
+                               forCellReuseIdentifier: "ItemCell")
+        sut.itemManager?.add(ToDoItem(title: "Foo"))
+        mockTableView.reloadData()
+
+        _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(mockTableView.cellGotDequeued)
     }
 
     
