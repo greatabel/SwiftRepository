@@ -109,5 +109,23 @@ class ItemListDataProviderTests: XCTestCase {
 
     }
 
+    func test_CellForRow_InSectionTwo_CallsConfigCellWithDoneItem() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = sut
+        mockTableView.register(MockItemCell.self, forCellReuseIdentifier: "ItemCell")
+
+        sut.itemManager?.add(ToDoItem(title: "Foo"))
+
+        let second = ToDoItem(title: "Bar")
+        sut.itemManager?.add(second)
+        sut.itemManager?.checkItem(at: 1)
+        mockTableView.reloadData()
+
+        let cell = mockTableView
+            .cellForRow(at: IndexPath(row: 0, section: 1)) as! MockItemCell
+        XCTAssertEqual(cell.catchedItem, second)
+
+    }
+
     
 }
