@@ -110,7 +110,11 @@ class ItemListDataProviderTests: XCTestCase {
     }
 
     func test_CellForRow_InSectionTwo_CallsConfigCellWithDoneItem() {
-        let mockTableView = MockTableView()
+//        let mockTableView = MockTableView()
+        let mockTableView = MockTableView(
+            frame: CGRect(x: 0, y:0, width: 320, height: 480),
+            style: .plain)
+
         mockTableView.dataSource = sut
         mockTableView.register(MockItemCell.self, forCellReuseIdentifier: "ItemCell")
 
