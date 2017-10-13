@@ -139,5 +139,9 @@ class ItemListDataProviderTests: XCTestCase {
         XCTAssertEqual(deleteButtonTitle, "Check")
     }
 
+    func test_DeleteButton_InSecondSection_ShowsTitleUncheck() {
+
+    }
+
     
 }
