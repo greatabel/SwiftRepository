@@ -140,7 +140,10 @@ class ItemListDataProviderTests: XCTestCase {
     }
 
     func test_DeleteButton_InSecondSection_ShowsTitleUncheck() {
-
+        let deleteButtonTitle = tableView.delegate?.tableView?(
+            tableView,
+            titleForDeleteConfirmationButtonForRowAt: IndexPath(row: 0, section: 1))
+        XCTAssertEqual(deleteButtonTitle, "Uncheck")
     }
 
     
