@@ -146,5 +146,10 @@ class ItemListDataProviderTests: XCTestCase {
         XCTAssertEqual(deleteButtonTitle, "Uncheck")
     }
 
+
+    func test_CheckingAnItem_ChecksItInTheItemManager() {
+
+    }
+
     
 }
