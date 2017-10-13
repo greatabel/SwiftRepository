@@ -2,7 +2,7 @@ import XCTest
 @testable import _ToDo
 
 extension ItemCellTests {
-    class FackDataSource: NSObject, UITableViewDataSource {
+    class FakeDataSource: NSObject, UITableViewDataSource {
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return 1
         }
@@ -23,6 +23,23 @@ class ItemCellTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    func test_HasNameLabel() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard
+            .instantiateViewController(withIdentifier: "ItemListViewController")
+            as! ItemListViewController
+        _ = controller.view
+        let tableView = controller.tableView
+        let dataSource = FakeDataSource()
+        tableView?.dataSource = dataSource
+        let cell = tableView?.dequeueReusableCell(
+            withIdentifier: "ItemCell",
+            for: IndexPath(row: 0, section: 0)) as! ItemCell
+        XCTAssertNotNil(cell.titleLabel)
+        
+    }
+
     
 
     
