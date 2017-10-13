@@ -1,6 +1,7 @@
 import UIKit
 
-class ItemListDataProvider: NSObject, UITableViewDataSource {
+class ItemListDataProvider: NSObject, UITableViewDataSource,
+        UITableViewDelegate {
 
     var itemManager: ItemManager?
 
@@ -51,6 +52,13 @@ class ItemListDataProvider: NSObject, UITableViewDataSource {
         cell.configCell(with: item)
 
         return cell
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        titleForDeleteConfirmationButtonForRowAt indexPath:
+        IndexPath) -> String? {
+        return "Check"
     }
 
 }
