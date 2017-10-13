@@ -160,5 +160,18 @@ class ItemListDataProviderTests: XCTestCase {
         XCTAssertEqual(tableView.numberOfRows(inSection: 1), 1)
     }
 
+    func test_UncheckingAnItem_UnchecksItInTheItemManager() {
+        sut.itemManager?.add(ToDoItem(title: "First"))
+        sut.itemManager?.checkItem(at: 0)
+        tableView.reloadData()
+        tableView.dataSource?.tableView?(tableView,
+                                        commit: .delete, forRowAt: IndexPath(row: 0, section: 1))
+
+        XCTAssertEqual(sut.itemManager?.toDoCount, 1)
+        XCTAssertEqual(sut.itemManager?.doneCount, 0)
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(tableView.numberOfRows(inSection: 1), 0)
+    }
+
     
 }
