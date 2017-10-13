@@ -58,7 +58,18 @@ class ItemListDataProvider: NSObject, UITableViewDataSource,
                 _ tableView: UITableView,
                 titleForDeleteConfirmationButtonForRowAt indexPath:
                 IndexPath) -> String? {
-        return "Check"
+        guard let section = Section(rawValue: indexPath.section) else {
+            fatalError()
+        }
+        let buttonTitle: String
+        switch section {
+        case .toDo:
+            buttonTitle = "Check"
+        case .done:
+            buttonTitle = "Uncheck"
+        }
+
+        return buttonTitle
     }
 
 }
