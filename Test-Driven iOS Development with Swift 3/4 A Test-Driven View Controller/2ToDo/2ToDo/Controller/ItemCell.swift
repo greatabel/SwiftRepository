@@ -9,7 +9,8 @@ class ItemCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
     
     func configCell(with item: ToDoItem) {
-        
+        titleLabel.text = item.title
+
     }
 
 }
