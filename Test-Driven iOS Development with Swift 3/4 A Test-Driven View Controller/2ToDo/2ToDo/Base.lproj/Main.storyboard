@@ -38,9 +38,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMj-tb-xqX">
+                                            <rect key="frame" x="181" y="14" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="RMj-tb-xqX" id="jpL-wU-Za9"/>
                                     <outlet property="locationLabel" destination="mGD-Zo-fmw" id="HIf-9k-mOe"/>
                                     <outlet property="titleLabel" destination="OKA-1T-WXw" id="lA8-vb-LmU"/>
                                 </connections>

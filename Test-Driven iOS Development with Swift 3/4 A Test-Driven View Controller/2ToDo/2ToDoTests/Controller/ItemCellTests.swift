@@ -50,6 +50,10 @@ class ItemCellTests: XCTestCase {
 
         XCTAssertNotNil(cell.locationLabel)
     }
+
+    func test_HasDateLabel() {
+        XCTAssertNotNil(cell.dateLabel)
+    }
     
 
     

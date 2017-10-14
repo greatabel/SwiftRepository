@@ -6,6 +6,8 @@ class ItemCell: UITableViewCell {
     
     @IBOutlet var locationLabel: UILabel!
 
+    @IBOutlet var dateLabel: UILabel!
+    
     func configCell(with item: ToDoItem) {
         
     }
