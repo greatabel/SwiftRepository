@@ -10,7 +10,7 @@ class ItemCell: UITableViewCell {
     
     func configCell(with item: ToDoItem) {
         titleLabel.text = item.title
-
+        locationLabel.text = item.location?.name
     }
 
 }
