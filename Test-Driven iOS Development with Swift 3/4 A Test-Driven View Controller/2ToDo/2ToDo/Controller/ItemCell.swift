@@ -14,14 +14,24 @@ class ItemCell: UITableViewCell {
         return dateFormatter
     }()
 
-    func configCell(with item: ToDoItem) {
-        titleLabel.text = item.title
-        locationLabel.text = item.location?.name
-
-        if let timestamp = item.timestamp {
-            let date = Date(timeIntervalSince1970: timestamp)
-            dateLabel.text = dateFormatter.string(from: date)
+    func configCell(with item: ToDoItem, checked: Bool = false) {
+        if checked {
+            let attributedString = NSAttributedString(
+                string: item.title,
+                attributes: [NSAttributedStringKey.strikethroughStyle:
+                    NSUnderlineStyle.styleSingle.rawValue])
+            titleLabel.attributedText = attributedString
+            locationLabel.text = nil
+            dateLabel.text = nil
+        } else {
+            titleLabel.text = item.title
+            locationLabel.text = item.location?.name
+            if let timestamp = item.timestamp {
+                let date = Date(timeIntervalSince1970: timestamp)
+                dateLabel.text = dateFormatter.string(from: date)
+            }
         }
     }
+
 
 }

@@ -73,8 +73,9 @@ class ItemCellTests: XCTestCase {
         cell.configCell(with: item, checked: true)
         let attributedString = NSAttributedString(
             string: "Foo",
-            attributes: [NSStrikethroughStyleAttributeName:
+            attributes: [NSAttributedStringKey.strikethroughStyle:
                 NSUnderlineStyle.styleSingle.rawValue])
+//        print("###", cell.titleLabel.attributedText)
         XCTAssertEqual(cell.titleLabel.attributedText, attributedString)
         XCTAssertNil(cell.locationLabel.text)
         XCTAssertNil(cell.dateLabel.text)
