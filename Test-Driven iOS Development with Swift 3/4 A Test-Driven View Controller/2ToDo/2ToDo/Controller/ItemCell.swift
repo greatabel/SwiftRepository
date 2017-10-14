@@ -12,7 +12,7 @@ class ItemCell: UITableViewCell {
         titleLabel.text = item.title
         locationLabel.text = item.location?.name
 
-        if let timestap = item.timestamp {
+        if let timestamp = item.timestamp {
             let date = Date(timeIntervalSince1970: timestamp)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/yyyy"
