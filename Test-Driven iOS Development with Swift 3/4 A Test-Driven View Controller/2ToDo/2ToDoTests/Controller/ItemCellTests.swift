@@ -43,11 +43,10 @@ class ItemCellTests: XCTestCase {
     func test_HasLocationLabel() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard
-            .instantiateViewController(
-                withIdentifier:" ItemListViewController")
+            .instantiateViewController(withIdentifier: "ItemListViewController")
             as! ItemListViewController
         _ = controller.view
-
+        
         let tableView = controller.tableView
         let dataSource = FakeDataSource()
         tableView?.dataSource = dataSource
