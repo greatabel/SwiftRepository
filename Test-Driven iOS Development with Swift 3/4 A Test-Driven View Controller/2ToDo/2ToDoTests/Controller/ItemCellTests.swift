@@ -41,18 +41,20 @@ class ItemCellTests: XCTestCase {
     }
 
     func test_HasNameLabel() {
-
         XCTAssertNotNil(cell.titleLabel)
-        
     }
 
     func test_HasLocationLabel() {
-
         XCTAssertNotNil(cell.locationLabel)
     }
 
     func test_HasDateLabel() {
         XCTAssertNotNil(cell.dateLabel)
+    }
+
+    func test_ConfigCell_SetsTitle() {
+        cell.configCell(with: ToDoItem(title: "Foo"))
+        XCTAssertEqual(cell.titleLabel.text, "Foo")
     }
     
 
