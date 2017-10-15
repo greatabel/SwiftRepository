@@ -102,6 +102,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-k7-BgY">
+                                <rect key="frame" x="42" y="203" width="308" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LxC-58-j1g"/>
@@ -110,12 +114,13 @@
                         <outlet property="dateLabel" destination="Evp-hy-UXl" id="dw5-aP-hdQ"/>
                         <outlet property="descriptionLabel" destination="9To-3x-E9F" id="KBz-f5-Kax"/>
                         <outlet property="locationLabel" destination="PC1-mq-LN4" id="Zaw-t7-ZB2"/>
+                        <outlet property="mapView" destination="r1P-k7-BgY" id="AoL-me-keY"/>
                         <outlet property="titleLabel" destination="trw-t5-gGj" id="ttF-NI-uCG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbw-cO-N3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="106"/>
+            <point key="canvasLocation" x="789.60000000000002" y="105.69715142428787"/>
         </scene>
     </scenes>
 </document>

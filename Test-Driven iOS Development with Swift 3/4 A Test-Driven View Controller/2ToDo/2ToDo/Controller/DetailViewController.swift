@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 
 class DetailViewController: UIViewController {
 
@@ -7,6 +8,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+
+    @IBOutlet var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

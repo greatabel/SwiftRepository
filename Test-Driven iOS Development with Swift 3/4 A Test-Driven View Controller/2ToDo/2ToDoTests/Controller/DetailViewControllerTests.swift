@@ -1,5 +1,6 @@
 import XCTest
 @testable import _ToDo
+import MapKit
 
 class DetailViewControllerTests: XCTestCase {
 
@@ -35,4 +36,9 @@ class DetailViewControllerTests: XCTestCase {
     func test_HasDescriptionLabel() {
         XCTAssertNotNil(sut.descriptionLabel)
     }
+
+    func test_HasMapView() {
+        XCTAssertNotNil(sut.mapView)
+    }
+
 }
