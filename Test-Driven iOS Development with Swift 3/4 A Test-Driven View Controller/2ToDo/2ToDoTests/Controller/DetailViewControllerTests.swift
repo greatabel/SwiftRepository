@@ -13,5 +13,13 @@ class DetailViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    
+    func test_HasTitleLabel() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard
+            .instantiateViewController(withIdentifier: "DetailViewController")
+        as! DetailViewController
+        _ = sut.view
+        XCTAssertNotNil(sut.titleLabel)
+        
+    }
 }
