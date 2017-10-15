@@ -23,6 +23,16 @@ class DetailViewControllerTests: XCTestCase {
     func test_HasTitleLabel() {
 
         XCTAssertNotNil(sut.titleLabel)
-        
+    }
+    func test_HasDateLabel() {
+        XCTAssertNotNil(sut.dateLabel)
+    }
+
+    func test_HasLocationLabel() {
+        XCTAssertNotNil(sut.locationLabel)
+    }
+
+    func test_HasDescriptionLabel() {
+        XCTAssertNotNil(sut.descriptionLabel)
     }
 }
