@@ -1,6 +1,6 @@
 import XCTest
 @testable import _ToDo
-import MapKit
+import  CoreLocation
 
 class DetailViewControllerTests: XCTestCase {
 
@@ -39,6 +39,19 @@ class DetailViewControllerTests: XCTestCase {
 
     func test_HasMapView() {
         XCTAssertNotNil(sut.mapView)
+    }
+
+    func test_SettingItemInfo_SetsTextsToLabels() {
+        let coordinate = CLLocationCoordinate2DMake(51.2277, 6.7735)
+        let location = Location(name: "Foo", coordinate: coordinate)
+        let item = ToDoItem(title: "Bar",itemDescription: "Baz",
+                            timestamp: 1456150025,
+                            location: location)
+
+        let itemManager = ItemManager()
+        itemManager.add(item)
+
+        sut.itemInfo = (itemManager, 0)
     }
 
 }

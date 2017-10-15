@@ -10,6 +10,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
 
     @IBOutlet var mapView: MKMapView!
+
+    var itemInfo: (ItemManager, Int)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
