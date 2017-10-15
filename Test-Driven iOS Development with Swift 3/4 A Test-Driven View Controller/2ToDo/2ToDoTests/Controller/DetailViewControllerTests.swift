@@ -2,10 +2,17 @@ import XCTest
 @testable import _ToDo
 
 class DetailViewControllerTests: XCTestCase {
-    
+
+    var sut: DetailViewController!
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        sut = storyboard
+            .instantiateViewController(withIdentifier: "DetailViewController")
+            as! DetailViewController
+        _ = sut.view
     }
     
     override func tearDown() {
@@ -14,11 +21,7 @@ class DetailViewControllerTests: XCTestCase {
     }
     
     func test_HasTitleLabel() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard
-            .instantiateViewController(withIdentifier: "DetailViewController")
-        as! DetailViewController
-        _ = sut.view
+
         XCTAssertNotNil(sut.titleLabel)
         
     }
