@@ -50,8 +50,20 @@ class DetailViewControllerTests: XCTestCase {
 
         let itemManager = ItemManager()
         itemManager.add(item)
-
         sut.itemInfo = (itemManager, 0)
+
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertEqual(sut.titleLabel.text, "Bar")
+        XCTAssertEqual(sut.dateLabel.text, "02/22/2016")
+        XCTAssertEqual(sut.locationLabel.text, "Foo")
+        XCTAssertEqual(sut.descriptionLabel.text, "Baz")
+        XCTAssertEqual(sut.mapView.centerCoordinate.latitude,
+                                   coordinate.latitude,
+                                   accuracy: 0.001)
+        XCTAssertEqual(sut.mapView.centerCoordinate.longitude,
+                                   coordinate.longitude,
+                                   accuracy: 0.001)
     }
 
 }
