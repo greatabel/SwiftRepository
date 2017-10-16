@@ -3,6 +3,11 @@ import UIKit
 class InputViewController: UIViewController {
 
     @IBOutlet var titleTextField: UITextField!
+
+    @IBOutlet var dateTextField: UITextField!
+    @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var addressTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

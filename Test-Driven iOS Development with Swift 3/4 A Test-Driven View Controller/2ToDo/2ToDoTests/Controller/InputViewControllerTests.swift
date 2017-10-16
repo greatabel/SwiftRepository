@@ -25,5 +25,21 @@ class InputViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.titleTextField)
     }
 
+    func test_HasDateTextField() {
+        XCTAssertNotNil(sut.dateTextField)
+    }
+
+    func test_HasLocationTextField() {
+        XCTAssertNotNil(sut.locationTextField)
+    }
+
+    func test_HasAddressTextField() {
+        XCTAssertNotNil(sut.addressTextField)
+    }
+
+    func test_HasDescriptionTextField() {
+        XCTAssertNotNil(sut.descriptionTextField)
+    }
+
     
 }
