@@ -87,6 +87,18 @@ class InputViewControllerTests: XCTestCase {
         XCTAssertEqual(item, testItem)
     }
 
+    func test_SaveButtonHasSaveAction() {
+        let saveButton: UIButton = sut.saveButton
+
+        guard let actions = saveButton.actions(
+            forTarget: sut,
+            forControlEvent: .touchUpInside) else {
+                XCTFail(); return
+        }
+
+        XCTAssertTrue(actions.contains("save"))
+    }
+
     
 }
 extension InputViewControllerTests {
