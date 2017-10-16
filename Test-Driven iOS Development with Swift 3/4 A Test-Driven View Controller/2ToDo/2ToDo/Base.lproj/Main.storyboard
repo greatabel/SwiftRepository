@@ -122,5 +122,32 @@
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="105.69715142428787"/>
         </scene>
+        <!--Input View Controller-->
+        <scene sceneID="uqb-YE-TBH">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" id="ANb-JJ-tA2" customClass="InputViewController" customModule="_ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="maQ-Mf-f7a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6A-0F-GVE">
+                                <rect key="frame" x="34" y="27" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vhp-fJ-dfH"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="P6A-0F-GVE" id="yd3-9S-vqe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="loW-7E-cEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="106"/>
+        </scene>
     </scenes>
 </document>
