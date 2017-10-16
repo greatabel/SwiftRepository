@@ -61,7 +61,7 @@ class InputViewControllerTests: XCTestCase {
         sut.titleTextField.text = "Foo"
         sut.dateTextField.text = dateFormatter.string(from: date)
         sut.locationTextField.text = "Bar"
-        sut.addressTextField.text = "Infinite Loop 1, Cupertino"
+        sut.addressTextField.text = "武汉市关山大道"
         sut.descriptionTextField.text = "Baz"
         let mockGeocoder = MockGeocoder()
         sut.geocoder = mockGeocoder
@@ -71,8 +71,8 @@ class InputViewControllerTests: XCTestCase {
         sut.save()
         
         placemark = MockPlacemark()
-        let coordinate = CLLocationCoordinate2DMake(37.3316851,
-                                                    -122.0300674)
+        let coordinate = CLLocationCoordinate2DMake(30.484633,
+                                                    114.410421)
         placemark.mockCoordinate = coordinate
         mockGeocoder.completionHandler?([placemark], nil)
 
@@ -97,6 +97,41 @@ class InputViewControllerTests: XCTestCase {
         }
 
         XCTAssertTrue(actions.contains("save"))
+    }
+
+    func test_Geocoder_FetchesCoordinates() {
+        let geocoderAnswered = expectation(description: "Geocoder")
+
+        CLGeocoder().geocodeAddressString("武汉市关山大道") {
+            (placemarks, error) -> Void in
+
+            defer { geocoderAnswered.fulfill() }
+            guard error == nil else {
+                XCTFail(error!.localizedDescription); return
+            }
+//            guard let coordinate = placemarks?.first?.location?.coordinate else {
+//                XCTFail("No coordinate"); return
+//            }
+
+            let coordinate = placemarks?.first?.location?.coordinate
+
+            guard let latitude = coordinate?.latitude else {
+                XCTFail()
+                return
+            }
+
+            guard let longitude = coordinate?.longitude else {
+                XCTFail()
+                return
+            }
+
+            XCTAssertEqual(latitude, 30.484633, accuracy: 0.0001)
+            XCTAssertEqual(longitude, 114.410421, accuracy: 0.001)
+
+//            geocoderAnswered.fulfill()
+        }
+
+        waitForExpectations(timeout: 1, handler: nil)
     }
 
     
