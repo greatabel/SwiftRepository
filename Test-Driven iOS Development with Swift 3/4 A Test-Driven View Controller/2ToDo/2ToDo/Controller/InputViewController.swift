@@ -8,6 +8,9 @@ class InputViewController: UIViewController {
     @IBOutlet var locationTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
     @IBOutlet var descriptionTextField: UITextField!
+
+    @IBOutlet var saveButton: UIButton!
+    @IBOutlet var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

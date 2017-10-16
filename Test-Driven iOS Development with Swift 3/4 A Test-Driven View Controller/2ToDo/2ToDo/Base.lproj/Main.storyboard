@@ -165,15 +165,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-GT-nHr">
+                                <rect key="frame" x="47" y="253" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-KN-eIh">
+                                <rect key="frame" x="47" y="298" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vhp-fJ-dfH"/>
                     </view>
                     <connections>
                         <outlet property="addressTextField" destination="8Qz-BS-mi5" id="S2I-Gz-ux5"/>
+                        <outlet property="cancelButton" destination="qZW-KN-eIh" id="x4v-N6-eRN"/>
                         <outlet property="dateTextField" destination="8ke-yl-der" id="oMc-pI-Vv7"/>
                         <outlet property="descriptionTextField" destination="2rq-6R-LLZ" id="7fB-K0-LiL"/>
                         <outlet property="locationTextField" destination="EVg-5u-GRJ" id="w7z-Mb-VUA"/>
+                        <outlet property="saveButton" destination="Qkh-GT-nHr" id="dGC-b7-e8c"/>
                         <outlet property="titleTextField" destination="P6A-0F-GVE" id="yd3-9S-vqe"/>
                     </connections>
                 </viewController>

@@ -41,5 +41,13 @@ class InputViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.descriptionTextField)
     }
 
+    func test_HasSaveButton() {
+        XCTAssertNotNil(sut.saveButton)
+    }
+
+    func test_HasCancelButton() {
+        XCTAssertNotNil(sut.cancelButton)
+    }
+
     
 }
