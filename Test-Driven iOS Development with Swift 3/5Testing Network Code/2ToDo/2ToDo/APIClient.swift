@@ -15,6 +15,10 @@ class APIClient {
 //    lazy var session: URLSession = URLSession.shared
     lazy var session: SessionProtocol = URLSession.shared as! SessionProtocol
 
+    func loginUser(withName username: String,
+                   password: String,
+                   completion: @escaping (Token?, Error?) -> Void) {
 
+    }
 
 }
