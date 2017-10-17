@@ -22,6 +22,11 @@ class APIClientTests: XCTestCase {
         sut.loginUser(withName:"dasdom",
                       password: "1234",
                       completion: completion)
+
+        guard let url = mockURLSession.url else { XCTFail(); return }
+        let urlComponents = URLComponents(url: url,
+                                          resolvingAgainstBaseURL: true)
+        XCTAssertEqual(urlComponents?.host, "awesometodos.com")
     }
     
     
