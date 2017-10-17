@@ -17,6 +17,11 @@ class APIClientTests: XCTestCase {
         let sut = APIClient()
         let mockURLSession = MockURLSession()
         sut.session = mockURLSession
+
+        let completion = { (token: Token?, error: Error?) in }
+        sut.loginUser(withName:"dasdom",
+                      password: "1234",
+                      completion: completion)
     }
     
     
