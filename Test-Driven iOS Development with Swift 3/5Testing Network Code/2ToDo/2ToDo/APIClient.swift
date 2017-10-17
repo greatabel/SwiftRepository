@@ -18,7 +18,7 @@ class APIClient {
     func loginUser(withName username: String,
                    password: String,
                    completion: @escaping (Token?, Error?) -> Void) {
-        guard let url = URL(string: "https://awesometodos.com") else {
+        guard let url = URL(string: "https://awesometodos.com/login") else {
             fatalError()
         }
         session.dataTask(with: url) { (data, response, error) in

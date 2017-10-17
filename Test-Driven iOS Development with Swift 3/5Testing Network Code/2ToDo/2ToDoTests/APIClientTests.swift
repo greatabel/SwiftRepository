@@ -27,6 +27,8 @@ class APIClientTests: XCTestCase {
         let urlComponents = URLComponents(url: url,
                                           resolvingAgainstBaseURL: true)
         XCTAssertEqual(urlComponents?.host, "awesometodos.com")
+
+        XCTAssertEqual(urlComponents?.path, "/login")
     }
     
     
