@@ -29,6 +29,10 @@ class APIClientTests: XCTestCase {
         XCTAssertEqual(urlComponents?.host, "awesometodos.com")
 
         XCTAssertEqual(urlComponents?.path, "/login")
+
+        XCTAssertEqual(urlComponents?.query,
+                       "username=dasdom&password=1234")
+
     }
     
     
