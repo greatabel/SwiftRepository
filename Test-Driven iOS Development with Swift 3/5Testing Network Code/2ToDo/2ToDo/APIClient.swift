@@ -1,5 +1,20 @@
 import UIKit
 
-class APIClient: NSObject {
+protocol SessionProtocol {
+    func dataTask(
+        with url: URL,
+        completionHandler: @escaping
+        (Data?, URLResponse?, Error?) -> Void)
+        -> URLSessionDataTask
+}
+extension URLSession: SessionProtocol {}
+
+class APIClient {
+
+
+//    lazy var session: URLSession = URLSession.shared
+    lazy var session: SessionProtocol = URLSession.shared as! SessionProtocol
+
+
 
 }

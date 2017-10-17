@@ -15,7 +15,25 @@ class APIClientTests: XCTestCase {
     
     func test_Login_UsesExpectedURL() {
         let sut = APIClient()
+        let mockURLSession = MockURLSession()
+        sut.session = mockURLSession
     }
     
     
 }
+
+extension APIClientTests {
+    class MockURLSession: SessionProtocol {
+        var url: URL?
+        func dataTask(with url: URL,
+                      completionHandler comletionHandler: @escaping
+        (Data?, URLResponse?, Error?) -> Void)
+            -> URLSessionDataTask {
+                self.url = url
+                return URLSession.shared.dataTask(with: url)
+        }
+    }
+
+}
+
+
