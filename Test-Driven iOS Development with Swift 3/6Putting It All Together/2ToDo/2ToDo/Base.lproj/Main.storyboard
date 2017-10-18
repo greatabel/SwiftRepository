@@ -56,7 +56,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Rh5-8n-0EG"/>
+                    <navigationItem key="navigationItem" id="Rh5-8n-0EG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xxN-4b-r0e">
+                            <connections>
+                                <action selector="addItem:" destination="BYZ-38-t0r" id="VQD-7i-Oyr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dataProvider" destination="vBj-7I-k7b" id="9CO-VQ-BAu"/>
                         <outlet property="tableView" destination="ZLl-tk-2gn" id="Fd0-M8-RbS"/>
