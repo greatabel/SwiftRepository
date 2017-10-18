@@ -7,6 +7,8 @@ class ItemListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate)!
 
+    let itemManager = ItemManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
