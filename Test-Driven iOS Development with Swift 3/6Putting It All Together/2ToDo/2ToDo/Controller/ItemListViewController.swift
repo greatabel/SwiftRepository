@@ -5,7 +5,7 @@ class ItemListViewController: UIViewController {
 
 
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate)!
+    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate & ItemManagerSettable)!
 
     let itemManager = ItemManager()
     
@@ -16,6 +16,8 @@ class ItemListViewController: UIViewController {
 //        tableView = UITableView()
         tableView.dataSource = dataProvider
         tableView.delegate = dataProvider
+        dataProvider.itemManager = itemManager
+
 
     }
 
@@ -33,6 +35,10 @@ class ItemListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
 
 }

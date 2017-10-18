@@ -1,6 +1,6 @@
 import Foundation
 
-class ItemManager {
+class ItemManager: NSObject {
     var toDoCount: Int {
         return todoItems.count
     }

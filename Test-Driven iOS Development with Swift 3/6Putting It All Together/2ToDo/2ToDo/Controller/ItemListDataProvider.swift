@@ -1,14 +1,21 @@
 import UIKit
 
+enum Section: Int {
+    case toDo
+    case done
+}
+
+
+@objc protocol ItemManagerSettable {
+    var itemManager: ItemManager? { get set }
+}
+
 class ItemListDataProvider: NSObject, UITableViewDataSource,
-        UITableViewDelegate {
+        UITableViewDelegate, ItemManagerSettable {
 
     var itemManager: ItemManager?
 
-    enum Section: Int {
-        case toDo
-        case done
-    }
+
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
