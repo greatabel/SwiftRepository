@@ -17,7 +17,11 @@ class ItemListViewController: UIViewController {
     }
 
     @IBAction func addItem(_ sender: UIBarButtonItem) {
-        
+        if let nextViewController =
+            storyboard?.instantiateViewController(withIdentifier: "InputViewController")
+                as? InputViewController {
+                present(nextViewController,animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

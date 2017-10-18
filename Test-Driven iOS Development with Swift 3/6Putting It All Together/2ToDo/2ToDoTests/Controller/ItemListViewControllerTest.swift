@@ -58,12 +58,17 @@ class ItemListViewControllerTest: XCTestCase {
             XCTFail()
             return
         }
+        UIApplication.shared.keyWindow?.rootViewController = sut
+
         sut.performSelector(onMainThread: action,
                             with: addButton,
                             waitUntilDone: true)
         XCTAssertNotNil(sut.presentedViewController)
         XCTAssertTrue(sut.presentedViewController is InputViewController)
 
+        let inputViewController =
+            sut.presentedViewController as! InputViewController
+        XCTAssertNotNil(inputViewController.titleTextField)
     }
     
 }
