@@ -16,12 +16,14 @@ class ItemListViewController: UIViewController {
 //        tableView = UITableView()
         tableView.dataSource = dataProvider
         tableView.delegate = dataProvider
+
     }
 
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         if let nextViewController =
             storyboard?.instantiateViewController(withIdentifier: "InputViewController")
                 as? InputViewController {
+                nextViewController.itemManager = self.itemManager
                 present(nextViewController,animated: true, completion: nil)
         }
     }
@@ -32,14 +34,5 @@ class ItemListViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
