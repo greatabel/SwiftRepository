@@ -1,5 +1,9 @@
 import UIKit
 
+enum WebserviceError: Error {
+    case DataEmptyError
+}
+
 protocol SessionProtocol {
     func dataTask(
         with url: URL,
@@ -10,7 +14,6 @@ protocol SessionProtocol {
 extension URLSession: SessionProtocol {}
 
 class APIClient {
-
 
 //    lazy var session: URLSession = URLSession.shared
     lazy var session: SessionProtocol = URLSession.shared as SessionProtocol
@@ -37,7 +40,7 @@ class APIClient {
         session.dataTask(with: url) { (data, response, error) in
             guard error == nil else { completion(nil, error); return }
             guard let data = data else {
-//                completion(nil, WebserviceError.DataEmptyError)
+                completion(nil, WebserviceError.DataEmptyError)
                 return
             }
 
