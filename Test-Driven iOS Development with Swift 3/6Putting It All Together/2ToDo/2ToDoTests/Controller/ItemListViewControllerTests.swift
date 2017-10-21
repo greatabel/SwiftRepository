@@ -1,7 +1,7 @@
 import XCTest
 @testable import _ToDo
 
-class ItemListViewControllerTest: XCTestCase {
+class ItemListViewControllerTests: XCTestCase {
 
     var sut: ItemListViewController!
 
@@ -103,4 +103,16 @@ class ItemListViewControllerTest: XCTestCase {
         XCTAssertTrue(sut.itemManager === sut.dataProvider.itemManager)
     }
     
+}
+extension ItemListViewControllerTests {
+
+    class MockNavigationController : UINavigationController {
+        var pushedViewController: UIViewController?
+        override func pushViewController(_ viewController: UIViewController,
+                                         animated: Bool) {
+            pushedViewController = viewController
+            super.pushViewController(viewController, animated: animated)
+        }
+    }
+
 }
