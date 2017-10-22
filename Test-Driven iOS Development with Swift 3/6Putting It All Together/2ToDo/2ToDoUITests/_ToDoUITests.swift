@@ -23,12 +23,12 @@ class _ToDoUITests: XCTestCase {
     func testExample() {
         
 
-        let app = XCUIApplication()
+        var app = XCUIApplication()
         app.navigationBars["_ToDo.ItemListView"].buttons["Add"].tap()
         
-        let titleTextField = app.textFields["Title"]
+        var titleTextField = app.textFields["Title"]
         titleTextField.tap()
-        titleTextField.typeText("a")
+        titleTextField.typeText("A")
 
         let dateTextField = app.textFields["Date"]
         dateTextField.tap()
@@ -37,7 +37,7 @@ class _ToDoUITests: XCTestCase {
 
         let locationTextField = app.textFields["Location"]
         locationTextField.tap()
-        locationTextField.typeText("hubei")
+        locationTextField.typeText("湖北省武汉市关山大道")
         
         let addressTextField = app.textFields["Address"]
         addressTextField.tap()
@@ -47,10 +47,18 @@ class _ToDoUITests: XCTestCase {
         descriptionTextField.tap()
         descriptionTextField.typeText("haha")
         app.buttons["Save"].tap()
+        sleep(3)
 
-        XCTAssertTrue(app.tables.staticTexts["a"].exists)
+        app = XCUIApplication()
+        app.navigationBars["_ToDo.ItemListView"].buttons["Add"].tap()
+        titleTextField = app.textFields["Title"]
+        titleTextField.tap()
+        titleTextField.typeText("B")
+        app.buttons["Save"].tap()
+
+        XCTAssertTrue(app.tables.staticTexts["A"].exists)
         XCTAssertTrue(app.tables.staticTexts["10/22/2017"].exists)
-        XCTAssertTrue(app.tables.staticTexts["wuhan"].exists)
+        XCTAssertTrue(app.tables.staticTexts["湖北省武汉市关山大道"].exists)
 
     }
 }

@@ -61,8 +61,12 @@ class InputViewController: UIViewController {
                         location: Location(
                             name: locationName,
                             coordinate: placeMark?.location?.coordinate))
+                    print("#########\n")
+                    DispatchQueue.main.async(execute:{
+                        self.itemManager?.add(item)
+                        self.dismiss(animated: true)
+                    })
 
-                    self.itemManager?.add(item)
                 }
             }
             else {
