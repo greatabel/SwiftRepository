@@ -5,6 +5,10 @@ struct ToDoItem: Equatable {
     let timestamp: Double?
     let location: Location?
 
+    var plistDict: String {
+        return ""
+    }
+    
     init(title: String, itemDescription: String? = nil ,
          timestamp: Double? = nil,
          location: Location? = nil) {

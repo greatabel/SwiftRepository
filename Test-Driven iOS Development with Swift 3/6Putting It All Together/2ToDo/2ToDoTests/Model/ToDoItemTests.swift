@@ -66,9 +66,11 @@ class ToDoItemTests: XCTestCase {
         XCTAssertNotEqual(first, second)
     }
 
+    func test_HasPlistDictionaryProperty() {
+        let item = ToDoItem(title: "First")
+        let dictionary = item.plistDict
 
-
-
+    }
 
     
 }
