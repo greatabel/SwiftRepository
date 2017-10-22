@@ -21,6 +21,36 @@ class _ToDoUITests: XCTestCase {
     }
     
     func testExample() {
+        
+
+        let app = XCUIApplication()
+        app.navigationBars["_ToDo.ItemListView"].buttons["Add"].tap()
+        
+        let titleTextField = app.textFields["Title"]
+        titleTextField.tap()
+        titleTextField.typeText("a")
+
+        let dateTextField = app.textFields["Date"]
+        dateTextField.tap()
+        dateTextField.tap()
+        dateTextField.typeText("10/22/2017")
+
+        let locationTextField = app.textFields["Location"]
+        locationTextField.tap()
+        locationTextField.typeText("hubei")
+        
+        let addressTextField = app.textFields["Address"]
+        addressTextField.tap()
+        addressTextField.typeText("wuhan")
+
+        let descriptionTextField = app.textFields["Description"]
+        descriptionTextField.tap()
+        descriptionTextField.typeText("haha")
+        app.buttons["Save"].tap()
+
+        XCTAssertTrue(app.tables.staticTexts["a"].exists)
+        XCTAssertTrue(app.tables.staticTexts["10/22/2017"].exists)
+        XCTAssertTrue(app.tables.staticTexts["wuhan"].exists)
 
     }
 }
