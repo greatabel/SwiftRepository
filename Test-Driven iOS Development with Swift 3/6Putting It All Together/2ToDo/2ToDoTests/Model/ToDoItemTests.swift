@@ -70,7 +70,7 @@ class ToDoItemTests: XCTestCase {
         let item = ToDoItem(title: "First")
         let dictionary = item.plistDict
         XCTAssertNotNil(dictionary)
-        XCTAssertTrue(dictionary is [String:Any])
+//        XCTAssertTrue(dictionary is [String:Any])
     }
 
     func test_CanBeCreatedFromPlistDictionary() {
