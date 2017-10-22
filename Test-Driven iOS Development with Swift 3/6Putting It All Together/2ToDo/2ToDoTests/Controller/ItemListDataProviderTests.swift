@@ -56,6 +56,8 @@ class ItemListDataProviderTests: XCTestCase {
     }
     
     override func tearDown() {
+        sut.itemManager?.removeAll()
+
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
