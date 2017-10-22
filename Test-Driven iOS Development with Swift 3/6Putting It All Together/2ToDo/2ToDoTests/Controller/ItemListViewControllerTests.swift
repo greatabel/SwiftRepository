@@ -14,6 +14,8 @@ class ItemListViewControllerTests: XCTestCase {
         sut = viewController as! ItemListViewController
 
         _ = sut.view
+
+        
     }
 
     override func tearDown() {
@@ -102,6 +104,37 @@ class ItemListViewControllerTests: XCTestCase {
     func test_ViewDidLoad_SetsItemManagerToDataProvider() {
         XCTAssertTrue(sut.itemManager === sut.dataProvider.itemManager)
     }
+
+    func testItemSelectedNotification_PushesDetailVC() {
+
+        let mockNavigationController = MockNavigationController(rootViewController: sut)
+
+        UIApplication.shared.keyWindow?.rootViewController = mockNavigationController
+
+        _ = sut.view
+
+        NotificationCenter.default.post(
+            name: NSNotification.Name("ItemSelectedNotification"),
+            object: self,
+            userInfo: ["index": 1])
+
+        guard let detailViewController = mockNavigationController.pushedViewController as? DetailViewController else { XCTFail(); return }
+
+        guard let detailItemManager = detailViewController.itemInfo?.0 else
+        { XCTFail(); return }
+
+        guard let index = detailViewController.itemInfo?.1 else
+        { XCTFail(); return }
+
+        _ = detailViewController.view
+
+        XCTAssertNotNil(detailViewController.titleLabel)
+        XCTAssertTrue(detailItemManager === sut.itemManager)
+        XCTAssertEqual(index, 1)
+    }
+
+
+
     
 }
 extension ItemListViewControllerTests {
