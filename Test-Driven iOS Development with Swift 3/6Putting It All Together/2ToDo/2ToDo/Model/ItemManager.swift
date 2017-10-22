@@ -42,8 +42,12 @@ class ItemManager: NSObject {
         }
     }
 
-    func item(at index: Int) -> ToDoItem {
+    func item(at index: Int) -> ToDoItem? {
+        if toDoCount >= index && toDoCount > 0 {
         return todoItems[index]
+        } else {
+            return nil
+        }
     }
 
     func doneItem(at index: Int) -> ToDoItem {

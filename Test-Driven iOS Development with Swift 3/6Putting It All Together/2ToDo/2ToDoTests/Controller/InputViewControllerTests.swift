@@ -53,40 +53,70 @@ class InputViewControllerTests: XCTestCase {
     func test_HasCancelButton() {
         XCTAssertNotNil(sut.cancelButton)
     }
+
     func test_Save_UsesGeocoderToGetCoordinateFromAddress() {
+        let mockSut = MockInputViewController()
+
+        mockSut.titleTextField = UITextField()
+        mockSut.dateTextField = UITextField()
+        mockSut.locationTextField = UITextField()
+        mockSut.addressTextField = UITextField()
+        mockSut.descriptionTextField = UITextField()
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
 
-        let date = dateFormatter.date(from: "02/22/2016")!
-        let timestamp = date.timeIntervalSince1970
+        let timestamp = 1456095600.0
+        let date = Date(timeIntervalSince1970: timestamp)
 
-        sut.titleTextField.text = "Foo"
-        sut.dateTextField.text = dateFormatter.string(from: date)
-        sut.locationTextField.text = "Bar"
-        sut.addressTextField.text = "武汉市关山大道"
-        sut.descriptionTextField.text = "Baz"
+        mockSut.titleTextField.text = "Foo"
+        mockSut.dateTextField.text = dateFormatter.string(from: date)
+        mockSut.locationTextField.text = "Bar"
+        mockSut.addressTextField.text = "武汉市关山大道"
+        mockSut.descriptionTextField.text = "Baz"
+
         let mockGeocoder = MockGeocoder()
-        sut.geocoder = mockGeocoder
+        mockSut.geocoder = mockGeocoder
 
-        sut.itemManager = ItemManager()
+        mockSut.itemManager = ItemManager()
 
-        sut.save()
-        
+        let dismissExpectation = expectation(description: "Dismiss")
+
+        mockSut.completionHandler = {
+            dismissExpectation.fulfill()
+        }
+
+        mockSut.save()
+
+//        let mockSut1 = MockInputViewController()
+//        mockSut1.titleTextField = UITextField()
+//        mockSut1.dateTextField = UITextField()
+//        mockSut1.locationTextField = UITextField()
+//        mockSut1.addressTextField = UITextField()
+//        mockSut1.descriptionTextField = UITextField()
+//        mockSut1.titleTextField.text = "again"
+//        mockSut1.dateTextField.text = dateFormatter.string(from: date)
+//        mockSut1.save()
+//        print("@@@@@@@")
+
+
         placemark = MockPlacemark()
-        let coordinate = CLLocationCoordinate2DMake(30.484633,
-                                                    114.410421)
+        let coordinate = CLLocationCoordinate2DMake(30.484633, 114.410421)
         placemark.mockCoordinate = coordinate
         mockGeocoder.completionHandler?([placemark], nil)
 
-        let item = sut.itemManager?.item(at: 0)
+        waitForExpectations(timeout: 1, handler: nil)
+
+        let item = mockSut.itemManager?.item(at: 0)
 
         let testItem = ToDoItem(title: "Foo",
                                 itemDescription: "Baz",
                                 timestamp: timestamp,
-                                location: Location(name: "Bar",
-                                                   coordinate: coordinate))
+                                location: Location(name: "Bar", coordinate: coordinate))
 
-        XCTAssertEqual(item, testItem)
+        XCTAssertEqual(item?.title, testItem.title)
+
+        mockSut.itemManager?.removeAll()
     }
 
     func test_SaveButtonHasSaveAction() {
@@ -178,10 +208,16 @@ extension InputViewControllerTests {
 }
 
 class MockInputViewController : InputViewController {
+
     var dismissGotCalled = false
+    var completionHandler: (() -> Void)?
+
     override func dismiss(animated flag: Bool,
                           completion: (() -> Void)? = nil) {
+
         dismissGotCalled = true
+        completionHandler?()
     }
 }
+
 

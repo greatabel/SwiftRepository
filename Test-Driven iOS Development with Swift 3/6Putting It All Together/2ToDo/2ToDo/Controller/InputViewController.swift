@@ -61,15 +61,13 @@ class InputViewController: UIViewController {
                         location: Location(
                             name: locationName,
                             coordinate: placeMark?.location?.coordinate))
-                    print("#########\n")
-                    DispatchQueue.main.async(execute:{
+
+                    DispatchQueue.main.async(execute: {
                         self.itemManager?.add(item)
                         self.dismiss(animated: true)
                     })
-
                 }
-            }
-            else {
+            } else {
                 let item = ToDoItem(title: titleString,
                                     itemDescription: descriptionString,
                                     timestamp: date?.timeIntervalSince1970,
@@ -85,7 +83,7 @@ class InputViewController: UIViewController {
             self.itemManager?.add(item)
             dismiss(animated: true)
         }
-        dismiss(animated: true)
     }
 
 }
+

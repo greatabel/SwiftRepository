@@ -51,7 +51,7 @@ class ItemListDataProvider: NSObject, UITableViewDataSource,
         let item : ToDoItem
         switch section {
         case .toDo:
-            item = itemManager.item(at: indexPath.row)
+            item = itemManager.item(at: indexPath.row)!
         case .done:
             item = itemManager.doneItem(at: indexPath.row)
         }
