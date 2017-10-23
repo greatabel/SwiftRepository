@@ -2,9 +2,13 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
 
+    var onListSelected: ((_ list: List) -> Void)?
+    var todosDatastore: TodosDatastore?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "My Lists"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,18 +30,20 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return todosDatastore?.lists().count ?? 0
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        // Configure the cell...
-
+        if let list = todosDatastore?.lists()[indexPath.row] {
+            cell.textLabel?.text = list.description
+        }
+        cell.selectionStyle = .none
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
