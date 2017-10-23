@@ -50,7 +50,7 @@ private extension EditTodoTableViewController {
 
 extension EditTodoTableViewController {
     
-     func dueDateChanged(_ sender: UIDatePicker) {
+     @objc func dueDateChanged(_ sender: UIDatePicker) {
         print("###\(self)")
         dueDate = dueDatePicker.date
         refresh()
@@ -68,6 +68,7 @@ extension EditTodoTableViewController {
     }
 
     func doneSelected() {
+        print("###\(#function)")
         if let descriptionText = descriptionTextField.text,
             let list = list,
             let dueDate = dueDate, !descriptionText.isEmpty {
@@ -77,10 +78,13 @@ extension EditTodoTableViewController {
                                    done: false,
                                    doneDate: nil)
                 todosDatastore?.addTodo(todo: newTodo)
+                todosDatastore?.deleteTodo(todo: todoToEdit)
+                navigationController!.popViewController(animated: true)
         }
     }
-    func showAddList() {
 
+    func showAddList() {
+        performSegue(withIdentifier: "addList", sender: self)
     }
 
 }

@@ -166,10 +166,13 @@ class TodoTableViewController: UITableViewController {
 extension TodoTableViewController {
     func addTodoButtonPressed(sender: UIButton!){
         print("addTodoButtonPressed")
+        performSegue(withIdentifier: "addTodo", sender: self)
     }
 
     func editButtonPressed(todo: Todo){
         print("editButtonPressed")
+        selectedTodo = todo
+        performSegue(withIdentifier: "editTodo", sender: self)
     }
 
     func deleteButtonPressed(todo: Todo){
