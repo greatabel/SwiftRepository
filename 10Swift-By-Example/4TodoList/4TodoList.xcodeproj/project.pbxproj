@@ -19,6 +19,7 @@
 		20352CF91F6626AE00DFA762 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20352CF81F6626AE00DFA762 /* Entities.swift */; };
 		20352CFB1F66276400DFA762 /* TodosDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20352CFA1F66276400DFA762 /* TodosDatastore.swift */; };
 		20AB4C301F6833B9001083AF /* EditTodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB4C2F1F6833B9001083AF /* EditTodoTableViewController.swift */; };
+		20BCD65C1F9DC8A8008AEC04 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BCD65B1F9DC8A8008AEC04 /* ListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		20352CF81F6626AE00DFA762 /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		20352CFA1F66276400DFA762 /* TodosDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosDatastore.swift; sourceTree = "<group>"; };
 		20AB4C2F1F6833B9001083AF /* EditTodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoTableViewController.swift; sourceTree = "<group>"; };
+		20BCD65B1F9DC8A8008AEC04 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		24DB0DE8C10ECC159CA3420C /* Pods_4TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F133D69A83208AFC50ECED /* Pods-4TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4TodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4TodoList/Pods-4TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				2003A1531F65F6F10038C3A2 /* ViewController.swift */,
 				2003A17F1F65F8510038C3A2 /* TodoTableViewController.swift */,
 				20AB4C2F1F6833B9001083AF /* EditTodoTableViewController.swift */,
+				20BCD65B1F9DC8A8008AEC04 /* ListTableViewController.swift */,
 				2003A1551F65F6F10038C3A2 /* Main.storyboard */,
 				2003A1581F65F6F10038C3A2 /* Assets.xcassets */,
 				2003A15A1F65F6F10038C3A2 /* LaunchScreen.storyboard */,
@@ -366,6 +369,7 @@
 				20352CF91F6626AE00DFA762 /* Entities.swift in Sources */,
 				2003A1521F65F6F10038C3A2 /* AppDelegate.swift in Sources */,
 				20AB4C301F6833B9001083AF /* EditTodoTableViewController.swift in Sources */,
+				20BCD65C1F9DC8A8008AEC04 /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

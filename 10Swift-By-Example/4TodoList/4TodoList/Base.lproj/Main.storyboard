@@ -233,17 +233,49 @@ Unicode: U+2713, UTF-8: E2 9C 93</string>
                         <outlet property="dueDateLabel" destination="pNR-be-n4d" id="Ggm-to-iSz"/>
                         <outlet property="dueDatePicker" destination="mtq-72-vaJ" id="IV6-uN-d4R"/>
                         <outlet property="listLabel" destination="0Kf-sa-IOw" id="iiJ-dP-Cee"/>
+                        <segue destination="w85-3a-lG2" kind="show" identifier="addList" id="LW0-xW-LaF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlA-YZ-36X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2146" y="-93"/>
         </scene>
+        <!--List Table View Controller-->
+        <scene sceneID="e8P-jm-x5s">
+            <objects>
+                <tableViewController id="w85-3a-lG2" customClass="ListTableViewController" customModule="_TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P8e-tW-Pwo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZSF-FM-WbY">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZSF-FM-WbY" id="H0J-lu-jxu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w85-3a-lG2" id="a3V-NT-tjS"/>
+                            <outlet property="delegate" destination="w85-3a-lG2" id="HCp-b5-0xf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qjf-p3-PuO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cross" id="apD-4D-y2a"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zr2-0o-FV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2942" y="-112"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cross" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fvj-Tf-xoc"/>
+        <segue reference="eA8-DV-5bF"/>
     </inferredMetricsTieBreakers>
 </document>
