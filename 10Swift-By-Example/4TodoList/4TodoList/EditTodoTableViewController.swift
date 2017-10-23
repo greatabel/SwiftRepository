@@ -87,6 +87,7 @@ extension EditTodoTableViewController {
         performSegue(withIdentifier: "addList", sender: self)
     }
 
+
 }
 
 enum EditTableViewRow: Int {
@@ -111,5 +112,25 @@ extension EditTodoTableViewController {
         default:
             break
         }
+    }
+}
+
+extension EditTodoTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+            let destinationViewController = segue.destination as? ListTableViewController
+            else {
+                return
+        }
+        if identifier == "addList" {
+            destinationViewController.title = "Lists"
+            destinationViewController.todosDatastore = todosDatastore
+            destinationViewController.onListSelected = { list in
+                self.list = list
+                self.refresh()
+            }
+        }
+
+
     }
 }

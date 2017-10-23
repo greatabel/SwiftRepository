@@ -23,10 +23,10 @@ class ListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -42,6 +42,14 @@ class ListTableViewController: UITableViewController {
         }
         cell.selectionStyle = .none
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let list = todosDatastore?.lists()[indexPath.row]
+        if let list = list, let onListSelected = onListSelected {
+            onListSelected(list)
+        }
+        navigationController?.popViewController(animated: true)
     }
 
 
