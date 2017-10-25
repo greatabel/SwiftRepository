@@ -264,7 +264,11 @@ Unicode: U+2713, UTF-8: E2 9C 93</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qjf-p3-PuO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="cross" id="apD-4D-y2a"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cross" id="apD-4D-y2a">
+                            <connections>
+                                <action selector="addListButtonTappedWithSender:" destination="w85-3a-lG2" id="abu-cV-6kx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr2-0o-FV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
