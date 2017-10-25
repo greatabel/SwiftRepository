@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		207ED2F51FA0893000A9B6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */; };
-		207ED2F71FA0893000A9B6D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED2F61FA0893000A9B6D4 /* ViewController.swift */; };
-		207ED2FA1FA0893000A9B6D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207ED2F81FA0893000A9B6D4 /* Main.storyboard */; };
 		207ED2FC1FA0893000A9B6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */; };
 		207ED2FF1FA0893000A9B6D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */; };
 		207ED30A1FA0893000A9B6D4 /* _PrettyWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3091FA0893000A9B6D4 /* _PrettyWeatherTests.swift */; };
 		207ED3151FA0893000A9B6D4 /* _PrettyWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3141FA0893000A9B6D4 /* _PrettyWeatherUITests.swift */; };
+		207ED3231FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */; };
+		207ED3261FA08C6D00A9B6D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207ED3241FA08C6D00A9B6D4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,6 @@
 /* Begin PBXFileReference section */
 		207ED2F11FA0893000A9B6D4 /* 5PrettyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5PrettyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		207ED2F61FA0893000A9B6D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		207ED2F91FA0893000A9B6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207ED2FE1FA0893000A9B6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		207ED3001FA0893000A9B6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		207ED3101FA0893000A9B6D4 /* 5PrettyWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 5PrettyWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		207ED3141FA0893000A9B6D4 /* _PrettyWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _PrettyWeatherUITests.swift; sourceTree = "<group>"; };
 		207ED3161FA0893000A9B6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyWeatherViewController.swift; sourceTree = "<group>"; };
+		207ED3251FA08C6D00A9B6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +97,9 @@
 		207ED2F31FA0893000A9B6D4 /* 5PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				207ED3241FA08C6D00A9B6D4 /* Main.storyboard */,
 				207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */,
-				207ED2F61FA0893000A9B6D4 /* ViewController.swift */,
-				207ED2F81FA0893000A9B6D4 /* Main.storyboard */,
+				207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */,
 				207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */,
 				207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */,
 				207ED3001FA0893000A9B6D4 /* Info.plist */,
@@ -232,9 +232,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207ED3261FA08C6D00A9B6D4 /* Main.storyboard in Resources */,
 				207ED2FF1FA0893000A9B6D4 /* LaunchScreen.storyboard in Resources */,
 				207ED2FC1FA0893000A9B6D4 /* Assets.xcassets in Resources */,
-				207ED2FA1FA0893000A9B6D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207ED2F71FA0893000A9B6D4 /* ViewController.swift in Sources */,
 				207ED2F51FA0893000A9B6D4 /* AppDelegate.swift in Sources */,
+				207ED3231FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,20 +296,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		207ED2F81FA0893000A9B6D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				207ED2F91FA0893000A9B6D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				207ED2FE1FA0893000A9B6D4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		207ED3241FA08C6D00A9B6D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207ED3251FA08C6D00A9B6D4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
