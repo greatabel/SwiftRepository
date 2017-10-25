@@ -76,7 +76,7 @@ class TodoTableViewController: UITableViewController {
 
     private func renderCell(cell:UITableViewCell, todo: Todo){
         let dateFormatter:DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm dd-MM-YY"
+        dateFormatter.dateFormat = "YY-MM-dd HH:mm"
         let dueDate = dateFormatter.string(from: todo.dueDate)
         cell.detailTextLabel?.text = "\(dueDate) | \(todo.list.description)"
         cell.textLabel?.text = todo.description

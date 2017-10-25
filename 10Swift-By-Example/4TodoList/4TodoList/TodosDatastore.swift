@@ -12,19 +12,19 @@ class TodosDatastore {
         ]
 
         savedTodos = [
-            Todo(description: "Remember the Milk",
-            list: List(description: "Family") ,
+            Todo(description: "吃火锅",
+            list: List(description: "家庭") ,
             dueDate: Date(),
             done: false,
             doneDate: nil),
-            Todo(description: "Buy Spider Man Comics",
-            list: List(description: "Personal") ,
+            Todo(description: "买雷神3",
+            list: List(description: "个人") ,
             dueDate: Date(),
             done: true,
             doneDate: Date()
             ),
-            Todo(description: "Release build",
-            list: List(description: "Work") ,
+            Todo(description: "学习iOS",
+            list: List(description: "工作") ,
             dueDate: Date(),
             done: false,
             doneDate: nil)

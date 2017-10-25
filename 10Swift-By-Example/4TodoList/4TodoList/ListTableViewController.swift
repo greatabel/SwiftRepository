@@ -106,10 +106,12 @@ extension ListTableViewController {
                                       message: "To create a new list, please enter the name of the list",
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK",
-                                     style: .default) { (action: UIAlertAction!) -> Void in
+                                     style: .default)
+                    {
+                        (action: UIAlertAction!) -> Void in
                                         let textField = alert.textFields?.first
                                         self.addList(description: textField?.text ?? "" )
-        }
+                    }
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .default, handler: nil)
         alert.addAction(okAction)
