@@ -14,6 +14,7 @@
 		207ED3151FA0893000A9B6D4 /* _PrettyWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3141FA0893000A9B6D4 /* _PrettyWeatherUITests.swift */; };
 		207ED3231FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */; };
 		207ED3261FA08C6D00A9B6D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207ED3241FA08C6D00A9B6D4 /* Main.storyboard */; };
+		6E01E240A2133DFCBEF7B8A9 /* Pods_5PrettyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		207ED3161FA0893000A9B6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyWeatherViewController.swift; sourceTree = "<group>"; };
 		207ED3251FA08C6D00A9B6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BFF9C70397672196988A9A /* Pods-5PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5PrettyWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
+		EB97EE87028DCDC1402B75F5 /* Pods-5PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5PrettyWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E01E240A2133DFCBEF7B8A9 /* Pods_5PrettyWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				207ED3081FA0893000A9B6D4 /* 5PrettyWeatherTests */,
 				207ED3131FA0893000A9B6D4 /* 5PrettyWeatherUITests */,
 				207ED2F21FA0893000A9B6D4 /* Products */,
+				2A55E4FC9F60D965800741BA /* Pods */,
+				B337F8ACDB3CDC3626B4E3C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +104,10 @@
 		207ED2F31FA0893000A9B6D4 /* 5PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
-				207ED3241FA08C6D00A9B6D4 /* Main.storyboard */,
 				207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */,
 				207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */,
 				207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */,
+				207ED3241FA08C6D00A9B6D4 /* Main.storyboard */,
 				207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */,
 				207ED3001FA0893000A9B6D4 /* Info.plist */,
 			);
@@ -125,6 +132,23 @@
 			path = 5PrettyWeatherUITests;
 			sourceTree = "<group>";
 		};
+		2A55E4FC9F60D965800741BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB97EE87028DCDC1402B75F5 /* Pods-5PrettyWeather.debug.xcconfig */,
+				D5BFF9C70397672196988A9A /* Pods-5PrettyWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B337F8ACDB3CDC3626B4E3C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 207ED3191FA0893000A9B6D4 /* Build configuration list for PBXNativeTarget "5PrettyWeather" */;
 			buildPhases = (
+				A7B6B98628E1290E4D581739 /* [CP] Check Pods Manifest.lock */,
 				207ED2ED1FA0893000A9B6D4 /* Sources */,
 				207ED2EE1FA0893000A9B6D4 /* Frameworks */,
 				207ED2EF1FA0893000A9B6D4 /* Resources */,
+				49764691FDEC9A1B75F14D05 /* [CP] Embed Pods Frameworks */,
+				44863BBCB3262D498FBA2FAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44863BBCB3262D498FBA2FAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49764691FDEC9A1B75F14D05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/FXBlurView/FXBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/FlickrKit/FlickrKit.framework",
+				"${BUILT_PRODUCTS_DIR}/LatoFont/LatoFont.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/WeatherIconsKit/WeatherIconsKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FXBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlickrKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LatoFont.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeatherIconsKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B6B98628E1290E4D581739 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-5PrettyWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		207ED2ED1FA0893000A9B6D4 /* Sources */ = {
@@ -424,6 +517,7 @@
 		};
 		207ED31A1FA0893000A9B6D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB97EE87028DCDC1402B75F5 /* Pods-5PrettyWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +533,7 @@
 		};
 		207ED31B1FA0893000A9B6D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5BFF9C70397672196988A9A /* Pods-5PrettyWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
