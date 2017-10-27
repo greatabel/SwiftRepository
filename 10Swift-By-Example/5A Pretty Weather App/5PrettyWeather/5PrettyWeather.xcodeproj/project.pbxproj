@@ -15,6 +15,8 @@
 		207ED3151FA0893000A9B6D4 /* _PrettyWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3141FA0893000A9B6D4 /* _PrettyWeatherUITests.swift */; };
 		207ED3231FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */; };
 		207ED3261FA08C6D00A9B6D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207ED3241FA08C6D00A9B6D4 /* Main.storyboard */; };
+		20AAAA7D1FA3A1A000F91DED /* WeatherDaysForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AAAA7C1FA3A1A000F91DED /* WeatherDaysForecastView.swift */; };
+		20AAAA7F1FA3A1BB00F91DED /* WeatherHourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AAAA7E1FA3A1BB00F91DED /* WeatherHourlyForecastView.swift */; };
 		6E01E240A2133DFCBEF7B8A9 /* Pods_5PrettyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		207ED3161FA0893000A9B6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyWeatherViewController.swift; sourceTree = "<group>"; };
 		207ED3251FA08C6D00A9B6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20AAAA7C1FA3A1A000F91DED /* WeatherDaysForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDaysForecastView.swift; sourceTree = "<group>"; };
+		20AAAA7E1FA3A1BB00F91DED /* WeatherHourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHourlyForecastView.swift; sourceTree = "<group>"; };
 		2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BFF9C70397672196988A9A /* Pods-5PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5PrettyWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
 		EB97EE87028DCDC1402B75F5 /* Pods-5PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5PrettyWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,9 +110,8 @@
 		207ED2F31FA0893000A9B6D4 /* 5PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				20AAAA7B1FA3A17300F91DED /* ViewControllers */,
 				207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */,
-				2046BDD01FA32ADA0095084A /* CurrentWeatherView.swift */,
-				207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */,
 				207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */,
 				207ED3241FA08C6D00A9B6D4 /* Main.storyboard */,
 				207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */,
@@ -133,6 +136,17 @@
 				207ED3161FA0893000A9B6D4 /* Info.plist */,
 			);
 			path = 5PrettyWeatherUITests;
+			sourceTree = "<group>";
+		};
+		20AAAA7B1FA3A17300F91DED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2046BDD01FA32ADA0095084A /* CurrentWeatherView.swift */,
+				207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */,
+				20AAAA7C1FA3A1A000F91DED /* WeatherDaysForecastView.swift */,
+				20AAAA7E1FA3A1BB00F91DED /* WeatherHourlyForecastView.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2A55E4FC9F60D965800741BA /* Pods */ = {
@@ -355,9 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AAAA7F1FA3A1BB00F91DED /* WeatherHourlyForecastView.swift in Sources */,
 				2046BDD11FA32ADA0095084A /* CurrentWeatherView.swift in Sources */,
 				207ED2F51FA0893000A9B6D4 /* AppDelegate.swift in Sources */,
 				207ED3231FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift in Sources */,
+				20AAAA7D1FA3A1A000F91DED /* WeatherDaysForecastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
