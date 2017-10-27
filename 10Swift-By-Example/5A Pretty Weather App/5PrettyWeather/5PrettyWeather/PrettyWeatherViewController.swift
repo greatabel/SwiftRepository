@@ -30,15 +30,25 @@ private extension PrettyWeatherViewController {
         backgroundView.contentMode = .scaleAspectFit
         backgroundView.clipsToBounds = true
         view.addSubview(backgroundView)
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.addSubview(currentWeatherView)
+
+
+        view.addSubview(scrollView)
     }
 
     func layoutView() {
-        constrain(backgroundView){
-            view in
-            view.top == view.superview!.top
-            view.bottom == view.superview!.bottom
-            view.left == view.superview!.left
-            view.right == view.superview!.right
+        constrain(backgroundView) {
+            $0.edges ==  $0.superview!.edges
+        }
+
+        constrain(scrollView) {
+            $0.edges ==  $0.superview!.edges
+        }
+
+        constrain(currentWeatherView) {
+            $0.width == $0.superview!.width
+            $0.centerX == $0.superview!.centerX
         }
     }
 
