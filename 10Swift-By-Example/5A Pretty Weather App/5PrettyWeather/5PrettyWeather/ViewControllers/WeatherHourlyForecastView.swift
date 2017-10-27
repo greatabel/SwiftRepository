@@ -36,13 +36,15 @@ private extension WeatherHourlyForecastView {
 
     }
 }
-private extension WeatherHourlyForecastView {
-    func layoutView() {
-        constrain(self) {
-            $0.height == CurrentWeatherView.HEIGHT
+private extension WeatherHourlyForecastView{
+    func layoutView(){
+        constrain(self) { view in
+            view.height == WeatherHourlyForecastView.HEIGHT
+            return
         }
     }
 }
+
 private extension WeatherHourlyForecastView {
     func style() {
         backgroundColor = UIColor.green

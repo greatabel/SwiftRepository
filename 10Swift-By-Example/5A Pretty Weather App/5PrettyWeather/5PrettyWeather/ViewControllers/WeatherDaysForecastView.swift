@@ -36,13 +36,15 @@ private extension WeatherDaysForecastView {
 
     }
 }
-private extension WeatherDaysForecastView {
-    func layoutView() {
-        constrain(self) {
-            $0.height == CurrentWeatherView.HEIGHT
+private extension WeatherDaysForecastView{
+    func layoutView(){
+        constrain(self) { view in
+            view.height == WeatherDaysForecastView.HEIGHT
+            return
         }
     }
 }
+
 private extension WeatherDaysForecastView {
     func style() {
         backgroundColor = UIColor.blue

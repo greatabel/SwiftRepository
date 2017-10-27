@@ -32,13 +32,14 @@ class PrettyWeatherViewController: UIViewController {
 
 private extension PrettyWeatherViewController {
 
-    func setup() {
-        backgroundView.contentMode = .scaleAspectFit
+    func setup(){
+        backgroundView.contentMode = .scaleAspectFill
         backgroundView.clipsToBounds = true
         view.addSubview(backgroundView)
-
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(currentWeatherView)
+        scrollView.addSubview(hourlyForecastView)
+        scrollView.addSubview(daysForecastView)
         view.addSubview(scrollView)
     }
 
@@ -55,10 +56,24 @@ private extension PrettyWeatherViewController {
             $0.width == $0.superview!.width
             $0.centerX == $0.superview!.centerX
         }
-        let currentWeahterInsect: CGFloat = view.frame.height
-            - CurrentWeatherView.HEIGHT - PrettyWeatherViewController.INSET
+
+        constrain(hourlyForecastView, currentWeatherView) {
+            $0.top == $1.bottom + PrettyWeatherViewController.INSET
+            $0.width == $0.superview!.width
+            $0.centerX == $0.superview!.centerX
+        }
+
+        constrain(daysForecastView, hourlyForecastView) {
+            $0.top == $1.bottom
+            $0.width == $1.width
+            $0.bottom == $0.superview!.bottom - PrettyWeatherViewController.INSET
+            $0.centerX == $0.superview!.centerX
+        }
+        // maybe 6p is different
+        let currentWeatherInsect: CGFloat = view.frame.height - CurrentWeatherView.HEIGHT - PrettyWeatherViewController.INSET - 400
+
         constrain(currentWeatherView) {
-            $0.top == $0.superview!.top + currentWeahterInsect
+            $0.top == $0.superview!.top + currentWeatherInsect
         }
     }
 
