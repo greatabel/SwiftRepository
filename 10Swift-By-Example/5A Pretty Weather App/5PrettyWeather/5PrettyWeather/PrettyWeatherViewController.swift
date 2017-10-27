@@ -24,15 +24,25 @@ class PrettyWeatherViewController: UIViewController {
 private extension PrettyWeatherViewController {
 
     func setup() {
-
+        backgroundView.contentMode = .scaleAspectFit
+        backgroundView.clipsToBounds = true
+        view.addSubview(backgroundView)
     }
 
     func layoutView() {
-
+        constrain(backgroundView){
+            view in
+            view.top == view.superview!.top
+            view.bottom == view.superview!.bottom
+            view.left == view.superview!.left
+            view.right == view.superview!.right
+        }
     }
 
     func render(image: UIImage?){
-
+        if let image = image {
+            backgroundView.image = image
+        }
     }
 
     func style(){
