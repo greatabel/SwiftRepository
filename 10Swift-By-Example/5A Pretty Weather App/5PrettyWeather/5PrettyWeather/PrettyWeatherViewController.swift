@@ -5,8 +5,13 @@ class PrettyWeatherViewController: UIViewController {
 
     private let backgroundView = UIImageView()
 
+    static var INSET: CGFloat {
+        get { return 20 }
+    }
+
     private let scrollView = UIScrollView()
     private let currentWeatherView = CurrentWeatherView(frame: CGRect.zero)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +35,9 @@ private extension PrettyWeatherViewController {
         backgroundView.contentMode = .scaleAspectFit
         backgroundView.clipsToBounds = true
         view.addSubview(backgroundView)
+
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(currentWeatherView)
-
-
         view.addSubview(scrollView)
     }
 
@@ -49,6 +53,11 @@ private extension PrettyWeatherViewController {
         constrain(currentWeatherView) {
             $0.width == $0.superview!.width
             $0.centerX == $0.superview!.centerX
+        }
+        let currentWeahterInsect: CGFloat = view.frame.height
+            - CurrentWeatherView.HEIGHT - PrettyWeatherViewController.INSET
+        constrain(currentWeatherView) {
+            $0.top == $0.superview!.top + currentWeahterInsect
         }
     }
 
