@@ -44,7 +44,6 @@ private extension WeatherDaysForecastView{
         }
     }
 }
-
 private extension WeatherDaysForecastView {
     func style() {
         backgroundColor = UIColor.blue

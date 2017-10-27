@@ -69,11 +69,11 @@ private extension PrettyWeatherViewController {
             $0.bottom == $0.superview!.bottom - PrettyWeatherViewController.INSET
             $0.centerX == $0.superview!.centerX
         }
-        // maybe 6p is different
-        let currentWeatherInsect: CGFloat = view.frame.height - CurrentWeatherView.HEIGHT - PrettyWeatherViewController.INSET - 400
 
+        let currentWeatherInsect: CGFloat = view.frame.height - CurrentWeatherView.HEIGHT - PrettyWeatherViewController.INSET
+        print("### currentWeatherInsect> \(currentWeatherInsect)")
         constrain(currentWeatherView) {
-            $0.top == $0.superview!.top + currentWeatherInsect
+            $0.top == $0.superview!.top + currentWeatherInsect - 200
         }
     }
 
