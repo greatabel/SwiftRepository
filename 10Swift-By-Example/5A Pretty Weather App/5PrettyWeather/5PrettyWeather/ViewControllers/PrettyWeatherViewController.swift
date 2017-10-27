@@ -11,7 +11,8 @@ class PrettyWeatherViewController: UIViewController {
 
     private let scrollView = UIScrollView()
     private let currentWeatherView = CurrentWeatherView(frame: CGRect.zero)
-
+    private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRect.zero)
+    private let daysForecastView = WeatherDaysForecastView(frame: CGRect.zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()

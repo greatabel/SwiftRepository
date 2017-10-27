@@ -1,13 +1,51 @@
 import UIKit
+import Cartography
 
 class WeatherDaysForecastView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    static var HEIGHT: CGFloat {
+        get { return 300 }
     }
-    */
+    private var didSetupConstraints = false
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+        style()
+
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func updateConstraints() {
+        if didSetupConstraints {
+            super.updateConstraints()
+            return
+        }
+        layoutView()
+        super.updateConstraints()
+        didSetupConstraints = true
+    }
 
 }
+
+private extension WeatherDaysForecastView {
+    func setup() {
+
+    }
+}
+private extension WeatherDaysForecastView {
+    func layoutView() {
+        constrain(self) {
+            $0.height == CurrentWeatherView.HEIGHT
+        }
+    }
+}
+private extension WeatherDaysForecastView {
+    func style() {
+        backgroundColor = UIColor.blue
+    }
+}
+

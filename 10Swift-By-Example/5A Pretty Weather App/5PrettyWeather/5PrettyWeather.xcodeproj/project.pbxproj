@@ -141,8 +141,8 @@
 		20AAAA7B1FA3A17300F91DED /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2046BDD01FA32ADA0095084A /* CurrentWeatherView.swift */,
 				207ED3221FA08AAD00A9B6D4 /* PrettyWeatherViewController.swift */,
+				2046BDD01FA32ADA0095084A /* CurrentWeatherView.swift */,
 				20AAAA7C1FA3A1A000F91DED /* WeatherDaysForecastView.swift */,
 				20AAAA7E1FA3A1BB00F91DED /* WeatherHourlyForecastView.swift */,
 			);
