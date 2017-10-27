@@ -3,9 +3,9 @@ use_frameworks!
 inhibit_all_warnings!
 
 target '5PrettyWeather' do
-    pod 'Cartography', :git => "https://github.com/robb/Cartography.git", :tag => '0.6.0'
-    pod 'Alamofire', '~> 2.0.2'
-    pod 'SwiftyJSON', '~> 2.3.3'
+    pod 'Cartography', :git => "https://github.com/robb/Cartography.git", :tag => '2.1.0'
+    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftyJSON', '~> 4.0.0-alpha.1'
     pod 'WeatherIconsKit', :git => 'https://github.com/gscalzo/WeatherIconsKit'
     pod 'FlickrKit', '~> 1.0.5'
     pod 'FXBlurView', '~> 1.6.4'
