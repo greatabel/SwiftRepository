@@ -5,6 +5,9 @@ class PrettyWeatherViewController: UIViewController {
 
     private let backgroundView = UIImageView()
 
+    private let scrollView = UIScrollView()
+    private let currentWeatherView = CurrentWeatherView(frame: CGRect.zero)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
