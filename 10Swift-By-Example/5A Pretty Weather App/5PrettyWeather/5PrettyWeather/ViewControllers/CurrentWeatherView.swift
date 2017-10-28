@@ -71,7 +71,7 @@ private extension CurrentWeatherView {
 
 private extension CurrentWeatherView {
     func style() {
-//        backgroundColor = UIColor.red
+        backgroundColor = UIColor.red
 
         maxTempLbl.font = UIFont.latoLightFont(ofSize: 18)
         maxTempLbl.textColor = UIColor.white
