@@ -20,6 +20,7 @@ class PrettyWeatherViewController: UIViewController {
         layoutView()
         style()
         render(image: UIImage(named: "DefaultImage"))
+        renderSubViews()
 
         // Do any additional setup after loading the view.
     }
@@ -77,14 +78,21 @@ private extension PrettyWeatherViewController {
         }
     }
 
+
+
+    func style(){
+
+    }
+
+}
+private extension PrettyWeatherViewController{
     func render(image: UIImage?){
         if let image = image {
             backgroundView.image = image
         }
     }
 
-    func style(){
-
+    func renderSubViews() {
+        currentWeatherView.render()
     }
-
 }

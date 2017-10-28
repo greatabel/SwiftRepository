@@ -1,5 +1,7 @@
 import UIKit
 import Cartography
+import LatoFont
+import WeatherIconsKit
 
 class CurrentWeatherView: UIView {
 
@@ -7,6 +9,9 @@ class CurrentWeatherView: UIView {
         get { return 160 }
     }
     private var didSetupConstraints = false
+
+    private let cityLbl = UILabel()
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,6 +38,7 @@ class CurrentWeatherView: UIView {
 
 private extension CurrentWeatherView {
     func setup() {
+        addSubview(cityLbl)
 
     }
 }
@@ -41,10 +47,30 @@ private extension CurrentWeatherView {
         constrain(self) {
             $0.height == CurrentWeatherView.HEIGHT
         }
+
+        constrain(cityLbl) {
+            $0.bottom == $0.superview!.bottom
+            $0.right == $0.superview!.right - 10
+            $0.height == 30
+            $0.width == 200
+        }
     }
 }
 private extension CurrentWeatherView {
     func style() {
-        backgroundColor = UIColor.red
+//        backgroundColor = UIColor.red
+
+
+        cityLbl.font = UIFont.latoLightFont(ofSize: 18)
+        cityLbl.textColor = UIColor.white
+        cityLbl.textAlignment = .right
+    }
+}
+
+extension CurrentWeatherView{
+    func render(){
+
+
+        cityLbl.text = "London"
     }
 }
