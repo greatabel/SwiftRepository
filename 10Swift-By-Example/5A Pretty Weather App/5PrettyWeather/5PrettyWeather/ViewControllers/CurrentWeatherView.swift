@@ -11,7 +11,8 @@ class CurrentWeatherView: UIView {
     private var didSetupConstraints = false
 
     private let cityLbl = UILabel()
-
+    private let maxTempLbl = UILabel()
+    private let minTempLbl = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,6 +40,8 @@ class CurrentWeatherView: UIView {
 private extension CurrentWeatherView {
     func setup() {
         addSubview(cityLbl)
+        addSubview(maxTempLbl)
+        addSubview(minTempLbl)
 
     }
 }
@@ -54,12 +57,25 @@ private extension CurrentWeatherView {
             $0.height == 30
             $0.width == 200
         }
-    }
+        constrain(minTempLbl){
+            $0.bottom == $0.superview!.bottom
+            $0.height == 30
+        }
+        constrain(maxTempLbl, minTempLbl){
+            $0.top == $1.top
+            $0.height == $1.height
+            $0.left == $1.right + 10
+        }
 }
 private extension CurrentWeatherView {
     func style() {
 //        backgroundColor = UIColor.red
 
+        maxTempLbl.font = UIFont.latoLightFont(ofSize: 18)
+        maxTempLbl.textColor = UIColor.white
+
+        minTempLbl.font = UIFont.latoLightFont(ofSize: 18)
+        minTempLbl.textColor = UIColor.white
 
         cityLbl.font = UIFont.latoLightFont(ofSize: 18)
         cityLbl.textColor = UIColor.white
@@ -70,7 +86,9 @@ private extension CurrentWeatherView {
 extension CurrentWeatherView{
     func render(){
 
+        minTempLbl.text = "14°"
+        maxTempLbl.text = "20°"
 
-        cityLbl.text = "London"
+        cityLbl.text = "Wuhan"
     }
 }
