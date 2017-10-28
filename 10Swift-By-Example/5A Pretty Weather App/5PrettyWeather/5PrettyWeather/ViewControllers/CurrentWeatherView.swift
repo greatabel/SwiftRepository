@@ -66,7 +66,9 @@ private extension CurrentWeatherView {
             $0.height == $1.height
             $0.left == $1.right + 10
         }
+    }
 }
+
 private extension CurrentWeatherView {
     func style() {
 //        backgroundColor = UIColor.red
