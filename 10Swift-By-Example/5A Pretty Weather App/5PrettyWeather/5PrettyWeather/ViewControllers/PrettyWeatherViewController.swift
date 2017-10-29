@@ -94,6 +94,8 @@ private extension PrettyWeatherViewController {
 
 private extension PrettyWeatherViewController{
     func style(){
+        // iOS中Layer的坐标系统:
+        // http://www.cnblogs.com/YouXianMing/p/3793913.html
         gradientView.backgroundColor = UIColor(white: 0, alpha: 0.7)
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = gradientView.bounds
