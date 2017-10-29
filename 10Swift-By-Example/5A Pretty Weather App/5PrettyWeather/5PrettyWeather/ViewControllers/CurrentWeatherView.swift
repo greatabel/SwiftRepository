@@ -13,6 +13,9 @@ class CurrentWeatherView: UIView {
     private let cityLbl = UILabel()
     private let maxTempLbl = UILabel()
     private let minTempLbl = UILabel()
+    private let iconLbl = UILabel()
+    private let weatherLbl = UILabel()
+    private let currentTempLbl = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,6 +42,9 @@ class CurrentWeatherView: UIView {
 
 private extension CurrentWeatherView {
     func setup() {
+        addSubview(iconLbl)
+        addSubview(currentTempLbl)
+        addSubview(weatherLbl)
         addSubview(cityLbl)
         addSubview(maxTempLbl)
         addSubview(minTempLbl)
@@ -50,7 +56,12 @@ private extension CurrentWeatherView {
         constrain(self) {
             $0.height == CurrentWeatherView.HEIGHT
         }
-
+        constrain(iconLbl){
+            $0.top == $0.superview!.top
+            $0.left == $0.superview!.left + 20
+            $0.height == 30
+            $0.width == $0.height
+        }
         constrain(cityLbl) {
             $0.bottom == $0.superview!.bottom
             $0.right == $0.superview!.right - 10
@@ -66,12 +77,21 @@ private extension CurrentWeatherView {
             $0.height == $1.height
             $0.left == $1.right + 10
         }
+
     }
 }
 
 private extension CurrentWeatherView {
     func style() {
         backgroundColor = UIColor.red
+
+        iconLbl.textColor = UIColor.white
+
+        weatherLbl.font = UIFont.latoLightFont(ofSize: 20)
+        weatherLbl.textColor = UIColor.white
+
+        currentTempLbl.font = UIFont.latoLightFont(ofSize: 96)
+        currentTempLbl.textColor = UIColor.white
 
         maxTempLbl.font = UIFont.latoLightFont(ofSize: 18)
         maxTempLbl.textColor = UIColor.white
@@ -87,10 +107,12 @@ private extension CurrentWeatherView {
 
 extension CurrentWeatherView{
     func render(){
-
+        iconLbl.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 20).attributedString()
+        weatherLbl.text = "晴朗☀️"
         minTempLbl.text = "14°"
         maxTempLbl.text = "20°"
 
+        currentTempLbl.text = "12°"
         cityLbl.text = "Wuhan"
     }
 }
