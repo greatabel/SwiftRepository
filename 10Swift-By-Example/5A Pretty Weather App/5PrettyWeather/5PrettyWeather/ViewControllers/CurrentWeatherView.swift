@@ -123,7 +123,8 @@ private extension CurrentWeatherView {
 
 extension CurrentWeatherView{
     func render(){
-        iconLbl.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 20).attributedString()
+        iconLbl.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 20)
+                                            .attributedString()
         weatherLbl.text = "晴朗☀️"
         minTempLbl.text = "14°"
         maxTempLbl.text = "20°"
