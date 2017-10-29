@@ -68,12 +68,16 @@ private extension CurrentWeatherView {
             $0.height == $1.height
             $0.width == 200
         }
-        constrain(cityLbl) {
-            $0.bottom == $0.superview!.bottom
-            $0.right == $0.superview!.right - 10
-            $0.height == 30
-            $0.width == 200
+        constrain(currentTempLbl, iconLbl) {
+            $0.top == $1.bottom
+            $0.left == $1.left
+
         }
+        constrain(currentTempLbl, minTempLbl){
+            $0.bottom == $1.top
+            $0.left == $1.left
+        }
+
         constrain(minTempLbl){
             $0.bottom == $0.superview!.bottom
             $0.height == 30
@@ -82,6 +86,12 @@ private extension CurrentWeatherView {
             $0.top == $1.top
             $0.height == $1.height
             $0.left == $1.right + 10
+        }
+        constrain(cityLbl) {
+            $0.bottom == $0.superview!.bottom
+            $0.right == $0.superview!.right - 10
+            $0.height == 30
+            $0.width == 200
         }
 
     }
