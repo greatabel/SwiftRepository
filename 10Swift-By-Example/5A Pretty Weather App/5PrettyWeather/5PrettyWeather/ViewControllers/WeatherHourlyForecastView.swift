@@ -8,6 +8,9 @@ class WeatherHourlyForecastView: UIView {
     }
     private var didSetupConstraints = false
 
+    private let scrollView = UIScrollView()
+    private var forecastCells = Array<WeatherHourForecastView>()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -33,7 +36,13 @@ class WeatherHourlyForecastView: UIView {
 
 private extension WeatherHourlyForecastView {
     func setup() {
-
+        (0..<7).forEach {
+            _ in
+            let cell = WeatherHourForecastView(frame: CGRect.zero)
+            forecastCells.append(cell)
+        }
+        scrollView.showsHorizontalScrollIndicator = false
+        addSubview(scrollView)
     }
 }
 private extension WeatherHourlyForecastView{
