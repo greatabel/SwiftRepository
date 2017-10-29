@@ -5,6 +5,8 @@ class PrettyWeatherViewController: UIViewController {
 
     private let backgroundView = UIImageView()
 
+    private let gradientView = UIView()
+
     static var INSET: CGFloat {
         get { return 20 }
     }
@@ -37,16 +39,24 @@ private extension PrettyWeatherViewController {
         backgroundView.contentMode = .scaleAspectFill
         backgroundView.clipsToBounds = true
         view.addSubview(backgroundView)
+
+        view.addSubview(gradientView)
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(currentWeatherView)
         scrollView.addSubview(hourlyForecastView)
         scrollView.addSubview(daysForecastView)
         view.addSubview(scrollView)
+
+
     }
 
     func layoutView() {
         constrain(backgroundView) {
             $0.edges ==  $0.superview!.edges
+        }
+
+        constrain(gradientView) {
+            $0.edges == $0.superview!.edges
         }
 
         constrain(scrollView) {
@@ -76,15 +86,29 @@ private extension PrettyWeatherViewController {
         constrain(currentWeatherView) {
             $0.top == $0.superview!.top + currentWeatherInsect - 200
         }
-    }
-
-
-
-    func style(){
 
     }
+
 
 }
+
+private extension PrettyWeatherViewController{
+    func style(){
+        gradientView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+
+        let blackColor = UIColor(white: 0, alpha: 0.0)
+        let clearColor = UIColor(white: 0, alpha: 1.0)
+
+        gradientLayer.colors = [blackColor.cgColor, clearColor.cgColor]
+        gradientLayer.startPoint = CGPoint(x:1.0,y:0.5)
+        gradientLayer.endPoint = CGPoint(x:1.0, y:1.0)
+        gradientView.layer.mask = gradientLayer
+
+    }
+}
+
 private extension PrettyWeatherViewController{
     func render(image: UIImage?){
         if let image = image {

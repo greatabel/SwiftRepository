@@ -99,7 +99,7 @@ private extension CurrentWeatherView {
 
 private extension CurrentWeatherView {
     func style() {
-        backgroundColor = UIColor.red
+//        backgroundColor = UIColor.red
 
         iconLbl.textColor = UIColor.white
 
@@ -129,6 +129,6 @@ extension CurrentWeatherView{
         maxTempLbl.text = "20°"
 
         currentTempLbl.text = "12°"
-        cityLbl.text = "Wuhan"
+        cityLbl.text = "武汉(Wuhan)"
     }
 }
