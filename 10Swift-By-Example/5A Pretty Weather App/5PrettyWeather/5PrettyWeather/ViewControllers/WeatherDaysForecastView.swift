@@ -7,6 +7,7 @@ class WeatherDaysForecastView: UIView {
         get { return 300 }
     }
     private var didSetupConstraints = false
+    private var forecastCells = [WeatherDayForecastView]()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,6 +48,14 @@ private extension WeatherDaysForecastView{
 private extension WeatherDaysForecastView {
     func style() {
         backgroundColor = UIColor.blue
+    }
+}
+
+extension WeatherDaysForecastView{
+    func render(){
+//        forecastCells.forEach {
+//            $0.render()
+//        }
     }
 }
 

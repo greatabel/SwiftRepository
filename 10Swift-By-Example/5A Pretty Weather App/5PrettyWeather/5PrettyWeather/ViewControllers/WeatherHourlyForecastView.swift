@@ -61,7 +61,7 @@ private extension WeatherHourlyForecastView{
             $0.right == $0.superview!.right
         }
         for idx in 0..<(forecastCells.count - 1) {
-            print("idx> \(idx)")
+//            print("idx> \(idx)")
             let cell = forecastCells[idx]
             let nextCell = forecastCells[idx + 1]
             constrain(cell, nextCell) {

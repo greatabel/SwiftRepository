@@ -121,5 +121,6 @@ private extension PrettyWeatherViewController{
     func renderSubViews() {
         currentWeatherView.render()
         hourlyForecastView.render()
+        daysForecastView.render()
     }
 }

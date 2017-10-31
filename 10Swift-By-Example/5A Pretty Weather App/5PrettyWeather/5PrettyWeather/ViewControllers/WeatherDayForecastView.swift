@@ -5,6 +5,9 @@ class WeatherDayForecastView: UIView {
 
     private var didSetupConstraints = false
 
+    private let iconLabel = UILabel()
+    private let dayLabel = UILabel()
+    private let tempsLabel = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +34,9 @@ class WeatherDayForecastView: UIView {
 
 private extension WeatherDayForecastView {
     func setup() {
-
+        addSubview(dayLabel)
+        addSubview(iconLabel)
+        addSubview(tempsLabel)
     }
 }
 private extension WeatherDayForecastView{
@@ -41,10 +46,13 @@ private extension WeatherDayForecastView{
 }
 private extension WeatherDayForecastView {
     func style() {
-        
-
-
+        iconLabel.textColor = UIColor.white
+        dayLabel.font = UIFont.latoFont(ofSize: 20)
+        dayLabel.textColor = UIColor.white
+        tempsLabel.font = UIFont.latoFont(ofSize: 20)
+        tempsLabel.textColor = UIColor.white
     }
+
 }
 
 extension WeatherDayForecastView{
