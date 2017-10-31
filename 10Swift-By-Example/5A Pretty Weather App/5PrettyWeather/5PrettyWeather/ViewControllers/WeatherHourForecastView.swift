@@ -60,7 +60,7 @@ private extension WeatherHourForecastView{
 }
 private extension WeatherHourForecastView {
     func style() {
-        backgroundColor = UIColor.blue
+//        backgroundColor = UIColor.blue
 
         iconLabel.textColor = UIColor.white
         hourLabel.font = UIFont.latoFont(ofSize: 20)
@@ -77,7 +77,9 @@ extension WeatherHourForecastView{
         hourLabel.text = dateFormatter.string(from: Date())
         iconLabel.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
                                               .attributedString()
-        tempsLabel.text = "5° 8°"
+        let number = arc4random_uniform(11) // [0, 10]
+        let temp = "\(number - 1) ° \(number + 3) °"
+        tempsLabel.text = temp
     }
 }
 
