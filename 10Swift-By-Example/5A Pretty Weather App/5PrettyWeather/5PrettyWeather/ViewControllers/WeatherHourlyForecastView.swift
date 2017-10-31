@@ -57,6 +57,16 @@ private extension WeatherHourlyForecastView{
 private extension WeatherHourlyForecastView {
     func style() {
         backgroundColor = UIColor.green
+
     }
+}
+
+extension WeatherHourlyForecastView {
+    func render() {
+        forecastCells.forEach {
+            $0.render()
+        }
+    }
+
 }
 
