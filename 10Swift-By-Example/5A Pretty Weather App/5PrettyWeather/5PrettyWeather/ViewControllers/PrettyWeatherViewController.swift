@@ -1,11 +1,13 @@
 import UIKit
 import Cartography
+import FXBlurView
 
 class PrettyWeatherViewController: UIViewController {
 
     private let backgroundView = UIImageView()
 
     private let gradientView = UIView()
+    private let overlayView = UIImageView()
 
     static var INSET: CGFloat {
         get { return 20 }
@@ -40,11 +42,17 @@ private extension PrettyWeatherViewController {
         backgroundView.clipsToBounds = true
         view.addSubview(backgroundView)
 
+        overlayView.contentMode = .scaleAspectFill
+        overlayView.clipsToBounds = true
+        view.addSubview(overlayView)
+
         view.addSubview(gradientView)
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(currentWeatherView)
         scrollView.addSubview(hourlyForecastView)
         scrollView.addSubview(daysForecastView)
+
+        scrollView.delegate = self
         view.addSubview(scrollView)
 
 
@@ -54,7 +62,9 @@ private extension PrettyWeatherViewController {
         constrain(backgroundView) {
             $0.edges ==  $0.superview!.edges
         }
-
+        constrain(overlayView) {
+            $0.edges ==  $0.superview!.edges
+        }
         constrain(gradientView) {
             $0.edges == $0.superview!.edges
         }
@@ -84,7 +94,8 @@ private extension PrettyWeatherViewController {
         let currentWeatherInsect: CGFloat = view.frame.height - CurrentWeatherView.HEIGHT - PrettyWeatherViewController.INSET
         print("### currentWeatherInsect> \(currentWeatherInsect)")
         constrain(currentWeatherView) {
-            $0.top == $0.superview!.top + currentWeatherInsect - 200
+//            $0.top == $0.superview!.top + currentWeatherInsect - 200
+            $0.top == $0.superview!.top + currentWeatherInsect
         }
 
     }
@@ -113,14 +124,27 @@ private extension PrettyWeatherViewController{
 
 private extension PrettyWeatherViewController{
     func render(image: UIImage?){
-        if let image = image {
-            backgroundView.image = image
-        }
+        guard let image = image else { return }
+
+        backgroundView.image = image
+        overlayView.image = image.blurredImage(withRadius: 10, iterations: 20, tintColor: UIColor.clear)
+        // 0代表透明
+        overlayView.alpha = 0
+
     }
 
     func renderSubViews() {
         currentWeatherView.render()
         hourlyForecastView.render()
         daysForecastView.render()
+    }
+}
+
+extension PrettyWeatherViewController: UIScrollViewDelegate{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        let threshhold: CGFloat = CGFloat(view.frame.height) / 2
+        overlayView.alpha = min(1.0, offset/threshhold)
+        print("overlayView.alpha \(overlayView.alpha) offset> \(offset)")
     }
 }

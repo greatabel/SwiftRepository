@@ -75,7 +75,7 @@ extension WeatherHourForecastView{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         hourLabel.text = dateFormatter.string(from: Date())
-        let number = arc4random_uniform(11) // [0, 10]
+        let number = arc4random_uniform(11) + 1 // [0, 10] + 1
         var show = NSAttributedString()
         switch number/3 {
         case 0:
