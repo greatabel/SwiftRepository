@@ -75,10 +75,23 @@ extension WeatherHourForecastView{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         hourLabel.text = dateFormatter.string(from: Date())
-        iconLabel.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
-                                              .attributedString()
         let number = arc4random_uniform(11) // [0, 10]
-        let temp = "\(number - 1) ° \(number + 3) °"
+        var show = NSAttributedString()
+        switch number/3 {
+        case 0:
+            show = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
+                .attributedString()
+        case 1:
+            show = WIKFontIcon.wiRainMix(withSize: 30).attributedString()
+        case 2:
+            show = WIKFontIcon.wiCloudRefreshIcon(withSize: 30).attributedString()
+        default:
+            show = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
+                .attributedString()
+        }
+        iconLabel.attributedText = show
+
+        let temp = "\(number - 1)° \(number + 3)°"
         tempsLabel.text = temp
     }
 }
