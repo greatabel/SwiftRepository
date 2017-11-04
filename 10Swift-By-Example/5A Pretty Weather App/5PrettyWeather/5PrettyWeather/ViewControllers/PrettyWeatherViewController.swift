@@ -33,6 +33,18 @@ class PrettyWeatherViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let lat:Double = 48.8567
+        let lon:Double = 2.3508
+
+        FlickrDatastore().retrieveImageAtLat(lat: lat, lon: lon){ image in
+            self.render(image: image)
+        }
+    }
+
 }
 
 private extension PrettyWeatherViewController {
@@ -145,6 +157,6 @@ extension PrettyWeatherViewController: UIScrollViewDelegate{
         let offset = scrollView.contentOffset.y
         let threshhold: CGFloat = CGFloat(view.frame.height) / 2
         overlayView.alpha = min(1.0, offset/threshhold)
-        print("overlayView.alpha \(overlayView.alpha) offset> \(offset)")
+//        print("overlayView.alpha \(overlayView.alpha) offset> \(offset)")
     }
 }
