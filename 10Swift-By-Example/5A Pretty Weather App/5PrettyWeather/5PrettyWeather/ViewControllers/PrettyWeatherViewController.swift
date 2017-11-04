@@ -4,6 +4,8 @@ import FXBlurView
 
 class PrettyWeatherViewController: UIViewController {
 
+    private var locationDatastore: LocationDatastore?
+
     private let backgroundView = UIImageView()
 
     private let gradientView = UIView()
@@ -37,12 +39,12 @@ class PrettyWeatherViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let lat:Double = 48.8567
-        let lon:Double = 2.3508
-
-        FlickrDatastore().retrieveImageAtLat(lat: lat, lon: lon){ image in
-            self.render(image: image)
+        locationDatastore = LocationDatastore() { [weak self] location in
+            FlickrDatastore().retrieveImageAtLat(lat: location.lat, lon: location.lon){ image in
+                self?.render(image: image)
+            }
         }
+
     }
 
 }

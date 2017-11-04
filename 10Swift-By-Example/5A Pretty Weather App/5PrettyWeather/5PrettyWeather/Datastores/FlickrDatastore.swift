@@ -1,7 +1,7 @@
 import FlickrKit
 
 class FlickrDatastore {
-    // 末尾加过1
+    // http://kodesnippets.com/index.php/2017/05/08/using-flickrkit-ios/
     private let OBJECTIVE_FLICKR_API_KEY = "78336af48557fd52e45af9f30b6f0526"
     private let OBJECTIVE_FLICKR_API_SHARED_SECRET = "749826712d6aa140"
     private let GROUP_ID = "1463451@N25"
@@ -40,7 +40,7 @@ class FlickrDatastore {
                 }
                 else{
 
-                    print(error)
+                    print(error ?? "")
 //                    completionHandler(nil,error as? NSError)
                 }
 
