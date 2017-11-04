@@ -1,4 +1,6 @@
 import Foundation
+
+// http://openweathermap.org/weather-conditions
 struct WeatherCondition {
     let cityName: String?
     let weather: String
