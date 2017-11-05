@@ -17,6 +17,7 @@
 		200F700C1FAF52DB00D8533E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200F700A1FAF52DB00D8533E /* LaunchScreen.storyboard */; };
 		200F70171FAF52DB00D8533E /* _FlappySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F70161FAF52DB00D8533E /* _FlappySwiftTests.swift */; };
 		200F70221FAF52DB00D8533E /* _FlappySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F70211FAF52DB00D8533E /* _FlappySwiftUITests.swift */; };
+		A6FFD61846C512E88F25A149 /* Pods_6FlappySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		200F701D1FAF52DB00D8533E /* 6FlappySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 6FlappySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		200F70211FAF52DB00D8533E /* _FlappySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlappySwiftUITests.swift; sourceTree = "<group>"; };
 		200F70231FAF52DB00D8533E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD7BE7AA2E4C0A523CC3092 /* Pods-6FlappySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.release.xcconfig"; sourceTree = "<group>"; };
+		8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6FlappySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F93D6471819FA0CD588C194 /* Pods-6FlappySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FFD61846C512E88F25A149 /* Pods_6FlappySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,8 @@
 				200F70151FAF52DB00D8533E /* 6FlappySwiftTests */,
 				200F70201FAF52DB00D8533E /* 6FlappySwiftUITests */,
 				200F6FF91FAF52DB00D8533E /* Products */,
+				275DF477C56CEBEC3CDA7DB6 /* Pods */,
+				2FBB7037A7357DC5413C3E50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +141,23 @@
 			path = 6FlappySwiftUITests;
 			sourceTree = "<group>";
 		};
+		275DF477C56CEBEC3CDA7DB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F93D6471819FA0CD588C194 /* Pods-6FlappySwift.debug.xcconfig */,
+				2AD7BE7AA2E4C0A523CC3092 /* Pods-6FlappySwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2FBB7037A7357DC5413C3E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 200F70261FAF52DB00D8533E /* Build configuration list for PBXNativeTarget "6FlappySwift" */;
 			buildPhases = (
+				BFC863A464139DC1D3A4C0B0 /* [CP] Check Pods Manifest.lock */,
 				200F6FF41FAF52DB00D8533E /* Sources */,
 				200F6FF51FAF52DB00D8533E /* Frameworks */,
 				200F6FF61FAF52DB00D8533E /* Resources */,
+				FEF896CE819B016D63E0BD0A /* [CP] Embed Pods Frameworks */,
+				BA6AD8DD359763B1878FC138 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA6AD8DD359763B1878FC138 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFC863A464139DC1D3A4C0B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-6FlappySwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEF896CE819B016D63E0BD0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/HTPressableButton/HTPressableButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTPressableButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		200F6FF41FAF52DB00D8533E /* Sources */ = {
@@ -436,6 +519,7 @@
 		};
 		200F70271FAF52DB00D8533E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F93D6471819FA0CD588C194 /* Pods-6FlappySwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +535,7 @@
 		};
 		200F70281FAF52DB00D8533E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AD7BE7AA2E4C0A523CC3092 /* Pods-6FlappySwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
