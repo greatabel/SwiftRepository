@@ -70,30 +70,49 @@ private extension WeatherHourForecastView {
     }
 }
 
+//extension WeatherHourForecastView{
+//    func render() {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "HH:mm"
+//        hourLabel.text = dateFormatter.string(from: Date())
+//        let number = arc4random_uniform(11) + 1 // [0, 10] + 1
+//        var show = NSAttributedString()
+//        switch number/3 {
+//        case 0:
+//            show = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
+//                .attributedString()
+//        case 1:
+//            show = WIKFontIcon.wiRainMix(withSize: 30).attributedString()
+//        case 2:
+//            show = WIKFontIcon.wiCloudRefreshIcon(withSize: 30).attributedString()
+//        default:
+//            show = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
+//                .attributedString()
+//        }
+//        iconLabel.attributedText = show
+//
+//        let temp = "\(number - 1)° \(number + 3)°"
+//        tempsLabel.text = temp
+//    }
+//}
 extension WeatherHourForecastView{
-    func render() {
+    func render(weatherCondition: WeatherCondition){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
-        hourLabel.text = dateFormatter.string(from: Date())
-        let number = arc4random_uniform(11) + 1 // [0, 10] + 1
-        var show = NSAttributedString()
-        switch number/3 {
-        case 0:
-            show = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
-                .attributedString()
-        case 1:
-            show = WIKFontIcon.wiRainMix(withSize: 30).attributedString()
-        case 2:
-            show = WIKFontIcon.wiCloudRefreshIcon(withSize: 30).attributedString()
-        default:
-            show = WIKFontIcon.wiDaySunnyIcon(withSize: 30)
-                .attributedString()
-        }
-        iconLabel.attributedText = show
+        hourLabel.text = dateFormatter.string(from: weatherCondition.time as Date)
+        iconLabel.attributedText = iconStringFromIcon(icon: weatherCondition.icon!, size: 30)
 
-        let temp = "\(number - 1)° \(number + 3)°"
-        tempsLabel.text = temp
+        var usesMetric = false
+        let local = Locale.current as NSLocale
+        if let localeSystem = local.object(forKey: NSLocale.Key.usesMetricSystem) as? Bool {
+            usesMetric = localeSystem
+        }
+
+        if usesMetric {
+            tempsLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())° \(weatherCondition.maxTempCelsius.roundToInt())°"
+        } else {
+            tempsLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())° \(weatherCondition.maxTempFahrenheit.roundToInt())°"
+        }
     }
 }
-
 

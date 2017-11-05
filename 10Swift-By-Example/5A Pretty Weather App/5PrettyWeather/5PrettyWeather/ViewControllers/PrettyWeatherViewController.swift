@@ -48,7 +48,11 @@ class PrettyWeatherViewController: UIViewController {
             weatherDatastore.retrieveCurrentWeatherAtLat(lat: location.lat, lon: location.lon) {
                 currentWeatherConditions in
                 self?.renderCurrent(currentWeatherConditions: currentWeatherConditions)
-                return
+
+            }
+            weatherDatastore.retrieveHourlyForecastAtLat(lat: location.lat, lon: location.lon) {
+                hourlyWeatherConditions in
+                self?.renderHourly(weatherConditions: hourlyWeatherConditions)
             }
 
         }
@@ -158,9 +162,13 @@ private extension PrettyWeatherViewController{
         currentWeatherView.render(weatherCondition: currentWeatherConditions)
     }
 
+    func renderHourly(weatherConditions: Array<WeatherCondition>){
+        hourlyForecastView.render(weatherConditions: weatherConditions)
+    }
+
     func renderSubViews() {
 //        currentWeatherView.render()
-        hourlyForecastView.render()
+//        hourlyForecastView.render()
         daysForecastView.render()
     }
 }

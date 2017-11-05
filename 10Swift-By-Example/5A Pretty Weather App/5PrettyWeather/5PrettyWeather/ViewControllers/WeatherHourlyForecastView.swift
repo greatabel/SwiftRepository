@@ -87,12 +87,19 @@ private extension WeatherHourlyForecastView {
     }
 }
 
-extension WeatherHourlyForecastView {
-    func render() {
-        forecastCells.forEach {
-            $0.render()
+//extension WeatherHourlyForecastView {
+//    func render() {
+//        forecastCells.forEach {
+//            $0.render()
+//        }
+//    }
+//
+//}
+extension WeatherHourlyForecastView{
+    func render(weatherConditions: Array<WeatherCondition>){
+        zip(forecastCells, weatherConditions).forEach {
+
+            ($0.0).render(weatherCondition: $0.1)
         }
     }
-
 }
-
