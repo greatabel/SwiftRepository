@@ -8,13 +8,14 @@ class WeatherDatastore {
 
     func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees,
                                      block: @escaping (_ weatherCondition: WeatherCondition) -> Void) {
-        let url = "http://api.openweathermap.org/data/2.5/weather?APPID=\(APIKey)"
+        let url = "https://api.openweathermap.org/data/2.5/weather?APPID=\(APIKey)"
         let params = ["lat":lat, "lon":lon]
 
         Alamofire.request(url, parameters: params)
             .responseJSON {
                 response in
                 let json = JSON(response.data!)
+                print("retrieveCurrentWeatherAtLat= \(json)")
                 block(self.createWeatherConditionFronJson(json: json))
         }
 
@@ -33,7 +34,7 @@ class WeatherDatastore {
     func retrieveHourlyForecastAtLat(lat: CLLocationDegrees,
                                      lon: CLLocationDegrees,
                                      block: @escaping (_ weatherConditions: Array<WeatherCondition>) -> Void) {
-        let url = "http://api.openweathermap.org/data/2.5/forecast?APPID=\(APIKey)"
+        let url = "https://api.openweathermap.org/data/2.5/forecast?APPID=\(APIKey)"
         let params = ["lat":lat, "lon":lon]
         Alamofire.request(url, parameters: params)
             .responseJSON {
@@ -68,7 +69,7 @@ class WeatherDatastore {
                                     lon: Double,
                                     dayCnt: Int,
                                     block: @escaping (_ weatherConditions: Array<WeatherCondition>) -> Void) {
-        let url = "http://api.openweathermap.org/data/2.5/forecast/daily?APPID=\(APIKey)"
+        let url = "https://api.openweathermap.org/data/2.5/forecast/daily?APPID=\(APIKey)"
         let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt+1)]
         Alamofire.request(url, parameters: params)
             .responseJSON {

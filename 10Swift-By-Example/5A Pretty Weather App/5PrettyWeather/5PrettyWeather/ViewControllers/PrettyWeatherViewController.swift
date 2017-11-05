@@ -43,8 +43,15 @@ class PrettyWeatherViewController: UIViewController {
             FlickrDatastore().retrieveImageAtLat(lat: location.lat, lon: location.lon){ image in
                 self?.render(image: image)
             }
-        }
 
+            let weatherDatastore = WeatherDatastore()
+            weatherDatastore.retrieveCurrentWeatherAtLat(lat: location.lat, lon: location.lon) {
+                currentWeatherConditions in
+                self?.renderCurrent(currentWeatherConditions: currentWeatherConditions)
+                return
+            }
+
+        }
     }
 
 }
@@ -147,8 +154,12 @@ private extension PrettyWeatherViewController{
 
     }
 
+    func renderCurrent(currentWeatherConditions: WeatherCondition){
+        currentWeatherView.render(weatherCondition: currentWeatherConditions)
+    }
+
     func renderSubViews() {
-        currentWeatherView.render()
+//        currentWeatherView.render()
         hourlyForecastView.render()
         daysForecastView.render()
     }

@@ -23,6 +23,8 @@
 		20CE554D1FAE258E00ECC245 /* LocationDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE554C1FAE258E00ECC245 /* LocationDatastore.swift */; };
 		20CE554F1FAE290D00ECC245 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE554E1FAE290D00ECC245 /* WeatherCondition.swift */; };
 		20CE55511FAE29E400ECC245 /* WeatherDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE55501FAE29E400ECC245 /* WeatherDatastore.swift */; };
+		20CE55531FAEA9A500ECC245 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE55521FAEA9A500ECC245 /* Functions.swift */; };
+		20CE55551FAEAA7F00ECC245 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE55541FAEAA7F00ECC245 /* Double+Extension.swift */; };
 		6E01E240A2133DFCBEF7B8A9 /* Pods_5PrettyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		20CE554C1FAE258E00ECC245 /* LocationDatastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDatastore.swift; sourceTree = "<group>"; };
 		20CE554E1FAE290D00ECC245 /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
 		20CE55501FAE29E400ECC245 /* WeatherDatastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDatastore.swift; sourceTree = "<group>"; };
+		20CE55521FAEA9A500ECC245 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		20CE55541FAEAA7F00ECC245 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		2800F24FD6E87551424D5C93 /* Pods_5PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BFF9C70397672196988A9A /* Pods-5PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5PrettyWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
 		EB97EE87028DCDC1402B75F5 /* Pods-5PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5PrettyWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5PrettyWeather/Pods-5PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				20CE554C1FAE258E00ECC245 /* LocationDatastore.swift */,
 				20CE554E1FAE290D00ECC245 /* WeatherCondition.swift */,
 				20CE55501FAE29E400ECC245 /* WeatherDatastore.swift */,
+				20CE55521FAEA9A500ECC245 /* Functions.swift */,
+				20CE55541FAEAA7F00ECC245 /* Double+Extension.swift */,
 			);
 			path = Datastores;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				2046BDD11FA32ADA0095084A /* CurrentWeatherView.swift in Sources */,
 				2097EE3D1FAC56E400018467 /* FlickrDatastore.swift in Sources */,
 				20CE554D1FAE258E00ECC245 /* LocationDatastore.swift in Sources */,
+				20CE55551FAEAA7F00ECC245 /* Double+Extension.swift in Sources */,
 				20CE554F1FAE290D00ECC245 /* WeatherCondition.swift in Sources */,
 				2093D5211FA86FB700EFB3B3 /* WeatherDayForecastView.swift in Sources */,
 				207ED2F51FA0893000A9B6D4 /* AppDelegate.swift in Sources */,
@@ -406,6 +413,7 @@
 				20A4BCED1FA5BEEF006319B8 /* WeatherHourForecastView.swift in Sources */,
 				20CE55511FAE29E400ECC245 /* WeatherDatastore.swift in Sources */,
 				20AAAA7D1FA3A1A000F91DED /* WeatherDaysForecastView.swift in Sources */,
+				20CE55531FAEA9A500ECC245 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -121,15 +121,40 @@ private extension CurrentWeatherView {
     }
 }
 
-extension CurrentWeatherView{
-    func render(){
-        iconLbl.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 20)
-                                            .attributedString()
-        weatherLbl.text = "晴朗☀️"
-        minTempLbl.text = "14°"
-        maxTempLbl.text = "20°"
+//extension CurrentWeatherView{
+//    func render(){
+//        iconLbl.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 20)
+//                                            .attributedString()
+//        weatherLbl.text = "晴朗☀️"
+//        minTempLbl.text = "14°"
+//        maxTempLbl.text = "20°"
+//
+//        currentTempLbl.text = "12°"
+//        cityLbl.text = "武汉(Wuhan)"
+//    }
+//}
 
-        currentTempLbl.text = "12°"
-        cityLbl.text = "武汉(Wuhan)"
+extension CurrentWeatherView{
+    func render(weatherCondition: WeatherCondition){
+        iconLbl.attributedText = iconStringFromIcon(icon: weatherCondition.icon!, size: 20)
+        weatherLbl.text = weatherCondition.weather
+
+        var usesMetric = false
+        let local = Locale.current as NSLocale
+        if let localeSystem = local.object(forKey: NSLocale.Key.usesMetricSystem) as? Bool {
+            usesMetric = localeSystem
+        }
+
+        if usesMetric {
+            minTempLbl.text = "\(weatherCondition.minTempCelsius.roundToInt())°"
+            maxTempLbl.text = "\(weatherCondition.maxTempCelsius.roundToInt())°"
+            currentTempLbl.text = "\(weatherCondition.tempCelsius.roundToInt())°"
+        } else {
+            minTempLbl.text = "\(weatherCondition.minTempFahrenheit.roundToInt())°"
+            maxTempLbl.text = "\(weatherCondition.maxTempFahrenheit.roundToInt())°"
+            currentTempLbl.text = "\(weatherCondition.tempFahrenheit.roundToInt())°"
+        }
+
+        cityLbl.text = weatherCondition.cityName ?? ""
     }
 }
