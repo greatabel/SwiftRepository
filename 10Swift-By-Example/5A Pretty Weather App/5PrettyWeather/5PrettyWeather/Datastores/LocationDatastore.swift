@@ -43,6 +43,7 @@ class LocationDatastore: NSObject, CLLocationManagerDelegate {
 
         DispatchQueue.main.async(){
             self.onLocationFound(Location(lat: coord.latitude, lon: coord.longitude))
+//            self.onLocationFound(Location(lat: 31.2304, lon: 121.4737))
         }
 
         stopUpdating()

@@ -54,7 +54,7 @@ class PrettyWeatherViewController: UIViewController {
                 hourlyWeatherConditions in
                 self?.renderHourly(weatherConditions: hourlyWeatherConditions)
             }
-            weatherDatastore.retrieveDailyForecastAtLat(lat: location.lat, lon: location.lon, dayCnt: 7) {
+            weatherDatastore.retrieveDailyForecastAtLat(lat: location.lat, lon: location.lon, dayCnt: 5) {
                 hourlyWeatherConditions in
                 self?.renderDaily(weatherConditions: hourlyWeatherConditions)
             }

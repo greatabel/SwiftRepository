@@ -15,7 +15,7 @@ class WeatherDatastore {
             .responseJSON {
                 response in
                 let json = JSON(response.data!)
-                print("retrieveCurrentWeatherAtLat= \(json)")
+//                print("retrieveCurrentWeatherAtLat= \(json)")
                 block(self.createWeatherConditionFronJson(json: json))
         }
 
@@ -39,6 +39,7 @@ class WeatherDatastore {
         Alamofire.request(url, parameters: params)
             .responseJSON {
                 response in
+
                 let json = JSON(response.data!)
                 let list: Array<JSON> = json["list"].arrayValue
 
@@ -71,17 +72,39 @@ class WeatherDatastore {
                                     block: @escaping (_ weatherConditions: Array<WeatherCondition>) -> Void) {
         let url = "https://api.openweathermap.org/data/2.5/forecast/daily?APPID=\(APIKey)"
         let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt+1)]
+        // --------daily is not free now, for testing:
+        //        params = [:]
+        //        url = "https://samples.openweathermap.org/data/2.5/forecast/daily?id=524901&appid=b1b15e88fa797225412429c1c50c122a1"
+        var mockData = Data()
+        do {
+            if let file = Bundle.main.url(forResource: "mockdata", withExtension: "json") {
+                mockData = try Data(contentsOf: file)
+
+            } else {
+                print("no file")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        // ------end of mock ---------------
         Alamofire.request(url, parameters: params)
             .responseJSON {
                 response in
-                let json = JSON(response.data!)
+
+                var json = JSON(response.data!)
+                // set mockdata
+                json = JSON(mockData)
+                print("##json=\(json)")
                 let list: Array<JSON> = json["list"].arrayValue
                 let weatherConditions: Array<WeatherCondition> = list.map() {
                     return self.createDayForecastFronJson(json: $0)
                 }
                 let count = weatherConditions.count
-                let daysWithoutToday = Array(weatherConditions[1..<count])
-                block(daysWithoutToday)
+                print("###count=\(count)")
+                if count >= 1 {
+                    let daysWithoutToday = Array(weatherConditions[1..<count])
+                    block(daysWithoutToday)
+                }
         }
 //        Alamofire.request(url, parameters: params)
 //            .responseJSON { request, response, result in
@@ -102,6 +125,28 @@ class WeatherDatastore {
     }
 
 }
+//private func readJson() {
+//    do {
+//        if let file = Bundle.main.url(forResource: "mockdata", withExtension: "json") {
+//            let data = try Data(contentsOf: file)
+//
+////            let json = try JSONSerialization.jsonObject(with: data, options: [])
+////            if let object = json as? [String: Any] {
+////                // json is a dictionary
+////                print(object)
+////            } else if let object = json as? [Any] {
+////                // json is an array
+////                print(object)
+////            } else {
+////                print("JSON is invalid")
+////            }
+//        } else {
+//            print("no file")
+//        }
+//    } catch {
+//        print(error.localizedDescription)
+//    }
+//}
 
 private extension WeatherDatastore {
     func createWeatherConditionFronJson(json: JSON) -> WeatherCondition{

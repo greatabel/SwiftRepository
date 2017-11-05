@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2046BDD11FA32ADA0095084A /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BDD01FA32ADA0095084A /* CurrentWeatherView.swift */; };
+		204AA1391FAEC17A0056006E /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 204AA1381FAEC17A0056006E /* mockdata.json */; };
 		207ED2F51FA0893000A9B6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */; };
 		207ED2FC1FA0893000A9B6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */; };
 		207ED2FF1FA0893000A9B6D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		2046BDD01FA32ADA0095084A /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		204AA1381FAEC17A0056006E /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
 		207ED2F11FA0893000A9B6D4 /* 5PrettyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5PrettyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207ED2F41FA0893000A9B6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207ED2FB1FA0893000A9B6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				207ED3241FA08C6D00A9B6D4 /* Main.storyboard */,
 				207ED2FD1FA0893000A9B6D4 /* LaunchScreen.storyboard */,
 				207ED3001FA0893000A9B6D4 /* Info.plist */,
+				204AA1381FAEC17A0056006E /* mockdata.json */,
 			);
 			path = 5PrettyWeather;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				207ED3261FA08C6D00A9B6D4 /* Main.storyboard in Resources */,
+				204AA1391FAEC17A0056006E /* mockdata.json in Resources */,
 				207ED2FF1FA0893000A9B6D4 /* LaunchScreen.storyboard in Resources */,
 				207ED2FC1FA0893000A9B6D4 /* Assets.xcassets in Resources */,
 			);
