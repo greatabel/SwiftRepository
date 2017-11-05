@@ -116,12 +116,12 @@
 				200F6FFD1FAF52DB00D8533E /* GameScene.sks */,
 				200F6FFF1FAF52DB00D8533E /* Actions.sks */,
 				200F70011FAF52DB00D8533E /* GameScene.swift */,
+				209D42171FAF55A400667EDB /* MenuViewController.swift */,
 				200F70031FAF52DB00D8533E /* GameViewController.swift */,
 				200F70051FAF52DB00D8533E /* Main.storyboard */,
 				200F70081FAF52DB00D8533E /* Assets.xcassets */,
 				200F700A1FAF52DB00D8533E /* LaunchScreen.storyboard */,
 				200F700D1FAF52DB00D8533E /* Info.plist */,
-				209D42171FAF55A400667EDB /* MenuViewController.swift */,
 			);
 			path = 6FlappySwift;
 			sourceTree = "<group>";
