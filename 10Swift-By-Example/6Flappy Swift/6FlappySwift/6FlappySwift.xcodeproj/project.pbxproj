@@ -17,6 +17,7 @@
 		200F700C1FAF52DB00D8533E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200F700A1FAF52DB00D8533E /* LaunchScreen.storyboard */; };
 		200F70171FAF52DB00D8533E /* _FlappySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F70161FAF52DB00D8533E /* _FlappySwiftTests.swift */; };
 		200F70221FAF52DB00D8533E /* _FlappySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F70211FAF52DB00D8533E /* _FlappySwiftUITests.swift */; };
+		209D42181FAF55A400667EDB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42171FAF55A400667EDB /* MenuViewController.swift */; };
 		A6FFD61846C512E88F25A149 /* Pods_6FlappySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		200F701D1FAF52DB00D8533E /* 6FlappySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 6FlappySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		200F70211FAF52DB00D8533E /* _FlappySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlappySwiftUITests.swift; sourceTree = "<group>"; };
 		200F70231FAF52DB00D8533E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209D42171FAF55A400667EDB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2AD7BE7AA2E4C0A523CC3092 /* Pods-6FlappySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.release.xcconfig"; sourceTree = "<group>"; };
 		8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6FlappySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F93D6471819FA0CD588C194 /* Pods-6FlappySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				200F70081FAF52DB00D8533E /* Assets.xcassets */,
 				200F700A1FAF52DB00D8533E /* LaunchScreen.storyboard */,
 				200F700D1FAF52DB00D8533E /* Info.plist */,
+				209D42171FAF55A400667EDB /* MenuViewController.swift */,
 			);
 			path = 6FlappySwift;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				200F70021FAF52DB00D8533E /* GameScene.swift in Sources */,
 				200F70041FAF52DB00D8533E /* GameViewController.swift in Sources */,
 				200F6FFC1FAF52DB00D8533E /* AppDelegate.swift in Sources */,
+				209D42181FAF55A400667EDB /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
