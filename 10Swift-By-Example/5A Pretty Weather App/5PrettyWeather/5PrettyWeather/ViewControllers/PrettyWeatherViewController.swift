@@ -26,7 +26,7 @@ class PrettyWeatherViewController: UIViewController {
         layoutView()
         style()
         render(image: UIImage(named: "DefaultImage"))
-        renderSubViews()
+//        renderSubViews()
 
         // Do any additional setup after loading the view.
     }
@@ -53,6 +53,10 @@ class PrettyWeatherViewController: UIViewController {
             weatherDatastore.retrieveHourlyForecastAtLat(lat: location.lat, lon: location.lon) {
                 hourlyWeatherConditions in
                 self?.renderHourly(weatherConditions: hourlyWeatherConditions)
+            }
+            weatherDatastore.retrieveDailyForecastAtLat(lat: location.lat, lon: location.lon, dayCnt: 7) {
+                hourlyWeatherConditions in
+                self?.renderDaily(weatherConditions: hourlyWeatherConditions)
             }
 
         }
@@ -166,11 +170,15 @@ private extension PrettyWeatherViewController{
         hourlyForecastView.render(weatherConditions: weatherConditions)
     }
 
-    func renderSubViews() {
-//        currentWeatherView.render()
-//        hourlyForecastView.render()
-        daysForecastView.render()
+    func renderDaily(weatherConditions: Array<WeatherCondition>){
+        daysForecastView.render(weatherConditions: weatherConditions)
     }
+
+//    func renderSubViews() {
+////        currentWeatherView.render()
+////        hourlyForecastView.render()
+////        daysForecastView.render()
+//    }
 }
 
 extension PrettyWeatherViewController: UIScrollViewDelegate{

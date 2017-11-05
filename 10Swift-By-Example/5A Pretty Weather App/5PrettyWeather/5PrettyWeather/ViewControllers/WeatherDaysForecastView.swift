@@ -71,10 +71,17 @@ private extension WeatherDaysForecastView {
     }
 }
 
+//extension WeatherDaysForecastView{
+//    func render(){
+//        forecastCells.forEach {
+//            $0.render()
+//        }
+//    }
+//}
 extension WeatherDaysForecastView{
-    func render(){
-        forecastCells.forEach {
-            $0.render()
+    func render(weatherConditions: Array<WeatherCondition>){
+        zip(forecastCells, weatherConditions).forEach {
+            ($0.0).render(weatherCondition: $0.1)
         }
     }
 }

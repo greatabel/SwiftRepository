@@ -72,17 +72,36 @@ private extension WeatherDayForecastView {
 
 }
 
+//extension WeatherDayForecastView{
+//    func render() {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "EEEE"
+//        dayLabel.text = dateFormatter.string(from: Date())
+//        iconLabel.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 30).attributedString()
+//
+//        tempsLabel.text = "7°     11°"
+//
+//    }
+//}
 extension WeatherDayForecastView{
-    func render() {
+    func render(weatherCondition: WeatherCondition){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
-        dayLabel.text = dateFormatter.string(from: Date())
-        iconLabel.attributedText = WIKFontIcon.wiDaySunnyIcon(withSize: 30).attributedString()
+        dayLabel.text = dateFormatter.string(from: weatherCondition.time as Date)
+        iconLabel.attributedText = iconStringFromIcon(icon: weatherCondition.icon!, size: 30)
 
-        tempsLabel.text = "7°     11°"
+        var usesMetric = false
+        let local = Locale.current as NSLocale
+        if let localeSystem = local.object(forKey: NSLocale.Key.usesMetricSystem) as? Bool {
+            usesMetric = localeSystem
+        }
 
+        if usesMetric {
+            tempsLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())°     \(weatherCondition.maxTempCelsius.roundToInt())°"
+        } else {
+            tempsLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())°     \(weatherCondition.maxTempFahrenheit.roundToInt())°"
+        }
     }
 }
-
 
 
