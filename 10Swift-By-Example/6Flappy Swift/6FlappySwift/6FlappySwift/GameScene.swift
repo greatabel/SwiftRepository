@@ -4,6 +4,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     private var screenNode: SKSpriteNode!
+    private var bird: Bird!
     private var actors: [Startable]!
     
     override func didMove(to view: SKView) {
