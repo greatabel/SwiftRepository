@@ -19,7 +19,7 @@ class GameScene: SKScene {
                     .addTo(parentNode: screenNode, zPosition: 1)
         let ground = Background(textureNamed: "ground", duration:5.0)
                     .addTo(parentNode: screenNode, zPosition: 2)
-        actors = [sky, city, ground]
+        actors = [sky, city, ground, bird]
         for actor in actors {
             actor.start()
         }
