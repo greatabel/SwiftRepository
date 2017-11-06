@@ -42,6 +42,24 @@ extension Bird {
 }
 
 extension Bird {
+    func flap() {
+        node.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
+        node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 8))
+    }
+
+    func update() {
+        switch node.physicsBody!.velocity.dy {
+        case let dy where dy > 30.0:
+            node.zRotation = (3.14/6.0)
+        case let dy where dy < -100.0:
+            node.zRotation = -1*(3.14/4.0)
+        default:
+            node.zRotation = 0.0
+        }
+    }
+}
+
+extension Bird {
     private func animate(){
         let animationFrames = textureNames.map { texName in
             SKTexture(imageNamed: texName)
