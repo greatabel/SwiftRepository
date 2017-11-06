@@ -20,6 +20,7 @@
 		209D421A1FAF5A9800667EDB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42191FAF5A9800667EDB /* GameViewController.swift */; };
 		209D421D1FB03D1E00667EDB /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D421C1FB03D1E00667EDB /* Startable.swift */; };
 		209D421F1FB03DD000667EDB /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D421E1FB03DD000667EDB /* Background.swift */; };
+		209D42221FB03E2B00667EDB /* ParallaxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42211FB03E2B00667EDB /* ParallaxNode.swift */; };
 		A6FFD61846C512E88F25A149 /* Pods_6FlappySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		209D42191FAF5A9800667EDB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		209D421C1FB03D1E00667EDB /* Startable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startable.swift; sourceTree = "<group>"; };
 		209D421E1FB03DD000667EDB /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		209D42211FB03E2B00667EDB /* ParallaxNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxNode.swift; sourceTree = "<group>"; };
 		2AD7BE7AA2E4C0A523CC3092 /* Pods-6FlappySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.release.xcconfig"; sourceTree = "<group>"; };
 		8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6FlappySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F93D6471819FA0CD588C194 /* Pods-6FlappySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,8 +156,17 @@
 			children = (
 				209D421C1FB03D1E00667EDB /* Startable.swift */,
 				209D421E1FB03DD000667EDB /* Background.swift */,
+				209D42201FB03E1E00667EDB /* Nodes */,
 			);
 			path = Actors;
+			sourceTree = "<group>";
+		};
+		209D42201FB03E1E00667EDB /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				209D42211FB03E2B00667EDB /* ParallaxNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		275DF477C56CEBEC3CDA7DB6 /* Pods */ = {
@@ -370,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209D42221FB03E2B00667EDB /* ParallaxNode.swift in Sources */,
 				209D421D1FB03D1E00667EDB /* Startable.swift in Sources */,
 				209D421A1FAF5A9800667EDB /* GameViewController.swift in Sources */,
 				200F70021FAF52DB00D8533E /* GameScene.swift in Sources */,
