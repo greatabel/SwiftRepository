@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
         skView.frame = view.bounds
         view.addSubview(skView)
+
         if let scene = GameScene.unarchiveFromFile(file: "GameScene") as? GameScene {
             scene.size = skView.frame.size
             skView.showsFPS = true

@@ -6,9 +6,9 @@ class ParallaxNode {
     init(textureNamed: String) {
         let leftHalf = createHalfNodeTexture(textureNamed: textureNamed, offsetX: 0)
         let rightHalf = createHalfNodeTexture(textureNamed: textureNamed, offsetX: leftHalf.size.width)
-
+        print("leftHalf.size=\(leftHalf.size)")
         let size = CGSize(width: leftHalf.size.width + rightHalf.size.width,
-                          height: leftHalf.size.height)
+                          height: leftHalf.size.height )
 
         node = SKSpriteNode(color: UIColor.clear, size: size)
         node.anchorPoint = CGPoint.zero
