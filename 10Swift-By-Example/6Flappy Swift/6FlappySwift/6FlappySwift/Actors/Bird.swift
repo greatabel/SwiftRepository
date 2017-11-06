@@ -32,12 +32,12 @@ private extension Bird {
 
 extension Bird {
     func start() {
-//        animate()
+        animate()
     }
 
     func stop() {
-//        node.physicsBody!.dynamic = false
-//        node.removeAllActions()
+        node.physicsBody!.isDynamic = false
+        node.removeAllActions()
     }
 }
 
