@@ -12,6 +12,8 @@
 		202CEA841FB19A6500DE9641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202CEA821FB19A6500DE9641 /* Main.storyboard */; };
 		202CEA861FB19A6500DE9641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202CEA851FB19A6500DE9641 /* Assets.xcassets */; };
 		202CEA891FB19A6500DE9641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202CEA871FB19A6500DE9641 /* LaunchScreen.storyboard */; };
+		202CEA911FB19E4C00DE9641 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CEA901FB19E4C00DE9641 /* ContactTableViewCell.swift */; };
+		202CEA931FB1A24D00DE9641 /* HCContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CEA921FB1A24D00DE9641 /* HCContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		202CEA851FB19A6500DE9641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202CEA881FB19A6500DE9641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		202CEA8A1FB19A6500DE9641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202CEA901FB19E4C00DE9641 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		202CEA921FB1A24D00DE9641 /* HCContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				202CEA7E1FB19A6500DE9641 /* AppDelegate.swift */,
 				202CEA801FB19A6500DE9641 /* ViewController.swift */,
+				202CEA901FB19E4C00DE9641 /* ContactTableViewCell.swift */,
 				202CEA821FB19A6500DE9641 /* Main.storyboard */,
 				202CEA851FB19A6500DE9641 /* Assets.xcassets */,
 				202CEA871FB19A6500DE9641 /* LaunchScreen.storyboard */,
 				202CEA8A1FB19A6500DE9641 /* Info.plist */,
+				202CEA921FB1A24D00DE9641 /* HCContact.swift */,
 			);
 			path = 1HelloContacts;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202CEA911FB19E4C00DE9641 /* ContactTableViewCell.swift in Sources */,
+				202CEA931FB1A24D00DE9641 /* HCContact.swift in Sources */,
 				202CEA811FB19A6500DE9641 /* ViewController.swift in Sources */,
 				202CEA7F1FB19A6500DE9641 /* AppDelegate.swift in Sources */,
 			);
