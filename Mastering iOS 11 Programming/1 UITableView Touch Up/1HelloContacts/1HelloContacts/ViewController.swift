@@ -80,6 +80,28 @@ class ViewController: UIViewController , UITableViewDataSource,
         }
     }
 
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        print(#function)
+        let deleteHandler: UIContextualActionHandler = { [weak self] action, view, callback in
+            self?.contacts.remove(at: indexPath.row)
+            self?.tableView.beginUpdates()
+            self?.tableView.deleteRows(at: [indexPath], with: .fade)
+            self?.tableView.endUpdates()
+            callback(true)
+        }
+
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: deleteHandler)
+        let actions = [deleteAction]
+        let config = UISwipeActionsConfiguration(actions: actions)
+        return config
+    }
+
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        print(#function)
+        let contact = contacts.remove(at: sourceIndexPath.row)
+        contacts.insert(contact, at: destinationIndexPath.row)
+    }
+
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
 
