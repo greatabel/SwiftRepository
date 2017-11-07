@@ -28,6 +28,25 @@ class PipesNode{
         finalOffset = -pipeBottom.size.width
         startingOffset = -finalOffset
     }
+
+    func addTo(parentNode: SKSpriteNode) -> PipesNode {
+        let pipePosition = CGPoint(x: parentNode.size.width + startingOffset, y: 0)
+        pipesNode.position = pipePosition
+        pipesNode.zPosition = 4
+        //...
+
+        parentNode.addChild(pipesNode)
+        return self
+    }
+
+    func start() {
+        pipesNode.run(SKAction.sequence(
+            [
+                SKAction.moveTo(x: finalOffset, duration: 6.0),
+                SKAction.removeFromParent()
+            ]
+        ))
+    }
 }
 
 private func createPipe(imageNamed : String ) -> SKSpriteNode {
