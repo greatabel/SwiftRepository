@@ -11,12 +11,39 @@ class Pipes {
         self.topPipeTexture = topPipeTexture
         self.bottomPipeTexture = bottomPipeTexture
     }
-    
+
     func addTo(parentNode: SKSpriteNode) -> Pipes {
         self.parentNode = parentNode
         return self
     }
 
+}
+
+extension Pipes : Startable {
+    func start() {
+        let createAction = SKAction.repeatForever(
+            SKAction.sequence(
+                [
+                    SKAction.run {
+                        self.createNewPipesNode()
+                    },
+                    SKAction.wait(forDuration: 3)
+                ]
+        ) )
+
+        parentNode.run(createAction, withKey: Pipes.createActionKey)
+    }
+
+    func stop() {
+        parentNode.removeAction(forKey: Pipes.createActionKey)
+
+        let pipeNodes = parentNode.children.filter {
+            $0.name == PipesNode.kind
+        }
+        for pipe in pipeNodes {
+            pipe.removeAllActions()
+        }
+    }
 }
 
 private extension Pipes {
