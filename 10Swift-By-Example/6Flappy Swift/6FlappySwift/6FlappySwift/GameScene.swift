@@ -60,6 +60,9 @@ extension GameScene: SKPhysicsContactDelegate {
         switch (contactMask) {
         case BodyType.pipe.rawValue |  BodyType.bird.rawValue:
             print("Contact with a pipe")
+            for actor in actors {
+                actor.stop()
+            }
         case BodyType.ground.rawValue | BodyType.bird.rawValue:
             print("Contact with ground")
             for actor in actors {
