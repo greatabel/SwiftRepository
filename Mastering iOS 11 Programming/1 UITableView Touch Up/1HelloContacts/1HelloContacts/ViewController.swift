@@ -93,6 +93,7 @@ class ViewController: UIViewController , UITableViewDataSource,
         present(alertController, animated: true, completion: nil)
     }
 
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         print("####")
         let deleteHandler: UIContextualActionHandler = { [weak self] action, view, callback in
@@ -110,7 +111,7 @@ class ViewController: UIViewController , UITableViewDataSource,
     }
 
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print(#function)
+        print("\(#function) sourceIndexPath= \(sourceIndexPath)")
         let contact = contacts.remove(at: sourceIndexPath.row)
         contacts.insert(contact, at: destinationIndexPath.row)
     }
