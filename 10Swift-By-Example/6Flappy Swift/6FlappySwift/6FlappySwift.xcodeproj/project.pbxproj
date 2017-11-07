@@ -22,6 +22,8 @@
 		209D42221FB03E2B00667EDB /* ParallaxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42211FB03E2B00667EDB /* ParallaxNode.swift */; };
 		209D42241FB04BC300667EDB /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42231FB04BC300667EDB /* Bird.swift */; };
 		209D42261FB050E500667EDB /* SKPhysicsBody+FlappySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42251FB050E500667EDB /* SKPhysicsBody+FlappySwift.swift */; };
+		20DA8A0A1FB1566500E0B99A /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DA8A091FB1566500E0B99A /* Pipes.swift */; };
+		20DA8A0C1FB1568200E0B99A /* PipesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DA8A0B1FB1568200E0B99A /* PipesNode.swift */; };
 		A6FFD61846C512E88F25A149 /* Pods_6FlappySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		209D42211FB03E2B00667EDB /* ParallaxNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxNode.swift; sourceTree = "<group>"; };
 		209D42231FB04BC300667EDB /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		209D42251FB050E500667EDB /* SKPhysicsBody+FlappySwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+FlappySwift.swift"; sourceTree = "<group>"; };
+		20DA8A091FB1566500E0B99A /* Pipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipes.swift; sourceTree = "<group>"; };
+		20DA8A0B1FB1568200E0B99A /* PipesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipesNode.swift; sourceTree = "<group>"; };
 		2AD7BE7AA2E4C0A523CC3092 /* Pods-6FlappySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.release.xcconfig"; sourceTree = "<group>"; };
 		8D9DDF8FF4040C4197A103EB /* Pods_6FlappySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_6FlappySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F93D6471819FA0CD588C194 /* Pods-6FlappySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6FlappySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-6FlappySwift/Pods-6FlappySwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				209D421E1FB03DD000667EDB /* Background.swift */,
 				209D421C1FB03D1E00667EDB /* Startable.swift */,
 				209D42231FB04BC300667EDB /* Bird.swift */,
+				20DA8A091FB1566500E0B99A /* Pipes.swift */,
+				20DA8A0B1FB1568200E0B99A /* PipesNode.swift */,
 				209D42201FB03E1E00667EDB /* Nodes */,
 			);
 			path = Actors;
@@ -384,12 +390,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				209D42221FB03E2B00667EDB /* ParallaxNode.swift in Sources */,
+				20DA8A0A1FB1566500E0B99A /* Pipes.swift in Sources */,
 				209D42261FB050E500667EDB /* SKPhysicsBody+FlappySwift.swift in Sources */,
 				209D421D1FB03D1E00667EDB /* Startable.swift in Sources */,
 				209D421A1FAF5A9800667EDB /* GameViewController.swift in Sources */,
 				200F70021FAF52DB00D8533E /* GameScene.swift in Sources */,
 				200F6FFC1FAF52DB00D8533E /* AppDelegate.swift in Sources */,
 				209D42181FAF55A400667EDB /* MenuViewController.swift in Sources */,
+				20DA8A0C1FB1568200E0B99A /* PipesNode.swift in Sources */,
 				209D42241FB04BC300667EDB /* Bird.swift in Sources */,
 				209D421F1FB03DD000667EDB /* Background.swift in Sources */,
 			);
