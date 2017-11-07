@@ -24,8 +24,10 @@ class GameScene: SKScene {
         
         bird = Bird(textureNames: ["bird1.png", "bird2.png"]).addTo(scene: screenNode)
         bird.position = CGPoint(x: 30.0, y: 400.0)
+        let pipes = Pipes(topPipeTexture: "topPipe.png",
+                          bottomPipeTexture: "bottomPipe").addTo(parentNode: screenNode)
 
-        actors = [sky, city, ground, bird]
+        actors = [sky, city, ground, bird, pipes]
         for actor in actors {
             actor.start()
         }
