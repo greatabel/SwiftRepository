@@ -51,5 +51,27 @@ class PipesNode{
 
 private func createPipe(imageNamed : String ) -> SKSpriteNode {
     let pipeNode = SKSpriteNode(imageNamed: imageNamed)
+    let size = CGSize(width: pipeNode.size.width, height: pipeNode.size.height)
+    pipeNode.physicsBody = SKPhysicsBody.rectSize(size: size) {
+        body in
+        body.isDynamic = false
+        body.affectedByGravity = false
+        body.categoryBitMask   = BodyType.pipe.rawValue
+        body.collisionBitMask  = BodyType.pipe.rawValue
+    }
     return pipeNode
+}
+
+private func createGap(size: CGSize) -> SKSpriteNode {
+    let gapNode = SKSpriteNode(color: UIColor.clear,
+                               size: size)
+    gapNode.zPosition = 6
+    gapNode.physicsBody = SKPhysicsBody.rectSize(size: size) {
+        body in
+        body.isDynamic = false
+        body.affectedByGravity = false
+        body.categoryBitMask = BodyType.gap.rawValue
+        body.collisionBitMask = BodyType.gap.rawValue
+    }
+    return gapNode
 }

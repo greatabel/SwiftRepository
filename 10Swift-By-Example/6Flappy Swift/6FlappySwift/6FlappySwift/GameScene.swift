@@ -1,6 +1,13 @@
 import SpriteKit
 import GameplayKit
 
+enum BodyType : UInt32 {
+    case bird = 0b0001
+    case ground = 0b0010
+    case pipe = 0b0100
+    case gap = 0b1000
+}
+
 class GameScene: SKScene {
     
     private var screenNode: SKSpriteNode!
