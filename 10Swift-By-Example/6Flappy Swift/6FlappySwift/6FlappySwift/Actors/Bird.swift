@@ -23,13 +23,19 @@ private extension Bird {
     func createNode() -> SKSpriteNode {
         let birdNode = SKSpriteNode(imageNamed: textureNames.first!)
         birdNode.zPosition = 2.0
-        birdNode.physicsBody = SKPhysicsBody.init(rectangleOf: birdNode.size)
-        birdNode.physicsBody!.isDynamic = true
+        birdNode.physicsBody = SKPhysicsBody.rectSize(size: birdNode.size.scale(factor: 0.8)) {
+            body in
+            body.isDynamic = true
+            body.categoryBitMask    = BodyType.bird.rawValue
+            body.collisionBitMask   = BodyType.bird.rawValue
+            body.contactTestBitMask = BodyType.ground.rawValue |
+                BodyType.pipe.rawValue |
+                BodyType.gap.rawValue
+        }
 
         return birdNode
     }
 }
-
 extension Bird {
     func start() {
         animate()
@@ -69,5 +75,11 @@ extension Bird {
             SKAction.repeatForever(
                 SKAction.animate(with: animationFrames, timePerFrame: 0.5)
         ))
+    }
+}
+
+extension CGSize {
+    func scale(factor: CGFloat) -> CGSize {
+        return CGSize(width: self.width * factor, height: self.height * factor)
     }
 }

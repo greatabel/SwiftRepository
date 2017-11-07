@@ -17,6 +17,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         
         physicsWorld.gravity = CGVector(dx: 0, dy: -3)
+        physicsWorld.contactDelegate = self
 
         screenNode = SKSpriteNode(color: UIColor.clear, size: self.size)
         screenNode.anchorPoint = CGPoint(x: 0, y: 0)
@@ -48,4 +49,37 @@ class GameScene: SKScene {
         bird.flap()
     }
 
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    // https://stackoverflow.com/questions/26654039/didbegincontact-not-called
+    func  didBegin(_ contact: SKPhysicsContact) {
+        print(#function)
+        let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+
+        switch (contactMask) {
+        case BodyType.pipe.rawValue |  BodyType.bird.rawValue:
+            print("Contact with a pipe")
+        case BodyType.ground.rawValue | BodyType.bird.rawValue:
+            print("Contact with ground")
+            for actor in actors {
+                actor.stop()
+            }
+        default:
+            return
+        }
+
+    }
+    func  didEnd(_ contact: SKPhysicsContact) {
+
+        print(#function)
+        let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+
+        switch (contactMask) {
+        case BodyType.gap.rawValue |  BodyType.bird.rawValue:
+            print("Contact with gap")
+        default:
+            return
+        }
+    }
 }

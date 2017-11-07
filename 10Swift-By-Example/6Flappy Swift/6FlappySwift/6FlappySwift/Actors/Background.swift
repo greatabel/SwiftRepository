@@ -10,8 +10,8 @@ class Background {
     }
 
     func addTo(parentNode: SKSpriteNode, zPosition: CGFloat) -> Self {
-        let result = parallaxNode.addTo(parentNode: parentNode, zPosition: zPosition)
-        print(result)
+        _ = parallaxNode.addTo(parentNode: parentNode, zPosition: zPosition)
+
         return self
     }
 

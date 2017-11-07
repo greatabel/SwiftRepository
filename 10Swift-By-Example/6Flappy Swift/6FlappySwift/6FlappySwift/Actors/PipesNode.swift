@@ -25,6 +25,11 @@ class PipesNode{
         pipeBottom.position = pipeBottomPosition
         pipesNode.addChild(pipeBottom)
 
+        let gapNode = createGap(size: CGSize(width: pipeBottom.size.width,
+                                             height: gapSize*2))
+        gapNode.position = CGPoint(x: 0, y: centerY)
+        pipesNode.addChild(gapNode)
+        
         finalOffset = -pipeBottom.size.width
         startingOffset = -finalOffset
     }
