@@ -80,6 +80,12 @@ class ViewController: UIViewController , UITableViewDataSource,
         }
     }
 
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+
+        tableView.setEditing(editing, animated: animated)
+    }
+
 
 }
 
