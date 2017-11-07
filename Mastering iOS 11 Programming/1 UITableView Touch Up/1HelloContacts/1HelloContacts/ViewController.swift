@@ -80,8 +80,21 @@ class ViewController: UIViewController , UITableViewDataSource,
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contact = contacts[indexPath.row]
+
+        let alertController = UIAlertController(title: "通讯录被点击", message: "你按了 \(contact.givenName)", preferredStyle: .alert)
+
+        let dismissAction = UIAlertAction(title: "Ok", style: .default, handler: {action in
+            tableView.deselectRow(at: indexPath, animated: true)
+        })
+
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        print(#function)
+        print("####")
         let deleteHandler: UIContextualActionHandler = { [weak self] action, view, callback in
             self?.contacts.remove(at: indexPath.row)
             self?.tableView.beginUpdates()
