@@ -1,7 +1,7 @@
 import UIKit
 import Contacts
 
-class HCConact {
+class HCContact {
 
     private let contact: CNContact
     var contactImage: UIImage?
