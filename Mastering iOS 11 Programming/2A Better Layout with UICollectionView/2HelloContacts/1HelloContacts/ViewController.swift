@@ -35,6 +35,28 @@ class ViewController: UIViewController , UICollectionViewDataSource,
         collectionView.addGestureRecognizer(longPressRecognizer)
     }
 
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+
+        for visibleCell in collectionView.visibleCells {
+            guard let cell = visibleCell as? ContactCollectionViewCell
+                else { continue }
+
+            if editing {
+                UIView.animate(withDuration: 0.2, delay: 0, options:
+                    [.curveEaseOut], animations: {
+                        cell.backgroundColor = UIColor(red: 0.9, green: 0.9,
+                                                       blue: 0.9, alpha: 1)
+                }, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.2, delay: 0, options:
+                    [.curveEaseOut], animations: {
+                        cell.backgroundColor = .clear
+                }, completion: nil)
+            }
+        }
+    }
+    
     @objc func receivedLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
 
         let tappedPoint = gestureRecognizer.location(in: collectionView)
