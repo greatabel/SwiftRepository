@@ -22,7 +22,7 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         // Do any additional setup after loading the view, typically from a nib.
         let collectionView =  UICollectionView(frame:
                 CGRect(x:0, y:100, width:self.view.bounds.width, height:200),
-                                               collectionViewLayout: UICollectionViewFlowLayout())
+                                               collectionViewLayout: LineLayout())
         collectionView.backgroundColor = UIColor.black
         collectionView.dataSource  = self
         collectionView.delegate = self
