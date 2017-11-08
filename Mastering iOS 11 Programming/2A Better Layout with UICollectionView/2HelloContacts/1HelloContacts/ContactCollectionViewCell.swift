@@ -7,7 +7,7 @@ class ContactCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(#function)
+//        print(#function)
         contactImage.layer.cornerRadius = 25
         contactImage.layer.masksToBounds = true
     }

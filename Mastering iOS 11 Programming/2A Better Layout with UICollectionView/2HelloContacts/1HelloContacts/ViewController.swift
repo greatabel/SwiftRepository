@@ -29,9 +29,66 @@ class ViewController: UIViewController , UICollectionViewDataSource,
             retrieveContacts(fromStore: store)
         }
 
-
-
         navigationItem.rightBarButtonItem = editButtonItem
+
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self,  action: #selector(self.receivedLongPress(gestureRecognizer:)))
+        collectionView.addGestureRecognizer(longPressRecognizer)
+    }
+
+    @objc func receivedLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
+
+        let tappedPoint = gestureRecognizer.location(in: collectionView)
+        guard let tappedIndexPath = collectionView.indexPathForItem(at: tappedPoint),
+            let tappedCell = collectionView.cellForItem(at: tappedIndexPath) else { return }
+
+        if isEditing {
+            reorderContact(withCell: tappedCell, atIndexPath: tappedIndexPath, gesture: gestureRecognizer)
+        } else {
+            deleteContact(withCell: tappedCell, atIndexPath: tappedIndexPath)
+        }
+    }
+
+    func reorderContact(withCell cell: UICollectionViewCell, atIndexPath indexPath: IndexPath, gesture: UILongPressGestureRecognizer){
+//        print("gesture.state = \(gesture.state.rawValue)")
+        switch(gesture.state) {
+        case .began:
+            collectionView.beginInteractiveMovementForItem(at: indexPath)
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
+                cell.transform = CGAffineTransform(scaleX: 1.1, y:1.1)
+            }, completion: nil)
+            break
+        case .changed:
+            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
+            break
+        case .ended:
+            collectionView.endInteractiveMovement()
+            break
+        default:
+            collectionView.cancelInteractiveMovement()
+            break
+        }
+    }
+
+    func deleteContact(withCell cell: UICollectionViewCell, atIndexPath indexPath: IndexPath) {
+        let confirmDialog = UIAlertController(title: "Delete this contact?",
+                                              message: "Are you sure you want to delete this contact?",
+                                              preferredStyle: .actionSheet)
+
+        let deleteAction = UIAlertAction(title: "Yes", style: .destructive,
+                                         handler: { action in
+                                            self.contacts.remove(at: indexPath.row)
+                                            self.collectionView.deleteItems(at: [indexPath])
+        })
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+
+        confirmDialog.addAction(deleteAction)
+        confirmDialog.addAction(cancelAction)
+
+        if let popOver = confirmDialog.popoverPresentationController {
+            popOver.sourceView = cell
+        }
+
+        present(confirmDialog, animated: true, completion: nil)
     }
 
 
