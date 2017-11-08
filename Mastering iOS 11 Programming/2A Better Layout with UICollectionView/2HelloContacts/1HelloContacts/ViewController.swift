@@ -56,7 +56,7 @@ class ViewController: UIViewController , UICollectionViewDataSource,
             }
         }
     }
-    
+
     @objc func receivedLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
 
         let tappedPoint = gestureRecognizer.location(in: collectionView)
@@ -161,6 +161,31 @@ class ViewController: UIViewController , UICollectionViewDataSource,
     }
 
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: floor((collectionView.bounds.width - 2) / 3), height: 90)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        let cellsPerRow: CGFloat = 3
+        let widthRemainder = (collectionView.bounds.width -
+            (cellsPerRow-1)).truncatingRemainder(dividingBy: cellsPerRow)
+            / (cellsPerRow-1)
+        return 1 + widthRemainder
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print(#function)
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ContactCollectionViewCell
+            else { return }
+
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseOut], animations: {
+            cell.contactImage.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseIn], animations: {
+                cell.contactImage.transform = CGAffineTransform.identity
+            }, completion: nil)
+        })
+    }
 
 
 
