@@ -4,14 +4,6 @@ import UIKit
 
 class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageTextCell", for: indexPath as IndexPath) as! ImageTextCell
-        cell.imageStr = self.imageArray[indexPath.item]
-
-        return cell
-    }
-
-
     lazy var imageArray: [String] = {
 
         var array: [String] = []
@@ -44,7 +36,12 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         return self.imageArray.count;
     }
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageTextCell", for: indexPath as IndexPath) as! ImageTextCell
+        cell.imageStr = self.imageArray[indexPath.item]
 
+        return cell
+    }
 
 }
 

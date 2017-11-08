@@ -13,6 +13,7 @@
 		20BD0EAA1FB2E96200ED9D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BD0EA91FB2E96200ED9D91 /* Assets.xcassets */; };
 		20BD0EAD1FB2E96200ED9D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BD0EAB1FB2E96200ED9D91 /* LaunchScreen.storyboard */; };
 		20BD0EB51FB3082600ED9D91 /* ImageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD0EB41FB3082600ED9D91 /* ImageTextCell.swift */; };
+		20BD0EB71FB309B300ED9D91 /* LineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD0EB61FB309B300ED9D91 /* LineLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		20BD0EAC1FB2E96200ED9D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20BD0EAE1FB2E96200ED9D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20BD0EB41FB3082600ED9D91 /* ImageTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextCell.swift; sourceTree = "<group>"; };
+		20BD0EB61FB309B300ED9D91 /* LineLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				20BD0EA21FB2E96200ED9D91 /* AppDelegate.swift */,
 				20BD0EA41FB2E96200ED9D91 /* ViewController.swift */,
+				20BD0EB41FB3082600ED9D91 /* ImageTextCell.swift */,
+				20BD0EB61FB309B300ED9D91 /* LineLayout.swift */,
 				20BD0EA61FB2E96200ED9D91 /* Main.storyboard */,
 				20BD0EA91FB2E96200ED9D91 /* Assets.xcassets */,
 				20BD0EAB1FB2E96200ED9D91 /* LaunchScreen.storyboard */,
 				20BD0EAE1FB2E96200ED9D91 /* Info.plist */,
-				20BD0EB41FB3082600ED9D91 /* ImageTextCell.swift */,
 			);
 			path = UICollectionViewFlowLayout0;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20BD0EA51FB2E96200ED9D91 /* ViewController.swift in Sources */,
+				20BD0EB71FB309B300ED9D91 /* LineLayout.swift in Sources */,
 				20BD0EB51FB3082600ED9D91 /* ImageTextCell.swift in Sources */,
 				20BD0EA31FB2E96200ED9D91 /* AppDelegate.swift in Sources */,
 			);
