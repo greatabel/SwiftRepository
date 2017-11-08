@@ -42,7 +42,8 @@ class ContactsCollectionViewLayout: UICollectionViewLayout {
 
             let index = IndexPath(row: itemIndex, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: index)
-            attributes.frame = CGRect(x: CGFloat(xPos), y: CGFloat(yPos), width: itemSize.width, height: itemSize.height)
+            attributes.frame = CGRect(x: CGFloat(xPos), y: CGFloat(yPos),
+                                      width: itemSize.width, height: itemSize.height)
 
             layoutAttributes.append(attributes)
         }
