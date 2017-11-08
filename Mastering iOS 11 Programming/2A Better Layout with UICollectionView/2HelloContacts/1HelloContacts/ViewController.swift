@@ -36,17 +36,23 @@ class ViewController: UIViewController , UICollectionViewDataSource,
 
 
     func retrieveContacts(fromStore store: CNContactStore) {
-
         let containerId = store.defaultContainerIdentifier()
+
+
         let predicate = CNContact.predicateForContactsInContainer(withIdentifier: containerId)
+
         let keysToFetch =
             [CNContactGivenNameKey as CNKeyDescriptor,
              CNContactFamilyNameKey as CNKeyDescriptor,
              CNContactImageDataKey as CNKeyDescriptor,
              CNContactImageDataAvailableKey as CNKeyDescriptor]
-        contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch).map
-            { contact in
+
+        contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch).map { contact in
             return HCContact(contact: contact)
+        }
+
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
         }
     }
 
@@ -80,4 +86,5 @@ class ViewController: UIViewController , UICollectionViewDataSource,
 
 
 }
+
 
