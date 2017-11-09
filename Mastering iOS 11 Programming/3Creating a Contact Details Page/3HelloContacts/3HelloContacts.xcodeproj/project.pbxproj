@@ -14,6 +14,7 @@
 		202CEA891FB19A6500DE9641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202CEA871FB19A6500DE9641 /* LaunchScreen.storyboard */; };
 		202CEA911FB19E4C00DE9641 /* ContactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CEA901FB19E4C00DE9641 /* ContactCollectionViewCell.swift */; };
 		202CEA931FB1A24D00DE9641 /* HCContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CEA921FB1A24D00DE9641 /* HCContact.swift */; };
+		206402531FB42E6D00D22FA5 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206402521FB42E6D00D22FA5 /* ContactDetailViewController.swift */; };
 		20BD0E951FB2A75A00ED9D91 /* ContactsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD0E941FB2A75A00ED9D91 /* ContactsCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		202CEA8A1FB19A6500DE9641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202CEA901FB19E4C00DE9641 /* ContactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCollectionViewCell.swift; sourceTree = "<group>"; };
 		202CEA921FB1A24D00DE9641 /* HCContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCContact.swift; sourceTree = "<group>"; };
+		206402521FB42E6D00D22FA5 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		20BD0E941FB2A75A00ED9D91 /* ContactsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				202CEA7E1FB19A6500DE9641 /* AppDelegate.swift */,
+				206402521FB42E6D00D22FA5 /* ContactDetailViewController.swift */,
 				202CEA801FB19A6500DE9641 /* ViewController.swift */,
 				202CEA901FB19E4C00DE9641 /* ContactCollectionViewCell.swift */,
 				202CEA821FB19A6500DE9641 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				20BD0E951FB2A75A00ED9D91 /* ContactsCollectionViewLayout.swift in Sources */,
 				202CEA931FB1A24D00DE9641 /* HCContact.swift in Sources */,
 				202CEA811FB19A6500DE9641 /* ViewController.swift in Sources */,
+				206402531FB42E6D00D22FA5 /* ContactDetailViewController.swift in Sources */,
 				202CEA7F1FB19A6500DE9641 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

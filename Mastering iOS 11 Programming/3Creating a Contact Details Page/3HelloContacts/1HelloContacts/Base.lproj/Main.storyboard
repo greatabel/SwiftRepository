@@ -69,11 +69,33 @@
                     <navigationItem key="navigationItem" id="UZf-QQ-qsV"/>
                     <connections>
                         <outlet property="collectionView" destination="SM0-oM-ZUm" id="Dx7-5g-ob3"/>
+                        <segue destination="Toe-XX-nim" kind="show" identifier="detailViewSegue" id="OJw-zI-4c2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="120.98950524737631"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="5vc-8h-Mcy">
+            <objects>
+                <viewController id="Toe-XX-nim" customClass="ContactDetailViewController" customModule="_HelloContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HhM-FN-vJo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-Ws-Y6f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yc8-YB-3cR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKu-7e-vp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nHf-hC-j8V">

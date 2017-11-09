@@ -183,7 +183,18 @@ class ViewController: UIViewController , UICollectionViewDataSource,
         }, completion: { finished in
             UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseIn], animations: {
                 cell.contactImage.transform = CGAffineTransform.identity
-            }, completion: nil)
+            }, completion: { finished in
+                UIView.animate(withDuration: 0.1,
+                               delay: 0,
+                               options: [.curveEaseIn],
+                               animations: {
+                                cell.contactImage.transform = CGAffineTransform.identity
+                },
+                               completion: { [weak self] finished in
+                                self?.performSegue(withIdentifier: "detailViewSegue", sender: self)
+                    }
+                )
+            })
         })
     }
 
