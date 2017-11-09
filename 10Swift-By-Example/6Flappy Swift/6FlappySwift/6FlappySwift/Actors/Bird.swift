@@ -53,7 +53,7 @@ extension Bird {
     func flap() {
         if !dying {
         node.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
-        node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 8))
+        node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 5))
         }
     }
 

@@ -1,5 +1,6 @@
 import SpriteKit
 import GameplayKit
+import SIAlertView
 
 enum BodyType : UInt32 {
     case bird = 0b0001
@@ -13,7 +14,12 @@ class GameScene: SKScene {
     private var screenNode: SKSpriteNode!
     private var bird: Bird!
     private var actors: [Startable]!
-    
+
+    private var score = Score()
+
+    var onPlayAgainPressed:(()->Void)!
+    var onCancelPressed:(()->Void)!
+
     override func didMove(to view: SKView) {
         
         physicsWorld.gravity = CGVector(dx: 0, dy: -3)
@@ -37,6 +43,7 @@ class GameScene: SKScene {
         let pipes = Pipes(topPipeTexture: "topPipe.png",
                           bottomPipeTexture: "bottomPipe").addTo(parentNode: screenNode)
 
+        score.addTo(parentNode: screenNode)
         actors = [sky, city, ground, bird, pipes]
         for actor in actors {
             actor.start()
@@ -92,6 +99,7 @@ extension GameScene: SKPhysicsContactDelegate {
             for actor in actors {
                 actor.stop()
             }
+            askToPlayAgain()
         default:
             return
         }
@@ -105,8 +113,19 @@ extension GameScene: SKPhysicsContactDelegate {
         switch (contactMask) {
         case BodyType.gap.rawValue |  BodyType.bird.rawValue:
             print("Contact with gap")
+            score.increase()
         default:
             return
         }
+    }
+}
+private extension GameScene {
+    func askToPlayAgain() {
+        let alertView = SIAlertView(title: "哎唷!!",
+                                    andMessage: "恭喜! 你分数是 \(score.currentScore). 再试一次?")
+
+        alertView?.addButton(withTitle: "OK", type: .default) { _ in self.onPlayAgainPressed() }
+        alertView?.addButton(withTitle: "Cancel", type: .default) { _ in self.onCancelPressed() }
+        alertView?.show()
     }
 }
