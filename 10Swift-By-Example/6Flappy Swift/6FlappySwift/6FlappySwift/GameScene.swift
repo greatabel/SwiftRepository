@@ -83,6 +83,7 @@ extension GameScene: SKPhysicsContactDelegate {
         switch (contactMask) {
         case BodyType.pipe.rawValue |  BodyType.bird.rawValue:
             print("Contact with a pipe")
+            bird.pushDown()
 //            for actor in actors {
 //                actor.stop()
 //            }
