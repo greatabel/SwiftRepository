@@ -19,12 +19,12 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         return array
     }()
 
-
+    var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let collectionView =  UICollectionView(frame:
+        collectionView =  UICollectionView(frame:
                 CGRect(x:0, y:100, width:self.view.bounds.width, height:200),
                                                collectionViewLayout: LineLayout())
         collectionView.backgroundColor = UIColor.black
@@ -45,6 +45,25 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         cell.imageStr = self.imageArray[indexPath.item]
 
         return cell
+    }
+
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        self.imageArray.remove(at: indexPath.item)
+
+        collectionView.deleteItems(at: [indexPath as IndexPath])
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+
+        if collectionView!.collectionViewLayout is LineLayout {
+            collectionView!.setCollectionViewLayout(UICollectionViewFlowLayout(), animated: true)
+        }else {
+            collectionView!.setCollectionViewLayout(LineLayout(), animated: true)
+        }
+
     }
 
     

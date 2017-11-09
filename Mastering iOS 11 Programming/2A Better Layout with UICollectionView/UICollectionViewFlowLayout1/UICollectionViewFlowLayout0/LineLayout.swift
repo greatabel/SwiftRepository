@@ -28,9 +28,26 @@ class LineLayout: UICollectionViewFlowLayout {
     }
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        print("layoutAttributesForElements rect=\(rect)")
-        let ret = super.layoutAttributesForElements(in: rect)
-//        print("ret?.count=\(String(describing: ret?.count))")
-        return ret
+        let array = super.layoutAttributesForElements(in: rect)
+
+        //可见矩阵
+        let visiableRect = CGRect(x: self.collectionView!.contentOffset.x, y:self.collectionView!.contentOffset.y, width:self.collectionView!.frame.width, height:self.collectionView!.frame.height)
+
+        //接下来的计算是为了动画效果
+        let maxCenterMargin = self.collectionView!.bounds.width * 0.5 + itemW * 0.5;
+        //获得collectionVIew中央的X值(即显示在屏幕中央的X)
+        let centerX = self.collectionView!.contentOffset.x + self.collectionView!.frame.size.width * 0.5;
+        for attributes in array! {
+            //如果不在屏幕上，直接跳过
+            if !visiableRect.intersects(attributes.frame) {continue}
+            let scale = 1 + (0.8 - abs(centerX - attributes.center.x) / maxCenterMargin)
+            attributes.transform = CGAffineTransform(scaleX: scale, y: scale)
+        }
+
+        return array
     }
+
+
+  
+
 }
