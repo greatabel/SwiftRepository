@@ -1,4 +1,8 @@
-// http://www.jianshu.com/p/f99d59837921
+/*
+ 
+http://www.jianshu.com/p/f99d59837921
+
+*/
 
 import UIKit
 
@@ -42,6 +46,8 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
 
         return cell
     }
+
+    
 
 }
 

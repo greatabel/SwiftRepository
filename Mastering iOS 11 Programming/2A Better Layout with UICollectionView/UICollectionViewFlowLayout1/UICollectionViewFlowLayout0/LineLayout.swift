@@ -21,4 +21,16 @@ class LineLayout: UICollectionViewFlowLayout {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        print("newBounds=\(newBounds)")
+        return true
+    }
+
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        print("layoutAttributesForElements rect=\(rect)")
+        let ret = super.layoutAttributesForElements(in: rect)
+//        print("ret?.count=\(String(describing: ret?.count))")
+        return ret
+    }
 }
