@@ -26,6 +26,10 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
         skView.frame = view.bounds
         view.addSubview(skView)
+        createTheScene()
+    }
+
+    private func createTheScene() {
 
         if let scene = GameScene.unarchiveFromFile(file: "GameScene") as? GameScene {
             scene.size = skView.frame.size
@@ -33,10 +37,17 @@ class GameViewController: UIViewController {
             skView.showsNodeCount = true
 
             skView.ignoresSiblingOrder = true
-            skView.showsPhysics = true
+//            skView.showsPhysics = true
 
             scene.scaleMode = .aspectFill
 
+            scene.onPlayAgainPressed = {[weak self] in
+                self?.createTheScene()
+            }
+
+            scene.onCancelPressed = {[weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            }
             skView.presentScene(scene)
         }
     }
