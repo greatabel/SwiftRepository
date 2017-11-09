@@ -14,6 +14,10 @@ class Background {
 
         return self
     }
+    
+    func zPosition(zPosition: CGFloat) {
+        parallaxNode.zPosition(zPosition: zPosition)
+    }
 
 }
 

@@ -29,7 +29,9 @@ class GameScene: SKScene {
                     .addTo(parentNode: screenNode, zPosition: 1)
         let ground = Background(textureNamed: "ground", duration:5.0)
                     .addTo(parentNode: screenNode, zPosition: 2)
-        
+        ground.zPosition(zPosition: 5)
+        screenNode.addChild(bodyTextureName(textureName: "ground"))
+
         bird = Bird(textureNames: ["bird1.png", "bird2.png"]).addTo(scene: screenNode)
         bird.position = CGPoint(x: 30.0, y: 400.0)
         let pipes = Pipes(topPipeTexture: "topPipe.png",
@@ -51,6 +53,27 @@ class GameScene: SKScene {
 
 }
 
+private extension GameScene{
+    func bodyTextureName(textureName: String) -> SKNode{
+        let image = UIImage(named: textureName)
+        let width = image!.size.width
+        let height = image!.size.height
+        let groundBody = SKNode()
+        groundBody.position = CGPoint(x: width/2, y: height/2)
+
+        groundBody.physicsBody = SKPhysicsBody.rectSize(size: CGSize(width: width, height: height))
+        { body in
+            body.isDynamic = false
+            body.affectedByGravity = false
+            body.categoryBitMask = BodyType.ground.rawValue
+            body.collisionBitMask = BodyType.ground.rawValue
+        }
+
+        return groundBody
+    }
+}
+
+
 extension GameScene: SKPhysicsContactDelegate {
     // https://stackoverflow.com/questions/26654039/didbegincontact-not-called
     func  didBegin(_ contact: SKPhysicsContact) {
@@ -60,9 +83,9 @@ extension GameScene: SKPhysicsContactDelegate {
         switch (contactMask) {
         case BodyType.pipe.rawValue |  BodyType.bird.rawValue:
             print("Contact with a pipe")
-            for actor in actors {
-                actor.stop()
-            }
+//            for actor in actors {
+//                actor.stop()
+//            }
         case BodyType.ground.rawValue | BodyType.bird.rawValue:
             print("Contact with ground")
             for actor in actors {
@@ -75,7 +98,7 @@ extension GameScene: SKPhysicsContactDelegate {
     }
     func  didEnd(_ contact: SKPhysicsContact) {
 
-        print(#function)
+//        print(#function)
         let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
 
         switch (contactMask) {
