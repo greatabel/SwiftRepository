@@ -55,6 +55,7 @@ class GameScene: SKScene {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        run(SKAction.playSoundFileNamed("flap.wav", waitForCompletion: false))
         bird.flap()
     }
 
