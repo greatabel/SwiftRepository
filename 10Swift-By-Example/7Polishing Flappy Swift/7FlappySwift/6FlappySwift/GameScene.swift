@@ -101,7 +101,11 @@ extension GameScene: SKPhysicsContactDelegate {
             for actor in actors {
                 actor.stop()
             }
-            askToPlayAgain()
+            let shakeAction = SKAction.shake(duration: 0.1, amplitudeX: 20, amplitudeY: 20)
+            screenNode.run(shakeAction)
+            self.askToPlayAgain()
+
+
         default:
             return
         }
