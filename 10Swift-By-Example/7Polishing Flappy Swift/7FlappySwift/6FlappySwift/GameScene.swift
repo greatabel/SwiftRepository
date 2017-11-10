@@ -113,7 +113,8 @@ extension GameScene: SKPhysicsContactDelegate {
 
         switch (contactMask) {
         case BodyType.gap.rawValue |  BodyType.bird.rawValue:
-            print("Contact with gap")
+            print("pass a gap")
+            run(SKAction.playSoundFileNamed("yeah.mp3", waitForCompletion: false))
             score.increase()
         default:
             return
