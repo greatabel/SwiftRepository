@@ -91,12 +91,12 @@ extension GameScene: SKPhysicsContactDelegate {
         switch (contactMask) {
         case BodyType.pipe.rawValue |  BodyType.bird.rawValue:
             print("Contact with a pipe")
+            run(SKAction.playSoundFileNamed("punch.wav", waitForCompletion: false))
             bird.pushDown()
-//            for actor in actors {
-//                actor.stop()
-//            }
+
         case BodyType.ground.rawValue | BodyType.bird.rawValue:
             print("Contact with ground")
+            run(SKAction.playSoundFileNamed("punch.wav", waitForCompletion: false))
             for actor in actors {
                 actor.stop()
             }
