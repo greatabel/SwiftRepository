@@ -1,0 +1,30 @@
+PODS:
+  - Cartography (3.0.0)
+  - HTPressableButton (1.3.3):
+    - HTPressableButton/All (= 1.3.3)
+  - HTPressableButton/All (1.3.3)
+  - SIAlertView (1.3)
+
+DEPENDENCIES:
+  - Cartography (from `https://github.com/robb/Cartography.git`, tag `3.0.0`)
+  - HTPressableButton (~> 1.3.3)
+  - SIAlertView (~> 1.3)
+
+EXTERNAL SOURCES:
+  Cartography:
+    :git: https://github.com/robb/Cartography.git
+    :tag: 3.0.0
+
+CHECKOUT OPTIONS:
+  Cartography:
+    :git: https://github.com/robb/Cartography.git
+    :tag: 3.0.0
+
+SPEC CHECKSUMS:
+  Cartography: 105643267226a7ab58895b94b44727eb013e31ce
+  HTPressableButton: 3109ba7972247ddbd387c8a22b0341b02369b31e
+  SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
+
+PODFILE CHECKSUM: 0c92f970f649d3f078fdcf8404f40ea2d8d2b73f
+
+COCOAPODS: 1.3.1
