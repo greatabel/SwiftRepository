@@ -91,6 +91,7 @@ extension GameScene: SKPhysicsContactDelegate {
         switch (contactMask) {
         case BodyType.pipe.rawValue |  BodyType.bird.rawValue:
             print("Contact with a pipe")
+            // sound file: http://incompetech.com 
             run(SKAction.playSoundFileNamed("punch.wav", waitForCompletion: false))
             bird.pushDown()
 

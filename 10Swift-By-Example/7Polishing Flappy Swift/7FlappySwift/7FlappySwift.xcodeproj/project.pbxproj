@@ -19,6 +19,7 @@
 		202FBBEE1FB57AF100975C19 /* Pamgaea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 202FBBEA1FB57AF100975C19 /* Pamgaea.mp3 */; };
 		202FBBEF1FB57AF100975C19 /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 202FBBEB1FB57AF100975C19 /* yeah.mp3 */; };
 		202FBBF01FB57AF100975C19 /* flap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 202FBBEC1FB57AF100975C19 /* flap.wav */; };
+		202FBBF21FB57E5200975C19 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBBF11FB57E5200975C19 /* MusicPlayer.swift */; };
 		206402551FB43DDB00D22FA5 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206402541FB43DDB00D22FA5 /* Score.swift */; };
 		209D42181FAF55A400667EDB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42171FAF55A400667EDB /* MenuViewController.swift */; };
 		209D421A1FAF5A9800667EDB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D42191FAF5A9800667EDB /* GameViewController.swift */; };
@@ -68,6 +69,7 @@
 		202FBBEA1FB57AF100975C19 /* Pamgaea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pamgaea.mp3; sourceTree = "<group>"; };
 		202FBBEB1FB57AF100975C19 /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
 		202FBBEC1FB57AF100975C19 /* flap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flap.wav; sourceTree = "<group>"; };
+		202FBBF11FB57E5200975C19 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		206402541FB43DDB00D22FA5 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		209D42171FAF55A400667EDB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		209D42191FAF5A9800667EDB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				200F6FFB1FAF52DB00D8533E /* AppDelegate.swift */,
 				200F6FFD1FAF52DB00D8533E /* GameScene.sks */,
 				200F70011FAF52DB00D8533E /* GameScene.swift */,
+				202FBBF11FB57E5200975C19 /* MusicPlayer.swift */,
 				209D42171FAF55A400667EDB /* MenuViewController.swift */,
 				209D42191FAF5A9800667EDB /* GameViewController.swift */,
 				200F70051FAF52DB00D8533E /* Main.storyboard */,
@@ -426,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202FBBF21FB57E5200975C19 /* MusicPlayer.swift in Sources */,
 				209D42221FB03E2B00667EDB /* ParallaxNode.swift in Sources */,
 				20DA8A0A1FB1566500E0B99A /* Pipes.swift in Sources */,
 				209D42261FB050E500667EDB /* SKPhysicsBody+FlappySwift.swift in Sources */,

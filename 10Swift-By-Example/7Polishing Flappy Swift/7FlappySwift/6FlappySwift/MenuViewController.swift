@@ -12,10 +12,19 @@ class MenuViewController: UIViewController {
                                                buttonStyle: .rect)
     private let gameCenterButton = HTPressableButton(frame: CGRectMake(0, 0, 260, 50),
                                                      buttonStyle: .rect)
+    private var player: MusicPlayer?
+    
     let testButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        do {
+            player = try MusicPlayer(filename: "Pamgaea", type: "mp3")
+            player!.play()
+        } catch {
+            print("Error playing soundtrack")
+        }
+
         setup()
         layoutView()
         style()
