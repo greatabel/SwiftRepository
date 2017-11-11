@@ -15,6 +15,15 @@ cameraNode.camera = SCNCamera()
 cameraNode.position = SCNVector3(x: 0, y: 0, z: 4)
 scene.rootNode.addChildNode(cameraNode)
 
+var torus = SCNTorus(ringRadius: 1, pipeRadius: 0.35)
+var torusNode = SCNNode(geometry: torus)
+torusNode.position = SCNVector3(x: 0.0, y: 0.0, z: 0.0)
+scene.rootNode.addChildNode(torusNode)
+
+torus.firstMaterial?.diffuse.contents = UIColor.green
+torus.firstMaterial?.specular.contents = UIColor.white
+
+
 
 sceneView.scene = scene
 
