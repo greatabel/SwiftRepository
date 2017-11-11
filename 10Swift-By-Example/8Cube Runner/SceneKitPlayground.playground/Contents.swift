@@ -23,6 +23,8 @@ scene.rootNode.addChildNode(torusNode)
 torus.firstMaterial?.diffuse.contents = UIColor.green
 torus.firstMaterial?.specular.contents = UIColor.white
 
+torusNode.rotation = SCNVector4(x: 1.0, y: 0.0, z: 0.0, w: Float(Double.pi/4.0))
+
 
 
 sceneView.scene = scene
