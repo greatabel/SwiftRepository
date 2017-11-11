@@ -35,3 +35,11 @@ scene.rootNode.addChildNode(lightNode)
 sceneView.scene = scene
 
 PlaygroundSupport.PlaygroundPage.current.liveView = sceneView
+
+let moveAction = SCNAction.sequence([
+    SCNAction.moveBy(x: -2, y: 0, z: 0, duration: 1),
+    SCNAction.moveBy(x: 2, y: 0, z: 0, duration: 1),
+    SCNAction.moveBy(x: 2, y: 0, z: 0, duration: 1),
+    SCNAction.moveBy(x: -2, y: 0, z: 0, duration: 1)
+    ])
+lightNode.runAction(SCNAction.repeatForever(moveAction))
