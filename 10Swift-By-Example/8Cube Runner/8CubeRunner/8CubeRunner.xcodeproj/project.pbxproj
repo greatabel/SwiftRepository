@@ -13,6 +13,7 @@
 		20E2DDCD1FB740CF003F21FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E2DDCB1FB740CF003F21FD /* Main.storyboard */; };
 		20E2DDCF1FB740CF003F21FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E2DDCE1FB740CF003F21FD /* Assets.xcassets */; };
 		20E2DDD21FB740CF003F21FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E2DDD01FB740CF003F21FD /* LaunchScreen.storyboard */; };
+		20EDA42B1FB88713000BA465 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDA42A1FB88713000BA465 /* MenuViewController.swift */; };
 		EE002E2A1366919A93A5A9A7 /* Pods_8CubeRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F85AC3B5FE93E9D2F1B03B7 /* Pods_8CubeRunner.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		20E2DDCE1FB740CF003F21FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20E2DDD11FB740CF003F21FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20E2DDD31FB740CF003F21FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20EDA42A1FB88713000BA465 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2E7F44EC9FC82B8F3F1F51DD /* Pods-8CubeRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-8CubeRunner.release.xcconfig"; path = "Pods/Target Support Files/Pods-8CubeRunner/Pods-8CubeRunner.release.xcconfig"; sourceTree = "<group>"; };
 		8FB6631484377B0023AFA929 /* Pods-8CubeRunner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-8CubeRunner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-8CubeRunner/Pods-8CubeRunner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				20E2DDCE1FB740CF003F21FD /* Assets.xcassets */,
 				20E2DDD01FB740CF003F21FD /* LaunchScreen.storyboard */,
 				20E2DDD31FB740CF003F21FD /* Info.plist */,
+				20EDA42A1FB88713000BA465 /* MenuViewController.swift */,
 			);
 			path = 8CubeRunner;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E2DDCA1FB740CF003F21FD /* GameViewController.swift in Sources */,
+				20EDA42B1FB88713000BA465 /* MenuViewController.swift in Sources */,
 				20E2DDC61FB740CF003F21FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
