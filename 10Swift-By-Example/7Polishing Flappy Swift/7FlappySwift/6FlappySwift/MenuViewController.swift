@@ -14,7 +14,7 @@ class MenuViewController: UIViewController {
                                                      buttonStyle: .rect)
     private var player: MusicPlayer?
     
-    let testButton = UIButton()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
