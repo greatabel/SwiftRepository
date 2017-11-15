@@ -10,6 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let viewController = MenuViewController()
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
+        mainWindow.backgroundColor = UIColor.white
         mainWindow.rootViewController = viewController
         mainWindow.makeKeyAndVisible()
         window = mainWindow

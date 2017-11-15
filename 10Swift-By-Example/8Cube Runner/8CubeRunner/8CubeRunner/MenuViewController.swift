@@ -13,6 +13,8 @@ class MenuViewController: UIViewController {
                                                buttonStyle: .rect)
     private let gameCenterButton = HTPressableButton(frame: CGRectMake(0, 0, 260, 50),
                                                      buttonStyle: .rect)
+    private let titleLbl = UILabel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +33,7 @@ private extension MenuViewController{
         gameCenterButton?.addTarget(self, action: #selector(self.onGameCenterPressed(sender:)),
                                     for: .touchUpInside)
         view.addSubview(gameCenterButton!)
+        view.addSubview(titleLbl)
 
     }
     @objc func onPlayPressed(sender: UIButton) {
@@ -50,6 +53,23 @@ private extension MenuViewController{
 
 private extension MenuViewController{
     func layoutView(){
+        constrain(titleLbl) { view in
+            view.top == view.superview!.top + 60
+            view.centerX == view.superview!.centerX
+        }
+        constrain(playButton!) { view in
+            view.bottom == view.superview!.centerY - 60
+            view.centerX == view.superview!.centerX
+            view.height == 80
+            view.width == view.superview!.width - 40
+        }
+        constrain(gameCenterButton!) { view in
+            view.bottom == view.superview!.centerY + 60
+            view.centerX == view.superview!.centerX
+            view.height == 80
+            view.width == view.superview!.width - 40
+        }
+
     }
 }
 private extension MenuViewController{
