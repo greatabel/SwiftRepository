@@ -87,6 +87,9 @@ private extension MenuViewController{
 
 private extension MenuViewController{
     func render(){
-        
+        playButton?.setTitle("Play", for: .normal)
+        gameCenterButton?.setTitle("Game Center", for: .normal)
+        titleLbl.text = "Cube Runner"
+
     }
 }
