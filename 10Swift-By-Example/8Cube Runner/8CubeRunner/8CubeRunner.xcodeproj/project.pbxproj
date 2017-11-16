@@ -76,11 +76,11 @@
 				20E2DDC51FB740CF003F21FD /* AppDelegate.swift */,
 				20E2DDC71FB740CF003F21FD /* art.scnassets */,
 				20E2DDC91FB740CF003F21FD /* GameViewController.swift */,
+				20EDA42A1FB88713000BA465 /* MenuViewController.swift */,
 				20E2DDCB1FB740CF003F21FD /* Main.storyboard */,
 				20E2DDCE1FB740CF003F21FD /* Assets.xcassets */,
 				20E2DDD01FB740CF003F21FD /* LaunchScreen.storyboard */,
 				20E2DDD31FB740CF003F21FD /* Info.plist */,
-				20EDA42A1FB88713000BA465 /* MenuViewController.swift */,
 			);
 			path = 8CubeRunner;
 			sourceTree = "<group>";

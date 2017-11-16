@@ -74,10 +74,19 @@ private extension MenuViewController{
 }
 private extension MenuViewController{
     func style(){
+        playButton?.buttonColor = UIColor.ht_grapeFruit()
+        playButton?.shadowColor = UIColor.ht_grapeFruitDark()
+        playButton?.titleLabel?.font = UIFont.bitwiseFont(ofSize: 30)
+        gameCenterButton?.buttonColor = UIColor.ht_aqua()
+        gameCenterButton?.shadowColor = UIColor.ht_aquaDark()
+        gameCenterButton?.titleLabel?.font = UIFont.bitwiseFont(ofSize: 30)
+        titleLbl.textColor = UIColor.ht_midnightBlue()
+        titleLbl.font = UIFont.bitwiseFont(ofSize: 50)
     }
 }
 
 private extension MenuViewController{
     func render(){
+        
     }
 }
