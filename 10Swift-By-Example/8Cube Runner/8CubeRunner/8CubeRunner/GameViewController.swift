@@ -25,6 +25,19 @@ class GameViewController: UIViewController {
 
 private extension GameViewController {
     func createContents() {
+        scene = SCNScene()
+        cameraNode = createCamera()
+        scene.rootNode.addChildNode(cameraNode)
 
+        scnView.showsStatistics = true
+        scnView.scene = scene
+    }
+
+    func createCamera() -> SCNNode{
+        let cameraNode = SCNNode()
+        cameraNode.camera = SCNCamera()
+        cameraNode.position = SCNVector3Make(0, 7, 20)
+        cameraNode.rotation = SCNVector4Make(1, 0, 0, -atan2f(7, 20.0))
+        return cameraNode
     }
 }
