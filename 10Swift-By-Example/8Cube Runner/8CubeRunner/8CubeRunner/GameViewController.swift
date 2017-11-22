@@ -25,11 +25,14 @@ class GameViewController: UIViewController {
 
 private extension GameViewController {
     func createContents() {
-        scene = SCNScene()
+        scene = SCNScene(named: "art.scnassets/eurofighter.dae")
+        scene.background.contents = UIImage(named: "sky")
+        scnView.showsStatistics = true
+
         cameraNode = createCamera()
         scene.rootNode.addChildNode(cameraNode)
 
-        scnView.showsStatistics = true
+
         scnView.scene = scene
     }
 
