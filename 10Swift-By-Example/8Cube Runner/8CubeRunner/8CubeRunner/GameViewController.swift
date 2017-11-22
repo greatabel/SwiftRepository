@@ -32,6 +32,13 @@ private extension GameViewController {
         cameraNode = createCamera()
         scene.rootNode.addChildNode(cameraNode)
 
+        let jetfighterNode = createJetfighter()
+        scene.rootNode.addChildNode(jetfighterNode)
+
+        let moveForwardAction = SCNAction.repeatForever(
+            SCNAction.moveBy(x: 0, y: 0, z: -100, duration: 7))
+        cameraNode.runAction(moveForwardAction)
+        jetfighterNode.runAction(moveForwardAction)
 
         scnView.scene = scene
     }
@@ -43,4 +50,13 @@ private extension GameViewController {
         cameraNode.rotation = SCNVector4Make(1, 0, 0, -atan2f(7, 20.0))
         return cameraNode
     }
+
+    func createJetfighter() ->SCNNode {
+        let jetfighterNode = scene!.rootNode.childNode(withName: "jetfighter", recursively: true)!
+        jetfighterNode.scale = SCNVector3(x: 0.03, y: 0.03, z: 0.03)
+        jetfighterNode.position = SCNVector3(x: 0, y: 1.0, z: 13)
+        jetfighterNode.rotation = SCNVector4(x: 0, y: 1, z: 0, w: Float(Double.pi))
+        return jetfighterNode
+    }
+
 }
