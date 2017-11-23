@@ -2,6 +2,7 @@ import UIKit
 import QuartzCore
 import SceneKit
 import CoreMotion
+import SwiftCubicSpline
 
 class GameViewController: UIViewController {
     private let scnView = SCNView()
@@ -10,7 +11,18 @@ class GameViewController: UIViewController {
     private var jetfighterNode: SCNNode!
     //...
     private var motionManager : CMMotionManager?
-    //...
+
+    private let spline = CubicSpline(points: [
+        CGPoint(x: 0.0, y: 0.5),
+        CGPoint(x: 0.1, y: 0.5),
+        CGPoint(x: 0.2, y: 0.8),
+        CGPoint(x: 0.4, y: 0.2),
+        CGPoint(x: 0.6, y: 0.6),
+        CGPoint(x: 0.8, y: 0.4),
+        CGPoint(x: 0.9, y: 0.5),
+        CGPoint(x: 1.0, y: 0.5)
+        ])
+
     override func viewDidLoad() {
         super.viewDidLoad()
         scnView.frame = view.bounds
@@ -70,6 +82,7 @@ private extension GameViewController {
          motionManager?.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical,
                                                  to: OperationQueue.main,
                                                  withHandler: handleMove)
+        buildTheLane()
 
         scnView.scene = scene
     }
@@ -118,6 +131,18 @@ private extension GameViewController {
         floor.firstMaterial!.diffuse.contentsTransform = SCNMatrix4MakeScale(2, 2, 1)
         floor.reflectivity = 0
         return SCNNode(geometry: floor)
+    }
+
+    func buildTheLane() {
+        for zPos in stride(from: 0, to: 200, by: 3) {
+//        for var zPos = 0; zPos < 200; zPos += 3 {
+            let z = cameraNode.position.z - Float(zPos)
+            buildCubesAtPosition(zPos: z)
+        }
+    }
+
+    func buildCubesAtPosition(zPos: Float) {
+
     }
 
 }
