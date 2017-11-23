@@ -11,6 +11,7 @@ class GameViewController: UIViewController {
     private var jetfighterNode: SCNNode!
     //...
     private var motionManager : CMMotionManager?
+    private var laneTimer: Timer!
 
     private let spline = CubicSpline(points: [
         CGPoint(x: 0.0, y: 0.5),
@@ -83,6 +84,7 @@ private extension GameViewController {
                                                  to: OperationQueue.main,
                                                  withHandler: handleMove)
         buildTheLane()
+        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: "laneTimerFired", userInfo: nil, repeats: true)
 
         scnView.scene = scene
     }
@@ -181,6 +183,10 @@ private extension GameViewController {
         }()
 
         return cubeNode
+    }
+
+    @objc func laneTimerFired(){
+        buildCubesAtPosition(zPos: cameraNode.position.z-200)
     }
 
 }
