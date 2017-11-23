@@ -142,7 +142,45 @@ private extension GameViewController {
     }
 
     func buildCubesAtPosition(zPos: Float) {
+        let laneWidth: CGFloat = 40
 
+        let zPosInSection = zPos.truncatingRemainder(dividingBy: 200)
+        let normalizedZ = CGFloat(fabs(zPosInSection/200))
+        let normalizedX = Float((spline.interpolate(x: normalizedZ) - 0.5)*laneWidth)
+
+        let cubeAtLeft = cube()
+        cubeAtLeft.position = SCNVector3(x: normalizedX - 6, y: 1.0, z: zPos)
+        scene.rootNode.addChildNode(cubeAtLeft)
+        let cubeAtRight = cube()
+        cubeAtRight.position = SCNVector3(x: normalizedX + 6, y: 1.0, z: zPos)
+        scene.rootNode.addChildNode(cubeAtRight)
+        //...
+        if arc4random_uniform(5) < 1 {
+            let centralCube = cube(size: 1.0)
+            scene.rootNode.addChildNode(centralCube)
+            let xOffset = arc4random_uniform(10)
+            centralCube.position = SCNVector3(x: normalizedX + Float(xOffset) - 5.0, y: 1.0, z: zPos)
+        }
+    }
+
+    func cube(size: CGFloat = 2.0) -> SCNNode {
+        let cube = SCNBox(width: size, height: size, length: size, chamferRadius: 0)
+        let cubeNode = SCNNode(geometry: cube)
+
+        cube.firstMaterial!.diffuse.contents = {
+            switch arc4random_uniform(4) {
+            case 0:
+                return UIColor.ht_belizeHole()
+            case 1:
+                return UIColor.ht_wisteria()
+            case 2:
+                return UIColor.ht_midnightBlue()
+            default:
+                return UIColor.ht_pomegranate()
+            }
+        }()
+
+        return cubeNode
     }
 
 }
