@@ -7,6 +7,7 @@ class GameViewController: UIViewController {
     private let scnView = SCNView()
     private var scene: SCNScene!
     private var cameraNode: SCNNode!
+    private var jetfighterNode: SCNNode!
     //...
     private var motionManager : CMMotionManager?
     //...
@@ -32,7 +33,7 @@ private extension GameViewController {
         cameraNode = createCamera()
         scene.rootNode.addChildNode(cameraNode)
 
-        let jetfighterNode = createJetfighter()
+        jetfighterNode = createJetfighter()
         scene.rootNode.addChildNode(createFloor())
 
         let moveForwardAction = SCNAction.repeatForever(
@@ -40,7 +41,59 @@ private extension GameViewController {
         cameraNode.runAction(moveForwardAction)
         jetfighterNode.runAction(moveForwardAction)
 
+        motionManager = CMMotionManager()
+        motionManager?.deviceMotionUpdateInterval = 1.0 / 60.0
+//        motionManager?.startDeviceMotionUpdates(
+//            using: CMAttitudeReferenceFrame.xArbitraryZVertical,
+//            to: OperationQueue.main,
+//            withHandler: { (motion: CMDeviceMotion?, error: NSError?) -> Void in
+//                guard let motion = motion else {return}
+//
+//                let roll = CGFloat(motion.attitude.roll)
+//
+//                let rotateCamera =
+//                    SCNAction.rotate(by: roll/20.0,
+//                                     around: SCNVector3(x: 0, y: 0, z: 1),
+//                                            duration: 0.1)
+//                self.cameraNode.runAction(rotateCamera)
+//
+//                let rotateJetfighter =
+//                    SCNAction.rotate(by: roll/10.0,
+//                                     around: SCNVector3(x: 0, y: 0, z: 1),
+//                                            duration: 0.1)
+//                jetfighterNode.runAction(rotateJetfighter)
+//
+//                let actionMove = SCNAction.moveBy(x: roll, y: 0, z: 0, duration: 0.1)
+//                self.cameraNode.runAction(actionMove)
+//                jetfighterNode.runAction(actionMove)
+//                })
+         motionManager?.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical,
+                                                 to: OperationQueue.main,
+                                                 withHandler: handleMove)
+
         scnView.scene = scene
+    }
+
+    func handleMove(motion: CMDeviceMotion?, error: Error?) {
+        guard let motion = motion else {return}
+
+        let roll = CGFloat(motion.attitude.roll)
+
+        let rotateCamera =
+            SCNAction.rotate(by: roll/20.0,
+                             around: SCNVector3(x: 0, y: 0, z: 1),
+                             duration: 0.1)
+        self.cameraNode.runAction(rotateCamera)
+
+        let rotateJetfighter =
+            SCNAction.rotate(by: roll/10.0,
+                             around: SCNVector3(x: 0, y: 0, z: 1),
+                             duration: 0.1)
+        jetfighterNode.runAction(rotateJetfighter)
+
+        let actionMove = SCNAction.moveBy(x: roll, y: 0, z: 0, duration: 0.1)
+        self.cameraNode.runAction(actionMove)
+        jetfighterNode.runAction(actionMove)
     }
 
     func createCamera() -> SCNNode{
