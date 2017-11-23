@@ -33,7 +33,7 @@ private extension GameViewController {
         scene.rootNode.addChildNode(cameraNode)
 
         let jetfighterNode = createJetfighter()
-        scene.rootNode.addChildNode(jetfighterNode)
+        scene.rootNode.addChildNode(createFloor())
 
         let moveForwardAction = SCNAction.repeatForever(
             SCNAction.moveBy(x: 0, y: 0, z: -100, duration: 7))
@@ -57,6 +57,14 @@ private extension GameViewController {
         jetfighterNode.position = SCNVector3(x: 0, y: 1.0, z: 13)
         jetfighterNode.rotation = SCNVector4(x: 0, y: 1, z: 0, w: Float(Double.pi))
         return jetfighterNode
+    }
+
+    func createFloor() -> SCNNode {
+        let floor = SCNFloor()
+        floor.firstMaterial!.diffuse.contents = UIImage(named: "moon")
+        floor.firstMaterial!.diffuse.contentsTransform = SCNMatrix4MakeScale(2, 2, 1)
+        floor.reflectivity = 0
+        return SCNNode(geometry: floor)
     }
 
 }
