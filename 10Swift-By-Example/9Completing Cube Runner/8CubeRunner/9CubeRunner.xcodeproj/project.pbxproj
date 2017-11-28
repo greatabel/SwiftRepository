@@ -12,6 +12,7 @@
 		2047D89A1FCD64FB00DC2573 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047D8991FCD64FB00DC2573 /* Utilities.swift */; };
 		20D7BA361FCDB7740029DDB8 /* FireParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 20D7BA351FCDB7740029DDB8 /* FireParticles.scnp */; };
 		20D7BA381FCDB7B00029DDB8 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D7BA371FCDB7B00029DDB8 /* spark.png */; };
+		20D7BA3B1FCDB9C00029DDB8 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D7BA3A1FCDB9C00029DDB8 /* GameCenter.swift */; };
 		20E2DDC61FB740CF003F21FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E2DDC51FB740CF003F21FD /* AppDelegate.swift */; };
 		20E2DDC81FB740CF003F21FD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E2DDC71FB740CF003F21FD /* art.scnassets */; };
 		20E2DDCA1FB740CF003F21FD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E2DDC91FB740CF003F21FD /* GameViewController.swift */; };
@@ -29,6 +30,7 @@
 		2047D8991FCD64FB00DC2573 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		20D7BA351FCDB7740029DDB8 /* FireParticles.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = FireParticles.scnp; sourceTree = "<group>"; };
 		20D7BA371FCDB7B00029DDB8 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		20D7BA3A1FCDB9C00029DDB8 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		20E2DDC21FB740CF003F21FD /* 9CubeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9CubeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E2DDC51FB740CF003F21FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20E2DDC71FB740CF003F21FD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				20E2DDD31FB740CF003F21FD /* Info.plist */,
 				2047D8971FCD4F8900DC2573 /* Space 1990-B.mp3 */,
 				2047D8991FCD64FB00DC2573 /* Utilities.swift */,
+				20D7BA3A1FCDB9C00029DDB8 /* GameCenter.swift */,
 			);
 			path = 8CubeRunner;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				20E2DDCA1FB740CF003F21FD /* GameViewController.swift in Sources */,
 				20EDA42B1FB88713000BA465 /* MenuViewController.swift in Sources */,
+				20D7BA3B1FCDB9C00029DDB8 /* GameCenter.swift in Sources */,
 				2047D8961FCD4E8F00DC2573 /* MusicPlayer.swift in Sources */,
 				2047D89A1FCD64FB00DC2573 /* Utilities.swift in Sources */,
 				20E2DDC61FB740CF003F21FD /* AppDelegate.swift in Sources */,
