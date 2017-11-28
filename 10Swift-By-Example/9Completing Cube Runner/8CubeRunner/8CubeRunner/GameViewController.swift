@@ -4,6 +4,11 @@ import SceneKit
 import CoreMotion
 import SwiftCubicSpline
 
+enum BodyType : Int {
+    case jetfighter   = 1  // (1 << 0)
+    case cube = 2  // (1 << 1)
+}
+
 class GameViewController: UIViewController {
     private let scnView = SCNView()
     private var scene: SCNScene!
@@ -153,6 +158,15 @@ private extension GameViewController {
         jetfighterNode.scale = SCNVector3(x: 0.03, y: 0.03, z: 0.03)
         jetfighterNode.position = SCNVector3(x: 0, y: 1.0, z: 13)
         jetfighterNode.rotation = SCNVector4(x: 0, y: 1, z: 0, w: Float(Double.pi))
+
+        let jetfighterBodyNode = SCNNode(geometry:
+            SCNBox(width: 0.3, height: 0.2, length: 1, chamferRadius: 0))
+        jetfighterNode.physicsBody = SCNPhysicsBody(type: .kinematic,
+                                                    shape: SCNPhysicsShape(node: jetfighterBodyNode,
+                                                                           options: nil))
+        jetfighterNode.physicsBody!.categoryBitMask = BodyType.jetfighter.rawValue
+        jetfighterNode.physicsBody!.contactTestBitMask = BodyType.cube.rawValue
+
         return jetfighterNode
     }
 
@@ -197,6 +211,11 @@ private extension GameViewController {
     func cube(size: CGFloat = 2.0) -> SCNNode {
         let cube = SCNBox(width: size, height: size, length: size, chamferRadius: 0)
         let cubeNode = SCNNode(geometry: cube)
+
+        cubeNode.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(node: cubeNode,
+                                                                                    options: nil))
+        cubeNode.physicsBody!.categoryBitMask = BodyType.cube.rawValue
+        cubeNode.physicsBody!.contactTestBitMask = BodyType.jetfighter.rawValue
 
         cube.firstMaterial!.diffuse.contents = {
             switch arc4random_uniform(4) {
