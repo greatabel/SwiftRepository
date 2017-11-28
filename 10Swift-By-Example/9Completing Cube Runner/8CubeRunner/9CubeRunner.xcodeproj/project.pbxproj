@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2047D8961FCD4E8F00DC2573 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047D8951FCD4E8F00DC2573 /* MusicPlayer.swift */; };
 		2047D8981FCD4F8900DC2573 /* Space 1990-B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2047D8971FCD4F8900DC2573 /* Space 1990-B.mp3 */; };
+		2047D89A1FCD64FB00DC2573 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047D8991FCD64FB00DC2573 /* Utilities.swift */; };
 		20E2DDC61FB740CF003F21FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E2DDC51FB740CF003F21FD /* AppDelegate.swift */; };
 		20E2DDC81FB740CF003F21FD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E2DDC71FB740CF003F21FD /* art.scnassets */; };
 		20E2DDCA1FB740CF003F21FD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E2DDC91FB740CF003F21FD /* GameViewController.swift */; };
@@ -23,6 +24,7 @@
 		0F85AC3B5FE93E9D2F1B03B7 /* Pods_8CubeRunner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_8CubeRunner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2047D8951FCD4E8F00DC2573 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		2047D8971FCD4F8900DC2573 /* Space 1990-B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Space 1990-B.mp3"; sourceTree = "<group>"; };
+		2047D8991FCD64FB00DC2573 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		20E2DDC21FB740CF003F21FD /* 9CubeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9CubeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E2DDC51FB740CF003F21FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20E2DDC71FB740CF003F21FD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				20E2DDD01FB740CF003F21FD /* LaunchScreen.storyboard */,
 				20E2DDD31FB740CF003F21FD /* Info.plist */,
 				2047D8971FCD4F8900DC2573 /* Space 1990-B.mp3 */,
+				2047D8991FCD64FB00DC2573 /* Utilities.swift */,
 			);
 			path = 8CubeRunner;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				20E2DDCA1FB740CF003F21FD /* GameViewController.swift in Sources */,
 				20EDA42B1FB88713000BA465 /* MenuViewController.swift in Sources */,
 				2047D8961FCD4E8F00DC2573 /* MusicPlayer.swift in Sources */,
+				2047D89A1FCD64FB00DC2573 /* Utilities.swift in Sources */,
 				20E2DDC61FB740CF003F21FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

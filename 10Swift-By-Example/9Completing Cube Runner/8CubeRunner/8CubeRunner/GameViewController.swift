@@ -3,6 +3,8 @@ import QuartzCore
 import SceneKit
 import CoreMotion
 import SwiftCubicSpline
+import SIAlertView
+import AudioToolbox.AudioServices
 
 enum BodyType : Int {
     case jetfighter   = 1  // (1 << 0)
@@ -131,6 +133,17 @@ private extension GameViewController {
             self.cameraNode.removeAllActions()
             self.jetfighterNode.removeAllActions()
             self.motionManager?.stopDeviceMotionUpdates()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            execAfter(delay: 1){
+                self.askToPlayAgain(onPlayAgainPressed: {
+                    self.createContents()
+                },
+                                    onCancelPressed: {
+                                        self.dismiss(animated: true, completion: nil)
+                }
+                )
+            }
+            
         }
         scnView.scene = scene
     }
@@ -284,3 +297,24 @@ extension GameViewController: SCNPhysicsContactDelegate{
     }
 }
 
+extension GameViewController {
+    func askToPlayAgain(onPlayAgainPressed: @escaping () -> Void,
+                        onCancelPressed: @escaping () -> Void) {
+        let alertView = SIAlertView(title: "Ouch!!",
+                                    andMessage: "Congratulations! Your score is \(score). Play again?")
+
+        alertView?.addButton(withTitle: "OK", type: .default) { _ in onPlayAgainPressed() }
+        alertView?.addButton(withTitle: "Cancel", type: .default) { _ in onCancelPressed() }
+        alertView?.show()
+    }
+
+    func explodeNode(node: SCNNode){
+        guard let fire = SCNParticleSystem(named: "FireParticles", inDirectory: nil)
+            else {
+                return
+        }
+        fire.emitterShape = node.geometry
+        node.addParticleSystem(fire)
+    }
+
+}
