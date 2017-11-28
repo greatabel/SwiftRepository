@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     private var score = 0
 
     private var musicPlayer: MusicPlayer?
-    
+
     private let spline = CubicSpline(points: [
         CGPoint(x: 0.0, y: 0.5),
         CGPoint(x: 0.1, y: 0.5),
@@ -32,10 +32,27 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        do {
+            musicPlayer = try MusicPlayer(filename: "Space 1990-B", type: "mp3")
+            musicPlayer!.play()
+        } catch {
+            print("Error playing soundtrack")
+        }
+
         scnView.frame = view.bounds
         view.addSubview(scnView)
 
         createContents()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        musicPlayer?.play()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        musicPlayer?.stop()
     }
 
     override var prefersStatusBarHidden: Bool {
