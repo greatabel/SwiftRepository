@@ -68,6 +68,9 @@ class GameViewController: UIViewController {
 private extension GameViewController {
     func createContents() {
         scene = SCNScene(named: "art.scnassets/eurofighter.dae")
+
+        scene.physicsWorld.contactDelegate = self
+
         scene.background.contents = UIImage(named: "sky")
         scnView.showsStatistics = true
 
@@ -257,4 +260,18 @@ private extension GameViewController {
 
 
 
+}
+
+extension GameViewController: SCNPhysicsContactDelegate{
+    func physicsWorld(_ world: SCNPhysicsWorld,
+                      didBegin contact: SCNPhysicsContact){
+        let contactMask = contact.nodeA.physicsBody!.categoryBitMask | contact.nodeB.physicsBody!.categoryBitMask
+        switch (contactMask) {
+        case BodyType.jetfighter.rawValue |  BodyType.cube.rawValue:
+            print("Contact!")
+        default:
+            return
+        }
+
+    }
 }
