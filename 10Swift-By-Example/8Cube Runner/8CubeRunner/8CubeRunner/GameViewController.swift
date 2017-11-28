@@ -17,6 +17,8 @@ class GameViewController: UIViewController {
     private var scoreTimer: Timer!
     private var score = 0
 
+    private var musicPlayer: MusicPlayer?
+    
     private let spline = CubicSpline(points: [
         CGPoint(x: 0.0, y: 0.5),
         CGPoint(x: 0.1, y: 0.5),
