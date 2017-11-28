@@ -202,6 +202,7 @@
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/HTPressableButton/HTPressableButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMCubicSpline/SAMCubicSpline.framework",
+				"${BUILT_PRODUCTS_DIR}/SIAlertView/SIAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCubicSpline/SwiftCubicSpline.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -210,6 +211,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTPressableButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMCubicSpline.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SIAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCubicSpline.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

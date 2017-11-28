@@ -89,35 +89,35 @@ private extension GameViewController {
 
         motionManager = CMMotionManager()
         motionManager?.deviceMotionUpdateInterval = 1.0 / 60.0
-//        motionManager?.startDeviceMotionUpdates(
-//            using: CMAttitudeReferenceFrame.xArbitraryZVertical,
-//            to: OperationQueue.main,
-//            withHandler: { (motion: CMDeviceMotion?, error: NSError?) -> Void in
-//                guard let motion = motion else {return}
-//
-//                let roll = CGFloat(motion.attitude.roll)
-//
-//                let rotateCamera =
-//                    SCNAction.rotate(by: roll/20.0,
-//                                     around: SCNVector3(x: 0, y: 0, z: 1),
-//                                            duration: 0.1)
-//                self.cameraNode.runAction(rotateCamera)
-//
-//                let rotateJetfighter =
-//                    SCNAction.rotate(by: roll/10.0,
-//                                     around: SCNVector3(x: 0, y: 0, z: 1),
-//                                            duration: 0.1)
-//                jetfighterNode.runAction(rotateJetfighter)
-//
-//                let actionMove = SCNAction.moveBy(x: roll, y: 0, z: 0, duration: 0.1)
-//                self.cameraNode.runAction(actionMove)
-//                jetfighterNode.runAction(actionMove)
-//                })
-         motionManager?.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical,
-                                                 to: OperationQueue.main,
-                                                 withHandler: handleMove)
+        //        motionManager?.startDeviceMotionUpdates(
+        //            using: CMAttitudeReferenceFrame.xArbitraryZVertical,
+        //            to: OperationQueue.main,
+        //            withHandler: { (motion: CMDeviceMotion?, error: NSError?) -> Void in
+        //                guard let motion = motion else {return}
+        //
+        //                let roll = CGFloat(motion.attitude.roll)
+        //
+        //                let rotateCamera =
+        //                    SCNAction.rotate(by: roll/20.0,
+        //                                     around: SCNVector3(x: 0, y: 0, z: 1),
+        //                                            duration: 0.1)
+        //                self.cameraNode.runAction(rotateCamera)
+        //
+        //                let rotateJetfighter =
+        //                    SCNAction.rotate(by: roll/10.0,
+        //                                     around: SCNVector3(x: 0, y: 0, z: 1),
+        //                                            duration: 0.1)
+        //                jetfighterNode.runAction(rotateJetfighter)
+        //
+        //                let actionMove = SCNAction.moveBy(x: roll, y: 0, z: 0, duration: 0.1)
+        //                self.cameraNode.runAction(actionMove)
+        //                jetfighterNode.runAction(actionMove)
+        //                })
+        motionManager?.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical,
+                                                to: OperationQueue.main,
+                                                withHandler: handleMove)
         buildTheLane()
-//        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: "laneTimerFired", userInfo: nil, repeats: true)
+        //        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: "laneTimerFired", userInfo: nil, repeats: true)
         laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(GameViewController.laneTimerFired), userInfo: nil, repeats: true)
 
         scene!.fogStartDistance = 30
@@ -192,7 +192,7 @@ private extension GameViewController {
 
     func buildTheLane() {
         for zPos in stride(from: 0, to: 200, by: 3) {
-//        for var zPos = 0; zPos < 200; zPos += 3 {
+            //        for var zPos = 0; zPos < 200; zPos += 3 {
             let z = cameraNode.position.z - Float(zPos)
             buildCubesAtPosition(zPos: z)
         }
@@ -283,3 +283,4 @@ extension GameViewController: SCNPhysicsContactDelegate{
 
     }
 }
+

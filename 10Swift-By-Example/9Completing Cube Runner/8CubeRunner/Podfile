@@ -6,4 +6,5 @@ target '8CubeRunner' do
     pod 'HTPressableButton', '~> 1.3.3'
     pod 'BitwiseFont', '~> 0.1.0'
     pod 'SwiftCubicSpline', '~> 0.1.0'
+    pod 'SIAlertView', '~> 1.3'
 end
