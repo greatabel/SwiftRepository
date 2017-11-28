@@ -84,8 +84,8 @@ private extension GameViewController {
                                                  to: OperationQueue.main,
                                                  withHandler: handleMove)
         buildTheLane()
-        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: "laneTimerFired", userInfo: nil, repeats: true)
-
+//        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: "laneTimerFired", userInfo: nil, repeats: true)
+        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(GameViewController.laneTimerFired), userInfo: nil, repeats: true)
         scnView.scene = scene
     }
 
