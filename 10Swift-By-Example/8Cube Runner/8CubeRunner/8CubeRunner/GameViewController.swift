@@ -13,6 +13,10 @@ class GameViewController: UIViewController {
     private var motionManager : CMMotionManager?
     private var laneTimer: Timer!
 
+    private let scoreLbl = UILabel()
+    private var scoreTimer: Timer!
+    private var score = 0
+
     private let spline = CubicSpline(points: [
         CGPoint(x: 0.0, y: 0.5),
         CGPoint(x: 0.1, y: 0.5),
@@ -86,6 +90,12 @@ private extension GameViewController {
         buildTheLane()
 //        laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: "laneTimerFired", userInfo: nil, repeats: true)
         laneTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(GameViewController.laneTimerFired), userInfo: nil, repeats: true)
+
+        scene!.fogStartDistance = 30
+        scene!.fogEndDistance = 90
+        scene!.fogColor = UIColor.black
+        setupScore()
+
         scnView.scene = scene
     }
 
@@ -185,8 +195,28 @@ private extension GameViewController {
         return cubeNode
     }
 
+    func setupScore() {
+        scnView.addSubview(scoreLbl)
+        scoreLbl.frame.origin.x = 0
+        scoreLbl.frame.origin.y = 0
+        scoreLbl.frame.size.height = 50
+        scoreLbl.frame.size.width = 200
+        scoreLbl.font = UIFont.bitwiseFont(ofSize: 30)
+        scoreLbl.textColor = UIColor.white
+        score = 0
+        scoreLbl.text = "\(score)"
+        scoreTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.scoreTimerFired), userInfo: nil, repeats: true)
+    }
+
     @objc func laneTimerFired(){
         buildCubesAtPosition(zPos: cameraNode.position.z-200)
     }
+
+    @objc func scoreTimerFired(){
+        score += 1
+        scoreLbl.text = "\(score)"
+    }
+
+
 
 }
