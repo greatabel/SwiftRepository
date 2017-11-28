@@ -29,6 +29,8 @@ class GameViewController: UIViewController {
 //    private var gameOver: () -> Void = {}
     private var gameOver: (SCNNode, SCNNode) -> Void = {_,_ in}
 
+    var gameCenter: GameCenter?
+    
     private let spline = CubicSpline(points: [
         CGPoint(x: 0.0, y: 0.5),
         CGPoint(x: 0.1, y: 0.5),
@@ -137,7 +139,9 @@ private extension GameViewController {
             self.explodeNode(node: nodeA)
             self.explodeNode(node: nodeB)
             self.motionManager?.stopDeviceMotionUpdates()
-
+            if let gameCenter = self.gameCenter{
+                gameCenter.reportScore(score: self.score)
+            }
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             execAfter(delay: 1){
                 self.askToPlayAgain(onPlayAgainPressed: {

@@ -15,9 +15,11 @@ class MenuViewController: UIViewController {
                                                      buttonStyle: .rect)
     private let titleLbl = UILabel()
 
+    private let gameCenter = GameCenter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        gameCenter.authenticateLocalPlayer()
         setup()
         layoutView()
         style()
@@ -37,15 +39,15 @@ private extension MenuViewController{
 
     }
     @objc func onPlayPressed(sender: UIButton) {
-        print(#function)
         let vc = GameViewController()
+        vc.gameCenter = gameCenter
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
 
     @objc func onGameCenterPressed(sender: UIButton) {
-        print(#function)
-
+        print("onGameCenterPressed")
+        gameCenter.showLeaderboard()
     }
 
 
