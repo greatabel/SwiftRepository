@@ -26,7 +26,8 @@ class GameViewController: UIViewController {
 
     private var musicPlayer: MusicPlayer?
 
-    private var gameOver: () -> Void = {}
+//    private var gameOver: () -> Void = {}
+    private var gameOver: (SCNNode, SCNNode) -> Void = {_,_ in}
 
     private let spline = CubicSpline(points: [
         CGPoint(x: 0.0, y: 0.5),
@@ -126,20 +127,24 @@ private extension GameViewController {
         scene!.fogEndDistance = 90
         scene!.fogColor = UIColor.black
         setupScore()
-        gameOver = { [unowned self] in
+        gameOver = { [unowned self] nodeA, nodeB in
             self.laneTimer.invalidate()
             self.scoreTimer.invalidate()
             self.scene.physicsWorld.contactDelegate = nil
+
             self.cameraNode.removeAllActions()
             self.jetfighterNode.removeAllActions()
+            self.explodeNode(node: nodeA)
+            self.explodeNode(node: nodeB)
             self.motionManager?.stopDeviceMotionUpdates()
+
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             execAfter(delay: 1){
                 self.askToPlayAgain(onPlayAgainPressed: {
                     self.createContents()
                 },
-                                    onCancelPressed: {
-                                        self.dismiss(animated: true, completion: nil)
+                    onCancelPressed: {
+                    self.dismiss(animated: true, completion: nil)
                 }
                 )
             }
@@ -289,7 +294,7 @@ extension GameViewController: SCNPhysicsContactDelegate{
         switch (contactMask) {
         case BodyType.jetfighter.rawValue |  BodyType.cube.rawValue:
             print("Contact!")
-            gameOver()
+            gameOver(contact.nodeA, contact.nodeB)
         default:
             return
         }
