@@ -16,6 +16,8 @@
 		205DB3DF1FCE8CCC00F9264C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3DE1FCE8CCC00F9264C /* Register.storyboard */; };
 		205DB3E11FCE9F5E00F9264C /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3E01FCE9F5E00F9264C /* String+Email.swift */; };
 		205DB3E41FCE9F9B00F9264C /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3E31FCE9F9B00F9264C /* UserStore.swift */; };
+		205DB3E71FCEA0AE00F9264C /* EcommerceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3E61FCEA0AE00F9264C /* EcommerceViewController.swift */; };
+		205DB3E91FCEA0CF00F9264C /* Ecommerce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3E81FCEA0CF00F9264C /* Ecommerce.storyboard */; };
 		6AE29ED5EDCC7E379F151815 /* Pods_10ASAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		205DB3DE1FCE8CCC00F9264C /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		205DB3E01FCE9F5E00F9264C /* String+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Email.swift"; sourceTree = "<group>"; };
 		205DB3E31FCE9F9B00F9264C /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		205DB3E61FCEA0AE00F9264C /* EcommerceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceViewController.swift; sourceTree = "<group>"; };
+		205DB3E81FCEA0CF00F9264C /* Ecommerce.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ecommerce.storyboard; sourceTree = "<group>"; };
 		A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_10ASAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C994A194176EFE4D04614D84 /* Pods-10ASAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-10ASAP.release.xcconfig"; path = "Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP.release.xcconfig"; sourceTree = "<group>"; };
 		DE80568DB629AF471B25A16A /* Pods-10ASAP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-10ASAP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		205DB3C81FCE84BA00F9264C /* 10ASAP */ = {
 			isa = PBXGroup;
 			children = (
+				205DB3E51FCEA09E00F9264C /* Ecommerce */,
 				205DB3E21FCE9F8B00F9264C /* Store */,
 				205DB3DB1FCE84EF00F9264C /* Register */,
 				205DB3C91FCE84BA00F9264C /* AppDelegate.swift */,
@@ -97,6 +102,15 @@
 				205DB3E31FCE9F9B00F9264C /* UserStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		205DB3E51FCEA09E00F9264C /* Ecommerce */ = {
+			isa = PBXGroup;
+			children = (
+				205DB3E61FCEA0AE00F9264C /* EcommerceViewController.swift */,
+				205DB3E81FCEA0CF00F9264C /* Ecommerce.storyboard */,
+			);
+			path = Ecommerce;
 			sourceTree = "<group>";
 		};
 		AB6822D6B666573FFCF907CB /* Frameworks */ = {
@@ -181,6 +195,7 @@
 				205DB3D41FCE84BA00F9264C /* LaunchScreen.storyboard in Resources */,
 				205DB3D11FCE84BA00F9264C /* Assets.xcassets in Resources */,
 				205DB3CF1FCE84BA00F9264C /* Main.storyboard in Resources */,
+				205DB3E91FCEA0CF00F9264C /* Ecommerce.storyboard in Resources */,
 				205DB3DF1FCE8CCC00F9264C /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +272,7 @@
 				205DB3DD1FCE850100F9264C /* RegisterViewController.swift in Sources */,
 				205DB3E41FCE9F9B00F9264C /* UserStore.swift in Sources */,
 				205DB3CC1FCE84BA00F9264C /* ViewController.swift in Sources */,
+				205DB3E71FCEA0AE00F9264C /* EcommerceViewController.swift in Sources */,
 				205DB3CA1FCE84BA00F9264C /* AppDelegate.swift in Sources */,
 				205DB3E11FCE9F5E00F9264C /* String+Email.swift in Sources */,
 			);

@@ -4,17 +4,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     class func appdelegate() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
+    var userStore = UserStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let initialViewController: UIViewController = RegisterViewController.instantiate()
+
+        UINavigationBar.appearance().titleTextAttributes =
+            [NSAttributedStringKey.font : UIFont.latoBoldFont(ofSize: 18)]
+
+        let initialViewController: UIViewController
+
+        if !AppDelegate.appdelegate().userStore.isUserSignedIn() {
+            initialViewController = RegisterViewController.instantiate()
+        } else {
+            initialViewController = EcommerceViewController.instantiate()
+        }
 
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+
         return true
     }
 

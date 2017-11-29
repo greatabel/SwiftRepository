@@ -34,6 +34,9 @@
                                         <rect key="frame" x="51" y="60" width="132" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="emailTextFieldChanged:" destination="c9z-ZG-M2D" eventType="editingChanged" id="yAd-3h-6qL"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zws-HF-s3g">
                                         <rect key="frame" x="17" y="120" width="200" height="50"/>
@@ -45,6 +48,9 @@
                                         <state key="normal" title="OK">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signinTapped:" destination="c9z-ZG-M2D" eventType="touchUpInside" id="rg0-3h-rBr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -62,13 +68,22 @@
                         <viewLayoutGuide key="safeArea" id="ad3-tP-Uh8"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="SLk-hO-LeT" id="5eN-Sv-rIE"/>
+                        <outlet property="emailTextField" destination="SLk-hO-LeT" id="nKe-hL-Gb6"/>
                         <outlet property="okButton" destination="zws-HF-s3g" id="34j-5w-RNT"/>
+                        <segue destination="5cn-hw-CUA" kind="show" identifier="ShowEcommerceScene" id="WOv-LG-MG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUz-Kb-kuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47" y="-115"/>
+        </scene>
+        <!--Ecommerce-->
+        <scene sceneID="iJy-JI-81b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ecommerce" id="5cn-hw-CUA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAH-DP-6B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="-116"/>
         </scene>
     </scenes>
 </document>
