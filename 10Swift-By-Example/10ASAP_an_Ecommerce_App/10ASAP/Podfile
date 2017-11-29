@@ -1,0 +1,11 @@
+use_frameworks!
+inhibit_all_warnings!
+
+target '10ASAP' do
+    pod 'SwiftyJSON', '~> 4.0.0'
+    pod 'SDWebImage', '~> 4.2.2'
+    pod 'FontAwesomeKit', :git => 'https://github.com/gscalzo/FontAwesomeKit'
+    pod 'BBBadgeBarButtonItem', '~> 1.2'
+    pod 'LatoFont', :git => "https://github.com/gscalzo/LatoFont.git"
+end
+

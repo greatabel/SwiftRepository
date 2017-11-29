@@ -12,6 +12,8 @@
 		205DB3CF1FCE84BA00F9264C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3CD1FCE84BA00F9264C /* Main.storyboard */; };
 		205DB3D11FCE84BA00F9264C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3D01FCE84BA00F9264C /* Assets.xcassets */; };
 		205DB3D41FCE84BA00F9264C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3D21FCE84BA00F9264C /* LaunchScreen.storyboard */; };
+		205DB3DD1FCE850100F9264C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3DC1FCE850100F9264C /* RegisterViewController.swift */; };
+		6AE29ED5EDCC7E379F151815 /* Pods_10ASAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		205DB3D01FCE84BA00F9264C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205DB3D31FCE84BA00F9264C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		205DB3D51FCE84BA00F9264C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		205DB3DC1FCE850100F9264C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_10ASAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C994A194176EFE4D04614D84 /* Pods-10ASAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-10ASAP.release.xcconfig"; path = "Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP.release.xcconfig"; sourceTree = "<group>"; };
+		DE80568DB629AF471B25A16A /* Pods-10ASAP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-10ASAP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE29ED5EDCC7E379F151815 /* Pods_10ASAP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				205DB3C81FCE84BA00F9264C /* 10ASAP */,
 				205DB3C71FCE84BA00F9264C /* Products */,
+				EC2354DBC1B28BE8796E0B00 /* Pods */,
+				AB6822D6B666573FFCF907CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +63,7 @@
 		205DB3C81FCE84BA00F9264C /* 10ASAP */ = {
 			isa = PBXGroup;
 			children = (
+				205DB3DB1FCE84EF00F9264C /* Register */,
 				205DB3C91FCE84BA00F9264C /* AppDelegate.swift */,
 				205DB3CB1FCE84BA00F9264C /* ViewController.swift */,
 				205DB3CD1FCE84BA00F9264C /* Main.storyboard */,
@@ -64,6 +74,31 @@
 			path = 10ASAP;
 			sourceTree = "<group>";
 		};
+		205DB3DB1FCE84EF00F9264C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				205DB3DC1FCE850100F9264C /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AB6822D6B666573FFCF907CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC2354DBC1B28BE8796E0B00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE80568DB629AF471B25A16A /* Pods-10ASAP.debug.xcconfig */,
+				C994A194176EFE4D04614D84 /* Pods-10ASAP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 205DB3D81FCE84BA00F9264C /* Build configuration list for PBXNativeTarget "10ASAP" */;
 			buildPhases = (
+				849A343149C1C879443E217A /* [CP] Check Pods Manifest.lock */,
 				205DB3C21FCE84BA00F9264C /* Sources */,
 				205DB3C31FCE84BA00F9264C /* Frameworks */,
 				205DB3C41FCE84BA00F9264C /* Resources */,
+				47DD03AA95701B7DA0DF8FD6 /* [CP] Embed Pods Frameworks */,
+				D7CA7CAEA9AAC8AD05520D1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +169,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47DD03AA95701B7DA0DF8FD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BBBadgeBarButtonItem/BBBadgeBarButtonItem.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/LatoFont/LatoFont.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BBBadgeBarButtonItem.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LatoFont.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		849A343149C1C879443E217A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-10ASAP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7CA7CAEA9AAC8AD05520D1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		205DB3C21FCE84BA00F9264C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205DB3DD1FCE850100F9264C /* RegisterViewController.swift in Sources */,
 				205DB3CC1FCE84BA00F9264C /* ViewController.swift in Sources */,
 				205DB3CA1FCE84BA00F9264C /* AppDelegate.swift in Sources */,
 			);
@@ -272,6 +373,7 @@
 		};
 		205DB3D91FCE84BA00F9264C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE80568DB629AF471B25A16A /* Pods-10ASAP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +389,7 @@
 		};
 		205DB3DA1FCE84BA00F9264C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C994A194176EFE4D04614D84 /* Pods-10ASAP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
