@@ -13,6 +13,7 @@
 		205DB3D11FCE84BA00F9264C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3D01FCE84BA00F9264C /* Assets.xcassets */; };
 		205DB3D41FCE84BA00F9264C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3D21FCE84BA00F9264C /* LaunchScreen.storyboard */; };
 		205DB3DD1FCE850100F9264C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3DC1FCE850100F9264C /* RegisterViewController.swift */; };
+		205DB3DF1FCE8CCC00F9264C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3DE1FCE8CCC00F9264C /* Register.storyboard */; };
 		6AE29ED5EDCC7E379F151815 /* Pods_10ASAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		205DB3D31FCE84BA00F9264C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		205DB3D51FCE84BA00F9264C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		205DB3DC1FCE850100F9264C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		205DB3DE1FCE8CCC00F9264C /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		A1EB252D6E4A205985B6AECE /* Pods_10ASAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_10ASAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C994A194176EFE4D04614D84 /* Pods-10ASAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-10ASAP.release.xcconfig"; path = "Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP.release.xcconfig"; sourceTree = "<group>"; };
 		DE80568DB629AF471B25A16A /* Pods-10ASAP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-10ASAP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-10ASAP/Pods-10ASAP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				205DB3DC1FCE850100F9264C /* RegisterViewController.swift */,
+				205DB3DE1FCE8CCC00F9264C /* Register.storyboard */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				205DB3D41FCE84BA00F9264C /* LaunchScreen.storyboard in Resources */,
 				205DB3D11FCE84BA00F9264C /* Assets.xcassets in Resources */,
 				205DB3CF1FCE84BA00F9264C /* Main.storyboard in Resources */,
+				205DB3DF1FCE8CCC00F9264C /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
