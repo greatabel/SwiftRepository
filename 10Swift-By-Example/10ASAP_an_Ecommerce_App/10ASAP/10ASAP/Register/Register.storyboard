@@ -17,9 +17,54 @@
                     <view key="view" contentMode="scaleToFill" id="YF1-W7-WMS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="87k-ZB-afw">
+                                <rect key="frame" x="68" y="91" width="234" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEo-iF-L7i">
+                                        <rect key="frame" x="50" y="0.0" width="134" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Tg5-5f-kCg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-hO-LeT">
+                                        <rect key="frame" x="51" y="60" width="132" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zws-HF-s3g">
+                                        <rect key="frame" x="17" y="120" width="200" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Fx6-Ls-DPN"/>
+                                            <constraint firstAttribute="height" constant="50" id="f1a-JL-8l5"/>
+                                        </constraints>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SLk-hO-LeT" firstAttribute="leading" secondItem="87k-ZB-afw" secondAttribute="leading" constant="51" id="8c4-Cv-Vyy"/>
+                                    <constraint firstAttribute="trailing" secondItem="zws-HF-s3g" secondAttribute="trailing" constant="17" id="DWI-6B-oOm"/>
+                                    <constraint firstItem="hEo-iF-L7i" firstAttribute="leading" secondItem="87k-ZB-afw" secondAttribute="leading" constant="50" id="KRR-yH-wdk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="87k-ZB-afw" firstAttribute="top" secondItem="ad3-tP-Uh8" secondAttribute="top" constant="71" id="BLL-5s-yGu"/>
+                            <constraint firstItem="87k-ZB-afw" firstAttribute="leading" secondItem="ad3-tP-Uh8" secondAttribute="leading" constant="68" id="Tvh-th-dwd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ad3-tP-Uh8"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="SLk-hO-LeT" id="5eN-Sv-rIE"/>
+                        <outlet property="okButton" destination="zws-HF-s3g" id="34j-5w-RNT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUz-Kb-kuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
