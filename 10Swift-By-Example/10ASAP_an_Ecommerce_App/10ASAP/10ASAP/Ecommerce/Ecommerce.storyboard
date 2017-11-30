@@ -84,6 +84,12 @@
                                     <constraint firstItem="AgK-ih-793" firstAttribute="top" secondItem="ytm-vJ-xdz" secondAttribute="top" constant="5" id="ISc-Xh-43y"/>
                                     <constraint firstAttribute="bottom" secondItem="AgK-ih-793" secondAttribute="bottom" constant="2" id="YEf-BP-XEh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Z7E-hE-jPb" id="D43-qB-LwE"/>
+                                    <outlet property="imageView" destination="hbK-pe-9OI" id="08e-Uq-UtG"/>
+                                    <outlet property="modelLabel" destination="9MV-bW-3tw" id="L5n-qe-o3f"/>
+                                    <outlet property="priceLabel" destination="eF7-kS-T7t" id="s06-7p-8vR"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
