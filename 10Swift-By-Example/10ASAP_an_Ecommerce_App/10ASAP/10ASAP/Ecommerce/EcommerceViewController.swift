@@ -5,7 +5,8 @@ class EcommerceViewController: UICollectionViewController {
 
     let productStore = ProductStore(gateway: LocalProductGateway())
     private var products: [Product] = []
-    
+    let cartStore = CartStore(gateway: LocalCartGateway())
+
     static func instantiate() -> UIViewController {
         return UIStoryboard(name: "Ecommerce", bundle: nil).instantiateInitialViewController()!
     }
@@ -24,6 +25,17 @@ extension EcommerceViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)
         -> Int {
         return products.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = products[indexPath.row]
+        if cartStore.containsProductID(productID: product.id) {
+            cartStore.removeProduct(product: product)
+        } else {
+            cartStore.addProduct(product: product)
+        }
+        collectionView.reloadData()
+
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,8 +65,12 @@ extension EcommerceViewController {
 //        cell.descriptionLabel.text = "Ex Description"
 //        cell.imageView.sd_setImage(with: URL(string: "https://img1.doubanio.com/view/commodity_story/mlarge/public/p13136219.jpg")!)
 //        cell.priceLabel.text = "$123"
+        if cartStore.containsProductID(productID: product.id){
+            cell.backgroundColor = UIColor.lightGray
+        } else {
+            cell.backgroundColor = UIColor.clear
+        }
 
-        cell.backgroundColor = UIColor.clear
 
         return cell
     }
