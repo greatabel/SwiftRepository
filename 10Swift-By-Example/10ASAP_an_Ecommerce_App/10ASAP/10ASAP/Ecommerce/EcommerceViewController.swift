@@ -25,6 +25,7 @@ extension EcommerceViewController {
         -> Int {
         return products.count
     }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProductCollectionViewCell
 //        switch arc4random_uniform(4) {
