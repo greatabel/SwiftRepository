@@ -1,5 +1,8 @@
 import UIKit
 import SDWebImage
+import BBBadgeBarButtonItem
+import FontAwesomeKit
+
 
 class EcommerceViewController: UICollectionViewController {
 
@@ -14,6 +17,7 @@ class EcommerceViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ASAP"
+        setupCart()
         productStore.retrieve { [weak self] products in
             self?.products = products
             self?.collectionView?.reloadData()
@@ -34,6 +38,7 @@ extension EcommerceViewController {
         } else {
             cartStore.addProduct(product: product)
         }
+        refreshCartCount()
         collectionView.reloadData()
 
     }
@@ -74,7 +79,31 @@ extension EcommerceViewController {
 
         return cell
     }
+}
 
+extension EcommerceViewController {
+    func setupCart() {
+        let button = UIButton(type: .custom)
+        let icon = FAKFontAwesome.shoppingCartIcon(withSize: 20)
+        button.setAttributedTitle(icon?.attributedString(), for: .normal)
+        button.addTarget(self, action: #selector(cartButtonTapped), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
 
+        let cartBarButton = BBBadgeBarButtonItem(customUIButton: button)
+        cartBarButton?.badgeOriginX = 0
+        cartBarButton?.badgeOriginY = 0
+        navigationItem.rightBarButtonItem = cartBarButton
+    }
 
+    @objc func cartButtonTapped(sender: UIButton) {
+        print("showCheckoutScene()")
+    }
+
+    func refreshCartCount() {
+        guard let cartBarButton = navigationItem.rightBarButtonItem as? BBBadgeBarButtonItem else {
+            return
+        }
+
+        cartBarButton.badgeValue = "\(cartStore.count())"
+    }
 }
