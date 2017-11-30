@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		20274F5C1FD04226009E6D20 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 20274F5B1FD04225009E6D20 /* products.json */; };
 		20274F5E1FD0432A009E6D20 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20274F5D1FD0432A009E6D20 /* Product.swift */; };
+		20274F601FD04362009E6D20 /* ProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20274F5F1FD04362009E6D20 /* ProductGateway.swift */; };
+		20274F621FD0438C009E6D20 /* ProductStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20274F611FD0438C009E6D20 /* ProductStore.swift */; };
+		20274F641FD0452B009E6D20 /* LocalProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20274F631FD0452B009E6D20 /* LocalProductGateway.swift */; };
 		205DB3CA1FCE84BA00F9264C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3C91FCE84BA00F9264C /* AppDelegate.swift */; };
 		205DB3CC1FCE84BA00F9264C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3CB1FCE84BA00F9264C /* ViewController.swift */; };
 		205DB3CF1FCE84BA00F9264C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3CD1FCE84BA00F9264C /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* Begin PBXFileReference section */
 		20274F5B1FD04225009E6D20 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		20274F5D1FD0432A009E6D20 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		20274F5F1FD04362009E6D20 /* ProductGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGateway.swift; sourceTree = "<group>"; };
+		20274F611FD0438C009E6D20 /* ProductStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStore.swift; sourceTree = "<group>"; };
+		20274F631FD0452B009E6D20 /* LocalProductGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProductGateway.swift; sourceTree = "<group>"; };
 		205DB3C61FCE84BA00F9264C /* 10ASAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 10ASAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205DB3C91FCE84BA00F9264C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		205DB3CB1FCE84BA00F9264C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 			children = (
 				205DB3E31FCE9F9B00F9264C /* UserStore.swift */,
 				20274F5D1FD0432A009E6D20 /* Product.swift */,
+				20274F5F1FD04362009E6D20 /* ProductGateway.swift */,
+				20274F611FD0438C009E6D20 /* ProductStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 				205DB3E81FCEA0CF00F9264C /* Ecommerce.storyboard */,
 				2081A5251FD001DF004F4CD6 /* ProductCollectionViewCell.swift */,
 				2081A5271FD0071D004F4CD6 /* TwoColumnFlowLayout.swift */,
+				20274F631FD0452B009E6D20 /* LocalProductGateway.swift */,
 			);
 			path = Ecommerce;
 			sourceTree = "<group>";
@@ -284,12 +293,15 @@
 			files = (
 				205DB3DD1FCE850100F9264C /* RegisterViewController.swift in Sources */,
 				205DB3E41FCE9F9B00F9264C /* UserStore.swift in Sources */,
+				20274F641FD0452B009E6D20 /* LocalProductGateway.swift in Sources */,
 				20274F5E1FD0432A009E6D20 /* Product.swift in Sources */,
 				2081A5281FD0071D004F4CD6 /* TwoColumnFlowLayout.swift in Sources */,
 				2081A5261FD001DF004F4CD6 /* ProductCollectionViewCell.swift in Sources */,
+				20274F621FD0438C009E6D20 /* ProductStore.swift in Sources */,
 				205DB3CC1FCE84BA00F9264C /* ViewController.swift in Sources */,
 				205DB3E71FCEA0AE00F9264C /* EcommerceViewController.swift in Sources */,
 				205DB3CA1FCE84BA00F9264C /* AppDelegate.swift in Sources */,
+				20274F601FD04362009E6D20 /* ProductGateway.swift in Sources */,
 				205DB3E11FCE9F5E00F9264C /* String+Email.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

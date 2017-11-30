@@ -3,6 +3,9 @@ import SDWebImage
 
 class EcommerceViewController: UICollectionViewController {
 
+    let productStore = ProductStore(gateway: LocalProductGateway())
+    private var products: [Product] = []
+    
     static func instantiate() -> UIViewController {
         return UIStoryboard(name: "Ecommerce", bundle: nil).instantiateInitialViewController()!
     }
@@ -10,13 +13,17 @@ class EcommerceViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ASAP"
+        productStore.retrieve { [weak self] products in
+            self?.products = products
+            self?.collectionView?.reloadData()
+        }
     }
 }
 
 extension EcommerceViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)
         -> Int {
-        return 40
+        return products.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProductCollectionViewCell
@@ -35,10 +42,16 @@ extension EcommerceViewController {
             .dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
             as! ProductCollectionViewCell
 
-        cell.modelLabel.text = "Ex Model"
-        cell.descriptionLabel.text = "Ex Description"
-        cell.imageView.sd_setImage(with: URL(string: "https://img1.doubanio.com/view/commodity_story/mlarge/public/p13136219.jpg")!)
-        cell.priceLabel.text = "$123"
+        let product = products[indexPath.row]
+
+        cell.modelLabel.text = product.name
+        cell.descriptionLabel.text = product.description
+        cell.imageView.sd_setImage(with: product.imageURL)
+        cell.priceLabel.text = "$\(product.price)"
+//        cell.modelLabel.text = "Ex Model"
+//        cell.descriptionLabel.text = "Ex Description"
+//        cell.imageView.sd_setImage(with: URL(string: "https://img1.doubanio.com/view/commodity_story/mlarge/public/p13136219.jpg")!)
+//        cell.priceLabel.text = "$123"
 
         cell.backgroundColor = UIColor.clear
 

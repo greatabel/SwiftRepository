@@ -5,6 +5,6 @@ struct Product {
     let name: String
     let price: Double
     let description: String
-    let imageURL: NSURL
+    let imageURL: URL
 }
 
