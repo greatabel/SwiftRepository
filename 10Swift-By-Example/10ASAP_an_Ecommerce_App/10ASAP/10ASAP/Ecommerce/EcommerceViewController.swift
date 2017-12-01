@@ -97,6 +97,7 @@ extension EcommerceViewController {
 
     @objc func cartButtonTapped(sender: UIButton) {
         print("showCheckoutScene()")
+        showCheckoutScene()
     }
 
     func refreshCartCount() {

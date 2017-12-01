@@ -18,6 +18,7 @@
 		204B23DA1FD0FAB00049B5B6 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B23D91FD0FAB00049B5B6 /* CheckoutViewController.swift */; };
 		204B23DC1FD10DD40049B5B6 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204B23DB1FD10DD40049B5B6 /* Checkout.storyboard */; };
 		204B23DE1FD10F1A0049B5B6 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B23DD1FD10F1A0049B5B6 /* SegueHandlerType.swift */; };
+		204B23E01FD121930049B5B6 /* EcommerceViewController+Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B23DF1FD121930049B5B6 /* EcommerceViewController+Segue.swift */; };
 		205DB3CA1FCE84BA00F9264C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3C91FCE84BA00F9264C /* AppDelegate.swift */; };
 		205DB3CC1FCE84BA00F9264C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205DB3CB1FCE84BA00F9264C /* ViewController.swift */; };
 		205DB3CF1FCE84BA00F9264C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205DB3CD1FCE84BA00F9264C /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		204B23D91FD0FAB00049B5B6 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		204B23DB1FD10DD40049B5B6 /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		204B23DD1FD10F1A0049B5B6 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		204B23DF1FD121930049B5B6 /* EcommerceViewController+Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EcommerceViewController+Segue.swift"; sourceTree = "<group>"; };
 		205DB3C61FCE84BA00F9264C /* 10ASAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 10ASAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205DB3C91FCE84BA00F9264C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		205DB3CB1FCE84BA00F9264C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,11 +118,11 @@
 				205DB3C91FCE84BA00F9264C /* AppDelegate.swift */,
 				205DB3CB1FCE84BA00F9264C /* ViewController.swift */,
 				205DB3CD1FCE84BA00F9264C /* Main.storyboard */,
+				204B23DD1FD10F1A0049B5B6 /* SegueHandlerType.swift */,
+				205DB3E01FCE9F5E00F9264C /* String+Email.swift */,
 				205DB3D01FCE84BA00F9264C /* Assets.xcassets */,
 				205DB3D21FCE84BA00F9264C /* LaunchScreen.storyboard */,
 				205DB3D51FCE84BA00F9264C /* Info.plist */,
-				205DB3E01FCE9F5E00F9264C /* String+Email.swift */,
-				204B23DD1FD10F1A0049B5B6 /* SegueHandlerType.swift */,
 			);
 			path = 10ASAP;
 			sourceTree = "<group>";
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				205DB3E61FCEA0AE00F9264C /* EcommerceViewController.swift */,
+				204B23DF1FD121930049B5B6 /* EcommerceViewController+Segue.swift */,
 				205DB3E81FCEA0CF00F9264C /* Ecommerce.storyboard */,
 				2081A5251FD001DF004F4CD6 /* ProductCollectionViewCell.swift */,
 				2081A5271FD0071D004F4CD6 /* TwoColumnFlowLayout.swift */,
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20274F681FD048A8009E6D20 /* LocalCartGateway.swift in Sources */,
+				204B23E01FD121930049B5B6 /* EcommerceViewController+Segue.swift in Sources */,
 				205DB3DD1FCE850100F9264C /* RegisterViewController.swift in Sources */,
 				20274F661FD04877009E6D20 /* CartGateway.swift in Sources */,
 				205DB3E41FCE9F9B00F9264C /* UserStore.swift in Sources */,
