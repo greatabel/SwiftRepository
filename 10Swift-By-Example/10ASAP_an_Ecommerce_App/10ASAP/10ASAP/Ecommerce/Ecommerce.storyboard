@@ -98,10 +98,21 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Il0-ji-C9r"/>
+                    <connections>
+                        <segue destination="l65-at-RV3" kind="show" identifier="ShowCheckoutScene" id="Qo7-hK-Uqb"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RbQ-Dt-3GC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="544.79999999999995" y="262.21889055472263"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="7CB-hU-1Vb">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="Checkout" id="l65-at-RV3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PzZ-zD-XZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="253"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hHK-0B-CkZ">
