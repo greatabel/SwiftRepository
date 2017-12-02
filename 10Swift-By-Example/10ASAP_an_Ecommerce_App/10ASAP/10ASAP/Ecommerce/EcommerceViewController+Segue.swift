@@ -21,6 +21,7 @@ extension EcommerceViewController {
                 return
             }
             checkoutViewController.cartStore = cartStore
+//            print(cartStore.allProducts())
         }
     }
 }

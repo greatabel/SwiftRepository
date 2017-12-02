@@ -24,6 +24,13 @@ class CheckoutViewController: UIViewController {
     static func instantiate() -> UIViewController {
         return UIStoryboard(name: "Checkout", bundle: nil).instantiateInitialViewController()!
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        print("CheckoutViewController= \(cartStore.allProducts())")
+        refreshTotal()
+        // https://stackoverflow.com/questions/33694415/how-to-connect-datasource-and-delegate-with-code-ios-swift
+    }
 }
 
 private extension CheckoutViewController {

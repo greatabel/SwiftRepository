@@ -38,6 +38,7 @@ extension EcommerceViewController {
         } else {
             cartStore.addProduct(product: product)
         }
+//        print(cartStore.allProducts())
         refreshCartCount()
         collectionView.reloadData()
 
@@ -96,7 +97,7 @@ extension EcommerceViewController {
     }
 
     @objc func cartButtonTapped(sender: UIButton) {
-        print("showCheckoutScene()")
+
         showCheckoutScene()
     }
 

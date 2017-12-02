@@ -43,6 +43,10 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="bjc-qX-PdS" id="noI-60-eCn"/>
+                                            <outlet property="delegate" destination="bjc-qX-PdS" id="Gfd-U6-FzR"/>
+                                        </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-XC-rbk">
                                         <rect key="frame" x="0.0" y="593" width="375" height="60"/>
