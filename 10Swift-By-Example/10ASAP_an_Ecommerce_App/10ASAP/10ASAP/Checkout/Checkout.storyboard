@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pun-3V-A76">
-                                <rect key="frame" x="0.0" y="33" width="375" height="653"/>
+                                <rect key="frame" x="0.0" y="33" width="375" height="635"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="diV-Tt-gMm">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="mmA-yA-EHu" style="IBUITableViewCellStyleDefault" id="oNL-EA-YmJ">
@@ -49,7 +49,7 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-XC-rbk">
-                                        <rect key="frame" x="0.0" y="593" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="575" width="375" height="60"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="P7u-L0-Ygi"/>
@@ -72,7 +72,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bXZ-GS-Mkd" firstAttribute="trailing" secondItem="pun-3V-A76" secondAttribute="trailing" id="1i9-JF-8jD"/>
-                            <constraint firstItem="pun-3V-A76" firstAttribute="bottom" secondItem="bXZ-GS-Mkd" secondAttribute="bottom" constant="19" id="P8V-9b-JlJ"/>
+                            <constraint firstItem="pun-3V-A76" firstAttribute="bottom" secondItem="bXZ-GS-Mkd" secondAttribute="bottom" constant="1" id="P8V-9b-JlJ"/>
                             <constraint firstItem="pun-3V-A76" firstAttribute="top" secondItem="bXZ-GS-Mkd" secondAttribute="top" constant="13" id="Plc-24-Gll"/>
                             <constraint firstItem="pun-3V-A76" firstAttribute="leading" secondItem="bXZ-GS-Mkd" secondAttribute="leading" id="txw-1d-Owy"/>
                         </constraints>

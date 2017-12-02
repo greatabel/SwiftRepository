@@ -18,7 +18,17 @@ class CheckoutViewController: UIViewController {
     }
 
     @IBAction func buyTapped() {
+        print(#function)
+        cartStore.buy()
 
+        let alert = UIAlertController(title: "Done", message: "感谢购物!",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,
+                                      handler: { _ in
+            self.navigationController?.popToRootViewController(animated: false)
+        }))
+
+        present(alert, animated: true, completion: nil)
     }
 
     static func instantiate() -> UIViewController {
