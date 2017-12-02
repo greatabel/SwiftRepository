@@ -78,6 +78,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bXZ-GS-Mkd"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="buyButton" destination="QZ8-XC-rbk" id="m51-en-e6Y"/>
                         <outlet property="tableView" destination="diV-Tt-gMm" id="4Gk-nz-4PT"/>
