@@ -8,3 +8,26 @@ let clos1 = {
 }
 
 clos1()
+
+
+
+let clos2 = {
+    (name: String) -> Void in
+    print("Hello \(name)")
+}
+
+clos2("Abel")
+
+
+func testClosure(handler: (String) ->Void) {
+    handler("Dasher")
+}
+testClosure(handler: clos2)
+
+
+let clos3 = {
+    (name: String) -> String in
+    return "Hello \(name)"
+}
+print(clos3("Buddy"))
+
