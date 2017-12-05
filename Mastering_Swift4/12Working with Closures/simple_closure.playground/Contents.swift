@@ -31,3 +31,28 @@ let clos3 = {
 }
 print(clos3("Buddy"))
 
+
+let clos4 = {
+    print("Hello from Shorthand version")
+}
+clos4()
+
+func testFunction(num: Int, handler:()->Void) {
+    for _ in 0..<num {
+        handler()
+    }
+}
+testFunction(num: 5,handler: clos4)
+testFunction(num: 3) {
+    print("@-@ Hello from Shorthand version")
+}
+
+func testFunction2(num: Int, handler:(_ : String)->Void) {
+    for _ in 0..<num {
+        handler("Me")
+    }
+}
+testFunction(num: 3) {
+    print("#^# Hello from Shorthand version")
+}
+
