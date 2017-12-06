@@ -14,6 +14,7 @@
 		20FEC2F31FD7D5BD00C29DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FEC2F11FD7D5BD00C29DEA /* LaunchScreen.storyboard */; };
 		20FEC2F61FD7D5BD00C29DEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FEC2F51FD7D5BD00C29DEA /* main.m */; };
 		20FEC2FF1FD7D64600C29DEA /* MessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FEC2FE1FD7D64600C29DEA /* MessageBuilder.swift */; };
+		20FEC3021FD7D6B000C29DEA /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FEC3011FD7D6B000C29DEA /* Messages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		20FEC2F51FD7D5BD00C29DEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20FEC2FD1FD7D64500C29DEA /* ObjectiveCExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		20FEC2FE1FD7D64600C29DEA /* MessageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBuilder.swift; sourceTree = "<group>"; };
+		20FEC3001FD7D6B000C29DEA /* Messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
+		20FEC3011FD7D6B000C29DEA /* Messages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Messages.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				20FEC2F11FD7D5BD00C29DEA /* LaunchScreen.storyboard */,
 				20FEC2F41FD7D5BD00C29DEA /* Info.plist */,
 				20FEC2F51FD7D5BD00C29DEA /* main.m */,
+				20FEC3001FD7D6B000C29DEA /* Messages.h */,
+				20FEC3011FD7D6B000C29DEA /* Messages.m */,
 			);
 			path = ObjectiveCExample;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				20FEC2F61FD7D5BD00C29DEA /* main.m in Sources */,
 				20FEC2E81FD7D5BD00C29DEA /* AppDelegate.m in Sources */,
 				20FEC2FF1FD7D64600C29DEA /* MessageBuilder.swift in Sources */,
+				20FEC3021FD7D6B000C29DEA /* Messages.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
