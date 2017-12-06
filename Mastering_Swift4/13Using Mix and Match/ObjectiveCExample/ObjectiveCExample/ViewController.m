@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#import "ObjectiveCExample-Swift.h"
 
 @interface ViewController ()
 
@@ -15,6 +16,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)messagePressed:(id)sender {
+    MessageBuilder *mb = [[MessageBuilder alloc] init];
+
+    self.messageView.text = [mb getPersonalizedMessageWithName:self.nameField.text];
 }
 
 
