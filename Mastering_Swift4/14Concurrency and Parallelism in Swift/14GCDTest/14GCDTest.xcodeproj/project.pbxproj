@@ -14,6 +14,8 @@
 		2099627B1FD8F9FF0054DED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209962791FD8F9FF0054DED6 /* LaunchScreen.storyboard */; };
 		209962831FD8FA400054DED6 /* DoCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209962821FD8FA400054DED6 /* DoCalculations.swift */; };
 		209962851FD8FDD40054DED6 /* SerialQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209962841FD8FDD40054DED6 /* SerialQueues.swift */; };
+		209962871FD8FEA20054DED6 /* ConcurrentQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209962861FD8FEA20054DED6 /* ConcurrentQueues.swift */; };
+		209962891FD8FEE70054DED6 /* DispatchOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209962881FD8FEE70054DED6 /* DispatchOnce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2099627C1FD8F9FF0054DED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209962821FD8FA400054DED6 /* DoCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCalculations.swift; sourceTree = "<group>"; };
 		209962841FD8FDD40054DED6 /* SerialQueues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialQueues.swift; sourceTree = "<group>"; };
+		209962861FD8FEA20054DED6 /* ConcurrentQueues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentQueues.swift; sourceTree = "<group>"; };
+		209962881FD8FEE70054DED6 /* DispatchOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchOnce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				209962791FD8F9FF0054DED6 /* LaunchScreen.storyboard */,
 				2099627C1FD8F9FF0054DED6 /* Info.plist */,
 				209962841FD8FDD40054DED6 /* SerialQueues.swift */,
+				209962861FD8FEA20054DED6 /* ConcurrentQueues.swift */,
+				209962881FD8FEE70054DED6 /* DispatchOnce.swift */,
 			);
 			path = 14GCDTest;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			files = (
 				209962831FD8FA400054DED6 /* DoCalculations.swift in Sources */,
 				209962851FD8FDD40054DED6 /* SerialQueues.swift in Sources */,
+				209962891FD8FEE70054DED6 /* DispatchOnce.swift in Sources */,
+				209962871FD8FEA20054DED6 /* ConcurrentQueues.swift in Sources */,
 				209962731FD8F9FF0054DED6 /* ViewController.swift in Sources */,
 				209962711FD8F9FF0054DED6 /* AppDelegate.swift in Sources */,
 			);

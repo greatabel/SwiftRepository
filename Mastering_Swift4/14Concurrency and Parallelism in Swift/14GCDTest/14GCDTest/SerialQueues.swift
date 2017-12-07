@@ -6,13 +6,13 @@ class SerialQueues: NSObject {
         let calculation = DoCalculations()
 
         let squeue = DispatchQueue(label: "test")
-        let s = {calculation.performCalculation(100000, tag: "sync1")}
+        let s = {calculation.performCalculation(10000, tag: "sync1")}
         squeue.async (execute: s)
         squeue.async {
             calculation.performCalculation(1000, tag: "sync2")
         }
         squeue.async {
-            calculation.performCalculation(100000, tag: "sync3")
+            calculation.performCalculation(10000, tag: "sync3")
         }
 
     }
