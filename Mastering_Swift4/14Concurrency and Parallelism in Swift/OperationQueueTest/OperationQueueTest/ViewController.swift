@@ -5,12 +5,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let dPatchOnce = DispatchOnce()
-//        for _ in 0..<4 {
-//            dPatchOnce.example()
-//        }
-        let dPatchAfter = DispatchAfter()
-        dPatchAfter.example()
+        
+        let blockOperation = BlockOperationTest()
+        blockOperation.example()
+        
+     //   let operationWithBlock = OperationWithBlockTest()
+     //   operationWithBlock.example()
+        
+     //   let myOperationTest = MyOperationTest()
+     //   myOperationTest.example()
     }
 
     override func didReceiveMemoryWarning() {
