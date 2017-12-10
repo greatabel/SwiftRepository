@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Provides a live camera view on the login page</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Provides information about nearby artwork</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Provides an AR experience on the login page</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

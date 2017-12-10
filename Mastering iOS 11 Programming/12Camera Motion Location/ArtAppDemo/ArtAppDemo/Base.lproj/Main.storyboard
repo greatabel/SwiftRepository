@@ -66,6 +66,7 @@
                     </view>
                     <connections>
                         <outlet property="hConstraint" destination="Zl5-s1-fD9" id="gvI-Xj-l22"/>
+                        <outlet property="nearbyArtLabel" destination="fW0-YF-JSM" id="cxI-xh-MfK"/>
                         <outlet property="vConstraint" destination="bCR-MW-m54" id="AEq-IF-4bM"/>
                         <outlet property="videoView" destination="9GL-1m-J1f" id="w34-ic-x84"/>
                     </connections>
