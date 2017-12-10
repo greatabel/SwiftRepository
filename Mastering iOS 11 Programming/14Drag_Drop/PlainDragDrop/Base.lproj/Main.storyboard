@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlainDragDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-bV-4zR">
+                                <rect key="frame" x="16" y="337" width="343" height="293"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvl-Zl-kd8">
+                                <rect key="frame" x="149.5" y="308" width="76.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag from here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-xA-TdZ">
+                                <rect key="frame" x="129" y="638" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KvL-Os-RpI">
+                                <rect key="frame" x="16" y="20" width="343" height="280"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Xvk-0e-WcL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KvL-Os-RpI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5de-5z-cwI"/>
+                            <constraint firstItem="lvl-Zl-kd8" firstAttribute="top" secondItem="KvL-Os-RpI" secondAttribute="bottom" constant="8" id="8CC-qg-XTQ"/>
+                            <constraint firstItem="ukZ-bV-4zR" firstAttribute="top" secondItem="lvl-Zl-kd8" secondAttribute="bottom" constant="8" id="9a7-JR-Hsi"/>
+                            <constraint firstItem="lvl-Zl-kd8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JEs-Jq-Ouy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KvL-Os-RpI" secondAttribute="trailing" constant="16" id="KTw-ua-mkp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d0o-xA-TdZ" secondAttribute="bottom" constant="8" id="Rd1-uL-OVs"/>
+                            <constraint firstItem="d0o-xA-TdZ" firstAttribute="top" secondItem="ukZ-bV-4zR" secondAttribute="bottom" constant="8" id="TxZ-A9-r5G"/>
+                            <constraint firstItem="ukZ-bV-4zR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="arx-Nk-lGb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ukZ-bV-4zR" secondAttribute="trailing" constant="16" id="me1-NB-2UV"/>
+                            <constraint firstItem="d0o-xA-TdZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qId-VC-gUx"/>
+                            <constraint firstItem="KvL-Os-RpI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z4l-mL-bLE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dropArea" destination="KvL-Os-RpI" id="GEw-5w-eVE"/>
+                        <outlet property="imageView" destination="ukZ-bV-4zR" id="33Y-YU-uav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="169.56521739130437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="200" height="201"/>
+    </resources>
+</document>
