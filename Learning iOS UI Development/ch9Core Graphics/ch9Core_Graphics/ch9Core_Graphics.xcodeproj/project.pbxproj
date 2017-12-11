@@ -12,6 +12,8 @@
 		2034EA5C1FDE76A700C64EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2034EA5A1FDE76A700C64EB4 /* Main.storyboard */; };
 		2034EA5E1FDE76A700C64EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2034EA5D1FDE76A700C64EB4 /* Assets.xcassets */; };
 		2034EA611FDE76A700C64EB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2034EA5F1FDE76A700C64EB4 /* LaunchScreen.storyboard */; };
+		2034EA691FDE773700C64EB4 /* PathDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2034EA681FDE773700C64EB4 /* PathDrawing.swift */; };
+		2034EA6B1FDE774E00C64EB4 /* UIHelpersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2034EA6A1FDE774E00C64EB4 /* UIHelpersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2034EA5D1FDE76A700C64EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2034EA601FDE76A700C64EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2034EA621FDE76A700C64EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2034EA681FDE773700C64EB4 /* PathDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawing.swift; sourceTree = "<group>"; };
+		2034EA6A1FDE774E00C64EB4 /* UIHelpersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				2034EA5D1FDE76A700C64EB4 /* Assets.xcassets */,
 				2034EA5F1FDE76A700C64EB4 /* LaunchScreen.storyboard */,
 				2034EA621FDE76A700C64EB4 /* Info.plist */,
+				2034EA681FDE773700C64EB4 /* PathDrawing.swift */,
+				2034EA6A1FDE774E00C64EB4 /* UIHelpersView.swift */,
 			);
 			path = ch9Core_Graphics;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2034EA591FDE76A700C64EB4 /* ViewController.swift in Sources */,
+				2034EA691FDE773700C64EB4 /* PathDrawing.swift in Sources */,
+				2034EA6B1FDE774E00C64EB4 /* UIHelpersView.swift in Sources */,
 				2034EA571FDE76A700C64EB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
