@@ -12,6 +12,7 @@
 		2034EA3C1FDE66B000C64EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2034EA3A1FDE66B000C64EB4 /* Main.storyboard */; };
 		2034EA3E1FDE66B000C64EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2034EA3D1FDE66B000C64EB4 /* Assets.xcassets */; };
 		2034EA411FDE66B000C64EB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2034EA3F1FDE66B000C64EB4 /* LaunchScreen.storyboard */; };
+		2034EA491FDE6FDD00C64EB4 /* ThermostatSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2034EA481FDE6FDD00C64EB4 /* ThermostatSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2034EA3D1FDE66B000C64EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2034EA401FDE66B000C64EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2034EA421FDE66B000C64EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2034EA481FDE6FDD00C64EB4 /* ThermostatSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		2034EA351FDE66B000C64EB4 /* ch8Custom_Control */ = {
 			isa = PBXGroup;
 			children = (
+				2034EA481FDE6FDD00C64EB4 /* ThermostatSlider.swift */,
 				2034EA361FDE66B000C64EB4 /* AppDelegate.swift */,
 				2034EA381FDE66B000C64EB4 /* ViewController.swift */,
 				2034EA3A1FDE66B000C64EB4 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2034EA491FDE6FDD00C64EB4 /* ThermostatSlider.swift in Sources */,
 				2034EA391FDE66B000C64EB4 /* ViewController.swift in Sources */,
 				2034EA371FDE66B000C64EB4 /* AppDelegate.swift in Sources */,
 			);
