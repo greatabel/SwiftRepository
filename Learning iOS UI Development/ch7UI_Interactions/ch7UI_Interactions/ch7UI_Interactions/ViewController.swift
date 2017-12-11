@@ -11,6 +11,10 @@ class ViewController: UIViewController {
         redView?.backgroundColor = UIColor.red
         redView?.center = view.center
         view.addSubview(redView!)
+
+        // Initialize and attach the gesture
+        let pinchGR = UIPinchGestureRecognizer(target: self, action: #selector(pinch))
+        view.addGestureRecognizer(pinchGR)
     }
 
     override func didReceiveMemoryWarning() {
@@ -18,6 +22,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @objc func pinch(gesture:UIPinchGestureRecognizer){
+        print(#function)
+        // Handle different gesture states
+        switch gesture.state {
+
+        case .began:
+            redView?.layer.transform = CATransform3DIdentity
+
+        case .changed:
+            //Apply transform
+            let transform = CATransform3DMakeScale(gesture.scale, gesture.scale, 0)
+            redView?.layer.transform = transform
+
+        default:
+            // Reset the original position
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.redView?.layer.transform = CATransform3DIdentity
+            })
+        }
+    }
 
 }
 
