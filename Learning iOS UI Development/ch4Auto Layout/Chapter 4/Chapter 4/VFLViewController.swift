@@ -12,7 +12,7 @@ class VFLViewController: UIViewController {
 
     let redView = UIView()
     let greenView = UIView()
-    var viewsDictionary: [AnyHashable: Any]{
+    var viewsDictionary: [String:AnyObject]{
         get {
             return ["redView":self.redView, "greenView":self.greenView]
         }
@@ -22,20 +22,17 @@ class VFLViewController: UIViewController {
         super.viewDidLoad()
 
         redView.translatesAutoresizingMaskIntoConstraints = false
-        redView.backgroundColor = UIColor.red
+        redView.backgroundColor = UIColor(red: 0.95, green: 0.2, blue: 0.0, alpha: 1.0)
         
         greenView.translatesAutoresizingMaskIntoConstraints = false
-        greenView.backgroundColor = UIColor.green
+        greenView.backgroundColor = UIColor(red: 0.5, green: 0.80, blue: 0.5, alpha: 1.0)
         
         view.addSubview(redView)
         view.addSubview(greenView)
         
-        setupRedView()  // This function sets the red view constraints
-        setupGreenView()// This function sets the green view constraints
-
-        // This function sets the green view usin a relation to the redView.
-        // to try it comment the setupGreenView and use setupGreenView_Relation instead.
-//        setupGreenView_Relation()
+        setupRedView()
+        setupGreenView()
+        //setupGreenView_Relation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,27 +44,27 @@ class VFLViewController: UIViewController {
         
         // Set Size
         let cst_height = NSLayoutConstraint.constraints(
-                                withVisualFormat: "V:[redView(100)]",
+            withVisualFormat: "V:[redView(100)]",
                                 options: NSLayoutFormatOptions(),
                                 metrics: nil,
-                                views: viewsDictionary as! [String : Any])
+                                views: viewsDictionary)
         let cst_width = NSLayoutConstraint.constraints(
-                                withVisualFormat: "H:[redView(100)]",
+            withVisualFormat: "H:[redView(100)]",
                                 options: NSLayoutFormatOptions(),
                                 metrics: nil,
-                                views: viewsDictionary as! [String : Any])
+                                views: viewsDictionary)
         
         // Set Position
         let cst_Y = NSLayoutConstraint.constraints(
-                                withVisualFormat: "V:|-30-[redView]",
+            withVisualFormat: "V:|-30-[redView]",
                                 options: NSLayoutFormatOptions(),
                                 metrics: nil,
-                                views: viewsDictionary as! [String : Any])
+                                views: viewsDictionary)
         let cst_X = NSLayoutConstraint.constraints(
-                                withVisualFormat: "H:|-30-[redView]",
+            withVisualFormat: "H:|-30-[redView]",
                                 options: NSLayoutFormatOptions(),
                                 metrics: nil,
-                                views: viewsDictionary as! [String : Any])
+                                views: viewsDictionary)
         
         // Attach Constraints
         self.redView.addConstraints(cst_height)
@@ -85,24 +82,24 @@ class VFLViewController: UIViewController {
             withVisualFormat: "V:[greenView(100)]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         let cst_width = NSLayoutConstraint.constraints(
             withVisualFormat: "H:[greenView(100)]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         
         // Set Position
         let cst_Y = NSLayoutConstraint.constraints(
             withVisualFormat: "V:[redView]-10-[greenView]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         let cst_X = NSLayoutConstraint.constraints(
             withVisualFormat: "H:[redView]-10-[greenView]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         
         // Attach Constraints
         self.greenView.addConstraints(cst_height)
@@ -128,19 +125,19 @@ class VFLViewController: UIViewController {
             withVisualFormat: "H:[greenView(100)]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         
         // Set Position
         let cst_Y = NSLayoutConstraint.constraints(
             withVisualFormat: "V:[redView]-10-[greenView]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         let cst_X = NSLayoutConstraint.constraints(
             withVisualFormat: "H:[redView]-10-[greenView]",
             options: NSLayoutFormatOptions(),
             metrics: nil,
-            views: viewsDictionary as! [String : Any])
+            views: viewsDictionary)
         
         // Attach Constraints
         self.view.addConstraint(cst_height)
