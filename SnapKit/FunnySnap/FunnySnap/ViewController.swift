@@ -9,10 +9,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let superview = self.view
+
+        let navbar = UIView()
+        superview?.addSubview(navbar)
+        navbar.backgroundColor = UIColor(red:0.48, green:0.45, blue:0.78, alpha:1)
+        navbar.snp.makeConstraints{(make) -> Void in
+            make.height.equalTo(64)
+            make.width.equalTo(superview!)
+        }
+
+        let titleLabel = UILabel()
+        navbar.addSubview(titleLabel)
+        titleLabel.text = "FunnySnap"
+        titleLabel.textColor = UIColor.black
+        titleLabel.sizeToFit()
+        titleLabel.snp.makeConstraints{
+            (make) -> Void in
+            make.center.equalTo(navbar)
+        }
+
         let button = UIButton()
         button.layer.cornerRadius = 33
         button.setTitle("+", for: .normal)
-        button.backgroundColor = UIColor.red
+        button.backgroundColor = UIColor.cyan
         superview?.addSubview(button)
         button.snp.makeConstraints {(make) -> Void in
             make.width.equalTo(66)
