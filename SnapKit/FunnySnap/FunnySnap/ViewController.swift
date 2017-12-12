@@ -16,6 +16,30 @@ class ViewController: UIViewController {
         self.setupCustomNavBar()
         self.setupCustomDashboardView()
 
+        self.updateConstraints()
+    }
+
+    func updateConstraints() {
+
+        var widthConstraint: Constraint? = nil
+        var heightConstraint: Constraint? = nil
+
+        // snp_updateConstraints
+        self.button.layer.cornerRadius = 22
+        self.button.snp.updateConstraints { (make) -> Void in
+            widthConstraint = make.width.equalTo(44).constraint
+            heightConstraint = make.height.equalTo(44).constraint
+            make.bottom.equalTo(self.view.snp.bottom).offset(-20)
+            make.right.equalTo(self.view.snp.right).offset(-20)
+        }
+        tapped = true
+
+        // References
+        widthConstraint?.deactivate()
+        heightConstraint?.deactivate()
+        widthConstraint?.update(offset: 40)
+        heightConstraint?.update(offset: 40)
+
     }
 
     func setupBottomRightButton() {
