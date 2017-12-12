@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         // snp_updateConstraints
         self.button.layer.cornerRadius = 22
         self.button.snp.updateConstraints { (make) -> Void in
-            widthConstraint = make.width.equalTo(44).constraint
-            heightConstraint = make.height.equalTo(44).constraint
+            widthConstraint = make.width.equalTo(144).constraint
+            heightConstraint = make.height.equalTo(144).constraint
             make.bottom.equalTo(self.view.snp.bottom).offset(-20)
             make.right.equalTo(self.view.snp.right).offset(-20)
         }
@@ -37,8 +37,8 @@ class ViewController: UIViewController {
         // References
         widthConstraint?.deactivate()
         heightConstraint?.deactivate()
-        widthConstraint?.update(offset: 40)
-        heightConstraint?.update(offset: 40)
+        widthConstraint?.update(offset: 100)
+        heightConstraint?.update(offset: 100)
 
     }
 
