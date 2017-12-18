@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		209E15131FE7BF7200B150ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E15121FE7BF7200B150ED /* AppDelegate.swift */; };
-		209E15151FE7BF7200B150ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E15141FE7BF7200B150ED /* ViewController.swift */; };
+		209E15151FE7BF7200B150ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E15141FE7BF7200B150ED /* ProfileViewController.swift */; };
 		209E15181FE7BF7200B150ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209E15161FE7BF7200B150ED /* Main.storyboard */; };
 		209E151A1FE7BF7200B150ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209E15191FE7BF7200B150ED /* Assets.xcassets */; };
 		209E151D1FE7BF7200B150ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209E151B1FE7BF7200B150ED /* LaunchScreen.storyboard */; };
+		209E15251FE7C05F00B150ED /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E15241FE7C05F00B150ED /* FollowButton.swift */; };
 		5464D86123FB26C89FF80DBD /* Pods_FollowButtonDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BE5D43589F3777809E0A27 /* Pods_FollowButtonDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		209E150F1FE7BF7200B150ED /* FollowButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		209E15121FE7BF7200B150ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		209E15141FE7BF7200B150ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		209E15141FE7BF7200B150ED /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		209E15171FE7BF7200B150ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		209E15191FE7BF7200B150ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		209E151C1FE7BF7200B150ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		209E151E1FE7BF7200B150ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209E15241FE7C05F00B150ED /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		47BE5D43589F3777809E0A27 /* Pods_FollowButtonDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowButtonDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA3C4148597BE9729AEC5F0 /* Pods-FollowButtonDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowButtonDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowButtonDemo/Pods-FollowButtonDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CF2AB3784E8FFE1FD1DD35C7 /* Pods-FollowButtonDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowButtonDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FollowButtonDemo/Pods-FollowButtonDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				209E15121FE7BF7200B150ED /* AppDelegate.swift */,
-				209E15141FE7BF7200B150ED /* ViewController.swift */,
+				209E15241FE7C05F00B150ED /* FollowButton.swift */,
+				209E15141FE7BF7200B150ED /* ProfileViewController.swift */,
 				209E15161FE7BF7200B150ED /* Main.storyboard */,
 				209E15191FE7BF7200B150ED /* Assets.xcassets */,
 				209E151B1FE7BF7200B150ED /* LaunchScreen.storyboard */,
@@ -217,8 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				209E15151FE7BF7200B150ED /* ViewController.swift in Sources */,
+				209E15151FE7BF7200B150ED /* ProfileViewController.swift in Sources */,
 				209E15131FE7BF7200B150ED /* AppDelegate.swift in Sources */,
+				209E15251FE7C05F00B150ED /* FollowButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
