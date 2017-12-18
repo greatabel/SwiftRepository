@@ -74,7 +74,26 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             make.bottom.equalTo(imageContainer.snp.bottom)
         }
 
+        textContainer.snp.makeConstraints{
+            make in
 
+            make.top.equalTo(imageContainer.snp.bottom)
+            make.left.right.equalTo(view)
+            make.bottom.equalTo(scrollView)
+        }
+        textBacking.snp.makeConstraints {
+            make in
+
+            make.left.right.equalTo(view)
+            make.top.equalTo(textContainer)
+            make.bottom.equalTo(view)
+        }
+
+        infoText.snp.makeConstraints {
+            make in
+
+            make.edges.equalTo(textContainer).inset(14)
+        }
 
     }
 
