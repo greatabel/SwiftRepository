@@ -157,7 +157,7 @@ public class FollowButton: UIView {
         // Get the button's height once, once we can get it's size from it's constraints
 //        dispatch_once(&checkHeightOnce) { () -> Void in
         DispatchQueue.once(token: "test-token") { () -> Void in
-            print("here")
+            
             self.minButtonWidth = self.frame.size.height
             self.minButtonHeight = self.minButtonWidth
         }
@@ -253,7 +253,7 @@ public class FollowButton: UIView {
 
     // MARK: Button Shrink/Expand
     private func shrinkButton(completetion: ((_ complete: Bool)->Void)? = nil) {
-        
+
         guard self.minButtonWidth != nil && self.minButtonWidth! > 0.0 else { return }
 
         self.adjustedWidthConstraints.left?.deactivate()
