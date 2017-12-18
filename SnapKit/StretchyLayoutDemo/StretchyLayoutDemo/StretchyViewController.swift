@@ -57,6 +57,25 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             make.edges.equalTo(view)
         }
 
+        imageContainer.snp.makeConstraints {
+            make in
+
+            make.top.equalTo(scrollView)
+            make.left.right.equalTo(view)
+            make.height.equalTo(imageContainer.snp.width).multipliedBy(0.7)
+        }
+
+        imageView.snp.makeConstraints{
+            make in
+
+            make.left.right.equalTo(imageContainer)
+            make.top.equalTo(view).priority(.high)
+            make.height.greaterThanOrEqualTo(imageContainer.snp.height).priority(.required)
+            make.bottom.equalTo(imageContainer.snp.bottom)
+        }
+
+
+
     }
 
     override func viewDidLayoutSubviews() {
