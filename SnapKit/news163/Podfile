@@ -1,0 +1,14 @@
+platform :ios, '11.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'news163' do
+
+    pod 'SnapKit', '~> 4.0.0'
+    pod "Alamofire"
+    pod "AlamofireObjectMapper"
+    pod "Kingfisher"
+    pod "SwiftyJSON"
+    pod "PullToRefresher"
+
+end
