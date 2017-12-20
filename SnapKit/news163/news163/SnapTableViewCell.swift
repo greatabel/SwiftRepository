@@ -31,16 +31,17 @@ class SnapTableViewCell: UITableViewCell {
         testImageView.snp.makeConstraints{ (make) in
             make.top.bottom.left.equalTo(self.contentView)
                 .inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0))
+            make.width.equalTo(70)
         }
 
         titleLabel.snp.makeConstraints{ (make) in
-            make.left.equalTo(testImageView).offset(15)
+            make.left.equalTo(testImageView.snp.right).offset(15)
             make.top.equalTo(testImageView)
             make.right.equalTo(self.contentView).offset(-15)
         }
 
         detailLabel.snp.makeConstraints{ (make) in
-            make.left.equalTo(testImageView).offset(15)
+            make.left.equalTo(testImageView.snp.right).offset(15)
             make.top.equalTo(titleLabel.snp.bottom).offset(15)
             make.right.equalTo(self.contentView).offset(-15)
         }
