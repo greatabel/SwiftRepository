@@ -7,6 +7,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     let CellSnap  = "SnapTableViewCell"
     let CellImage = "ImageTableViewCell"
+
+    var newsArray: NSArray = []
     //    MARK: - Property
     var tableView: UITableView = UITableView()
 
@@ -15,11 +17,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        getDataFromServer()
 
         addSubView()
         setupSubview()
         setupLayout()
+        getDataFromServer()
 
     }
 
@@ -56,7 +58,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let dic: NSDictionary = response.result.value as! NSDictionary
             let tempArray = dic["T1348647853363"] as! NSArray
             let dataArray = tempArray.subarray(with: NSRange(location: 1, length: tempArray.count - 1))
-            print(dataArray)
+                as NSArray
+            self.newsArray = dataArray
+
+            self.tableView.reloadData()
         }
     }
     
@@ -65,21 +70,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     //    MARK: - Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.newsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data: NSDictionary = self.newsArray[indexPath.row] as! NSDictionary
         if indexPath.row % 2 == 0 {
             let cell: SnapTableViewCell =
                 tableView.dequeueReusableCell(withIdentifier: CellSnap) as! SnapTableViewCell
-            cell.titleLabel.text = "Hello Hello Hello Hello Hello Hello Hello "
-            cell.detailLabel.text = "World World World World" +
-                            "World World World World World World World World World World World"
+
+
+
+            cell.titleLabel.text = data["title"] as? String
+            cell.detailLabel.text = data["digest"] as? String
             return cell
         } else {
             let cell: ImageTableViewCell =
                 tableView.dequeueReusableCell(withIdentifier: CellImage) as! ImageTableViewCell
-            cell.titleLabel.text = "World World World World World World World "
+            cell.titleLabel.text = data["title"] as? String
             return cell
         }
 
