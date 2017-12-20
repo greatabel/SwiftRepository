@@ -34,7 +34,7 @@ class ImageTableViewCell: UITableViewCell {
         }
         bigImageView.snp.makeConstraints{ (make) in
             make.left.right.equalTo(self.contentView).inset(UIEdgeInsetsMake(0, 15, 0, 15))
-            make.top.equalTo(titleLabel.snp.bottom).offset(-15)
+            make.top.equalTo(titleLabel.snp.bottom).offset(15)
             make.bottom.equalTo(self.contentView).offset(-15)
         }
 

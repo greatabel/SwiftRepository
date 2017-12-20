@@ -1,5 +1,7 @@
 import UIKit
 import Alamofire
+import Kingfisher
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -9,6 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let CellImage = "ImageTableViewCell"
 
     var newsArray: NSArray = []
+
     //    MARK: - Property
     var tableView: UITableView = UITableView()
 
@@ -75,6 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data: NSDictionary = self.newsArray[indexPath.row] as! NSDictionary
+        let url: URL = URL(string: data["img"] as! String)!
         if indexPath.row % 2 == 0 {
             let cell: SnapTableViewCell =
                 tableView.dequeueReusableCell(withIdentifier: CellSnap) as! SnapTableViewCell
@@ -83,11 +87,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
             cell.titleLabel.text = data["title"] as? String
             cell.detailLabel.text = data["digest"] as? String
+            cell.testImageView.kf.setImage(with: url)
             return cell
         } else {
             let cell: ImageTableViewCell =
                 tableView.dequeueReusableCell(withIdentifier: CellImage) as! ImageTableViewCell
             cell.titleLabel.text = data["title"] as? String
+            cell.bigImageView.kf.setImage(with: url)
             return cell
         }
 
