@@ -3,7 +3,12 @@ import SnapKit
 
 class SnapTableViewCell: UITableViewCell {
 
-    var testImageView = UIImageView()
+    lazy var testImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.purple
+        return imageView
+    }()
+
     var titleLabel = UILabel()
     var detailLabel = UILabel()
     var typeLabel = UILabel()

@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 class ImageTableViewCell: UITableViewCell {
 
@@ -21,6 +22,23 @@ class ImageTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.contentView.addSubview(bigImageView)
+        self.contentView.addSubview(titleLabel)
+        setupLayout()
+    }
+
+    func setupLayout() {
+        titleLabel.snp.makeConstraints{ (make) in
+            make.left.top.right.equalTo(self.contentView).inset(UIEdgeInsetsMake(15, 15, 0, 15))
+        }
+        bigImageView.snp.makeConstraints{ (make) in
+            make.left.right.equalTo(self.contentView).inset(UIEdgeInsetsMake(0, 15, 0, 15))
+            make.top.equalTo(titleLabel.snp.bottom).offset(-15)
+            make.bottom.equalTo(self.contentView).offset(-15)
+        }
+
+
     }
 
     required init?(coder aDecoder: NSCoder) {
