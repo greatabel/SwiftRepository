@@ -71,7 +71,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let cell: SnapTableViewCell =
                 tableView.dequeueReusableCell(withIdentifier: CellSnap) as! SnapTableViewCell
             cell.titleLabel.text = "Hello Hello Hello Hello Hello Hello Hello "
-            cell.detailLabel.text = "World"
+            cell.detailLabel.text = "World World World World" +
+                            "World World World World World World World World World World World"
             return cell
         } else {
             let cell: ImageTableViewCell =

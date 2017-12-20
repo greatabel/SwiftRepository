@@ -33,6 +33,11 @@ class SnapTableViewCell: UITableViewCell {
     }
 
     func setLayout() {
+
+        detailLabel.numberOfLines = 2
+        detailLabel.font = UIFont.systemFont(ofSize: 12)
+        detailLabel.textColor = UIColor.gray
+        
         testImageView.snp.makeConstraints{ (make) in
             make.top.bottom.left.equalTo(self.contentView)
                 .inset(UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 0))
