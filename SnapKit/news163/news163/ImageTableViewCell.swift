@@ -2,8 +2,17 @@ import UIKit
 
 class ImageTableViewCell: UITableViewCell {
 
-    var titleLabel = UILabel()
-    var bigImageView = UIImageView()
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+
+    lazy var bigImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.gray
+        return imageView
+    }()
 
     override func awakeFromNib() {
         super.awakeFromNib()

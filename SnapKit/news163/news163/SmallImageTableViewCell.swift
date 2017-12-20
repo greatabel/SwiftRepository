@@ -2,10 +2,26 @@ import UIKit
 
 class SmallImageTableViewCell: UITableViewCell {
 
-    var imageViewL = UIImageView()
-    var imageViewM = UIImageView()
-    var imageViewR = UIImageView()
-    var titleLabel = UILabel()
+    lazy var imageViewL: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.gray
+        return imageView
+    }()
+    lazy var imageViewM: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.gray
+        return imageView
+    }()
+    lazy var imageViewR: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.gray
+        return imageView
+    }()
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
