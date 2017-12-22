@@ -58,13 +58,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //    MARK: - Private
     func getDataFromServer() {
         Alamofire.request(firstURL, method: .get).responseJSON  { response in
-            let dic: NSDictionary = response.result.value as! NSDictionary
-            let tempArray = dic["T1348647853363"] as! NSArray
-            let dataArray = tempArray.subarray(with: NSRange(location: 1, length: tempArray.count - 1))
-                as NSArray
-            self.newsArray = dataArray
 
-            self.tableView.reloadData()
+            switch response.result {
+            case .success(let data):
+                if let dic: NSDictionary = data as? NSDictionary {
+                    if let tempArray = dic["T1348647853363"] as? NSArray {
+                        let dataArray = tempArray.subarray(with:
+                                NSRange(location: 1, length: tempArray.count - 1))
+                            as NSArray
+                        self.newsArray = dataArray
+                        self.tableView.reloadData()
+                    }
+                }
+            case .failure(let error):
+                print("Request failed with: \(error)")
+
+            }
+
+
         }
     }
     
