@@ -61,7 +61,7 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
 
             scrollView?.contentSize = CGSize(width: CGFloat(count) * self.frame.size.width,
                                              height:self.frame.size.height)
-
+            scrollView?.contentInset = UIEdgeInsets(top: 0, left: self.frame.size.width, bottom: 0, right: self.frame.size.width)
         }
     }
 
