@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 import Kingfisher
-
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -13,6 +13,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var newsArray: NSArray = []
 
     //    MARK: - Property
+    lazy var topView: ScrollImageView = {
+        let temp = ScrollImageView.init(frame:
+            CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 190))
+        return temp
+    }()
+
     var tableView: UITableView = UITableView()
 
     
@@ -57,26 +63,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     //    MARK: - Private
     func getDataFromServer() {
-        Alamofire.request(firstURL, method: .get).responseJSON  { response in
+        let url = firstURL
+        Alamofire.request(url, method:.get).responseJSON { response in
 
             switch response.result {
             case .success(let data):
-                if let dic: NSDictionary = data as? NSDictionary {
-                    if let tempArray = dic["T1348647853363"] as? NSArray {
-                        let dataArray = tempArray.subarray(with:
-                                NSRange(location: 1, length: tempArray.count - 1))
-                            as NSArray
-                        self.newsArray = dataArray
-                        self.tableView.reloadData()
-                    }
+                let json = JSON(data)
+
+                let adArray: Array<JSON> = json["T1348647853363"][0]["ads"].arrayValue
+                self.topView.imageURLArray = adArray.map({ adDic -> URL in
+
+                    return URL(string: adDic["imgsrc"].stringValue)!
+                })
+
+                if let tempArray: NSArray = json["T1348647853363"].arrayObject as NSArray? {
+                    let newsArray = tempArray.subarray(with: NSRange(location: 1,length: tempArray.count - 1))
+                                    as NSArray
+                    self.newsArray = newsArray
+                    self.tableView.reloadData()
+
                 }
-            case .failure(let error):
-                print("Request failed with: \(error)")
+
+                self.tableView.tableHeaderView = self.topView
+                self.tableView.reloadData()
+
+            case .failure( _):
+                print("\(String(describing: response.result.error))")
 
             }
 
-
         }
+
     }
     
     func handleData() {
