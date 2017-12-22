@@ -29,7 +29,7 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
             subview.removeFromSuperview()
         }
         if let count = imageURLArray?.count {
-            print(#function, count)
+
             for index in 0..<count {
                 let imageView = UIImageView()
                 imageView.frame = CGRect(x: CGFloat(index) * self.frame.size.width,
@@ -43,9 +43,25 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
                 }
 
             }
+            let imageleft = UIImageView.init(frame: CGRect(x: -self.frame.size.width,
+                                                           y: 0, width: self.frame.size.width,
+                                                           height: self.frame.size.height))
+            scrollView!.addSubview(imageleft)
+            if let url = imageURLArray?[count - 1] {
+                imageleft.kf.setImage(with: url)
+            }
+
+            let imageright = UIImageView.init(frame:
+                CGRect(x: CGFloat(count) * self.frame.size.width, y: 0,
+                       width: self.frame.size.width, height: self.frame.size.height))
+            scrollView!.addSubview(imageright)
+            if let url = imageURLArray?[0] {
+                imageright.kf.setImage(with: url)
+            }
 
             scrollView?.contentSize = CGSize(width: CGFloat(count) * self.frame.size.width,
                                              height:self.frame.size.height)
+
         }
     }
 
