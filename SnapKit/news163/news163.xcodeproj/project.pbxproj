@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202CC2A11FECDC6B0087BDDA /* ScrollImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CC2A01FECDC6B0087BDDA /* ScrollImageView.swift */; };
+		202CC2A31FED037F0087BDDA /* TitleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202CC2A21FED037F0087BDDA /* TitleSegment.swift */; };
 		20497AB91FE9430700C58718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20497AB81FE9430700C58718 /* AppDelegate.swift */; };
 		20497ABB1FE9430700C58718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20497ABA1FE9430700C58718 /* ViewController.swift */; };
 		20497ABE1FE9430700C58718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20497ABC1FE9430700C58718 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		202CC2A01FECDC6B0087BDDA /* ScrollImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollImageView.swift; sourceTree = "<group>"; };
+		202CC2A21FED037F0087BDDA /* TitleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSegment.swift; sourceTree = "<group>"; };
 		20497AB51FE9430700C58718 /* news163.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = news163.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20497AB81FE9430700C58718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20497ABA1FE9430700C58718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				20497AB81FE9430700C58718 /* AppDelegate.swift */,
 				20497ABA1FE9430700C58718 /* ViewController.swift */,
+				202CC2A21FED037F0087BDDA /* TitleSegment.swift */,
 				202CC2A01FECDC6B0087BDDA /* ScrollImageView.swift */,
 				20497ACA1FE9525400C58718 /* SnapTableViewCell.swift */,
 				206DD2121FEA184900CA5A4B /* ImageTableViewCell.swift */,
@@ -247,6 +250,7 @@
 				20497AB91FE9430700C58718 /* AppDelegate.swift in Sources */,
 				20497ACB1FE9525400C58718 /* SnapTableViewCell.swift in Sources */,
 				206DD2151FEA185800CA5A4B /* SmallImageTableViewCell.swift in Sources */,
+				202CC2A31FED037F0087BDDA /* TitleSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
