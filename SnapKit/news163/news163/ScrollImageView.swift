@@ -16,7 +16,9 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
             CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
             )
         scrollView?.isPagingEnabled = true
+
         scrollView?.delegate = self
+
         self.addSubview(scrollView!)
     }
 
@@ -62,6 +64,18 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
             scrollView?.contentSize = CGSize(width: CGFloat(count) * self.frame.size.width,
                                              height:self.frame.size.height)
             scrollView?.contentInset = UIEdgeInsets(top: 0, left: self.frame.size.width, bottom: 0, right: self.frame.size.width)
+        }
+    }
+
+//    MARK:UIScrollViewDelegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let point = scrollView.contentOffset
+        if point.x ==  -self.frame.size.width {
+
+            scrollView.setContentOffset(
+                CGPoint(x: (scrollView.contentSize.width - self.frame.width),y: 0), animated: false)
+        } else if point.x == scrollView.contentSize.width + self.frame.size.width {
+            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
         }
     }
 
