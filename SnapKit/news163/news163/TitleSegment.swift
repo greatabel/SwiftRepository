@@ -1,7 +1,13 @@
 import UIKit
 
+protocol TitleSegmentDelegate: class {
+
+    func buttonDidClicked(index: Int)
+}
+
 class TitleSegment: UIView {
 
+    weak var delegate : TitleSegmentDelegate?
 
     var titleArray: Array<String>? {
 
@@ -44,6 +50,8 @@ class TitleSegment: UIView {
                 button.frame = CGRect(x: CGFloat(i) * width, y: 0, width: width
                     , height: frame.size.height)
                 button.backgroundColor = UIColor.clear
+                button.addTarget(self, action: #selector(buttonClicked), for: UIControlEvents.touchUpInside)
+                button.tag = i
                 self.scrollView.addSubview(button)
                 button.setTitleColor(UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1), for: UIControlState.normal)
 
@@ -56,7 +64,13 @@ class TitleSegment: UIView {
             
             scrollView.contentSize = CGSize(width: width * CGFloat(count),
                                             height: self.frame.size.height)
+
         }
+    }
+
+    @objc func buttonClicked(button: UIButton){
+        self.delegate?.buttonDidClicked(index: button.tag)
+        print(#function)
     }
 
 
