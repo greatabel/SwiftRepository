@@ -21,12 +21,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var tableView: UITableView = UITableView()
 
-    
+    lazy var segment : TitleSegment = {
+
+        let temp = TitleSegment.init(frame: CGRect(x: 0, y: 20, width: self.view.bounds.width, height: 30))
+        temp.titleArray = ["头条", "娱乐", "热点" ,"体育" ,"北京", "网易", "财经", "科技"]
+        
+
+        return temp
+
+    }()
+
     //    MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        setupNavgationBar()
         addSubView()
         setupSubview()
         setupLayout()
@@ -43,14 +52,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidAppear(animated)
     }
 
+    func setupNavgationBar() {
+
+        self.navigationController?.navigationBar.isTranslucent  = false
+
+        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
+
+    }
 
     func addSubView() {
+
+
         self.view.addSubview(tableView)
+        self.view.addSubview(segment)
     }
 
     func setupLayout() {
-        tableView.frame = CGRect(x: 0, y: 0,
-                                 width: self.view.bounds.width, height: self.view.bounds.height)
+        tableView.frame = CGRect(x: 0, y: 50,
+                                 width: self.view.bounds.width, height: self.view.bounds.height - 30)
     }
 
     func setupSubview() {

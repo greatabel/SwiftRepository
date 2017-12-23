@@ -32,7 +32,7 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
             subview.removeFromSuperview()
         }
         if let count = imageURLArray?.count {
-            print("count = \(count)")
+//            print("count = \(count)")
             for index in 0..<count {
                 let imageView = UIImageView()
                 imageView.frame = CGRect(x: CGFloat(index) * self.frame.size.width,
@@ -97,7 +97,7 @@ class ScrollImageView: UIView, UIScrollViewDelegate {
 
 //    MARK:UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(Date().timeIntervalSinceReferenceDate)
+//        print(Date().timeIntervalSinceReferenceDate)
         let point = scrollView.contentOffset
         if point.x ==  -self.frame.size.width {
 
