@@ -7,7 +7,9 @@ import SwiftyJSON
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
     TitleSegmentDelegate{
 
-    let firstURL = "http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html?from=toutiao&passport=&devId=ECIDH5J3VtJNmnlsgmFGFUgU324iLqCs%2FTN6KzBE6GrzJ6En48foT5R9wH%2FOcJXY&size=20&version=6.0&spever=false&net=wifi&lat=BNsQafMiQurgbJgINKDqOA%3D%3D&lon=bSHK%2B1pn5rA0G0bX3U5%2FOQ%3D%3D&ts=1460300866&sign=sZkXOQmPZa571vREFlmf4Ko0tVPzkKGHYxTTQ3x8M1N48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore"
+    let firstURL  = "http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html?from=toutiao&passport=&devId=ECIDH5J3VtJNmnlsgmFGFUgU324iLqCs%2FTN6KzBE6GrzJ6En48foT5R9wH%2FOcJXY&size=20&version=6.0&spever=false&net=wifi&lat=BNsQafMiQurgbJgINKDqOA%3D%3D&lon=bSHK%2B1pn5rA0G0bX3U5%2FOQ%3D%3D&ts=1460300866&sign=sZkXOQmPZa571vREFlmf4Ko0tVPzkKGHYxTTQ3x8M1N48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore"
+
+    let secondURL = "http://c.3g.163.com/nc/article/headline/T1348647853363/20-20.html?from=toutiao&passport=&devId=ECIDH5J3VtJNmnlsgmFGFUgU324iLqCs%2FTN6KzBE6GrzJ6En48foT5R9wH%2FOcJXY&size=20&version=7.0&spever=false&net=wifi&lat=&lon=&ts=1461501767&sign=mXgNK3x2QjdojToKQTv6IaORy9YlCvx7kPOlbxq9e2B48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore"
 
     let CellSnap  = "SnapTableViewCell"
     let CellImage = "ImageTableViewCell"
@@ -52,7 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         addSubView()
         setupSubview()
         setupLayout()
-        getDataFromServer()
+        getDataFromServer(input_url: "")
 
     }
 
@@ -92,23 +94,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        self.tableView.rowHeight = 100
         self.tableView.register(SnapTableViewCell.self, forCellReuseIdentifier: CellSnap)
         self.tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: CellImage)
-        self.tableView.addPullToRefresh(self.refresher, action: {print("here")})
+        self.tableView.addPullToRefresh(self.refresher) {
+            self.getDataFromServer(input_url: self.secondURL)
+        }
     }
 
     //    MARK: - Private
-    func getDataFromServer() {
-        let url = firstURL
+    func getDataFromServer(input_url: String) {
+        var url = firstURL
+        if input_url != "" {
+            url = input_url
+        }
         Alamofire.request(url, method:.get).responseJSON { response in
-
+            self.tableView.endAllRefreshing()
             switch response.result {
             case .success(let data):
                 let json = JSON(data)
+                // seconde 没有这个广告
+                if url == self.firstURL {
+                    let adArray: Array<JSON> = json["T1348647853363"][0]["ads"].arrayValue
+                    self.topView.imageURLArray = adArray.map({ adDic -> URL in
 
-                let adArray: Array<JSON> = json["T1348647853363"][0]["ads"].arrayValue
-                self.topView.imageURLArray = adArray.map({ adDic -> URL in
-
-                    return URL(string: adDic["imgsrc"].stringValue)!
-                })
+                        return URL(string: adDic["imgsrc"].stringValue)!
+                    })
+                }
 
                 if let tempArray: NSArray = json["T1348647853363"].arrayObject as NSArray? {
                     let newsArray = tempArray.subarray(with: NSRange(location: 1,length: tempArray.count - 1))
