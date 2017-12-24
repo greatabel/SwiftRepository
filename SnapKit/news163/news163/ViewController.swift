@@ -1,6 +1,7 @@
 import UIKit
 import Alamofire
 import Kingfisher
+import PullToRefresh
 import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
@@ -40,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }()
 
+    var refresher = PullToRefresh()
 
 
     //    MARK: - LifeCycle
@@ -90,6 +92,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        self.tableView.rowHeight = 100
         self.tableView.register(SnapTableViewCell.self, forCellReuseIdentifier: CellSnap)
         self.tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: CellImage)
+        self.tableView.addPullToRefresh(self.refresher, action: {print("here")})
     }
 
     //    MARK: - Private

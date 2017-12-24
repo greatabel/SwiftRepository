@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (4.5.1)
+  - Alamofire (4.6.0)
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
-  - Kingfisher (4.2.0)
-  - ObjectMapper (3.0.0)
-  - PullToRefresher (2.0.2)
+  - Kingfisher (4.5.0)
+  - ObjectMapper (3.1.0)
+  - PullToRefresher (3.0.1)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
 
@@ -18,11 +18,11 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
-  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
-  PullToRefresher: 5e101a8c3523e67ee0291375ba932ef59e0853c2
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PullToRefresher: 10cd77198cd8682f67ddb2eb7948b40637eaca21
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
