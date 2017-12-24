@@ -41,7 +41,7 @@ class ViewController: UIViewController, TitleSegmentDelegate{
     }()
 
     var refresher = PullToRefresh()
-
+    var refresh_count = 0
 
     //    MARK: - LifeCycle
     override func viewDidLoad() {
@@ -91,7 +91,15 @@ class ViewController: UIViewController, TitleSegmentDelegate{
         self.tableView.register(SnapTableViewCell.self, forCellReuseIdentifier: CellSnap)
         self.tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: CellImage)
         self.tableView.addPullToRefresh(self.refresher) {
-            self.getDataFromServer(input_url: self.secondURL)
+            // 来回刷新测试用
+            self.refresh_count += 1
+            var refresh_url = self.firstURL
+            if self.refresh_count % 2 == 0 {
+                refresh_url = self.secondURL
+            } else {
+                refresh_url = self.firstURL
+            }
+            self.getDataFromServer(input_url: refresh_url)
         }
     }
 
