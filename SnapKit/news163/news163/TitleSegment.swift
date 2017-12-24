@@ -21,14 +21,15 @@ class TitleSegment: UIView {
     lazy var scrollView: UIScrollView = {
         let temp = UIScrollView()
         temp.showsHorizontalScrollIndicator = false
-        temp.backgroundColor = UIColor.red
+        temp.backgroundColor = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1)
+
         return temp
     }()
 
     override init(frame: CGRect) {
 
         super.init(frame: frame)
-
+        print("frame.size.height = \(frame.size.height)")
         scrollView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
         self.addSubview(scrollView)
 

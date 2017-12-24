@@ -14,23 +14,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var newsArray: NSArray = []
 
     //    MARK: - Property
-    lazy var topView: ScrollImageView = {
-        let temp = ScrollImageView.init(frame:
-            CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 190))
-        return temp
-    }()
-
-    var tableView: UITableView = UITableView()
-
     lazy var segment : TitleSegment = {
 
-        let temp = TitleSegment.init(frame: CGRect(x: 0, y: 20, width: self.view.bounds.width, height: 30))
+        let temp = TitleSegment.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 40))
         temp.titleArray = ["头条", "娱乐", "热点" ,"体育" ,"北京", "网易", "财经", "科技"]
         temp.delegate = self
 
         return temp
 
     }()
+
+    lazy var topView: ScrollImageView = {
+        let temp = ScrollImageView.init(frame:
+            CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 190))
+        return temp
+    }()
+
+    lazy var tableView : UITableView = {
+
+        let temp = UITableView.init(frame: CGRect(x: 0, y: 40,
+                                    width: self.view.bounds.width,
+                                    height: self.view.bounds.height - 40 - 64))
+
+        return temp
+
+    }()
+
+
 
     //    MARK: - LifeCycle
     override func viewDidLoad() {
@@ -57,20 +67,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         self.navigationController?.navigationBar.isTranslucent  = false
 
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.86, green: 0.2, blue: 0.22, alpha: 1)
 
     }
 
     func addSubView() {
 
-
-        self.view.addSubview(tableView)
         self.view.addSubview(segment)
+        self.view.addSubview(tableView)
+
     }
 
     func setupLayout() {
-        tableView.frame = CGRect(x: 0, y: 50,
-                                 width: self.view.bounds.width, height: self.view.bounds.height - 30)
+//        tableView.frame = CGRect(x: 0, y: 40,
+//                                 width: self.view.bounds.width, height: self.view.bounds.height - 40)
     }
 
     func setupSubview() {
