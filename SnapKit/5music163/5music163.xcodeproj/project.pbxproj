@@ -12,18 +12,18 @@
 		20D2DCA01FF0F42B00766BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DC9E1FF0F42B00766BCA /* Main.storyboard */; };
 		20D2DCA21FF0F42B00766BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCA11FF0F42B00766BCA /* Assets.xcassets */; };
 		20D2DCA51FF0F42B00766BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCA31FF0F42B00766BCA /* LaunchScreen.storyboard */; };
-		20D2DCB81FF0F79F00766BCA /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCAD1FF0F79E00766BCA /* NSTimer+AFSoundManager.m */; };
-		20D2DCB91FF0F79F00766BCA /* AFSoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCAE1FF0F79E00766BCA /* AFSoundQueue.m */; };
-		20D2DCBA1FF0F79F00766BCA /* AFSoundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCAF1FF0F79E00766BCA /* AFSoundItem.m */; };
-		20D2DCBB1FF0F79F00766BCA /* AFSoundPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCB01FF0F79E00766BCA /* AFSoundPlayback.m */; };
-		20D2DCBC1FF0F79F00766BCA /* AFSoundRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCB71FF0F79F00766BCA /* AFSoundRecord.m */; };
-		20D2DCCE1FF0F7E600766BCA /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCBF1FF0F7E600766BCA /* KVNProgress.m */; };
-		20D2DCCF1FF0F7E600766BCA /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCC01FF0F7E600766BCA /* KVNProgressConfiguration.m */; };
-		20D2DCD01FF0F7E600766BCA /* KVNRotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCC11FF0F7E600766BCA /* KVNRotationViewController.m */; };
-		20D2DCD11FF0F7E600766BCA /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCC61FF0F7E600766BCA /* KVNProgressView.xib */; };
-		20D2DCD21FF0F7E600766BCA /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCC81FF0F7E600766BCA /* UIImage+KVNImageEffects.m */; };
-		20D2DCD31FF0F7E600766BCA /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCCB1FF0F7E600766BCA /* UIImage+KVNEmpty.m */; };
-		20D2DCD41FF0F7E600766BCA /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCCD1FF0F7E600766BCA /* UIColor+KVNContrast.m */; };
+		20D2DCEB1FF0FD9B00766BCA /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */; };
+		20D2DCEC1FF0FD9B00766BCA /* AFSoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */; };
+		20D2DCED1FF0FD9B00766BCA /* AFSoundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */; };
+		20D2DCEE1FF0FD9B00766BCA /* AFSoundPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */; };
+		20D2DCEF1FF0FD9B00766BCA /* AFSoundRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */; };
+		20D2DDCD1FF0FEF200766BCA /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA41FF0FEF200766BCA /* KVNProgress.m */; };
+		20D2DDCE1FF0FEF200766BCA /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */; };
+		20D2DDCF1FF0FEF200766BCA /* KVNRotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */; };
+		20D2DDD01FF0FEF200766BCA /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DDAB1FF0FEF200766BCA /* KVNProgressView.xib */; };
+		20D2DDD31FF0FEF200766BCA /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDB11FF0FEF200766BCA /* UIImage+KVNImageEffects.m */; };
+		20D2DDD41FF0FEF200766BCA /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDB41FF0FEF200766BCA /* UIImage+KVNEmpty.m */; };
+		20D2DDD51FF0FEF200766BCA /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDB61FF0FEF200766BCA /* UIColor+KVNContrast.m */; };
 		2E1C70F526E159A6E3906E2D /* Pods_5music163.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58746A6AB4DD8ADCCC3F548 /* Pods_5music163.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,31 +36,31 @@
 		20D2DCA11FF0F42B00766BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20D2DCA41FF0F42B00766BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20D2DCA61FF0F42B00766BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20D2DCAD1FF0F79E00766BCA /* NSTimer+AFSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AFSoundManager.m"; sourceTree = "<group>"; };
-		20D2DCAE1FF0F79E00766BCA /* AFSoundQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundQueue.m; sourceTree = "<group>"; };
-		20D2DCAF1FF0F79E00766BCA /* AFSoundItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundItem.m; sourceTree = "<group>"; };
-		20D2DCB01FF0F79E00766BCA /* AFSoundPlayback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundPlayback.m; sourceTree = "<group>"; };
-		20D2DCB11FF0F79E00766BCA /* AFSoundRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundRecord.h; sourceTree = "<group>"; };
-		20D2DCB21FF0F79F00766BCA /* AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundManager.h; sourceTree = "<group>"; };
-		20D2DCB31FF0F79F00766BCA /* AFSoundQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundQueue.h; sourceTree = "<group>"; };
-		20D2DCB41FF0F79F00766BCA /* NSTimer+AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AFSoundManager.h"; sourceTree = "<group>"; };
-		20D2DCB51FF0F79F00766BCA /* AFSoundItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundItem.h; sourceTree = "<group>"; };
-		20D2DCB61FF0F79F00766BCA /* AFSoundPlayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundPlayback.h; sourceTree = "<group>"; };
-		20D2DCB71FF0F79F00766BCA /* AFSoundRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundRecord.m; sourceTree = "<group>"; };
-		20D2DCBF1FF0F7E600766BCA /* KVNProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgress.m; sourceTree = "<group>"; };
-		20D2DCC01FF0F7E600766BCA /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgressConfiguration.m; sourceTree = "<group>"; };
-		20D2DCC11FF0F7E600766BCA /* KVNRotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNRotationViewController.m; sourceTree = "<group>"; };
-		20D2DCC21FF0F7E600766BCA /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
-		20D2DCC31FF0F7E600766BCA /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgressConfiguration.h; sourceTree = "<group>"; };
-		20D2DCC41FF0F7E600766BCA /* KVNRotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNRotationViewController.h; sourceTree = "<group>"; };
-		20D2DCC61FF0F7E600766BCA /* KVNProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVNProgressView.xib; sourceTree = "<group>"; };
-		20D2DCC81FF0F7E600766BCA /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
-		20D2DCC91FF0F7E600766BCA /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
-		20D2DCCA1FF0F7E600766BCA /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KVNContrast.h"; sourceTree = "<group>"; };
-		20D2DCCB1FF0F7E600766BCA /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
-		20D2DCCC1FF0F7E600766BCA /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
-		20D2DCCD1FF0F7E600766BCA /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KVNContrast.m"; sourceTree = "<group>"; };
-		20D2DCDE1FF0F99F00766BCA /* 5music163-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "5music163-Bridging-Header.h"; sourceTree = "<group>"; };
+		20D2DCDE1FF0F99F00766BCA /* music163-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "music163-Bridging-Header.h"; sourceTree = "<group>"; };
+		20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AFSoundManager.m"; sourceTree = "<group>"; };
+		20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundQueue.m; sourceTree = "<group>"; };
+		20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundItem.m; sourceTree = "<group>"; };
+		20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundPlayback.m; sourceTree = "<group>"; };
+		20D2DCE41FF0FD9B00766BCA /* AFSoundRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundRecord.h; sourceTree = "<group>"; };
+		20D2DCE51FF0FD9B00766BCA /* AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundManager.h; sourceTree = "<group>"; };
+		20D2DCE61FF0FD9B00766BCA /* AFSoundQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundQueue.h; sourceTree = "<group>"; };
+		20D2DCE71FF0FD9B00766BCA /* NSTimer+AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AFSoundManager.h"; sourceTree = "<group>"; };
+		20D2DCE81FF0FD9B00766BCA /* AFSoundItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundItem.h; sourceTree = "<group>"; };
+		20D2DCE91FF0FD9B00766BCA /* AFSoundPlayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundPlayback.h; sourceTree = "<group>"; };
+		20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundRecord.m; sourceTree = "<group>"; };
+		20D2DDA41FF0FEF200766BCA /* KVNProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgress.m; sourceTree = "<group>"; };
+		20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgressConfiguration.m; sourceTree = "<group>"; };
+		20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNRotationViewController.m; sourceTree = "<group>"; };
+		20D2DDA71FF0FEF200766BCA /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
+		20D2DDA81FF0FEF200766BCA /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgressConfiguration.h; sourceTree = "<group>"; };
+		20D2DDA91FF0FEF200766BCA /* KVNRotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNRotationViewController.h; sourceTree = "<group>"; };
+		20D2DDAB1FF0FEF200766BCA /* KVNProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVNProgressView.xib; sourceTree = "<group>"; };
+		20D2DDB11FF0FEF200766BCA /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		20D2DDB21FF0FEF200766BCA /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		20D2DDB31FF0FEF200766BCA /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KVNContrast.h"; sourceTree = "<group>"; };
+		20D2DDB41FF0FEF200766BCA /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		20D2DDB51FF0FEF200766BCA /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
+		20D2DDB61FF0FEF200766BCA /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KVNContrast.m"; sourceTree = "<group>"; };
 		3B19CAF0BBC8D67605105916 /* Pods-5music163.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5music163.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5music163/Pods-5music163.debug.xcconfig"; sourceTree = "<group>"; };
 		D58746A6AB4DD8ADCCC3F548 /* Pods_5music163.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5music163.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,75 +102,73 @@
 				20D2DC9C1FF0F42B00766BCA /* ViewController.swift */,
 				20D2DC9E1FF0F42B00766BCA /* Main.storyboard */,
 				20D2DCA11FF0F42B00766BCA /* Assets.xcassets */,
-				20D2DCBD1FF0F7E600766BCA /* KVNProgress */,
-				20D2DCAC1FF0F79E00766BCA /* AFSoundManager */,
 				20D2DCA31FF0F42B00766BCA /* LaunchScreen.storyboard */,
+				20D2DD991FF0FEF200766BCA /* KVNProgress */,
+				20D2DCDF1FF0FD9B00766BCA /* AFSoundManager */,
 				20D2DCA61FF0F42B00766BCA /* Info.plist */,
-				20D2DCDE1FF0F99F00766BCA /* 5music163-Bridging-Header.h */,
+				20D2DCDE1FF0F99F00766BCA /* music163-Bridging-Header.h */,
 			);
 			path = 5music163;
 			sourceTree = "<group>";
 		};
-		20D2DCAC1FF0F79E00766BCA /* AFSoundManager */ = {
+		20D2DCDF1FF0FD9B00766BCA /* AFSoundManager */ = {
 			isa = PBXGroup;
 			children = (
-				20D2DCAD1FF0F79E00766BCA /* NSTimer+AFSoundManager.m */,
-				20D2DCAE1FF0F79E00766BCA /* AFSoundQueue.m */,
-				20D2DCAF1FF0F79E00766BCA /* AFSoundItem.m */,
-				20D2DCB01FF0F79E00766BCA /* AFSoundPlayback.m */,
-				20D2DCB11FF0F79E00766BCA /* AFSoundRecord.h */,
-				20D2DCB21FF0F79F00766BCA /* AFSoundManager.h */,
-				20D2DCB31FF0F79F00766BCA /* AFSoundQueue.h */,
-				20D2DCB41FF0F79F00766BCA /* NSTimer+AFSoundManager.h */,
-				20D2DCB51FF0F79F00766BCA /* AFSoundItem.h */,
-				20D2DCB61FF0F79F00766BCA /* AFSoundPlayback.h */,
-				20D2DCB71FF0F79F00766BCA /* AFSoundRecord.m */,
+				20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */,
+				20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */,
+				20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */,
+				20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */,
+				20D2DCE41FF0FD9B00766BCA /* AFSoundRecord.h */,
+				20D2DCE51FF0FD9B00766BCA /* AFSoundManager.h */,
+				20D2DCE61FF0FD9B00766BCA /* AFSoundQueue.h */,
+				20D2DCE71FF0FD9B00766BCA /* NSTimer+AFSoundManager.h */,
+				20D2DCE81FF0FD9B00766BCA /* AFSoundItem.h */,
+				20D2DCE91FF0FD9B00766BCA /* AFSoundPlayback.h */,
+				20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */,
 			);
-			name = AFSoundManager;
-			path = "../../../../../../Desktop/AFSoundManager-master/AFSoundManager";
+			path = AFSoundManager;
 			sourceTree = "<group>";
 		};
-		20D2DCBD1FF0F7E600766BCA /* KVNProgress */ = {
+		20D2DD991FF0FEF200766BCA /* KVNProgress */ = {
 			isa = PBXGroup;
 			children = (
-				20D2DCBE1FF0F7E600766BCA /* Classes */,
-				20D2DCC51FF0F7E600766BCA /* Resources */,
-				20D2DCC71FF0F7E600766BCA /* Categories */,
+				20D2DDA31FF0FEF200766BCA /* Classes */,
+				20D2DDAA1FF0FEF200766BCA /* Resources */,
+				20D2DDB01FF0FEF200766BCA /* Categories */,
 			);
-			name = KVNProgress;
-			path = "../../../../../../Desktop/KVNProgress-master/KVNProgress/KVNProgress";
+			path = KVNProgress;
 			sourceTree = "<group>";
 		};
-		20D2DCBE1FF0F7E600766BCA /* Classes */ = {
+		20D2DDA31FF0FEF200766BCA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				20D2DCBF1FF0F7E600766BCA /* KVNProgress.m */,
-				20D2DCC01FF0F7E600766BCA /* KVNProgressConfiguration.m */,
-				20D2DCC11FF0F7E600766BCA /* KVNRotationViewController.m */,
-				20D2DCC21FF0F7E600766BCA /* KVNProgress.h */,
-				20D2DCC31FF0F7E600766BCA /* KVNProgressConfiguration.h */,
-				20D2DCC41FF0F7E600766BCA /* KVNRotationViewController.h */,
+				20D2DDA41FF0FEF200766BCA /* KVNProgress.m */,
+				20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */,
+				20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */,
+				20D2DDA71FF0FEF200766BCA /* KVNProgress.h */,
+				20D2DDA81FF0FEF200766BCA /* KVNProgressConfiguration.h */,
+				20D2DDA91FF0FEF200766BCA /* KVNRotationViewController.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		20D2DCC51FF0F7E600766BCA /* Resources */ = {
+		20D2DDAA1FF0FEF200766BCA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				20D2DCC61FF0F7E600766BCA /* KVNProgressView.xib */,
+				20D2DDAB1FF0FEF200766BCA /* KVNProgressView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		20D2DCC71FF0F7E600766BCA /* Categories */ = {
+		20D2DDB01FF0FEF200766BCA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				20D2DCC81FF0F7E600766BCA /* UIImage+KVNImageEffects.m */,
-				20D2DCC91FF0F7E600766BCA /* UIImage+KVNEmpty.h */,
-				20D2DCCA1FF0F7E600766BCA /* UIColor+KVNContrast.h */,
-				20D2DCCB1FF0F7E600766BCA /* UIImage+KVNEmpty.m */,
-				20D2DCCC1FF0F7E600766BCA /* UIImage+KVNImageEffects.h */,
-				20D2DCCD1FF0F7E600766BCA /* UIColor+KVNContrast.m */,
+				20D2DDB11FF0FEF200766BCA /* UIImage+KVNImageEffects.m */,
+				20D2DDB21FF0FEF200766BCA /* UIImage+KVNEmpty.h */,
+				20D2DDB31FF0FEF200766BCA /* UIColor+KVNContrast.h */,
+				20D2DDB41FF0FEF200766BCA /* UIImage+KVNEmpty.m */,
+				20D2DDB51FF0FEF200766BCA /* UIImage+KVNImageEffects.h */,
+				20D2DDB61FF0FEF200766BCA /* UIColor+KVNContrast.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -257,7 +255,7 @@
 				20D2DCA51FF0F42B00766BCA /* LaunchScreen.storyboard in Resources */,
 				20D2DCA21FF0F42B00766BCA /* Assets.xcassets in Resources */,
 				20D2DCA01FF0F42B00766BCA /* Main.storyboard in Resources */,
-				20D2DCD11FF0F7E600766BCA /* KVNProgressView.xib in Resources */,
+				20D2DDD01FF0FEF200766BCA /* KVNProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,19 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20D2DCD41FF0F7E600766BCA /* UIColor+KVNContrast.m in Sources */,
-				20D2DCBC1FF0F79F00766BCA /* AFSoundRecord.m in Sources */,
-				20D2DCD21FF0F7E600766BCA /* UIImage+KVNImageEffects.m in Sources */,
-				20D2DCCF1FF0F7E600766BCA /* KVNProgressConfiguration.m in Sources */,
-				20D2DCD31FF0F7E600766BCA /* UIImage+KVNEmpty.m in Sources */,
-				20D2DCBA1FF0F79F00766BCA /* AFSoundItem.m in Sources */,
+				20D2DCEF1FF0FD9B00766BCA /* AFSoundRecord.m in Sources */,
+				20D2DDD31FF0FEF200766BCA /* UIImage+KVNImageEffects.m in Sources */,
+				20D2DCED1FF0FD9B00766BCA /* AFSoundItem.m in Sources */,
+				20D2DDCD1FF0FEF200766BCA /* KVNProgress.m in Sources */,
+				20D2DDD51FF0FEF200766BCA /* UIColor+KVNContrast.m in Sources */,
 				20D2DC9D1FF0F42B00766BCA /* ViewController.swift in Sources */,
+				20D2DDCF1FF0FEF200766BCA /* KVNRotationViewController.m in Sources */,
 				20D2DC9B1FF0F42B00766BCA /* AppDelegate.swift in Sources */,
-				20D2DCCE1FF0F7E600766BCA /* KVNProgress.m in Sources */,
-				20D2DCBB1FF0F79F00766BCA /* AFSoundPlayback.m in Sources */,
-				20D2DCB91FF0F79F00766BCA /* AFSoundQueue.m in Sources */,
-				20D2DCD01FF0F7E600766BCA /* KVNRotationViewController.m in Sources */,
-				20D2DCB81FF0F79F00766BCA /* NSTimer+AFSoundManager.m in Sources */,
+				20D2DCEE1FF0FD9B00766BCA /* AFSoundPlayback.m in Sources */,
+				20D2DCEC1FF0FD9B00766BCA /* AFSoundQueue.m in Sources */,
+				20D2DDD41FF0FEF200766BCA /* UIImage+KVNEmpty.m in Sources */,
+				20D2DCEB1FF0FD9B00766BCA /* NSTimer+AFSoundManager.m in Sources */,
+				20D2DDCE1FF0FEF200766BCA /* KVNProgressConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-music163";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "music163-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-music163";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "music163-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
