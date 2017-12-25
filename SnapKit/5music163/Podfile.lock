@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.6.0)
+  - KGFloatingDrawer (0.2.0)
+  - Reveal-iOS-SDK (1.6.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - KGFloatingDrawer
+  - Reveal-iOS-SDK
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  KGFloatingDrawer: b0c2810954bfb61f4d4dd01b8891d5c23933e368
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+
+PODFILE CHECKSUM: eae390a1cae22c9ebea1e208725cc8bf201c0edd
+
+COCOAPODS: 1.3.1
