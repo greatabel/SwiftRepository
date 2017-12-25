@@ -12,11 +12,11 @@
 		20D2DCA01FF0F42B00766BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DC9E1FF0F42B00766BCA /* Main.storyboard */; };
 		20D2DCA21FF0F42B00766BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCA11FF0F42B00766BCA /* Assets.xcassets */; };
 		20D2DCA51FF0F42B00766BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCA31FF0F42B00766BCA /* LaunchScreen.storyboard */; };
-		20D2DCEB1FF0FD9B00766BCA /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */; };
-		20D2DCEC1FF0FD9B00766BCA /* AFSoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */; };
+		20D2DCEB1FF0FD9B00766BCA /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		20D2DCEC1FF0FD9B00766BCA /* AFSoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		20D2DCED1FF0FD9B00766BCA /* AFSoundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */; };
-		20D2DCEE1FF0FD9B00766BCA /* AFSoundPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */; };
-		20D2DCEF1FF0FD9B00766BCA /* AFSoundRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */; };
+		20D2DCEE1FF0FD9B00766BCA /* AFSoundPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		20D2DCEF1FF0FD9B00766BCA /* AFSoundRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		20D2DDCD1FF0FEF200766BCA /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA41FF0FEF200766BCA /* KVNProgress.m */; };
 		20D2DDCE1FF0FEF200766BCA /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */; };
 		20D2DDCF1FF0FEF200766BCA /* KVNRotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */; };
