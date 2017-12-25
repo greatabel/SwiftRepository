@@ -5,14 +5,24 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - KGFloatingDrawer
+  - KGFloatingDrawer (from `https://github.com/KyleGoddard/KGFloatingDrawer`, branch `swift-3-up`)
   - Reveal-iOS-SDK
+
+EXTERNAL SOURCES:
+  KGFloatingDrawer:
+    :branch: swift-3-up
+    :git: https://github.com/KyleGoddard/KGFloatingDrawer
+
+CHECKOUT OPTIONS:
+  KGFloatingDrawer:
+    :commit: 8d40e4512b4fea8a5b2ee9eeb241b50fe5c0a96e
+    :git: https://github.com/KyleGoddard/KGFloatingDrawer
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   KGFloatingDrawer: b0c2810954bfb61f4d4dd01b8891d5c23933e368
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
 
-PODFILE CHECKSUM: eae390a1cae22c9ebea1e208725cc8bf201c0edd
+PODFILE CHECKSUM: 2699bb6532c8b6d89a5390c43bc60edac2685bae
 
 COCOAPODS: 1.3.1
