@@ -1,4 +1,5 @@
 import UIKit
+import KGFloatingDrawer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -8,6 +9,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        self.window?.rootViewController = drawerViewController
+
+        window?.makeKeyAndVisible()
+
         return true
     }
 
@@ -33,6 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Drawer
+    private var _drawerViewController: KGDrawerViewController?
+    var drawerViewController: KGDrawerViewController {
+        get {
+            if let viewController = _drawerViewController {
+                return viewController
+            }
+            return prepareDrawerViewController()
+        }
+    }
+
+    func prepareDrawerViewController() -> KGDrawerViewController {
+        let drawerViewController = KGDrawerViewController()
+
+        return drawerViewController
+    }
 
 }
 
