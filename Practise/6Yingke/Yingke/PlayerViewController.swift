@@ -19,6 +19,12 @@ class PlayerViewController: UIViewController {
         setBg()
     }
 
+//    func bringBtnTofront()  {
+//        self.view.bringSubview(toFront: likeBtn)
+//        self.view.bringSubview(toFront: backBtn)
+//        self.view.bringSubview(toFront: giftBtn)
+//    }
+
     func setBg()  {
         let imgUrl = URL(string: live.portrait)
         imgBackground.kf.setImage(with: imgUrl)
@@ -43,7 +49,8 @@ class PlayerViewController: UIViewController {
     }
 
     @IBAction func tapBack(_ sender: UIButton) {
-        
+        navigationController?.popViewController(animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 }
