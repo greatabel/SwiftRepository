@@ -12,6 +12,9 @@
 		207BADBB1FF22B1D00218997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BADB91FF22B1D00218997 /* Main.storyboard */; };
 		207BADBD1FF22B1D00218997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207BADBC1FF22B1D00218997 /* Assets.xcassets */; };
 		207BADC01FF22B1D00218997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */; };
+		207BADC81FF2320200218997 /* LiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADC71FF2320200218997 /* LiveTableViewController.swift */; };
+		207BADD11FF2362A00218997 /* YKCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADCC1FF2362A00218997 /* YKCreator.swift */; };
+		207BADD21FF2362A00218997 /* YKLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADCD1FF2362A00218997 /* YKLive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		207BADBC1FF22B1D00218997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207BADBF1FF22B1D00218997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		207BADC11FF22B1D00218997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207BADC71FF2320200218997 /* LiveTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTableViewController.swift; sourceTree = "<group>"; };
+		207BADCC1FF2362A00218997 /* YKCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKCreator.swift; sourceTree = "<group>"; };
+		207BADCD1FF2362A00218997 /* YKLive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKLive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		207BADB41FF22B1D00218997 /* Yingke */ = {
 			isa = PBXGroup;
 			children = (
+				207BADC91FF235FD00218997 /* Model */,
 				207BADB51FF22B1D00218997 /* AppDelegate.swift */,
 				207BADB71FF22B1D00218997 /* ViewController.swift */,
 				207BADB91FF22B1D00218997 /* Main.storyboard */,
 				207BADBC1FF22B1D00218997 /* Assets.xcassets */,
 				207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */,
 				207BADC11FF22B1D00218997 /* Info.plist */,
+				207BADC71FF2320200218997 /* LiveTableViewController.swift */,
 			);
 			path = Yingke;
+			sourceTree = "<group>";
+		};
+		207BADC91FF235FD00218997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				207BADCC1FF2362A00218997 /* YKCreator.swift */,
+				207BADCD1FF2362A00218997 /* YKLive.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207BADC81FF2320200218997 /* LiveTableViewController.swift in Sources */,
 				207BADB81FF22B1D00218997 /* ViewController.swift in Sources */,
+				207BADD21FF2362A00218997 /* YKLive.swift in Sources */,
+				207BADD11FF2362A00218997 /* YKCreator.swift in Sources */,
 				207BADB61FF22B1D00218997 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
