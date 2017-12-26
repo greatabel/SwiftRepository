@@ -73,12 +73,12 @@
 			children = (
 				207BADC91FF235FD00218997 /* Model */,
 				207BADB51FF22B1D00218997 /* AppDelegate.swift */,
+				207BADC71FF2320200218997 /* LiveTableViewController.swift */,
+				207BADD81FF23AF000218997 /* PlayerViewController.swift */,
 				207BADB91FF22B1D00218997 /* Main.storyboard */,
 				207BADBC1FF22B1D00218997 /* Assets.xcassets */,
 				207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */,
 				207BADC11FF22B1D00218997 /* Info.plist */,
-				207BADC71FF2320200218997 /* LiveTableViewController.swift */,
-				207BADD81FF23AF000218997 /* PlayerViewController.swift */,
 			);
 			path = Yingke;
 			sourceTree = "<group>";
