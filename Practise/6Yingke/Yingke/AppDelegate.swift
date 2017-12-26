@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Yingke
-//
-//  Created by 万畅 on 2017/12/26.
-//  Copyright © 2017年 luminagic. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="600" id="pKm-KA-tCu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="600" id="pKm-KA-tCu" customClass="LiveTableViewCell" customModule="Yingke" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="600"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pKm-KA-tCu" id="0Qh-rA-j5F">
@@ -38,14 +38,11 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq9-mv-0bX">
                                             <rect key="frame" x="111" y="60" width="35" height="32"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="35" id="ETA-8y-weB"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-vj-tvJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-vj-tvJ">
                                             <rect key="frame" x="218" y="64" width="61" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,9 +50,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人在看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-05-uju">
                                             <rect key="frame" x="287" y="64" width="52" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="52" id="B8g-lX-Sxx"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -82,6 +76,7 @@
                                         <constraint firstItem="5V3-3h-O7j" firstAttribute="leading" secondItem="0Qh-rA-j5F" secondAttribute="leadingMargin" id="OQ6-gc-Fhf"/>
                                         <constraint firstItem="Lsf-vj-tvJ" firstAttribute="top" secondItem="NE5-05-uju" secondAttribute="top" id="PEo-kb-wCd"/>
                                         <constraint firstItem="Rq9-mv-0bX" firstAttribute="bottom" secondItem="Lsf-vj-tvJ" secondAttribute="bottom" id="Ueb-cp-1y9"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="er0-3e-k2U" secondAttribute="trailing" constant="20" symbolic="YES" id="cIx-I1-BQS"/>
                                         <constraint firstItem="NE5-05-uju" firstAttribute="leading" secondItem="Lsf-vj-tvJ" secondAttribute="trailing" constant="8" symbolic="YES" id="dWG-qL-Jbq"/>
                                         <constraint firstItem="5V3-3h-O7j" firstAttribute="top" secondItem="0Qh-rA-j5F" secondAttribute="topMargin" constant="10" id="dYP-d1-s7Q"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ULW-Zj-pKV" secondAttribute="bottom" constant="-11" id="gAX-3M-iph"/>
@@ -98,6 +93,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgCover" destination="ULW-Zj-pKV" id="0Qw-vz-gWq"/>
+                                    <outlet property="imgPortrait" destination="5V3-3h-O7j" id="pYf-3s-crJ"/>
+                                    <outlet property="labelAddr" destination="Rq9-mv-0bX" id="lAs-iZ-vEO"/>
+                                    <outlet property="labelNick" destination="er0-3e-k2U" id="v48-G9-42j"/>
+                                    <outlet property="labelViewers" destination="Lsf-vj-tvJ" id="RE1-9Z-B50"/>
                                     <segue destination="GXF-Wm-5bL" kind="show" id="nxb-eR-uaW"/>
                                 </connections>
                             </tableViewCell>
