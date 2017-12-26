@@ -131,11 +131,17 @@
                                 <rect key="frame" x="16" y="584" width="119" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="gift"/>
+                                <connections>
+                                    <action selector="tapGift:" destination="GXF-Wm-5bL" eventType="touchUpInside" id="Dku-1t-g5u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-xU-JrQ">
                                 <rect key="frame" x="294" y="607" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="like"/>
+                                <connections>
+                                    <action selector="tapLike:" destination="GXF-Wm-5bL" eventType="touchUpInside" id="UxD-9J-zRD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ob-yZ-hjg">
                                 <rect key="frame" x="150" y="263" width="75" height="21"/>
@@ -148,11 +154,20 @@
                                 <rect key="frame" x="16" y="64" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="goback"/>
+                                <connections>
+                                    <action selector="tapBack:" destination="GXF-Wm-5bL" eventType="touchUpInside" id="RwF-IW-Gjq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="W3i-1j-Jy0"/>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="7cK-db-VeZ" id="G0E-1k-U9X"/>
+                        <outlet property="giftBtn" destination="ay2-ck-a9F" id="N51-P0-cRo"/>
+                        <outlet property="imgBackground" destination="Vlb-wO-AL1" id="YsV-WJ-kid"/>
+                        <outlet property="likeBtn" destination="hsN-xU-JrQ" id="xb7-lP-gOe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaa-uS-9KG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
