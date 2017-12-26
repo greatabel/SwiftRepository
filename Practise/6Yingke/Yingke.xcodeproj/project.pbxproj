@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		207BADB61FF22B1D00218997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADB51FF22B1D00218997 /* AppDelegate.swift */; };
-		207BADB81FF22B1D00218997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADB71FF22B1D00218997 /* ViewController.swift */; };
 		207BADBB1FF22B1D00218997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BADB91FF22B1D00218997 /* Main.storyboard */; };
 		207BADBD1FF22B1D00218997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207BADBC1FF22B1D00218997 /* Assets.xcassets */; };
 		207BADC01FF22B1D00218997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */; };
@@ -17,13 +16,13 @@
 		207BADD21FF2362A00218997 /* YKLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADCD1FF2362A00218997 /* YKLive.swift */; };
 		207BADD51FF238D000218997 /* YKLiveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADD41FF238D000218997 /* YKLiveList.swift */; };
 		207BADD71FF238EC00218997 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADD61FF238EC00218997 /* LiveCell.swift */; };
+		207BADD91FF23AF000218997 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADD81FF23AF000218997 /* PlayerViewController.swift */; };
 		B69EE6E0EF5821CE150C97A4 /* Pods_Yingke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D20380F9570046403FD3C /* Pods_Yingke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		207BADB21FF22B1D00218997 /* Yingke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yingke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207BADB51FF22B1D00218997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		207BADB71FF22B1D00218997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		207BADBA1FF22B1D00218997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		207BADBC1FF22B1D00218997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207BADBF1FF22B1D00218997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		207BADCD1FF2362A00218997 /* YKLive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKLive.swift; sourceTree = "<group>"; };
 		207BADD41FF238D000218997 /* YKLiveList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKLiveList.swift; sourceTree = "<group>"; };
 		207BADD61FF238EC00218997 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		207BADD81FF23AF000218997 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		49E9532FD472665087EC246E /* Pods-Yingke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yingke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yingke/Pods-Yingke.debug.xcconfig"; sourceTree = "<group>"; };
 		798D20380F9570046403FD3C /* Pods_Yingke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yingke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44B47C9F6A2DEC324B7D3C2 /* Pods-Yingke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yingke.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yingke/Pods-Yingke.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,12 +73,12 @@
 			children = (
 				207BADC91FF235FD00218997 /* Model */,
 				207BADB51FF22B1D00218997 /* AppDelegate.swift */,
-				207BADB71FF22B1D00218997 /* ViewController.swift */,
 				207BADB91FF22B1D00218997 /* Main.storyboard */,
 				207BADBC1FF22B1D00218997 /* Assets.xcassets */,
 				207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */,
 				207BADC11FF22B1D00218997 /* Info.plist */,
 				207BADC71FF2320200218997 /* LiveTableViewController.swift */,
+				207BADD81FF23AF000218997 /* PlayerViewController.swift */,
 			);
 			path = Yingke;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				207BADC81FF2320200218997 /* LiveTableViewController.swift in Sources */,
-				207BADB81FF22B1D00218997 /* ViewController.swift in Sources */,
+				207BADD91FF23AF000218997 /* PlayerViewController.swift in Sources */,
 				207BADD21FF2362A00218997 /* YKLive.swift in Sources */,
 				207BADD51FF238D000218997 /* YKLiveList.swift in Sources */,
 				207BADD71FF238EC00218997 /* LiveCell.swift in Sources */,
