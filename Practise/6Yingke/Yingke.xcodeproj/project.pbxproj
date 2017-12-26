@@ -15,6 +15,7 @@
 		207BADC81FF2320200218997 /* LiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADC71FF2320200218997 /* LiveTableViewController.swift */; };
 		207BADD11FF2362A00218997 /* YKCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADCC1FF2362A00218997 /* YKCreator.swift */; };
 		207BADD21FF2362A00218997 /* YKLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADCD1FF2362A00218997 /* YKLive.swift */; };
+		B69EE6E0EF5821CE150C97A4 /* Pods_Yingke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D20380F9570046403FD3C /* Pods_Yingke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		207BADC71FF2320200218997 /* LiveTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTableViewController.swift; sourceTree = "<group>"; };
 		207BADCC1FF2362A00218997 /* YKCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKCreator.swift; sourceTree = "<group>"; };
 		207BADCD1FF2362A00218997 /* YKLive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKLive.swift; sourceTree = "<group>"; };
+		49E9532FD472665087EC246E /* Pods-Yingke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yingke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yingke/Pods-Yingke.debug.xcconfig"; sourceTree = "<group>"; };
+		798D20380F9570046403FD3C /* Pods_Yingke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yingke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44B47C9F6A2DEC324B7D3C2 /* Pods-Yingke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yingke.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yingke/Pods-Yingke.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69EE6E0EF5821CE150C97A4 /* Pods_Yingke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				207BADB41FF22B1D00218997 /* Yingke */,
 				207BADB31FF22B1D00218997 /* Products */,
+				D6DDE69C5AAE88070B630BB8 /* Pods */,
+				3F7C4EA3D1C24EEC49AC17AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +88,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3F7C4EA3D1C24EEC49AC17AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				798D20380F9570046403FD3C /* Pods_Yingke.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6DDE69C5AAE88070B630BB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49E9532FD472665087EC246E /* Pods-Yingke.debug.xcconfig */,
+				A44B47C9F6A2DEC324B7D3C2 /* Pods-Yingke.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 207BADC41FF22B1D00218997 /* Build configuration list for PBXNativeTarget "Yingke" */;
 			buildPhases = (
+				45E5B5718188FB6F0AEB0B03 /* [CP] Check Pods Manifest.lock */,
 				207BADAE1FF22B1D00218997 /* Sources */,
 				207BADAF1FF22B1D00218997 /* Frameworks */,
 				207BADB01FF22B1D00218997 /* Resources */,
+				9370C182C8BC59E82E12BDC2 /* [CP] Embed Pods Frameworks */,
+				87463E37FFA10C4431212090 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45E5B5718188FB6F0AEB0B03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yingke-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87463E37FFA10C4431212090 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yingke/Pods-Yingke-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9370C182C8BC59E82E12BDC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Yingke/Pods-Yingke-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Just/Just.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Just.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yingke/Pods-Yingke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		207BADAE1FF22B1D00218997 /* Sources */ = {
@@ -292,6 +375,7 @@
 		};
 		207BADC51FF22B1D00218997 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E9532FD472665087EC246E /* Pods-Yingke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +391,7 @@
 		};
 		207BADC61FF22B1D00218997 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44B47C9F6A2DEC324B7D3C2 /* Pods-Yingke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
