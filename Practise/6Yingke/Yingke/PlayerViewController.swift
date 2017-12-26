@@ -2,7 +2,7 @@ import UIKit
 
 class PlayerViewController: UIViewController {
 
-    var live: YKLive!
+    var live: LiveCell!
     
     @IBOutlet var imgBackground: UIImageView!
     @IBOutlet var backBtn: UIButton!
@@ -15,6 +15,7 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dump(live)
     }
 
     override func didReceiveMemoryWarning() {

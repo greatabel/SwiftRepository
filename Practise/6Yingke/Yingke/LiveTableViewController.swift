@@ -67,4 +67,11 @@ class LiveTableViewController: UITableViewController {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+
+        let dest = segue.destination as!  PlayerViewController
+        dest.live = list[(tableView.indexPathForSelectedRow?.row)!]
+    }
+
 }
