@@ -16,6 +16,7 @@ class LiveTableViewController: UITableViewController {
         loadList()
 
         refreshControl = UIRefreshControl()
+        
     }
 
     func loadList() {
@@ -36,7 +37,10 @@ class LiveTableViewController: UITableViewController {
 
         }
     }
-    
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 600
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -55,7 +59,7 @@ class LiveTableViewController: UITableViewController {
         cell.labelViewers.text = "\(live.viewers)"
 
         //头像
-        let imgUrl = URL(string: "http://img.meelive.cn/" + live.portrait)
+        let imgUrl = URL(string: live.portrait)
 
         cell.imgPortrait.kf.setImage(with: imgUrl)
         //封面
