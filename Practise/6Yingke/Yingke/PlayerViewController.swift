@@ -15,7 +15,18 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        dump(live)
+        //默认模糊主播头像背景
+        setBg()
+    }
+
+    func setBg()  {
+        let imgUrl = URL(string: live.portrait)
+        imgBackground.kf.setImage(with: imgUrl)
+
+        let blurEffect = UIBlurEffect(style: .light)
+        let effectView = UIVisualEffectView(effect: blurEffect)
+        effectView.frame = imgBackground.bounds
+        imgBackground.addSubview(effectView)
     }
 
     override func didReceiveMemoryWarning() {
