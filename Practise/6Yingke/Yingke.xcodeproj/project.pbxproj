@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2044F7161FF3527500CFB521 /* Yingke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yingke-Bridging-Header.h"; sourceTree = "<group>"; };
 		207BADB21FF22B1D00218997 /* Yingke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yingke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207BADB51FF22B1D00218997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207BADBA1FF22B1D00218997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 				207BADBC1FF22B1D00218997 /* Assets.xcassets */,
 				207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */,
 				207BADC11FF22B1D00218997 /* Info.plist */,
+				2044F7161FF3527500CFB521 /* Yingke-Bridging-Header.h */,
 			);
 			path = Yingke;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 				TargetAttributes = {
 					207BADB11FF22B1D00218997 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -390,12 +393,15 @@
 			baseConfigurationReference = 49E9532FD472665087EC246E /* Pods-Yingke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = Yingke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luminagic.Yingke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yingke/Yingke-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,12 +412,14 @@
 			baseConfigurationReference = A44B47C9F6A2DEC324B7D3C2 /* Pods-Yingke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32DD42UWD5;
 				INFOPLIST_FILE = Yingke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luminagic.Yingke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yingke/Yingke-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
