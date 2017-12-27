@@ -1,10 +1,12 @@
 PODS:
   - Just (0.6.0)
   - Kingfisher (4.5.0)
+  - Player (0.8.4)
 
 DEPENDENCIES:
   - Just (from `https://github.com/JustHTTP/Just`, branch `swift-4`)
   - Kingfisher
+  - Player (~> 0.8.0)
 
 EXTERNAL SOURCES:
   Just:
@@ -19,7 +21,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Just: 72e8a6e01ec5adba1aa0f7996ff4459aa6a3d710
   Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
 
-PODFILE CHECKSUM: 08369c1bc20566c39fe8dd91493e7a74a96bfc53
+PODFILE CHECKSUM: c333c07540852f771e050f56bd332f874f3eae72
 
 COCOAPODS: 1.3.1
