@@ -133,16 +133,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cK-db-VeZ">
-                                <rect key="frame" x="16" y="64" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="vIn-zs-bMe"/>
-                                </constraints>
-                                <state key="normal" image="goback"/>
-                                <connections>
-                                    <action selector="tapBack:" destination="GXF-Wm-5bL" eventType="touchUpInside" id="RwF-IW-Gjq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay2-ck-a9F">
                                 <rect key="frame" x="16" y="575" width="50" height="50"/>
                                 <constraints>
@@ -165,22 +155,32 @@
                                     <action selector="tapLike:" destination="GXF-Wm-5bL" eventType="touchUpInside" id="UxD-9J-zRD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cK-db-VeZ">
+                                <rect key="frame" x="16" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6zR-rn-kP9"/>
+                                    <constraint firstAttribute="width" constant="40" id="nfd-gx-bkr"/>
+                                </constraints>
+                                <state key="normal" image="goback"/>
+                                <connections>
+                                    <action selector="tapBack:" destination="GXF-Wm-5bL" eventType="touchUpInside" id="RwF-IW-Gjq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vlb-wO-AL1" firstAttribute="bottom" secondItem="W3i-1j-Jy0" secondAttribute="bottom" id="3cJ-26-giz"/>
                             <constraint firstAttribute="trailing" secondItem="Vlb-wO-AL1" secondAttribute="trailing" id="5FY-rT-7zf"/>
+                            <constraint firstItem="7cK-db-VeZ" firstAttribute="top" secondItem="W3i-1j-Jy0" secondAttribute="top" id="6CZ-e7-Txb"/>
                             <constraint firstItem="W3i-1j-Jy0" firstAttribute="trailing" secondItem="hsN-xU-JrQ" secondAttribute="trailing" constant="31" id="JBU-xH-IhM"/>
-                            <constraint firstItem="7cK-db-VeZ" firstAttribute="leading" secondItem="ay2-ck-a9F" secondAttribute="leading" id="M7F-B3-qlY"/>
+                            <constraint firstItem="Vlb-wO-AL1" firstAttribute="leading" secondItem="7cK-db-VeZ" secondAttribute="trailing" constant="-56" id="KKr-6c-SYr"/>
                             <constraint firstItem="1Ob-yZ-hjg" firstAttribute="top" secondItem="W3i-1j-Jy0" secondAttribute="top" constant="199" id="O5c-TB-l7k"/>
                             <constraint firstItem="Vlb-wO-AL1" firstAttribute="top" secondItem="nhb-aL-szH" secondAttribute="top" id="Tzg-eb-bT1"/>
                             <constraint firstItem="ay2-ck-a9F" firstAttribute="bottom" secondItem="hsN-xU-JrQ" secondAttribute="bottom" id="b2B-rz-Can"/>
-                            <constraint firstItem="7cK-db-VeZ" firstAttribute="leading" secondItem="nhb-aL-szH" secondAttribute="leadingMargin" id="eer-1X-nqX"/>
+                            <constraint firstItem="ay2-ck-a9F" firstAttribute="leading" secondItem="7cK-db-VeZ" secondAttribute="leading" id="chT-Lu-PBE"/>
                             <constraint firstItem="Vlb-wO-AL1" firstAttribute="centerX" secondItem="1Ob-yZ-hjg" secondAttribute="centerX" id="gmE-pM-mKL"/>
                             <constraint firstItem="Vlb-wO-AL1" firstAttribute="leading" secondItem="nhb-aL-szH" secondAttribute="leading" id="i7R-c9-Pjg"/>
                             <constraint firstAttribute="bottom" secondItem="ay2-ck-a9F" secondAttribute="bottom" constant="42" id="liz-4t-bhK"/>
-                            <constraint firstItem="W3i-1j-Jy0" firstAttribute="trailing" secondItem="7cK-db-VeZ" secondAttribute="trailing" constant="319" id="nl6-iL-puA"/>
-                            <constraint firstItem="7cK-db-VeZ" firstAttribute="top" secondItem="W3i-1j-Jy0" secondAttribute="top" id="tFS-nz-0OO"/>
                             <constraint firstItem="W3i-1j-Jy0" firstAttribute="bottom" secondItem="ay2-ck-a9F" secondAttribute="bottom" constant="42" id="uox-Gu-IW4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W3i-1j-Jy0"/>
