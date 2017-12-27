@@ -28,10 +28,14 @@ class PlayerViewController: UIViewController {
     func setBg()  {
         let imgUrl = URL(string: live.portrait)
         imgBackground.kf.setImage(with: imgUrl)
-
+        imgBackground.contentMode = .scaleAspectFill
         let blurEffect = UIBlurEffect(style: .light)
         let effectView = UIVisualEffectView(effect: blurEffect)
         effectView.frame = imgBackground.bounds
+        
+        // 不然遮罩宽高不自适应
+        effectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
         imgBackground.addSubview(effectView)
     }
 
