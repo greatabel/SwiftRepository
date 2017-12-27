@@ -6,5 +6,5 @@ target 'Yingke' do
 
     pod 'Just', :git => 'https://github.com/JustHTTP/Just', :branch => 'swift-4'
     pod 'Kingfisher'
-
+    pod "Player", "~> 0.8.0"
 end
