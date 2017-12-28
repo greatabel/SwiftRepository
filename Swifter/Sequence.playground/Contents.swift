@@ -10,9 +10,10 @@ class ReverseGenerator: IteratorProtocol {
         self.counter = array.count - 1
     }
 
-    init(start: Int) {
-        self.counter = start
-    }
+//    init(start: Int) {
+//        self.counter = start
+//    }
+
 
     func next() -> Element? {
         if self.counter < 0 {
@@ -38,8 +39,13 @@ struct ReverseSequence<T>: Sequence {
     }
 }
 
-let arr = [0, 10, 2, 3, 40]
-
+//client invoke
+let arr = [0, 10, 20, 30, 40]
 for i in ReverseSequence(array: arr) {
     print("Index \(i) is \(arr[i])")
+}
+// for...in 实际上
+var g = arr.makeIterator()
+while let obj = g.next() {
+    print("obj = \(obj)")
 }
