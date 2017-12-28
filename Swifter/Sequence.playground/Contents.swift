@@ -39,12 +39,12 @@ struct ReverseSequence<T>: Sequence {
     }
 }
 
-//client invoke
+// part I
 let arr = [0, 10, 20, 30, 40]
 for i in ReverseSequence(array: arr) {
     print("Index \(i) is \(arr[i])")
 }
-// for...in 实际上
+// part II: for...in 实际上
 var g = arr.makeIterator()
 while let obj = g.next() {
     print("obj = \(obj)")
