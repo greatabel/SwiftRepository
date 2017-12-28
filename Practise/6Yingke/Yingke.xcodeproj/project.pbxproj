@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2005BA0F1FF4A1D000B29088 /* DMHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2005BA0D1FF4A1D000B29088 /* DMHeartFlyView.m */; };
 		207BADB61FF22B1D00218997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADB51FF22B1D00218997 /* AppDelegate.swift */; };
 		207BADBB1FF22B1D00218997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BADB91FF22B1D00218997 /* Main.storyboard */; };
 		207BADBD1FF22B1D00218997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207BADBC1FF22B1D00218997 /* Assets.xcassets */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2005BA0D1FF4A1D000B29088 /* DMHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHeartFlyView.m; sourceTree = "<group>"; };
+		2005BA0E1FF4A1D000B29088 /* DMHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHeartFlyView.h; sourceTree = "<group>"; };
 		2044F7161FF3527500CFB521 /* Yingke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yingke-Bridging-Header.h"; sourceTree = "<group>"; };
 		207BADB21FF22B1D00218997 /* Yingke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yingke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207BADB51FF22B1D00218997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2005BA0C1FF4A1D000B29088 /* HeartFlyView */ = {
+			isa = PBXGroup;
+			children = (
+				2005BA0D1FF4A1D000B29088 /* DMHeartFlyView.m */,
+				2005BA0E1FF4A1D000B29088 /* DMHeartFlyView.h */,
+			);
+			path = HeartFlyView;
+			sourceTree = "<group>";
+		};
 		207BADA91FF22B1D00218997 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +86,7 @@
 		207BADB41FF22B1D00218997 /* Yingke */ = {
 			isa = PBXGroup;
 			children = (
+				2005BA0C1FF4A1D000B29088 /* HeartFlyView */,
 				207BADC91FF235FD00218997 /* Model */,
 				207BADB51FF22B1D00218997 /* AppDelegate.swift */,
 				207BADC71FF2320200218997 /* LiveTableViewController.swift */,
@@ -258,6 +271,7 @@
 				207BADDB1FF2465E00218997 /* LiveTableViewCell.swift in Sources */,
 				207BADD11FF2362A00218997 /* YKCreator.swift in Sources */,
 				207BADB61FF22B1D00218997 /* AppDelegate.swift in Sources */,
+				2005BA0F1FF4A1D000B29088 /* DMHeartFlyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
