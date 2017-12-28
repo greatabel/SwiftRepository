@@ -109,6 +109,7 @@ class PlayerViewController: UIViewController {
     }
 
     @IBAction func tapBack(_ sender: UIButton) {
+        self.player.stop()
         navigationController?.popViewController(animated: true)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
