@@ -101,11 +101,57 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func tapLike(_ sender: UIButton) {
+        //爱心大小
+        let heart = DMHeartFlyView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
 
+        //爱心的中心位置
+        heart.center = CGPoint(x: likeBtn.frame.origin.x, y: likeBtn.frame.origin.y)
+
+        view.addSubview(heart)
+        heart.animate(in: view)
+
+        //爱心按钮的 大小变化动画
+        let btnAnime = CAKeyframeAnimation(keyPath: "transform.scale")
+        btnAnime.values   = [1.0, 0.7, 0.5, 0.3, 0.5, 0.7, 1.0, 1.2, 1.4, 1.2, 1.0]
+        btnAnime.keyTimes = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+        btnAnime.duration = 0.2
+        sender.layer.add(btnAnime, forKey: "SHOW")
     }
 
     @IBAction func tapGift(_ sender: UIButton) {
+        let duration = 3.0
+        let p918 = UIImageView(image: #imageLiteral(resourceName: "porsche"))
 
+        p918.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        view.addSubview(p918)
+
+        let widthP918:CGFloat = 240
+        let heightP918:CGFloat = 120
+
+        UIView.animate(withDuration: duration) {
+            p918.frame =
+                CGRect(x: self.view.center.x - widthP918/2, y: self.view.center.y - heightP918/2, width: widthP918, height: heightP918)
+        }
+
+
+        //主线程延时一个完整动画后,再让礼物图片逐渐透明,完全透明后从父视图移除
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+            UIView.animate(withDuration: duration, animations: {
+                p918.alpha = 0
+            }, completion: { (completed) in
+                p918.removeFromSuperview()
+            })
+        }
+
+        //烟花
+        let layerFw = CAEmitterLayer()
+        view.layer.addSublayer(layerFw)
+        emmitParticles(from: sender.center, emitter: layerFw, in: view)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration * 2) {
+            layerFw.removeFromSuperlayer()
+        }
+        
     }
 
     @IBAction func tapBack(_ sender: UIButton) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2005BA0F1FF4A1D000B29088 /* DMHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2005BA0D1FF4A1D000B29088 /* DMHeartFlyView.m */; };
+		2005BA111FF4A58300B29088 /* emmitParticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005BA101FF4A58300B29088 /* emmitParticles.swift */; };
 		207BADB61FF22B1D00218997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BADB51FF22B1D00218997 /* AppDelegate.swift */; };
 		207BADBB1FF22B1D00218997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BADB91FF22B1D00218997 /* Main.storyboard */; };
 		207BADBD1FF22B1D00218997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207BADBC1FF22B1D00218997 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		2005BA0D1FF4A1D000B29088 /* DMHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHeartFlyView.m; sourceTree = "<group>"; };
 		2005BA0E1FF4A1D000B29088 /* DMHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHeartFlyView.h; sourceTree = "<group>"; };
+		2005BA101FF4A58300B29088 /* emmitParticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emmitParticles.swift; sourceTree = "<group>"; };
 		2044F7161FF3527500CFB521 /* Yingke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yingke-Bridging-Header.h"; sourceTree = "<group>"; };
 		207BADB21FF22B1D00218997 /* Yingke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yingke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207BADB51FF22B1D00218997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				207BADBE1FF22B1D00218997 /* LaunchScreen.storyboard */,
 				207BADC11FF22B1D00218997 /* Info.plist */,
 				2044F7161FF3527500CFB521 /* Yingke-Bridging-Header.h */,
+				2005BA101FF4A58300B29088 /* emmitParticles.swift */,
 			);
 			path = Yingke;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				207BADD51FF238D000218997 /* YKLiveList.swift in Sources */,
 				207BADD71FF238EC00218997 /* LiveCell.swift in Sources */,
 				207BADDB1FF2465E00218997 /* LiveTableViewCell.swift in Sources */,
+				2005BA111FF4A58300B29088 /* emmitParticles.swift in Sources */,
 				207BADD11FF2362A00218997 /* YKCreator.swift in Sources */,
 				207BADB61FF22B1D00218997 /* AppDelegate.swift in Sources */,
 				2005BA0F1FF4A1D000B29088 /* DMHeartFlyView.m in Sources */,
