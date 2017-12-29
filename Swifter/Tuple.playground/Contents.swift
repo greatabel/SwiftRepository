@@ -18,3 +18,10 @@ func swapMe_TupleWay<T>(a: inout T, b: inout T) {
 
 swapMe_TupleWay(a: &a1, b: &b1)
 print("3#: \(a1) \(b1)")
+
+// demo 2:
+let rect = CGRect(x:0, y:0, width:100, height:100)
+let (small, large) = rect.divided(atDistance: 20, from: .maxXEdge)
+print("\((small), large)")
+
+
