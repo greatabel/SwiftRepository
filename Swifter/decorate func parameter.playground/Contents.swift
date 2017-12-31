@@ -18,5 +18,15 @@ func incrementorC( variable: inout Int) {
 
 var luckyNumber = 7
 incrementorC(variable: &luckyNumber)
-
 print(luckyNumber)
+
+
+func makeIncrementor(addNumber: Int) -> ((inout Int) -> ()) {
+    func incrementor(variable: inout Int) -> () {
+        variable += addNumber
+    }
+    return incrementor
+}
+var t = 1
+var result = makeIncrementor(addNumber: 10)(&t)
+print(t)
