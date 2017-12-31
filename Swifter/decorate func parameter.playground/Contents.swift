@@ -28,5 +28,5 @@ func makeIncrementor(addNumber: Int) -> ((inout Int) -> ()) {
     return incrementor
 }
 var t = 1
-var result = makeIncrementor(addNumber: 10)(&t)
+var result: () = makeIncrementor(addNumber: 10)(&t)
 print(t)
