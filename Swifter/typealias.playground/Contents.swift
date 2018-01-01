@@ -30,3 +30,4 @@ let point_New: Location = Location(x: 1, y: 1)
 let distance_New: Distance =  distanceBetweenPoint_New(location:origin_New,
                                 toLocation: point_New)
 print("distance_New = \(distance_New)")
+
