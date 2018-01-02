@@ -32,6 +32,6 @@ typealias WorkerId = Float
 typealias Worker = Person<WorkerId>
 
 var workerList = Worker()
-workerList.push(item: 10.1)
-workerList.push(item: 20.2)
+workerList.push(item: 1001)
+workerList.push(item: 1002)
 print(workerList[1])
