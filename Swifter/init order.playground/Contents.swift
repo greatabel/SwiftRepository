@@ -22,3 +22,13 @@ class Tiger: Cat {
 }
 var t = Tiger()
 
+
+
+class TigerWithoutChangeName: Cat {
+    var power: Int
+    override init() {
+        power = 100
+    }
+}
+var w = TigerWithoutChangeName()
+print("### \(w.name) \(w.power)")
