@@ -29,3 +29,23 @@ class MysteryAnimal: KittenLike, DogLike, TigerLike {
 }
 var m = MysteryAnimal()
 print(m.meow(), m.bark(), m.aou())
+
+
+protocol PetLike: KittenLike, DogLike {
+
+}
+
+protocol CatLike: KittenLike, TigerLike {
+
+}
+
+struct SoundChecker {
+    static func checkPetTalking(pet: PetLike) {
+        //...
+    }
+
+    static func checkCatTalking(cat: CatLike) {
+        //...
+    }
+}
+
