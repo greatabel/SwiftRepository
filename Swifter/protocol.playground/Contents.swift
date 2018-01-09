@@ -49,7 +49,7 @@ struct SoundChecker {
     }
 }
 
-// 改进:
+// part 3: 改进
 typealias PetLike_Good = KittenLike & DogLike
 typealias CatLike_Good = KittenLike & TigerLike
 
@@ -68,3 +68,28 @@ struct SoundChecker_Good {
 
 SoundChecker_Good.checkPetTalking(pet: m)
 SoundChecker_Good.checkCatTalking(cat: m)
+
+// part 4: 多个接口内方法冲突时
+protocol A {
+    func bar() -> Int
+}
+
+protocol B {
+    func bar() -> String
+}
+
+class ConflictClass: A, B {
+
+    func bar() -> Int {
+        return 1000
+    }
+
+    func bar() -> String {
+        return "Hello world"
+    }
+}
+
+let instance = ConflictClass()
+let num = (instance as A).bar()
+let str = (instance as B).bar()
+print(num, str)
