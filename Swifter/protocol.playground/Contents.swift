@@ -30,7 +30,7 @@ class MysteryAnimal: KittenLike, DogLike, TigerLike {
 var m = MysteryAnimal()
 print(m.meow(), m.bark(), m.aou())
 
-
+// part 2: 不好的实现
 protocol PetLike: KittenLike, DogLike {
 
 }
@@ -49,3 +49,22 @@ struct SoundChecker {
     }
 }
 
+// 改进:
+typealias PetLike_Good = KittenLike & DogLike
+typealias CatLike_Good = KittenLike & TigerLike
+
+struct SoundChecker_Good {
+    static func checkPetTalking(pet: KittenLike & DogLike) {
+        //...
+        print(pet.meow(), pet.bark())
+    }
+
+    static func checkCatTalking(cat: KittenLike & TigerLike) {
+        //...
+        print(cat.meow(), cat.aou())
+    }
+}
+
+
+SoundChecker_Good.checkPetTalking(pet: m)
+SoundChecker_Good.checkCatTalking(cat: m)
