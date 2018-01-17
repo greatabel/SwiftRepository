@@ -32,3 +32,17 @@ if matcher.match(input: maybeMailAddress) {
     print("有效的邮箱地址")
 }
 
+// ------------------------------------
+//infix operator =~ {
+//    associativity none
+//    precedence 130
+//}
+//
+//func =~(lhs: String, rhs: String) -> Bool {
+//    do {
+//        return try RegexHelper(rhs).match(input: lhs)
+//    } catch _ {
+//        return false
+//    }
+//}
+
