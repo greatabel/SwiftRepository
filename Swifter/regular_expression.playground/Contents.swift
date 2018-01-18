@@ -33,16 +33,27 @@ if matcher.match(input: maybeMailAddress) {
 }
 
 // ------------------------------------
+precedencegroup Equivalence {
+    associativity: left
+    higherThan: LogicalConjunctionPrecedence
+}
+
+infix operator =~ : Equivalence
 //infix operator =~ {
 //    associativity none
 //    precedence 130
 //}
-//
-//func =~(lhs: String, rhs: String) -> Bool {
-//    do {
-//        return try RegexHelper(rhs).match(input: lhs)
-//    } catch _ {
-//        return false
-//    }
-//}
+
+func =~(lhs: String, rhs: String) -> Bool {
+    do {
+        return try RegexHelper(rhs).match(input: lhs)
+    } catch _ {
+        return false
+    }
+}
+
+if "onev@onevcat.com" =~
+"^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$" {
+    print("有效的邮箱地址 @")
+}
 
