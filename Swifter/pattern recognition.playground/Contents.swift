@@ -20,3 +20,12 @@ default:
     print("\(num!) value")
 }
 
+// 范围判断
+let x = 0.5
+switch x {
+case -1.0...1.0: print("区间内")
+default: print("区间外")
+}
+
+// ----------------------- -----------------------
+
