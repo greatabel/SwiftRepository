@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="cEF-b9-qDO">
             <objects>
-                <viewController id="l70-x3-lmx" customClass="ViewController" customModule="CoordinateSpaceTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l70-x3-lmx" customClass="ViewController" customModule="_4CoordinateSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dv9-a1-z21"/>
                         <viewControllerLayoutGuide type="bottom" id="YEt-7M-44c"/>
@@ -40,14 +40,34 @@
                                     <action selector="doButton2:" destination="l70-x3-lmx" eventType="touchUpInside" id="y3l-Yf-vVK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsO-TW-18b">
+                                <rect key="frame" x="253" y="0.0" width="122" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="transform"/>
+                                <connections>
+                                    <action selector="doButton2:" destination="l70-x3-lmx" eventType="touchUpInside" id="dBp-SS-TEy"/>
+                                    <action selector="my_transform:" destination="l70-x3-lmx" eventType="touchUpInside" id="W0f-7y-GGM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="which" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs9-5Y-ld0">
+                                <rect key="frame" x="121" y="0.0" width="133" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.13408159489999999" blue="0.2989343008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="LO2-RP-S5N"/>
                     </view>
+                    <connections>
+                        <outlet property="whichLabel" destination="Vs9-5Y-ld0" id="5kp-lN-sK2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQy-sq-l3T" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="198"/>
+            <point key="canvasLocation" x="77.599999999999994" y="197.45127436281859"/>
         </scene>
     </scenes>
 </document>
