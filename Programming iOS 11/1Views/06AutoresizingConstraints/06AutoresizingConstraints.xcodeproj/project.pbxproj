@@ -56,13 +56,13 @@
 		203EF0C52018E13100A3484A /* 06AutoresizingConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				203EF0D82018E23600A3484A /* common.swift */,
 				203EF0C62018E13100A3484A /* AppDelegate.swift */,
 				203EF0C82018E13100A3484A /* ViewController.swift */,
 				203EF0CA2018E13100A3484A /* Main.storyboard */,
 				203EF0CD2018E13100A3484A /* Assets.xcassets */,
 				203EF0CF2018E13100A3484A /* LaunchScreen.storyboard */,
 				203EF0D22018E13100A3484A /* Info.plist */,
-				203EF0D82018E23600A3484A /* common.swift */,
 			);
 			path = 06AutoresizingConstraints;
 			sourceTree = "<group>";
