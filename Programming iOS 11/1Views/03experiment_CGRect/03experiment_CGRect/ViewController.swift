@@ -27,12 +27,38 @@ class ViewController: UIViewController {
         self.view.addSubview(v3)
 
         // bounds
-        let v11 = UIView(frame:CGRect(10, 411, 50, 50))
+        let v11 = UIView(frame:CGRect(10, 411, 80, 80))
         v11.backgroundColor = .blue
-        let v22 = UIView(frame:v11.bounds.insetBy(dx: 10, dy: 10))
+        let v22 = UIView(frame:v11.bounds.insetBy(dx: 20, dy: 20))
         v22.backgroundColor = .red
         self.view.addSubview(v11)
         v11.addSubview(v22)
+
+        let v111 = UIView(frame:CGRect(100, 411, 80, 80))
+        v111.backgroundColor = .blue
+        let v222 = UIView(frame:v111.bounds.insetBy(dx: 10, dy: 10))
+        v222.backgroundColor = .red
+        self.view.addSubview(v111)
+        v111.addSubview(v222)
+        v222.bounds.size.height += 16
+        v222.bounds.size.width += 16
+
+        let v4 = UIView(frame:CGRect(200, 411, 80, 80))
+        v4.backgroundColor = .cyan
+        let v5 = UIView(frame:v4.bounds.insetBy(dx: 10, dy: 10))
+        v5.backgroundColor = .red
+        self.view.addSubview(v4)
+        v4.addSubview(v5)
+        v4.bounds.origin.x += 20
+        v4.bounds.origin.y += 20
+
+        let v6 = UIView(frame:CGRect(300, 411, 80, 80))
+        v6.backgroundColor = .green
+        let v7 = UIView(frame:CGRect(350, 411,20,20))
+        v7.backgroundColor = .red
+        self.view.addSubview(v6)
+        v6.addSubview(v7)
+        v7.center = v6.convert(v6.center, from:v6.superview)
 
     }
 
