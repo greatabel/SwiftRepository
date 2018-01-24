@@ -25,6 +25,14 @@ class ViewController: UIViewController {
         self.view.addSubview(v1)
         v1.addSubview(v2)
         self.view.addSubview(v3)
+
+        // bounds
+        let v11 = UIView(frame:CGRect(213, 411, 132, 194))
+        v11.backgroundColor = .blue
+        let v22 = UIView(frame:v1.bounds.insetBy(dx: 10, dy: 10))
+        v22.backgroundColor = .red
+        self.view.addSubview(v11)
+        v11.addSubview(v22)
     }
 
 
