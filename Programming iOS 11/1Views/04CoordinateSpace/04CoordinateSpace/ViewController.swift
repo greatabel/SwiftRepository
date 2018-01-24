@@ -44,6 +44,14 @@ class ViewController: UIViewController {
     @IBAction func my_transform(_ sender: UIButton) {
         which += 1
         whichLabel.text = String(which)
+
+        // 清空掉上一次tranform添加的view
+        for view in self.view.subviews {
+            if !(view is UIButton) && !(view is UILabel) {
+            view.removeFromSuperview()
+            }
+        }
+        
         tranform(which)
     }
 
