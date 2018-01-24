@@ -2,6 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override var prefersStatusBarHidden: Bool { return true }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,7 +19,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doButton2(_ sender: UIButton) {
-        
+
     }
 }
 
