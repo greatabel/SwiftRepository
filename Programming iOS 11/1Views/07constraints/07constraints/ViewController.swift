@@ -2,14 +2,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var which : Int = 3
+    var which : Int = 1
+
+    var whichLabel = UILabel()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let ibutton = UIButton(frame: CGRect(x: 100, y: 600, width: 100, height: 50))
+        ibutton.backgroundColor = .blue
+        ibutton.setTitle("Add Button", for: .normal)
+        ibutton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
+        whichLabel = UILabel(frame: CGRect(x: 200, y: 600, width: 100, height: 50))
+        whichLabel.text = String(which)
+        whichLabel.textColor = .red
+        whichLabel.textAlignment = .center
+        whichLabel.font = UIFont(name: "Halvetica", size: 27)
+        whichLabel.backgroundColor = UIColor.orange
+        self.view.addSubview(ibutton)
+        self.view.addSubview(whichLabel)
         myconstraint()
 
+    }
+
+    @objc func buttonAction(sender: UIButton!) {
+        which += 1
+        whichLabel.text = String(which)
+
+        // 清空掉上一次tranform添加的view
+        for view in self.view.subviews {
+            if !(view is UIButton) && !(view is UILabel) {
+                view.removeFromSuperview()
+            }
+        }
+        myconstraint()
     }
 
     func myconstraint() {
