@@ -1,6 +1,6 @@
 The so-called original ability, I think it's through imitation with deep thinking. 
-This Repository is my imitation collections. All codes and extensions related to swift/ios part in the list of:
-http://www.douban.com/doulist/608714/
+<b>This Repository is my imitation collections.</b> All codes and extensions related to swift/ios part in the list of:<br/>
+<b>http://www.douban.com/doulist/608714 </b>
 
 # Introducing-iOS8-Swift
  All the demo codes,learning codes,examine codes of swift. 
