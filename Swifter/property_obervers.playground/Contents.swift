@@ -27,3 +27,28 @@ class MyClass {
 let foo = MyClass()
 foo.date = foo.date.addingTimeInterval(10086)
 foo.date = foo.date.addingTimeInterval(100000000)
+
+
+class A {
+    var _number: Int = 1
+    var number :Int {
+        get {
+            print("get \(_number)")
+            return _number
+        }
+
+        set(newVal) {
+            print("set \(newVal)")
+            _number = newVal
+            }
+    }
+}
+
+class B: A {
+    override var number: Int {
+        willSet {print("willSet")}
+        didSet {print("didSet")}
+    }
+}
+let b = B()
+b.number = 0
