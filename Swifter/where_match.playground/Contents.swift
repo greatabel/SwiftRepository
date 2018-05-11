@@ -10,3 +10,13 @@ name.forEach{
         print("hello \($0)")
     }
 }
+
+let num: [Int?] = [48, 99, nil]
+num.forEach{
+    if let score = $0 , score > 60 {
+        print("及格 \(score)")
+    } else {
+        print(":(")
+    }
+}
+
