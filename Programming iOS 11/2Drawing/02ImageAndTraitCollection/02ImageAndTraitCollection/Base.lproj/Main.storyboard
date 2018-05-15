@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,55 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_2ImageAndTraitCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xpk-5f-aCz">
+                                <rect key="frame" x="29" y="35" width="124" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="HbU-8a-giM"/>
+                                    <constraint firstAttribute="height" constant="118" id="znp-La-Lhm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-gX-3Xo">
+                                <rect key="frame" x="29" y="193" width="124" height="122"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-xt-cbY">
+                                <rect key="frame" x="300" y="59" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r6-8r-gML" customClass="MyView" customModule="ImageAndTraitCollection" customModuleProvider="target">
+                                <rect key="frame" x="208" y="112" width="136" height="141"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xpk-5f-aCz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="0Hd-TQ-P6c"/>
+                            <constraint firstItem="bfi-xt-cbY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="1xj-X6-pGX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4r6-8r-gML" secondAttribute="bottom" constant="414" id="523-1H-DdK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4r6-8r-gML" secondAttribute="trailing" constant="31" id="NrD-6e-vfN"/>
+                            <constraint firstItem="4r6-8r-gML" firstAttribute="leading" secondItem="Xpk-5f-aCz" secondAttribute="trailing" constant="55" id="S6s-Hl-aS1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bfi-xt-cbY" secondAttribute="trailing" constant="29" id="a5O-fN-lra"/>
+                            <constraint firstItem="DjD-gX-3Xo" firstAttribute="top" secondItem="Xpk-5f-aCz" secondAttribute="bottom" constant="40" id="gLw-cq-V6M"/>
+                            <constraint firstItem="4r6-8r-gML" firstAttribute="top" secondItem="bfi-xt-cbY" secondAttribute="bottom" constant="23" id="gqd-FQ-AwJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DjD-gX-3Xo" secondAttribute="bottom" constant="352" id="pay-5t-pwh"/>
+                            <constraint firstItem="bfi-xt-cbY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="sG1-dK-2C6"/>
+                            <constraint firstItem="Xpk-5f-aCz" firstAttribute="leading" secondItem="DjD-gX-3Xo" secondAttribute="leading" id="sVk-3B-Kz0"/>
+                            <constraint firstItem="Xpk-5f-aCz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="sax-M5-qfW"/>
+                            <constraint firstItem="Xpk-5f-aCz" firstAttribute="trailing" secondItem="DjD-gX-3Xo" secondAttribute="trailing" id="wLx-Eg-p2M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="b" destination="bfi-xt-cbY" id="fte-yB-2aq"/>
+                        <outlet property="iv" destination="Xpk-5f-aCz" id="1Yg-7r-IQS"/>
+                        <outlet property="iv2" destination="DjD-gX-3Xo" id="Vps-Ae-C93"/>
+                        <outlet property="v" destination="4r6-8r-gML" id="n8I-Z6-ljY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
