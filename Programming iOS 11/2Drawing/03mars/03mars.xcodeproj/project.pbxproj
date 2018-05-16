@@ -12,6 +12,8 @@
 		20846DB120AAB3F30045C403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20846DAF20AAB3F30045C403 /* Main.storyboard */; };
 		20846DB320AAB3F30045C403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20846DB220AAB3F30045C403 /* Assets.xcassets */; };
 		20846DB620AAB3F30045C403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20846DB420AAB3F30045C403 /* LaunchScreen.storyboard */; };
+		20D54F2C20AC1F36005F8C34 /* smileyiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D54F2A20AC1F35005F8C34 /* smileyiPhone.png */; };
+		20D54F2D20AC1F36005F8C34 /* bottle5.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D54F2B20AC1F36005F8C34 /* bottle5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		20846DB220AAB3F30045C403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20846DB520AAB3F30045C403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20846DB720AAB3F30045C403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D54F2A20AC1F35005F8C34 /* smileyiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smileyiPhone.png; sourceTree = "<group>"; };
+		20D54F2B20AC1F36005F8C34 /* bottle5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		20846DAA20AAB3F30045C403 /* 03mars */ = {
 			isa = PBXGroup;
 			children = (
+				20D54F2B20AC1F36005F8C34 /* bottle5.png */,
+				20D54F2A20AC1F35005F8C34 /* smileyiPhone.png */,
 				20846DAB20AAB3F30045C403 /* AppDelegate.swift */,
 				20846DAD20AAB3F30045C403 /* ViewController.swift */,
 				20846DAF20AAB3F30045C403 /* Main.storyboard */,
@@ -123,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				20846DB620AAB3F30045C403 /* LaunchScreen.storyboard in Resources */,
+				20D54F2C20AC1F36005F8C34 /* smileyiPhone.png in Resources */,
+				20D54F2D20AC1F36005F8C34 /* bottle5.png in Resources */,
 				20846DB320AAB3F30045C403 /* Assets.xcassets in Resources */,
 				20846DB120AAB3F30045C403 /* Main.storyboard in Resources */,
 			);
