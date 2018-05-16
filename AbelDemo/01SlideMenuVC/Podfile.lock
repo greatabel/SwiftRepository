@@ -1,0 +1,16 @@
+PODS:
+  - SlideMenuControllerSwift (4.0.0)
+
+DEPENDENCIES:
+  - SlideMenuControllerSwift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+
+PODFILE CHECKSUM: 725c029551a88343eaad4d6d72646e95ff0aa8ae
+
+COCOAPODS: 1.5.2
