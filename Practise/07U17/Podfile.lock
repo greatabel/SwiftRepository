@@ -1,16 +1,24 @@
 PODS:
+  - Alamofire (4.6.0)
+  - IQKeyboardManagerSwift (5.0.7)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManagerSwift
   - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - IQKeyboardManagerSwift
     - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: c17ec8b4a9ce1dd0ce08a2f615c5d99f6e495b34
+PODFILE CHECKSUM: c17d401440b14db087696c925c60bc4523e3c269
 
 COCOAPODS: 1.5.2
