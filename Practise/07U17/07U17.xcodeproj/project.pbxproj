@@ -16,6 +16,8 @@
 		20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5120AEAEA200A79519 /* UPageViewController.swift */; };
 		20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5320AEAEC700A79519 /* UBaseViewController.swift */; };
 		20736B5620AEB0D300A79519 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5520AEB0D300A79519 /* Global.swift */; };
+		20736B5920AEBC6700A79519 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5820AEBC6700A79519 /* UIColorExtension.swift */; };
+		20736B5B20AEBD4C00A79519 /* UNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5A20AEBD4C00A79519 /* UNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		20736B5120AEAEA200A79519 /* UPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPageViewController.swift; sourceTree = "<group>"; };
 		20736B5320AEAEC700A79519 /* UBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseViewController.swift; sourceTree = "<group>"; };
 		20736B5520AEB0D300A79519 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		20736B5820AEBC6700A79519 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		20736B5A20AEBD4C00A79519 /* UNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationController.swift; sourceTree = "<group>"; };
 		98F9738EEEF70E1A95F60CF2 /* Pods-07U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.debug.xcconfig"; sourceTree = "<group>"; };
 		D31DFB76CF2CFC8EFC1EB175 /* Pods_07U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A6AB964F478BE86D0B36D8 /* Pods-07U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		20241D7520AD5A5C00D2AFEA /* 07U17 */ = {
 			isa = PBXGroup;
 			children = (
+				20736B5720AEBC2700A79519 /* Extension */,
 				20241D8820AD7A3100D2AFEA /* Procedure */,
 				20241D7D20AD5A5E00D2AFEA /* Assets.xcassets */,
 				20241D7F20AD5A5E00D2AFEA /* LaunchScreen.storyboard */,
@@ -100,6 +105,7 @@
 				20241D8B20AD7F9E00D2AFEA /* UTabBarController.swift */,
 				20736B5120AEAEA200A79519 /* UPageViewController.swift */,
 				20736B5320AEAEC700A79519 /* UBaseViewController.swift */,
+				20736B5A20AEBD4C00A79519 /* UNavigationController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -118,6 +124,14 @@
 				20736B4E20AEAE6200A79519 /* UHomeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		20736B5720AEBC2700A79519 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20736B5820AEBC6700A79519 /* UIColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9C4A39ED9F6BB0C5FE75CDED /* Frameworks */ = {
@@ -261,11 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */,
+				20736B5920AEBC6700A79519 /* UIColorExtension.swift in Sources */,
 				20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */,
 				20736B5620AEB0D300A79519 /* Global.swift in Sources */,
 				20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */,
 				20241D7720AD5A5C00D2AFEA /* AppDelegate.swift in Sources */,
 				20241D8C20AD7F9E00D2AFEA /* UTabBarController.swift in Sources */,
+				20736B5B20AEBD4C00A79519 /* UNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-7U17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -431,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-7U17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

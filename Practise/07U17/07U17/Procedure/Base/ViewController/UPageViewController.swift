@@ -52,7 +52,60 @@ class UPageViewController: UBaseViewController{
     }
 
     override func configUI() {
-        
+        guard let vcs = vcs else {return }
+        addChildViewController(pageVC)
+        view.addSubview(pageVC.view)
+
+        pageVC.dataSource = self
+        pageVC.delegate = self
+        pageVC.setViewControllers([vcs[0]], direction: .forward, animated: false, completion: nil)
+
+        switch pageStyle {
+        case .none:
+            pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
+        case .navgationBarSegment:
+            segment.backgroundColor = UIColor.clear
+            segment.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white.withAlphaComponent(0.5),
+                                           NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20)]
+            segment.selectedTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
+                                                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20)]
+            segment.selectionIndicatorLocation = .none
+
+            navigationItem.titleView = segment
+            segment.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 120, height: 40)
+
+            pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
+        case .topTabBar:
+            segment.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black,
+                                           NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+            segment.selectedTitleTextAttributes = [NSAttributedStringKey.foregroundColor:
+                UIColor(red: 127, green: 221, blue: 146, alpha: 1.0),
+                                                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+            segment.selectionIndicatorLocation = .down
+            segment.selectionIndicatorColor = UIColor(red: 127, green: 221, blue: 146, alpha: 1.0)
+            segment.selectionIndicatorHeight = 2
+            segment.borderType = .bottom
+            segment.borderColor = UIColor.lightGray
+            segment.borderWidth = 0.5
+
+            view.addSubview(segment)
+            segment.snp.makeConstraints{
+                $0.top.left.right.equalToSuperview()
+                $0.height.equalTo(40)
+            }
+
+            pageVC.view.snp.makeConstraints{
+                $0.top.equalTo(segment.snp.bottom)
+                $0.left.right.bottom.equalToSuperview()
+            }
+        default: break
+        }
+
+        guard let titles = titles else { return }
+        segment.sectionTitles = titles
+        currentSelectIndex = 0
+        segment.selectedSegmentIndex = currentSelectIndex
+
     }
 }
 
