@@ -11,6 +11,10 @@
 		20241D7720AD5A5C00D2AFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20241D7620AD5A5C00D2AFEA /* AppDelegate.swift */; };
 		20241D7E20AD5A5E00D2AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20241D7D20AD5A5E00D2AFEA /* Assets.xcassets */; };
 		20241D8120AD5A5E00D2AFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20241D7F20AD5A5E00D2AFEA /* LaunchScreen.storyboard */; };
+		20241D8C20AD7F9E00D2AFEA /* UTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20241D8B20AD7F9E00D2AFEA /* UTabBarController.swift */; };
+		20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B4E20AEAE6200A79519 /* UHomeViewController.swift */; };
+		20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5120AEAEA200A79519 /* UPageViewController.swift */; };
+		20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5320AEAEC700A79519 /* UBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		20241D7D20AD5A5E00D2AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20241D8020AD5A5E00D2AFEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20241D8220AD5A5E00D2AFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20241D8B20AD7F9E00D2AFEA /* UTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTabBarController.swift; sourceTree = "<group>"; };
+		20736B4E20AEAE6200A79519 /* UHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHomeViewController.swift; sourceTree = "<group>"; };
+		20736B5120AEAEA200A79519 /* UPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPageViewController.swift; sourceTree = "<group>"; };
+		20736B5320AEAEC700A79519 /* UBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseViewController.swift; sourceTree = "<group>"; };
 		98F9738EEEF70E1A95F60CF2 /* Pods-07U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.debug.xcconfig"; sourceTree = "<group>"; };
 		D31DFB76CF2CFC8EFC1EB175 /* Pods_07U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A6AB964F478BE86D0B36D8 /* Pods-07U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,9 +76,45 @@
 		20241D8820AD7A3100D2AFEA /* Procedure */ = {
 			isa = PBXGroup;
 			children = (
+				20736B4C20AEAE3E00A79519 /* Home */,
+				20241D8920AD7F7400D2AFEA /* Base */,
 				20241D7620AD5A5C00D2AFEA /* AppDelegate.swift */,
 			);
 			path = Procedure;
+			sourceTree = "<group>";
+		};
+		20241D8920AD7F7400D2AFEA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				20241D8A20AD7F8500D2AFEA /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		20241D8A20AD7F8500D2AFEA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20241D8B20AD7F9E00D2AFEA /* UTabBarController.swift */,
+				20736B5120AEAEA200A79519 /* UPageViewController.swift */,
+				20736B5320AEAEC700A79519 /* UBaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		20736B4C20AEAE3E00A79519 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				20736B4D20AEAE4E00A79519 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		20736B4D20AEAE4E00A79519 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20736B4E20AEAE6200A79519 /* UHomeViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		9C4A39ED9F6BB0C5FE75CDED /* Frameworks */ = {
@@ -185,13 +229,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-07U17/Pods-07U17-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -205,7 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */,
+				20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */,
+				20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */,
 				20241D7720AD5A5C00D2AFEA /* AppDelegate.swift in Sources */,
+				20241D8C20AD7F9E00D2AFEA /* UTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

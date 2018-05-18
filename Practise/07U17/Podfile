@@ -5,8 +5,12 @@ inhibit_all_warnings!
 
 target '07U17' do
 
-pod 'SnapKit'
-pod 'IQKeyboardManagerSwift'
 pod 'Alamofire'
+pod 'IQKeyboardManagerSwift'
+pod 'Kingfisher'
+pod 'Reusable'
+pod 'SnapKit'
+pod 'Then'
+
 
 end
