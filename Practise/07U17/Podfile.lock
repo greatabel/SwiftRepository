@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.6.0)
+  - HMSegmentedControl (1.5.4)
   - IQKeyboardManagerSwift (5.0.7)
   - Kingfisher (4.5.0)
   - Reusable (4.0.0):
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - HMSegmentedControl
   - IQKeyboardManagerSwift
   - Kingfisher
   - Reusable
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - HMSegmentedControl
     - IQKeyboardManagerSwift
     - Kingfisher
     - Reusable
@@ -29,12 +32,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  HMSegmentedControl: b25bc4ec44766e073d62c473188fb354ee244b76
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   Kingfisher: 26ae0473102b77b575da51960c932431e3745407
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: af68ff747ece342bd18ca8e341cf7729ea8ea5ac
+PODFILE CHECKSUM: aa44a079a9c2cb4ee66242b89e59afbd05531add
 
 COCOAPODS: 1.5.2

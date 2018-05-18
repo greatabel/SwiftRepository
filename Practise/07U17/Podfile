@@ -6,6 +6,7 @@ inhibit_all_warnings!
 target '07U17' do
 
 pod 'Alamofire'
+pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
 pod 'Kingfisher'
 pod 'Reusable'

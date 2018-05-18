@@ -1,5 +1,5 @@
 import UIKit
 
-class UHomeViewController {
+class UHomeViewController: UPageViewController {
     
 }

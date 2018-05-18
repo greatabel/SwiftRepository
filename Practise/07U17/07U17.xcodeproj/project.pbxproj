@@ -15,6 +15,7 @@
 		20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B4E20AEAE6200A79519 /* UHomeViewController.swift */; };
 		20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5120AEAEA200A79519 /* UPageViewController.swift */; };
 		20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5320AEAEC700A79519 /* UBaseViewController.swift */; };
+		20736B5620AEB0D300A79519 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5520AEB0D300A79519 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		20736B4E20AEAE6200A79519 /* UHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHomeViewController.swift; sourceTree = "<group>"; };
 		20736B5120AEAEA200A79519 /* UPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPageViewController.swift; sourceTree = "<group>"; };
 		20736B5320AEAEC700A79519 /* UBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseViewController.swift; sourceTree = "<group>"; };
+		20736B5520AEB0D300A79519 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		98F9738EEEF70E1A95F60CF2 /* Pods-07U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.debug.xcconfig"; sourceTree = "<group>"; };
 		D31DFB76CF2CFC8EFC1EB175 /* Pods_07U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A6AB964F478BE86D0B36D8 /* Pods-07U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				20736B4C20AEAE3E00A79519 /* Home */,
 				20241D8920AD7F7400D2AFEA /* Base */,
 				20241D7620AD5A5C00D2AFEA /* AppDelegate.swift */,
+				20736B5520AEB0D300A79519 /* Global.swift */,
 			);
 			path = Procedure;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-07U17/Pods-07U17-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
@@ -237,6 +241,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
@@ -257,6 +262,7 @@
 			files = (
 				20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */,
 				20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */,
+				20736B5620AEB0D300A79519 /* Global.swift in Sources */,
 				20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */,
 				20241D7720AD5A5C00D2AFEA /* AppDelegate.swift in Sources */,
 				20241D8C20AD7F9E00D2AFEA /* UTabBarController.swift in Sources */,
