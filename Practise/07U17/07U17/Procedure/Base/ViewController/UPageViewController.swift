@@ -79,10 +79,10 @@ class UPageViewController: UBaseViewController{
             segment.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black,
                                            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
             segment.selectedTitleTextAttributes = [NSAttributedStringKey.foregroundColor:
-                UIColor(red: 127, green: 221, blue: 146, alpha: 1.0),
+                UIColor(r: 127, g: 221, b: 146),
                                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
             segment.selectionIndicatorLocation = .down
-            segment.selectionIndicatorColor = UIColor(red: 127, green: 221, blue: 146, alpha: 1.0)
+            segment.selectionIndicatorColor = UIColor(r: 127, g: 221, b: 146)
             segment.selectionIndicatorHeight = 2
             segment.borderType = .bottom
             segment.borderColor = UIColor.lightGray
