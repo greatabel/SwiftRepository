@@ -20,6 +20,7 @@
 		20736B5B20AEBD4C00A79519 /* UNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5A20AEBD4C00A79519 /* UNavigationController.swift */; };
 		20BBC2D720B5AC1D008181D0 /* UBoutiqueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */; };
 		20BBC2DA20B5AEC6008181D0 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBC2D920B5AEC6008181D0 /* UModel.swift */; };
+		20BBC2DE20B5B67C008181D0 /* UCollectionViewSectionBackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBC2DD20B5B67C008181D0 /* UCollectionViewSectionBackgroundLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		20736B5A20AEBD4C00A79519 /* UNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationController.swift; sourceTree = "<group>"; };
 		20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueListViewController.swift; sourceTree = "<group>"; };
 		20BBC2D920B5AEC6008181D0 /* UModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UModel.swift; sourceTree = "<group>"; };
+		20BBC2DD20B5B67C008181D0 /* UCollectionViewSectionBackgroundLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectionViewSectionBackgroundLayout.swift; sourceTree = "<group>"; };
 		98F9738EEEF70E1A95F60CF2 /* Pods-07U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.debug.xcconfig"; sourceTree = "<group>"; };
 		D31DFB76CF2CFC8EFC1EB175 /* Pods_07U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A6AB964F478BE86D0B36D8 /* Pods-07U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		20241D7520AD5A5C00D2AFEA /* 07U17 */ = {
 			isa = PBXGroup;
 			children = (
+				20BBC2DB20B5B64A008181D0 /* Component */,
 				20BBC2D820B5AEB8008181D0 /* Model */,
 				20736B5720AEBC2700A79519 /* Extension */,
 				20241D8820AD7A3100D2AFEA /* Procedure */,
@@ -146,6 +149,22 @@
 				20BBC2D920B5AEC6008181D0 /* UModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		20BBC2DB20B5B64A008181D0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				20BBC2DC20B5B662008181D0 /* CollectionViewLayout */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		20BBC2DC20B5B662008181D0 /* CollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				20BBC2DD20B5B67C008181D0 /* UCollectionViewSectionBackgroundLayout.swift */,
+			);
+			path = CollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		9C4A39ED9F6BB0C5FE75CDED /* Frameworks */ = {
@@ -299,6 +318,7 @@
 				20736B5620AEB0D300A79519 /* Global.swift in Sources */,
 				20BBC2D720B5AC1D008181D0 /* UBoutiqueListViewController.swift in Sources */,
 				20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */,
+				20BBC2DE20B5B67C008181D0 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				20241D7720AD5A5C00D2AFEA /* AppDelegate.swift in Sources */,
 				20241D8C20AD7F9E00D2AFEA /* UTabBarController.swift in Sources */,
 				20736B5B20AEBD4C00A79519 /* UNavigationController.swift in Sources */,

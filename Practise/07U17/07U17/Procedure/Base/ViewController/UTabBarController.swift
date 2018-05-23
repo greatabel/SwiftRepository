@@ -12,7 +12,7 @@ class UTabBarController: UITabBarController {
                                                      "VIP",
                                                      "订阅",
                                                      "排行"],
-                                            vcs: [UBaseViewController(),
+                                            vcs: [UBoutiqueListViewController(),
                                                   UBaseViewController(),
                                                   UBaseViewController(),
                                                   UBaseViewController()],
