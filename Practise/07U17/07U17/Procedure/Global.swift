@@ -10,3 +10,8 @@ extension UIColor {
         return UIColor(r: 29, g: 221, b: 43)
     }
 }
+
+extension String {
+    static let searchHistoryKey = "searchHistoryKey"
+    static let sexTypeKey = "sexTypeKey"
+} 

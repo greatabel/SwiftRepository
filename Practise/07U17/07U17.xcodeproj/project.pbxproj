@@ -19,6 +19,7 @@
 		20736B5920AEBC6700A79519 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5820AEBC6700A79519 /* UIColorExtension.swift */; };
 		20736B5B20AEBD4C00A79519 /* UNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5A20AEBD4C00A79519 /* UNavigationController.swift */; };
 		20BBC2D720B5AC1D008181D0 /* UBoutiqueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */; };
+		20BBC2DA20B5AEC6008181D0 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBC2D920B5AEC6008181D0 /* UModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		20736B5820AEBC6700A79519 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		20736B5A20AEBD4C00A79519 /* UNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationController.swift; sourceTree = "<group>"; };
 		20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueListViewController.swift; sourceTree = "<group>"; };
+		20BBC2D920B5AEC6008181D0 /* UModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UModel.swift; sourceTree = "<group>"; };
 		98F9738EEEF70E1A95F60CF2 /* Pods-07U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.debug.xcconfig"; sourceTree = "<group>"; };
 		D31DFB76CF2CFC8EFC1EB175 /* Pods_07U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A6AB964F478BE86D0B36D8 /* Pods-07U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		20241D7520AD5A5C00D2AFEA /* 07U17 */ = {
 			isa = PBXGroup;
 			children = (
+				20BBC2D820B5AEB8008181D0 /* Model */,
 				20736B5720AEBC2700A79519 /* Extension */,
 				20241D8820AD7A3100D2AFEA /* Procedure */,
 				20241D7D20AD5A5E00D2AFEA /* Assets.xcassets */,
@@ -135,6 +138,14 @@
 				20736B5820AEBC6700A79519 /* UIColorExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		20BBC2D820B5AEB8008181D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20BBC2D920B5AEC6008181D0 /* UModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9C4A39ED9F6BB0C5FE75CDED /* Frameworks */ = {
@@ -249,6 +260,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-07U17/Pods-07U17-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/LLCycleScrollView/LLCycleScrollView.framework",
@@ -260,6 +272,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLCycleScrollView.framework",
@@ -282,6 +295,7 @@
 				20736B5420AEAEC700A79519 /* UBaseViewController.swift in Sources */,
 				20736B5920AEBC6700A79519 /* UIColorExtension.swift in Sources */,
 				20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */,
+				20BBC2DA20B5AEC6008181D0 /* UModel.swift in Sources */,
 				20736B5620AEB0D300A79519 /* Global.swift in Sources */,
 				20BBC2D720B5AC1D008181D0 /* UBoutiqueListViewController.swift in Sources */,
 				20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */,
