@@ -8,6 +8,7 @@ target '07U17' do
 pod 'Alamofire'
 pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
+pod 'LLCycleScrollView'
 pod 'Kingfisher'
 pod 'Reusable'
 pod 'SnapKit'

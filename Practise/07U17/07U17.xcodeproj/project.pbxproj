@@ -18,6 +18,7 @@
 		20736B5620AEB0D300A79519 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5520AEB0D300A79519 /* Global.swift */; };
 		20736B5920AEBC6700A79519 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5820AEBC6700A79519 /* UIColorExtension.swift */; };
 		20736B5B20AEBD4C00A79519 /* UNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20736B5A20AEBD4C00A79519 /* UNavigationController.swift */; };
+		20BBC2D720B5AC1D008181D0 /* UBoutiqueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		20736B5520AEB0D300A79519 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		20736B5820AEBC6700A79519 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		20736B5A20AEBD4C00A79519 /* UNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationController.swift; sourceTree = "<group>"; };
+		20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueListViewController.swift; sourceTree = "<group>"; };
 		98F9738EEEF70E1A95F60CF2 /* Pods-07U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.debug.xcconfig"; sourceTree = "<group>"; };
 		D31DFB76CF2CFC8EFC1EB175 /* Pods_07U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A6AB964F478BE86D0B36D8 /* Pods-07U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-07U17/Pods-07U17.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				20736B4E20AEAE6200A79519 /* UHomeViewController.swift */,
+				20BBC2D620B5AC1D008181D0 /* UBoutiqueListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LLCycleScrollView/LLCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
@@ -258,6 +262,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
@@ -278,6 +283,7 @@
 				20736B5920AEBC6700A79519 /* UIColorExtension.swift in Sources */,
 				20736B4F20AEAE6200A79519 /* UHomeViewController.swift in Sources */,
 				20736B5620AEB0D300A79519 /* Global.swift in Sources */,
+				20BBC2D720B5AC1D008181D0 /* UBoutiqueListViewController.swift in Sources */,
 				20736B5220AEAEA200A79519 /* UPageViewController.swift in Sources */,
 				20241D7720AD5A5C00D2AFEA /* AppDelegate.swift in Sources */,
 				20241D8C20AD7F9E00D2AFEA /* UTabBarController.swift in Sources */,

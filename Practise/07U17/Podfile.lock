@@ -3,6 +3,8 @@ PODS:
   - HMSegmentedControl (1.5.4)
   - IQKeyboardManagerSwift (5.0.7)
   - Kingfisher (4.5.0)
+  - LLCycleScrollView (1.4.4):
+    - Kingfisher
   - Reusable (4.0.0):
     - Reusable/Storyboard (= 4.0.0)
     - Reusable/View (= 4.0.0)
@@ -16,6 +18,7 @@ DEPENDENCIES:
   - HMSegmentedControl
   - IQKeyboardManagerSwift
   - Kingfisher
+  - LLCycleScrollView
   - Reusable
   - SnapKit
   - Then
@@ -26,6 +29,7 @@ SPEC REPOS:
     - HMSegmentedControl
     - IQKeyboardManagerSwift
     - Kingfisher
+    - LLCycleScrollView
     - Reusable
     - SnapKit
     - Then
@@ -35,10 +39,11 @@ SPEC CHECKSUMS:
   HMSegmentedControl: b25bc4ec44766e073d62c473188fb354ee244b76
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  LLCycleScrollView: 7dcfb96bae6947b5de446a868e80ff0db2f047ae
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: aa44a079a9c2cb4ee66242b89e59afbd05531add
+PODFILE CHECKSUM: 31e2f8ef6495b0cb5dce12e55d5cba820a5b1224
 
 COCOAPODS: 1.5.2
