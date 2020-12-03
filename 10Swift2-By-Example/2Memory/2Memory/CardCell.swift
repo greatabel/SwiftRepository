@@ -15,7 +15,7 @@ class CardCell: UICollectionViewCell {
             height: frame.size.height))
         super.init(frame: frame)
         contentView.addSubview(frontImageView)
-        contentView.backgroundColor = UIColor.clearColor()
+        contentView.backgroundColor = UIColor.clear
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -29,9 +29,9 @@ class CardCell: UICollectionViewCell {
     }
     
     func upturn() {
-        UIView.transitionWithView(contentView,
+        UIView.transition(with: contentView,
             duration: 1,
-            options: .TransitionFlipFromRight,
+            options: .transitionFlipFromRight,
             animations: {
                 self.frontImageView.image = UIImage(named: self.cardImageName)
             },
@@ -39,9 +39,9 @@ class CardCell: UICollectionViewCell {
     }
     
     func downturn() {
-        UIView.transitionWithView(contentView,
+        UIView.transition(with: contentView,
             duration: 1,
-            options: .TransitionFlipFromLeft,
+            options: .transitionFlipFromLeft,
             animations: {
                 self.frontImageView.image = UIImage(named: self.backImageName)
             },
@@ -49,12 +49,12 @@ class CardCell: UICollectionViewCell {
     }
     
     func remove() {
-        UIView.animateWithDuration(1,
+        UIView.animate(withDuration: 1,
             animations: {
                 self.alpha = 0
             },
             completion: { completed in
-                self.hidden = true
+                self.isHidden = true
         })
     }
     

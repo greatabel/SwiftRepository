@@ -40,8 +40,8 @@ enum Rank: Int, CustomStringConvertible {
 
 
 struct Card: CustomStringConvertible, Equatable {
-    private let rank: Rank
-    private let suit: Suit
+    public let rank: Rank
+    public let suit: Suit
     
     var description: String {
         return "\(rank.description)_of_\(suit.description)"
@@ -52,7 +52,7 @@ func ==(card1: Card, card2: Card) -> Bool {
 }
 
 struct Deck {
-    private var cards = [Card]()
+    public var cards = [Card]()
     
     static func full() -> Deck {
         var deck = Deck()
@@ -60,7 +60,7 @@ struct Deck {
             for suit in [Suit.Spades, .Hearts, .Clubs, .Diamonds] {
                 let card = Card(rank: Rank(rawValue: i)!,
                     suit: suit)
-                deck.append(card)
+                deck.append(card: card)
             }
         }
         return deck
@@ -77,7 +77,7 @@ struct Deck {
             let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
             // http://stackoverflow.com/questions/32689753/fatal-error-swapping-a-location-with-itself-is-not-supported-with-swift-2-0
             if i != j {
-                 swap(&list[i], &list[j])
+                list.swapAt(i, j)
             }
 
         }

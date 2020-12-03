@@ -35,48 +35,65 @@ private extension ViewController{
         
         view.backgroundColor = UIColor.greenSea()
         
-        buildButtonCenter(CGPoint(x: view.center.x, y: view.center.y/2.0),
-            title: "EASY", color: UIColor.emerald(), action: "onEasyTapped:")
-        buildButtonCenter(CGPoint(x: view.center.x, y: view.center.y),
-            title: "MEDIUM", color: UIColor.sunflower(), action: "onMediumTapped:")
-        buildButtonCenter(CGPoint(x: view.center.x, y: view.center.y*3.0/2.0),
-            title: "HARD", color: UIColor.alizarin(), action: "onHardTapped:")
+        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y/2.0),
+                          title: "EASY", color: UIColor.emerald(), action: #selector(ViewController.onEasyTapped))
+        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y),
+                          title: "MEDIUM", color: UIColor.sunflower(), action: #selector(ViewController.onMediumTapped))
+        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y*3.0/2.0),
+                          title: "HARD", color: UIColor.alizarin(), action: #selector(ViewController.onHardTapped))
         
         
     }
     func buildButtonCenter(center: CGPoint, title: String, color: UIColor, action: Selector) {
         let button = UIButton()
-        button.setTitle(title, forState: .Normal)
+        button.setTitle(title, for: [])
         
         button.frame = CGRect(origin: CGPoint(x:0, y:0), size: CGSize(width: 200, height: 50))
         button.center = center
         button.backgroundColor = color
         
-        button.addTarget(self, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: action, for: UIControl.Event.touchUpInside)
         view.addSubview(button)
         
+    }
+    
+    @objc func onEasyTapped(sender: UIButton){
+        newGameDifficulty(difficulty: .Easy)
+    }
+    
+    @objc func onMediumTapped(sender: UIButton){
+        newGameDifficulty(difficulty: .Medium)
+    }
+    
+    @objc func onHardTapped(sender: UIButton){
+        newGameDifficulty(difficulty: .Hard)
+    }
+    
+    func newGameDifficulty(difficulty: Difficulty){
+        let gameviewController = MemoryViewController(difficulty: difficulty)
+        present(gameviewController, animated: true, completion: nil)
     }
 }
 
 
 extension ViewController{
     
-    func onEasyTapped(sender: UIButton){
-        newGameDifficulty(.Easy)
-    }
-    
-    func onMediumTapped(sender: UIButton){
-        newGameDifficulty(.Medium)
-    }
-    
-    func onHardTapped(sender: UIButton){
-        newGameDifficulty(.Hard)
-    }
-    
-    func newGameDifficulty(difficulty: Difficulty){
-        let gameviewController = MemoryViewController(difficulty: difficulty)
-        presentViewController(gameviewController, animated: true, completion: nil)
-    }
+//    func onEasyTapped(sender: UIButton){
+//        newGameDifficulty(difficulty: .Easy)
+//    }
+//
+//    func onMediumTapped(sender: UIButton){
+//        newGameDifficulty(difficulty: .Medium)
+//    }
+//
+//    func onHardTapped(sender: UIButton){
+//        newGameDifficulty(difficulty: .Hard)
+//    }
+//
+//    func newGameDifficulty(difficulty: Difficulty){
+//        let gameviewController = MemoryViewController(difficulty: difficulty)
+//        present(gameviewController, animated: true, completion: nil)
+//    }
     
     
 }

@@ -39,46 +39,60 @@ class MemoryViewController: UIViewController {
     private func start(){
         numberOfPairs = 0
         score = 0
-        deck = createDeck(numCardsNeededDifficulty(difficulty))
+        deck = createDeck(numCards: numCardsNeededDifficulty(difficulty: difficulty))
         
         collectionView.reloadData()
     }
     private func createDeck(numCards: Int) -> Deck{
         let fullDeck = Deck.full().shuffled()
-        let halfDeck = fullDeck.deckOfNumberOfCards(numCards)
+        let halfDeck = fullDeck.deckOfNumberOfCards(num: numCards)
         return (halfDeck + halfDeck).shuffled()
     }
     
 }
 
 extension MemoryViewController: UICollectionViewDataSource{
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return deck.count
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath as IndexPath) as! CardCell
         
         let card = deck[indexPath.row]
-        cell.renderCardName(card.description, backImageName: "back")
+        cell.renderCardName(cardImageName: card.description, backImageName: "back")
         
         return cell
     }
+    
+
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return deck.count
+    }
+    
+//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath as IndexPath) as! CardCell
+//
+//        let card = deck[indexPath.row]
+//        cell.renderCardName(cardImageName: card.description, backImageName: "back")
+//
+//        return cell
+//    }
 }
 
 // MARK: UICollectionViewDelegate
 extension MemoryViewController: UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // http://stackoverflow.com/questions/30730387/swift-2-0-enumerate-is-unavailable-call-the-enumerate-method-on-the-seq
         
-        if selectedIndexes.count == 2 || selectedIndexes.contains(indexPath) {
+        if selectedIndexes.count == 2 || selectedIndexes.contains(indexPath as NSIndexPath) {
             return
         }
-        selectedIndexes.append(indexPath)
+        selectedIndexes.append(indexPath as NSIndexPath)
         
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CardCell
+        let cell = collectionView.cellForItem(at: indexPath as IndexPath) as! CardCell
         cell.upturn()
         
         if selectedIndexes.count < 2 {
@@ -89,11 +103,11 @@ extension MemoryViewController: UICollectionViewDelegate {
         let card2 = deck[selectedIndexes[1].row]
         
         if card1 == card2 {
-            numberOfPairs++
+            numberOfPairs += 1
             checkIfFinished()
             removeCards()
         } else {
-            score++
+            score += 1
             turnCardsFaceDown()
         }
     }
@@ -109,39 +123,39 @@ private extension MemoryViewController{
     func showFinalPopUp() {
         let alert = UIAlertController(title: "Great!",
             message: "Abel says uou won with score: \(score)!",
-            preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-            self.dismissViewControllerAnimated(true, completion: nil)
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
             return
         }))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func removeCards(){
-        execAfter(1.0) {
-            self.removeCardsAtPlaces(self.selectedIndexes)
+        execAfter(delay: 1.0) {
+            self.removeCardsAtPlaces(places: self.selectedIndexes)
             self.selectedIndexes = Array<NSIndexPath>()
         }
     }
     
     func turnCardsFaceDown(){
-        execAfter(2.0) {
-            self.downturnCardsAtPlaces(self.selectedIndexes)
+        execAfter(delay: 2.0) {
+            self.downturnCardsAtPlaces(places: self.selectedIndexes)
             self.selectedIndexes = Array<NSIndexPath>()
         }
     }
     
     func removeCardsAtPlaces(places: Array<NSIndexPath>){
         for index in selectedIndexes {
-            let cardCell = collectionView.cellForItemAtIndexPath(index) as! CardCell
+            let cardCell = collectionView.cellForItem(at: index as IndexPath) as! CardCell
             cardCell.remove()
         }
     }
     
     func downturnCardsAtPlaces(places: Array<NSIndexPath>){
         for index in selectedIndexes {
-            let cardCell = collectionView.cellForItemAtIndexPath(index)as! CardCell
+            let cardCell = collectionView.cellForItem(at: index as IndexPath)as! CardCell
             cardCell.downturn()
         }
     }
@@ -155,13 +169,13 @@ private extension MemoryViewController{
         case .Medium:
             return (6,4)
         case .Hard:
-            return (8,4)
+            return (6,5)
             
         }
     }
     
     func numCardsNeededDifficulty(difficulty: Difficulty) -> Int {
-        let (columns, rows) = sizeDifficulty(difficulty)
+        let (columns, rows) = sizeDifficulty(difficulty: difficulty)
         return Int(columns * rows / 2)
     }
     
@@ -175,7 +189,7 @@ private extension MemoryViewController{
         let ratio: CGFloat = 1.452
         let space: CGFloat = 5
         
-        let (columns, rows) = sizeDifficulty(difficulty)
+        let (columns, rows) = sizeDifficulty(difficulty: difficulty)
         let cardHeight: CGFloat = view.frame.height/rows - 2*space
         let cardWidth: CGFloat = cardHeight/ratio
         
@@ -191,9 +205,9 @@ private extension MemoryViewController{
         collectionView.center = view.center
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.scrollEnabled = false
-        collectionView.registerClass(CardCell.self, forCellWithReuseIdentifier: "cardCell")
-        collectionView.backgroundColor = UIColor.clearColor()
+        collectionView.isScrollEnabled = false
+        collectionView.register(CardCell.self, forCellWithReuseIdentifier: "cardCell")
+        collectionView.backgroundColor = UIColor.clear
         
         self.view.addSubview(collectionView)
         
