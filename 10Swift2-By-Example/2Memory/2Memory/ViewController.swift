@@ -27,14 +27,16 @@ private extension ViewController{
         
         view.backgroundColor = UIColor.greenSea()
         
+//        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y/2.0),
+//                          title: "EASY", color: UIColor.emerald(), action: #selector(ViewController.onEasyTapped))
+//        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y),
+//                          title: "MEDIUM", color: UIColor.sunflower(), action: #selector(ViewController.onMediumTapped))
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y/2.0),
-                          title: "EASY", color: UIColor.emerald(), action: #selector(ViewController.onEasyTapped))
+                          title: "1-Player", color: UIColor.emerald(), action: #selector(ViewController.onHardTapped))
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y),
-                          title: "MEDIUM", color: UIColor.sunflower(), action: #selector(ViewController.onMediumTapped))
+                          title: "2-Players", color: UIColor.sunflower(), action: #selector(ViewController.onHardTapped))
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y*3.0/2.0),
-                          title: "HARD", color: UIColor.alizarin(), action: #selector(ViewController.onHardTapped))
-        
-        
+                          title: "ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onHardTapped))
     }
     func buildButtonCenter(center: CGPoint, title: String, color: UIColor, action: Selector) {
         let button = UIButton()
