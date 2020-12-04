@@ -193,8 +193,31 @@ private extension MemoryViewController{
             self.selectedIndexes = Array<NSIndexPath>()
         }
 
-        self.mylabel.fadeTransition(0.4)
-        self.mylabel.text = "round:\(self.array.count) score:\(numberOfPairs)"
+        
+        let defaults = UserDefaults.standard
+        var showText = "round:\(self.array.count) your score:\(numberOfPairs)"
+        switch which_player {
+        case 0:
+            showText = "round:\(self.array.count) your score:\(numberOfPairs)"
+        case 1:
+            var other_array = defaults.array(forKey:defaultsKeys.keyTwo)  as? [Int] ?? [Int]()
+            if other_array.count > 0 {
+                if let last = other_array.last {
+                    showText = "round:\(self.array.count) You:Rival=\(numberOfPairs):\(last)"
+                }
+            }
+        case 2:
+            var other_array = defaults.array(forKey:defaultsKeys.keyOne)  as? [Int] ?? [Int]()
+            if other_array.count > 0 {
+                if let last = other_array.last {
+                    showText = "round:\(self.array.count) You:Rival=\(numberOfPairs):\(last)"
+                }
+            }
+        default:
+            break
+        }
+        self.mylabel.fadeTransition(0.3)
+        self.mylabel.text = showText
     }
     
     func turnCardsFaceDown(){
@@ -269,10 +292,36 @@ private extension MemoryViewController{
         
         self.view.addSubview(collectionView)
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 210, height: 21))
         label.center = CGPoint(x: 100, y: 400)
         label.textAlignment = .center
-        label.text = "round:\(self.array.count) score:\(numberOfPairs)"
+        
+        
+        let defaults = UserDefaults.standard
+        var showText = "round:\(self.array.count) your score:\(numberOfPairs)"
+        switch which_player {
+        case 0:
+            showText = "round:\(self.array.count) your score:\(numberOfPairs)"
+        case 1:
+            var other_array = defaults.array(forKey:defaultsKeys.keyTwo)  as? [Int] ?? [Int]()
+            if other_array.count > 0 {
+                if let last = other_array.last {
+                    showText = "round:\(self.array.count) You:Rival=\(numberOfPairs):\(last)"
+                }
+            }
+        case 2:
+            var other_array = defaults.array(forKey:defaultsKeys.keyOne)  as? [Int] ?? [Int]()
+            if other_array.count > 0 {
+                if let last = other_array.last {
+                    showText = "round:\(self.array.count) You:Rival=\(numberOfPairs):\(last)"
+                }
+            }
+        default:
+            break
+        }
+        
+        label.text = showText
+        
         self.mylabel = label
         self.view.addSubview(label)
         
@@ -290,3 +339,4 @@ extension UIView {
         layer.add(animation, forKey: CATransitionType.fade.rawValue)
     }
 }
+
