@@ -34,16 +34,16 @@ private extension ViewController{
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y/2.0),
                           title: "1-Player", color: UIColor.emerald(), action: #selector(ViewController.onHardTapped))
         
-        buildButtonCenter(center: CGPoint(x: view.center.x-75, y: view.center.y),
+        buildButtonCenter(center: CGPoint(x: view.center.x-80, y: view.center.y),
                           title: "2-Players(A)", color: UIColor.sunflower(), action: #selector(ViewController.onTwoPlayersA))
-        buildButtonCenter(center: CGPoint(x: view.center.x+75, y: view.center.y),
+        buildButtonCenter(center: CGPoint(x: view.center.x+80, y: view.center.y),
                           title: "2-Players(B)", color: UIColor.sunflower(), action: #selector(ViewController.onTwoPlayersB))
         
         
-        buildButtonCenter(center: CGPoint(x: view.center.x-75, y: view.center.y*3.0/2.0),
-                          title: "1P-ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped_single))
-        buildButtonCenter(center: CGPoint(x: view.center.x+75, y: view.center.y*3.0/2.0),
-                          title: "2P-ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped_double))
+        buildButtonCenter(center: CGPoint(x: view.center.x-80, y: view.center.y*3.0/2.0),
+                          title: "1P-scoreboard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped_single))
+        buildButtonCenter(center: CGPoint(x: view.center.x+80, y: view.center.y*3.0/2.0),
+                          title: "2P-scoreboard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped_double))
     }
     func buildButtonCenter(center: CGPoint, title: String, color: UIColor, action: Selector) {
         let button = UIButton()
