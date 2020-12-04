@@ -36,7 +36,7 @@ private extension ViewController{
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y),
                           title: "2-Players", color: UIColor.sunflower(), action: #selector(ViewController.onHardTapped))
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y*3.0/2.0),
-                          title: "ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onHardTapped))
+                          title: "ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped))
     }
     func buildButtonCenter(center: CGPoint, title: String, color: UIColor, action: Selector) {
         let button = UIButton()
@@ -51,8 +51,21 @@ private extension ViewController{
         
     }
     
-    @objc func onEasyTapped(sender: UIButton){
-        newGameDifficulty(difficulty: .Easy)
+    @objc func onScoreBoardTapped(sender: UIButton){
+        
+
+
+        let scoreboardVC = ScoreBoardVC()
+        
+        let alertController = UIAlertController(title: "ScoreBoard", message: "RankList", preferredStyle: .alert)
+        alertController.setValue(scoreboardVC, forKey: "contentViewController")
+        let cancelAction = UIAlertAction(title: "Back", style: .cancel, handler:nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+//        let navigationController = UINavigationController(rootViewController: scoreboardVC)
+//        navigationController.pushViewController(scoreboardVC, animated: true)
+//        self.navigationController?.pushViewController(scoreboardVC, animated: true)
+//        present(scoreboardVC, animated: true, completion: nil)
     }
     
     @objc func onMediumTapped(sender: UIButton){
@@ -66,6 +79,7 @@ private extension ViewController{
     func newGameDifficulty(difficulty: Difficulty){
         let gameviewController = MemoryViewController(difficulty: difficulty)
         present(gameviewController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(gameviewController, animated: true)
     }
 }
 
