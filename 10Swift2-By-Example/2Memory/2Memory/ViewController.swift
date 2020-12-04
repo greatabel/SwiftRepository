@@ -40,8 +40,10 @@ private extension ViewController{
                           title: "2-Players(B)", color: UIColor.sunflower(), action: #selector(ViewController.onTwoPlayersB))
         
         
-        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y*3.0/2.0),
-                          title: "ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped))
+        buildButtonCenter(center: CGPoint(x: view.center.x-75, y: view.center.y*3.0/2.0),
+                          title: "1P-ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped_single))
+        buildButtonCenter(center: CGPoint(x: view.center.x+75, y: view.center.y*3.0/2.0),
+                          title: "2P-ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped_double))
     }
     func buildButtonCenter(center: CGPoint, title: String, color: UIColor, action: Selector) {
         let button = UIButton()
@@ -56,11 +58,11 @@ private extension ViewController{
         
     }
     
-    @objc func onScoreBoardTapped(sender: UIButton){
+    @objc func onScoreBoardTapped_single(sender: UIButton){
         
         // https://ithelp.ithome.com.tw/articles/10206248
 
-        let scoreboardVC = ScoreBoardVC()
+        let scoreboardVC = ScoreBoardVC(which_player: 0)
         
         let alertController = UIAlertController(title: "ScoreBoard", message: "RankList", preferredStyle: .alert)
         alertController.setValue(scoreboardVC, forKey: "contentViewController")
@@ -72,6 +74,24 @@ private extension ViewController{
 //        self.navigationController?.pushViewController(scoreboardVC, animated: true)
 //        present(scoreboardVC, animated: true, completion: nil)
     }
+    
+    @objc func onScoreBoardTapped_double(sender: UIButton){
+        
+        // https://ithelp.ithome.com.tw/articles/10206248
+
+        let scoreboardVC = ScoreBoardVC(which_player: 1)
+        
+        let alertController = UIAlertController(title: "ScoreBoard", message: "RankList", preferredStyle: .alert)
+        alertController.setValue(scoreboardVC, forKey: "contentViewController")
+        let cancelAction = UIAlertAction(title: "Back", style: .cancel, handler:nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+//        let navigationController = UINavigationController(rootViewController: scoreboardVC)
+//        navigationController.pushViewController(scoreboardVC, animated: true)
+//        self.navigationController?.pushViewController(scoreboardVC, animated: true)
+//        present(scoreboardVC, animated: true, completion: nil)
+    }
+    
     
 //    @objc func onMediumTapped(sender: UIButton){
 //        newGameDifficulty(difficulty: .Medium)

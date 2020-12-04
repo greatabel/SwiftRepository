@@ -154,6 +154,7 @@ private extension MemoryViewController{
         }
         defaults.set(array, forKey: mykey)
         print("after save:", array.count, "array count", array, "mykey", mykey)
+        
         //https://stackoverflow.com/questions/25179668/how-to-save-and-read-array-of-array-in-nsuserdefaults-in-swift
         
         //-----end   12.04
