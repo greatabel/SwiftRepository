@@ -1,11 +1,3 @@
-//
-//  _MemoryTests.swift
-//  2MemoryTests
-//
-//  Created by 万畅 on 15/8/15.
-//  Copyright © 2015年 abelwan. All rights reserved.
-//
-
 import XCTest
 @testable import _Memory
 
