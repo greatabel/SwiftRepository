@@ -122,13 +122,14 @@ extension MemoryViewController: UICollectionViewDelegate {
         
         let card1 = deck[selectedIndexes[0].row]
         let card2 = deck[selectedIndexes[1].row]
-        
+        score += 1
+        checkIfFinished()
         if card1 == card2 {
             numberOfPairs += 1
-            checkIfFinished()
+            
             removeCards()
         } else {
-            score += 1
+            
             turnCardsFaceDown()
         }
     }
@@ -136,7 +137,7 @@ extension MemoryViewController: UICollectionViewDelegate {
 
 private extension MemoryViewController{
     func checkIfFinished(){
-        if numberOfPairs == deck.count / 2{
+        if numberOfPairs == deck.count / 2 || score == deck.count {
                 showFinalPopUp()
         }
     }
@@ -150,10 +151,10 @@ private extension MemoryViewController{
 
         if self.array.count == 0 {
             
-            self.array = [score]
+            self.array = [numberOfPairs]
             
         } else {
-            self.array.append(score)
+            self.array.append(numberOfPairs)
         }
         var mykey = defaultsKeys.keyZero
         switch which_player {
@@ -176,7 +177,7 @@ private extension MemoryViewController{
         //-----end   12.04
         
         let alert = UIAlertController(title: "Great!",
-            message: "You won with score: \(score)!",
+            message: "You won with score: \(numberOfPairs) with \(score) clicks!",
             preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
             self.dismiss(animated: true, completion: nil)
@@ -193,7 +194,7 @@ private extension MemoryViewController{
         }
 
         self.mylabel.fadeTransition(0.4)
-        self.mylabel.text = "round:\(self.array.count) score:\(score)"
+        self.mylabel.text = "round:\(self.array.count) score:\(numberOfPairs)"
     }
     
     func turnCardsFaceDown(){
@@ -271,7 +272,7 @@ private extension MemoryViewController{
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
         label.center = CGPoint(x: 100, y: 400)
         label.textAlignment = .center
-        label.text = "round:\(self.array.count) score:\(score)"
+        label.text = "round:\(self.array.count) score:\(numberOfPairs)"
         self.mylabel = label
         self.view.addSubview(label)
         
