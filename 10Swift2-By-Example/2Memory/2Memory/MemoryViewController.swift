@@ -4,6 +4,7 @@ struct defaultsKeys {
     /*
      https://stackoverflow.com/questions/28628225/how-to-save-local-data-in-a-swift-app
      */
+    static let keyZero = "zeroStringKey"
     static let keyOne = "firstStringKey"
     static let keyTwo = "secondStringKey"
 }
@@ -124,6 +125,39 @@ private extension MemoryViewController{
     }
     
     func showFinalPopUp() {
+        //-----start 12.04
+//        let now = Date()
+//        let timeInterval:TimeInterval = now.timeIntervalSince1970
+//        let timeStamp = Int(timeInterval)
+//        print("curent ：\(timeStamp)")
+        var mykey = defaultsKeys.keyZero
+        switch which_player {
+        case 0:
+            mykey = defaultsKeys.keyZero
+        case 1:
+            mykey = defaultsKeys.keyOne
+        case 2:
+            mykey = defaultsKeys.keyTwo
+        default:
+            mykey = defaultsKeys.keyZero
+        }
+        // if storage is empty, it means first time
+        let defaults = UserDefaults.standard
+        var array = defaults.array(forKey:mykey)  as? [Int] ?? [Int]()
+        print("before save:", array.count, "array count", array, "mykey", mykey)
+        if array.count == 0 {
+            
+            array = [score]
+            
+        } else {
+            array.append(score)
+        }
+        defaults.set(array, forKey: mykey)
+        print("after save:", array.count, "array count", array, "mykey", mykey)
+        //https://stackoverflow.com/questions/25179668/how-to-save-and-read-array-of-array-in-nsuserdefaults-in-swift
+        
+        //-----end   12.04
+        
         let alert = UIAlertController(title: "Great!",
             message: "You won with score: \(score)!",
             preferredStyle: UIAlertController.Style.alert)

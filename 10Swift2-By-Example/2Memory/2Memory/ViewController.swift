@@ -77,10 +77,10 @@ private extension ViewController{
 //        newGameDifficulty(difficulty: .Medium)
 //    }
     @objc func onTwoPlayersA(sender: UIButton){
-        newGameDifficulty(difficulty: .Medium, which_player: 0)
+        newGameDifficulty(difficulty: .Easy, which_player: 1)
     }
     @objc func onTwoPlayersB(sender: UIButton){
-        newGameDifficulty(difficulty: .Medium, which_player: 1)
+        newGameDifficulty(difficulty: .Easy, which_player: 2)
     }
     
     @objc func onHardTapped(sender: UIButton){
