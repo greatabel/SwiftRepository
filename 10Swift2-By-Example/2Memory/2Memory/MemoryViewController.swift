@@ -18,12 +18,29 @@ class MemoryViewController: UIViewController {
     private var score = 0
     private let difficulty: Difficulty
     private var which_player = 0
+    var mylabel = UILabel()
+    var array = [Int]()
     
     init(difficulty: Difficulty, which_player: Int){
             self.difficulty = difficulty
             self.which_player = which_player
             super.init(nibName:nil, bundle: nil)
             print(self.which_player, " player!")
+            var mykey = defaultsKeys.keyZero
+            switch which_player {
+            case 0:
+                mykey = defaultsKeys.keyZero
+            case 1:
+                mykey = defaultsKeys.keyOne
+            case 2:
+                mykey = defaultsKeys.keyTwo
+            default:
+                mykey = defaultsKeys.keyZero
+            }
+            // if storage is empty, it means first time
+            let defaults = UserDefaults.standard
+            self.array = defaults.array(forKey:mykey)  as? [Int] ?? [Int]()
+            print("before save:", array.count, "array count", self.array, "mykey", mykey)
     }
     
     required init(coder aDecoder: NSCoder){
@@ -130,6 +147,14 @@ private extension MemoryViewController{
 //        let timeInterval:TimeInterval = now.timeIntervalSince1970
 //        let timeStamp = Int(timeInterval)
 //        print("curent ：\(timeStamp)")
+
+        if self.array.count == 0 {
+            
+            self.array = [score]
+            
+        } else {
+            self.array.append(score)
+        }
         var mykey = defaultsKeys.keyZero
         switch which_player {
         case 0:
@@ -141,19 +166,10 @@ private extension MemoryViewController{
         default:
             mykey = defaultsKeys.keyZero
         }
-        // if storage is empty, it means first time
+        //
         let defaults = UserDefaults.standard
-        var array = defaults.array(forKey:mykey)  as? [Int] ?? [Int]()
-        print("before save:", array.count, "array count", array, "mykey", mykey)
-        if array.count == 0 {
-            
-            array = [score]
-            
-        } else {
-            array.append(score)
-        }
-        defaults.set(array, forKey: mykey)
-        print("after save:", array.count, "array count", array, "mykey", mykey)
+        defaults.set(self.array, forKey: mykey)
+        print("after save:", self.array.count, "array count", self.array, "mykey", mykey)
         
         //https://stackoverflow.com/questions/25179668/how-to-save-and-read-array-of-array-in-nsuserdefaults-in-swift
         
@@ -175,6 +191,9 @@ private extension MemoryViewController{
             self.removeCardsAtPlaces(places: self.selectedIndexes)
             self.selectedIndexes = Array<NSIndexPath>()
         }
+
+        self.mylabel.fadeTransition(0.4)
+        self.mylabel.text = "round:\(self.array.count) score:\(score)"
     }
     
     func turnCardsFaceDown(){
@@ -249,7 +268,24 @@ private extension MemoryViewController{
         
         self.view.addSubview(collectionView)
         
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 100, y: 400)
+        label.textAlignment = .center
+        label.text = "round:\(self.array.count) score:\(score)"
+        self.mylabel = label
+        self.view.addSubview(label)
         
     }
     
+}
+
+extension UIView {
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
 }
