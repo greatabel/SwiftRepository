@@ -1,5 +1,13 @@
 import UIKit
 
+struct defaultsKeys {
+    /*
+     https://stackoverflow.com/questions/28628225/how-to-save-local-data-in-a-swift-app
+     */
+    static let keyOne = "firstStringKey"
+    static let keyTwo = "secondStringKey"
+}
+
 class MemoryViewController: UIViewController {
     
     private var collectionView: UICollectionView!
@@ -8,10 +16,13 @@ class MemoryViewController: UIViewController {
     private var numberOfPairs = 0
     private var score = 0
     private let difficulty: Difficulty
+    private var which_player = 0
     
-    init(difficulty: Difficulty){
+    init(difficulty: Difficulty, which_player: Int){
             self.difficulty = difficulty
+            self.which_player = which_player
             super.init(nibName:nil, bundle: nil)
+            print(self.which_player, " player!")
     }
     
     required init(coder aDecoder: NSCoder){
@@ -114,7 +125,7 @@ private extension MemoryViewController{
     
     func showFinalPopUp() {
         let alert = UIAlertController(title: "Great!",
-            message: "Abel says uou won with score: \(score)!",
+            message: "You won with score: \(score)!",
             preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
             self.dismiss(animated: true, completion: nil)

@@ -33,8 +33,13 @@ private extension ViewController{
 //                          title: "MEDIUM", color: UIColor.sunflower(), action: #selector(ViewController.onMediumTapped))
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y/2.0),
                           title: "1-Player", color: UIColor.emerald(), action: #selector(ViewController.onHardTapped))
-        buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y),
-                          title: "2-Players", color: UIColor.sunflower(), action: #selector(ViewController.onHardTapped))
+        
+        buildButtonCenter(center: CGPoint(x: view.center.x-75, y: view.center.y),
+                          title: "2-Players(A)", color: UIColor.sunflower(), action: #selector(ViewController.onTwoPlayersA))
+        buildButtonCenter(center: CGPoint(x: view.center.x+75, y: view.center.y),
+                          title: "2-Players(B)", color: UIColor.sunflower(), action: #selector(ViewController.onTwoPlayersB))
+        
+        
         buildButtonCenter(center: CGPoint(x: view.center.x, y: view.center.y*3.0/2.0),
                           title: "ScoreBoard", color: UIColor.alizarin(), action: #selector(ViewController.onScoreBoardTapped))
     }
@@ -53,7 +58,7 @@ private extension ViewController{
     
     @objc func onScoreBoardTapped(sender: UIButton){
         
-
+        // https://ithelp.ithome.com.tw/articles/10206248
 
         let scoreboardVC = ScoreBoardVC()
         
@@ -68,16 +73,22 @@ private extension ViewController{
 //        present(scoreboardVC, animated: true, completion: nil)
     }
     
-    @objc func onMediumTapped(sender: UIButton){
-        newGameDifficulty(difficulty: .Medium)
+//    @objc func onMediumTapped(sender: UIButton){
+//        newGameDifficulty(difficulty: .Medium)
+//    }
+    @objc func onTwoPlayersA(sender: UIButton){
+        newGameDifficulty(difficulty: .Medium, which_player: 0)
+    }
+    @objc func onTwoPlayersB(sender: UIButton){
+        newGameDifficulty(difficulty: .Medium, which_player: 1)
     }
     
     @objc func onHardTapped(sender: UIButton){
-        newGameDifficulty(difficulty: .Hard)
+        newGameDifficulty(difficulty: .Hard, which_player: 0)
     }
     
-    func newGameDifficulty(difficulty: Difficulty){
-        let gameviewController = MemoryViewController(difficulty: difficulty)
+    func newGameDifficulty(difficulty: Difficulty, which_player: Int){
+        let gameviewController = MemoryViewController(difficulty: difficulty, which_player: which_player)
         present(gameviewController, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(gameviewController, animated: true)
     }
